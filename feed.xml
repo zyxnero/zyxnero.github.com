@@ -8,11 +8,11 @@
 &lt;p&gt;话说404页面在浏览器中应该返回的状态码为404，然而Niu-X2主题的404页面返回304码，完全不懂这是为什么，期待&lt;a href="http://blog.atime.me/" title="Ma Wenbao"&gt;@Ma Wenbao&lt;/a&gt;能早点解决这个问题。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sat, 25 Jan 2014 15:25:00 +0800</pubDate><guid>tag:lusir.me,2014-01-25:move-to-github.html</guid><category>404</category><category>github</category></item><item><title>Pelican + Niux2使用记录</title><link>http://lusir.me/static-blog.html</link><description>&lt;ul&gt;
 &lt;li&gt;2014.01.25 将静态目录由gitcafe转移至github，搜索栏高度改回Niux2主题默认&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr /&gt;
 &lt;p&gt;果然还是需要一个可以宣泄情感垃圾的地方。&lt;br /&gt;
 看网上教程学着搭了个静态博客，接触到了git、python、pelican等名词，很新鲜。&lt;br /&gt;
 使用了&lt;a href="http://blog.atime.me/" title="Mawenbao"&gt;Mawenbao&lt;/a&gt;的Niu-X2主题，很好看，很喜欢，希望以后能更加自适应。&lt;br /&gt;
 记录一下拿来主题之后的微小修改：&lt;/p&gt;
-&lt;hr /&gt;
 &lt;ol&gt;
 &lt;li&gt;改主题下所有css文件中underline为none；&lt;/li&gt;
 &lt;li&gt;修改footer；&lt;/li&gt;
