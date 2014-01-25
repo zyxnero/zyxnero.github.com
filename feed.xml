@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/feed.xml" rel="self"></atom:link><lastBuildDate>Sat, 25 Jan 2014 23:25:00 +0800</lastBuildDate><item><title>Windows环境变量备份</title><link>http://lusir.me/backup-environment-variables.html</link><description>&lt;p&gt;绿色版的git和python都需要设置环境变量，在此记录下环境变量的备份方法：&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/feed.xml" rel="self"></atom:link><lastBuildDate>Sun, 26 Jan 2014 10:25:00 +0800</lastBuildDate><item><title>尝试使用TortoiseGit</title><link>http://lusir.me/try-to-use-tortoisegit.html</link><description>&lt;p&gt;每次使用git上传目录都要敲代码，对于我这还是太过艰难，于是装了个TortoiseGit      &lt;br /&gt;
+有了这货，目录更新之后只用右键提交，方便不少，当然前提是TortoiseGit要设置正确        &lt;/p&gt;
+&lt;p&gt;下面记录2点以作备忘：    &lt;br /&gt;
+1. 设置git地址时要使用&lt;code&gt;git@github.com:×××/××.git&lt;/code&gt;，而不要使用https开头的地址   &lt;br /&gt;
+2. 让TortoiseGit记住某个repo的账号密码（明文记录）：进入&lt;code&gt;“repo/.git/config”&lt;/code&gt;，增加      &lt;br /&gt;
+    &lt;pre&gt;[credential]
+    helper = store&lt;/pre&gt;&lt;/p&gt;
+&lt;h2 id="2481aa063d11ec75776c6d1a58569ef3"&gt;相关阅读&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://zww.me/tortoisegit-msysgit-remember-userid-and-pw.z-turn"&gt;TortoiseGit+Msysgit记住帐号密码的方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sun, 26 Jan 2014 10:25:00 +0800</pubDate><guid>tag:lusir.me,2014-01-26:try-to-use-tortoisegit.html</guid><category>TortoiseGit</category><category></category></item><item><title>风电齿轮油的测试标准</title><link>http://lusir.me/gear-oil-testing-standards.html</link><description>&lt;p&gt;ISO 3104/ASTM D-445：粘度cSt（@40°C/100°C)    &lt;br /&gt;
+ISO 2909/ASTM D-2270：粘度指数     &lt;br /&gt;
+ISO 2592/ASTM D-92：闪点     &lt;br /&gt;
+ISO 3016/ASTM D-97：倾点     &lt;br /&gt;
+DIN 51757/ASTM D-4052：密度      &lt;br /&gt;
+ISO 6618：总酸值      &lt;br /&gt;
+ISO 2160：铜蚀测试     &lt;br /&gt;
+ISO 7120：钢蚀测试     &lt;br /&gt;
+ISO 6247：泡沫测试     &lt;br /&gt;
+DIN 51599/ASTM D1401：抗乳化性测试   &lt;br /&gt;
+ASTM D943：氧化稳定性测试     &lt;br /&gt;
+DIN 53521：密封件相容性测试    &lt;br /&gt;
+Flender GC-V425：弗兰德泡沫测试   &lt;br /&gt;
+FVA 54/1-IV：抗微点蚀测试    &lt;br /&gt;
+FZG A/16,6/90：FZG负荷失效测试   &lt;br /&gt;
+ASTM D-417：四球抗磨测磨斑直径      &lt;br /&gt;
+DIN 51527/III：抗磨极压齿轮油标准   &lt;br /&gt;
+DIN 51517/III的FAG FE8：轴承测试    &lt;br /&gt;
+FVA 54/I-IV（90°C、60°C）：微点蚀测试        &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sat, 25 Jan 2014 23:50:00 +0800</pubDate><guid>tag:lusir.me,2014-01-25:gear-oil-testing-standards.html</guid><category>风电</category><category>齿轮油</category><category>标准</category></item><item><title>Windows环境变量备份</title><link>http://lusir.me/backup-environment-variables.html</link><description>&lt;p&gt;绿色版的git和python都需要设置环境变量，在此记录下环境变量的备份方法：&lt;/p&gt;
 &lt;p&gt;打开Regedit展开以下树，选中，右键导出。&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;SYSTEM&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;CurrentControlSet&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Control&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Session&lt;/span&gt; &lt;span class="n"&gt;Manager&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Environment&lt;/span&gt;
 &lt;span class="n"&gt;HKEY_CURRENT_USER&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Environment&lt;/span&gt;
