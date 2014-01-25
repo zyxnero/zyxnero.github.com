@@ -194,6 +194,10 @@ a.niu2-active-toc:before {
     list-style: none;
 }
 
+#niu2-sidebar-toc-ctrl:hover {
+    cursor: pointer;
+}
+
 .niu2-sidebar-toc-index {
     float: left;
     text-align: right;    
@@ -301,7 +305,7 @@ img {
 
 #niu2-cse-header-box {
     position: absolute;
-    margin-top: 6px;
+    margin-top: 3.5px;
     margin-left: -172px;
 }
 
@@ -313,7 +317,7 @@ img {
 
 #niu2-cse-ctrl-box {
     color: #999;
-    margin-top: 8px;
+    margin-top: 6px;
     cursor: pointer;
 }
 

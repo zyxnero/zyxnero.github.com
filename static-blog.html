@@ -44,7 +44,7 @@
            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-folder-open"></i>分类<b class="caret"></b>
            </a>
-           <ul class="dropdown-menu"><li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录                      (1)</a></li></ul>
+           <ul class="dropdown-menu"><li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录                      (3)</a></li></ul>
         </li>
         <!--  self defined dropdown list --></ul>
         
@@ -75,7 +75,10 @@
     <div id="body-content"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading">Pelican + Niux2使用记录</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
     <div id="niu2-main-content">
-        <p>果然还是需要一个可以宣泄情感垃圾的地方。<br />
+        <ul>
+<li>2014.01.25 将静态目录由gitcafe转移至github，搜索栏高度改回Niux2主题默认</li>
+</ul>
+<p>果然还是需要一个可以宣泄情感垃圾的地方。<br />
 看网上教程学着搭了个静态博客，接触到了git、python、pelican等名词，很新鲜。<br />
 使用了<a href="http://blog.atime.me/" title="Mawenbao">Mawenbao</a>的Niu-X2主题，很好看，很喜欢，希望以后能更加自适应。<br />
 记录一下拿来主题之后的微小修改：</p>
@@ -114,7 +117,9 @@
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
     <div class="niu2-sidebar-value"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://lusir.me/tag/pelican.html">pelican</a></div></div>
 
-<div id="niu2-sidebar-toc" class="niu2-sidebar"><div class="niu2-sidebar-label"><i class="fa fa-list-ul"></i>目录</div>
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed"><div class="niu2-sidebar-label">
+        <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+    </div>
     <ol id="niu2-sidebar-toc-list">
         <li><a href="#content-heading">Pelican + Niux2使用记录</a></li>
         <li><a href="#content-comments">评论</a></li></ol></div>

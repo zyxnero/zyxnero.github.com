@@ -3,8 +3,10 @@
  */
 
 window.gEnableTocStatusUpdate = true;
-window.gEnableTocAutoScroll = true;
+window.gEnableTocListAutoScroll = true;
+window.gMouseInSidebarTocList = false;
 window.gFixedHeaderHeight = 32;
+window.gFixedTocListOffsetTop = 111;
 window.gFootnotePopoverMaxWidth = 300;
 window.gActiveTocClass = 'niu2-active-toc'
 
@@ -28,6 +30,8 @@ function onContentLoaded() {
     getTocList().appendTo(getSidebarToc());
 
     initTocLinkScrollAnimation();
+    initAllTocsCtrl();
+    locateTocInViewport();
 }
 
 function toggleSidebarTocFixed() {
@@ -112,7 +116,10 @@ function locateTocInViewport() {
     if (!currTocId) {
         currTocId = headerList.last().attr('id');
     }
+
+    resetTocListHeight();
     updateTocLinkStatus(currTocId);
+    autoscrollTocList();
 }
 
 function getSidebarTocLinks() {
@@ -159,13 +166,16 @@ function initTocListIndex(list, baseIndex) {
 }
 
 function updateTocLinkStatus(anchor) {
-    closeAllTocList();
+    if (isAllTocsClosed()) {
+        closeAllTocs();
+    }
     getSidebarTocLinks().each(function(li, lelem) {
         var cLink = $(lelem);
         if (anchor == cLink.attr('href').substr(cLink.attr('href').indexOf('#') + 1)) {
-            openActiveTocList(cLink.parent());
-            resetTocListHeight();
             cLink.attr('class', window.gActiveTocClass);
+            if (isAllTocsClosed()) {
+                openActiveTocList(cLink.parent());
+            }
         } else if ('' != cLink.attr('class')) {
             cLink.attr('class', '');
         }
@@ -173,13 +183,31 @@ function updateTocLinkStatus(anchor) {
 }
 
 function resetTocListHeight() {
-    var tocListOffsetTop = 85;
-    var windowHeight = $(window).height();
-    if (getTocList().height() >= windowHeight - tocListOffsetTop) {
-        var tocListHeight = windowHeight - tocListOffsetTop;
+    var tocListHeight = $(window).height() - window.gFixedTocListOffsetTop + 20;
+    if (getTocList().height() >= tocListHeight) {
         getTocList().attr('style', 'height: ' + tocListHeight + 'px;');
     } else {
         getTocList().attr('style', '');
+    }
+}
+
+function autoscrollTocList() {
+    if (!window.gEnableTocListAutoScroll || window.gMouseInSidebarTocList) {
+        return;
+    }
+
+    var activeToc = $('.niu2-active-toc').first();
+    var activeTocXY = activeToc[0].getBoundingClientRect();
+    var tocListXY = getTocList()[0].getBoundingClientRect();
+
+    var scrollHeight = activeTocXY.top - (tocListXY.top + tocListXY.bottom) / 2;
+    if (activeTocXY.top < tocListXY.top + 10 || activeTocXY.bottom > tocListXY.bottom - 10) {
+        window.gEnableTocListAutoScroll = false;
+        getTocList().animate(
+                { scrollTop: getTocList().scrollTop() + scrollHeight },
+                400,
+                function() { window.gEnableTocListAutoScroll = true; }
+        );
     }
 }
 
@@ -207,8 +235,14 @@ function openActiveTocList(activeLi) {
     });
 }
 
-function closeAllTocList() {
+function closeAllTocs() {
     hideToc($('#niu2-sidebar-toc-list ol li'));
+    hideToc($('#niu2-sidebar-toc-list li ol'));
+}
+
+function openAllTocs() {
+    showToc($('#niu2-sidebar-toc-list ol li'));
+    showToc($('#niu2-sidebar-toc-list li ol'));
 }
 
 // toc scroll anamation
@@ -514,6 +548,7 @@ function isPositionInRect(x, y, rect) {
 // hide footnote popover
 function initMouseXYRecord() {
     $(document).mousemove(function(e) {
+        // footnote popover
         if (window.gEnableMouseXYRecord && window.gPopoverXY && window.gRefLinkXY) {
             if (!isPositionInRect(e.clientX, e.clientY, window.gPopoverXY) &&
                     !isPositionInRect(e.clientX, e.clientY, window.gRefLinkXY)) {
@@ -521,6 +556,13 @@ function initMouseXYRecord() {
                 window.gEnableMouseXYRecord = false;
                 hideFootnotePopover();
             }
+        }
+
+        // sidebar toc list scroll
+        if (isPositionInRect(e.clientX, e.clientY, getTocList()[0].getBoundingClientRect())) {
+            window.gMouseInSidebarTocList = true;
+        } else {
+            window.gMouseInSidebarTocList = false;
         }
     });
 }
@@ -561,5 +603,43 @@ function hideToc(tocs) {
     tocs.each(function(i, elem) {
         $(elem).attr('style', 'display:none;');
     });
+}
+
+function initAllTocsCtrl() {
+    if (isAllTocsClosed()) {
+        closeAllTocs();
+    } else {
+        openAllTocs();
+    }
+    getSidebarTocCtrl().click(function() {
+        toggleAllTocs();
+    });
+}
+
+function toggleAllTocs() {
+    if (isAllTocsClosed()) {
+        getSidebarToc().data('status', 'open');
+        getSidebarTocCtrl().attr('class', 'fa fa-minus');
+        openAllTocs();
+    } else {
+        getSidebarToc().data('status', 'closed');
+        getSidebarTocCtrl().attr('class', 'fa fa-plus');
+        closeAllTocs();
+    }
+    locateTocInViewport();
+}
+
+function isAllTocsClosed() {
+    if ('closed' == getSidebarToc().data('status')) {
+        return true;
+    }
+    return false;
+}
+
+function getSidebarTocCtrl() {
+    if (!window.gSidebarTocCtrl) {
+        window.gSidebarTocCtrl = $('#niu2-sidebar-toc-ctrl');
+    }
+    return window.gSidebarTocCtrl;
 }
 
