@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/feed.xml" rel="self"></atom:link><lastBuildDate>Sun, 26 Jan 2014 10:25:00 +0800</lastBuildDate><item><title>尝试使用TortoiseGit</title><link>http://lusir.me/try-to-use-tortoisegit.html</link><description>&lt;p&gt;每次使用git上传目录都要敲代码，对于我这还是太过艰难，于是装了个TortoiseGit      &lt;br /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/feed.xml" rel="self"></atom:link><lastBuildDate>Mon, 27 Jan 2014 14:00:00 +0800</lastBuildDate><item><title>DNS.LA设置URL转发</title><link>http://lusir.me/url-forwarding.html</link><description>&lt;p&gt;DNSPod的URL转发貌似需要域名记录一个月之后才能使用，所以DNS.LA还是很不错的。       &lt;/p&gt;
+&lt;p&gt;设置的时候要注意，需先在域名商那修改域名NS地址为DNS.LA的解析地址，     &lt;br /&gt;
+&lt;pre&gt;v1s1.xundns.com
+v1s2.xundns.com &lt;/pre&gt;        &lt;/p&gt;
+&lt;p&gt;然后再来设置URL转发的地址，不然会提示错误。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Mon, 27 Jan 2014 14:00:00 +0800</pubDate><guid>tag:lusir.me,2014-01-27:url-forwarding.html</guid><category>URL转发</category><category>DNS.LA</category></item><item><title>尝试使用TortoiseGit</title><link>http://lusir.me/try-to-use-tortoisegit.html</link><description>&lt;p&gt;每次使用git上传目录都要敲代码，对于我这还是太过艰难，于是装了个TortoiseGit      &lt;br /&gt;
 有了这货，目录更新之后只用右键提交，方便不少，当然前提是TortoiseGit要设置正确        &lt;/p&gt;
 &lt;p&gt;下面记录2点以作备忘：    &lt;br /&gt;
 1. 设置git地址时要使用&lt;code&gt;git@github.com:×××/××.git&lt;/code&gt;，而不要使用https开头的地址   &lt;br /&gt;
@@ -28,12 +32,12 @@ ASTM D-417：四球抗磨测磨斑直径      &lt;br /&gt;
 DIN 51527/III：抗磨极压齿轮油标准   &lt;br /&gt;
 DIN 51517/III的FAG FE8：轴承测试    &lt;br /&gt;
 FVA 54/I-IV（90°C、60°C）：微点蚀测试        &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sat, 25 Jan 2014 23:50:00 +0800</pubDate><guid>tag:lusir.me,2014-01-25:gear-oil-testing-standards.html</guid><category>风电</category><category>齿轮油</category><category>标准</category></item><item><title>Windows环境变量备份</title><link>http://lusir.me/backup-environment-variables.html</link><description>&lt;p&gt;绿色版的git和python都需要设置环境变量，在此记录下环境变量的备份方法：&lt;/p&gt;
-&lt;p&gt;打开Regedit展开以下树，选中，右键导出。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;SYSTEM&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;CurrentControlSet&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Control&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Session&lt;/span&gt; &lt;span class="n"&gt;Manager&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Environment&lt;/span&gt;
-&lt;span class="n"&gt;HKEY_CURRENT_USER&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Environment&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sat, 25 Jan 2014 23:25:00 +0800</pubDate><guid>tag:lusir.me,2014-01-25:backup-environment-variables.html</guid><category>环境变量</category><category>备份</category></item><item><title>搬至Github</title><link>http://lusir.me/move-to-github.html</link><description>&lt;p&gt;对比github与gitcafe之后，发现gitcafe的存储空间较github大，而且服务器在国内，连接速度更快，遂果断将静态目录放置gitcafe。
+&lt;p&gt;分别打开Regedit展开以下树，选中，右键导出。&lt;/p&gt;
+&lt;pre&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
+HKEY_CURRENT_USER\Environment&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sat, 25 Jan 2014 23:25:00 +0800</pubDate><guid>tag:lusir.me,2014-01-25:backup-environment-variables.html</guid><category>环境变量</category><category>备份</category></item><item><title>搬至Github</title><link>http://lusir.me/move-to-github.html</link><description>&lt;p&gt;对比github与gitcafe之后，发现gitcafe的存储空间较github大，而且服务器在国内，连接速度更快，遂果断将静态目录放置gitcafe。
 前几天偶然发现gitcafe的404页是不能自定义的，目录下的404.html会被gitcafe默认的404页拦截，强迫症驱使下又回到了github。&lt;/p&gt;
-&lt;p&gt;话说404页面在浏览器中应该返回的状态码为404，然而Niu-X2主题的404页面返回304码，完全不懂这是为什么，期待&lt;a href="http://blog.atime.me/" title="Ma Wenbao"&gt;@Ma Wenbao&lt;/a&gt;能早点解决这个问题。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sat, 25 Jan 2014 15:25:00 +0800</pubDate><guid>tag:lusir.me,2014-01-25:move-to-github.html</guid><category>404</category><category>github</category></item><item><title>Pelican + Niux2使用记录</title><link>http://lusir.me/static-blog.html</link><description>&lt;ul&gt;
+&lt;p&gt;话说404页面在浏览器中应该返回的状态码为404，然而Niu-X2主题的404页面返回304码，完全不懂这是为什么，期待&lt;a href="http://blog.atime.me/" title="Ma Wenbao"&gt;@Ma Wenbao&lt;/a&gt;能早点解决这个问题。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sat, 25 Jan 2014 15:25:00 +0800</pubDate><guid>tag:lusir.me,2014-01-25:move-to-github.html</guid><category>404</category><category>github</category></item><item><title>Pelican + Niux2使用记录</title><link>http://lusir.me/static-blog.html</link><description>&lt;h2 id="06933067aafd48425d67bcb01bba5cb6"&gt;Update&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;2014.01.25 将静态目录由gitcafe转移至github，搜索栏高度改回Niux2主题默认&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
@@ -47,7 +51,7 @@ FVA 54/I-IV（90°C、60°C）：微点蚀测试        &lt;/p&gt;</description>
 &lt;li&gt;强制显示浏览器侧边栏（niu2.css）； &lt;br /&gt;
 &lt;pre&gt;&lt;code&gt;body, html {min-height:101%;}&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;文章侧边栏增加Author，显示fa-bug图标；&lt;/li&gt;
-&lt;li&gt;修改搜索栏高度（Chrome跟Firefox下显示高度不一样）。&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;修改搜索栏高度（Chrome跟Firefox下显示高度不一样）。&lt;/s&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Windows下貌似还是有些问题的，我这边extra目录下的几个文件硬是不能拷到根目录，&lt;br /&gt;
 还麻烦了Mawenbao一下午，前（zhe）辈（huo）很耐心，很感激！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sun, 19 Jan 2014 19:40:00 +0800</pubDate><guid>tag:lusir.me,2014-01-19:static-blog.html</guid><category>pelican</category></item></channel></rss>
