@@ -29,14 +29,15 @@ function onContentLoaded() {
     initTocListIndex(getTocList());
     getTocList().appendTo(getSidebarToc());
 
-    setSidebarTocMaxWidth();
+    setSidebarTocSize();
+    setTocOverflowedTitle();
 
     initTocLinkScrollAnimation();
     initAllTocsCtrl();
     locateTocInViewport();
 }
 
-function setSidebarTocMaxWidth() {
+function setSidebarTocSize() {
     getSidebarToc().attr('style', 'max-width:' + getSidebarToc().width() + 'px;');
 }
 
@@ -68,6 +69,24 @@ function hideCSE() {
         $("#niu2-cse-search-input").hide(300);
         $("#niu2-cse-search-image").show(300);
     }
+}
+
+function setTocOverflowedTitle() {
+    getSidebarTocLinks().each(function(i, e) {
+        $(e).mouseenter(function() {
+            var currLink = $(this);
+            if (isOverflowed(this) && !currLink.attr('title')) {
+                currLink.attr('title', currLink.text());
+            }
+        });
+    });
+}
+
+function isOverflowed(elem) {
+    if (elem.scrollHeight > elem.offsetHeight || elem.scrollWidth > elem.offsetWidth) {
+        return true;
+    }
+    return false;
 }
 
 function toggleTopIcon() {
@@ -207,7 +226,10 @@ function autoscrollTocList() {
     var tocListXY = getTocList()[0].getBoundingClientRect();
 
     var scrollHeight = activeTocXY.top - (tocListXY.top + tocListXY.bottom) / 2;
-    if (activeTocXY.top < tocListXY.top + 10 || activeTocXY.bottom > tocListXY.bottom - 10) {
+    var heightSign = (scrollHeight > 0) ? 1 : -1;
+    scrollHeight += heightSign * tocListXY.height / 5;
+
+    if (activeTocXY.top < tocListXY.top + 15 || activeTocXY.bottom > tocListXY.bottom - 15) {
         window.gEnableTocListAutoScroll = false;
         getTocList().animate(
                 { scrollTop: getTocList().scrollTop() + scrollHeight },
