@@ -3,7 +3,7 @@
   <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows环境变量备份 - 擼sirの避風港</title>
+    <title>修改本地连接 DNS 地址 - 擼sirの避風港</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
@@ -72,13 +72,16 @@
 </div>
 </div></div>
     
-    <div id="body-content"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading">Windows环境变量备份</h1></div>
+    <div id="body-content"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading">修改本地连接 DNS 地址</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
     <div id="niu2-main-content">
-        <p>绿色版的git和python都需要设置环境变量，在此记录下环境变量的备份方法：</p>
-<p>分别打开Regedit展开以下树，选中，右键导出。</p>
-<pre>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
-HKEY_CURRENT_USER\Environment</pre>
+        <p>之前的电信劫持门轰动一时，打开的正常页面及非正常页面时不时会跳转到电信的导航页面或其它广告页面，幸亏我这儿不是很明显，不过最近发现打开hao123后会强制跳转一次，后面会多一个<code>tn=97236842_hao_pg</code>，看着很不舒服。于是在网上搜得以下Opendns        </p>
+<h2 id="a33458dd02372c0059d095c6ce6a25a5">OpenerDNS</h2>
+<p><pre>42.120.21.30</pre></p>
+<h2 id="45bdd11fa20b3d010f71cffe56101a2a">V2EX DNS</h2>
+<p><pre>199.91.73.222     LA
+178.79.131.110   London</pre></p>
+<p>还有 Google 提供的<code>8.8.8.8</code>及<code>8.8.4.4</code>也是不错的选择，修改之后貌似是清爽一些了……</p>
     </div><div id="content-comments"><!-- Duoshuo Comment BEGIN -->
 <div class="ds-thread"></div>
 <script type="text/javascript">
@@ -99,16 +102,16 @@ HKEY_CURRENT_USER\Environment</pre>
     <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 	<div class="niu2-sidebar-value"><a href="http://lusir.me/author/nero.html">nero</a></div>
 	<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-    <div class="niu2-sidebar-value">2014-01-25 23:25:00</div>
+    <div class="niu2-sidebar-value">2014-02-08 19:40:00</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
-    <div class="niu2-sidebar-value"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://lusir.me/tag/huan-jing-bian-liang.html">环境变量</a></div><div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://lusir.me/tag/bei-fen.html">备份</a></div></div>
+    <div class="niu2-sidebar-value"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://lusir.me/tag/dns.html">DNS</a></div></div>
 
 <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed"><div class="niu2-sidebar-label">
         <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
     </div>
     <ol id="niu2-sidebar-toc-list">
-        <li><a href="#content-heading">Windows环境变量备份</a></li>
-        <li><a href="#content-comments">评论</a></li></ol></div>
+        <li><a href="#content-heading">修改本地连接 DNS 地址</a></li>
+        <li><a href='#a33458dd02372c0059d095c6ce6a25a5'>OpenerDNS</a></li><li><a href='#45bdd11fa20b3d010f71cffe56101a2a'>V2EX DNS</a></li><li><a href="#content-comments">评论</a></li></ol></div>
 </div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
     <hr/>
 	<p><a href="/feed.xml" title="subscribe my blog">
