@@ -7,8 +7,7 @@
 178.79.131.110   London&lt;/pre&gt;&lt;/p&gt;
 &lt;p&gt;还有 Google 提供的 &lt;code&gt;8.8.8.8&lt;/code&gt; 及 &lt;code&gt;8.8.4.4&lt;/code&gt; 也是不错的选择，修改之后貌似是清爽一些了……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sat, 08 Feb 2014 19:40:00 +0800</pubDate><guid>tag:lusir.me,2014-02-08:modify-dns-address.html</guid><category>DNS</category></item><item><title>人人影视弹窗免疫</title><link>http://lusir.me/removal-ads-of-yyets.html</link><description>
 
-&lt;p&gt;喜欢在人人影视下载片子，但是它的广告确实令人烦恼。Firefox 的 ABP 插件能过滤大部分的广告，但最近的弹窗貌似没有挡住，      &lt;br /&gt;
-ChinaList + EasyList  更新一遍也没有效果，所以只能自己手动添加规则了       &lt;br /&gt;
+&lt;p&gt;喜欢在人人影视下载片子，但是它的广告确实令人烦恼。Firefox 的 ABP 插件能过滤大部分的广告，但最近的弹窗貌似没有挡住，ChinaList + EasyList  更新一遍也没有效果，所以只能自己手动添加规则了       &lt;br /&gt;
 
 &lt;pre&gt;||p.btyou.com&lt;/pre&gt;
 打开“过滤规则首选项 → 自定义过滤规则 → 广告屏蔽规则”，添加如上规则&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Fri, 07 Feb 2014 19:40:00 +0800</pubDate><guid>tag:lusir.me,2014-02-07:removal-ads-of-yyets.html</guid><category>ABP</category></item><item><title>关闭 HTC 8x 按键震动及按键灯</title><link>http://lusir.me/shutdown-8x-led-and-vibrator.html</link><description>&lt;h2 id="06933067aafd48425d67bcb01bba5cb6"&gt;Update&lt;/h2&gt;
@@ -83,8 +82,7 @@ HKEY_CURRENT_USER\Environment&lt;/pre&gt;</description><dc:creator xmlns:dc="htt
 &lt;p&gt;Windows 下貌似还是有些问题的，我这边 extra 目录下的几个文件硬是不能拷到根目录，&lt;br /&gt;
 还麻烦了 Mawenbao 一下午，前（zhe）辈（huo）很耐心，很感激！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Sun, 19 Jan 2014 19:40:00 +0800</pubDate><guid>tag:lusir.me,2014-01-19:static-blog.html</guid><category>pelican</category></item><item><title>使用 Google CDN</title><link>http://lusir.me/gcdn.html</link><description>
 
-&lt;p&gt;Google PageSpeed Service 是 Google 提供的一项免费 CDN 加速服务，Page Speed Service 会从网站的服务器抓取内容，   &lt;br /&gt;
-重写网页，再通过Google的服务器呈现给用户浏览，利用谷歌强大的服务器处理能力与反应速度，提升网页的加载速度。      &lt;br /&gt;
+&lt;p&gt;Google PageSpeed Service 是 Google 提供的一项免费 CDN 加速服务，Page Speed Service 会从网站的服务器抓取内容，重写网页，再通过Google的服务器呈现给用户浏览，利用谷歌强大的服务器处理能力与反应速度，提升网页的加载速度。      &lt;br /&gt;
 &lt;/p&gt;
 &lt;h2 id="5ed93013be894ffe5ac89f7707b0b58f"&gt;Google PSS 官网&lt;/h2&gt;
 &lt;ul&gt;
