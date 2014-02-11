@@ -3,7 +3,7 @@
   <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线安装程序的下载路径 - 擼sirの避風港</title>
+    <title>Win7 桌面如何只显示图片文件缩略图 - 擼sirの避風港</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
@@ -72,12 +72,54 @@
 </div>
 </div></div>
     
-    <div id="body-content"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading">在线安装程序的下载路径</h1></div>
+    <div id="body-content"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading">Win7 桌面如何只显示图片文件缩略图</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
     <div id="niu2-main-content">
-        <p>现在经常会有一些程序是在线安装的，譬如说 mini 迅雷啊、 notepad++ 啊神马之类的，在线更新之后程序就可以安装了，这一点的确挺方便，但是如果想把程序文件备份下来，怎么去找呢？ 
+        
+
+<p>Win7 默认开启缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，    <br />
+但我只想开启图片文件的缩略图，其余关闭。
 </p>
-<pre>Ctrl+R → %temp%</pre>
+<h2 id="a9986747ec72ccdf95840ec96a76c734">1. 阉割掉 pdf、ppt、视频文件的缩略图功能。</h2>
+<p>具体操作：进注册表，分别找到需要修改的键值，将其 <code>shellex</code> 键给删掉。注册表文件内容如下
+<pre>
+Windows Registry Editor Version 5.00
+[-HKEY_CLASSES_ROOT.avi\ShellEx]
+[-HKEY_CLASSES_ROOT.asf\ShellEx]
+[-HKEY_CLASSES_ROOT.wmv\ShellEx]
+[-HKEY_CLASSES_ROOT.rm\ShellEx]
+[-HKEY_CLASSES_ROOT.rmvb\ShellEx]
+[-HKEY_CLASSES_ROOT.mkv\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp\ShellEx]
+[-HKEY_CLASSES_ROOT.3g2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
+[-HKEY_CLASSES_ROOT.f4v\ShellEx]
+[-HKEY_CLASSES_ROOT.flv\ShellEx]
+[-HKEY_CLASSES_ROOT.m4v\ShellEx]
+[-HKEY_CLASSES_ROOT.mov\ShellEx]
+[-HKEY_CLASSES_ROOT.mp4\ShellEx]
+[-HKEY_CLASSES_ROOT.mp4v\ShellEx]
+[-HKEY_CLASSES_ROOT.mpg\ShellEx]
+[-HKEY_CLASSES_ROOT.mpeg\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp\ShellEx]
+[-HKEY_CLASSES_ROOT.3g2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
+[-HKEY_CLASSES_ROOT.f4v\ShellEx]
+[-HKEY_CLASSES_ROOT.flv\ShellEx]
+[-HKEY_CLASSES_ROOT.pdf\ShellEx]
+[-HKEY_CLASSES_ROOT.pptx\ShellEx]
+[-HKEY_CLASSES_ROOT\AcroExch.Document.7\Shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.mpp\shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.msg\shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
+</pre></p>
+<h2 id="c592b00a0da61da401fec2d28c5c1a56">2. 关掉缩略图的数据库</h2>
+<p>进组策略：Win + R → gpedit.msc → 用户配置 → 管理模板 → Windows 组件 → Windows 资源管理器，双击右边的“关闭隐藏的 thumbs.db 文件中的缩略图片缓存” → 选择“已启用”。 </p>
+<h2 id="3ceae25d12279147988aa6e6510298ac">3. 删除之前已经存档的缩略图</h2>
+<p>即删除缩略图的数据库 thumbs.db 文件，它们都在系统盘的 <code>Users\（当前用户）\AppData\Local\Microsoft\Windows\Explorer</code> 下，用 Diskgenius 或在另一系统下将其删除，之后重启。开启缩略图功能，这次显示缩略图的就只有图片文件了。</p>
     </div><div id="content-comments"><!-- Duoshuo Comment BEGIN -->
 <div class="ds-thread"></div>
 <script type="text/javascript">
@@ -98,16 +140,16 @@
     <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 	<div class="niu2-sidebar-value"><a href="http://lusir.me/author/nero.html">nero</a></div>
 	<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-    <div class="niu2-sidebar-value">2011-11-25 10:27:00</div>
+    <div class="niu2-sidebar-value">2012-02-07 13:40:00</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
-    <div class="niu2-sidebar-value"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://lusir.me/tag/xia-zai-lu-jing.html">下载路径</a></div></div>
+    <div class="niu2-sidebar-value"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag"><a href="http://lusir.me/tag/win7.html">Win7</a></div></div>
 
 <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed"><div class="niu2-sidebar-label">
         <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
     </div>
     <ol id="niu2-sidebar-toc-list">
-        <li><a href="#content-heading">在线安装程序的下载路径</a></li>
-        <li><a href="#content-comments">评论</a></li></ol></div>
+        <li><a href="#content-heading">Win7 桌面如何只显示图片文件缩略图</a></li>
+        <li><a href='#a9986747ec72ccdf95840ec96a76c734'>1. 阉割掉 pdf、ppt、视频文件的缩略图功能。</a></li><li><a href='#c592b00a0da61da401fec2d28c5c1a56'>2. 关掉缩略图的数据库</a></li><li><a href='#3ceae25d12279147988aa6e6510298ac'>3. 删除之前已经存档的缩略图</a></li><li><a href="#content-comments">评论</a></li></ol></div>
 </div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
     <hr/>
 	<p><a href="/feed.xml" title="subscribe my blog">
