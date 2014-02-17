@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
 <meta name="description" content="Win7 桌面如何只显示图片文件缩略图 - 作者: nero，首发于『擼sirの避風港』">
 <title>Win7 桌面如何只显示图片文件缩略图 - 擼sirの避風港</title>
 <link href="https://plus.google.com/118433343253566330284" rel="author">
-<link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/favicon.ico" />
+
+<link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="114x114" href="http://lusir.me/images/favicon/apple-touch-icon-114x114.png">
+<link rel="icon" type="image/png" href="http://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32">
+
 <link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
-<link rel='canonical' href="http://lusir.me/{slug}.html" /><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-    <script src="http://lusir.me/theme/js/html5shiv.js"></script>
-    <script src="http://lusir.me/theme/js/respond.min.js"></script>
-<![endif]-->
-<!--[if IE 7]>
-    <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
-<![endif]--></head>
+<link rel='canonical' href="http://lusir.me/just-display-win7-pic-thumbnail.html" />      
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="http://lusir.me/theme/js/html5shiv.js"></script>
+        <script src="http://lusir.me/theme/js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+    <![endif]--></head>
 <body> 
     <div id="body-header"><div class="navbar navbar-inverse navbar-fixed-top">
 <div class="col-md-12">
@@ -39,16 +47,16 @@
 			    <i class="fa fa-anchor"></i>关于</a>
 			</li><!-- category dropdown list -->
 		<li class="dropdown">
-           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-folder-open"></i>分类<b class="caret"></b>
-           </a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-folder-open"></i>分类<b class="caret"></b>
+                </a>
            <ul class="dropdown-menu"><li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录                      (16)</a></li></ul>
-        </li>
+        </li>         
         <!--  self defined dropdown list --></ul>
         
-        <!-- right nav bar -->
+          <!-- right nav bar -->
 		<ul class="nav navbar-nav navbar-right">
-		<!-- google custom search --><li>
+	   <!-- google custom search --><li>
         <div id="niu2-cse-wrapper">
             <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
                 <form action="http://google.com/cse">
@@ -70,7 +78,7 @@
 </div>
 </div></div>
     
-    <div id="body-content"><div class="col-md-8 col-md-offset-2"><h2 id="content-heading">Win7 桌面如何只显示图片文件缩略图</h2></div>
+    <div id="body-content"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading">Win7 桌面如何只显示图片文件缩略图</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
     <div id="niu2-main-content">
         
@@ -78,7 +86,7 @@
 <p>Win7 默认开启缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，    <br />
 但我只想开启图片文件的缩略图，其余关闭。
 </p>
-<h2 id="a9986747ec72ccdf95840ec96a76c734">1. 阉割掉 pdf、ppt、视频文件的缩略图功能。</h2>
+<h4 id="2ddccf93aab2d7057bfc87a6a469b7db">阉割掉 pdf、ppt、视频文件的缩略图功能。</h4>
 <p>具体操作：进注册表，分别找到需要修改的键值，将其 <code>shellex</code> 键给删掉。注册表文件内容如下
 <pre>
 Windows Registry Editor Version 5.00
@@ -114,11 +122,11 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations.msg\shellex]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
 </pre></p>
-<h2 id="c592b00a0da61da401fec2d28c5c1a56">2. 关掉缩略图的数据库</h2>
+<h4 id="34d776cf9e3a1907877d8eb0a708f191">关掉缩略图的数据库</h4>
 <p>进组策略：Win + R → gpedit.msc → 用户配置 → 管理模板 → Windows 组件 → Windows 资源管理器，双击右边的“关闭隐藏的 thumbs.db 文件中的缩略图片缓存” → 选择“已启用”。 </p>
-<h2 id="3ceae25d12279147988aa6e6510298ac">3. 删除之前已经存档的缩略图</h2>
+<h4 id="d1d4bbf2a67893815f376083ba63d7b6">删除之前已经存档的缩略图</h4>
 <p>即删除缩略图的数据库 thumbs.db 文件，它们都在系统盘的 <code>Users\（当前用户）\AppData\Local\Microsoft\Windows\Explorer</code> 下，用 Diskgenius 或在另一系统下将其删除，之后重启。开启缩略图功能，这次显示缩略图的就只有图片文件了。</p>
-    </div><div id="content-comments">
+    </div><div id="content-comments">            
 <!-- Duoshuo Comment BEGIN -->
 <div class="ds-thread"></div>
 <script type="text/javascript">
@@ -131,8 +139,7 @@ Windows Registry Editor Version 5.00
  (document.getElementsByTagName('head')[0] 
   || document.getElementsByTagName('body')[0]).appendChild(ds);
  })();
-</script>
-
+</script>            
 <!-- Duoshuo Comment END --></div>
 </div>
 <div id="niu2-right-container" class="col-md-3">
@@ -149,11 +156,10 @@ Windows Registry Editor Version 5.00
     </div>
     <ol id="niu2-sidebar-toc-list">
         <li><a href="#content-heading">Win7 桌面如何只显示图片文件缩略图</a></li>
-        <li><a href='#a9986747ec72ccdf95840ec96a76c734'>1. 阉割掉 pdf、ppt、视频文件的缩略图功能。</a></li><li><a href='#c592b00a0da61da401fec2d28c5c1a56'>2. 关掉缩略图的数据库</a></li><li><a href='#3ceae25d12279147988aa6e6510298ac'>3. 删除之前已经存档的缩略图</a></li><li><a href="#content-comments">评论</a></li></ol></div></div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+        <li><a href='#2ddccf93aab2d7057bfc87a6a469b7db'>阉割掉 pdf、ppt、视频文件的缩略图功能。</a></li><li><a href='#34d776cf9e3a1907877d8eb0a708f191'>关掉缩略图的数据库</a></li><li><a href='#d1d4bbf2a67893815f376083ba63d7b6'>删除之前已经存档的缩略图</a></li><li><a href="#content-comments">评论</a></li></ol></div></div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>
-<p><a href="http://lusir.me/feed.xml" title="Subscribe My Blog">
-<i class="fa fa-rss fa-lg"></i>
-</a>Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, Theme by <a href="http://atime.me">Ma Wenbao</a>.
+<p><a href="http://lusir.me/feed.xml" title="订阅之"><i class="fa fa-rss fa-lg"></i></a>Powered by <a href="https://github.com/getpelican/pelican" rel="external nofollow" target="_blank">Pelican</a>, 
+	Theme by <a href="http://atime.me" rel="external nofollow" target="_blank">Ma Wenbao</a>.
 </p>
 </div></div><script type="text/javascript">
             var _gaq = _gaq || [];
@@ -164,7 +170,7 @@ Windows Registry Editor Version 5.00
 	   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 	   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
+	})();    
         </script><!-- Include all compiled plugins (below), or include individual files as needed -->
 <script type="text/javascript" src="http://lusir.me/theme/js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="http://lusir.me/theme/js/niu2.js"></script>

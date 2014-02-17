@@ -129,7 +129,7 @@ HKEY_CURRENT_USER\Environment&lt;/pre&gt;</description><dc:creator xmlns:dc="htt
 &lt;p&gt;Win7 默认开启缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，    &lt;br /&gt;
 但我只想开启图片文件的缩略图，其余关闭。
 &lt;/p&gt;
-&lt;h2 id="a9986747ec72ccdf95840ec96a76c734"&gt;1. 阉割掉 pdf、ppt、视频文件的缩略图功能。&lt;/h2&gt;
+&lt;h4 id="2ddccf93aab2d7057bfc87a6a469b7db"&gt;阉割掉 pdf、ppt、视频文件的缩略图功能。&lt;/h4&gt;
 &lt;p&gt;具体操作：进注册表，分别找到需要修改的键值，将其 &lt;code&gt;shellex&lt;/code&gt; 键给删掉。注册表文件内容如下
 &lt;pre&gt;
 Windows Registry Editor Version 5.00
@@ -165,9 +165,9 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\SystemFileAssociations.msg\shellex]
 [-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
 &lt;/pre&gt;&lt;/p&gt;
-&lt;h2 id="c592b00a0da61da401fec2d28c5c1a56"&gt;2. 关掉缩略图的数据库&lt;/h2&gt;
+&lt;h4 id="34d776cf9e3a1907877d8eb0a708f191"&gt;关掉缩略图的数据库&lt;/h4&gt;
 &lt;p&gt;进组策略：Win + R → gpedit.msc → 用户配置 → 管理模板 → Windows 组件 → Windows 资源管理器，双击右边的“关闭隐藏的 thumbs.db 文件中的缩略图片缓存” → 选择“已启用”。 &lt;/p&gt;
-&lt;h2 id="3ceae25d12279147988aa6e6510298ac"&gt;3. 删除之前已经存档的缩略图&lt;/h2&gt;
+&lt;h4 id="d1d4bbf2a67893815f376083ba63d7b6"&gt;删除之前已经存档的缩略图&lt;/h4&gt;
 &lt;p&gt;即删除缩略图的数据库 thumbs.db 文件，它们都在系统盘的 &lt;code&gt;Users\（当前用户）\AppData\Local\Microsoft\Windows\Explorer&lt;/code&gt; 下，用 Diskgenius 或在另一系统下将其删除，之后重启。开启缩略图功能，这次显示缩略图的就只有图片文件了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Tue, 07 Feb 2012 13:40:00 +0800</pubDate><guid>tag:lusir.me,2012-02-07:just-display-win7-pic-thumbnail.html</guid><category>Win7</category></item><item><title>在线安装程序的下载路径</title><link>http://lusir.me/online-installer-download-path.html</link><description>&lt;p&gt;现在经常会有一些程序是在线安装的，譬如说 mini 迅雷啊、 notepad++ 啊神马之类的，在线更新之后程序就可以安装了，这一点的确挺方便，但是如果想把程序文件备份下来，怎么去找呢？ 
 &lt;/p&gt;
 &lt;pre&gt;Ctrl+R → %temp%&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">nero</dc:creator><pubDate>Fri, 25 Nov 2011 10:27:00 +0800</pubDate><guid>tag:lusir.me,2011-11-25:online-installer-download-path.html</guid><category>下载路径</category></item></channel></rss>
