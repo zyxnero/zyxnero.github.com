@@ -81,16 +81,15 @@
     <div id="body-content"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading">使用 Google CDN</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
     <div id="niu2-main-content">
-        
-
-<p>Google PageSpeed Service 是 Google 提供的一项免费 CDN 加速服务，Page Speed Service 会从网站的服务器抓取内容，重写网页，再通过Google的服务器呈现给用户浏览，利用谷歌强大的服务器处理能力与反应速度，提升网页的加载速度。      <br />
+        <p>Google PageSpeed Service 是 Google 提供的一项免费 CDN 加速服务，Page Speed Service 会从网站的服务器抓取内容，重写网页，再通过Google的服务器呈现给用户浏览，利用谷歌强大的服务器处理能力与反应速度，提升网页的加载速度。
 </p>
-<h2 id="5ed93013be894ffe5ac89f7707b0b58f">Google PSS 官网</h2>
+<hr />
+<h3 id="5ed93013be894ffe5ac89f7707b0b58f">Google PSS 官网</h3>
 <ul>
 <li>首页：https://developers.google.com/speed/pagespeed/service</li>
 <li>管理：https://code.google.com/apis/console/</li>
 </ul>
-<h2 id="de5ab0f9882d130f20c48b43f9a61ae0">Google PageSpeed Service 免费 CDN 开通</h2>
+<h3 id="de5ab0f9882d130f20c48b43f9a61ae0">Google PageSpeed Service 免费 CDN 开通</h3>
 <ol>
 <li>进入网站后，点击“Sign Up Now”按钮。</li>
 <li>填入你的邮箱，还有你的网站地址。同时下方还有问你的网站有没有正在使用 Google 的产品，最后是点击提交。大概2个小时以内，Google PageSpeed Service 就会给你答复了。（我人品不好，等了2天）</li>
@@ -98,9 +97,9 @@
 <li>点击邮件的链接地址，跳转到Google PageSpeed Service页面，同意使用协议。然后是添加你想要CDN加速的网站域名，最多50个。假如域名还没有验证拥有权，会提示你先验证域名。
 点击 “Claim Ownership”，这里会提供多种验证方式，最快的就是上传一个 html 文件。验证通过后，就能看到域名添加成功了。</li>
 </ol>
-<h2 id="c324d27e10efe49b49eeeff86db84ecc">使用 Google PageSpeed Service 加速</h2>
+<h3 id="c324d27e10efe49b49eeeff86db84ecc">使用 Google PageSpeed Service 加速</h3>
 <ol>
-<li>给要加速的域名添加 CNAME 记录，记录值是 <code>pagespeed.googlehosted.com</code></li>
+<li>给要加速的域名添加 CNAME 记录，记录值是 <code>pagespeed.googlehosted.com</code>。</li>
 <li>进入域名的 DNS 管理处，将带有主机记录的域名添加 CNAME 记录，目前不支持裸域名即不带 www 这样的CDN加速。</li>
 <li>等域名解析生效后，就能在 Google PageSpeed Service 看到 CDN 加速已成功运行。</li>
 </ol>

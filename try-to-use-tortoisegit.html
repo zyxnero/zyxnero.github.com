@@ -81,14 +81,19 @@
     <div id="body-content"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading">尝试使用 TortoiseGit</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
     <div id="niu2-main-content">
-        <p>每次使用 git 上传目录都要敲代码，对于我这还是太过艰难，于是装了个 TortoiseGit        
-有了这货，目录更新之后只用右键提交，方便不少，当然前提是 TortoiseGit 要设置正确        </p>
-<p>下面记录2点以作备忘：    <br />
-1. 设置 git 地址时要使用 <code>git@github.com:×××/××.git</code> ，而不要使用 https 开头的地址   <br />
-2. 让 TortoiseGit 记住某个 repo 的账号密码（明文记录）：进入 <code>“repo/.git/config”</code> ，增加      <br />
-    <pre>[credential]
-    helper = store</pre></p>
-<h2 id="2481aa063d11ec75776c6d1a58569ef3">相关阅读</h2>
+        <p>刚刚接触 git，每次上传目录都要敲代码，先 <code>git add</code>，<code>git  commit</code> ，然后又是 <code>git push</code>，对于我这些东西还是太过艰难，于是装了个 TortoiseGit。有了这货，目录更新之后只用右键提交，方便不少，当然前提是 TortoiseGit 要设置正确。
+</p>
+<p>下面记录2点以作备忘：</p>
+<hr />
+<ol>
+<li>设置 git 地址时要使用 <code>git@github.com:×××/××.git</code> ，而不要使用 https 开头的地址。</li>
+<li>让 TortoiseGit 记住某个 repo 的账号密码（明文记录）：进入 <code>“repo/.git/config”</code> ，增加      <br />
+<pre>
+[credential]
+    helper = store
+</pre></li>
+</ol>
+<h3 id="2481aa063d11ec75776c6d1a58569ef3">相关阅读</h3>
 <ul>
 <li><a href="http://zww.me/tortoisegit-msysgit-remember-userid-and-pw.z-turn">TortoiseGit + Msysgit 记住帐号密码的方法</a></li>
 </ul>
