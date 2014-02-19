@@ -16,8 +16,7 @@
 <link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
-<link rel='canonical' href="http://lusir.me/tag" />      
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<link rel='canonical' href="http://lusir.me/tag" />    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="http://lusir.me/theme/js/html5shiv.js"></script>
         <script src="http://lusir.me/theme/js/respond.min.js"></script>
@@ -26,7 +25,7 @@
         <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
     <![endif]--></head>
 
-<body> 
+<body itemscope itemtype="http://schema.org/WebPage"> 
     <div id="body-header"><div class="navbar navbar-inverse navbar-fixed-top">
 <div class="col-md-12">
     <div class="navbar-header">
@@ -77,8 +76,8 @@
 </div>
 </div></div>
     
-    <div id="body-content"><div class="col-md-8 col-md-offset-2">
-    <h1><i class="fa fa-tags"></i>标签</h1>
+    <div id="body-content"><div class="col-md-8 col-md-offset-2" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h1 itemprop="headline"><i class="fa fa-tags"></i>标签</h1>
     <input id="niu2-tagcloud-filter-input" type="text" placeholder="过滤标签"
            class="form-control pull-left" onkeyup="tag_filter()">
     <button class="btn btn-success niu2-button" 
