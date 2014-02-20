@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="关闭 HTC 8x 按键震动及按键灯 - 作者: nero，首发于『擼sirの避風港』">
+<title>关闭 HTC 8x 按键震动及按键灯 - 擼sirの避風港</title>
+<link rel="author" href="https://plus.google.com/118433343253566330284"/>
+<link rel="publisher" href="https://plus.google.com/118433343253566330284"/>
+<link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
+<link rel='canonical' href="http://lusir.me/shutdown-8x-led-and-vibrator.html" />
+<meta itemprop="inLanguage" content="zh-CN">    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="http://lusir.me/theme/js/html5shiv.js"></script>
+        <script src="http://lusir.me/theme/js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+    <![endif]--></head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+    <div id="body-header"><div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://lusir.me">
+            <i class="fa fa-home"></i>擼sirの避風港
+        </a>
+    </div>
+	<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+		<ul class="nav navbar-nav"><li><a href="http://lusir.me/archives.html" title="存档">
+			    <i class="fa fa-archive"></i>存档</a>
+			</li><li><a href="http://lusir.me/about.html" title="关于">
+			    <i class="fa fa-anchor"></i>关于</a>
+			</li><!-- category dropdown list -->
+		<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-folder-open"></i>分类<b class="caret"></b>
+                </a>
+           <ul class="dropdown-menu"><li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录                      (16)</a></li></ul>
+        </li>         
+        <!--  self defined dropdown list --></ul>
+        
+          <!-- right nav bar -->
+		<ul class="nav navbar-nav navbar-right">
+	   <!-- google custom search --><li>
+        <div id="niu2-cse-wrapper">
+            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+                <form action="http://google.com/cse">
+                    <input type="hidden" name="cx" value="012467883927724485227:eaoxbeaeyty" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <div class="form-group">
+                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
+                            type="text" name="q" 
+                            placeholder="回车以搜索…"/>
+                    </div>
+                </form>
+           </div>
+           <div id="niu2-cse-ctrl-box" class="navbar-nav">
+            <i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
+           </div>
+       </div>
+       </li></ul>
+	</nav>
+</div>
+</div></div>
+    
+    <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">关闭 HTC 8x 按键震动及按键灯</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+    <div id="niu2-main-content" itemprop="articleBody">
+        <h3 id="06933067aafd48425d67bcb01bba5cb6">Update</h3>
+<ul>
+<li>2014.02.07 按键灯关闭貌似是临时的，几个小时就恢复了</li>
+</ul>
+<hr />
+<p>
+WP 果然是没有 Android 开放，耗电速度也让我和我的小伙伴惊呆了，所以毅然决定关闭按键震动及按键灯让爪机更省电，方法记录如下。
+         </p>
+<h3 id="263c8d41f4119510cabaa91e22830469">关闭按键震动</h3>
+<p><pre>手机拨号界面 → 输入##634# → Accept → Vibrator Test → Run → Off → 直接退出</pre></p>
+<h3 id="c0289bd19fcd4a8274891133cd805435">关闭按键灯</h3>
+<p><pre>手机拨号界面 → 输入##634# → Accept → Led Test → Run → Key LED → 直接退出</pre>       </p>
+<p>注：重启恢复</p>
+    </div><div id="content-comments">            
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>            
+<!-- Duoshuo Comment END --></div>
+</div>
+<div id="niu2-right-container" class="col-md-3">
+﻿<div id="niu2-sidebar-meta" class="niu2-sidebar">
+    <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+        <div class="niu2-sidebar-value" itemprop="author"><a href="http://lusir.me/author/nero-zheng.html">Nero Zheng</a></div>
+        <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+    <div class="niu2-sidebar-value" itemprop="datePublished">2014-02-06 21:20</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+    <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/8x.html">8x</a></div></div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed"><div class="niu2-sidebar-label">
+        <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+    </div>
+    <ol id="niu2-sidebar-toc-list">
+        <li><a href="#content-heading">关闭 HTC 8x 按键震动及按键灯</a></li>
+        <li><a href='#06933067aafd48425d67bcb01bba5cb6'>Update</a></li><li><a href='#263c8d41f4119510cabaa91e22830469'>关闭按键震动</a></li><li><a href='#c0289bd19fcd4a8274891133cd805435'>关闭按键灯</a></li><li><a href="#content-comments">评论</a></li></ol></div></div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p><a href="http://lusir.me/feed.xml" title="订阅之"><i class="fa fa-rss fa-lg"></i></a>Powered by <a href="https://github.com/getpelican/pelican" rel="external nofollow" target="_blank">Pelican</a>, 
+	Theme by <a href="http://atime.me" rel="external nofollow" target="_blank">Ma Wenbao</a>.
+</p>
+</div></div><!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/niu2.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/bootstrap.min.js"></script>
+<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
+<script type="text/javascript">
+    window.onload = function() {
+    };
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-36540079-1', 'lusir.me');
+  ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    onContentLoaded();</script>
+</body>
+</html>

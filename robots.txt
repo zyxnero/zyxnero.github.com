@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /theme/
+Sitemap: http://lusir.me/sitemap.xml

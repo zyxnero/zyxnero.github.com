@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="修改本地连接 DNS 地址 - 作者: nero，首发于『擼sirの避風港』">
+<title>修改本地连接 DNS 地址 - 擼sirの避風港</title>
+<link rel="author" href="https://plus.google.com/118433343253566330284"/>
+<link rel="publisher" href="https://plus.google.com/118433343253566330284"/>
+<link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
+<link rel='canonical' href="http://lusir.me/modify-dns-address.html" />
+<meta itemprop="inLanguage" content="zh-CN">    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="http://lusir.me/theme/js/html5shiv.js"></script>
+        <script src="http://lusir.me/theme/js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+    <![endif]--></head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+    <div id="body-header"><div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://lusir.me">
+            <i class="fa fa-home"></i>擼sirの避風港
+        </a>
+    </div>
+	<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+		<ul class="nav navbar-nav"><li><a href="http://lusir.me/archives.html" title="存档">
+			    <i class="fa fa-archive"></i>存档</a>
+			</li><li><a href="http://lusir.me/about.html" title="关于">
+			    <i class="fa fa-anchor"></i>关于</a>
+			</li><!-- category dropdown list -->
+		<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-folder-open"></i>分类<b class="caret"></b>
+                </a>
+           <ul class="dropdown-menu"><li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录                      (16)</a></li></ul>
+        </li>         
+        <!--  self defined dropdown list --></ul>
+        
+          <!-- right nav bar -->
+		<ul class="nav navbar-nav navbar-right">
+	   <!-- google custom search --><li>
+        <div id="niu2-cse-wrapper">
+            <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+                <form action="http://google.com/cse">
+                    <input type="hidden" name="cx" value="012467883927724485227:eaoxbeaeyty" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <div class="form-group">
+                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
+                            type="text" name="q" 
+                            placeholder="回车以搜索…"/>
+                    </div>
+                </form>
+           </div>
+           <div id="niu2-cse-ctrl-box" class="navbar-nav">
+            <i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span>
+           </div>
+       </div>
+       </li></ul>
+	</nav>
+</div>
+</div></div>
+    
+    <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">修改本地连接 DNS 地址</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+    <div id="niu2-main-content" itemprop="articleBody">
+        <p>之前的电信劫持门轰动一时，打开的正常页面及非正常页面时不时会跳转到电信的导航页面或其它广告页面。最近发现打开 hao123 后会强制跳转一次，而且后面会多一个 <code>tn=97236842_hao_pg</code> 的尾巴，看着很不舒服。于是在网上搜得以下 Opendns。
+</p>
+<hr />
+<h3 id="a33458dd02372c0059d095c6ce6a25a5">OpenerDNS</h3>
+<p><pre>42.120.21.30</pre></p>
+<h3 id="45bdd11fa20b3d010f71cffe56101a2a">V2EX DNS</h3>
+<p><pre>
+199.91.73.222     LA
+178.79.131.110   London
+</pre></p>
+<p>还有 Google 提供的 <code>8.8.8.8</code> 及 <code>8.8.4.4</code> 也是不错的选择，修改之后貌似是清爽一些了……</p>
+    </div><div id="content-comments">            
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>            
+<!-- Duoshuo Comment END --></div>
+</div>
+<div id="niu2-right-container" class="col-md-3">
+﻿<div id="niu2-sidebar-meta" class="niu2-sidebar">
+    <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+        <div class="niu2-sidebar-value" itemprop="author"><a href="http://lusir.me/author/nero-zheng.html">Nero Zheng</a></div>
+        <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+    <div class="niu2-sidebar-value" itemprop="datePublished">2014-02-08 19:40</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+    <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/dns.html">DNS</a></div></div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed"><div class="niu2-sidebar-label">
+        <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+    </div>
+    <ol id="niu2-sidebar-toc-list">
+        <li><a href="#content-heading">修改本地连接 DNS 地址</a></li>
+        <li><a href='#a33458dd02372c0059d095c6ce6a25a5'>OpenerDNS</a></li><li><a href='#45bdd11fa20b3d010f71cffe56101a2a'>V2EX DNS</a></li><li><a href="#content-comments">评论</a></li></ol></div></div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p><a href="http://lusir.me/feed.xml" title="订阅之"><i class="fa fa-rss fa-lg"></i></a>Powered by <a href="https://github.com/getpelican/pelican" rel="external nofollow" target="_blank">Pelican</a>, 
+	Theme by <a href="http://atime.me" rel="external nofollow" target="_blank">Ma Wenbao</a>.
+</p>
+</div></div><!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/niu2.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/bootstrap.min.js"></script>
+<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
+<script type="text/javascript">
+    window.onload = function() {
+    };
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-36540079-1', 'lusir.me');
+  ga('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+    onContentLoaded();</script>
+</body>
+</html>
