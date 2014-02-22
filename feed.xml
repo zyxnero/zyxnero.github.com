@@ -3,14 +3,8 @@
 &lt;/p&gt;
 &lt;h3 id="ec09647dcef4ae3525cffab24748838d"&gt;使用方法&lt;/h3&gt;
 &lt;hr /&gt;
-&lt;p&gt;使用以下代码可以在 Google CDN 库获取失败时载入本地 jQuery 库：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;jQuery&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/js/jquery-1.11.0.min.js&amp;quot;&amp;gt;&amp;lt;\/script&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;使用以下代码可以在 Google CDN 库获取失败时载入本地 jQuery 库：
+&lt;script src="https://gist.github.com/zyxnero/9150011.js"&gt;&lt;/script&gt;&lt;/p&gt;
 &lt;h3 id="1bbbb204023e59eba03319c7c5848fd1"&gt;注意事项&lt;/h3&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
