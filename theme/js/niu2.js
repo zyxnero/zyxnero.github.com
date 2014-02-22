@@ -292,7 +292,7 @@ function initFootnote() {
     if (getFootnoteRefs().length > 0) {
         var ftTitle = '脚注';
         getTocList().children(':last').before('<li><a href="#content-references">' + ftTitle + '</a></li>');
-        $('.footnote').before('<h2 id="content-references">' + ftTitle + '</h2>');
+        $('.footnote').before('<h3 id="content-references">' + ftTitle + '</h3>');
     }
 
     initFootnoteBackRefLinks();

@@ -85,10 +85,10 @@
     <div id="niu2-main-content" itemprop="articleBody">
         <p>昨晚意识到侧边栏跟 Ma Wenbao 的不一样，好像是我这边的发生了错位。仔细比较一番，发现主题文件里面的东西居然是一样的。尝试添加 <code>margin:0; padding:0</code> 也无效，只好作罢睡觉。
 </p>
-<p>想到昨天用 Firefox 自带的元素查看器找到的一块空白区域，觉得应该就是它在作祟了。启用 Firebug，选中空白区域右键“编辑 html”，<code>&lt;div&gt;</code> 前多了一个 <code>&amp;#65279;</code>，网上一搜，原来是 UTF-8 BOM 符（Byte-Order Mark，字节顺序标记）<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>。想起之前编辑文件的时候还特意将 ANSI 转成了 UTF-8 格式，原来该格式会默认给添加上 BOM，而 UTF-8 无 BOM 格式则不会添加这个 BOM，引发这个问题的原因就是模板文件使用的是 UTF-8 编码格式，而这个 BOM 符被浏览器渲染成了一行空白，从而导致页面错位。于是将文档格式转成 ANSI，问题解决（保存成 UTF-8 无 BOM 格式同样可行）。</p>
+<p>想到昨天用 Firefox 自带的元素查看器找到的一块空白区域，觉得应该就是它在作祟了。启用 Firebug，选中空白区域右键“编辑 html”，<code>&lt;div&gt;</code> 前多了一个 <code>&amp;#65279;</code>，网上一搜，原来是 UTF-8 BOM 符（Byte-Order Mark，字节顺序标记）<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>。</p>
+<p>想起之前编辑文件的时候还特意将 ANSI 转成了 UTF-8 格式，原来该格式会默认给添加上 BOM，而 UTF-8 无 BOM 格式则不会添加这个 BOM，引发这个问题的原因就是模板文件使用的是 UTF-8 编码格式，而这个 BOM 符被浏览器渲染成了一行空白，从而导致页面错位。于是将文档格式转成 ANSI，问题解决（保存成 UTF-8 无 BOM 格式同样可行）。</p>
 <h3 id="25f9c7fa3b50aebe5125112ac1187777">总结</h3>
 <p>由于 BOM 是针对于 UTF-16 和 UTF-32 的，对于使用 UTF-8 编码格式的文件不需要 BOM ，所以在保存 UTF-8 文件时最好选择无 BOM 的编码。</p>
-<h3 id="35808e79fa5f367a06c83a78b857519c">参考资料</h3>
 <div class="footnote">
 <hr />
 <ol>
@@ -126,7 +126,7 @@
     </div>
     <ol id="niu2-sidebar-toc-list">
         <li><a href="#content-heading">关于 Unicode BOM</a></li>
-        <li><a href='#25f9c7fa3b50aebe5125112ac1187777'>总结</a></li><li><a href='#35808e79fa5f367a06c83a78b857519c'>参考资料</a></li><li><a href="#content-comments">评论</a></li></ol></div>
+        <li><a href='#25f9c7fa3b50aebe5125112ac1187777'>总结</a><li><a href="#content-comments">评论</a></li></ol></div>
 </div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>
 <p><a href="http://lusir.me/feed.xml" title="订阅之"><i class="fa fa-rss fa-lg"></i></a>Powered by <a href="https://github.com/getpelican/pelican" rel="external nofollow" target="_blank">Pelican</a>, 
