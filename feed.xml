@@ -9,7 +9,7 @@
 &lt;hr /&gt;
 &lt;ol&gt;
 &lt;li id="fn:1"&gt;
-&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Byte_order_mark" title="字节顺序标记"&gt;字节顺序标记&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Wikipedia：&lt;a href="http://en.wikipedia.org/wiki/Byte_order_mark" title="字节顺序标记"&gt;字节顺序标记&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 22 Feb 2014 17:00:00 +0800</pubDate><guid>tag:lusir.me,2014-02-22:about-unicode-bom.html</guid><category>BOM</category></item><item><title>在 Google CDN 库获取失败时载入本地 jQuery 库</title><link>http://lusir.me/jquery-src-switching.html</link><description>&lt;p&gt;Niu-X2 主题默认加载本地 jQuery 库，放在 Github 上的本地 jQuery 库速度上是没有 Google CDN 提供的 jQuery 库快的，但 Google 在国内的状态又不是很稳定，所以还是要调用本地 jQuery 库才能确保不会出现加载 jQuery 库失败。
