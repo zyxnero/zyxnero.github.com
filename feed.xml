@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/feed.xml" rel="self"></atom:link><lastBuildDate>Sat, 08 Feb 2014 19:40:00 +0800</lastBuildDate><item><title>修改本地连接 DNS 地址</title><link>http://lusir.me/modify-dns-address.html</link><description>&lt;p&gt;之前的电信劫持门轰动一时，打开的正常页面及非正常页面时不时会跳转到电信的导航页面或其它广告页面。最近发现打开 hao123 后会强制跳转一次，而且后面会多一个 &lt;code&gt;tn=97236842_hao_pg&lt;/code&gt; 的尾巴，看着很不舒服。于是在网上搜得以下 Opendns。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/feed.xml" rel="self"></atom:link><lastBuildDate>Thu, 20 Feb 2014 20:40:00 +0800</lastBuildDate><item><title>在 Google CDN 库获取失败时载入本地 jQuery 库</title><link>http://lusir.me/jquery-src-switching.html</link><description>&lt;p&gt;Niu-X2 主题默认加载本地 jQuery 库，放在 Github 上的本地 jQuery 库速度上是没有 Google CDN 提供的 jQuery 库快的，但 Google 在国内的状态又不是很稳定，所以还是要调用本地 jQuery 库才能确保不会出现加载 jQuery 库失败。
+&lt;/p&gt;
+&lt;h3 id="ec09647dcef4ae3525cffab24748838d"&gt;使用方法&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;使用以下代码可以在 Google CDN 库获取失败时载入本地 jQuery 库：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;jQuery&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/js/jquery-1.11.0.min.js&amp;quot;&amp;gt;&amp;lt;\/script&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="1bbbb204023e59eba03319c7c5848fd1"&gt;注意事项&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;许多网站都采用 Google CDN 提供的 jQuery 库，使用它可以得到出色的缓存效果。&lt;/li&gt;
+&lt;li&gt;Google CDN 库的地址采用了协议相对路径，它可以很好的解决 &lt;code&gt;https&lt;/code&gt; 引起的一些问题，不过我还是选择了带 &lt;code&gt;http&lt;/code&gt; 的路径。&lt;/li&gt;
+&lt;li&gt;把 jQuery 代码统统放到页面底部可以提高载入速度。&lt;/li&gt;
+&lt;li&gt;使用 Html5 重构的页面可省略掉 &lt;code&gt;type="text/javascript"&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;别忘了在本地路径下存放相应的 jQuery 文件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="3a0e011b5cafb9554b1f59cfecb632c3"&gt;国内其它 jQuery CDN 源&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;由于 Google 不稳定，所以国内的一些 jQuery CDN 源也是不错的选择，以下几个源经验证均可访问。
+&lt;pre&gt;
+迅雷  http://vod.xunlei.com/library/jquery-1.7.2.min.js
+淘宝  http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js
+微软  http://ajax.microsoft.com/ajax/jQuery/jquery-1.8.2.min.js
+新浪  http://lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js
+阿里  http://static.www.net.cn/js/jquery-1.7.1.min.js
+百度  http://fe.bdimg.com/jq/jquery-1.7.1.min.js
+腾讯  http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js
+搜狐  http://js.sohu.com/library/jquery-1.7.1.min.js
+&lt;/pre&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 20 Feb 2014 20:40:00 +0800</pubDate><guid>tag:lusir.me,2014-02-20:jquery-src-switching.html</guid><category>jQuery</category></item><item><title>自定义 Word 文档页码</title><link>http://lusir.me/customize-page-number-of-docx.html</link><description>&lt;p&gt;使用 Word 添加页码时可以看到页码显示的格式为“当前页/总页数”，在取消“链接到前一条页眉”的状态下，“当前页”及“总页数”默认都是从第一页开始的（包含封面、目录），所以通常情况下我们需要采取添加“分节符”等操作以使页码从我们想要的地方开始及结束。
+&lt;/p&gt;
+&lt;p&gt;注：前提条件是要保证想要设置页码的区域与前后区域设置了“分节符”且“链接到前一条页眉”没有选中，可以在“页面布局”下的“分隔符”里插入“下一页”进行分节。&lt;/p&gt;
+&lt;p&gt;假设一文档有 8 页，需要在第 2 页到第 5 页设置页码（1、2、3、4 共 4 页），第 6 页到第 8 页作为附件文档重新设置页码（1、2、3 共 3 页）。则我们需要先在第 1 页与第 5 页设置“分节符”。插入页码之后，取消“链接到前一条页眉”，此时“当前页”都正常显示。在“总页数”数值那里点击右键，“切换域代码” → 拷贝 &lt;code&gt;NUMPAGES&lt;/code&gt; （注意不要{}），然后包括{}一起删除，连按两次 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;F9&lt;/kbd&gt;，出现两组大括号，输入 &lt;code&gt;{={NUMPAGES}-4}&lt;/code&gt;，再次右键“切换域代码”即可。同理，附件的“总页数”改为 &lt;code&gt;{={NUMPAGES}-5}&lt;/code&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 20 Feb 2014 16:40:00 +0800</pubDate><guid>tag:lusir.me,2014-02-20:customize-page-number-of-docx.html</guid><category>Word</category></item><item><title>修改本地连接 DNS 地址</title><link>http://lusir.me/modify-dns-address.html</link><description>&lt;p&gt;之前的电信劫持门轰动一时，打开的正常页面及非正常页面时不时会跳转到电信的导航页面或其它广告页面。最近发现打开 hao123 后会强制跳转一次，而且后面会多一个 &lt;code&gt;tn=97236842_hao_pg&lt;/code&gt; 的尾巴，看着很不舒服。于是在网上搜得以下 Opendns。
 &lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3 id="a33458dd02372c0059d095c6ce6a25a5"&gt;OpenerDNS&lt;/h3&gt;

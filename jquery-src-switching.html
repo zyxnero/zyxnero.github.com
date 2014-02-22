@@ -6,11 +6,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
-<meta name="description" content="保存 SolidWorks 自定义设置 - 作者: nero，首发于『擼sirの避風港』">
+<meta name="description" content="在 Google CDN 库获取失败时载入本地 jQuery 库 - 作者: nero，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
 <meta itemprop="inLanguage" content="zh-CN">
-<title>保存 SolidWorks 自定义设置 - 擼sirの避風港</title>
+<title>在 Google CDN 库获取失败时载入本地 jQuery 库 - 擼sirの避風港</title>
 <link rel="author" href="https://plus.google.com/118433343253566330284"/>
 <link rel="publisher" href="https://plus.google.com/118433343253566330284"/>
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
-<link rel='canonical' href="http://lusir.me/save-solidworks-custom-settings.html" />    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<link rel='canonical' href="http://lusir.me/jquery-src-switching.html" />    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="http://lusir.me/theme/js/html5shiv.js"></script>
         <script src="http://lusir.me/theme/js/respond.min.js"></script>
@@ -80,14 +80,43 @@
 </div>
 </div></div>
     
-    <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">保存 SolidWorks 自定义设置</h1></div>
+    <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">在 Google CDN 库获取失败时载入本地 jQuery 库</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
     <div id="niu2-main-content" itemprop="articleBody">
-        <p>把当前 Solidworks 的使用环境（包括：选项、工具条以及快捷键等设置）保存为一个文件，使用的时候直接导入，方便转移。使用 SolidWorks 自带的“复制设定向导”，如下图：
+        <p>Niu-X2 主题默认加载本地 jQuery 库，放在 Github 上的本地 jQuery 库速度上是没有 Google CDN 提供的 jQuery 库快的，但 Google 在国内的状态又不是很稳定，所以还是要调用本地 jQuery 库才能确保不会出现加载 jQuery 库失败。
 </p>
-<p align="center">
-    <img src="http://picasa.u.qiniudn.com/SolidWorks/copy-settings-wizard.png" title="保存 SolidWorks 自定义设置" alt="保存 SolidWorks 自定义设置" style="z-index:-100"/>
-</p>
+<h3 id="ec09647dcef4ae3525cffab24748838d">使用方法</h3>
+<hr />
+<p>使用以下代码可以在 Google CDN 库获取失败时载入本地 jQuery 库：</p>
+<div class="codehilite"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery-1.11.0.min.js&quot;&gt;&lt;\/script&gt;&#39;</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+</pre></div>
+
+
+<h3 id="1bbbb204023e59eba03319c7c5848fd1">注意事项</h3>
+<hr />
+<ol>
+<li>许多网站都采用 Google CDN 提供的 jQuery 库，使用它可以得到出色的缓存效果。</li>
+<li>Google CDN 库的地址采用了协议相对路径，它可以很好的解决 <code>https</code> 引起的一些问题，不过我还是选择了带 <code>http</code> 的路径。</li>
+<li>把 jQuery 代码统统放到页面底部可以提高载入速度。</li>
+<li>使用 Html5 重构的页面可省略掉 <code>type="text/javascript"</code>。</li>
+<li>别忘了在本地路径下存放相应的 jQuery 文件。</li>
+</ol>
+<h3 id="3a0e011b5cafb9554b1f59cfecb632c3">国内其它 jQuery CDN 源</h3>
+<hr />
+<p>由于 Google 不稳定，所以国内的一些 jQuery CDN 源也是不错的选择，以下几个源经验证均可访问。
+<pre>
+迅雷  http://vod.xunlei.com/library/jquery-1.7.2.min.js
+淘宝  http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js
+微软  http://ajax.microsoft.com/ajax/jQuery/jquery-1.8.2.min.js
+新浪  http://lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js
+阿里  http://static.www.net.cn/js/jquery-1.7.1.min.js
+百度  http://fe.bdimg.com/jq/jquery-1.7.1.min.js
+腾讯  http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js
+搜狐  http://js.sohu.com/library/jquery-1.7.1.min.js
+</pre></p>
     </div><div id="content-comments"><!-- Duoshuo Comment BEGIN -->
 <div class="ds-thread"></div>
 <script type="text/javascript">
@@ -108,16 +137,16 @@
     <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
     <div class="niu2-sidebar-value" itemprop="author"><a href="http://lusir.me/author/nero-zheng.html">Nero Zheng</a></div>
     <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-    <div class="niu2-sidebar-value" itemprop="datePublished">2012-06-06 19:32</div>
+    <div class="niu2-sidebar-value" itemprop="datePublished">2014-02-20 20:40</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
-    <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/solidworks.html">SolidWorks</a></div></div>
+    <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/jquery.html">jQuery</a></div></div>
 
 <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed"><div class="niu2-sidebar-label">
         <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
     </div>
     <ol id="niu2-sidebar-toc-list">
-        <li><a href="#content-heading">保存 SolidWorks 自定义设置</a></li>
-        <li><a href="#content-comments">评论</a></li></ol></div>
+        <li><a href="#content-heading">在 Google CDN 库获取失败时载入本地 jQuery 库</a></li>
+        <li><a href='#ec09647dcef4ae3525cffab24748838d'>使用方法</a></li><li><a href='#1bbbb204023e59eba03319c7c5848fd1'>注意事项</a></li><li><a href='#3a0e011b5cafb9554b1f59cfecb632c3'>国内其它 jQuery CDN 源</a></li><li><a href="#content-comments">评论</a></li></ol></div>
 </div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>
 <p><a href="http://lusir.me/feed.xml" title="订阅之"><i class="fa fa-rss fa-lg"></i></a>Powered by <a href="https://github.com/getpelican/pelican" rel="external nofollow" target="_blank">Pelican</a>, 

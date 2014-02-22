@@ -4,6 +4,11 @@
  * @nav-link-padding: 7px
  */
 
+pre {
+    word-break: normal;
+    word-wrap: normal;
+}
+
 code {
     white-space: pre-line;
     word-wrap: break-word;
@@ -18,7 +23,7 @@ h2:first-child {
 }
 
 h1 {
-	padding-top: 45px;
+    padding-top: 45px;
     margin-bottom: 20px;
 }
 
@@ -160,6 +165,10 @@ img {
     border-right: 1px solid #ccc;
 }
 
+#niu2-right-container {
+    margin-left: 5px;
+}
+
 a.niu2-active-toc, a.niu2-active-toc:hover {
     color: white;
     background-color: #428bca;
@@ -227,12 +236,13 @@ a.niu2-active-toc:before {
     line-height: 1.6;
 }
 
-#niu2-sidebar-toc-list li ol li ol {
-    margin-left: 12px;
+#niu2-sidebar-toc-list li ol {
+    margin-left: -3px;
 }
 
+#niu2-sidebar-toc-list li ol li ol,
 #niu2-sidebar-toc-list li ul li ul {
-    margin-left: 12px;
+    margin-left: -2px;
 }
 
 #niu2-sidebar-toc-list a {
@@ -406,7 +416,7 @@ img {
 }
 
 .niu2-index-article-title {
-	font-size: 25px;
+    font-size: 25px;
 }
 
 .niu2-footer {
@@ -414,12 +424,12 @@ img {
 }
 
 .niu2-footer hr {
-	margin: 8px 0;
+    margin: 8px 0;
 }
 
 .niu2-footer p {
-	padding: 0;
-	margin: 5px 0;
+    padding: 0;
+    margin: 5px 0;
     line-height: 1.42 !important;
 }
 
@@ -428,7 +438,7 @@ img {
 }
 
 .niu2-button {
-	margin-left: 5px;
+    margin-left: 5px;
 }
 
 .niu2-icons a {
@@ -482,11 +492,11 @@ a.niu2-toggle-ctrl:hover {
 }
 
 #niu2-tagcloud {
-	margin-top: 15px;
+    margin-top: 15px;
 }
 
 #niu2-tagcloud-filter-input {
-	width: 40%;
+    width: 40%;
 }
 
 #niu2-tagcloud ul {
@@ -499,34 +509,34 @@ a.niu2-toggle-ctrl:hover {
 }
 
 #niu2-tagcloud a:hover {
-	text-decoration: none;
-	color: white;
-	background-color: #428bca;
+    text-decoration: none;
+    color: white;
+    background-color: #428bca;
 }
 
 #niu2-tagcloud li {
-	display: inline;
+    display: inline;
 }
 
 #niu2-tagcloud li, .dropdown-toc li {
-	list-style: none;
+    list-style: none;
 }
 
 .dropdown-toc a {
-	padding: 3px 0 5px 5px;
-	color: #333;
-	display: list-item;
+    padding: 3px 0 5px 5px;
+    color: #333;
+    display: list-item;
 }
 
 .dropdown-toc a:hover {
-	color: white;
-	background-color: #428bca;
-	text-decoration: none;
+    color: white;
+    background-color: #428bca;
+    text-decoration: none;
 }
 
 .dropdown-toc .dropdown-menu {
-	max-height: 500px;
-	overflow: auto;
+    max-height: 500px;
+    overflow: auto;
 }
 
 .dropdown-toc > ul {
@@ -542,13 +552,13 @@ a.niu2-toggle-ctrl:hover {
 }
 
 .niu2-content {
-	padding-top: 30px;
+    padding-top: 30px;
 }
 
 /* fix headings covered by fixed header problem */
 h1:before, h2:before, h3:before,
 h4:before, h5:before, h6:before {
-	display: block;
+    display: block;
     content: "";
     height: 45px;
     margin: -45px 0 0;
@@ -561,7 +571,7 @@ h4:before, h5:before, h6:before {
 }
 
 .niu2-index-date {
-	display: none;
+    display: none;
 }
 
 #niu2-cse-wrapper {
