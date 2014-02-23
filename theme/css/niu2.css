@@ -655,3 +655,7 @@ td, th {
      font-size: 1.1em;
      padding: 3px 7px 2px;
 }
+
+.hidden {
+    display: none;
+}
