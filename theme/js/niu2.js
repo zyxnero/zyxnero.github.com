@@ -14,6 +14,10 @@ $(document).ready(function() {
     initGoogleCSEAnimation();
 });
 
+$(document.links).filter(function() {
+    return this.hostname != window.location.hostname;
+}).attr('target', '_blank');
+
 function onContentLoaded() {
     initFootnote();
     $(window).scroll(function() {
