@@ -429,8 +429,9 @@ img {
 
 .niu2-footer p {
     padding: 0;
-    margin: 5px 0;
+    margin: 5px auto;
     line-height: 1.42 !important;
+    text-align: center;
 }
 
 .tagcloud-list {
@@ -643,6 +644,7 @@ th {
      background-color: #A7C942;
      color: white;
      font-size: 1.2em;
+     text-align: center;
 }
 
 tr.alt td {
