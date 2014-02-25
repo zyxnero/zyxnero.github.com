@@ -10,7 +10,6 @@ window.gFixedTocListOffsetTop = 111;
 window.gFootnotePopoverMaxWidth = 300;
 window.gActiveTocClass = 'niu2-active-toc'
 
-//fancybox
 $(document).ready(function() {
         $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox({
             afterShow: function() {
@@ -36,9 +35,7 @@ $(document).ready(function() {
 });
 
 
-//Google相册
 $(function(){
-
 var name = "zyxnero"
 var numx = 9;
 var top= $('#navi').offset().top-20;
@@ -48,6 +45,7 @@ h+"' id='"+e+"'/><br /><span>"+f+" {"+n+"}</span></div></div>")});$("#items").fa
 $(".thumb img").live("click",function(){$("#items").fadeOut(500);var c=$(this).attr("id");$.getJSON(href+"/albumid/"+c+"?fields=entry(media:group(media:content,media:title))&alt=json&callback=?",function(b){$("#items").empty();$body.animate({scrollTop:top},400);$(b.feed.entry).each(function(g,d){a=d.media$group;var f=a.media$title.$t,e=a.media$content[0].url;$("#items").append("<div class='item'><div class='thumb-1'><a href='"+e+"?imgmax=800'><img src='"+e+"?imgmax=118'/></a><br /><span>"+f+"</span></div></div>")});
 $("#items").fadeIn(500);$(".thumb-1 a:has(img)").slimbox()});return false});
 });
+
 
 
 $(document).ready(function() {
