@@ -666,10 +666,10 @@ td, th {
 #navi a{padding:5px;margin:0 10px;}
 #navi .current{text-shadow:#AAA 1px 1px 1px;}
 #items{display:none;}
-.item{margin:20px 0 20px 42px;text-align:center;display:inline-block;}
+.item{margin:20px 0 40px 42px;text-align:center;display:inline-block;}
 .item img{padding:2px;border:1px solid #aaa;-webkit-box-shadow:rgba(0,0,0,.2) 0px 0px 5px;-moz-box-shadow:rgba(0,0,0,.2) 0px 0px 5px;box-shadow:rgba(0,0,0,.2) 0px 0px 5px;cursor:pointer;}
 .item span{display:block;height:18px;width:118px;overflow:hidden;}
-.thumb,.thumb img{width:120px;height:80px;}
+.thumb,.thumb img{width:138px;height:125px;}
 .thumb-1{width:118px;height:118px;display:table-cell;vertical-align:middle;}
 .thumb-1 img{vertical-align:middle;}
 /* SLIMBOX2 */
