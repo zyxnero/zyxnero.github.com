@@ -10,7 +10,6 @@ window.gFixedTocListOffsetTop = 111;
 window.gFootnotePopoverMaxWidth = 300;
 window.gActiveTocClass = 'niu2-active-toc'
 
-
 $(document).ready(function() {
     initGoogleCSEAnimation();
 });

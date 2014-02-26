@@ -668,9 +668,9 @@ td, th {
 #items{display:none;}
 .item{margin:20px 0 40px 42px;text-align:center;display:inline-block;}
 .item img{padding:2px;border:1px solid #aaa;-webkit-box-shadow:rgba(0,0,0,.2) 0px 0px 5px;-moz-box-shadow:rgba(0,0,0,.2) 0px 0px 5px;box-shadow:rgba(0,0,0,.2) 0px 0px 5px;cursor:pointer;}
-.item span{display:block;height:18px;width:118px;overflow:hidden;}
+.item span{display:block;height:18px;width:138px;overflow:hidden;}
 .thumb,.thumb img{width:138px;height:125px;}
-.thumb-1{width:118px;height:118px;display:table-cell;vertical-align:middle;}
+.thumb-1{width:138px;height:138px;display:table-cell;vertical-align:middle;}
 .thumb-1 img{vertical-align:middle;}
 /* SLIMBOX2 */
 #lbOverlay{position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background-color:#000;cursor:pointer;}
