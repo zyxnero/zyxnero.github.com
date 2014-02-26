@@ -652,8 +652,8 @@ td, th {
 }
 
 .hidden { display: none;}
-.WB_widget u { margin-left: 6px;}
-.WB_widget ul, .WB_widget li, .WB_widget a { margin-left: 6px;}
+li.toright { margin-right: 6px;}
+
 
 #navi { margin-top:2em;text-align:center;}
 #navi a { padding:5px;margin:0 10px;}
