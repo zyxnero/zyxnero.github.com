@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/feed.xml" rel="self"></atom:link><lastBuildDate>Sat, 22 Feb 2014 19:20:00 +0800</lastBuildDate><item><title>Markdown 添加表格</title><link>http://lusir.me/markdown-add-tables.html</link><description>&lt;p&gt;搭建了 Pelican 之后就在慢慢尝试学习使用 Markdown 记录一些东西（包括尝试使用 Markdown 编辑邮件）。本文记录一下使用 Markdown 添加表格的方法。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/feed.xml" rel="self"></atom:link><lastBuildDate>Thu, 27 Feb 2014 20:40:00 +0800</lastBuildDate><item><title>Thunderbird + Markdown 写邮件</title><link>http://lusir.me/markdown-emails.html</link><description>&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="http://lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
+&lt;/p&gt;
+&lt;h3 id="90633085fd7eb1c9483c3ce43cbf7619"&gt;绿色版 Thunderbird&lt;/h3&gt;
+&lt;p&gt;安装绿色版 Thunderbird（绿色版便携）
+1. 下载安装 Thunderbird 至相应位置。
+2. 新建文件夹用来存放配置文件（名称可以是中文）。
+3. 将 thunderbird.exe 发送到桌面快捷方式，并在快捷方式的“目标”中添加 -p 参数，如下图：
+&lt;p align="center"&gt;&lt;a href="http://picasa.u.qiniudn.com/thunderbird/config1.jpg" title="添加 -p 参数" class="fancybox" rel="fancybox"  target="_blank"&gt;看图点我&lt;/a&gt;&lt;/p&gt;
+4. 双击快捷方式新建配置文件指向第一步新建的文件夹，如下图，然后去掉快捷方式的 -p 参数即可正常使用。
+&lt;p align="center"&gt;&lt;a href="http://picasa.u.qiniudn.com/thunderbird/config2.jpg" title="新建用户配置" class="fancybox" rel="fancybox"  target="_blank"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+&lt;h3 id="4f3d67d0b3a268ac8d99d670851c8b80"&gt;Markdown Here 插件&lt;/h3&gt;
+&lt;p&gt;Markdown Here 插件这一步就不详述了，直接在“附加组件管理器”中搜索 Markdown Here 扩展，然后安装即可。安装成功后，在使用 Markdown 编辑完邮件后，右键点击 &lt;code&gt;Markdown Toggle&lt;/code&gt; 即可在书写页面和预览之间进行切换，从而编辑出样式清爽的邮件。同时，还可以通过编辑 Markdown Here 扩展的 CSS 来自定义邮件样式、配色等方案以达到自己的需求。&lt;/p&gt;
+&lt;h3 id="5627d82f25e05d6225b4fb0f7f1d8c62"&gt;Thunderbird 扩展&lt;/h3&gt;
+&lt;p&gt;提到了 Thunderbird，顺便列一下我现在使用的扩展。
+1. Contact Tabs。（通过 Thunderbird 主窗口快速访问联系人目录）
+2. Markdown Here。（Write your email in Markdown, then make it pretty）
+3. MinimizeToTray。（最小化窗口到系统托盘）
+4. Quicktext。（添加快速文本）&lt;/p&gt;
+&lt;p&gt;Markdown 确实是比较方便，熟练运用可以提升不少效率，我还得努力……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 27 Feb 2014 20:40:00 +0800</pubDate><guid>tag:lusir.me,2014-02-27:markdown-emails.html</guid><category>markdown</category><category>thunderbird</category></item><item><title>Markdown 添加表格</title><link>http://lusir.me/markdown-add-tables.html</link><description>&lt;p&gt;搭建了 Pelican 之后就在慢慢尝试学习使用 Markdown 记录一些东西（包括尝试使用 Markdown 编辑邮件）。本文记录一下使用 Markdown 添加表格的方法。
 &lt;/p&gt;
 &lt;h3 id="9ac4d85e35db087be217f6a8bc1a5d9d"&gt;简单的表格&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;你好 | Markdown | 表格 | 这是表头
@@ -247,7 +265,7 @@ HKEY_CURRENT_USER\Environment
 &lt;p&gt;经过一番扫描后，U 盘或分区会被写上没问题的标记，以后再接入电脑就不会有那个讨厌的提示了，大功告成！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 15 Aug 2012 01:40:00 +0800</pubDate><guid>tag:lusir.me,2012-08-15:prohibit-win7-to-scan-u-disk.html</guid><category>U 盘</category></item><item><title>SolidWorks 模型倾斜如何放正</title><link>http://lusir.me/front-view-the-solidworks-model.html</link><description>&lt;p&gt;如题，可能是由于模型为异形，可能由于建模时的疏漏导致模型没有摆正，而绘制工程图时需要一个某一方向可以正视的视图，怎么解决呢？答：按住 Ctrl 键，先点选你需要的正视面，再点选你想要让之朝上的面，松开 Ctrl，按空格键，选“正视于”即可。
 &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 08 Jun 2012 01:40:00 +0800</pubDate><guid>tag:lusir.me,2012-06-08:front-view-the-solidworks-model.html</guid><category>SolidWorks</category></item><item><title>保存 SolidWorks 自定义设置</title><link>http://lusir.me/save-solidworks-custom-settings.html</link><description>&lt;p&gt;把当前 Solidworks 的使用环境（包括：选项、工具条以及快捷键等设置）保存为一个文件，使用的时候直接导入，方便转移。使用 SolidWorks 自带的“复制设定向导”，如下图：
 &lt;/p&gt;
-&lt;p&gt;&lt;a href="http://picasa.u.qiniudn.com/solidworks/copy-settings-wizard.png" title="保存 SolidWorks 自定义设置" " class="fancybox" rel="fancybox"  target="_blank"&gt;看图点我&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 06 Jun 2012 19:32:00 +0800</pubDate><guid>tag:lusir.me,2012-06-06:save-solidworks-custom-settings.html</guid><category>SolidWorks</category></item><item><title>Win7 桌面如何只显示图片文件缩略图</title><link>http://lusir.me/just-display-win7-pic-thumbnail.html</link><description>&lt;p&gt;Win7 默认开启桌面缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，以下三步可开启图片文件的桌面缩略图而不显示其余类型的缩略图。
+&lt;p&gt;&lt;a href="http://picasa.u.qiniudn.com/solidworks/copy-settings-wizard.png" title="保存 SolidWorks 自定义设置" class="fancybox" rel="fancybox"  target="_blank"&gt;看图点我&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 06 Jun 2012 19:32:00 +0800</pubDate><guid>tag:lusir.me,2012-06-06:save-solidworks-custom-settings.html</guid><category>SolidWorks</category></item><item><title>Win7 桌面如何只显示图片文件缩略图</title><link>http://lusir.me/just-display-win7-pic-thumbnail.html</link><description>&lt;p&gt;Win7 默认开启桌面缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，以下三步可开启图片文件的桌面缩略图而不显示其余类型的缩略图。
 &lt;/p&gt;
 &lt;h3 id="2ddccf93aab2d7057bfc87a6a469b7db"&gt;阉割掉 pdf、ppt、视频文件的缩略图功能。&lt;/h3&gt;
 &lt;hr /&gt;
@@ -291,6 +309,4 @@ Windows Registry Editor Version 5.00
 &lt;p&gt;进组策略：Win + R → gpedit.msc → 用户配置 → 管理模板 → Windows 组件 → Windows 资源管理器，双击右边的“关闭隐藏的 thumbs.db 文件中的缩略图片缓存” → 选择“已启用”。&lt;/p&gt;
 &lt;h3 id="d1d4bbf2a67893815f376083ba63d7b6"&gt;删除之前已经存档的缩略图&lt;/h3&gt;
 &lt;hr /&gt;
-&lt;p&gt;即删除缩略图的数据库 thumbs.db 文件，它们都在系统盘的 &lt;code&gt;Users\（当前用户）\AppData\Local\Microsoft\Windows\Explorer&lt;/code&gt; 下，用 Diskgenius 或在另一系统下将其删除，之后重启。开启缩略图功能，这次显示缩略图的就只有图片文件了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 07 Feb 2012 13:40:00 +0800</pubDate><guid>tag:lusir.me,2012-02-07:just-display-win7-pic-thumbnail.html</guid><category>Win7</category></item><item><title>在线安装程序的下载路径</title><link>http://lusir.me/online-installer-download-path.html</link><description>&lt;p&gt;现在经常会有一些程序是在线安装的，譬如说 mini 迅雷啊、 notepad++ 啊神马之类的，在线更新之后程序就可以安装了，这一点的确挺方便，但是如果想把程序文件备份下来，留作以后断网的时候安装，应该怎么去找下载好的 Installer 程序呢？ 
-&lt;/p&gt;
-&lt;pre&gt;Ctrl+R → %temp%&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 25 Nov 2011 10:27:00 +0800</pubDate><guid>tag:lusir.me,2011-11-25:online-installer-download-path.html</guid><category>下载路径</category></item></channel></rss>
+&lt;p&gt;即删除缩略图的数据库 thumbs.db 文件，它们都在系统盘的 &lt;code&gt;Users\（当前用户）\AppData\Local\Microsoft\Windows\Explorer&lt;/code&gt; 下，用 Diskgenius 或在另一系统下将其删除，之后重启。开启缩略图功能，这次显示缩略图的就只有图片文件了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 07 Feb 2012 13:40:00 +0800</pubDate><guid>tag:lusir.me,2012-02-07:just-display-win7-pic-thumbnail.html</guid><category>Win7</category></item></channel></rss>
