@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Depends on jquery 1.10
  */
 
@@ -14,13 +14,11 @@ $(document).ready(function() {
     initGoogleCSEAnimation();
 });
 
-$(document.links).filter(function() {
-    return this.hostname != window.location.hostname;
-}).attr('target', '_blank');
+$('a').attr('rel','external');
 
 $(document.links).filter(function() {
     return this.hostname != window.location.hostname;
-}).attr('rel', 'external nofollow');
+}).attr('rel', 'nofollow');
 
 function onContentLoaded() {
     initFootnote();
@@ -678,4 +676,3 @@ function getSidebarTocCtrl() {
     }
     return window.gSidebarTocCtrl;
 }
-
