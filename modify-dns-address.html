@@ -63,13 +63,11 @@
 	   <!-- google custom search --><li>
         <div id="niu2-cse-wrapper">
             <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
-                <form action="/search.html" method="get" target="_blank">
+                <form action="/search.html" method="get">
                     <input type="hidden" name="cx" value="012467883927724485227:eaoxbeaeyty" />
                     <input type="hidden" name="ie" value="UTF-8" />
                     <div class="form-group">
-                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" 
-                            type="text" name="q" 
-                            placeholder="回车以搜索…"/>
+                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" onfocus="this.value = this.value == this.defaultValue ? '' : this.value" onblur="this.value = this.value == '' ? this.defaultValue : this.value" placeholder="回车以搜索…" />
                     </div>
                 </form>
            </div>
@@ -163,6 +161,6 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 <script src="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 <script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
 <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">
-    onContentLoaded();</script>
+onContentLoaded();</script>
 </body>
 </html>
