@@ -622,7 +622,7 @@ h4:before, h5:before, h6:before {
 body, html { min-height:101%;}
 .hidden { display: none;}
 p.juzhong { text-align:center;}
-.external{
+.external {
     border-bottom:1px dashed #333;
     padding-right:16px;
     background:url(/images/icon_external.png)

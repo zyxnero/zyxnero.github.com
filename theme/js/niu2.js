@@ -20,6 +20,10 @@ $(document.links).filter(function() {
     return this.hostname != window.location.hostname;
 }).attr('rel', 'external nofollow');
 
+$(document.links).filter(function() {
+    return this.hostname != window.location.hostname;
+}).addClass("external");
+
 function onContentLoaded() {
     initFootnote();
     $(window).scroll(function() {
