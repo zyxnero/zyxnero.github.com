@@ -621,7 +621,13 @@ h4:before, h5:before, h6:before {
 
 body, html { min-height:101%;}
 .hidden { display: none;}
-p.juzhong { text-align:justify;}
+p.juzhong { text-align:center;}
+.external{
+    border-bottom:1px dashed #333;
+    padding-right:16px;
+    background:url(/images/icon_external.png)
+        right center no-repeat;
+}
 
 #niu2-main-content ol { margin-left: -10px;}
 #niu2-main-content ul { margin-left: -25px;}
