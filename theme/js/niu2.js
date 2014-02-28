@@ -14,11 +14,11 @@ $(document).ready(function() {
     initGoogleCSEAnimation();
 });
 
-$('a').attr('rel','external');
+$('a').attr('target','_blank');
 
 $(document.links).filter(function() {
     return this.hostname != window.location.hostname;
-}).attr('rel', 'nofollow');
+}).attr('rel', 'external nofollow');
 
 function onContentLoaded() {
     initFootnote();
