@@ -7,9 +7,9 @@
 &lt;li&gt;下载安装 Thunderbird 至相应位置。&lt;/li&gt;
 &lt;li&gt;新建文件夹用来存放配置文件（名称可以是中文）。&lt;/li&gt;
 &lt;li&gt;将 thunderbird.exe 发送到桌面快捷方式，并在快捷方式的“目标”中添加 -p 参数，如下图：
-&lt;p align="center"&gt;&lt;a href="http://picasa.u.qiniudn.com/thunderbird/config1.jpg" title="添加 -p 参数" class="fancybox" rel="fancybox"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p class="juzhong"&gt;&lt;a href="http://picasa.u.qiniudn.com/thunderbird/config1.jpg" title="添加 -p 参数" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;双击快捷方式新建配置文件指向第一步新建的文件夹，如下图，然后去掉快捷方式的 -p 参数即可正常使用。
-&lt;p align="center"&gt;&lt;a href="http://picasa.u.qiniudn.com/thunderbird/config2.jpg" title="新建用户配置" class="fancybox" rel="fancybox"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p class="juzhong"&gt;&lt;a href="http://picasa.u.qiniudn.com/thunderbird/config2.jpg" title="新建用户配置" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="4f3d67d0b3a268ac8d99d670851c8b80"&gt;Markdown Here 插件&lt;/h3&gt;
 &lt;p&gt;Markdown Here 插件这一步就不详述了，直接在“附加组件管理器”中搜索 Markdown Here 扩展，然后安装即可。安装成功后，在使用 Markdown 编辑完邮件后，右键点击 &lt;code&gt;Markdown Toggle&lt;/code&gt; 即可在书写页面和预览之间进行切换，从而编辑出样式清爽的邮件。同时，还可以通过编辑 Markdown Here 扩展的 CSS 来自定义邮件样式、配色等方案以达到自己的需求。&lt;/p&gt;
@@ -269,7 +269,7 @@ HKEY_CURRENT_USER\Environment
 &lt;p&gt;经过一番扫描后，U 盘或分区会被写上没问题的标记，以后再接入电脑就不会有那个讨厌的提示了，大功告成！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 15 Aug 2012 01:40:00 +0800</pubDate><guid>tag:lusir.me,2012-08-15:prohibit-win7-to-scan-u-disk.html</guid><category>U 盘</category></item><item><title>SolidWorks 模型倾斜如何放正</title><link>http://lusir.me/front-view-the-solidworks-model.html</link><description>&lt;p&gt;如题，可能是由于模型为异形，可能由于建模时的疏漏导致模型没有摆正，而绘制工程图时需要一个某一方向可以正视的视图，怎么解决呢？答：按住 Ctrl 键，先点选你需要的正视面，再点选你想要让之朝上的面，松开 Ctrl，按空格键，选“正视于”即可。
 &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 08 Jun 2012 01:40:00 +0800</pubDate><guid>tag:lusir.me,2012-06-08:front-view-the-solidworks-model.html</guid><category>SolidWorks</category></item><item><title>保存 SolidWorks 自定义设置</title><link>http://lusir.me/save-solidworks-custom-settings.html</link><description>&lt;p&gt;把当前 Solidworks 的使用环境（包括：选项、工具条以及快捷键等设置）保存为一个文件，使用的时候直接导入，方便转移。使用 SolidWorks 自带的“复制设定向导”，如下图：
 &lt;/p&gt;
-&lt;p&gt;&lt;a href="http://picasa.u.qiniudn.com/solidworks/copy-settings-wizard.png" title="保存 SolidWorks 自定义设置" class="fancybox" rel="fancybox"&gt;看图点我&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 06 Jun 2012 19:32:00 +0800</pubDate><guid>tag:lusir.me,2012-06-06:save-solidworks-custom-settings.html</guid><category>SolidWorks</category></item><item><title>Win7 桌面如何只显示图片文件缩略图</title><link>http://lusir.me/just-display-win7-pic-thumbnail.html</link><description>&lt;p&gt;Win7 默认开启桌面缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，以下三步可开启图片文件的桌面缩略图而不显示其余类型的缩略图。
+&lt;p class="juzhong"&gt;&lt;a href="http://picasa.u.qiniudn.com/solidworks/copy-settings-wizard.png" title="保存 SolidWorks 自定义设置" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 06 Jun 2012 19:32:00 +0800</pubDate><guid>tag:lusir.me,2012-06-06:save-solidworks-custom-settings.html</guid><category>SolidWorks</category></item><item><title>Win7 桌面如何只显示图片文件缩略图</title><link>http://lusir.me/just-display-win7-pic-thumbnail.html</link><description>&lt;p&gt;Win7 默认开启桌面缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，以下三步可开启图片文件的桌面缩略图而不显示其余类型的缩略图。
 &lt;/p&gt;
 &lt;h3 id="2ddccf93aab2d7057bfc87a6a469b7db"&gt;阉割掉 pdf、ppt、视频文件的缩略图功能。&lt;/h3&gt;
 &lt;hr /&gt;
