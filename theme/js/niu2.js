@@ -20,9 +20,7 @@ $(document.links).filter(function() {
     return this.hostname != window.location.hostname;
 }).attr('rel', 'external nofollow');
 
-$(document.links).filter(function() {
-    return this.hostname != window.location.hostname;
-}).addClass("external");
+$('.pagination a').removeAttr('target','_blank');
 
 function onContentLoaded() {
     initFootnote();
