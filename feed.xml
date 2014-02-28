@@ -6,13 +6,13 @@
 &lt;ol&gt;
 &lt;li&gt;下载安装 Thunderbird 至相应位置。&lt;/li&gt;
 &lt;li&gt;新建文件夹用来存放配置文件（名称可以是中文）。&lt;/li&gt;
-&lt;li&gt;将 thunderbird.exe 发送到桌面快捷方式，并在快捷方式的&lt;code&gt;“目标”&lt;/code&gt;中添加 &lt;code&gt;-p&lt;/code&gt; 参数，如下图：
+&lt;li&gt;将 thunderbird.exe 发送到桌面快捷方式，并在快捷方式的“目标”中添加 &lt;code&gt;-p&lt;/code&gt; 参数，如下图：
 &lt;p class="juzhong"&gt;&lt;a href="http://picasa.u.qiniudn.com/thunderbird/config1.jpg" title="添加 -p 参数" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;双击快捷方式新建配置文件指向第一步新建的文件夹，如下图，然后去掉快捷方式的 &lt;code&gt;-p&lt;/code&gt; 参数即可正常使用。
 &lt;p class="juzhong"&gt;&lt;a href="http://picasa.u.qiniudn.com/thunderbird/config2.jpg" title="新建用户配置" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="4f3d67d0b3a268ac8d99d670851c8b80"&gt;Markdown Here 插件&lt;/h3&gt;
-&lt;p&gt;Markdown Here 插件这一步就不详述了，直接在&lt;code&gt;“附加组件管理器”&lt;/code&gt;中搜索 Markdown Here 扩展，然后安装即可。安装成功后，在使用 Markdown 编辑完邮件后，右键点击 &lt;code&gt;Markdown Toggle&lt;/code&gt; 即可在书写页面和预览之间进行切换，从而编辑出样式清爽的邮件。同时，还可以通过编辑 Markdown Here 扩展的 CSS 来自定义邮件样式、配色等方案以达到自己的需求。&lt;/p&gt;
+&lt;p&gt;Markdown Here 插件这一步就不详述了，直接在“附加组件管理器”中搜索 Markdown Here 扩展，然后安装即可。安装成功后，在使用 Markdown 编辑完邮件后，右键点击 &lt;code&gt;Markdown Toggle&lt;/code&gt; 即可在书写页面和预览之间进行切换，从而编辑出样式清爽的邮件。同时，还可以通过编辑 Markdown Here 扩展的 CSS 来自定义邮件样式、配色等方案以达到自己的需求。&lt;/p&gt;
 &lt;h3 id="5627d82f25e05d6225b4fb0f7f1d8c62"&gt;Thunderbird 扩展&lt;/h3&gt;
 &lt;p&gt;提到了 Thunderbird，顺便列一下我现在使用的扩展。&lt;/p&gt;
 &lt;ol&gt;

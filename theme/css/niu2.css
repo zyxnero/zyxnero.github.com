@@ -161,14 +161,9 @@ img {
     */
 }
 
-#niu2-left-container {
-    border-right: 1px solid #ccc;
-    font-family: SimSun;
-}
-
-#niu2-right-container {
-    margin-left: 5px;
-}
+#niu2-main-content h3, #niu2-main-content h4 { font-family: "Helvetica Neue";}
+#niu2-left-container { border-right: 1px solid #ccc;font-family: SimSun;}
+#niu2-right-container { margin-left: 5px;}
 
 a.niu2-active-toc, a.niu2-active-toc:hover {
     color: white;
@@ -188,13 +183,8 @@ a.niu2-active-toc:before {
 }
 */
 
-.niu2-sidebar-tag {
-    margin-top: 3px;
-}
-
-.niu2-sidebar-label:first-child {
-    margin-top: 0 !important;
-}
+.niu2-sidebar-tag { margin-top: 3px;}
+.niu2-sidebar-label:first-child { margin-top: 0 !important;}
 
 .niu2-sidebar-label {
     margin-top: 10px;
