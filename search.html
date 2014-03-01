@@ -83,8 +83,9 @@
 <div id="niu2-main-content" itemprop="articleBody">
 
 <script type="text/javascript">
-document.title = document.getElementById('niu2-cse-search-input').value + "的搜索结果 - 擼sirの避風港";
-</script>
+var keyword = location.search.match(/q=([^&]*)(&|$)/);
+if(keyword.length>0)
+{document.title = keyword + "的搜索结果 - 擼sirの避風港";}</script>
 
 <script>
   (function() {
