@@ -83,7 +83,8 @@
 <div id="niu2-main-content" itemprop="articleBody">
 
 <script type="text/javascript">
-var keyword = location.search.match(/q=([^&]*)(&|$)/);
+var regex = location.search.match(/q=([^&]*)(&|$)/);
+var keyword = regex.substring(2)
 if(keyword.length>0)
 {document.title = keyword + "的搜索结果 - 擼sirの避風港";}</script>
 
