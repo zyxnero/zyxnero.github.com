@@ -227,6 +227,9 @@ p.juzhong { text-align:center;}
 .cse .gsc-control-cse, .gsc-control-cse {padding: 0 !important;}
 .gsc-above-wrapper-area-container {width:90% !important;margin-top:-6px !important;margin-left:4px !important;}
 .gs-result .gs-title, .gs-result .gs-title * { text-decoration: none !important;}
+.gs-snippet {text-align: center;}
+.gsc-results .gsc-cursor {display: block !important;text-align: center;font-size: medium;text-decoration: none !important;}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {color: #000000 !important;font-weight: bold;text-decoration: none !important;}
 
 #niu2-main-content ol { margin-left: -10px;}
 #niu2-main-content ul { margin-left: -25px;}
