@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" xmlns:wb="http://open.weibo.com/wb">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -65,7 +65,7 @@
                     <input type="hidden" name="cx" value="012467883927724485227:eaoxbeaeyty" />
                     <input type="hidden" name="ie" value="UTF-8" />
                     <div class="form-group">
-                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" onfocus="this.value = this.value == this.defaultValue ? '' : this.value" onblur="this.value = this.value == '' ? this.defaultValue : this.value" placeholder="回车以搜索…" />
+                        <input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
                     </div>
                 </form>
            </div>
@@ -80,6 +80,7 @@
     
     <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><script>
   (function() {
+    window.title = document.getElementById('niu2-cse-search-input').value
     var cx = '012467883927724485227:eaoxbeaeyty';
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
@@ -90,8 +91,7 @@
     s.parentNode.insertBefore(gcse, s);
   })();
 </script>
-<gcse:searchresults-only></gcse:searchresults-only>
-<div id="cse">正在使出吃奶的力查找中……</div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<gcse:searchresults-only></gcse:searchresults-only></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>
 <p>
 &copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
