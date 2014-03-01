@@ -86,7 +86,7 @@
 
 <script src="http://www.google.com.hk/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
-  google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.Classic});
+  google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.CLASSIC});
   google.setOnLoadCallback(function() {
     var customSearchOptions = {};
     var orderByOptions = {};
@@ -95,7 +95,7 @@
     customSearchOptions['orderByOptions'] = orderByOptions;
     var imageSearchOptions = {};
     imageSearchOptions['layout'] = google.search.ImageSearch.LAYOUT_POPUP;
-    customSearchOptions['enableImageSearch'] = false;
+    customSearchOptions['enableImageSearch'] = true;
     customSearchOptions['imageSearchOptions'] = imageSearchOptions;  var customSearchControl = new google.search.CustomSearchControl(
       '012467883927724485227:eaoxbeaeyty', customSearchOptions);
     customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
