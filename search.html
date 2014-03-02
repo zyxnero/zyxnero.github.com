@@ -86,11 +86,10 @@
 var reg = new RegExp("(^|&)" + "q" + "=([^&]*)(&|$)", "i");
 var r = window.location.search.substr(1).match(reg);
 var context = "";
-   if (r != null)
-     context = r[2];
-
-if(context.length>0)
-{document.title = "║" + decodeURIComponent(context) +"║" + " 的搜索结果 - 擼sirの避風港";}
+    if (r != null)
+        context = r[2];
+    if(context.length>0)
+        {document.title = "║" + decodeURIComponent(context) +"║" + "的搜索结果 - 擼sirの避風港";}
 </script>
 
 <script>
