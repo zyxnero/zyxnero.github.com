@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2014-02-27T20:40:00+08:00</updated><entry><title>Thunderbird + Markdown 写邮件</title><link href="http://lusir.me/markdown-emails.html" rel="alternate"></link><updated>2014-02-27T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-27:markdown-emails.html</id><summary type="html">&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="http://lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
+&lt;/p&gt;
+&lt;h3 id="90633085fd7eb1c9483c3ce43cbf7619"&gt;绿色版 Thunderbird&lt;/h3&gt;
+&lt;p&gt;安装绿色版 Thunderbird（绿色版便携）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载安装 Thunderbird 至相应位置。&lt;/li&gt;
+&lt;li&gt;新建文件夹用来存放配置文件（名称可以是中文）。&lt;/li&gt;
+&lt;li&gt;将 thunderbird.exe 发送到桌面快捷方式，并在快捷方式的“目标”中添加 &lt;code&gt;-p&lt;/code&gt; 参数，如下图：
+&lt;p class="juzhong"&gt;&lt;a href="http://picasa.u.qiniudn.com/thunderbird/config1.jpg" title="添加 -p 参数" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;双击快捷方式新建配置文件指向第一步新建的文件夹，如下图，然后去掉快捷方式的 &lt;code&gt;-p&lt;/code&gt; 参数即可正常使用。
+&lt;p class="juzhong"&gt;&lt;a href="http://picasa.u.qiniudn.com/thunderbird/config2.jpg" title="新建用户配置" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="4f3d67d0b3a268ac8d99d670851c8b80"&gt;Markdown Here 插件&lt;/h3&gt;
+&lt;p&gt;Markdown Here 插件这一步就不详述了，直接在“附加组件管理器”中搜索 Markdown Here 扩展，然后安装即可。安装成功后，在使用 Markdown 编辑完邮件后，右键点击 &lt;code&gt;Markdown Toggle&lt;/code&gt; 即可在书写页面和预览之间进行切换，从而编辑出样式清爽的邮件。同时，还可以通过编辑 Markdown Here 扩展的 CSS 来自定义邮件样式、配色等方案以达到自己的需求。&lt;/p&gt;
+&lt;h3 id="5627d82f25e05d6225b4fb0f7f1d8c62"&gt;Thunderbird 扩展&lt;/h3&gt;
+&lt;p&gt;提到了 Thunderbird，顺便列一下我现在使用的扩展。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Contact Tabs。（通过 Thunderbird 主窗口快速访问联系人目录）&lt;/li&gt;
+&lt;li&gt;Markdown Here。（Write your email in Markdown, then make it pretty）&lt;/li&gt;
+&lt;li&gt;MinimizeToTray。（最小化窗口到系统托盘）&lt;/li&gt;
+&lt;li&gt;Quicktext。（添加快速文本）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Markdown 确实是比较方便，熟练运用可以提升不少效率，我还得努力……&lt;/p&gt;</summary><category term="markdown"></category><category term="thunderbird"></category></entry><entry><title>Markdown 添加表格</title><link href="http://lusir.me/markdown-add-tables.html" rel="alternate"></link><updated>2014-02-22T19:20:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-22:markdown-add-tables.html</id><summary type="html">&lt;p&gt;搭建了 Pelican 之后就在慢慢尝试学习使用 Markdown 记录一些东西（包括尝试使用 Markdown 编辑邮件）。本文记录一下使用 Markdown 添加表格的方法。
+&lt;/p&gt;
+&lt;h3 id="9ac4d85e35db087be217f6a8bc1a5d9d"&gt;简单的表格&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;你好 | Markdown | 表格 | 这是表头
+---- | -------- | ---- | --------
+abc  |  123   |  ABC  |  cool
+111  |  222   |  333  |  444
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="7e8b2fa2745e37dfe2e609baf04e319f"&gt;效果&lt;/h3&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;你好&lt;/th&gt;
+&lt;th&gt;Markdown&lt;/th&gt;
+&lt;th&gt;表格&lt;/th&gt;
+&lt;th&gt;这是表头&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;abc&lt;/td&gt;
+&lt;td&gt;123&lt;/td&gt;
+&lt;td&gt;ABC&lt;/td&gt;
+&lt;td&gt;cool&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;111&lt;/td&gt;
+&lt;td&gt;222&lt;/td&gt;
+&lt;td&gt;333&lt;/td&gt;
+&lt;td&gt;444&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="b3d606cf1cfea15e42ec0b7784a414af"&gt;对齐的表格&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;|Tables     |Are             |Cool |
+| ----------- |:-------------:| -----:|
+| col 3 is    | right-aligned | $1600 |
+| col 2 is    | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="7e8b2fa2745e37dfe2e609baf04e319f_1"&gt;效果&lt;/h3&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tables&lt;/th&gt;
+&lt;th align="center"&gt;Are&lt;/th&gt;
+&lt;th align="right"&gt;Cool&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;col 3 is&lt;/td&gt;
+&lt;td align="center"&gt;right-aligned&lt;/td&gt;
+&lt;td align="right"&gt;$1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;col 2 is&lt;/td&gt;
+&lt;td align="center"&gt;centered&lt;/td&gt;
+&lt;td align="right"&gt;$12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zebra stripes&lt;/td&gt;
+&lt;td align="center"&gt;are neat&lt;/td&gt;
+&lt;td align="right"&gt;$1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="35808e79fa5f367a06c83a78b857519c"&gt;参考资料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Markdown 语法"&gt;Markdown Cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Markdown"></category></entry><entry><title>关于 Unicode BOM</title><link href="http://lusir.me/about-unicode-bom.html" rel="alternate"></link><updated>2014-02-22T17:00:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-22:about-unicode-bom.html</id><summary type="html">&lt;p&gt;昨晚意识到侧边栏跟 Ma Wenbao 的不一样，好像是我这边的发生了错位。仔细比较一番，发现主题文件里面的东西居然是一样的。尝试添加 &lt;code&gt;margin:0; padding:0&lt;/code&gt; 也无效，只好作罢睡觉。
+&lt;/p&gt;
+&lt;p&gt;想到昨天用 Firefox 自带的元素查看器找到的一块空白区域，觉得应该就是它在作祟了。启用 Firebug，选中空白区域右键“编辑 html”，&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 前多了一个 &lt;code&gt;&amp;amp;#65279;&lt;/code&gt;，网上一搜，原来是 UTF-8 BOM 符（Byte-Order Mark，字节顺序标记）&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;想起之前编辑文件的时候还特意将 ANSI 转成了 UTF-8 格式，原来该格式会默认给添加上 BOM，而 UTF-8 无 BOM 格式则不会添加这个 BOM，引发这个问题的原因就是模板文件使用的是 UTF-8 编码格式，而这个 BOM 符被浏览器渲染成了一行空白，从而导致页面错位。于是将文档格式转成 ANSI，问题解决（保存成 UTF-8 无 BOM 格式同样可行）。&lt;/p&gt;
+&lt;h3 id="25f9c7fa3b50aebe5125112ac1187777"&gt;总结&lt;/h3&gt;
+&lt;p&gt;由于 BOM 是针对于 UTF-16 和 UTF-32 的，对于使用 UTF-8 编码格式的文件不需要 BOM ，所以在保存 UTF-8 文件时最好选择无 BOM 的编码。&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Wikipedia：&lt;a href="http://en.wikipedia.org/wiki/Byte_order_mark" title="字节顺序标记"&gt;字节顺序标记&lt;/a&gt;.&amp;#160;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</summary><category term="BOM"></category></entry><entry><title>在 Google CDN 库获取失败时载入本地 jQuery 库</title><link href="http://lusir.me/jquery-src-switching.html" rel="alternate"></link><updated>2014-02-20T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-20:jquery-src-switching.html</id><summary type="html">&lt;p&gt;Niu-X2 主题默认加载本地 jQuery 库，放在 Github 上的本地 jQuery 库速度上是没有 Google CDN 提供的 jQuery 库快的，但 Google 在国内的状态又不是很稳定，所以还是要调用本地 jQuery 库才能确保不会出现加载 jQuery 库失败。
+&lt;/p&gt;
+&lt;h3 id="ec09647dcef4ae3525cffab24748838d"&gt;使用方法&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;使用以下代码可以在 Google CDN 库获取失败时载入本地 jQuery 库：
+&lt;script src="https://gist.github.com/zyxnero/9150011.js"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h3 id="1bbbb204023e59eba03319c7c5848fd1"&gt;注意事项&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;许多网站都采用 Google CDN 提供的 jQuery 库，使用它可以得到出色的缓存效果。&lt;/li&gt;
+&lt;li&gt;Google CDN 库的地址采用了协议相对路径，它可以很好的解决 &lt;code&gt;https&lt;/code&gt; 引起的一些问题，不过我还是选择了带 &lt;code&gt;http&lt;/code&gt; 的路径。&lt;/li&gt;
+&lt;li&gt;把 jQuery 代码统统放到页面底部可以提高载入速度。&lt;/li&gt;
+&lt;li&gt;使用 Html5 重构的页面可省略掉 &lt;code&gt;type="text/javascript"&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;别忘了在本地路径下存放相应的 jQuery 文件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="3a0e011b5cafb9554b1f59cfecb632c3"&gt;国内其它 jQuery CDN 源&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;由于 Google 不稳定，所以国内的一些 jQuery CDN 源也是不错的选择，以下几个源经验证均可访问。
+&lt;pre&gt;
+迅雷  http://vod.xunlei.com/library/jquery-1.7.2.min.js
+淘宝  http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js
+微软  http://ajax.microsoft.com/ajax/jQuery/jquery-1.8.2.min.js
+新浪  http://lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js
+阿里  http://static.www.net.cn/js/jquery-1.7.1.min.js
+百度  http://fe.bdimg.com/jq/jquery-1.7.1.min.js
+腾讯  http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js
+搜狐  http://js.sohu.com/library/jquery-1.7.1.min.js
+&lt;/pre&gt;&lt;/p&gt;</summary><category term="jQuery"></category></entry><entry><title>自定义 Word 文档页码</title><link href="http://lusir.me/customize-page-number-of-docx.html" rel="alternate"></link><updated>2014-02-20T16:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-20:customize-page-number-of-docx.html</id><summary type="html">&lt;p&gt;使用 Word 添加页码时可以看到页码显示的格式为“当前页/总页数”，在取消“链接到前一条页眉”的状态下，“当前页”及“总页数”默认都是从第一页开始的（包含封面、目录），所以通常情况下我们需要采取添加“分节符”等操作以使页码从我们想要的地方开始及结束。
+&lt;/p&gt;
+&lt;p&gt;注：前提条件是要保证想要设置页码的区域与前后区域设置了“分节符”且“链接到前一条页眉”没有选中，可以在“页面布局”下的“分隔符”里插入“下一页”进行分节。&lt;/p&gt;
+&lt;p&gt;假设一文档有 8 页，需要在第 2 页到第 5 页设置页码（1、2、3、4 共 4 页），第 6 页到第 8 页作为附件文档重新设置页码（1、2、3 共 3 页）。则我们需要先在第 1 页与第 5 页设置“分节符”。插入页码之后，取消“链接到前一条页眉”，此时“当前页”都正常显示。在“总页数”数值那里点击右键，“切换域代码” → 拷贝 &lt;code&gt;NUMPAGES&lt;/code&gt; （注意不要{}），然后包括{}一起删除，连按两次 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;F9&lt;/kbd&gt;，出现两组大括号，输入 &lt;code&gt;{={NUMPAGES}-4}&lt;/code&gt;，再次右键“切换域代码”即可。同理，附件的“总页数”改为 &lt;code&gt;{={NUMPAGES}-5}&lt;/code&gt;。&lt;/p&gt;</summary><category term="Word"></category></entry><entry><title>修改本地连接 DNS 地址</title><link href="http://lusir.me/modify-dns-address.html" rel="alternate"></link><updated>2014-02-08T19:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-08:modify-dns-address.html</id><summary type="html">&lt;p&gt;之前的电信劫持门轰动一时，打开的正常页面及非正常页面时不时会跳转到电信的导航页面或其它广告页面。最近发现打开 hao123 后会强制跳转一次，而且后面会多一个 &lt;code&gt;tn=97236842_hao_pg&lt;/code&gt; 的尾巴，看着很不舒服。于是在网上搜得以下 Opendns。
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id="a33458dd02372c0059d095c6ce6a25a5"&gt;OpenerDNS&lt;/h3&gt;
+&lt;p&gt;&lt;pre&gt;42.120.21.30&lt;/pre&gt;&lt;/p&gt;
+&lt;h3 id="45bdd11fa20b3d010f71cffe56101a2a"&gt;V2EX DNS&lt;/h3&gt;
+&lt;p&gt;&lt;pre&gt;
+199.91.73.222     LA
+178.79.131.110   London
+&lt;/pre&gt;&lt;/p&gt;
+&lt;p&gt;还有 Google 提供的 &lt;code&gt;8.8.8.8&lt;/code&gt; 及 &lt;code&gt;8.8.4.4&lt;/code&gt; 也是不错的选择，修改之后貌似是清爽一些了……&lt;/p&gt;</summary><category term="DNS"></category></entry><entry><title>人人影视弹窗免疫</title><link href="http://lusir.me/removal-ads-of-yyets.html" rel="alternate"></link><updated>2014-02-07T19:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-07:removal-ads-of-yyets.html</id><summary type="html">&lt;p&gt;喜欢在人人影视下载片子，但它的广告确实令人烦恼。一般情况下Firefox 下的 Adblock Plus 插件能过滤大部分的广告，但最近的弹窗貌似没有挡住，ChinaList + EasyList  更新一遍也没有效果，看来只能自己手动添加规则了。
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;打开“过滤规则首选项 → 自定义过滤规则 → 广告屏蔽规则”，添加如下规则：
+&lt;pre&gt;&lt;code&gt;||p.btyou.com&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;</summary><category term="Adblock"></category></entry><entry><title>关闭 HTC 8x 按键震动及按键灯</title><link href="http://lusir.me/shutdown-8x-led-and-vibrator.html" rel="alternate"></link><updated>2014-02-06T21:20:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-06:shutdown-8x-led-and-vibrator.html</id><summary type="html">&lt;h3 id="06933067aafd48425d67bcb01bba5cb6"&gt;Update&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;2014.02.07 按键灯关闭貌似是临时的，几个小时就恢复了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;
+WP 果然是没有 Android 开放，耗电速度也让我和我的小伙伴惊呆了，所以毅然决定关闭按键震动及按键灯让爪机更省电，方法记录如下。
+         &lt;/p&gt;
+&lt;h3 id="263c8d41f4119510cabaa91e22830469"&gt;关闭按键震动&lt;/h3&gt;
+&lt;p&gt;&lt;pre&gt;手机拨号界面 → 输入##634# → Accept → Vibrator Test → Run → Off → 直接退出&lt;/pre&gt;&lt;/p&gt;
+&lt;h3 id="c0289bd19fcd4a8274891133cd805435"&gt;关闭按键灯&lt;/h3&gt;
+&lt;p&gt;&lt;pre&gt;手机拨号界面 → 输入##634# → Accept → Led Test → Run → Key LED → 直接退出&lt;/pre&gt;       &lt;/p&gt;
+&lt;p&gt;注：重启恢复&lt;/p&gt;</summary><category term="8x"></category></entry><entry><title>DNS.LA 设置 URL 转发</title><link href="http://lusir.me/url-forwarding.html" rel="alternate"></link><updated>2014-01-27T14:00:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-01-27:url-forwarding.html</id><summary type="html">&lt;p&gt;DNSPod 的 URL 转发貌似需要域名记录一个月之后才能使用，而 DNS.LA 可以直接使用。设置的时候要注意，需先在域名商那修改域名 NS 地址为 DNS.LA 的解析地址，然后再来设置 URL 转发的地址，不然会提示错误。
+&lt;/p&gt;
+&lt;pre&gt;v1s1.xundns.com
+v1s2.xundns.com &lt;/pre&gt;</summary><category term="URL 转发"></category><category term="DNS.LA"></category></entry><entry><title>尝试使用 TortoiseGit</title><link href="http://lusir.me/try-to-use-tortoisegit.html" rel="alternate"></link><updated>2014-01-26T10:25:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-01-26:try-to-use-tortoisegit.html</id><summary type="html">&lt;p&gt;刚刚接触 git，每次上传目录都要敲代码，先 &lt;code&gt;git add&lt;/code&gt;，&lt;code&gt;git  commit&lt;/code&gt; ，然后又是 &lt;code&gt;git push&lt;/code&gt;，对于我这些东西还是太过艰难，于是装了个 TortoiseGit。有了这货，目录更新之后只用右键提交，方便不少，当然前提是 TortoiseGit 要设置正确。
+&lt;/p&gt;
+&lt;p&gt;下面记录2点以作备忘：&lt;/p&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;设置 git 地址时要使用 &lt;code&gt;git@github.com:×××/××.git&lt;/code&gt; ，而不要使用 https 开头的地址。&lt;/li&gt;
+&lt;li&gt;让 TortoiseGit 记住某个 repo 的账号密码（明文记录）：进入 &lt;code&gt;“repo/.git/config”&lt;/code&gt; ，增加      &lt;br /&gt;
+&lt;pre&gt;
+[credential]
+    helper = store
+&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="2481aa063d11ec75776c6d1a58569ef3"&gt;相关阅读&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://zww.me/tortoisegit-msysgit-remember-userid-and-pw.z-turn"&gt;TortoiseGit + Msysgit 记住帐号密码的方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="TortoiseGit"></category><category term=""></category></entry><entry><title>风电齿轮油的测试标准</title><link href="http://lusir.me/gear-oil-testing-standards.html" rel="alternate"></link><updated>2014-01-25T23:50:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-01-25:gear-oil-testing-standards.html</id><summary type="html">&lt;pre&gt;
+ISO 3104/ASTM D-445：粘度 cSt（@40°C/100°C)
+ISO 2909/ASTM D-2270：粘度指数
+ISO 2592/ASTM D-92：闪点
+ISO 3016/ASTM D-97：倾点
+DIN 51757/ASTM D-4052：密度
+ISO 6618：总酸值
+ISO 2160：铜蚀测试
+ISO 7120：钢蚀测试
+ISO 6247：泡沫测试
+DIN 51599/ASTM D1401：抗乳化性测试
+ASTM D943：氧化稳定性测试
+DIN 53521：密封件相容性测试
+Flender GC-V425：弗兰德泡沫测试
+FVA 54/1-IV：抗微点蚀测试
+FZG A/16,6/90：FZG 负荷失效测试
+ASTM D-417：四球抗磨测磨斑直径
+DIN 51527/III：抗磨极压齿轮油标准
+DIN 51517/III的FAG FE8：轴承测试
+FVA 54/I-IV（90°C、60°C）：微点蚀测试
+&lt;/pre&gt;</summary><category term="风电"></category><category term="齿轮油"></category><category term="标准"></category></entry><entry><title>Windows 环境变量备份</title><link href="http://lusir.me/backup-environment-variables.html" rel="alternate"></link><updated>2014-01-25T23:25:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-01-25:backup-environment-variables.html</id><summary type="html">&lt;p&gt;很多“绿色版”程序如 git、python、matlab 都需要设置环境变量，所以为了避免麻烦，重装系统前有必要将这些“绿色版”程序的注册表备份下来，其实操作很简单，在此记录一下。
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;分别打开 Regedit 展开以下树，选中 &lt;code&gt;Environment&lt;/code&gt; ，右键导出。
+&lt;pre&gt;
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
+HKEY_CURRENT_USER\Environment
+&lt;/pre&gt;&lt;/p&gt;</summary><category term="环境变量"></category><category term="备份"></category></entry><entry><title>搬至 Github</title><link href="http://lusir.me/move-to-github.html" rel="alternate"></link><updated>2014-01-25T15:25:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-01-25:move-to-github.html</id><summary type="html">&lt;p&gt;对比 github 与 gitcafe 之后，发现 gitcafe 的存储空间较 github 大，而且服务器在国内，连接速度更快，遂果断将静态目录放至 gitcafe。不过前几天偶然发现 gitcafe 的 gitcafe page 好像不能自定义 404 页，目录下的 404.html 会被 gitcafe 默认的 404 页拦截，强迫症驱使下又回到了 github。
+&lt;/p&gt;</summary><category term="404"></category><category term="github"></category></entry><entry><title>Pelican + Niux2 使用记录</title><link href="http://lusir.me/static-blog.html" rel="alternate"></link><updated>2014-01-19T19:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-01-19:static-blog.html</id><summary type="html">&lt;h3 id="06933067aafd48425d67bcb01bba5cb6"&gt;Update&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;2014.01.25 将静态目录由 gitcafe 转移至 github，搜索栏高度改回 Niux2 主题默认。&lt;/li&gt;
+&lt;li&gt;2014.02.11 添加 html5media.min.js 至主题 base.html 中。&lt;/li&gt;
+&lt;li&gt;2014.02.17 给 index、article、page及 404 页面添加 meta。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;
+果然还是需要一个可以宣泄情感垃圾的地方。域名被恶意泛解析之后就没管了，闲置大半年。最近看网上教程学着搭了个静态博客，接触到了 git、python、pelican 等名词，很新鲜。于是又动了记录一些生活琐事的念头。
+&lt;/p&gt;
+&lt;p&gt;现在使用的是 &lt;a href="http://blog.atime.me/" title="Mawenbao"&gt;Mawenbao&lt;/a&gt; 的 Niu-X2 主题，很好看，很喜欢，希望以后能更加自适应。记录一下启用主题之后的微小修改：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;改主题下所有 css 文件中 underline 为 none；&lt;/li&gt;
+&lt;li&gt;修改 footer；&lt;/li&gt;
+&lt;li&gt;强制显示浏览器侧边栏（niu2.css）； &lt;br /&gt;
+&lt;pre&gt;&lt;code&gt;body, html {min-height:101%;}&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;文章侧边栏增加 Author，显示 fa-bug 图标；&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;修改搜索栏高度（Chrome 跟 Firefox 下显示高度不一样）。&lt;/s&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Windows 下使用 python 貌似还是有些问题，路径的写法跟网上找到的不一样，导致 extra 目录下的文件是不能拷到根目录。&lt;/p&gt;</summary><category term="pelican"></category></entry><entry><title>使用 Google CDN</title><link href="http://lusir.me/gcdn.html" rel="alternate"></link><updated>2013-06-27T14:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2013-06-27:gcdn.html</id><summary type="html">&lt;p&gt;Google PageSpeed Service 是 Google 提供的一项免费 CDN 加速服务，Page Speed Service 会从网站的服务器抓取内容，重写网页，再通过Google的服务器呈现给用户浏览，利用谷歌强大的服务器处理能力与反应速度，提升网页的加载速度。
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id="5ed93013be894ffe5ac89f7707b0b58f"&gt;Google PSS 官网&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;首页：https://developers.google.com/speed/pagespeed/service&lt;/li&gt;
+&lt;li&gt;管理：https://code.google.com/apis/console/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="de5ab0f9882d130f20c48b43f9a61ae0"&gt;Google PageSpeed Service 免费 CDN 开通&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;进入网站后，点击“Sign Up Now”按钮。&lt;/li&gt;
+&lt;li&gt;填入你的邮箱，还有你的网站地址。同时下方还有问你的网站有没有正在使用 Google 的产品，最后是点击提交。大概2个小时以内，Google PageSpeed Service 就会给你答复了。（我人品不好，等了2天）&lt;/li&gt;
+&lt;li&gt;获得 Google PageSpeed Service 使用权后，会收到邮件。&lt;/li&gt;
+&lt;li&gt;点击邮件的链接地址，跳转到Google PageSpeed Service页面，同意使用协议。然后是添加你想要CDN加速的网站域名，最多50个。假如域名还没有验证拥有权，会提示你先验证域名。
+点击 “Claim Ownership”，这里会提供多种验证方式，最快的就是上传一个 html 文件。验证通过后，就能看到域名添加成功了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="c324d27e10efe49b49eeeff86db84ecc"&gt;使用 Google PageSpeed Service 加速&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;给要加速的域名添加 CNAME 记录，记录值是 &lt;code&gt;pagespeed.googlehosted.com&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;进入域名的 DNS 管理处，将带有主机记录的域名添加 CNAME 记录，目前不支持裸域名即不带 www 这样的CDN加速。&lt;/li&gt;
+&lt;li&gt;等域名解析生效后，就能在 Google PageSpeed Service 看到 CDN 加速已成功运行。&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="Google CDN"></category></entry><entry><title>巧用 pbk 文件</title><link href="http://lusir.me/using-pbk-for-vpn.html" rel="alternate"></link><updated>2012-12-19T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2012-12-19:using-pbk-for-vpn.html</id><summary type="html">&lt;p&gt;步骤如下：&lt;/p&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;新建一个 txt 空白文档并修改拓展名为 pbk；&lt;/li&gt;
+&lt;li&gt;双击 pbk 文件，提示“电话簿是空的……”，确定并选择“工作区网络”；&lt;/li&gt;
+&lt;li&gt;输入“虚拟网络”的服务器地址和名称（用不同的名称以便区分服务器）；&lt;/li&gt;
+&lt;li&gt;点击“连接”，开始连接你的“虚拟网络”服务器；&lt;/li&gt;
+&lt;li&gt;输入你的“虚拟网络”账号和密码，记得勾选记住密码，否则每次链接都要输入密码的；如果无法连接，可以进入该“虚拟网络”的属性设置，修改"虚拟网络"连接的“属性” → “安全”下的"虚拟网络"类型，勾选允许使用这些协议。当然具体设置可以参考你所购买的“虚拟网络”的供应商的官方设置。&lt;/li&gt;
+&lt;li&gt;需要退出该“虚拟网络”，只需要双击刚才创建的 pbk 文件，选择“挂断”即可。继续添加其他“虚拟网络”服务器，你只要双击 pbk 文件，选择新建，重复上面的步骤操作。&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="pbk"></category></entry><entry><title>禁止 Win7 提示扫描并修复 U 盘</title><link href="http://lusir.me/prohibit-win7-to-scan-u-disk.html" rel="alternate"></link><updated>2012-08-15T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2012-08-15:prohibit-win7-to-scan-u-disk.html</id><summary type="html">&lt;p&gt;你有遇到每次插入 U 盘时都会提示“要扫描并修复×××吗？”，选择不修复的话以后还会提醒，选择修复会告诉你无法修复，真槑槑…… 
+&lt;/p&gt;
+&lt;p&gt;解决方法：&lt;/p&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;在提示时，记住对话框里的盘符，比如 X:； &lt;/li&gt;
+&lt;li&gt;运行一个 command 窗口（Win+R → cmd），然后执行 &lt;code&gt;chkdsk /f X:&lt;/code&gt;，其中 &lt;code&gt;X:&lt;/code&gt;要换成你具体的盘符。        &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;经过一番扫描后，U 盘或分区会被写上没问题的标记，以后再接入电脑就不会有那个讨厌的提示了，大功告成！&lt;/p&gt;</summary><category term="U 盘"></category></entry><entry><title>SolidWorks 模型倾斜如何放正</title><link href="http://lusir.me/front-view-the-solidworks-model.html" rel="alternate"></link><updated>2012-06-08T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2012-06-08:front-view-the-solidworks-model.html</id><summary type="html">&lt;p&gt;如题，可能是由于模型为异形，可能由于建模时的疏漏导致模型没有摆正，而绘制工程图时需要一个某一方向可以正视的视图，怎么解决呢？答：按住 Ctrl 键，先点选你需要的正视面，再点选你想要让之朝上的面，松开 Ctrl，按空格键，选“正视于”即可。
+&lt;/p&gt;</summary><category term="SolidWorks"></category></entry><entry><title>保存 SolidWorks 自定义设置</title><link href="http://lusir.me/save-solidworks-custom-settings.html" rel="alternate"></link><updated>2012-06-06T19:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2012-06-06:save-solidworks-custom-settings.html</id><summary type="html">&lt;p&gt;把当前 Solidworks 的使用环境（包括：选项、工具条以及快捷键等设置）保存为一个文件，使用的时候直接导入，方便转移。使用 SolidWorks 自带的“复制设定向导”，如下图：
+&lt;/p&gt;
+&lt;p class="juzhong"&gt;&lt;a href="http://picasa.u.qiniudn.com/solidworks/copy-settings-wizard.png" title="保存 SolidWorks 自定义设置" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;</summary><category term="SolidWorks"></category></entry><entry><title>Win7 桌面如何只显示图片文件缩略图</title><link href="http://lusir.me/just-display-win7-pic-thumbnail.html" rel="alternate"></link><updated>2012-02-07T13:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2012-02-07:just-display-win7-pic-thumbnail.html</id><summary type="html">&lt;p&gt;Win7 默认开启桌面缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，以下三步可开启图片文件的桌面缩略图而不显示其余类型的缩略图。
+&lt;/p&gt;
+&lt;h3 id="2ddccf93aab2d7057bfc87a6a469b7db"&gt;阉割掉 pdf、ppt、视频文件的缩略图功能。&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;具体操作：进注册表，分别找到需要修改的键值，将其 &lt;code&gt;shellex&lt;/code&gt; 键给删掉。注册表文件内容如下
+&lt;pre&gt;
+Windows Registry Editor Version 5.00
+[-HKEY_CLASSES_ROOT.avi\ShellEx]
+[-HKEY_CLASSES_ROOT.asf\ShellEx]
+[-HKEY_CLASSES_ROOT.wmv\ShellEx]
+[-HKEY_CLASSES_ROOT.rm\ShellEx]
+[-HKEY_CLASSES_ROOT.rmvb\ShellEx]
+[-HKEY_CLASSES_ROOT.mkv\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp\ShellEx]
+[-HKEY_CLASSES_ROOT.3g2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
+[-HKEY_CLASSES_ROOT.f4v\ShellEx]
+[-HKEY_CLASSES_ROOT.flv\ShellEx]
+[-HKEY_CLASSES_ROOT.m4v\ShellEx]
+[-HKEY_CLASSES_ROOT.mov\ShellEx]
+[-HKEY_CLASSES_ROOT.mp4\ShellEx]
+[-HKEY_CLASSES_ROOT.mp4v\ShellEx]
+[-HKEY_CLASSES_ROOT.mpg\ShellEx]
+[-HKEY_CLASSES_ROOT.mpeg\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp\ShellEx]
+[-HKEY_CLASSES_ROOT.3g2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
+[-HKEY_CLASSES_ROOT.f4v\ShellEx]
+[-HKEY_CLASSES_ROOT.flv\ShellEx]
+[-HKEY_CLASSES_ROOT.pdf\ShellEx]
+[-HKEY_CLASSES_ROOT.pptx\ShellEx]
+[-HKEY_CLASSES_ROOT\AcroExch.Document.7\Shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.mpp\shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.msg\shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
+&lt;/pre&gt;&lt;/p&gt;
+&lt;h3 id="34d776cf9e3a1907877d8eb0a708f191"&gt;关掉缩略图的数据库&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;进组策略：Win + R → gpedit.msc → 用户配置 → 管理模板 → Windows 组件 → Windows 资源管理器，双击右边的“关闭隐藏的 thumbs.db 文件中的缩略图片缓存” → 选择“已启用”。&lt;/p&gt;
+&lt;h3 id="d1d4bbf2a67893815f376083ba63d7b6"&gt;删除之前已经存档的缩略图&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;即删除缩略图的数据库 thumbs.db 文件，它们都在系统盘的 &lt;code&gt;Users\（当前用户）\AppData\Local\Microsoft\Windows\Explorer&lt;/code&gt; 下，用 Diskgenius 或在另一系统下将其删除，之后重启。开启缩略图功能，这次显示缩略图的就只有图片文件了。&lt;/p&gt;</summary><category term="Win7"></category></entry></feed>
