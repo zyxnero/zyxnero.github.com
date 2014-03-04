@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 27 Feb 2014 20:40:00 +0800</lastBuildDate><item><title>Thunderbird + Markdown 写邮件</title><link>http://lusir.me/markdown-emails.html</link><description>&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="http://lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 04 Mar 2014 21:40:00 +0800</lastBuildDate><item><title>整合 Google 自定义搜索到 Pelican</title><link>http://lusir.me/google-cse-for-pelican.html</link><description>&lt;p&gt;总感觉好像我搭建 Blog 的目的跟别人不太一样，小伙伴们都在正儿八经的写出一些有价值有意义的文章，我却在那折腾怎么实现这个功能，怎么实现那个功能。可问题是自己又不会整，只能到处搜寻答案然后慢慢试结果。好在人品不错，虽然浪费不少时间，但折腾出结果的满足感确实挺爽。本文记录一下将 Google 自定义搜索整合到 Pelican 的过程。
+&lt;/p&gt;
+&lt;p&gt;说是整合到 Pelican，其实只是通过 jinja2 的一些规则将 Google 自定义搜索代码插入到主题的“搜索页面.html”中。&lt;/p&gt;
+&lt;h3 id="be5bf34c6756f3e3f7e20057e2c5c10b"&gt;第一步：注册并获取 Google 自定义搜索代码&lt;/h3&gt;
+&lt;p&gt;先通过访问 http://www.google.com/cse/ 创建自定义搜索引擎。创建完毕后进入“外观”面板，选择“全宽”的布局模式。保存后进入“获取代码”,获得 Google 自定义搜索代码。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cx&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;012467883927724485227:eaoxbeaeyty&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;gcse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createElement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;text/javascript&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;src&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;protocol&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https:&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https:&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http:&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;//www.google.com/cse/cse.js?cx=&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;cx&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementsByTagName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+    &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parentNode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;insertBefore&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;})();&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;searchresults&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;only&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/gcse:searchresults-only&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="3a2e8e53c47ef1f31c3c65ceed0d2411"&gt;第二步：创建搜索结果页&lt;/h3&gt;
+&lt;p&gt;为了让搜索结果在博客内部显示，我们需要在主题的 templates 中创建一个新的页面，用来显示搜索结果。新建一个文件，命名为 search.html。我是直接复制 page.html，重命名为 search.html 并相应修改文件中的 title 及 description，然后插入第一步中得到的 Google 自定义搜索代码到相应的位置。至此搜索结果页创建就完成了。&lt;/p&gt;
+&lt;h3 id="1db2035cd12c3dd8d8e34366e93b222c"&gt;第三步：修改当前主题的搜索提交表单&lt;/h3&gt;
+&lt;p&gt;这里算是最关键的一步啦，当用户点击你博客上任意页面的站内搜索按钮的时候，可以将用户引导到刚刚创建的搜索结果页上。我们需要在主题文件夹中找到搜索框所在的文件，每个主题都不同，一般是在 header.html 中，找到类似以下的代码：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;lt;form method=&amp;quot;get&amp;quot; action=&amp;quot;/search.html&amp;quot; &amp;gt;
+&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;s&amp;quot; class=&amp;quot;textfield&amp;quot; placeholder=&amp;quot;Press enter to search ...&amp;quot; /&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;需要注意的地方：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;method="get"&lt;/li&gt;
+&lt;li&gt;action="/search.html"    action 的地址为 search.html 在生成的站点中的相对地址，一般是在根目录下，即 /search.html。&lt;/li&gt;
+&lt;li&gt;文本框 name="s" 不管主题搜索框的 name 等于什么，都将引号内的字母改成 q，即 name="q"。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="5aec29c358fa0dff64fe292979a341d1"&gt;第四步：使用 javascript 让搜索结果页的 title 中显示搜索关键字（可选）&lt;/h3&gt;
+&lt;p&gt;由于静态页面不能从数据库获取输入的关键字，所以只能从搜索结果页的 URL 下手了，假设搜索结果页的 URL 为：http://lusir.me/search.html?q=solidworks。我们想得到参数 q 的值，则可以通过以下函数调用。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;reg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;RegExp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;(^|&amp;amp;)&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;q&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;=([^&amp;amp;]*)(&amp;amp;|$)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;i&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;search&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;substr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;reg&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;r&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;r&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;║&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;decodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;context&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;║&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;的搜索结果 - 擼sirの避風港&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面那段的具体意思我也不太清楚，大概就是使用正则式将 url 分为 3 部分，以 q 为分界点，我们需要的就是 q= 之后的那部分（即 context）。匹配成功之后利用 context 给 title 赋值，但是这样赋值之后的 title 不能正确显示中文字符，所以需要使用关键字 decodeURIComponent 来将 context 还原成中文字符。&lt;/p&gt;
+&lt;h3 id="effe4bed8cea1f7d427c950a4d195981"&gt;第五步：调整 CSS&lt;/h3&gt;
+&lt;p&gt;功能实现了之后就是美化了。按照自己的意愿调整CSS即可。&lt;/p&gt;
+&lt;p&gt;大功告成，此后就可以在主题原始的搜索框上使用 Google 自定义搜索了。&lt;/p&gt;
+&lt;p&gt;研究这一功能的过程中参考了以下文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.wpjam.com/article/google-cse-for-wordpress/" title="无缝整合 Google 自定义搜索框到 WordPress"&gt;无缝整合 Google 自定义搜索框到 WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.ncku.edu.tw/~rcenter/book/html/JavaScript.html" title="簡易JavaScript語法結構"&gt;簡易JavaScript語法結構&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://yige.org/p/374" title="JS获取url参数的函数_JavaScript"&gt;JS获取url参数的函数_JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.w3schools.com/jsref/jsref_encodeuricomponent.asp" title="JavaScript encodeURIComponent() Function"&gt;JavaScript encodeURIComponent() Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.w3cplus.com/jquery/attr-removeAttr" title="jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性"&gt;jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 04 Mar 2014 21:40:00 +0800</pubDate><guid>tag:lusir.me,2014-03-04:google-cse-for-pelican.html</guid><category>pelican</category><category>cse</category></item><item><title>Thunderbird + Markdown 写邮件</title><link>http://lusir.me/markdown-emails.html</link><description>&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="http://lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
 &lt;/p&gt;
 &lt;h3 id="90633085fd7eb1c9483c3ce43cbf7619"&gt;绿色版 Thunderbird&lt;/h3&gt;
 &lt;p&gt;安装绿色版 Thunderbird（绿色版便携）&lt;/p&gt;
@@ -273,48 +333,4 @@ HKEY_CURRENT_USER\Environment
 &lt;p&gt;经过一番扫描后，U 盘或分区会被写上没问题的标记，以后再接入电脑就不会有那个讨厌的提示了，大功告成！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 15 Aug 2012 01:40:00 +0800</pubDate><guid>tag:lusir.me,2012-08-15:prohibit-win7-to-scan-u-disk.html</guid><category>U 盘</category></item><item><title>SolidWorks 模型倾斜如何放正</title><link>http://lusir.me/front-view-the-solidworks-model.html</link><description>&lt;p&gt;如题，可能是由于模型为异形，可能由于建模时的疏漏导致模型没有摆正，而绘制工程图时需要一个某一方向可以正视的视图，怎么解决呢？答：按住 Ctrl 键，先点选你需要的正视面，再点选你想要让之朝上的面，松开 Ctrl，按空格键，选“正视于”即可。
 &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 08 Jun 2012 01:40:00 +0800</pubDate><guid>tag:lusir.me,2012-06-08:front-view-the-solidworks-model.html</guid><category>SolidWorks</category></item><item><title>保存 SolidWorks 自定义设置</title><link>http://lusir.me/save-solidworks-custom-settings.html</link><description>&lt;p&gt;把当前 Solidworks 的使用环境（包括：选项、工具条以及快捷键等设置）保存为一个文件，使用的时候直接导入，方便转移。使用 SolidWorks 自带的“复制设定向导”，如下图：
 &lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/copy-settings-wizard.png" title="保存 SolidWorks 自定义设置" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 06 Jun 2012 19:32:00 +0800</pubDate><guid>tag:lusir.me,2012-06-06:save-solidworks-custom-settings.html</guid><category>SolidWorks</category></item><item><title>Win7 桌面如何只显示图片文件缩略图</title><link>http://lusir.me/just-display-win7-pic-thumbnail.html</link><description>&lt;p&gt;Win7 默认开启桌面缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，以下三步可开启图片文件的桌面缩略图而不显示其余类型的缩略图。
-&lt;/p&gt;
-&lt;h3 id="2ddccf93aab2d7057bfc87a6a469b7db"&gt;阉割掉 pdf、ppt、视频文件的缩略图功能。&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;具体操作：进注册表，分别找到需要修改的键值，将其 &lt;code&gt;shellex&lt;/code&gt; 键给删掉。注册表文件内容如下
-&lt;pre&gt;
-Windows Registry Editor Version 5.00
-[-HKEY_CLASSES_ROOT.avi\ShellEx]
-[-HKEY_CLASSES_ROOT.asf\ShellEx]
-[-HKEY_CLASSES_ROOT.wmv\ShellEx]
-[-HKEY_CLASSES_ROOT.rm\ShellEx]
-[-HKEY_CLASSES_ROOT.rmvb\ShellEx]
-[-HKEY_CLASSES_ROOT.mkv\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp\ShellEx]
-[-HKEY_CLASSES_ROOT.3g2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
-[-HKEY_CLASSES_ROOT.f4v\ShellEx]
-[-HKEY_CLASSES_ROOT.flv\ShellEx]
-[-HKEY_CLASSES_ROOT.m4v\ShellEx]
-[-HKEY_CLASSES_ROOT.mov\ShellEx]
-[-HKEY_CLASSES_ROOT.mp4\ShellEx]
-[-HKEY_CLASSES_ROOT.mp4v\ShellEx]
-[-HKEY_CLASSES_ROOT.mpg\ShellEx]
-[-HKEY_CLASSES_ROOT.mpeg\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp\ShellEx]
-[-HKEY_CLASSES_ROOT.3g2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
-[-HKEY_CLASSES_ROOT.f4v\ShellEx]
-[-HKEY_CLASSES_ROOT.flv\ShellEx]
-[-HKEY_CLASSES_ROOT.pdf\ShellEx]
-[-HKEY_CLASSES_ROOT.pptx\ShellEx]
-[-HKEY_CLASSES_ROOT\AcroExch.Document.7\Shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.mpp\shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.msg\shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
-&lt;/pre&gt;&lt;/p&gt;
-&lt;h3 id="34d776cf9e3a1907877d8eb0a708f191"&gt;关掉缩略图的数据库&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;进组策略：Win + R → gpedit.msc → 用户配置 → 管理模板 → Windows 组件 → Windows 资源管理器，双击右边的“关闭隐藏的 thumbs.db 文件中的缩略图片缓存” → 选择“已启用”。&lt;/p&gt;
-&lt;h3 id="d1d4bbf2a67893815f376083ba63d7b6"&gt;删除之前已经存档的缩略图&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;即删除缩略图的数据库 thumbs.db 文件，它们都在系统盘的 &lt;code&gt;Users\（当前用户）\AppData\Local\Microsoft\Windows\Explorer&lt;/code&gt; 下，用 Diskgenius 或在另一系统下将其删除，之后重启。开启缩略图功能，这次显示缩略图的就只有图片文件了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 07 Feb 2012 13:40:00 +0800</pubDate><guid>tag:lusir.me,2012-02-07:just-display-win7-pic-thumbnail.html</guid><category>Win7</category></item></channel></rss>
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/copy-settings-wizard.png" title="保存 SolidWorks 自定义设置" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 06 Jun 2012 19:32:00 +0800</pubDate><guid>tag:lusir.me,2012-06-06:save-solidworks-custom-settings.html</guid><category>SolidWorks</category></item></channel></rss>
