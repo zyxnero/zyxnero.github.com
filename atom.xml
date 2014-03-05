@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2014-03-04T21:40:00+08:00</updated><entry><title>整合 Google 自定义搜索到 Pelican</title><link href="http://lusir.me/google-cse-for-pelican.html" rel="alternate"></link><updated>2014-03-04T21:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-04:google-cse-for-pelican.html</id><summary type="html">&lt;p&gt;总感觉好像我搭建 Blog 的目的跟别人不太一样，小伙伴们都在正儿八经的写出一些有价值有意义的文章，我却在那折腾怎么实现这个功能，怎么实现那个功能。可问题是自己又不会整，只能到处搜寻答案然后慢慢试结果。好在人品不错，虽然浪费不少时间，但折腾出结果的满足感确实挺爽。本文记录一下将 Google 自定义搜索整合到 Pelican 的过程。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2014-03-05T01:40:00+08:00</updated><entry><title>关联博客与 Google Profile</title><link href="http://lusir.me/add-google-profile.html" rel="alternate"></link><updated>2014-03-05T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-05:add-google-profile.html</id><summary type="html">&lt;p&gt;使用 Google 搜索时经常会看到一些搜索到的文章标题下面有个头像，头像旁边写着 &lt;code&gt;By：×××&lt;/code&gt;，这时，只要标题下面的摘要中含有我们搜索的关键字，我想大多数人应该都会忍不住想点进去看看了。为了实现这一功能，我也找了好几篇文章学着操作，坐等 Google 重新爬取。
+&lt;/p&gt;
+&lt;p&gt;其实操作不难，&lt;a href="https://support.google.com/webmasters/answer/1408986?hl=zh-Hans" title="搜索结果中的作者信息"&gt;Google&lt;/a&gt; 已经给了我们方法，我们只需照着操作就行。我选择了&lt;a href="http://www.cmhello.com/" title="胡倡萌"&gt;胡倡萌&lt;/a&gt;使用的方法，即 Google 给的方法二。&lt;/p&gt;
+&lt;h3 id="27b152135057a08d88a562eac4a8dbc0"&gt;在网页上创建指向 Google+ 个人资料的链接&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://plus.google.com/118433343253566330284?rel=author&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Google+&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;链接必须包含 &lt;code&gt;?rel=author&lt;/code&gt; 参数。如果缺少该参数，就无法与 Google+ 个人资料关联。&lt;/p&gt;
+&lt;h3 id="fb4227b0fa5f176f42ab7de2f2dcc612"&gt;编辑 Google+ 个人资料以实现双向链接&lt;/h3&gt;
+&lt;p&gt;修改 &lt;a href="http://plus.google.com/me/about/edit/co" title="编辑撰稿者"&gt;Google+ 个人资料&lt;/a&gt;的撰稿者部分。在显示的对话框中点击&lt;code&gt;添加自定义链接&lt;/code&gt;，然后输入网站网址，保存即可。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;网上很多童鞋说还应该添加指向 Google+ ID 的 rel="publisher" 及 rel="me"，Glenn Gabe &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; 及 Google 给出了反驳，单博主博客是不需要 rel="me" 链接的。&lt;/p&gt;
+&lt;h3 id="85db889726449cb9c5fd0865a08fb7a9"&gt;使用 Google+ 个性网址&lt;/h3&gt;
+&lt;p&gt;标题的意思很明显，就是给个个性短连接，将 Google+ 个人资料的链接地址由 &lt;code&gt;https://plus.google.com/118433343253566330284&lt;/code&gt; 生成一个自定义的 &lt;code&gt;https://www.google.com/+NeroZheng&lt;/code&gt;,使得链接更美观、与众不同、方便记忆。&lt;a href="https://support.google.com/plus/answer/2676340?hl=zh-Hans" title="Google+个性网址使用入门"&gt; Google &lt;/a&gt;给出了详细的说明，在此我只把 Google 的要求列一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;十个或更多个关注者&lt;/li&gt;
+&lt;li&gt;帐户已创建至少30天&lt;/li&gt;
+&lt;li&gt;有个人资料照片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;就是这么简单，不过由于我只有 4 个关注者，所以我拉了几个不常上网的朋友给注册了 Google 账号才获得了资格，而且为了得到 +NeroZheng，我还把 Google+ 个人资料的名字改成了 Nero Zhen，改完才发现 Google 账号名 2 年只能改 3 次，世界真不美好。&lt;br&gt;&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.cmhello.com/add-author-information.html" title="在Google搜索结果中显示你网站的作者信息"&gt;在Google搜索结果中显示你网站的作者信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fatesinger.com/1252.html" title="把你的博客和 Google+ profile 连起来"&gt;把你的博客和 Google+ profile 连起来&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fatesinger.com/968.html" title="Google Sitelink &amp;amp; Google+ Author Profile"&gt;Google Sitelink &amp;amp; Google+ Author Profile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="http://www.hmtweb.com/imd/?p=1587" title="避免 rel=author 与 rel=publisher 产生冲突"&gt;How To Troubleshoot Authorship Markup When rel=author and rel=publisher Clash&lt;/a&gt;&amp;#160;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</summary><category term="google"></category></entry><entry><title>整合 Google 自定义搜索到 Pelican</title><link href="http://lusir.me/google-cse-for-pelican.html" rel="alternate"></link><updated>2014-03-04T21:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-04:google-cse-for-pelican.html</id><summary type="html">&lt;p&gt;总感觉好像我搭建 Blog 的目的跟别人不太一样，小伙伴们都在正儿八经的写出一些有价值有意义的文章，我却在那折腾怎么实现这个功能，怎么实现那个功能。可问题是自己又不会整，只能到处搜寻答案然后慢慢试结果。好在人品不错，虽然浪费不少时间，但折腾出结果的满足感确实挺爽。本文记录一下将 Google 自定义搜索整合到 Pelican 的过程。
 &lt;/p&gt;
 &lt;p&gt;说是整合到 Pelican，其实只是通过 jinja2 的一些规则将 Google 自定义搜索代码插入到主题的“搜索页面.html”中。&lt;/p&gt;
 &lt;h3 id="be5bf34c6756f3e3f7e20057e2c5c10b"&gt;第一步：注册并获取 Google 自定义搜索代码&lt;/h3&gt;
@@ -336,6 +370,4 @@ HKEY_CURRENT_USER\Environment
 &lt;li&gt;运行一个 command 窗口（Win+R → cmd），然后执行 &lt;code&gt;chkdsk /f X:&lt;/code&gt;，其中 &lt;code&gt;X:&lt;/code&gt;要换成你具体的盘符。        &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;经过一番扫描后，U 盘或分区会被写上没问题的标记，以后再接入电脑就不会有那个讨厌的提示了，大功告成！&lt;/p&gt;</summary><category term="U 盘"></category></entry><entry><title>SolidWorks 模型倾斜如何放正</title><link href="http://lusir.me/front-view-the-solidworks-model.html" rel="alternate"></link><updated>2012-06-08T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2012-06-08:front-view-the-solidworks-model.html</id><summary type="html">&lt;p&gt;如题，可能是由于模型为异形，可能由于建模时的疏漏导致模型没有摆正，而绘制工程图时需要一个某一方向可以正视的视图，怎么解决呢？答：按住 Ctrl 键，先点选你需要的正视面，再点选你想要让之朝上的面，松开 Ctrl，按空格键，选“正视于”即可。
-&lt;/p&gt;</summary><category term="SolidWorks"></category></entry><entry><title>保存 SolidWorks 自定义设置</title><link href="http://lusir.me/save-solidworks-custom-settings.html" rel="alternate"></link><updated>2012-06-06T19:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2012-06-06:save-solidworks-custom-settings.html</id><summary type="html">&lt;p&gt;把当前 Solidworks 的使用环境（包括：选项、工具条以及快捷键等设置）保存为一个文件，使用的时候直接导入，方便转移。使用 SolidWorks 自带的“复制设定向导”，如下图：
-&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/copy-settings-wizard.png" title="保存 SolidWorks 自定义设置" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;</summary><category term="SolidWorks"></category></entry></feed>
+&lt;/p&gt;</summary><category term="SolidWorks"></category></entry></feed>

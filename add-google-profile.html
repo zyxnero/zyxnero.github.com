@@ -7,10 +7,10 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="Windows 环境变量备份 - 作者: Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="关联博客与 Google Profile - 作者: Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>Windows 环境变量备份 - 擼sirの避風港</title>
+<title>关联博客与 Google Profile - 擼sirの避風港</title>
 <link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
-<link rel='canonical' href="http://lusir.me/backup-environment-variables.html" />    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<link rel='canonical' href="http://lusir.me/add-google-profile.html" />    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="http://lusir.me/theme/js/html5shiv.js"></script>
         <script src="http://lusir.me/theme/js/respond.min.js"></script>
@@ -79,17 +79,44 @@
 </div>
 </div></div>
     
-    <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">Windows 环境变量备份</h1></div>
+    <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">关联博客与 Google Profile</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
     <div id="niu2-main-content" itemprop="articleBody">
-        <p>很多“绿色版”程序如 git、python、matlab 都需要设置环境变量，所以为了避免麻烦，重装系统前有必要将这些“绿色版”程序的注册表备份下来，其实操作很简单，在此记录一下。
+        <p>使用 Google 搜索时经常会看到一些搜索到的文章标题下面有个头像，头像旁边写着 <code>By：×××</code>，这时，只要标题下面的摘要中含有我们搜索的关键字，我想大多数人应该都会忍不住想点进去看看了。为了实现这一功能，我也找了好几篇文章学着操作，坐等 Google 重新爬取。
 </p>
+<p>其实操作不难，<a href="https://support.google.com/webmasters/answer/1408986?hl=zh-Hans" title="搜索结果中的作者信息">Google</a> 已经给了我们方法，我们只需照着操作就行。我选择了<a href="http://www.cmhello.com/" title="胡倡萌">胡倡萌</a>使用的方法，即 Google 给的方法二。</p>
+<h3 id="27b152135057a08d88a562eac4a8dbc0">在网页上创建指向 Google+ 个人资料的链接</h3>
+<div class="codehilite"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://plus.google.com/118433343253566330284?rel=author&quot;</span><span class="nt">&gt;</span>Google+<span class="nt">&lt;/a&gt;</span>
+</pre></div>
+
+
+<p>链接必须包含 <code>?rel=author</code> 参数。如果缺少该参数，就无法与 Google+ 个人资料关联。</p>
+<h3 id="fb4227b0fa5f176f42ab7de2f2dcc612">编辑 Google+ 个人资料以实现双向链接</h3>
+<p>修改 <a href="http://plus.google.com/me/about/edit/co" title="编辑撰稿者">Google+ 个人资料</a>的撰稿者部分。在显示的对话框中点击<code>添加自定义链接</code>，然后输入网站网址，保存即可。</p>
 <hr />
-<p>分别打开 Regedit 展开以下树，选中 <code>Environment</code> ，右键导出。
-<pre>
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
-HKEY_CURRENT_USER\Environment
-</pre></p>
+<p>网上很多童鞋说还应该添加指向 Google+ ID 的 rel="publisher" 及 rel="me"，Glenn Gabe <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> 及 Google 给出了反驳，单博主博客是不需要 rel="me" 链接的。</p>
+<h3 id="85db889726449cb9c5fd0865a08fb7a9">使用 Google+ 个性网址</h3>
+<p>标题的意思很明显，就是给个个性短连接，将 Google+ 个人资料的链接地址由 <code>https://plus.google.com/118433343253566330284</code> 生成一个自定义的 <code>https://www.google.com/+NeroZheng</code>,使得链接更美观、与众不同、方便记忆。<a href="https://support.google.com/plus/answer/2676340?hl=zh-Hans" title="Google+个性网址使用入门"> Google </a>给出了详细的说明，在此我只把 Google 的要求列一下：</p>
+<ul>
+<li>十个或更多个关注者</li>
+<li>帐户已创建至少30天</li>
+<li>有个人资料照片</li>
+</ul>
+<p>就是这么简单，不过由于我只有 4 个关注者，所以我拉了几个不常上网的朋友给注册了 Google 账号才获得了资格，而且为了得到 +NeroZheng，我还把 Google+ 个人资料的名字改成了 Nero Zhen，改完才发现 Google 账号名 2 年只能改 3 次，世界真不美好。<br></p>
+<h3 id="2a302fa545ce4445b25970650930debd">参考文章</h3>
+<ul>
+<li><a href="http://www.cmhello.com/add-author-information.html" title="在Google搜索结果中显示你网站的作者信息">在Google搜索结果中显示你网站的作者信息</a></li>
+<li><a href="http://fatesinger.com/1252.html" title="把你的博客和 Google+ profile 连起来">把你的博客和 Google+ profile 连起来</a></li>
+<li><a href="http://fatesinger.com/968.html" title="Google Sitelink &amp; Google+ Author Profile">Google Sitelink &amp; Google+ Author Profile</a></li>
+</ul>
+<p><br></p>
+<div class="footnote">
+<ol>
+<li id="fn:1">
+<p><a href="http://www.hmtweb.com/imd/?p=1587" title="避免 rel=author 与 rel=publisher 产生冲突">How To Troubleshoot Authorship Markup When rel=author and rel=publisher Clash</a>&#160;</p>
+</li>
+</ol>
+</div>
     </div><div id="content-comments"><!-- Duoshuo Comment BEGIN -->
 <div class="ds-thread"></div>
 <script type="text/javascript">
@@ -110,16 +137,16 @@ HKEY_CURRENT_USER\Environment
     <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
     <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
     <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-    <div class="niu2-sidebar-value" itemprop="datePublished">2014-01-25 23:25</div>
+    <div class="niu2-sidebar-value" itemprop="datePublished">2014-03-05 01:40</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
-    <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/huan-jing-bian-liang.html">环境变量</a></div><div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/bei-fen.html">备份</a></div></div>
+    <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/google.html">google</a></div></div>
 
 <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed"><div class="niu2-sidebar-label">
         <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
     </div>
     <ol id="niu2-sidebar-toc-list">
-        <li><a href="#content-heading">Windows 环境变量备份</a></li>
-        <li><a href="#content-comments">评论</a></li></ol></div></div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+        <li><a href="#content-heading">关联博客与 Google Profile</a></li>
+        <li><a href='#27b152135057a08d88a562eac4a8dbc0'>在网页上创建指向 Google+ 个人资料的链接</a></li><li><a href='#fb4227b0fa5f176f42ab7de2f2dcc612'>编辑 Google+ 个人资料以实现双向链接</a></li><li><a href='#85db889726449cb9c5fd0865a08fb7a9'>使用 Google+ 个性网址</a></li><li><a href='#2a302fa545ce4445b25970650930debd'>参考文章</a></li><li><a href="#content-comments">评论</a></li></ol></div></div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>
 <p>
 &copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
