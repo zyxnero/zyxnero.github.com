@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2014-03-05T01:40:00+08:00</updated><entry><title>关联博客与 Google Profile</title><link href="http://lusir.me/add-google-profile.html" rel="alternate"></link><updated>2014-03-05T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-05:add-google-profile.html</id><summary type="html">&lt;p&gt;使用 Google 搜索时经常会看到一些搜索到的文章标题下面有个头像，头像旁边写着 &lt;code&gt;By：×××&lt;/code&gt;，这时，只要标题下面的摘要中含有我们搜索的关键字，我想大多数人应该都会忍不住想点进去看看了。为了实现这一功能，我也找了好几篇文章学着操作，坐等 Google 重新爬取。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2014-03-07T10:40:00+08:00</updated><entry><title>使用 Feedly 阅读器</title><link href="http://lusir.me/start-using-feedly.html" rel="alternate"></link><updated>2014-03-07T10:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-07:start-using-feedly.html</id><summary type="html">&lt;p&gt;RSS 阅读器改变了我上网的习惯，让我习惯于将喜欢的站放到订阅里而不是浏览器书签里。Google Reader 是一款经典的应用，能够高效的获取订阅源的更新，而且丰富的扩展使得它与浏览器集成，使用方便。
+&lt;/p&gt;
+&lt;p&gt;Google Reader 走了之后尝试使用过 Feedly 与 Digg 两款免费的应用，直接通过 Google 账号就能导出 Google Reader 的订阅源，即所谓的无痛转移，当时由于 Feedly 经常抽疯，所以选择了 Digg 并一直使用着它。&lt;/p&gt;
+&lt;p&gt;昨晚整理 RSS 订阅源的时候发现很多站都在更新，但 Digg 里却不能正常显示，我明白我应该更换别家的 RSS 订阅服务了。&lt;/p&gt;
+&lt;p&gt;看到&lt;a href="http://www.playpcesor.com/2013/03/google-reader-feedly.html" title="Google Reader 將停止服務，最佳替代方案就是 Feedly "&gt;電腦玩物&lt;/a&gt;的推荐文章后决定再次尝试 Feedly，将整理到一半的订阅源从 Digg 导出，用 Google 账号登入 Feedly，导入 OPML 源，将 Feedly 主题改成绿色，将 Feedly 加入“科学上网”列表。检查发现 RSS 源可以正常更新。遂果断抛弃 Digg，加入 Feedly 的行列。安装 Feedly 扩展，这样一来，Feedly 的使用方法仿佛使人回到了 Google Reader 的时代，除开搜索功能。&lt;/p&gt;
+&lt;p&gt;&lt;a class="juzhong" href="http://dn-nero.qbox.me/feedly-thumb.png" title="我的 Feedly" &gt;
+    &lt;img src="http://dn-nero.qbox.me/feedly-thumb.png" alt="我的 Feedly" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://capbone.com/rss-readers/" title="RSS 阅读器一览"&gt;RSS 阅读器一览&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://capbone.com/mr-reader/" title="Mr. Reader：我心目中最好的 RSS 阅读器"&gt;Mr. Reader：我心目中最好的 RSS 阅读器&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="feedly"></category></entry><entry><title>关联博客与 Google Profile</title><link href="http://lusir.me/add-google-profile.html" rel="alternate"></link><updated>2014-03-05T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-05:add-google-profile.html</id><summary type="html">&lt;p&gt;使用 Google 搜索时经常会看到一些搜索到的文章标题下面有个头像，头像旁边写着 &lt;code&gt;By：×××&lt;/code&gt;，这时，只要标题下面的摘要中含有我们搜索的关键字，我想大多数人应该都会忍不住想点进去看看了。为了实现这一功能，我也找了好几篇文章学着操作，坐等 Google 重新爬取。
 &lt;/p&gt;
 &lt;p&gt;其实操作不难，&lt;a href="https://support.google.com/webmasters/answer/1408986?hl=zh-Hans" title="搜索结果中的作者信息"&gt;Google&lt;/a&gt; 已经给了我们方法，我们只需照着操作就行。我选择了&lt;a href="http://www.cmhello.com/" title="胡倡萌"&gt;胡倡萌&lt;/a&gt;使用的方法，即 Google 给的方法二。&lt;/p&gt;
 &lt;h3 id="27b152135057a08d88a562eac4a8dbc0"&gt;在网页上创建指向 Google+ 个人资料的链接&lt;/h3&gt;
@@ -369,5 +381,4 @@ HKEY_CURRENT_USER\Environment
 &lt;li&gt;在提示时，记住对话框里的盘符，比如 X:； &lt;/li&gt;
 &lt;li&gt;运行一个 command 窗口（Win+R → cmd），然后执行 &lt;code&gt;chkdsk /f X:&lt;/code&gt;，其中 &lt;code&gt;X:&lt;/code&gt;要换成你具体的盘符。        &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;经过一番扫描后，U 盘或分区会被写上没问题的标记，以后再接入电脑就不会有那个讨厌的提示了，大功告成！&lt;/p&gt;</summary><category term="U 盘"></category></entry><entry><title>SolidWorks 模型倾斜如何放正</title><link href="http://lusir.me/front-view-the-solidworks-model.html" rel="alternate"></link><updated>2012-06-08T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2012-06-08:front-view-the-solidworks-model.html</id><summary type="html">&lt;p&gt;如题，可能是由于模型为异形，可能由于建模时的疏漏导致模型没有摆正，而绘制工程图时需要一个某一方向可以正视的视图，怎么解决呢？答：按住 Ctrl 键，先点选你需要的正视面，再点选你想要让之朝上的面，松开 Ctrl，按空格键，选“正视于”即可。
-&lt;/p&gt;</summary><category term="SolidWorks"></category></entry></feed>
+&lt;p&gt;经过一番扫描后，U 盘或分区会被写上没问题的标记，以后再接入电脑就不会有那个讨厌的提示了，大功告成！&lt;/p&gt;</summary><category term="U 盘"></category></entry></feed>
