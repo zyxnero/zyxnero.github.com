@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/index.html</loc>
-<lastmod>2014-03-07T11:55:23-00:00</lastmod>
+<lastmod>2014-03-07T13:58:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://lusir.me/archives.html</loc>
-<lastmod>2014-03-07T11:55:23-00:00</lastmod>
+<lastmod>2014-03-07T13:58:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://lusir.me/categories.html</loc>
-<lastmod>2014-03-07T11:55:23-00:00</lastmod>
+<lastmod>2014-03-07T13:58:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -28,6 +28,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://lusir.me/about.html</loc>
 <lastmod>2014-01-19T01:40:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://lusir.me/start-using-qiniu.html</loc>
+<lastmod>2014-03-07T13:40:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -201,7 +208,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/record/index.html</loc>
-<lastmod>2014-03-07T10:40:00-00:00</lastmod>
+<lastmod>2014-03-07T13:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -244,6 +251,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://lusir.me/tag/bei-fen.html</loc>
 <lastmod>2014-01-25T23:25:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://lusir.me/tag/qi-niu.html</loc>
+<lastmod>2014-03-07T13:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -404,7 +418,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/author/nero-zheng.html</loc>
-<lastmod>2014-03-07T10:40:00-00:00</lastmod>
+<lastmod>2014-03-07T13:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

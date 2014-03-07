@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 07 Mar 2014 10:40:00 +0800</lastBuildDate><item><title>使用 Feedly 阅读器</title><link>http://lusir.me/start-using-feedly.html</link><description>&lt;p&gt;RSS 阅读器改变了我上网的习惯，让我习惯于将喜欢的站放到订阅里而不是浏览器书签里。Google Reader 是一款经典的应用，能够高效的获取订阅源的更新，而且丰富的扩展使得它与浏览器集成，使用方便。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 07 Mar 2014 13:40:00 +0800</lastBuildDate><item><title>使用七牛镜像存储</title><link>http://lusir.me/start-using-qiniu.html</link><description>&lt;p&gt;看到很多博主都正在使用七牛作为图床或整站的 CDN 加速，本着外行凑热闹的精神，我也学着使用了一把。七牛的加速节点响应速度确实是很快，至少目前是这样，我 ping 了一下，结果如下。
+&lt;/p&gt;
+&lt;p&gt;&lt;a class="juzhong" href="http://dn-nero.qbox.me/ping-qbox-me.png" title="ping-qbox-me" data-fancybox-group="gallery"&gt;
+    &lt;img src="http://dn-nero.qbox.me/ping-qbox-me.png" alt="ping-qbox-me" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下面记录一下七牛镜像存储的使用（本例为图床使用）：&lt;/p&gt;
+&lt;p&gt;由于我没有备案的打算，所以使用的是七牛提供的三级域名。&lt;/p&gt;
+&lt;p&gt;假设我想要镜像的源站为 &lt;code&gt;img.lusir.me&lt;/code&gt;。而且我已经建立了名为 pic 的七牛 bucket（bucket 意指“空间”，理解为“坑”我觉得更形象）。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;a href="https://portal.qiniu.com/" title="七牛内容管理页面"&gt;七牛内容管理页面&lt;/a&gt;，设置一键加速网站，修改镜像源为 &lt;code&gt;img.lusir.me&lt;/code&gt;，底下的“镜像空间”默认是 pic（如果我只建立了一个“坑”）。这时点击“确定加速”即可将 &lt;code&gt;img.lusir.me&lt;/code&gt; 与 &lt;code&gt;pic.u.qiniudn.com&lt;/code&gt; 进行关联。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更改文章里面的图片地址，搜寻关键字 &lt;code&gt;img.lusir.me&lt;/code&gt; 并将其改为 &lt;code&gt;pic.u.qiniudn.com&lt;/code&gt;，保存。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;访问一篇带图的文章，进入&lt;a href="https://portal.qiniu.com/" title="七牛内容管理页面"&gt;七牛内容管理页面&lt;/a&gt;的内容管理，此时文章里相应的图会被拉取到七牛的“坑”里面。也可以直接将所有的图通过&lt;a href="http://docs.qiniu.com/tools/v6/qrsbox.html" title="QRSBox同步工具"&gt;QRSBox&lt;/a&gt;上传到“坑”里面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如此就完成整个迁移过程。此时 &lt;code&gt;img.lusir.me&lt;/code&gt; 这个源站就可以暂时废弃不用了，即以后可以直接将 &lt;code&gt;pic.u.qiniudn.com&lt;/code&gt; 作为图床。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;如果要保留源站的域名方式 &lt;code&gt;img.lusir.me&lt;/code&gt;，七牛也提供了方法，&lt;a href="http://kb.qiniu.com/how-to-use-image-storage-and-qrsync" title="镜像存储与qrsync数据同步的使用"&gt;点我查看&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.cjzsy.com/archives/1415" title="七牛云储存：从其他图床搬家到七牛的便捷方法"&gt;七牛云储存：从其他图床搬家到七牛的便捷方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 07 Mar 2014 13:40:00 +0800</pubDate><guid>tag:lusir.me,2014-03-07:start-using-qiniu.html</guid><category>七牛</category></item><item><title>使用 Feedly 阅读器</title><link>http://lusir.me/start-using-feedly.html</link><description>&lt;p&gt;RSS 阅读器改变了我上网的习惯，让我习惯于将喜欢的站放到订阅里而不是浏览器书签里。Google Reader 是一款经典的应用，能够高效的获取订阅源的更新，而且丰富的扩展使得它与浏览器集成，使用方便。
 &lt;/p&gt;
 &lt;p&gt;Google Reader 走了之后尝试使用过 Feedly 与 Digg 两款免费的应用，直接通过 Google 账号就能导出 Google Reader 的订阅源，即所谓的无痛转移，当时由于 Feedly 经常抽疯，所以选择了 Digg 并一直使用着它。&lt;/p&gt;
 &lt;p&gt;昨晚整理 RSS 订阅源的时候发现很多站都在更新，但 Digg 里却不能正常显示，我明白我应该更换别家的 RSS 订阅服务了。&lt;/p&gt;
-&lt;p&gt;看到&lt;a href="http://www.playpcesor.com/2013/03/google-reader-feedly.html" title="Google Reader 將停止服務，最佳替代方案就是 Feedly "&gt;電腦玩物&lt;/a&gt;的推荐文章后决定再次尝试 Feedly，将整理到一半的订阅源从 Digg 导出，用 Google 账号登入 Feedly，导入 OPML 源，将 Feedly 主题改成绿色，将 Feedly 加入“科学上网”列表。检查发现 RSS 源可以正常更新。遂果断抛弃 Digg，加入 Feedly 的行列。安装 Feedly 扩展，这样一来，Feedly 的使用方法仿佛使人回到了 Google Reader 的时代，除开搜索功能。&lt;/p&gt;
-&lt;p&gt;&lt;a class="juzhong" href="http://dn-nero.qbox.me/feedly-thumb.png" title="我的 Feedly" &gt;
+&lt;p&gt;看到&lt;a href="http://www.playpcesor.com/2013/03/google-reader-feedly.html" title="Google Reader 將停止服務，最佳替代方案就是 Feedly"&gt;電腦玩物&lt;/a&gt;的推荐文章后决定再次尝试 Feedly，将整理到一半的订阅源从 Digg 导出，用 Google 账号登入 Feedly，导入 OPML 源，将 Feedly 主题改成绿色，将 Feedly 加入“科学上网”列表。检查发现 RSS 源可以正常更新。遂果断抛弃 Digg，加入 Feedly 的行列。安装 Feedly 扩展，这样一来，Feedly 的使用方法仿佛使人回到了 Google Reader 的时代，除开搜索功能。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/feedly-thumb.png" title="我的 Feedly" &gt;
     &lt;img src="http://dn-nero.qbox.me/feedly-thumb.png" alt="我的 Feedly" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
@@ -373,12 +397,4 @@ HKEY_CURRENT_USER\Environment
 &lt;li&gt;点击“连接”，开始连接你的“虚拟网络”服务器；&lt;/li&gt;
 &lt;li&gt;输入你的“虚拟网络”账号和密码，记得勾选记住密码，否则每次链接都要输入密码的；如果无法连接，可以进入该“虚拟网络”的属性设置，修改"虚拟网络"连接的“属性” → “安全”下的"虚拟网络"类型，勾选允许使用这些协议。当然具体设置可以参考你所购买的“虚拟网络”的供应商的官方设置。&lt;/li&gt;
 &lt;li&gt;需要退出该“虚拟网络”，只需要双击刚才创建的 pbk 文件，选择“挂断”即可。继续添加其他“虚拟网络”服务器，你只要双击 pbk 文件，选择新建，重复上面的步骤操作。&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 19 Dec 2012 01:40:00 +0800</pubDate><guid>tag:lusir.me,2012-12-19:using-pbk-for-vpn.html</guid><category>pbk</category></item><item><title>禁止 Win7 提示扫描并修复 U 盘</title><link>http://lusir.me/prohibit-win7-to-scan-u-disk.html</link><description>&lt;p&gt;你有遇到每次插入 U 盘时都会提示“要扫描并修复×××吗？”，选择不修复的话以后还会提醒，选择修复会告诉你无法修复，真槑槑…… 
-&lt;/p&gt;
-&lt;p&gt;解决方法：&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li&gt;在提示时，记住对话框里的盘符，比如 X:； &lt;/li&gt;
-&lt;li&gt;运行一个 command 窗口（Win+R → cmd），然后执行 &lt;code&gt;chkdsk /f X:&lt;/code&gt;，其中 &lt;code&gt;X:&lt;/code&gt;要换成你具体的盘符。        &lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;经过一番扫描后，U 盘或分区会被写上没问题的标记，以后再接入电脑就不会有那个讨厌的提示了，大功告成！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 15 Aug 2012 01:40:00 +0800</pubDate><guid>tag:lusir.me,2012-08-15:prohibit-win7-to-scan-u-disk.html</guid><category>U 盘</category></item></channel></rss>
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 19 Dec 2012 01:40:00 +0800</pubDate><guid>tag:lusir.me,2012-12-19:using-pbk-for-vpn.html</guid><category>pbk</category></item></channel></rss>
