@@ -221,7 +221,7 @@ h4:before, h5:before, h6:before {display: block;content: "";height: 45px;margin:
 
 body, html { min-height:101%;}
 .hidden { display: none;}
-a.aligncenter { text-align:center;}
+.aligncenter { clear: both;display: block;margin:auto;text-align:center;}
 a:focus {outline-offset: -2px;outline: medium none !important;}
 
 .gcsc-branding, .gsc-resultsHeader {display:none;}
