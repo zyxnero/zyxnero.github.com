@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 07 Mar 2014 13:40:00 +0800</lastBuildDate><item><title>使用七牛镜像存储</title><link>http://lusir.me/start-using-qiniu.html</link><description>&lt;p&gt;看到很多博主都正在使用七牛作为图床或整站的 CDN 加速，本着外行凑热闹的精神，我也学着使用了一把。七牛的加速节点响应速度确实是很快，至少目前是这样，我 ping 了一下，结果如下。
 &lt;/p&gt;
-&lt;p&gt;&lt;a class="juzhong" href="http://dn-nero.qbox.me/ping-qbox-me.png" title="ping-qbox-me" data-fancybox-group="gallery"&gt;
+&lt;p&gt;&lt;a class="aligncenter" href="http://dn-nero.qbox.me/ping-qbox-me.png" title="ping-qbox-me" data-fancybox-group="gallery"&gt;
     &lt;img src="http://dn-nero.qbox.me/ping-qbox-me.png" alt="ping-qbox-me" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;下面记录一下七牛镜像存储的使用（本例为图床使用）：&lt;/p&gt;

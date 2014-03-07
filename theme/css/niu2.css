@@ -221,8 +221,7 @@ h4:before, h5:before, h6:before {display: block;content: "";height: 45px;margin:
 
 body, html { min-height:101%;}
 .hidden { display: none;}
-p.juzhong { text-align:center;}
-a.juzhong { text-align:center;}
+a.aligncenter { text-align:center;}
 a:focus {outline-offset: -2px;outline: medium none !important;}
 
 .gcsc-branding, .gsc-resultsHeader {display:none;}
@@ -233,9 +232,7 @@ a:focus {outline-offset: -2px;outline: medium none !important;}
 .gsc-results .gsc-cursor {display: block !important;text-align: center;font-size: medium;text-decoration: none !important;}
 .gsc-results .gsc-cursor-box .gsc-cursor-current-page {color: #000000 !important;font-weight: bold;text-decoration: none !important;}
 .gsc-results .gsc-cursor-box .gsc-cursor-page {text-decoration: none !important;}
-/* Pagination */
 .cse .gsc-cursor-page, .gsc-cursor-page {text-decoration: none;padding: .2em .5em;background-color: #f9f5ff;border: 1px solid;border-color: #c78dcc;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;}
-/* Selected pagination */
 .cse .gsc-results .gsc-cursor-page.gsc-cursor-current-page, .gsc-results .gsc-cursor-page.gsc-cursor-current-page {color: #1c001e;text-shadow: 0 1px 1px #fff;text-shadow: 0 1px 2px #fff;background-color: #c78dcc;}
 
 #niu2-main-content ol { margin-left: -10px;}
