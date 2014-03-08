@@ -25,13 +25,13 @@
 
 
 &lt;h3 id="158ce031b84d63c39e11ebcb03c83dfc"&gt;嵌入结果&lt;/h3&gt;
-&lt;video class="aligncenter" width="640" height="360" preload&gt;
+&lt;h4 id="c4f92557d7c49823e0f5d3bde398e44c"&gt;嵌入视频（右键选择播放）&lt;/h4&gt;
+&lt;p&gt;&lt;video preload&gt;
     &lt;source src="http://dn-nero.qbox.me/man-in-black-clip.mp4"&gt;&lt;/source&gt;
     &lt;source src="http://dn-nero.qbox.me/man-in-black-clip.webm"&gt;&lt;/source&gt;
-&lt;/video&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;audio class="aligncenter" preload autoplay&gt;
+&lt;/video&gt;&lt;/p&gt;
+&lt;h4 id="5c279a1704357d84f72d80a0c5e7768e"&gt;嵌入音频&lt;/h4&gt;
+&lt;p&gt;&lt;audio controls preload autoplay&gt;
     &lt;source src="http://dn-nero.qbox.me/taoshengyijiu.mp3"&gt;&lt;/source&gt;
     &lt;source src="http://dn-nero.qbox.me/taoshengyijiu.ogg"&gt;&lt;/source&gt;
 &lt;/audio&gt;&lt;/p&gt;

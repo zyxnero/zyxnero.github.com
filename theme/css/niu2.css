@@ -50,7 +50,7 @@ div.popover {line-height: 1.6;max-width: 320px;background-color: white;color: bl
 .navbar ul, .navbar ol {line-height: 1.42 !important;}
 p, #niu2-main-content ul, #niu2-main-content ol {line-height: 1.7;}
 hr {border-top: 1px solid #ccc;}
-img {max-width: 100%;height: auto;
+img {max-width: 100%;height: auto;width: auto\9;
     /*
     display: block;
     margin-left: auto;
@@ -222,6 +222,7 @@ h4:before, h5:before, h6:before {display: block;content: "";height: 45px;margin:
 body, html { min-height:101%;}
 .hidden { display: none;}
 .aligncenter { clear: both;display: block;margin:auto;text-align:center;}
+audio,video,video embed,video object,video iframe {height: auto;width: 66%;}
 a:focus {outline-offset: -2px;outline: medium none !important;}
 
 .gcsc-branding, .gsc-resultsHeader {display:none;}
@@ -258,7 +259,6 @@ html>body .item { display:table;float:left}
 .thumb,.thumb img { width:138px;height:125px;}
 .thumb-1 { width:138px;height:138px;display:table-cell;vertical-align:middle;}
 .thumb-1 img { vertical-align:middle;}
-/* SLIMBOX2 */
 #lbOverlay { position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background-color:#000;cursor:pointer;}
 #lbCenter, #lbBottomContainer { position:absolute;z-index: 9999;overflow: hidden;background-color:#fff;}
 .lbLoading { background:#fff url(/images/loading.gif) no-repeat center;}
@@ -273,3 +273,4 @@ html>body .item { display:table;float:left}
 a.float-left { float: left;margin: 7px 10px -6px 6px;}
 a.float-right { float: right;margin: 7px 10px -6px 6px;}
 a img { padding:2px;border:1px solid #aaa;-webkit-box-shadow:rgba(0,0,0,.2) 0px 0px 5px;-moz-box-shadow:rgba(0,0,0,.2) 0px 0px 5px;box-shadow:rgba(0,0,0,.2) 0px 0px 5px;cursor:pointer;max-width:300px;width:expression(this.width>300?"300px":this.width);max-height:300px;height:expression(this.height>300?"300px":this.height);}
+
