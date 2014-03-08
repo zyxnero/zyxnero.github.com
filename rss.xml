@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 07 Mar 2014 13:40:00 +0800</lastBuildDate><item><title>使用七牛镜像存储</title><link>http://lusir.me/start-using-qiniu.html</link><description>&lt;p&gt;看到很多博主都正在使用七牛作为图床或整站的 CDN 加速，本着外行凑热闹的精神，我也学着使用了一把。七牛的加速节点响应速度确实是很快，至少目前是这样，我 ping 了一下，结果如下。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 08 Mar 2014 20:40:00 +0800</lastBuildDate><item><title>在网页中嵌入 html5 音视频</title><link>http://lusir.me/embed-html5-media.html</link><description>&lt;p&gt;前几天看见一篇使用 FFmpeg 的文章，就尝试了一下这款“转码瑞士军刀”。本文记录一下初次使用 FFmpeg 的过程，顺便把转码之后的音视频嵌进来看看结果。
+&lt;/p&gt;
+&lt;h3 id="4e63f356b53969a3458a2e612a726df6"&gt;安装 FFmpeg&lt;/h3&gt;
+&lt;p&gt;首先是到&lt;a href="http://ffmpeg.zeranoe.com/builds/" title="Zeranoe FFmpeg"&gt;官网&lt;/a&gt;下载 Windows Build Version，解压后添加 ffmpeg.exe 的路径到 &lt;code&gt;环境变量&lt;/code&gt; 的 &lt;code&gt;path&lt;/code&gt; 中，打开 cmd，输入 &lt;code&gt;ffmpeg -version&lt;/code&gt; 查看是否安装成功。&lt;/p&gt;
+&lt;h3 id="d2b3b5b0e8e7ae02b05511465192f574"&gt;转码音视频&lt;/h3&gt;
+&lt;p&gt;将要转码的音视频放到 &lt;code&gt;C:\Users\×××&lt;/code&gt; 中，分别在 cmd 中输入以下命令（假设音频为 tao.mp3，视频为 man.mp4）：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;tao&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ab&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp3&lt;/span&gt;
+
+&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;tao&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="n"&gt;ogg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;acodec&lt;/span&gt; &lt;span class="n"&gt;libvorbis&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ac&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ab&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ar&lt;/span&gt; &lt;span class="mi"&gt;44100&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ogg&lt;/span&gt;
+
+&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;man&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;acodec&lt;/span&gt; &lt;span class="n"&gt;libvorbis&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ac&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ab&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ar&lt;/span&gt; &lt;span class="mi"&gt;44100&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;345&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="mi"&gt;640&lt;/span&gt;&lt;span class="n"&gt;x360&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;webm&lt;/span&gt;
+
+&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;man&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;strict&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;aac&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vcodec&lt;/span&gt; &lt;span class="n"&gt;libx264&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vprofile&lt;/span&gt; &lt;span class="n"&gt;high&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;preset&lt;/span&gt; &lt;span class="n"&gt;slow&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;maxrate&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;bufsize&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;threads&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="mi"&gt;640&lt;/span&gt;&lt;span class="n"&gt;x360&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp4&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="9e068158b573d915ef69529b11ef2f6d"&gt;将媒体文件嵌入网页&lt;/h3&gt;
+&lt;p&gt;此处使用了 &lt;a href="http://html5media.info/" title="html5media"&gt;html5media.js&lt;/a&gt;，使用 &lt;audio&gt; 与 &lt;video&gt; 标签插入，如下：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;video&lt;/span&gt; &lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;640&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;360&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;controls&lt;/span&gt; &lt;span class="n"&gt;preload&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;clip.mp4&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;clip.webm&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;video&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="158ce031b84d63c39e11ebcb03c83dfc"&gt;嵌入结果&lt;/h3&gt;
+&lt;video width="640" height="360" controls preload&gt;
+    &lt;source src="http://dn-nero.qbox.me/man-in-black-clip.mp4"&gt;&lt;/source&gt;
+    &lt;source src="http://dn-nero.qbox.me/man-in-black-clip.webm"&gt;&lt;/source&gt;
+&lt;/video&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;audio controls preload autoplay&gt;
+    &lt;source src="http://dn-nero.qbox.me/taoshengyijiu.mp3"&gt;&lt;/source&gt;
+    &lt;source src="http://dn-nero.qbox.me/taoshengyijiu.ogg"&gt;&lt;/source&gt;
+&lt;/audio&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+生前何必久睡，死后自会长眠&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://zh.wikihow.com/%E5%9C%A8Windows%E4%B8%8A%E5%AE%89%E8%A3%85FFmpeg%E7%A8%8B%E5%BA%8F" title="如何在Windows上安装FFmpeg程序"&gt;如何在Windows上安装FFmpeg程序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://paulrouget.com/e/converttohtml5video/" title="Converting to WebM, OGG/Theora and MP4"&gt;Converting to WebM, OGG/Theora and MP4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://jalena.bcsytv.com/archives/1202" title="FFmpeg 批量转换HTML5视频"&gt;FFmpeg 批量转换HTML5视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.xiaket.org/2010/notes-on-ffmpeg.html" title="FFMPEG使用"&gt;FFMPEG使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.raphaelzhang.com/2013/05/some-usage-of-ffmpeg/" title="ffmpeg转码的几个小用法"&gt;ffmpeg转码的几个小用法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/etianen/html5media/wiki/embedding-audio" title="Embedding audio"&gt;Embedding audio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/etianen/html5media/wiki/embedding-video" title="Embedding video"&gt;Embedding video&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 08 Mar 2014 20:40:00 +0800</pubDate><guid>tag:lusir.me,2014-03-08:embed-html5-media.html</guid><category>html5</category></item><item><title>使用七牛镜像存储</title><link>http://lusir.me/start-using-qiniu.html</link><description>&lt;p&gt;看到很多博主都正在使用七牛作为图床或整站的 CDN 加速，本着外行凑热闹的精神，我也学着使用了一把。七牛的加速节点响应速度确实是很快，至少目前是这样，我 ping 了一下，结果如下。
 &lt;/p&gt;
 &lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ping-qbox-me.png" title="ping-qbox-me" data-fancybox-group="gallery"&gt;
     &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ping-qbox-me.png" alt="ping-qbox-me" /&gt;
@@ -27,7 +74,7 @@
 &lt;/p&gt;
 &lt;p&gt;Google Reader 走了之后尝试使用过 Feedly 与 Digg 两款免费的应用，直接通过 Google 账号就能导出 Google Reader 的订阅源，即所谓的无痛转移，当时由于 Feedly 经常抽疯，所以选择了 Digg 并一直使用着它。&lt;/p&gt;
 &lt;p&gt;昨晚整理 RSS 订阅源的时候发现很多站都在更新，但 Digg 里却不能正常显示，我明白我应该更换别家的 RSS 订阅服务了。&lt;/p&gt;
-&lt;p&gt;看到&lt;a href="http://www.playpcesor.com/2013/03/google-reader-feedly.html" title="Google Reader 將停止服務，最佳替代方案就是 Feedly"&gt;電腦玩物&lt;/a&gt;的推荐文章后决定再次尝试 Feedly，将整理到一半的订阅源从 Digg 导出，用 Google 账号登入 Feedly，导入 OPML 源，将 Feedly 主题改成绿色，将 Feedly 加入“科学上网”列表。检查发现 RSS 源可以正常更新。遂果断抛弃 Digg，加入 Feedly 的行列。安装 Feedly 扩展，这样一来，Feedly 的使用方法仿佛使人回到了 Google Reader 的时代，除开搜索功能。&lt;/p&gt;
+&lt;p&gt;看到&lt;a href="http://www.playpcesor.com/2013/03/google-reader-feedly.html" title="Google Reader 將停止服務，最佳替代方案就是 Feedly"&gt;電腦玩物&lt;/a&gt;的推荐文章后决定再次尝试 Feedly，将整理到一半的订阅源从 Digg 导出，用 Google 账号登入 Feedly，导入 OPML 源，将 Feedly 主题改成绿色，将 Feedly 加入“科学上网”列表。检查发现 RSS 源可以正常更新。遂果断抛弃 Digg，加入 Feedly 的行列。安装 Feedly 扩展，这样一来，Feedly 的使用方法仿佛使人回到了 Google Reader 的时代，除开搜索功能（2014.03.08更新：Feedly 提供搜索功能，不过貌似 Pro 账号才能获取全部搜索条目）。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://dn-nero.qbox.me/feedly-thumb.png" title="我的 Feedly" &gt;
     &lt;img src="http://dn-nero.qbox.me/feedly-thumb.png" alt="我的 Feedly" /&gt;
 &lt;/a&gt;&lt;/p&gt;
@@ -388,13 +435,4 @@ HKEY_CURRENT_USER\Environment
 &lt;li&gt;给要加速的域名添加 CNAME 记录，记录值是 &lt;code&gt;pagespeed.googlehosted.com&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;进入域名的 DNS 管理处，将带有主机记录的域名添加 CNAME 记录，目前不支持裸域名即不带 www 这样的CDN加速。&lt;/li&gt;
 &lt;li&gt;等域名解析生效后，就能在 Google PageSpeed Service 看到 CDN 加速已成功运行。&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 27 Jun 2013 14:40:00 +0800</pubDate><guid>tag:lusir.me,2013-06-27:gcdn.html</guid><category>Google CDN</category></item><item><title>巧用 pbk 文件</title><link>http://lusir.me/using-pbk-for-vpn.html</link><description>&lt;p&gt;步骤如下：&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li&gt;新建一个 txt 空白文档并修改拓展名为 pbk；&lt;/li&gt;
-&lt;li&gt;双击 pbk 文件，提示“电话簿是空的……”，确定并选择“工作区网络”；&lt;/li&gt;
-&lt;li&gt;输入“虚拟网络”的服务器地址和名称（用不同的名称以便区分服务器）；&lt;/li&gt;
-&lt;li&gt;点击“连接”，开始连接你的“虚拟网络”服务器；&lt;/li&gt;
-&lt;li&gt;输入你的“虚拟网络”账号和密码，记得勾选记住密码，否则每次链接都要输入密码的；如果无法连接，可以进入该“虚拟网络”的属性设置，修改"虚拟网络"连接的“属性” → “安全”下的"虚拟网络"类型，勾选允许使用这些协议。当然具体设置可以参考你所购买的“虚拟网络”的供应商的官方设置。&lt;/li&gt;
-&lt;li&gt;需要退出该“虚拟网络”，只需要双击刚才创建的 pbk 文件，选择“挂断”即可。继续添加其他“虚拟网络”服务器，你只要双击 pbk 文件，选择新建，重复上面的步骤操作。&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 19 Dec 2012 01:40:00 +0800</pubDate><guid>tag:lusir.me,2012-12-19:using-pbk-for-vpn.html</guid><category>pbk</category></item></channel></rss>
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 27 Jun 2013 14:40:00 +0800</pubDate><guid>tag:lusir.me,2013-06-27:gcdn.html</guid><category>Google CDN</category></item></channel></rss>
