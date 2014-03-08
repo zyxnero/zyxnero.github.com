@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2014-03-08T22:40:00+08:00</updated><entry><title>在网页中嵌入 hermit 播放器</title><link href="http://lusir.me/embed-hermit-player.html" rel="alternate"></link><updated>2014-03-08T22:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-08:embed-hermit-player.html</id><summary type="html">&lt;p&gt;Hermit 播放器是&lt;a href="http://mufeng.me/" title="牧风"&gt;牧风&lt;/a&gt;兄整的一个音乐播放器，直接通过虾米的歌曲、专辑或精选集 ID 引用虾米的歌曲链接实现播放，且播放器的 css 写成自适应样式，在移动设备上的表现良好。实现方式应该是写了 API，具体的我也不太懂，可以直接去 &lt;a href="http://mufeng.me/hermit-for-wordpress.html" title="Hermit 虾米音乐播放器"&gt;插件发布页&lt;/a&gt;查看。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2014-03-08T22:40:00+08:00</updated><entry><title>在网页中嵌入 hermit 播放器</title><link href="http://lusir.me/embed-hermit-player.html" rel="alternate"></link><updated>2014-03-08T22:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-08:embed-hermit-player.html</id><summary type="html">&lt;p&gt;Hermit 播放器是&lt;a href="http://mufeng.me/" title="牧风"&gt;牧风&lt;/a&gt;兄整的一个音乐播放器，直接通过虾米的歌曲、专辑或精选集 ID 引用虾米的歌曲链接实现播放，且播放器的 css 写成自适应样式，在移动设备上的表现良好。实现方式应该是写了 API，具体的我也不太懂，可以直接去&lt;a href="http://mufeng.me/hermit-for-wordpress.html" title="Hermit 虾米音乐播放器"&gt;插件发布页&lt;/a&gt;查看。
 &lt;/p&gt;
 &lt;h3 id="3f66e73cbcc93c974d7c79d05f13653a"&gt;古事记 - 喜多郎&lt;/h3&gt;
-&lt;p&gt;推荐一张喜多郎&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;的专辑吧，《古事记》。偶尔听听感觉很不错……&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;推荐一张喜多郎&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;的专辑吧，《古事记》。偶尔听听感觉很不错……&lt;/p&gt;
 &lt;div class="hermit" songs="album#:4953"&gt;
 &lt;div class="hermit-box"&gt;
 &lt;div class="hermit-controls"&gt;
@@ -29,7 +29,6 @@
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;ol&gt;
 &lt;li id="fn:1"&gt;
