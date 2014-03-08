@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2014-03-08T20:40:00+08:00</updated><entry><title>在网页中嵌入 html5 音视频</title><link href="http://lusir.me/embed-html5-media.html" rel="alternate"></link><updated>2014-03-08T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-08:embed-html5-media.html</id><summary type="html">&lt;p&gt;前几天看见一篇使用 FFmpeg 的文章，就尝试了一下这款“转码瑞士军刀”。本文记录一下初次使用 FFmpeg 的过程，顺便把转码之后的音视频嵌进来看看结果。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2014-03-08T22:40:00+08:00</updated><entry><title>在网页中嵌入 hermit 播放器</title><link href="http://lusir.me/embed-hermit-player.html" rel="alternate"></link><updated>2014-03-08T22:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-08:embed-hermit-player.html</id><summary type="html">&lt;p&gt;Hermit 播放器是[牧风][1]兄整的一个音乐播放器，直接通过虾米的歌曲、专辑或精选集 ID 引用虾米的歌曲链接实现播放，且播放器的 css 写成自适应样式，在移动设备上的表现良好。实现方式应该是写了 API，具体的我也不太懂，可以直接去 [插件发布页][2]查看。
+&lt;/p&gt;
+&lt;h3 id="3f66e73cbcc93c974d7c79d05f13653a"&gt;古事记 - 喜多郎&lt;/h3&gt;
+&lt;p&gt;推荐一张喜多郎&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;的专辑吧，《古事记》。偶尔听听感觉很不错……&lt;/p&gt;
+&lt;p&gt;&lt;link rel="stylesheet" type="text/css" href="http://dn-nero.qbox.me/hermit/style/hermit.min.css" media="all" /&gt;
+&lt;script&gt;var hermit = { url: 'http://dn-nero.qbox.me/hermit/swf/' }&lt;/script&gt;
+&lt;script src="http://dn-nero.qbox.me/hermit/script/hermit.min.js"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;div class="hermit" songs="album#:4953"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;
+左键轻击列表播放或暂停。
+&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="footnote"&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="http://www.u148.net/article/1899.html" title="喜多郎：寂静之声·灵性之音"&gt;喜多郎：寂静之声·灵性之音&lt;/a&gt;&amp;#160;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;&lt;a href="http://wencanghai.blog.sohu.com/267381183.html" title="倾听喜多郎"&gt;倾听喜多郎&lt;/a&gt;&amp;#160;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</summary><category term="hermit"></category><category term="虾米"></category></entry><entry><title>在网页中嵌入 html5 音视频</title><link href="http://lusir.me/embed-html5-media.html" rel="alternate"></link><updated>2014-03-08T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-08:embed-html5-media.html</id><summary type="html">&lt;p&gt;前几天看见一篇使用 FFmpeg 的文章，就尝试了一下这款“转码瑞士军刀”。本文记录一下初次使用 FFmpeg 的过程，顺便把转码之后的音视频嵌进来看看结果。
 &lt;/p&gt;
 &lt;h3 id="4e63f356b53969a3458a2e612a726df6"&gt;安装 FFmpeg&lt;/h3&gt;
 &lt;p&gt;首先是到&lt;a href="http://ffmpeg.zeranoe.com/builds/" title="Zeranoe FFmpeg"&gt;官网&lt;/a&gt;下载 Windows Build Version，解压后添加 ffmpeg.exe 的路径到 &lt;code&gt;环境变量&lt;/code&gt; 的 &lt;code&gt;path&lt;/code&gt; 中，打开 cmd，输入 &lt;code&gt;ffmpeg -version&lt;/code&gt; 查看是否安装成功。&lt;/p&gt;
@@ -410,29 +452,4 @@ HKEY_CURRENT_USER\Environment
 &lt;li&gt;文章侧边栏增加 Author，显示 fa-bug 图标；&lt;/li&gt;
 &lt;li&gt;&lt;s&gt;修改搜索栏高度（Chrome 跟 Firefox 下显示高度不一样）。&lt;/s&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Windows 下使用 python 貌似还是有些问题，路径的写法跟网上找到的不一样，导致 extra 目录下的文件是不能拷到根目录。&lt;/p&gt;</summary><category term="pelican"></category></entry><entry><title>使用 Google CDN</title><link href="http://lusir.me/gcdn.html" rel="alternate"></link><updated>2013-06-27T14:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2013-06-27:gcdn.html</id><summary type="html">&lt;h3 id="06933067aafd48425d67bcb01bba5cb6"&gt;Update&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;该方法已失效（需申请）。&lt;a href="https://developers.google.com/speed/pagespeed/service"&gt;申请地址&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Google PageSpeed Service 是 Google 提供的一项免费 CDN 加速服务，Page Speed Service 会从网站的服务器抓取内容，重写网页，再通过Google的服务器呈现给用户浏览，利用谷歌强大的服务器处理能力与反应速度，提升网页的加载速度。
-&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3 id="5ed93013be894ffe5ac89f7707b0b58f"&gt;Google PSS 官网&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;首页：https://developers.google.com/speed/pagespeed/service&lt;/li&gt;
-&lt;li&gt;管理：https://code.google.com/apis/console/&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="de5ab0f9882d130f20c48b43f9a61ae0"&gt;Google PageSpeed Service 免费 CDN 开通&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;进入网站后，点击“Sign Up Now”按钮。&lt;/li&gt;
-&lt;li&gt;填入你的邮箱，还有你的网站地址。同时下方还有问你的网站有没有正在使用 Google 的产品，最后是点击提交。大概2个小时以内，Google PageSpeed Service 就会给你答复了。（我人品不好，等了2天）&lt;/li&gt;
-&lt;li&gt;获得 Google PageSpeed Service 使用权后，会收到邮件。&lt;/li&gt;
-&lt;li&gt;点击邮件的链接地址，跳转到Google PageSpeed Service页面，同意使用协议。然后是添加你想要CDN加速的网站域名，最多50个。假如域名还没有验证拥有权，会提示你先验证域名。
-点击 “Claim Ownership”，这里会提供多种验证方式，最快的就是上传一个 html 文件。验证通过后，就能看到域名添加成功了。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="c324d27e10efe49b49eeeff86db84ecc"&gt;使用 Google PageSpeed Service 加速&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;给要加速的域名添加 CNAME 记录，记录值是 &lt;code&gt;pagespeed.googlehosted.com&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;进入域名的 DNS 管理处，将带有主机记录的域名添加 CNAME 记录，目前不支持裸域名即不带 www 这样的CDN加速。&lt;/li&gt;
-&lt;li&gt;等域名解析生效后，就能在 Google PageSpeed Service 看到 CDN 加速已成功运行。&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="Google CDN"></category></entry></feed>
+&lt;p&gt;Windows 下使用 python 貌似还是有些问题，路径的写法跟网上找到的不一样，导致 extra 目录下的文件是不能拷到根目录。&lt;/p&gt;</summary><category term="pelican"></category></entry></feed>
