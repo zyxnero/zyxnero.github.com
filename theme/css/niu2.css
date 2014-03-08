@@ -222,7 +222,7 @@ h4:before, h5:before, h6:before {display: block;content: "";height: 45px;margin:
 body, html { min-height:101%;}
 .hidden { display: none;}
 .aligncenter { clear: both;display: block;margin:auto;text-align:center;}
-audio{margin-left:17%}
+audio{margin-left:17%;width: 66%;}
 video,video embed,video object,video iframe {height: auto;width: 66%;margin-left:17%;}
 a:focus {outline-offset: -2px;outline: medium none !important;}
 
