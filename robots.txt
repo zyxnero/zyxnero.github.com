@@ -3,6 +3,7 @@ Disallow: /theme/
 Disallow: /author/
 Disallow: /images/
 Disallow: /record/
+Disallow: /hermit/
 Disallow: /tag/
 Disallow: /*.js$
 Disallow: /*.css$
