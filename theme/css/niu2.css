@@ -272,6 +272,6 @@ html>body .item { display:table;float:left}
 #lbCaption,#lbNumber,#lbCloseLink,#lbBottom { display:none;}
 
 a.float-left { float: left;margin: 7px 10px -6px 6px;}
-a.float-right { float: right;margin: 7px 10px -6px 6px;}
+a.float-right { float: right;margin: 3px 4px 0px 6px;}
 a img { padding:2px;border:1px solid #aaa;-webkit-box-shadow:rgba(0,0,0,.2) 0px 0px 5px;-moz-box-shadow:rgba(0,0,0,.2) 0px 0px 5px;box-shadow:rgba(0,0,0,.2) 0px 0px 5px;cursor:pointer;max-width:300px;width:expression(this.width>300?"300px":this.width);max-height:300px;height:expression(this.height>300?"300px":this.height);}
 

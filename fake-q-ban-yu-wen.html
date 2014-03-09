@@ -7,10 +7,10 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="Win7 桌面如何只显示图片文件缩略图 - 作者: Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="荷塘月色 - Q 版语文 - 作者: Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>Win7 桌面如何只显示图片文件缩略图 - 擼sirの避風港</title>
+<title>荷塘月色 - Q 版语文 - 擼sirの避風港</title>
 <link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="http://lusir.me/hermit/style/hermit.min.css" media="all" />
-<link rel='canonical' href="http://lusir.me/just-display-win7-pic-thumbnail.html" />    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<link rel='canonical' href="http://lusir.me/fake-q-ban-yu-wen.html" />    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="http://lusir.me/theme/js/html5shiv.js"></script>
         <script src="http://lusir.me/theme/js/respond.min.js"></script>
@@ -80,54 +80,23 @@
 </div>
 </div></div>
     
-    <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">Win7 桌面如何只显示图片文件缩略图</h1></div>
+    <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">荷塘月色 - Q 版语文</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
     <div id="niu2-main-content" itemprop="articleBody">
-        <p>Win7 默认开启桌面缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，以下三步可开启图片文件的桌面缩略图而不显示其余类型的缩略图。
+        <p>每个月都有那么几天，感觉颇不宁静。今晚在院子里坐着数蚊子，忽然想起日日走过的荷塘，在这满月的光里，荷塘里应该有MM在洗澡吧。月亮像“非典”病人的体温似的，不知什么时候已经升高了，墙外马路上收破烂的叫喊声，已经听不见了；老婆在屋里拍着孩子，跑着调地哼着“两只老虎”。好难听啊，我终于忍不住悄悄地披了衣服，带上门出去了。
 </p>
-<h3 id="2ddccf93aab2d7057bfc87a6a469b7db">阉割掉 pdf、ppt、视频文件的缩略图功能。</h3>
-<hr />
-<p>具体操作：进注册表，分别找到需要修改的键值，将其 <code>shellex</code> 键给删掉。注册表文件内容如下
-<pre>
-Windows Registry Editor Version 5.00
-[-HKEY_CLASSES_ROOT.avi\ShellEx]
-[-HKEY_CLASSES_ROOT.asf\ShellEx]
-[-HKEY_CLASSES_ROOT.wmv\ShellEx]
-[-HKEY_CLASSES_ROOT.rm\ShellEx]
-[-HKEY_CLASSES_ROOT.rmvb\ShellEx]
-[-HKEY_CLASSES_ROOT.mkv\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp\ShellEx]
-[-HKEY_CLASSES_ROOT.3g2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
-[-HKEY_CLASSES_ROOT.f4v\ShellEx]
-[-HKEY_CLASSES_ROOT.flv\ShellEx]
-[-HKEY_CLASSES_ROOT.m4v\ShellEx]
-[-HKEY_CLASSES_ROOT.mov\ShellEx]
-[-HKEY_CLASSES_ROOT.mp4\ShellEx]
-[-HKEY_CLASSES_ROOT.mp4v\ShellEx]
-[-HKEY_CLASSES_ROOT.mpg\ShellEx]
-[-HKEY_CLASSES_ROOT.mpeg\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp\ShellEx]
-[-HKEY_CLASSES_ROOT.3g2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
-[-HKEY_CLASSES_ROOT.f4v\ShellEx]
-[-HKEY_CLASSES_ROOT.flv\ShellEx]
-[-HKEY_CLASSES_ROOT.pdf\ShellEx]
-[-HKEY_CLASSES_ROOT.pptx\ShellEx]
-[-HKEY_CLASSES_ROOT\AcroExch.Document.7\Shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.mpp\shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.msg\shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
-</pre></p>
-<h3 id="34d776cf9e3a1907877d8eb0a708f191">关掉缩略图的数据库</h3>
-<hr />
-<p>进组策略：Win + R → gpedit.msc → 用户配置 → 管理模板 → Windows 组件 → Windows 资源管理器，双击右边的“关闭隐藏的 thumbs.db 文件中的缩略图片缓存” → 选择“已启用”。</p>
-<h3 id="d1d4bbf2a67893815f376083ba63d7b6">删除之前已经存档的缩略图</h3>
-<hr />
-<p>即删除缩略图的数据库 thumbs.db 文件，它们都在系统盘的 <code>Users\（当前用户）\AppData\Local\Microsoft\Windows\Explorer</code> 下，用 Diskgenius 或在另一系统下将其删除，之后重启。开启缩略图功能，这次显示缩略图的就只有图片文件了。</p>
+<p><a class="float-left" href="http://dn-nero.qbox.me/dufu2.jpg" title="杜甫涂鸦" data-fancybox-group="gallery"><img src="http://dn-nero.qbox.me/dufu2.jpg" alt="杜甫涂鸦" /></a>沿着荷塘，是一条曲折的小煤屑路，运气好的话还可以捡到几块煤炭和硬币。这条路白天少有人走，晚上更是鬼都不来。由于缺少压马路的恋人，所以路面显得凹凸不平。荷塘四面，长着许多树，可我就认识杨柳，其他的叫不上名字来，我想，比草大一点儿的植物就应该叫树吧。没有月光的晚上，这路上阴森森的，有些怕人。今晚却很好，虽然月光也还是淡淡的，但估计不会有女流氓出没。</p>
+<p>路上只我一个人，这一片天地好像是我的；我也像是灵魂出窍，到了另一个世界里。我爱牛奶，也爱啤酒；爱同居，也爱独处。像今天晚上，一个人在这苍茫的月下，什么都可以想，什么都可以不想，思想出现冲突，开始不兼容的时候，我便觉得自己是个自由的人。平日里一定要做的事，一定要说的话，一定要憋的屁，现在都可以不理。就像是游荡在网络世界里，这就是独处的妙处。</p>
+<p>弯弯勾勾的荷塘上面，放眼寻找 MM，可惜看到的都是叶子。</p>
+<p><a class="float-right" href="http://dn-nero.qbox.me/dufu3.jpg" title="杜甫涂鸦" data-fancybox-group="gallery"><img src="http://dn-nero.qbox.me/dufu3.jpg" alt="杜甫涂鸦" /></a>叶子出水很高，像夏季少女的超短裙。叶子中间，有些白花，有开着的，有不开的，还有半开不开的；一阵阴风吹过，送来缕缕清香，比香蕉还香，比蚊香还香，仿佛帕瓦罗蒂在喜马拉雅山上唱歌似的。这时候，叶子与花像吃了摇头丸一般抖动了起来，像闪电似的，霎时整个荷塘的叶子和花都抖动了起来，其传染速度比禽流感还快啊。叶子底下是脉脉的流水，虽然被叶子遮住了，但是我仍能用人格保证它下面是流水，不是可乐或果汁。</p>
+<p>月光如嘘嘘一般，哗哗地撒在这一片叶子和花上。叶子和花仿佛刚洗过牛奶浴，像婴儿的小屁屁，白里透红，与众不同。竟然是满月！不知道狼人和吸血鬼会不会出现，好在天上有一层淡淡的云，我认为这很好，遮住了月亮，狼人和吸血鬼就不会出现，我就是在这里睡觉也可以。月光是隔了树照过来的，因此荷叶上的黑影参差斑驳，并不均匀，但光与影却有着和谐的旋律，如周杰伦的歌一样，听不出歌词，但却有令人心动的旋律。</p>
+<p>荷塘的四面，远远近近，高高低低竟然都是树，还好，大多是我认识的杨柳，而不是非洲杀人树。树缝里透着一两点路灯光，没精打采的，看得我直犯困。这时候最热闹的，要数远处烧烤摊的叫卖声了，真想去喝啤酒啊，可一摸口袋，我什么也没有。</p>
+<p>突然想起二十元人民币有荷花图案，今晚这满塘荷花如果是人民币的话，我可就发了，只可惜它们只是荷花。这令我更加惦记发薪水的日子了。这样想着，猛一抬头，不觉已是自己的门前；轻轻地推门，什么声息也没有，老婆已睡熟好久了。竟然没给我留门？！看来我还真得去荷塘边上凑合一宿。明天跟老婆说我今晚去荷塘赏月了，她能信吗？</p>
+<p><a href="http://dn-nero.qbox.me/guanhanqing.jpg" title="关汉卿涂鸦" data-fancybox-group="gallery">
+    <img class="aligncenter" src="http://dn-nero.qbox.me/guanhanqing.jpg" alt="关汉卿涂鸦" />
+</a><br><br></p>
+<p>这是一篇测试文……，文章作者版权所有。</p>
+<p>今天心情不好。我只有四句话想说。包括这句和前面的两句。我的话说完了……</p>
     </div><div id="content-comments"><!-- Duoshuo Comment BEGIN -->
 <div class="ds-thread"></div>
 <script type="text/javascript">
@@ -148,16 +117,16 @@ Windows Registry Editor Version 5.00
     <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
     <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
     <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-    <div class="niu2-sidebar-value" itemprop="datePublished">2012-02-07 13:40</div>
-<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
-    <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/win7.html">Win7</a></div></div>
+    <div class="niu2-sidebar-value" itemprop="datePublished">2014-03-09 20:31</div>
+<div class="niu2-sidebar-label"><i class="fa fa-trash-o"></i>分类</div>
+    <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/nonsense/index.html">扯</a></div><div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div><div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/nonsense.html">nonsense</a></div></div>
 
 <div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed"><div class="niu2-sidebar-label">
         <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
     </div>
     <ol id="niu2-sidebar-toc-list">
-        <li><a href="#content-heading">Win7 桌面如何只显示图片文件缩略图</a></li>
-        <li><a href='#2ddccf93aab2d7057bfc87a6a469b7db'>阉割掉 pdf、ppt、视频文件的缩略图功能。</a></li><li><a href='#34d776cf9e3a1907877d8eb0a708f191'>关掉缩略图的数据库</a></li><li><a href='#d1d4bbf2a67893815f376083ba63d7b6'>删除之前已经存档的缩略图</a></li><li><a href="#content-comments">评论</a></li></ol></div></div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+        <li><a href="#content-heading">荷塘月色 - Q 版语文</a></li>
+        <li><a href="#content-comments">评论</a></li></ol></div></div></div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>
 <p>
 &copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
