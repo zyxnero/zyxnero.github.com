@@ -1,10 +1,11 @@
 User-agent: *
-Disallow: /theme/
 Disallow: /author/
-Disallow: /images/
-Disallow: /record/
 Disallow: /hermit/
+Disallow: /images/
+Disallow: /nonsense/
+Disallow: /record/
 Disallow: /tag/
+Disallow: /theme/
 Disallow: /*.js$
 Disallow: /*.css$
 Sitemap: http://lusir.me/sitemap.xml
