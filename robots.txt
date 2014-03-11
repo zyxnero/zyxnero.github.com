@@ -8,4 +8,18 @@ Disallow: /tag/
 Disallow: /theme/
 Disallow: /*.js$
 Disallow: /*.css$
-Sitemap: http://lusir.me/sitemap.xml
+Disallow: /*.ico$
+Disallow: /archives.html
+Disallow: /atom.xml
+Disallow: /authors.html
+Disallow: /author/*
+Disallow: /BingSiteAuth.xml
+Disallow: /categories.html
+Disallow: /CNAME
+Disallow: /baidu_verify_IO8QL3yBf4.html
+Disallow: /dead_link_sitemap.txt
+Disallow: /nero.appcache
+Disallow: /rss.xml
+Disallow: /search.html
+
+Sitemap: http://www.lusir.me/sitemap.xml

@@ -1,6 +1,7 @@
 CACHE MANIFEST
-# v1 - 2014 - 02 - 03
-
+# v2
+CACHE:
+404.html
 /hermit/images/icon.png
 /hermit/images/icon2x.png
 /hermit/images/iconx.png
@@ -8,7 +9,6 @@ CACHE MANIFEST
 /hermit/script/hermit.min.js
 /hermit/style/hermit.min.css
 /hermit/swf/soundmanager2.swf
-
 /images/favicon/favicon.ico
 /images/favicon/apple-touch-icon-114x114.png
 /images/favicon/favicon-32x32.png
@@ -16,12 +16,10 @@ CACHE MANIFEST
 /images/loading.gif
 /images/nextlabel.gif
 /images/prevlabel.gif
-
 /theme/css/pygments/github.css
 /theme/css/bootstrap.min.css
 /theme/css/jquery.fancybox.css
 /theme/css/niu2.css
-
 /theme/font-awesome/css/font-awesome.min.css
 /theme/font-awesome/css/font-awesome-ie7.min.css
 /theme/font-awesome/fonts/FontAwesome.otf
@@ -29,7 +27,6 @@ CACHE MANIFEST
 /theme/font-awesome/fonts/fontawesome-webfont.svg
 /theme/font-awesome/fonts/fontawesome-webfont.ttf
 /theme/font-awesome/fonts/fontawesome-webfont.woff
-
 /theme/js/bootstrap.min.js
 /theme/js/fancy-loading.js
 /theme/js/html5shiv.js
@@ -40,3 +37,6 @@ CACHE MANIFEST
 /theme/js/respond.min.js
 /theme/js/slimbox2.js
 /theme/js/tagcloud.min.js
+
+NETWORK:
+*
