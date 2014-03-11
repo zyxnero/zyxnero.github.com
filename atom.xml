@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-11T21:43:00+08:00</updated><entry><title>“Beyond Compare 许可证密钥被撤销”的解决办法</title><link href="http://www.lusir.me/solution-to-bcompare-error.html" rel="alternate"></link><updated>2014-03-11T21:43:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-11:solution-to-bcompare-error.html</id><summary type="html">&lt;p&gt;前几天遇到的问题，打开 Beyond Compare 提示：&lt;code&gt;许可证密钥已被撤销&lt;/code&gt;。上网搜寻出解决方法，记录一下。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-11T23:20:00+08:00</updated><entry><title>更改域名解析</title><link href="http://www.lusir.me/modify-dns-name-resolution.html" rel="alternate"></link><updated>2014-03-11T23:20:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-11:modify-dns-name-resolution.html</id><summary type="html">&lt;p&gt;前阵子注册了个 QQ 企业邮箱，结果经常显示“MX 记录与 CNAME 记录冲突”，一直没弄明白是哪发生了问题。直到前几天看到&lt;a href="http://blog.lanbing.org/used-with-caution-in-the-root-domain-cname-record-the-post-office-to-do-mx.cgi" title="慎用根域名 CNAME 记录"&gt;这篇文章&lt;/a&gt;，于是科普了一下 CNAME 的意义&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;。
+&lt;/p&gt;
+&lt;h3 id="c950abf9dd2bdf2ef279a6e6470144d7"&gt;Google 的说明&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;正規名稱記錄又稱 CNAME 紀錄，是一種 DNS 紀錄類型，可將別名對應至實際或「正規」的網域名稱。CNAME 紀錄的用途通常是將子網域 (例如：「www」或「mail」) 對應至代管子網域內容的網域。舉例來說，CNAME 紀錄可以將網址「www.example.com」對應至「example.com」網域的實際網站。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="2c60a750a8ff0f458bd2c3977b2e5680"&gt;Github 的说明&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: You should not use a CNAME record with an apex domain, as this may cause issues with other services on the apex domain, like email.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;上面的引用表达的意思：根域名最好不要做 CNAME，否则会造成邮件解析出错（除非邮件解析与 www 解析的目的地是同一服务器）。&lt;/p&gt;
+&lt;h3 id="cfabea642b97269309366a07f48401e8"&gt;正确的解析方式&lt;/h3&gt;
+&lt;p&gt;在域名运营商处修改（假设要把 www 与根域名指向同一个站点）：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;CNAME：www.example.com =&amp;gt; username.github.io
+A：example.com =&amp;gt; 192.30.252.153
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.suoyine.com/archives/2297.html" title="根域名不能用 CNAME 解析，否则 MX 记录失效"&gt;根域名不能用 CNAME 解析，否则 MX 记录失效&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://support.dnsimple.com/articles/differences-between-a-cname-alias-url/" title="Differences between the A, CNAME, ALIAS and URL records"&gt;Differences between the A, CNAME, ALIAS and URL records&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fancyoung.com/blog/host-to-github/" title="Github Page绑定自己域名"&gt;Github Page绑定自己域名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages" title="Setting up a custom domain with Pages"&gt;Setting up a custom domain with Pages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="https://support.google.com/a/answer/112037?hl=zh-Hant" title="關於 CNAME 紀錄"&gt;關於 CNAME 紀錄&lt;/a&gt;&amp;#160;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</summary><category term="DNS"></category><category term="CNAME"></category></entry><entry><title>“Beyond Compare 许可证密钥被撤销”的解决办法</title><link href="http://www.lusir.me/solution-to-bcompare-error.html" rel="alternate"></link><updated>2014-03-11T21:43:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-11:solution-to-bcompare-error.html</id><summary type="html">&lt;p&gt;前几天遇到的问题，打开 Beyond Compare 提示：&lt;code&gt;许可证密钥已被撤销&lt;/code&gt;。上网搜寻出解决方法，记录一下。
 &lt;/p&gt;
 &lt;h3 id="6f1fefa928e01b0bb4ba64071c7ad053"&gt;解决方法：&lt;/h3&gt;
 &lt;h4 id="ed752639f1c9e21123de5f01b230f9e3"&gt;保存配置&lt;/h4&gt;
@@ -460,24 +491,4 @@ v1s2.xundns.com &lt;/pre&gt;</summary><category term="URL 转发"></category><ca
 &lt;h3 id="2481aa063d11ec75776c6d1a58569ef3"&gt;相关阅读&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://zww.me/tortoisegit-msysgit-remember-userid-and-pw.z-turn"&gt;TortoiseGit + Msysgit 记住帐号密码的方法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="TortoiseGit"></category><category term=""></category></entry><entry><title>风电齿轮油的测试标准</title><link href="http://www.lusir.me/gear-oil-testing-standards.html" rel="alternate"></link><updated>2014-01-25T23:50:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-01-25:gear-oil-testing-standards.html</id><summary type="html">&lt;pre&gt;
-ISO 3104/ASTM D-445：粘度 cSt（@40°C/100°C)
-ISO 2909/ASTM D-2270：粘度指数
-ISO 2592/ASTM D-92：闪点
-ISO 3016/ASTM D-97：倾点
-DIN 51757/ASTM D-4052：密度
-ISO 6618：总酸值
-ISO 2160：铜蚀测试
-ISO 7120：钢蚀测试
-ISO 6247：泡沫测试
-DIN 51599/ASTM D1401：抗乳化性测试
-ASTM D943：氧化稳定性测试
-DIN 53521：密封件相容性测试
-Flender GC-V425：弗兰德泡沫测试
-FVA 54/1-IV：抗微点蚀测试
-FZG A/16,6/90：FZG 负荷失效测试
-ASTM D-417：四球抗磨测磨斑直径
-DIN 51527/III：抗磨极压齿轮油标准
-DIN 51517/III的FAG FE8：轴承测试
-FVA 54/I-IV（90°C、60°C）：微点蚀测试
-&lt;/pre&gt;</summary><category term="风电"></category><category term="齿轮油"></category><category term="标准"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="TortoiseGit"></category><category term=""></category></entry></feed>
