@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-09T20:31:00+08:00</updated><entry><title>荷塘月色 - Q 版语文</title><link href="http://www.lusir.me/fake-q-ban-yu-wen.html" rel="alternate"></link><updated>2014-03-09T20:31:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-09:fake-q-ban-yu-wen.html</id><summary type="html">&lt;p&gt;每个月都有那么几天，感觉颇不宁静。今晚在院子里坐着数蚊子，忽然想起日日走过的荷塘，在这满月的光里，荷塘里应该有MM在洗澡吧。月亮像“非典”病人的体温似的，不知什么时候已经升高了，墙外马路上收破烂的叫喊声，已经听不见了；老婆在屋里拍着孩子，跑着调地哼着“两只老虎”。好难听啊，我终于忍不住悄悄地披了衣服，带上门出去了。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-11T20:43:00+08:00</updated><entry><title>让 Excel 显示 + 号</title><link href="http://www.lusir.me/show-excel-plus-sign.html" rel="alternate"></link><updated>2014-03-11T20:43:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-11:show-excel-plus-sign.html</id><summary type="html">&lt;p&gt;由于不经常使用 Excel，遇到些问题只能上网查查了。默认情况下，Excel 单元格不包含特定的数字格式（输入负数显示 &lt;code&gt;-&lt;/code&gt; 号，输入正数不显示 &lt;code&gt;+&lt;/code&gt; 号），本文记录一下让 Excel 单元格显示 &lt;code&gt;+&lt;/code&gt; 号的方法。
+&lt;/p&gt;
+&lt;p&gt;方法很简单，首先选择想要格式化的单元格区域，然后右键“设置单元格格式”，弹出下图对话框。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/show-excel-plus.png" title="让 Excel 显示 + 号" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/show-excel-plus.png" alt="让 Excel 显示 + 号" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;上图中，在左侧“分类”处选择“自定义”，然后在“类型”下面的输入框中，输入 &lt;code&gt;+0;-0;0;@&lt;/code&gt;，确定即可。&lt;/p&gt;
+&lt;h3 id="77478f9f3f8025d06148b80f6538a8c0"&gt;字符含义&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;“+0”定义正数的显示格式；&lt;/li&gt;
+&lt;li&gt;“-0”定义负数的显示格式；&lt;/li&gt;
+&lt;li&gt;“0”定义零值的显示格式；&lt;/li&gt;
+&lt;li&gt;“@”定义文本的显示格式，即正常显示文本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果三个分号间的某个位置不键入任何字符，则会将该类型数据隐藏起来。例如格式 &lt;code&gt;0;-0;;@&lt;/code&gt; 将会隐藏选中单元格区域中的零值。&lt;/p&gt;</summary><category term="Excel"></category></entry><entry><title>荷塘月色 - Q 版语文</title><link href="http://www.lusir.me/fake-q-ban-yu-wen.html" rel="alternate"></link><updated>2014-03-09T20:31:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-09:fake-q-ban-yu-wen.html</id><summary type="html">&lt;p&gt;每个月都有那么几天，感觉颇不宁静。今晚在院子里坐着数蚊子，忽然想起日日走过的荷塘，在这满月的光里，荷塘里应该有MM在洗澡吧。月亮像“非典”病人的体温似的，不知什么时候已经升高了，墙外马路上收破烂的叫喊声，已经听不见了；老婆在屋里拍着孩子，跑着调地哼着“两只老虎”。好难听啊，我终于忍不住悄悄地披了衣服，带上门出去了。
 &lt;/p&gt;
 &lt;p&gt;&lt;a class="float-left" href="http://dn-nero.qbox.me/dufu2.jpg" title="杜甫涂鸦" data-fancybox-group="gallery"&gt;&lt;img src="http://dn-nero.qbox.me/dufu2.jpg" alt="杜甫涂鸦" /&gt;&lt;/a&gt;沿着荷塘，是一条曲折的小煤屑路，运气好的话还可以捡到几块煤炭和硬币。这条路白天少有人走，晚上更是鬼都不来。由于缺少压马路的恋人，所以路面显得凹凸不平。荷塘四面，长着许多树，可我就认识杨柳，其他的叫不上名字来，我想，比草大一点儿的植物就应该叫树吧。没有月光的晚上，这路上阴森森的，有些怕人。今晚却很好，虽然月光也还是淡淡的，但估计不会有女流氓出没。&lt;/p&gt;
 &lt;p&gt;路上只我一个人，这一片天地好像是我的；我也像是灵魂出窍，到了另一个世界里。我爱牛奶，也爱啤酒；爱同居，也爱独处。像今天晚上，一个人在这苍茫的月下，什么都可以想，什么都可以不想，思想出现冲突，开始不兼容的时候，我便觉得自己是个自由的人。平日里一定要做的事，一定要说的话，一定要憋的屁，现在都可以不理。就像是游荡在网络世界里，这就是独处的妙处。&lt;/p&gt;
@@ -51,7 +65,7 @@
 &lt;p&gt;&lt;a href="http://wencanghai.blog.sohu.com/267381183.html" title="倾听喜多郎"&gt;倾听喜多郎&lt;/a&gt;&amp;#160;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="hermit"></category><category term="虾米"></category></entry><entry><title>在网页中嵌入 html5 音视频</title><link href="http://www.lusir.me/embed-html5-media.html" rel="alternate"></link><updated>2014-03-08T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-08:embed-html5-media.html</id><summary type="html">&lt;p&gt;前几天看见一篇使用 FFmpeg 的文章，就尝试了一下这款“转码瑞士军刀”。本文记录一下初次使用 FFmpeg 的过程，顺便把转码之后的音视频嵌进来看看结果。
+&lt;/div&gt;</summary><category term="Hermit"></category><category term="虾米"></category></entry><entry><title>在网页中嵌入 html5 音视频</title><link href="http://www.lusir.me/embed-html5-media.html" rel="alternate"></link><updated>2014-03-08T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-08:embed-html5-media.html</id><summary type="html">&lt;p&gt;前几天看见一篇使用 FFmpeg 的文章，就尝试了一下这款“转码瑞士军刀”。本文记录一下初次使用 FFmpeg 的过程，顺便把转码之后的音视频嵌进来看看结果。
 &lt;/p&gt;
 &lt;h3 id="4e63f356b53969a3458a2e612a726df6"&gt;安装 FFmpeg&lt;/h3&gt;
 &lt;p&gt;首先是到&lt;a href="http://ffmpeg.zeranoe.com/builds/" title="Zeranoe FFmpeg"&gt;官网&lt;/a&gt;下载 Windows Build Version，解压后添加 ffmpeg.exe 的路径到 &lt;code&gt;环境变量&lt;/code&gt; 的 &lt;code&gt;path&lt;/code&gt; 中，打开 cmd，输入 &lt;code&gt;ffmpeg -version&lt;/code&gt; 查看是否安装成功。&lt;/p&gt;
@@ -98,7 +112,7 @@
 &lt;li&gt;&lt;a href="http://blog.raphaelzhang.com/2013/05/some-usage-of-ffmpeg/" title="ffmpeg转码的几个小用法"&gt;ffmpeg转码的几个小用法&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/etianen/html5media/wiki/embedding-audio" title="Embedding audio"&gt;Embedding audio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/etianen/html5media/wiki/embedding-video" title="Embedding video"&gt;Embedding video&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="html5"></category></entry><entry><title>使用七牛镜像存储</title><link href="http://www.lusir.me/start-using-qiniu.html" rel="alternate"></link><updated>2014-03-07T13:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-07:start-using-qiniu.html</id><summary type="html">&lt;p&gt;看到很多博主都正在使用七牛作为图床或整站的 CDN 加速，本着外行凑热闹的精神，我也学着使用了一把。七牛的加速节点响应速度确实是很快，至少目前是这样，我 ping 了一下，结果如下。
+&lt;/ul&gt;</summary><category term="HTML5"></category></entry><entry><title>使用七牛镜像存储</title><link href="http://www.lusir.me/start-using-qiniu.html" rel="alternate"></link><updated>2014-03-07T13:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-07:start-using-qiniu.html</id><summary type="html">&lt;p&gt;看到很多博主都正在使用七牛作为图床或整站的 CDN 加速，本着外行凑热闹的精神，我也学着使用了一把。七牛的加速节点响应速度确实是很快，至少目前是这样，我 ping 了一下，结果如下。
 &lt;/p&gt;
 &lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ping-qbox-me.png" title="ping-qbox-me" data-fancybox-group="gallery"&gt;
     &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ping-qbox-me.png" alt="ping-qbox-me" /&gt;
@@ -134,7 +148,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://capbone.com/rss-readers/" title="RSS 阅读器一览"&gt;RSS 阅读器一览&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://capbone.com/mr-reader/" title="Mr. Reader：我心目中最好的 RSS 阅读器"&gt;Mr. Reader：我心目中最好的 RSS 阅读器&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="feedly"></category></entry><entry><title>关联博客与 Google Profile</title><link href="http://www.lusir.me/add-google-profile.html" rel="alternate"></link><updated>2014-03-05T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-05:add-google-profile.html</id><summary type="html">&lt;p&gt;使用 Google 搜索时经常会看到一些搜索到的文章标题下面有个头像，头像旁边写着 &lt;code&gt;By：×××&lt;/code&gt;，这时，只要标题下面的摘要中含有我们搜索的关键字，我想大多数人应该都会忍不住想点进去看看了。为了实现这一功能，我也找了好几篇文章学着操作，坐等 Google 重新爬取。
+&lt;/ul&gt;</summary><category term="Feedly"></category></entry><entry><title>关联博客与 Google Profile</title><link href="http://www.lusir.me/add-google-profile.html" rel="alternate"></link><updated>2014-03-05T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-05:add-google-profile.html</id><summary type="html">&lt;p&gt;使用 Google 搜索时经常会看到一些搜索到的文章标题下面有个头像，头像旁边写着 &lt;code&gt;By：×××&lt;/code&gt;，这时，只要标题下面的摘要中含有我们搜索的关键字，我想大多数人应该都会忍不住想点进去看看了。为了实现这一功能，我也找了好几篇文章学着操作，坐等 Google 重新爬取。
 &lt;/p&gt;
 &lt;p&gt;其实操作不难，&lt;a href="https://support.google.com/webmasters/answer/1408986?hl=zh-Hans" title="搜索结果中的作者信息"&gt;Google&lt;/a&gt; 已经给了我们方法，我们只需照着操作就行。我选择了&lt;a href="http://www.cmhello.com/" title="胡倡萌"&gt;胡倡萌&lt;/a&gt;使用的方法，即 Google 给的方法二。&lt;/p&gt;
 &lt;h3 id="27b152135057a08d88a562eac4a8dbc0"&gt;在网页上创建指向 Google+ 个人资料的链接&lt;/h3&gt;
@@ -168,7 +182,7 @@
 &lt;p&gt;&lt;a href="http://www.hmtweb.com/imd/?p=1587" title="避免 rel=author 与 rel=publisher 产生冲突"&gt;How To Troubleshoot Authorship Markup When rel=author and rel=publisher Clash&lt;/a&gt;&amp;#160;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="google"></category></entry><entry><title>整合 Google 自定义搜索到 Pelican</title><link href="http://www.lusir.me/google-cse-for-pelican.html" rel="alternate"></link><updated>2014-03-04T21:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-04:google-cse-for-pelican.html</id><summary type="html">&lt;p&gt;总感觉好像我搭建 Blog 的目的跟别人不太一样，小伙伴们都在正儿八经的写出一些有价值有意义的文章，我却在那折腾怎么实现这个功能，怎么实现那个功能。可问题是自己又不会整，只能到处搜寻答案然后慢慢试结果。好在人品不错，虽然浪费不少时间，但折腾出结果的满足感确实挺爽。本文记录一下将 Google 自定义搜索整合到 Pelican 的过程。
+&lt;/div&gt;</summary><category term="Google"></category></entry><entry><title>整合 Google 自定义搜索到 Pelican</title><link href="http://www.lusir.me/google-cse-for-pelican.html" rel="alternate"></link><updated>2014-03-04T21:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-04:google-cse-for-pelican.html</id><summary type="html">&lt;p&gt;总感觉好像我搭建 Blog 的目的跟别人不太一样，小伙伴们都在正儿八经的写出一些有价值有意义的文章，我却在那折腾怎么实现这个功能，怎么实现那个功能。可问题是自己又不会整，只能到处搜寻答案然后慢慢试结果。好在人品不错，虽然浪费不少时间，但折腾出结果的满足感确实挺爽。本文记录一下将 Google 自定义搜索整合到 Pelican 的过程。
 &lt;/p&gt;
 &lt;p&gt;说是整合到 Pelican，其实只是通过 jinja2 的一些规则将 Google 自定义搜索代码插入到主题的“搜索页面.html”中。&lt;/p&gt;
 &lt;h3 id="be5bf34c6756f3e3f7e20057e2c5c10b"&gt;第一步：注册并获取 Google 自定义搜索代码&lt;/h3&gt;
@@ -233,7 +247,7 @@
 &lt;li&gt;&lt;a href="http://yige.org/p/374" title="JS获取url参数的函数_JavaScript"&gt;JS获取url参数的函数_JavaScript&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.w3schools.com/jsref/jsref_encodeuricomponent.asp" title="JavaScript encodeURIComponent() Function"&gt;JavaScript encodeURIComponent() Function&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.w3cplus.com/jquery/attr-removeAttr" title="jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性"&gt;jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="pelican"></category><category term="cse"></category></entry><entry><title>Thunderbird + Markdown 写邮件</title><link href="http://www.lusir.me/markdown-emails.html" rel="alternate"></link><updated>2014-02-27T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-02-27:markdown-emails.html</id><summary type="html">&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="http://www.lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
+&lt;/ul&gt;</summary><category term="Pelican"></category><category term="CSE"></category></entry><entry><title>Thunderbird + Markdown 写邮件</title><link href="http://www.lusir.me/markdown-emails.html" rel="alternate"></link><updated>2014-02-27T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-02-27:markdown-emails.html</id><summary type="html">&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="http://www.lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
 &lt;/p&gt;
 &lt;h3 id="90633085fd7eb1c9483c3ce43cbf7619"&gt;绿色版 Thunderbird&lt;/h3&gt;
 &lt;p&gt;安装绿色版 Thunderbird（绿色版便携）&lt;/p&gt;
@@ -255,7 +269,7 @@
 &lt;li&gt;MinimizeToTray。（最小化窗口到系统托盘）&lt;/li&gt;
 &lt;li&gt;Quicktext。（添加快速文本）&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Markdown 确实是比较方便，熟练运用可以提升不少效率，我还得努力……&lt;/p&gt;</summary><category term="markdown"></category><category term="thunderbird"></category></entry><entry><title>Markdown 添加表格</title><link href="http://www.lusir.me/markdown-add-tables.html" rel="alternate"></link><updated>2014-02-22T19:20:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-02-22:markdown-add-tables.html</id><summary type="html">&lt;p&gt;搭建了 Pelican 之后就在慢慢尝试学习使用 Markdown 记录一些东西（包括尝试使用 Markdown 编辑邮件）。本文记录一下使用 Markdown 添加表格的方法。
+&lt;p&gt;Markdown 确实是比较方便，熟练运用可以提升不少效率，我还得努力……&lt;/p&gt;</summary><category term="Markdown"></category><category term="Thunderbird"></category></entry><entry><title>Markdown 添加表格</title><link href="http://www.lusir.me/markdown-add-tables.html" rel="alternate"></link><updated>2014-02-22T19:20:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-02-22:markdown-add-tables.html</id><summary type="html">&lt;p&gt;搭建了 Pelican 之后就在慢慢尝试学习使用 Markdown 记录一些东西（包括尝试使用 Markdown 编辑邮件）。本文记录一下使用 Markdown 添加表格的方法。
 &lt;/p&gt;
 &lt;h3 id="9ac4d85e35db087be217f6a8bc1a5d9d"&gt;简单的表格&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;你好 | Markdown | 表格 | 这是表头
@@ -442,5 +456,4 @@ FVA 54/I-IV（90°C、60°C）：微点蚀测试
 &lt;pre&gt;
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
 HKEY_CURRENT_USER\Environment
-&lt;/pre&gt;&lt;/p&gt;</summary><category term="环境变量"></category><category term="备份"></category></entry><entry><title>搬至 Github</title><link href="http://www.lusir.me/move-to-github.html" rel="alternate"></link><updated>2014-01-25T15:25:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-01-25:move-to-github.html</id><summary type="html">&lt;p&gt;对比 github 与 gitcafe 之后，发现 gitcafe 的存储空间较 github 大，而且服务器在国内，连接速度更快，遂果断将静态目录放至 gitcafe。不过前几天偶然发现 gitcafe 的 gitcafe page 好像不能自定义 404 页，目录下的 404.html 会被 gitcafe 默认的 404 页拦截，强迫症驱使下又回到了 github。
-&lt;/p&gt;</summary><category term="404"></category><category term="github"></category></entry></feed>
+&lt;/pre&gt;&lt;/p&gt;</summary><category term="环境变量"></category><category term="备份"></category></entry></feed>

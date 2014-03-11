@@ -17,10 +17,10 @@ Y8,           ,adPPPPP88 88 88    88   `8b d8'   88 8PP"""""""    88         88 
 <meta name="format-detection" content="telephone=no">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="『』标签下的文章存档">
+<meta name="description" content="让 Excel 显示 + 号 - 作者: Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title> - 擼sirの避風港</title>
+<title>让 Excel 显示 + 号 - 擼sirの避風港</title>
 <link rel="prefetch prerender" href="http://www.lusir.me" />
 <link href="http://www.lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://www.lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
@@ -30,6 +30,11 @@ Y8,           ,adPPPPP88 88 88    88   `8b d8'   88 8PP"""""""    88         88 
 <link rel="stylesheet" href="http://www.lusir.me/theme/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="http://www.lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
 <link rel="stylesheet" href="http://www.lusir.me/theme/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="http://www.lusir.me/theme/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.lusir.me/hermit/style/hermit.min.css" media="all" />
+<link rel='canonical' href="http://www.lusir.me/show-excel-plus-sign.html" />
+
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
     <script src="http://www.lusir.me/theme/js/html5shiv.js"></script>
@@ -84,24 +89,72 @@ Y8,           ,adPPPPP88 88 88    88   `8b d8'   88 8PP"""""""    88         88 
 </div>
 </div></div>
     
-<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 class="niu2-index-title"><i class="fa fa-tag fa-lg"></i></h1>
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">让 Excel 显示 + 号</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>由于不经常使用 Excel，遇到些问题只能上网查查了。默认情况下，Excel 单元格不包含特定的数字格式（输入负数显示 <code>-</code> 号，输入正数不显示 <code>+</code> 号），本文记录一下让 Excel 单元格显示 <code>+</code> 号的方法。
+</p>
+<p>方法很简单，首先选择想要格式化的单元格区域，然后右键“设置单元格格式”，弹出下图对话框。</p>
+<p><a href="http://dn-nero.qbox.me/show-excel-plus.png" title="让 Excel 显示 + 号" data-fancybox-group="gallery">
+    <img class="aligncenter" src="http://dn-nero.qbox.me/show-excel-plus.png" alt="让 Excel 显示 + 号" />
+</a></p>
+<p>上图中，在左侧“分类”处选择“自定义”，然后在“类型”下面的输入框中，输入 <code>+0;-0;0;@</code>，确定即可。</p>
+<h3 id="77478f9f3f8025d06148b80f6538a8c0">字符含义</h3>
+<ul>
+<li>“+0”定义正数的显示格式；</li>
+<li>“-0”定义负数的显示格式；</li>
+<li>“0”定义零值的显示格式；</li>
+<li>“@”定义文本的显示格式，即正常显示文本。</li>
+</ul>
+<p>如果三个分号间的某个位置不键入任何字符，则会将该类型数据隐藏起来。例如格式 <code>0;-0;;@</code> 将会隐藏选中单元格区域中的零值。</p>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>            
+<!-- Duoshuo Comment END -->
 </div>
 
-<div class="col-md-8 col-md-offset-2"><div class="niu2-index-article">
-<div class="niu2-index-article-title">
-<span itemprop="headline"><a itemprop="url" href="http://www.lusir.me/try-to-use-tortoisegit.html">尝试使用 TortoiseGit</a></span>
-</div><div class="niu2-meta-index">
-<span class="niu2-meta-date-index" itemprop="datePublished"><i class="fa fa-calendar"></i>2014-01-26</span>
-<span class="niu2-meta-category-index" itemprop="articleSection"><i class="fa fa-book"></i><a href="http://www.lusir.me/record/index.html">记录</a></span>
-<span class="niu2-meta-tag-index" itemprop="keywords">
-<i class="fa fa-tag"></i><a href="http://www.lusir.me/tag/tortoisegit.html">TortoiseGit</a>
-<a href="http://www.lusir.me/tag/.html"></a>
-</span>
-</div><div class="niu2-article-summary" itemprop="description">
-    <p>刚刚接触 git，每次上传目录都要敲代码，先 <code>git add</code>，<code>git  commit</code> ，然后又是 <code>git push</code>，对于我这些东西还是太过艰难，于是装了个 TortoiseGit。有了这货，目录更新之后只用右键提交，方便不少，当然前提是 TortoiseGit 要设置正确。
-
 </div>
-</div></div></div><div id="body-footer" class="col-md-8 col-md-offset-2"><div class="niu2-footer">
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-11 20:43</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://www.lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/excel.html">Excel</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">让 Excel 显示 + 号</a></li>
+    <li><a href='#77478f9f3f8025d06148b80f6538a8c0'>字符含义</a>
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">  
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;让 Excel 显示 + 号
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>
 <p>
 &copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
@@ -136,9 +189,13 @@ var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " 
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
 </script>
 
-
+<script type="text/javascript" src="http://www.lusir.me/theme/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
+<script>var hermit = { url: 'http://www.lusir.me/hermit/swf/' }</script>
+<script src="http://www.lusir.me/hermit/script/hermit.min.js"></script>
 <script type="text/javascript">
-</script>
+onContentLoaded();</script>
 
 </body>
 </html>
