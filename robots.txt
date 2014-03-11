@@ -22,5 +22,6 @@ Disallow: /nero.appcache
 Disallow: /rss.xml
 Disallow: /search.html
 Disallow: /404.html
+Disallow: /wumii-verification.htm
 
 Sitemap: http://www.lusir.me/sitemap.xml
