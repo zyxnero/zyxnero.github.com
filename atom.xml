@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-11T20:43:00+08:00</updated><entry><title>让 Excel 显示 + 号</title><link href="http://www.lusir.me/show-excel-plus-sign.html" rel="alternate"></link><updated>2014-03-11T20:43:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-11:show-excel-plus-sign.html</id><summary type="html">&lt;p&gt;由于不经常使用 Excel，遇到些问题只能上网查查了。默认情况下，Excel 单元格不包含特定的数字格式（输入负数显示 &lt;code&gt;-&lt;/code&gt; 号，输入正数不显示 &lt;code&gt;+&lt;/code&gt; 号），本文记录一下让 Excel 单元格显示 &lt;code&gt;+&lt;/code&gt; 号的方法。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-11T21:43:00+08:00</updated><entry><title>“Beyond Compare 许可证密钥被撤销”的解决办法</title><link href="http://www.lusir.me/solution-to-bcompare-error.html" rel="alternate"></link><updated>2014-03-11T21:43:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-11:solution-to-bcompare-error.html</id><summary type="html">&lt;p&gt;前几天遇到的问题，打开 Beyond Compare 提示：&lt;code&gt;许可证密钥已被撤销&lt;/code&gt;。上网搜寻出解决方法，记录一下。
+&lt;/p&gt;
+&lt;h3 id="6f1fefa928e01b0bb4ba64071c7ad053"&gt;解决方法：&lt;/h3&gt;
+&lt;h4 id="ed752639f1c9e21123de5f01b230f9e3"&gt;保存配置&lt;/h4&gt;
+&lt;p&gt;打开 Beyond Compare，“菜单” → “工具” → “导出配置”，把 Beyond Compare 的配置备份一份。&lt;/p&gt;
+&lt;h4 id="9fb493ad79ed72cda3405c46ed9a24b4"&gt;删除相应目录&lt;/h4&gt;
+&lt;p&gt;根据系统进入相应文件夹，删除所有文件。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;WinXP   C:\Documents and Settings\[Your User Name]\Application Data\Scooter Software\Beyond Compare 3\
+Win7    C:\Users\[Your User Name]\AppData\Roaming\Scooter Software\Beyond Compare 3\
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4 id="f4305a6b2d192b4290a9a8c4353c6b13"&gt;重新安装&lt;/h4&gt;
+&lt;p&gt;重新打开 Beyond Compare，提示需要安装，安装时导入刚刚备份的配置文件，问题解决。&lt;/p&gt;
+&lt;h3 id="2af555fd2e8c2e68b0af48b312de1009"&gt;秘钥&lt;/h3&gt;
+&lt;p&gt;附两份秘钥，均来自网络，未经验证。使用方法为：复制 BEGIN 与 END 之间的所有内容。&lt;/p&gt;
+&lt;p&gt;密钥1：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;— BEGIN —
+rssAPVg2OpBjDVo3E0DhGWrjPIq0hsTSuNz13wTuzVHfb2mRgO9bZKn9B
+l42D5YEyMSYPXsxzcb08dqbRlbzWNJzJXE6YVapYW7f+tRRXRFI4yn4Nj
+jZ0RiiqGRCTVzwComUcXB-eiFWRBY6JpSsCNkmIxL5KsRCo442djHhTZE
+— END —
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;密钥2：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;— BEGIN —
+mv1nPlXAywBDCdhxFc9QOVv6TBcQHLAXBQUAKTh3ie4fqSEOnWrPsnVkF
+yt0wAkJHweoExRJWWVwwCniKNROSdJzJXE6YVapYW7f+tRRXRFI4yn4Nj
+jZ0RiiqGRCTVzwComUcXB-eiFWRBY6JpSsCNkmIxL5KsRCo442djHhTZE
+— END —
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Beyond Compare"></category></entry><entry><title>让 Excel 显示 + 号</title><link href="http://www.lusir.me/show-excel-plus-sign.html" rel="alternate"></link><updated>2014-03-11T20:43:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-11:show-excel-plus-sign.html</id><summary type="html">&lt;p&gt;由于不经常使用 Excel，遇到些问题只能上网查查了。默认情况下，Excel 单元格不包含特定的数字格式（输入负数显示 &lt;code&gt;-&lt;/code&gt; 号，输入正数不显示 &lt;code&gt;+&lt;/code&gt; 号），本文记录一下让 Excel 单元格显示 &lt;code&gt;+&lt;/code&gt; 号的方法。
 &lt;/p&gt;
 &lt;p&gt;方法很简单，首先选择想要格式化的单元格区域，然后右键“设置单元格格式”，弹出下图对话框。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://dn-nero.qbox.me/show-excel-plus.png" title="让 Excel 显示 + 号" data-fancybox-group="gallery"&gt;
@@ -26,7 +57,7 @@
     &lt;img class="aligncenter" src="http://dn-nero.qbox.me/guanhanqing.jpg" alt="关汉卿涂鸦" /&gt;
 &lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;这是一篇测试文……，文章版权作者所有。&lt;/p&gt;
-&lt;p&gt;今天心情不好。我只有四句话想说。包括这句和前面的两句。我的话说完了……&lt;/p&gt;</summary><category term="nonsense"></category></entry><entry><title>在网页中嵌入 hermit 播放器</title><link href="http://www.lusir.me/embed-hermit-player.html" rel="alternate"></link><updated>2014-03-08T22:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-08:embed-hermit-player.html</id><summary type="html">&lt;p&gt;Hermit 播放器是&lt;a href="http://mufeng.me/" title="牧风"&gt;牧风&lt;/a&gt;兄整的一个音乐播放器，直接通过虾米的歌曲、专辑或精选集 ID 引用虾米的歌曲链接实现播放，且播放器的 css 写成自适应样式，在移动设备上的表现良好。实现方式应该是写了 API，具体的我也不太懂，可以直接去&lt;a href="http://mufeng.me/hermit-for-wordpress.html" title="Hermit 虾米音乐播放器"&gt;插件发布页&lt;/a&gt;查看。
+&lt;p&gt;今天心情不好。我只有四句话想说。包括这句和前面的两句。我的话说完了……&lt;/p&gt;</summary><category term="Nonsense"></category></entry><entry><title>在网页中嵌入 hermit 播放器</title><link href="http://www.lusir.me/embed-hermit-player.html" rel="alternate"></link><updated>2014-03-08T22:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-08:embed-hermit-player.html</id><summary type="html">&lt;p&gt;Hermit 播放器是&lt;a href="http://mufeng.me/" title="牧风"&gt;牧风&lt;/a&gt;兄整的一个音乐播放器，直接通过虾米的歌曲、专辑或精选集 ID 引用虾米的歌曲链接实现播放，且播放器的 css 写成自适应样式，在移动设备上的表现良好。实现方式应该是写了 API，具体的我也不太懂，可以直接去&lt;a href="http://mufeng.me/hermit-for-wordpress.html" title="Hermit 虾米音乐播放器"&gt;插件发布页&lt;/a&gt;查看。
 &lt;/p&gt;
 &lt;h3 id="3f66e73cbcc93c974d7c79d05f13653a"&gt;古事记 - 喜多郎&lt;/h3&gt;
 &lt;p&gt;推荐一张喜多郎&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;的专辑吧，《古事记》。偶尔听听感觉很不错……&lt;/p&gt;
@@ -449,11 +480,4 @@ ASTM D-417：四球抗磨测磨斑直径
 DIN 51527/III：抗磨极压齿轮油标准
 DIN 51517/III的FAG FE8：轴承测试
 FVA 54/I-IV（90°C、60°C）：微点蚀测试
-&lt;/pre&gt;</summary><category term="风电"></category><category term="齿轮油"></category><category term="标准"></category></entry><entry><title>Windows 环境变量备份</title><link href="http://www.lusir.me/backup-environment-variables.html" rel="alternate"></link><updated>2014-01-25T23:25:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-01-25:backup-environment-variables.html</id><summary type="html">&lt;p&gt;很多“绿色版”程序如 git、python、matlab 都需要设置环境变量，所以为了避免麻烦，重装系统前有必要将这些“绿色版”程序的注册表备份下来，其实操作很简单，在此记录一下。
-&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;分别打开 Regedit 展开以下树，选中 &lt;code&gt;Environment&lt;/code&gt; ，右键导出。
-&lt;pre&gt;
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
-HKEY_CURRENT_USER\Environment
-&lt;/pre&gt;&lt;/p&gt;</summary><category term="环境变量"></category><category term="备份"></category></entry></feed>
+&lt;/pre&gt;</summary><category term="风电"></category><category term="齿轮油"></category><category term="标准"></category></entry></feed>
