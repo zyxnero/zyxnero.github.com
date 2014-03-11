@@ -21,5 +21,6 @@ Disallow: /dead_link_sitemap.txt
 Disallow: /nero.appcache
 Disallow: /rss.xml
 Disallow: /search.html
+Disallow: /404.html
 
 Sitemap: http://www.lusir.me/sitemap.xml
