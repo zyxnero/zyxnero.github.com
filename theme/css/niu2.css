@@ -275,3 +275,6 @@ a.float-left { float: left;margin: 3px 10px 10px 1px;}
 a.float-right { float: right;margin: 3px 4px 3px 4px;}
 a img { padding:2px;border:1px solid #aaa;-webkit-box-shadow:rgba(0,0,0,.2) 0px 0px 5px;-moz-box-shadow:rgba(0,0,0,.2) 0px 0px 5px;box-shadow:rgba(0,0,0,.2) 0px 0px 5px;cursor:pointer;max-width:300px;width:expression(this.width>300?"300px":this.width);max-height:300px;height:expression(this.height>300?"300px":this.height);}
 
+#back-links{text-align:center;float:right;}
+#back-to-home{background:#adeb51 none repeat scroll 0 0;border-color:#d0f29d #398a38 #398a38 #d0f29d;border-style:solid;border-width:1px;color:#333;font-size:16px;margin-right:19px;padding:6px;text-decoration:none;-moz-border-radius:5px;-webkit-border-radius:5px;}
+.button:hover,#back-to-home:hover{background:#9CD941;}
