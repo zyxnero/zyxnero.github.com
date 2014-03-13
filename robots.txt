@@ -5,6 +5,7 @@ Disallow: /images/
 Disallow: /nonsense/
 Disallow: /record/
 Disallow: /tag/
+Disallow: /app/
 Disallow: /theme/
 Disallow: /*.js$
 Disallow: /*.css$

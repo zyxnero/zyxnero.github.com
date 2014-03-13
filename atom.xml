@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-11T23:20:00+08:00</updated><entry><title>更改域名解析</title><link href="http://www.lusir.me/modify-dns-name-resolution.html" rel="alternate"></link><updated>2014-03-11T23:20:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-11:modify-dns-name-resolution.html</id><summary type="html">&lt;p&gt;前阵子注册了个 QQ 企业邮箱，结果经常显示“MX 记录与 CNAME 记录冲突”，一直没弄明白是哪发生了问题。直到前几天看到&lt;a href="http://blog.lanbing.org/used-with-caution-in-the-root-domain-cname-record-the-post-office-to-do-mx.cgi" title="慎用根域名 CNAME 记录"&gt;这篇文章&lt;/a&gt;，于是科普了一下 CNAME 的意义&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-13T14:40:00+08:00</updated><entry><title>启用 Application Cache</title><link href="http://www.lusir.me/enable-application-cache.html" rel="alternate"></link><updated>2014-03-13T14:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-13:enable-application-cache.html</id><summary type="html">&lt;p&gt;上篇&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
+&lt;/p&gt;
+&lt;p&gt;启用 HTML5 Application Cache 的步骤全摘自网络，自己只是当了一次小白，具体的原理不明。具体步骤分 3 步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建一个 cache.appcache 文件，并确保文件具有正确的内容；&lt;/li&gt;
+&lt;li&gt;在服务器上设置内容类型；&lt;/li&gt;
+&lt;li&gt;所有的 HTML 文件都指向 cache.appcache。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="7902e56ddfc26a187defd7c20936eb0b"&gt;创建 appcache 文件&lt;/h3&gt;
+&lt;p&gt;新建 cache.appcache 文件，写入类似以下类容：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;CACHE MANIFEST
+#v1
+CACHE:
+index.html
+404.html
+favicon.ico
+robots.txt
+humans.txt
+apple-touch-icon.png
+css/normalize.min.css
+css/main.css
+css/bootmetro-icons.min.css
+img/pho-cat.jpg
+img/pho-huangshan.jpg
+
+NETWORK:
+*
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;注：首行须确保为 CACHE MANIFEST。&lt;code&gt;#&lt;/code&gt; 表示注释，有文章或 css、js、img 等内容变化时需要更新 cache.appcache 以使来访浏览器更新 cache.appcache 中列出的条目，所以更新注释是一个简便方法。&lt;a href="http://www.lusir.me/nero.appcache" title="我的 cache.appcache"&gt;我的 cache.appcache&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id="e8d669ed787e0f6ca71ae5e3dcc9c41a"&gt;设置内容类型&lt;/h3&gt;
+&lt;p&gt;在 .htaccess 文件中添加以下内容（我没有 .htaccess，所以没添加）&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;AddType text/cache-manifest .manifest
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="fe9e55b4442b03a4781c410d6a9596c1"&gt;将 HTML 页面指向清单文件 cache.appcache&lt;/h3&gt;
+&lt;p&gt;在页首的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中添加 &lt;code&gt;manifest="/cache.appcache"&lt;/code&gt;（假设该文件放置在根目录）。即：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;lt;html manifest=&amp;quot;/cache.appcache&amp;quot;&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;完成以上 3 个步骤，来访浏览器在下载完列表中文件后会通过直接访问本地缓存，从而使网页打开速度更快，甚至在离网的情况下仍能直接访问页面缓存。&lt;/p&gt;
+&lt;h3 id="1f03fb4a4295fecc5fbf72259a70cfd4"&gt;使用 js 让来访浏览器及时刷新缓存&lt;/h3&gt;
+&lt;p&gt;发布新文章时我尝试了更改 cache.appcache 的注释，但浏览器仍显示旧的信息，必须手动清除浏览器缓存。显然，这样把事情弄得更麻烦了，所以我在页面添加了如下类容以使浏览器自动强制刷新，带来的问题是强制刷新过程很明显，可能会使用户体验下降。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;load&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;applicationCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;updateready&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;applicationCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;status&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;applicationCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;UPDATEREADY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;reload&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;先试用一段时间再说，不行就把它撤了。&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://html5g.cn/html5-application-cache.html" title="利用HTML5应用程序缓存运行一个离线 Web 网页或应用"&gt;利用HTML5应用程序缓存运行一个离线 Web 网页或应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.cnblogs.com/svage/archive/2011/11/24/2261365.html" title="html5 离线应用 application cache"&gt;html5 离线应用 application cache&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/" title="A Beginner's Guide to Using the Application Cache"&gt;A Beginner's Guide to Using the Application Cache&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;附：&lt;a href="http://manifest-validator.com/" title="Cache Manifest Validator"&gt;Cache Manifest Validator&lt;/a&gt;&lt;/p&gt;</summary><category term="HTML5"></category></entry><entry><title>更改域名解析</title><link href="http://www.lusir.me/modify-dns-name-resolution.html" rel="alternate"></link><updated>2014-03-11T23:20:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-11:modify-dns-name-resolution.html</id><summary type="html">&lt;p&gt;前阵子注册了个 QQ 企业邮箱，结果经常显示“MX 记录与 CNAME 记录冲突”，一直没弄明白是哪发生了问题。直到前几天看到&lt;a href="http://blog.lanbing.org/used-with-caution-in-the-root-domain-cname-record-the-post-office-to-do-mx.cgi" title="慎用根域名 CNAME 记录"&gt;这篇文章&lt;/a&gt;，于是科普了一下 CNAME 的意义&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;。
 &lt;/p&gt;
 &lt;h3 id="c950abf9dd2bdf2ef279a6e6470144d7"&gt;Google 的说明&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -476,19 +541,4 @@ WP 果然是没有 Android 开放，耗电速度也让我和我的小伙伴惊�
 &lt;p&gt;注：重启恢复&lt;/p&gt;</summary><category term="8x"></category></entry><entry><title>DNS.LA 设置 URL 转发</title><link href="http://www.lusir.me/url-forwarding.html" rel="alternate"></link><updated>2014-01-27T14:00:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-01-27:url-forwarding.html</id><summary type="html">&lt;p&gt;DNSPod 的 URL 转发貌似需要域名记录一个月之后才能使用，而 DNS.LA 可以直接使用。设置的时候要注意，需先在域名商那修改域名 NS 地址为 DNS.LA 的解析地址，然后再来设置 URL 转发的地址，不然会提示错误。
 &lt;/p&gt;
 &lt;pre&gt;v1s1.xundns.com
-v1s2.xundns.com &lt;/pre&gt;</summary><category term="URL 转发"></category><category term="DNS.LA"></category></entry><entry><title>尝试使用 TortoiseGit</title><link href="http://www.lusir.me/try-to-use-tortoisegit.html" rel="alternate"></link><updated>2014-01-26T10:25:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-01-26:try-to-use-tortoisegit.html</id><summary type="html">&lt;p&gt;刚刚接触 git，每次上传目录都要敲代码，先 &lt;code&gt;git add&lt;/code&gt;，&lt;code&gt;git  commit&lt;/code&gt; ，然后又是 &lt;code&gt;git push&lt;/code&gt;，对于我这些东西还是太过艰难，于是装了个 TortoiseGit。有了这货，目录更新之后只用右键提交，方便不少，当然前提是 TortoiseGit 要设置正确。
-&lt;/p&gt;
-&lt;p&gt;下面记录2点以作备忘：&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li&gt;设置 git 地址时要使用 &lt;code&gt;git@github.com:×××/××.git&lt;/code&gt; ，而不要使用 https 开头的地址。&lt;/li&gt;
-&lt;li&gt;让 TortoiseGit 记住某个 repo 的账号密码（明文记录）：进入 &lt;code&gt;“repo/.git/config”&lt;/code&gt; ，增加      &lt;br /&gt;
-&lt;pre&gt;
-[credential]
-    helper = store
-&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="2481aa063d11ec75776c6d1a58569ef3"&gt;相关阅读&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://zww.me/tortoisegit-msysgit-remember-userid-and-pw.z-turn"&gt;TortoiseGit + Msysgit 记住帐号密码的方法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="TortoiseGit"></category><category term=""></category></entry></feed>
+v1s2.xundns.com &lt;/pre&gt;</summary><category term="URL 转发"></category><category term="DNS.LA"></category></entry></feed>
