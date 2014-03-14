@@ -219,7 +219,8 @@ h4:before, h5:before, h6:before {display: block;content: "";height: 45px;margin:
 .dropdown-toc li li li {display: none !important;}
 }
 
-body, html { min-height:101%;}
+html,body {height: 100%;}
+#body-content{min-height:100%;height:auto !important;}
 .hidden { display: none;}
 .aligncenter { clear: both;display: block;margin:auto;text-align:center;}
 audio{margin-left:17%;width: 66%;}
