@@ -7,10 +7,10 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="DNS.LA 设置 URL 转发 - 作者: Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="启用 Application Cache（续） - 作者: Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>DNS.LA 设置 URL 转发 - 擼sirの避風港</title>
+<title>启用 Application Cache（续） - 擼sirの避風港</title>
 <link rel="prefetch prerender" href="http://www.lusir.me/search.html" />
 <link href="http://www.lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://www.lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="http://www.lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="http://www.lusir.me/hermit/style/hermit.min.css" media="all" />
-<link rel='canonical' href="http://www.lusir.me/url-forwarding.html" />
+<link rel='canonical' href="http://www.lusir.me/after-enabling-application-cache.html" />
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -80,13 +80,44 @@
 </div>
 </div></div>
 		
-<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">DNS.LA 设置 URL 转发</h1></div>
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">启用 Application Cache（续）</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>DNSPod 的 URL 转发貌似需要域名记录一个月之后才能使用，而 DNS.LA 可以直接使用。设置的时候要注意，需先在域名商那修改域名 NS 地址为 DNS.LA 的解析地址，然后再来设置 URL 转发的地址，不然会提示错误。
+<p>接着<a href="http://www.lusir.me/enable-application-cache.html" title="启用 Application Cache">上一篇</a>，上一篇的思路是在每一张网页的 <code>&lt;html&gt;</code> 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
 </p>
-<pre>v1s1.xundns.com
-v1s2.xundns.com </pre>
+<p>感觉自己还没有能力折腾 HTML5 Local Storage，所以只能采取退而求其次的方法了：</p>
+<p>仅只在一张不经常更新的页面的 <code>&lt;html&gt;</code> 中声明 manifest 文件，我选择了 search.html；同时，在除 search.html 外的每张网页中都声明“预加载”的页面（即预加载 search.html），预加载是 html5 的一个特性，中文详细介绍可以<a href="http://blog.wpjam.com/m/3-html5-features/" title="三个 HTML5 不常见但非常实用的特性简介">看这篇</a>，我在页面中是这样加的。</p>
+<div class="codehilite"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;prefetch prerender&quot;</span> <span class="na">href=</span><span class="s">&quot;http://www.lusir.me/search.html&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+
+<p>如此一来，现代浏览器（最后能够剩下来的估计只有 Chrome 了）能够在除 search.html 外的网页中预加载 search.html，而后 search.html 会让浏览器去加载 manifest 清单，浏览器按照清单缓存元素。再加上监听函数，缓存策略就完成了。如此的缓存策略很粗糙，对浏览器也没有兼容，但我也不能再折腾到哪了。就这样了……</p>
+<p>说武林中有四大高手，前三名分别是东眼，西嘴，南耳，请问第四名叫什么……</p>
+<div class="hermit" songs="songlist#:1770124461">
+<div class="hermit-box">
+<div class="hermit-controls">
+<div class="hermit-button">
+</div>
+<div class="hermit-detail">
+左键轻击列表播放或暂停。
+</div>
+<div class="hermit-duration">
+</div>
+<div class="hermit-listbutton">
+</div>
+</div>
+<div class="hermit-prosess">
+<div class="hermit-loaded">
+</div>
+<div class="hermit-prosess-bar">
+<div class="hermit-prosess-after">
+</div>
+</div>
+</div>
+</div>
+<div class="hermit-list">
+</div>
+</div>
 </div>
     
 <div id="content-comments">
@@ -112,12 +143,11 @@ var duoshuoQuery = {short_name:"lusir"};
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2014-01-27 14:00</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-18 22:40</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://www.lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/url-zhuan-fa.html">URL 转发</a></div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/dnsla.html">DNS.LA</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/html5.html">HTML5</a></div>
  
 </div>
 
@@ -126,14 +156,14 @@ var duoshuoQuery = {short_name:"lusir"};
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">DNS.LA 设置 URL 转发</a></li>
+<li><a href="#content-heading">启用 Application Cache（续）</a></li>
     
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">  
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;DNS.LA 设置 URL 转发
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;启用 Application Cache（续）
 </div></div>
 </div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>

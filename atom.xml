@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-13T14:40:00+08:00</updated><entry><title>启用 Application Cache</title><link href="http://www.lusir.me/enable-application-cache.html" rel="alternate"></link><updated>2014-03-13T14:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-13:enable-application-cache.html</id><summary type="html">&lt;p&gt;上篇&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-18T22:40:00+08:00</updated><entry><title>启用 Application Cache（续）</title><link href="http://www.lusir.me/after-enabling-application-cache.html" rel="alternate"></link><updated>2014-03-18T22:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-18:after-enabling-application-cache.html</id><summary type="html">&lt;p&gt;接着&lt;a href="http://www.lusir.me/enable-application-cache.html" title="启用 Application Cache"&gt;上一篇&lt;/a&gt;，上一篇的思路是在每一张网页的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
+&lt;/p&gt;
+&lt;p&gt;感觉自己还没有能力折腾 HTML5 Local Storage，所以只能采取退而求其次的方法了：&lt;/p&gt;
+&lt;p&gt;仅只在一张不经常更新的页面的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中声明 manifest 文件，我选择了 search.html；同时，在除 search.html 外的每张网页中都声明“预加载”的页面（即预加载 search.html），预加载是 html5 的一个特性，中文详细介绍可以&lt;a href="http://blog.wpjam.com/m/3-html5-features/" title="三个 HTML5 不常见但非常实用的特性简介"&gt;看这篇&lt;/a&gt;，我在页面中是这样加的。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;link&lt;/span&gt; &lt;span class="na"&gt;rel=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;prefetch prerender&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.lusir.me/search.html&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如此一来，现代浏览器（最后能够剩下来的估计只有 Chrome 了）能够在除 search.html 外的网页中预加载 search.html，而后 search.html 会让浏览器去加载 manifest 清单，浏览器按照清单缓存元素。再加上监听函数，缓存策略就完成了。如此的缓存策略很粗糙，对浏览器也没有兼容，但我也不能再折腾到哪了。就这样了……&lt;/p&gt;
+&lt;p&gt;说武林中有四大高手，前三名分别是东眼，西嘴，南耳，请问第四名叫什么……&lt;/p&gt;
+&lt;div class="hermit" songs="songlist#:1770124461"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;
+左键轻击列表播放或暂停。
+&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;
+&lt;/div&gt;
+&lt;/div&gt;</summary><category term="HTML5"></category></entry><entry><title>启用 Application Cache</title><link href="http://www.lusir.me/enable-application-cache.html" rel="alternate"></link><updated>2014-03-13T14:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-13:enable-application-cache.html</id><summary type="html">&lt;p&gt;上篇&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
 &lt;/p&gt;
 &lt;p&gt;启用 HTML5 Application Cache 的步骤全摘自网络，自己只是当了一次小白，具体的原理不明。具体步骤分 3 步：&lt;/p&gt;
 &lt;ol&gt;
@@ -538,7 +572,4 @@ WP 果然是没有 Android 开放，耗电速度也让我和我的小伙伴惊�
 &lt;p&gt;&lt;pre&gt;手机拨号界面 → 输入##634# → Accept → Vibrator Test → Run → Off → 直接退出&lt;/pre&gt;&lt;/p&gt;
 &lt;h3 id="c0289bd19fcd4a8274891133cd805435"&gt;关闭按键灯&lt;/h3&gt;
 &lt;p&gt;&lt;pre&gt;手机拨号界面 → 输入##634# → Accept → Led Test → Run → Key LED → 直接退出&lt;/pre&gt;       &lt;/p&gt;
-&lt;p&gt;注：重启恢复&lt;/p&gt;</summary><category term="8x"></category></entry><entry><title>DNS.LA 设置 URL 转发</title><link href="http://www.lusir.me/url-forwarding.html" rel="alternate"></link><updated>2014-01-27T14:00:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-01-27:url-forwarding.html</id><summary type="html">&lt;p&gt;DNSPod 的 URL 转发貌似需要域名记录一个月之后才能使用，而 DNS.LA 可以直接使用。设置的时候要注意，需先在域名商那修改域名 NS 地址为 DNS.LA 的解析地址，然后再来设置 URL 转发的地址，不然会提示错误。
-&lt;/p&gt;
-&lt;pre&gt;v1s1.xundns.com
-v1s2.xundns.com &lt;/pre&gt;</summary><category term="URL 转发"></category><category term="DNS.LA"></category></entry></feed>
+&lt;p&gt;注：重启恢复&lt;/p&gt;</summary><category term="8x"></category></entry></feed>
