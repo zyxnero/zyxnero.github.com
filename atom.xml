@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-18T13:04:00+08:00</updated><entry><title>置 footer 于页面底部</title><link href="http://www.lusir.me/sticky-footer.html" rel="alternate"></link><updated>2014-03-18T13:04:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-18:sticky-footer.html</id><summary type="html">&lt;p&gt;前几天发现有些内容比较少的文章页面，其 footer 会上移浮在半空，看起来着实别扭，所以又调整了一下 CSS。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-18T17:04:00+08:00</updated><entry><title>将博客 Feed 推至微博</title><link href="http://www.lusir.me/sync-feed-to-weibo.html" rel="alternate"></link><updated>2014-03-18T17:04:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-18:sync-feed-to-weibo.html</id><summary type="html">&lt;p&gt;注册了微博账号也不知道写些什么东西，就想着把博客上的文章推上去，至少看起来有些内容。之前一直是用无觅的“&lt;a href="http://www.wumii.com/site/index" title="无觅网网站管理中心"&gt;连接微博&lt;/a&gt;”来推的，&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;后，本打算给“连接微博”的 feed 改成带 &lt;code&gt;www&lt;/code&gt; 的，结果取消关联之后就不能重新绑定了，坑！
+&lt;/p&gt;
+&lt;p&gt;在网上搜寻一番，找到两个应用，试用之后感觉还不错，记录一下以作备忘……&lt;/p&gt;
+&lt;h3 id="8008e97c8aaa4f86189a8fe0c0109b3f"&gt;针对国内&lt;/h3&gt;
+&lt;p&gt;对于新浪、腾讯等微博找到的是一款 Chrome 扩展，名为聚合通，&lt;a href="http://rss2weibo.danding.net/" title="聚合通"&gt;详细介绍见此&lt;/a&gt;。其实本想找一款类似“无觅连接微博”的服务，结果找到的却是一款离线应用，不过有总比没有好。它的原理是在用户开启了 Chrome 后定时轮询绑定的 RSS 地址，并将更新的内容推送到绑定的微博中去。&lt;/p&gt;
+&lt;h3 id="6f3e50c5880ddc1abc5c1ededb570033"&gt;针对国外&lt;/h3&gt;
+&lt;p&gt;对于非死不可、推特等社交网络找到的是 dlvr.it，这款服务很好很强大，具体不多介绍，&lt;a href="http://ikamu.me/736" title="用 dlvr.it 将豆瓣我的收藏/g+ 更新同步到 twitter、facebook"&gt;看它就行&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用了这俩货，就能将通过博客或者网站发表的文章第一时间生成微博推出去，不出意外，本篇文章应该已经自动推送到了我的新浪微博、腾讯微博、非死不可及推特了……&lt;/p&gt;
+&lt;div class="hermit" songs="songlist#:1771816757"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;
+左键轻击列表播放或暂停。
+&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;
+&lt;/div&gt;
+&lt;/div&gt;</summary><category term="Feed"></category><category term="Weibo"></category></entry><entry><title>置 footer 于页面底部</title><link href="http://www.lusir.me/sticky-footer.html" rel="alternate"></link><updated>2014-03-18T13:04:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-18:sticky-footer.html</id><summary type="html">&lt;p&gt;前几天发现有些内容比较少的文章页面，其 footer 会上移浮在半空，看起来着实别扭，所以又调整了一下 CSS。
 &lt;/p&gt;
 &lt;p&gt;由于&lt;a href="https://github.com/mawenbao/niu-x2-sidebar" title="Niu-X2-Sidebar"&gt;现主题&lt;/a&gt;是基于 bootstrap 的，在 &lt;a href="http://getbootstrap.com/" title="Bootstrap"&gt;Bootstrap&lt;/a&gt; 的 example 中找到了 2 份示例：&lt;a href="http://xiemin.me/bootstrap-2.2.2/examples/sticky-footer.html" title="Sticky footer"&gt;Bootstrap2 示例&lt;/a&gt;，&lt;a href="http://getbootstrap.com/examples/sticky-footer/" title="Sticky footer"&gt;Bootstrap3 示例&lt;/a&gt;。我选择模仿套用 Bootstrap2 的示例（感觉简单一点），在主题的 CSS 中添加了下面 2 行：&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;97&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
@@ -590,8 +622,4 @@ abc  |  123   |  ABC  |  cool
 199.91.73.222     LA
 178.79.131.110   London
 &lt;/pre&gt;&lt;/p&gt;
-&lt;p&gt;还有 Google 提供的 &lt;code&gt;8.8.8.8&lt;/code&gt; 及 &lt;code&gt;8.8.4.4&lt;/code&gt; 也是不错的选择，修改之后貌似是清爽一些了……&lt;/p&gt;</summary><category term="DNS"></category></entry><entry><title>人人影视弹窗免疫</title><link href="http://www.lusir.me/removal-ads-of-yyets.html" rel="alternate"></link><updated>2014-02-07T19:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-02-07:removal-ads-of-yyets.html</id><summary type="html">&lt;p&gt;喜欢在人人影视下载片子，但它的广告确实令人烦恼。一般情况下Firefox 下的 Adblock Plus 插件能过滤大部分的广告，但最近的弹窗貌似没有挡住，ChinaList + EasyList  更新一遍也没有效果，看来只能自己手动添加规则了。
-&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;打开“过滤规则首选项 → 自定义过滤规则 → 广告屏蔽规则”，添加如下规则：
-&lt;pre&gt;&lt;code&gt;||p.btyou.com&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;</summary><category term="Adblock"></category></entry></feed>
+&lt;p&gt;还有 Google 提供的 &lt;code&gt;8.8.8.8&lt;/code&gt; 及 &lt;code&gt;8.8.4.4&lt;/code&gt; 也是不错的选择，修改之后貌似是清爽一些了……&lt;/p&gt;</summary><category term="DNS"></category></entry></feed>
