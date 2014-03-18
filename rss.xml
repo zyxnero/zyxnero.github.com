@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://www.lusir.me/</link><description>從零開始…</description><atom:link href="http://www.lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 18 Mar 2014 22:40:00 +0800</lastBuildDate><item><title>启用 Application Cache（续）</title><link>http://www.lusir.me/after-enabling-application-cache.html</link><description>&lt;p&gt;接着&lt;a href="http://www.lusir.me/enable-application-cache.html" title="启用 Application Cache"&gt;上一篇&lt;/a&gt;，上一篇的思路是在每一张网页的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://www.lusir.me/</link><description>從零開始…</description><atom:link href="http://www.lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 18 Mar 2014 13:04:00 +0800</lastBuildDate><item><title>置 footer 于页面底部</title><link>http://www.lusir.me/sticky-footer.html</link><description>&lt;p&gt;前几天发现有些内容比较少的文章页面，其 footer 会上移浮在半空，看起来着实别扭，所以又调整了一下 CSS。
+&lt;/p&gt;
+&lt;p&gt;由于&lt;a href="https://github.com/mawenbao/niu-x2-sidebar" title="Niu-X2-Sidebar"&gt;现主题&lt;/a&gt;是基于 bootstrap 的，在 &lt;a href="http://getbootstrap.com/" title="Bootstrap"&gt;Bootstrap&lt;/a&gt; 的 example 中找到了 2 份示例：&lt;a href="http://xiemin.me/bootstrap-2.2.2/examples/sticky-footer.html" title="Sticky footer"&gt;Bootstrap2 示例&lt;/a&gt;，&lt;a href="http://getbootstrap.com/examples/sticky-footer/" title="Sticky footer"&gt;Bootstrap3 示例&lt;/a&gt;。我选择模仿套用 Bootstrap2 的示例（感觉简单一点），在主题的 CSS 中添加了下面 2 行：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;97&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
+&lt;span class="nf"&gt;#body-content&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;min-height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="k"&gt;height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="k"&gt;auto&lt;/span&gt; &lt;span class="cp"&gt;!important&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;至于 Bootstrap3 的示例中采用的 &lt;code&gt;position: absolute;bottom: 0;&lt;/code&gt; 的好处，或者说 Bootstrap2 的示例中采取的办法的缺陷，还不清楚，以后发现了再改……&lt;/p&gt;
+&lt;p&gt;我们宿舍老二和老三自打吃过早饭就在宿舍里吵个不停，都说自己的女朋友比对方的强，争得不可开交。我实在看不下去了，对他们说：“别吵了，我来作个裁判吧。” 于是我搬来一张桌子，让他们俩掰起了手腕。&lt;/p&gt;
+&lt;div class="hermit" songs="songlist#:181454"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;
+左键轻击列表播放或暂停。
+&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 18 Mar 2014 13:04:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-18:sticky-footer.html</guid><category>CSS</category></item><item><title>启用 Application Cache（续）</title><link>http://www.lusir.me/after-enabling-application-cache.html</link><description>&lt;p&gt;接着&lt;a href="http://www.lusir.me/enable-application-cache.html" title="启用 Application Cache"&gt;上一篇&lt;/a&gt;，上一篇的思路是在每一张网页的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
 &lt;/p&gt;
 &lt;p&gt;感觉自己还没有能力折腾 HTML5 Local Storage，所以只能采取退而求其次的方法了：&lt;/p&gt;
 &lt;p&gt;仅只在一张不经常更新的页面的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中声明 manifest 文件，我选择了 search.html；同时，在除 search.html 外的每张网页中都声明“预加载”的页面（即预加载 search.html），预加载是 html5 的一个特性，中文详细介绍可以&lt;a href="http://blog.wpjam.com/m/3-html5-features/" title="三个 HTML5 不常见但非常实用的特性简介"&gt;看这篇&lt;/a&gt;，我在页面中是这样加的。&lt;/p&gt;
@@ -33,7 +67,7 @@
 &lt;/div&gt;
 &lt;div class="hermit-list"&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 18 Mar 2014 22:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-18:after-enabling-application-cache.html</guid><category>HTML5</category></item><item><title>启用 Application Cache</title><link>http://www.lusir.me/enable-application-cache.html</link><description>&lt;p&gt;上篇&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 17 Mar 2014 22:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-17:after-enabling-application-cache.html</guid><category>HTML5</category></item><item><title>启用 Application Cache</title><link>http://www.lusir.me/enable-application-cache.html</link><description>&lt;p&gt;上篇&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
 &lt;/p&gt;
 &lt;p&gt;启用 HTML5 Application Cache 的步骤全摘自网络，自己只是当了一次小白，具体的原理不明。具体步骤分 3 步：&lt;/p&gt;
 &lt;ol&gt;
@@ -560,16 +594,4 @@ abc  |  123   |  ABC  |  cool
 &lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;打开“过滤规则首选项 → 自定义过滤规则 → 广告屏蔽规则”，添加如下规则：
-&lt;pre&gt;&lt;code&gt;||p.btyou.com&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 07 Feb 2014 19:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-02-07:removal-ads-of-yyets.html</guid><category>Adblock</category></item><item><title>关闭 HTC 8x 按键震动及按键灯</title><link>http://www.lusir.me/shutdown-8x-led-and-vibrator.html</link><description>&lt;h3 id="06933067aafd48425d67bcb01bba5cb6"&gt;Update&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;2014.02.07 按键灯关闭貌似是临时的，几个小时就恢复了&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;
-WP 果然是没有 Android 开放，耗电速度也让我和我的小伙伴惊呆了，所以毅然决定关闭按键震动及按键灯让爪机更省电，方法记录如下。
-         &lt;/p&gt;
-&lt;h3 id="263c8d41f4119510cabaa91e22830469"&gt;关闭按键震动&lt;/h3&gt;
-&lt;p&gt;&lt;pre&gt;手机拨号界面 → 输入##634# → Accept → Vibrator Test → Run → Off → 直接退出&lt;/pre&gt;&lt;/p&gt;
-&lt;h3 id="c0289bd19fcd4a8274891133cd805435"&gt;关闭按键灯&lt;/h3&gt;
-&lt;p&gt;&lt;pre&gt;手机拨号界面 → 输入##634# → Accept → Led Test → Run → Key LED → 直接退出&lt;/pre&gt;       &lt;/p&gt;
-&lt;p&gt;注：重启恢复&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 06 Feb 2014 21:20:00 +0800</pubDate><guid>tag:www.lusir.me,2014-02-06:shutdown-8x-led-and-vibrator.html</guid><category>8x</category></item></channel></rss>
+&lt;pre&gt;&lt;code&gt;||p.btyou.com&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 07 Feb 2014 19:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-02-07:removal-ads-of-yyets.html</guid><category>Adblock</category></item></channel></rss>

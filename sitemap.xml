@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.lusir.me/index.html</loc>
-<lastmod>2014-03-18T00:58:31-00:00</lastmod>
+<lastmod>2014-03-18T13:05:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.lusir.me/archives.html</loc>
-<lastmod>2014-03-18T00:58:31-00:00</lastmod>
+<lastmod>2014-03-18T13:05:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.lusir.me/categories.html</loc>
-<lastmod>2014-03-18T00:58:31-00:00</lastmod>
+<lastmod>2014-03-18T13:05:49-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -32,8 +32,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://www.lusir.me/sticky-footer.html</loc>
+<lastmod>2014-03-18T13:04:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://www.lusir.me/after-enabling-application-cache.html</loc>
-<lastmod>2014-03-18T22:40:00-00:00</lastmod>
+<lastmod>2014-03-17T22:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -271,7 +278,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.lusir.me/record/index.html</loc>
-<lastmod>2014-03-18T22:40:00-00:00</lastmod>
+<lastmod>2014-03-18T13:04:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -389,6 +396,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://www.lusir.me/tag/css.html</loc>
+<lastmod>2014-03-18T13:04:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://www.lusir.me/tag/hermit.html</loc>
 <lastmod>2014-03-08T22:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -425,7 +439,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.lusir.me/tag/html5.html</loc>
-<lastmod>2014-03-18T22:40:00-00:00</lastmod>
+<lastmod>2014-03-17T22:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -530,7 +544,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.lusir.me/author/nero-zheng.html</loc>
-<lastmod>2014-03-18T22:40:00-00:00</lastmod>
+<lastmod>2014-03-18T13:04:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

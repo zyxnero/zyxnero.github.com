@@ -7,10 +7,10 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="“Beyond Compare 许可证密钥被撤销”的解决办法 - 作者: Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="置 footer 于页面底部 - 作者: Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>“Beyond Compare 许可证密钥被撤销”的解决办法 - 擼sirの避風港</title>
+<title>置 footer 于页面底部 - 擼sirの避風港</title>
 <link rel="prefetch prerender" href="http://www.lusir.me/search.html" />
 <link href="http://www.lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://www.lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="http://www.lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="http://www.lusir.me/hermit/style/hermit.min.css" media="all" />
-<link rel='canonical' href="http://www.lusir.me/solution-to-bcompare-error.html" />
+<link rel='canonical' href="http://www.lusir.me/sticky-footer.html" />
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -80,41 +80,44 @@
 </div>
 </div></div>
 		
-<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">“Beyond Compare 许可证密钥被撤销”的解决办法</h1></div>
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">置 footer 于页面底部</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>前几天遇到的问题，打开 Beyond Compare 提示：<code>许可证密钥已被撤销</code>。上网搜寻出解决方法，记录一下。
+<p>前几天发现有些内容比较少的文章页面，其 footer 会上移浮在半空，看起来着实别扭，所以又调整了一下 CSS。
 </p>
-<h3 id="6f1fefa928e01b0bb4ba64071c7ad053">解决方法：</h3>
-<h4 id="ed752639f1c9e21123de5f01b230f9e3">保存配置</h4>
-<p>打开 Beyond Compare，“菜单” → “工具” → “导出配置”，把 Beyond Compare 的配置备份一份。</p>
-<h4 id="9fb493ad79ed72cda3405c46ed9a24b4">删除相应目录</h4>
-<p>根据系统进入相应文件夹，删除所有文件。</p>
-<div class="codehilite"><pre>WinXP   C:\Documents and Settings\[Your User Name]\Application Data\Scooter Software\Beyond Compare 3\
-Win7    C:\Users\[Your User Name]\AppData\Roaming\Scooter Software\Beyond Compare 3\
+<p>由于<a href="https://github.com/mawenbao/niu-x2-sidebar" title="Niu-X2-Sidebar">现主题</a>是基于 bootstrap 的，在 <a href="http://getbootstrap.com/" title="Bootstrap">Bootstrap</a> 的 example 中找到了 2 份示例：<a href="http://xiemin.me/bootstrap-2.2.2/examples/sticky-footer.html" title="Sticky footer">Bootstrap2 示例</a>，<a href="http://getbootstrap.com/examples/sticky-footer/" title="Sticky footer">Bootstrap3 示例</a>。我选择模仿套用 Bootstrap2 的示例（感觉简单一点），在主题的 CSS 中添加了下面 2 行：</p>
+<div class="codehilite"><pre><span class="nt">html</span><span class="o">,</span><span class="nt">body</span> <span class="p">{</span><span class="k">height</span><span class="o">:</span> <span class="m">97</span><span class="o">.</span><span class="m">7</span><span class="o">%</span><span class="p">;}</span>
+<span class="nf">#body-content</span><span class="p">{</span><span class="k">min-height</span><span class="o">:</span><span class="m">100</span><span class="o">%</span><span class="p">;</span><span class="k">height</span><span class="o">:</span><span class="k">auto</span> <span class="cp">!important</span><span class="p">;}</span>
 </pre></div>
 
 
-<h4 id="f4305a6b2d192b4290a9a8c4353c6b13">重新安装</h4>
-<p>重新打开 Beyond Compare，提示需要安装，安装时导入刚刚备份的配置文件，问题解决。</p>
-<h3 id="2af555fd2e8c2e68b0af48b312de1009">秘钥</h3>
-<p>附两份秘钥，均来自网络，未经验证。使用方法为：复制 BEGIN 与 END 之间的所有内容。</p>
-<p>密钥1：</p>
-<div class="codehilite"><pre>— BEGIN —
-rssAPVg2OpBjDVo3E0DhGWrjPIq0hsTSuNz13wTuzVHfb2mRgO9bZKn9B
-l42D5YEyMSYPXsxzcb08dqbRlbzWNJzJXE6YVapYW7f+tRRXRFI4yn4Nj
-jZ0RiiqGRCTVzwComUcXB-eiFWRBY6JpSsCNkmIxL5KsRCo442djHhTZE
-— END —
-</pre></div>
-
-
-<p>密钥2：</p>
-<div class="codehilite"><pre>— BEGIN —
-mv1nPlXAywBDCdhxFc9QOVv6TBcQHLAXBQUAKTh3ie4fqSEOnWrPsnVkF
-yt0wAkJHweoExRJWWVwwCniKNROSdJzJXE6YVapYW7f+tRRXRFI4yn4Nj
-jZ0RiiqGRCTVzwComUcXB-eiFWRBY6JpSsCNkmIxL5KsRCo442djHhTZE
-— END —
-</pre></div>
+<p>至于 Bootstrap3 的示例中采用的 <code>position: absolute;bottom: 0;</code> 的好处，或者说 Bootstrap2 的示例中采取的办法的缺陷，还不清楚，以后发现了再改……</p>
+<p>我们宿舍老二和老三自打吃过早饭就在宿舍里吵个不停，都说自己的女朋友比对方的强，争得不可开交。我实在看不下去了，对他们说：“别吵了，我来作个裁判吧。” 于是我搬来一张桌子，让他们俩掰起了手腕。</p>
+<div class="hermit" songs="songlist#:181454">
+<div class="hermit-box">
+<div class="hermit-controls">
+<div class="hermit-button">
+</div>
+<div class="hermit-detail">
+左键轻击列表播放或暂停。
+</div>
+<div class="hermit-duration">
+</div>
+<div class="hermit-listbutton">
+</div>
+</div>
+<div class="hermit-prosess">
+<div class="hermit-loaded">
+</div>
+<div class="hermit-prosess-bar">
+<div class="hermit-prosess-after">
+</div>
+</div>
+</div>
+</div>
+<div class="hermit-list">
+</div>
+</div>
 </div>
     
 <div id="content-comments">
@@ -140,11 +143,11 @@ var duoshuoQuery = {short_name:"lusir"};
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-11 21:43</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-18 13:04</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://www.lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/beyond-compare.html">Beyond Compare</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/css.html">CSS</a></div>
  
 </div>
 
@@ -153,14 +156,14 @@ var duoshuoQuery = {short_name:"lusir"};
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">“Beyond Compare 许可证密钥被撤销”的解决办法</a></li>
-    <li><a href='#6f1fefa928e01b0bb4ba64071c7ad053'>解决方法：</a><ol><li><a href='#ed752639f1c9e21123de5f01b230f9e3'>保存配置</a></li><li><a href='#9fb493ad79ed72cda3405c46ed9a24b4'>删除相应目录</a></li><li><a href='#f4305a6b2d192b4290a9a8c4353c6b13'>重新安装</a></li></ol></li><li><a href='#2af555fd2e8c2e68b0af48b312de1009'>秘钥</a></li>
+<li><a href="#content-heading">置 footer 于页面底部</a></li>
+    
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">  
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;“Beyond Compare 许可证密钥被撤销”的解决办法
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;置 footer 于页面底部
 </div></div>
 </div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>
