@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-18T17:04:00+08:00</updated><entry><title>将博客 Feed 推至微博</title><link href="http://www.lusir.me/sync-feed-to-weibo.html" rel="alternate"></link><updated>2014-03-18T17:04:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-18:sync-feed-to-weibo.html</id><summary type="html">&lt;p&gt;注册了微博账号也不知道写些什么东西，就想着把博客上的文章推上去，至少看起来有些内容。之前一直是用无觅的“&lt;a href="http://www.wumii.com/site/index" title="无觅网网站管理中心"&gt;连接微博&lt;/a&gt;”来推的，&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;后，本打算给“连接微博”的 feed 改成带 &lt;code&gt;www&lt;/code&gt; 的，结果取消关联之后就不能重新绑定了，坑！
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-23T17:40:00+08:00</updated><entry><title>主题折腾记录</title><link href="http://www.lusir.me/blog-modify-record.html" rel="alternate"></link><updated>2014-03-23T17:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-23:blog-modify-record.html</id><summary type="html">&lt;p&gt;接触到 pelican 之后就在使用 &lt;a href="http://atime.me/" title="Ma Wenbao"&gt;Ma Wenbao&lt;/a&gt; 的主题，然后就是一路折腾（折腾主题，折腾 pelican 配置），不过都是一些小改动，现记录一下折腾历史（能从 git 查看折腾记录还是挺方便的）。
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;20140122 更改自定义 404 页&lt;/li&gt;
+&lt;li&gt;20140218 添加 favicon&lt;/li&gt;
+&lt;li&gt;20140219 改作者名为 Nero Zheng&lt;/li&gt;
+&lt;li&gt;20140220 模仿添加结构化数据，能否有用未知&lt;/li&gt;
+&lt;li&gt;20140222 &lt;a href="http://www.lusir.me/about-unicode-bom.html" title="关于 Unicode BOM"&gt;找出 article_sidebar 文件中的 &amp;amp;#65279 符&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140223 学 Ma Wenbao 修改 footnote.py 与 tables.py&lt;/li&gt;
+&lt;li&gt;20140223 &lt;a href="http://www.lusir.me/fake-q-ban-yu-wen.html" title="荷塘月色 - Q 版语文"&gt;添加 fancybox 并图文混排&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140225 修改 about 页面，添加 picasa 相册并自适应居中&lt;/li&gt;
+&lt;li&gt;20140227 添加多说 CSS 样式&lt;/li&gt;
+&lt;li&gt;20140303 &lt;a href="http://www.lusir.me/google-cse-for-pelican.html" title="整合 Google 自定义搜索到 Pelican"&gt;添加 cse 自定义搜索页面&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140304 &lt;a href="http://www.lusir.me/start-using-qiniu.html" title="使用七牛镜像存储"&gt;添加 feed link，图床地址改到 &lt;code&gt;dn-nero.qbox.me&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140305 &lt;a href="http://www.lusir.me/add-google-profile.html" title="关联博客与 Google Profile"&gt;关联 google+ profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140309 &lt;a href="http://www.lusir.me/embed-hermit-player.html" title="在网页中嵌入 hermit 播放器"&gt;在网页中嵌入 hermit 播放器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140311 添加面包屑导航&lt;/li&gt;
+&lt;li&gt;20140313 &lt;a href="http://www.lusir.me/after-enabling-application-cache.html" title="启用 Application Cache（续）"&gt;添加 html5 脱机数据属性&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140314 &lt;a href="http://www.lusir.me/sticky-footer.html" title="置 footer 于页面底部"&gt;修改 css 使 footer 置底&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.mb5u.com/jscode/46121/" title="让多个 DIV 自由居中排列"&gt;让多个 DIV 自由居中排列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://kagami.me/add-kaomoji-into-duoshuo.html" title="给多说评论框添加自定义颜文字表情功能"&gt;给多说评论框添加自定义颜文字表情功能&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.vsay.cn/one-more-custom-css-lets-you-say-comments-city.html" title="多说自定义 CSS 让你的多说评论动感起来"&gt;多说自定义CSS 让你的多说评论动感起来&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://yusi123.com/739.html" title="wordpress 多说评论插件中设置圆形旋转头像 css 代码"&gt;wordpress 多说评论插件中设置圆形旋转头像 css 代码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fatesinger.com/wordpress-seo.html" title="我是如何做 wordpress seo 的"&gt;我是如何做wordpress seo的&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/sketch-2.jpg" title="璇子手绘-1" data-fancybox-group="gallery"&gt;&lt;img class="fancybox" src="http://dn-nero.qbox.me/sketch-1.jpg" alt="璇子手绘-1"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="hidden"&gt;
+&lt;a href="http://dn-nero.qbox.me/sketch-1.jpg" title="璇子手绘-2" data-fancybox-group="gallery"&gt;&lt;img class="fancybox" src="http://dn-nero.qbox.me/sketch-2.jpg" alt="璇子手绘-2"/&gt;&lt;/a&gt;
+&lt;/div&gt;</summary><category term="Theme"></category></entry><entry><title>将博客 Feed 推至微博</title><link href="http://www.lusir.me/sync-feed-to-weibo.html" rel="alternate"></link><updated>2014-03-18T17:04:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-18:sync-feed-to-weibo.html</id><summary type="html">&lt;p&gt;注册了微博账号也不知道写些什么东西，就想着把博客上的文章推上去，至少看起来有些内容。之前一直是用无觅的“&lt;a href="http://www.wumii.com/site/index" title="无觅网网站管理中心"&gt;连接微博&lt;/a&gt;”来推的，&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;后，本打算给“连接微博”的 feed 改成带 &lt;code&gt;www&lt;/code&gt; 的，结果取消关联之后就不能重新绑定了，坑！
 &lt;/p&gt;
 &lt;p&gt;在网上搜寻一番，找到两个应用，试用之后感觉还不错，记录一下以作备忘……&lt;/p&gt;
 &lt;h3 id="8008e97c8aaa4f86189a8fe0c0109b3f"&gt;针对国内&lt;/h3&gt;
@@ -612,14 +643,4 @@ abc  |  123   |  ABC  |  cool
 &lt;/pre&gt;&lt;/p&gt;</summary><category term="jQuery"></category></entry><entry><title>自定义 Word 文档页码</title><link href="http://www.lusir.me/customize-page-number-of-docx.html" rel="alternate"></link><updated>2014-02-20T16:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-02-20:customize-page-number-of-docx.html</id><summary type="html">&lt;p&gt;使用 Word 添加页码时可以看到页码显示的格式为“当前页/总页数”，在取消“链接到前一条页眉”的状态下，“当前页”及“总页数”默认都是从第一页开始的（包含封面、目录），所以通常情况下我们需要采取添加“分节符”等操作以使页码从我们想要的地方开始及结束。
 &lt;/p&gt;
 &lt;p&gt;注：前提条件是要保证想要设置页码的区域与前后区域设置了“分节符”且“链接到前一条页眉”没有选中，可以在“页面布局”下的“分隔符”里插入“下一页”进行分节。&lt;/p&gt;
-&lt;p&gt;假设一文档有 8 页，需要在第 2 页到第 5 页设置页码（1、2、3、4 共 4 页），第 6 页到第 8 页作为附件文档重新设置页码（1、2、3 共 3 页）。则我们需要先在第 1 页与第 5 页设置“分节符”。插入页码之后，取消“链接到前一条页眉”，此时“当前页”都正常显示。在“总页数”数值那里点击右键，“切换域代码” → 拷贝 &lt;code&gt;NUMPAGES&lt;/code&gt; （注意不要{}），然后包括{}一起删除，连按两次 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;F9&lt;/kbd&gt;，出现两组大括号，输入 &lt;code&gt;{={NUMPAGES}-4}&lt;/code&gt;，再次右键“切换域代码”即可。同理，附件的“总页数”改为 &lt;code&gt;{={NUMPAGES}-5}&lt;/code&gt;。&lt;/p&gt;</summary><category term="Word"></category></entry><entry><title>修改本地连接 DNS 地址</title><link href="http://www.lusir.me/modify-dns-address.html" rel="alternate"></link><updated>2014-02-08T19:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-02-08:modify-dns-address.html</id><summary type="html">&lt;p&gt;之前的电信劫持门轰动一时，打开的正常页面及非正常页面时不时会跳转到电信的导航页面或其它广告页面。最近发现打开 hao123 后会强制跳转一次，而且后面会多一个 &lt;code&gt;tn=97236842_hao_pg&lt;/code&gt; 的尾巴，看着很不舒服。于是在网上搜得以下 Opendns。
-&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3 id="a33458dd02372c0059d095c6ce6a25a5"&gt;OpenerDNS&lt;/h3&gt;
-&lt;p&gt;&lt;pre&gt;42.120.21.30&lt;/pre&gt;&lt;/p&gt;
-&lt;h3 id="45bdd11fa20b3d010f71cffe56101a2a"&gt;V2EX DNS&lt;/h3&gt;
-&lt;p&gt;&lt;pre&gt;
-199.91.73.222     LA
-178.79.131.110   London
-&lt;/pre&gt;&lt;/p&gt;
-&lt;p&gt;还有 Google 提供的 &lt;code&gt;8.8.8.8&lt;/code&gt; 及 &lt;code&gt;8.8.4.4&lt;/code&gt; 也是不错的选择，修改之后貌似是清爽一些了……&lt;/p&gt;</summary><category term="DNS"></category></entry></feed>
+&lt;p&gt;假设一文档有 8 页，需要在第 2 页到第 5 页设置页码（1、2、3、4 共 4 页），第 6 页到第 8 页作为附件文档重新设置页码（1、2、3 共 3 页）。则我们需要先在第 1 页与第 5 页设置“分节符”。插入页码之后，取消“链接到前一条页眉”，此时“当前页”都正常显示。在“总页数”数值那里点击右键，“切换域代码” → 拷贝 &lt;code&gt;NUMPAGES&lt;/code&gt; （注意不要{}），然后包括{}一起删除，连按两次 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;F9&lt;/kbd&gt;，出现两组大括号，输入 &lt;code&gt;{={NUMPAGES}-4}&lt;/code&gt;，再次右键“切换域代码”即可。同理，附件的“总页数”改为 &lt;code&gt;{={NUMPAGES}-5}&lt;/code&gt;。&lt;/p&gt;</summary><category term="Word"></category></entry></feed>
