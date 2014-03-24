@@ -61,13 +61,7 @@ img {max-width: 100%;height: auto;width: auto\9;
 #niu2-main-content h3, #niu2-main-content h4 { font-family: "Helvetica Neue";}
 #niu2-left-container { border-right: 1px solid #ccc;font-family: SimSun;}
 #niu2-right-container { margin-left: 5px;}
-
-a.niu2-active-toc, a.niu2-active-toc:hover {
-    color: white;
-    background-color: #428bca;
-    display: inline-block;
-    text-decoration: none;
-}
+a.niu2-active-toc, a.niu2-active-toc:hover {color: white;background-color: #428bca;display: inline-block;text-decoration: none;}
 
 /*
 a.niu2-active-toc:before {
@@ -93,18 +87,7 @@ a.niu2-active-toc:before {
 #niu2-sidebar-toc-list li ol {margin-left: -3px;}
 #niu2-sidebar-toc-list li ol li ol,
 #niu2-sidebar-toc-list li ul li ul {margin-left: -2px;}
-#niu2-sidebar-toc-list a {
-    padding: 0 3px;
-    margin-left: 3px;
-    display: inline-block;
-    max-width: 70%;
-    text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    overflow: hidden;
-    vertical-align: top;
-    white-space: nowrap;
-}
-
+#niu2-sidebar-toc-list a {padding: 0 3px;margin-left: 3px;display: inline-block;max-width: 70%;text-overflow: ellipsis;-o-text-overflow: ellipsis;overflow: hidden;vertical-align: top;white-space: nowrap;}
 #niu2-sidebar-toc-list li li a {max-width: 78%;}
 #niu2-sidebar-toc-list li li li a {max-width: 68%;}
 #niu2-sidebar-toc-list li ol {display: none;}
@@ -143,8 +126,7 @@ img {
 #niu2-cse-ctrl-box {color: #999;margin-top: 6px;cursor: pointer;}
 #niu2-cse-search-image {margin: 2px 3px 0 5px;}
 .niu2-clearfix {height: 0;}
-.niu2-index-article a:hover {text-decoration: none;color: SpringGreen;display: inline-block;}
-.niu2-footer a:hover,#niu2-main-content a:hover,.niu2-index-article a:hover,#niu2-sidebar-meta a:hover {color: LimeGreen;}
+.niu2-meta-index a:hover,a:hover {color: LimeGreen;}
 a {-webkit-transition: .6s ease-in-out;-moz-transition: .6s ease-in-out;-ms-transition: .6s ease-in-out;-o-transition: .6s ease-in-out;transition: .6s ease-in-out;}
 
 .niu2-meta {margin-bottom: 35px;}
@@ -166,13 +148,7 @@ a {-webkit-transition: .6s ease-in-out;-moz-transition: .6s ease-in-out;-ms-tran
 .niu2-icons a {text-decoration: none;}
 .niu2-category-list {padding-left: 5px;}
 .niu2-category-list li {list-style: none;}
-a.niu2-toggle-ctrl {height: 28px;font-size: 18px;padding-left: 5px;cursor: pointer;display: block;color: #333;width: 100%;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    margin-bottom: 3px;
-}
-
+a.niu2-toggle-ctrl {height: 28px;font-size: 18px;padding-left: 5px;cursor: pointer;display: block;color: #333;width: 100%;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;margin-bottom: 3px;}
 a.niu2-toggle-ctrl:hover {text-decoration: none;color: white;background-color: #428bca;}
 #niu2-archives {font-size: 15px;line-height: 1.7;}
 #niu2-archives ul {margin-bottom: 4px; padding-left: 25px;}
