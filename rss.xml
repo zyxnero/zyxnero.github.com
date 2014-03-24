@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://www.lusir.me/</link><description>從零開始…</description><atom:link href="http://www.lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 23 Mar 2014 17:40:00 +0800</lastBuildDate><item><title>主题折腾记录</title><link>http://www.lusir.me/blog-modify-record.html</link><description>&lt;p&gt;接触到 pelican 之后就在使用 &lt;a href="http://atime.me/" title="Ma Wenbao"&gt;Ma Wenbao&lt;/a&gt; 的主题，然后就是一路折腾（折腾主题，折腾 pelican 配置），不过都是一些小改动，现记录一下折腾历史（能从 git 查看折腾记录还是挺方便的）。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://www.lusir.me/</link><description>從零開始…</description><atom:link href="http://www.lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 24 Mar 2014 10:40:00 +0800</lastBuildDate><item><title>Lusir Lubuntu - 安装篇</title><link>http://www.lusir.me/setup-lubuntu.html</link><description>&lt;p&gt;手上有个 Lenovo S10-3C，运行 XP 都感觉卡顿，于是想着安装一个 Arch Linux 学这玩玩儿，结果折腾半天楞装不上去，只好作罢，退而求其次，装个 Lubuntu 吧。
+&lt;/p&gt;
+&lt;h3 id="df3d2ab2b3159906f6954db0c2b4f633"&gt;Lenovo S10-3C 缺陷&lt;/h3&gt;
+&lt;p&gt;这款上网本不得不说奇异，用 U 盘引导进入安装界面之后，键盘却不能用了。据说是 BIOS 不支持 Linux 的 kernel，简单的解决办法是禁用电源管理，即在 grub.cfg 的 linux 行最后添加一句 &lt;code&gt;noapic acpi=off&lt;/code&gt;。此方法的后遗症就是耗电量增加，且关机不会切断电源，需要手动关机。&lt;a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/677633" title="bugs.launchpad.net"&gt;&lt;code&gt;bugs.launchpad.net&lt;/code&gt;&lt;/a&gt; 论坛上的一份开机启动键盘的脚本对我无解，有舍有得，我选择了键盘。&lt;/p&gt;
+&lt;h3 id="66c260d88c897e6c6353f6db6eacc3bd"&gt;分区&lt;/h3&gt;
+&lt;p&gt;经典分区法，如下：&lt;/p&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;root&lt;/th&gt;
+&lt;th&gt;swap&lt;/th&gt;
+&lt;th&gt;home&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;25G&lt;/td&gt;
+&lt;td&gt;1G&lt;/td&gt;
+&lt;td&gt;其余容量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;对于 Lubuntu，安装也就没有需要注意的东西了，按照提示不断下一步即可。安装完成后发现屏幕太小了，设置界面都不能点击确定键，这时需要了解两个很实用的快捷键：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;左键拖拽&lt;/kbd&gt; 移动窗口&lt;/li&gt;
+&lt;li&gt;&lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;右键拖拽&lt;/kbd&gt; 改变窗口大小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;哦，还折腾了一个透明主题，看起来还行。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/lubuntu-desktop.jpg" title="Lubuntu 桌面" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/lubuntu-desktop.jpg" alt="Lubuntu 桌面" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;暂时就记这么多吧。&lt;/p&gt;
+&lt;p&gt;王家卫有一次让他的演员翻译 I Love You，有的演员翻译成我爱你。墨镜王说，怎么可以讲这样的话，应该是“我已经很久没有坐过摩托车了，也很久未试过这么接近一个人了，虽然我知道这条路不是很远。我知道不久我就会下车。可是，这一分钟，我觉得好暖。”&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.csdn.net/lsbmaincpp/article/details/6554272" title="在Lenovo S10-3c 上安装 Ubuntu "&gt;在Lenovo S10-3c 上安装 Ubuntu &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://namakutux.blogspot.jp/2012/05/how-to-install-mac-os-x-lion-theme-on.html" title="How To Install Mac OS X Lion Theme On Lubuntu / LXDE"&gt;How To Install Mac OS X Lion Theme On Lubuntu / LXDE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 24 Mar 2014 10:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-24:setup-lubuntu.html</guid><category>Lubuntu</category></item><item><title>主题折腾记录</title><link>http://www.lusir.me/blog-modify-record.html</link><description>&lt;p&gt;接触到 pelican 之后就在使用 &lt;a href="http://atime.me/" title="Ma Wenbao"&gt;Ma Wenbao&lt;/a&gt; 的主题，然后就是一路折腾（折腾主题，折腾 pelican 配置），不过都是一些小改动，现记录一下折腾历史（能从 git 查看折腾记录还是挺方便的）。
 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;20140122 更改自定义 404 页&lt;/li&gt;
@@ -640,7 +677,4 @@ abc  |  123   |  ABC  |  cool
 百度  http://fe.bdimg.com/jq/jquery-1.7.1.min.js
 腾讯  http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js
 搜狐  http://js.sohu.com/library/jquery-1.7.1.min.js
-&lt;/pre&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 20 Feb 2014 20:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-02-20:jquery-src-switching.html</guid><category>jQuery</category></item><item><title>自定义 Word 文档页码</title><link>http://www.lusir.me/customize-page-number-of-docx.html</link><description>&lt;p&gt;使用 Word 添加页码时可以看到页码显示的格式为“当前页/总页数”，在取消“链接到前一条页眉”的状态下，“当前页”及“总页数”默认都是从第一页开始的（包含封面、目录），所以通常情况下我们需要采取添加“分节符”等操作以使页码从我们想要的地方开始及结束。
-&lt;/p&gt;
-&lt;p&gt;注：前提条件是要保证想要设置页码的区域与前后区域设置了“分节符”且“链接到前一条页眉”没有选中，可以在“页面布局”下的“分隔符”里插入“下一页”进行分节。&lt;/p&gt;
-&lt;p&gt;假设一文档有 8 页，需要在第 2 页到第 5 页设置页码（1、2、3、4 共 4 页），第 6 页到第 8 页作为附件文档重新设置页码（1、2、3 共 3 页）。则我们需要先在第 1 页与第 5 页设置“分节符”。插入页码之后，取消“链接到前一条页眉”，此时“当前页”都正常显示。在“总页数”数值那里点击右键，“切换域代码” → 拷贝 &lt;code&gt;NUMPAGES&lt;/code&gt; （注意不要{}），然后包括{}一起删除，连按两次 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;F9&lt;/kbd&gt;，出现两组大括号，输入 &lt;code&gt;{={NUMPAGES}-4}&lt;/code&gt;，再次右键“切换域代码”即可。同理，附件的“总页数”改为 &lt;code&gt;{={NUMPAGES}-5}&lt;/code&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 20 Feb 2014 16:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-02-20:customize-page-number-of-docx.html</guid><category>Word</category></item></channel></rss>
+&lt;/pre&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 20 Feb 2014 20:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-02-20:jquery-src-switching.html</guid><category>jQuery</category></item></channel></rss>
