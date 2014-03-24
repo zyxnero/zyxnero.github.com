@@ -143,15 +143,9 @@ img {
 #niu2-cse-ctrl-box {color: #999;margin-top: 6px;cursor: pointer;}
 #niu2-cse-search-image {margin: 2px 3px 0 5px;}
 .niu2-clearfix {height: 0;}
-
-/*
-.niu2-index-article a:hover {
-	text-decoration: none;
-    color: white;
-    background-color: #428bca;
-    display: inline-block;
-}
-*/
+.niu2-index-article a:hover {text-decoration: none;color: SpringGreen;display: inline-block;}
+.niu2-footer a:hover,#niu2-main-content a:hover,.niu2-index-article a:hover,#niu2-sidebar-meta a:hover {color: LimeGreen;}
+a {-webkit-transition: .6s ease-in-out;-moz-transition: .6s ease-in-out;-ms-transition: .6s ease-in-out;-o-transition: .6s ease-in-out;transition: .6s ease-in-out;}
 
 .niu2-meta {margin-bottom: 35px;}
 .niu2-meta a, .niu2-meta-index a {color: #333;}
