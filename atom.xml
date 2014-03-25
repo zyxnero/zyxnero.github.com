@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-24T10:40:00+08:00</updated><entry><title>Lusir Lubuntu - 安装篇</title><link href="http://www.lusir.me/setup-lubuntu.html" rel="alternate"></link><updated>2014-03-24T10:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-24:setup-lubuntu.html</id><summary type="html">&lt;p&gt;手上有个 Lenovo S10-3C，运行 XP 都感觉卡顿，于是想着安装一个 Arch Linux 学这玩玩儿，结果折腾半天楞装不上去，只好作罢，退而求其次，装个 Lubuntu 吧。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://www.lusir.me/" rel="alternate"></link><link href="http://www.lusir.me/atom.xml" rel="self"></link><id>http://www.lusir.me/</id><updated>2014-03-25T09:42:00+08:00</updated><entry><title>Weibo 提示 "Insufficient App Permissions" 的解决办法</title><link href="http://www.lusir.me/solution-to-insufficient-permissions.html" rel="alternate"></link><updated>2014-03-25T09:42:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-25:solution-to-insufficient-permissions.html</id><summary type="html">&lt;p&gt;&lt;a href="http://www.lusir.me/sync-feed-to-weibo.html" title="将博客 Feed 推至微博"&gt;将博客 Feed 推至微博&lt;/a&gt;一文中，使用了“聚合通”来推送博客文章至微博，并且可以按照&lt;a href="http://roov.org/2014/02/fawave-from/" title="修改 FaWave 默认消息尾巴"&gt;这篇文章&lt;/a&gt;来对微博小尾巴进行修改（虽然感觉有些不道德，但自己用用应该问题不大）。
+&lt;/p&gt;
+&lt;p&gt;昨天晚上的一篇文章在推送的时候提示 "Insufficient App Permissions"，字面意思应该是“没有足够的应用权限”，考虑推送应该算是往微博里写东西，所以尝试着申请了“微博高级写入接口”这货，申请通过之后，推送就可以完成了。&lt;/p&gt;
+&lt;p&gt;之后去网上一搜，发现已经有小伙伴遇到相同的问题并好心的在博客中记下来了，在此也一并附上：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.csdn.net/hhhccckkk/article/details/9162525" title="android 新浪分享实例"&gt;android 新浪分享实例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.csdn.net/alincexiaohao/article/details/21699493" title="分享失败，错误描述:Insufficient app permissions!"&gt;分享失败，错误描述:Insufficient app permissions!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下雨了，心情也不能美丽……&lt;/p&gt;
+&lt;div class="hermit" songs="songlist#:1771509592"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;
+左键轻击列表播放或暂停。
+&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id="5825661b219e9e8c192784feee4f7462"&gt;附：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://hi.baidu.com/958719424/item/b049b27b57b7493cd6a89cd3" title="把 chrome 本地扩展打包成 crx 的方法"&gt;把 chrome 本地扩展打包成 crx 的方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Weibo"></category></entry><entry><title>Lusir Lubuntu - 安装篇</title><link href="http://www.lusir.me/setup-lubuntu.html" rel="alternate"></link><updated>2014-03-24T10:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-03-24:setup-lubuntu.html</id><summary type="html">&lt;p&gt;手上有个 Lenovo S10-3C，运行 XP 都感觉卡顿，于是想着安装一个 Arch Linux 学这玩玩儿，结果折腾半天楞装不上去，只好作罢，退而求其次，装个 Lubuntu 吧。
 &lt;/p&gt;
 &lt;h3 id="df3d2ab2b3159906f6954db0c2b4f633"&gt;Lenovo S10-3C 缺陷&lt;/h3&gt;
 &lt;p&gt;这款上网本不得不说奇异，用 U 盘引导进入安装界面之后，键盘却不能用了。据说是 BIOS 不支持 Linux 的 kernel，简单的解决办法是禁用电源管理，即在 grub.cfg 的 linux 行最后添加一句 &lt;code&gt;noapic acpi=off&lt;/code&gt;。此方法的后遗症就是耗电量增加，且关机不会切断电源，需要手动关机。&lt;a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/677633" title="bugs.launchpad.net"&gt;&lt;code&gt;bugs.launchpad.net&lt;/code&gt;&lt;/a&gt; 论坛上的一份开机启动键盘的脚本对我无解，有舍有得，我选择了键盘。&lt;/p&gt;
@@ -651,31 +689,4 @@ abc  |  123   |  ABC  |  cool
 &lt;p&gt;Wikipedia：&lt;a href="http://en.wikipedia.org/wiki/Byte_order_mark" title="字节顺序标记"&gt;字节顺序标记&lt;/a&gt;.&amp;#160;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="BOM"></category></entry><entry><title>在 Google CDN 库获取失败时载入本地 jQuery 库</title><link href="http://www.lusir.me/jquery-src-switching.html" rel="alternate"></link><updated>2014-02-20T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:www.lusir.me,2014-02-20:jquery-src-switching.html</id><summary type="html">&lt;p&gt;Niu-X2 主题默认加载本地 jQuery 库，放在 Github 上的本地 jQuery 库速度上是没有 Google CDN 提供的 jQuery 库快的，但 Google 在国内的状态又不是很稳定，所以还是要调用本地 jQuery 库才能确保不会出现加载 jQuery 库失败。
-&lt;/p&gt;
-&lt;h3 id="ec09647dcef4ae3525cffab24748838d"&gt;使用方法&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;使用以下代码可以在 Google CDN 库获取失败时载入本地 jQuery 库：
-&lt;script src="https://gist.github.com/zyxnero/9150011.js"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;h3 id="1bbbb204023e59eba03319c7c5848fd1"&gt;注意事项&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li&gt;许多网站都采用 Google CDN 提供的 jQuery 库，使用它可以得到出色的缓存效果。&lt;/li&gt;
-&lt;li&gt;Google CDN 库的地址采用了协议相对路径，它可以很好的解决 &lt;code&gt;https&lt;/code&gt; 引起的一些问题，不过我还是选择了带 &lt;code&gt;http&lt;/code&gt; 的路径。&lt;/li&gt;
-&lt;li&gt;把 jQuery 代码统统放到页面底部可以提高载入速度。&lt;/li&gt;
-&lt;li&gt;使用 Html5 重构的页面可省略掉 &lt;code&gt;type="text/javascript"&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;别忘了在本地路径下存放相应的 jQuery 文件。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="fb75d9e774823ca06ea6779f1cd6c89a"&gt;国内外其它 jQuery CDN 源&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;由于 Google 不稳定，所以国内的一些 jQuery CDN 源也是不错的选择（微软不算），以下几个源经验证均可访问。
-&lt;pre&gt;
-迅雷  http://vod.xunlei.com/library/jquery-1.7.2.min.js
-淘宝  http://a.tbcdn.cn/libs/jquery/1.7.1/jquery.js
-微软  http://ajax.microsoft.com/ajax/jQuery/jquery-1.8.2.min.js
-新浪  http://lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js
-阿里  http://static.www.net.cn/js/jquery-1.7.1.min.js
-百度  http://fe.bdimg.com/jq/jquery-1.7.1.min.js
-腾讯  http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js
-搜狐  http://js.sohu.com/library/jquery-1.7.1.min.js
-&lt;/pre&gt;&lt;/p&gt;</summary><category term="jQuery"></category></entry></feed>
+&lt;/div&gt;</summary><category term="BOM"></category></entry></feed>

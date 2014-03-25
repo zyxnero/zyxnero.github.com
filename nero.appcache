@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2014-03-24:v1
+# 2014-03-25:v2
 CACHE:
 /hermit/images/icon.png
 /hermit/images/icon2x.png
@@ -11,31 +11,14 @@ CACHE:
 /images/favicon/favicon.ico
 /images/favicon/apple-touch-icon-114x114.png
 /images/favicon/favicon-32x32.png
-/images/404.jpg
 /images/loading.gif
 /images/nextlabel.gif
 /images/prevlabel.gif
-/theme/css/pygments/github.css
-/theme/css/bootstrap.min.css
-/theme/css/jquery.fancybox.css
-/theme/css/niu2.css
-/theme/font-awesome/css/font-awesome.min.css
-/theme/font-awesome/css/font-awesome-ie7.min.css
 /theme/font-awesome/fonts/FontAwesome.otf
 /theme/font-awesome/fonts/fontawesome-webfont.eot
 /theme/font-awesome/fonts/fontawesome-webfont.svg
 /theme/font-awesome/fonts/fontawesome-webfont.ttf
 /theme/font-awesome/fonts/fontawesome-webfont.woff
-/theme/js/bootstrap.min.js
-/theme/js/fancy-loading.js
-/theme/js/html5shiv.js
-/theme/js/jquery.fancybox.pack.js
-/theme/js/jquery-1.11.0.min.js
-/theme/js/niu2.js
-/theme/js/picasa.js
-/theme/js/respond.min.js
-/theme/js/slimbox2.js
-/theme/js/tagcloud.min.js
 
 NETWORK:
 *
