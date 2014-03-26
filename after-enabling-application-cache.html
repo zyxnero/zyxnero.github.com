@@ -83,11 +83,11 @@
 <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">启用 Application Cache（续）</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>接着<a href="http://www.lusir.me/enable-application-cache.html" title="启用 Application Cache">上一篇</a>，上一篇的思路是在每一张网页的 <code>&lt;html&gt;</code> 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
+<p>接着<a href="http://lusir.me/enable-application-cache.html" title="启用 Application Cache">上一篇</a>，上一篇的思路是在每一张网页的 <code>&lt;html&gt;</code> 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
 </p>
 <p>感觉自己还没有能力折腾 HTML5 Local Storage，所以只能采取退而求其次的方法了：</p>
 <p>仅只在一张不经常更新的页面的 <code>&lt;html&gt;</code> 中声明 manifest 文件，我选择了 search.html；同时，在除 search.html 外的每张网页中都声明“预加载”的页面（即预加载 search.html），预加载是 html5 的一个特性，中文详细介绍可以<a href="http://blog.wpjam.com/m/3-html5-features/" title="三个 HTML5 不常见但非常实用的特性简介">看这篇</a>，我在页面中是这样加的。</p>
-<div class="codehilite"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;prefetch prerender&quot;</span> <span class="na">href=</span><span class="s">&quot;http://www.lusir.me/search.html&quot;</span> <span class="nt">/&gt;</span>
+<div class="codehilite"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;prefetch prerender&quot;</span> <span class="na">href=</span><span class="s">&quot;http://lusir.me/search.html&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 
 

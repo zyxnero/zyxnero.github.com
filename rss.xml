@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 25 Mar 2014 09:42:00 +0800</lastBuildDate><item><title>Weibo 提示 “Insufficient App Permissions” 的解决办法</title><link>http://lusir.me/solution-to-insufficient-permissions.html</link><description>&lt;p&gt;&lt;a href="http://www.lusir.me/sync-feed-to-weibo.html" title="将博客 Feed 推至微博"&gt;将博客 Feed 推至微博&lt;/a&gt;一文中，使用了“聚合通”来推送博客文章至微博，并且可以按照&lt;a href="http://roov.org/2014/02/fawave-from/" title="修改 FaWave 默认消息尾巴"&gt;这篇文章&lt;/a&gt;来对微博小尾巴进行修改（虽然感觉有些不道德，但自己用用应该问题不大）。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 25 Mar 2014 09:42:00 +0800</lastBuildDate><item><title>Weibo 提示 “Insufficient App Permissions” 的解决办法</title><link>http://lusir.me/solution-to-insufficient-permissions.html</link><description>&lt;p&gt;&lt;a href="http://lusir.me/sync-feed-to-weibo.html" title="将博客 Feed 推至微博"&gt;将博客 Feed 推至微博&lt;/a&gt;一文中，使用了“聚合通”来推送博客文章至微博，并且可以按照&lt;a href="http://roov.org/2014/02/fawave-from/" title="修改 FaWave 默认消息尾巴"&gt;这篇文章&lt;/a&gt;来对微博小尾巴进行修改（虽然感觉有些不道德，但自己用用应该问题不大）。
 &lt;/p&gt;
 &lt;p&gt;昨天晚上的一篇文章在推送的时候提示 "Insufficient App Permissions"，字面意思应该是“没有足够的应用权限”，考虑推送应该算是往微博里写东西，所以尝试着申请了“微博高级写入接口”这货，申请通过之后，推送就可以完成了。&lt;/p&gt;
 &lt;p&gt;之后去网上一搜，发现已经有小伙伴遇到相同的问题并好心的在博客中记下来了，在此也一并附上：&lt;/p&gt;
@@ -81,18 +81,18 @@
 &lt;li&gt;20140218 添加 favicon&lt;/li&gt;
 &lt;li&gt;20140219 改作者名为 Nero Zheng&lt;/li&gt;
 &lt;li&gt;20140220 模仿添加结构化数据，能否有用未知&lt;/li&gt;
-&lt;li&gt;20140222 &lt;a href="http://www.lusir.me/about-unicode-bom.html" title="关于 Unicode BOM"&gt;找出 article_sidebar 文件中的 &amp;amp;#65279 符&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140222 &lt;a href="http://lusir.me/about-unicode-bom.html" title="关于 Unicode BOM"&gt;找出 article_sidebar 文件中的 &amp;amp;#65279 符&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;20140223 学 Ma Wenbao 修改 footnote.py 与 tables.py&lt;/li&gt;
-&lt;li&gt;20140223 &lt;a href="http://www.lusir.me/fake-q-ban-yu-wen.html" title="荷塘月色 - Q 版语文"&gt;添加 fancybox 并图文混排&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140223 &lt;a href="http://lusir.me/fake-q-ban-yu-wen.html" title="荷塘月色 - Q 版语文"&gt;添加 fancybox 并图文混排&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;20140225 修改 about 页面，添加 picasa 相册并自适应居中&lt;/li&gt;
 &lt;li&gt;20140227 添加多说 CSS 样式&lt;/li&gt;
-&lt;li&gt;20140303 &lt;a href="http://www.lusir.me/google-cse-for-pelican.html" title="整合 Google 自定义搜索到 Pelican"&gt;添加 cse 自定义搜索页面&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140304 &lt;a href="http://www.lusir.me/start-using-qiniu.html" title="使用七牛镜像存储"&gt;添加 feed link，图床地址改到 &lt;code&gt;dn-nero.qbox.me&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140305 &lt;a href="http://www.lusir.me/add-google-profile.html" title="关联博客与 Google Profile"&gt;关联 google+ profile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140309 &lt;a href="http://www.lusir.me/embed-hermit-player.html" title="在网页中嵌入 hermit 播放器"&gt;在网页中嵌入 hermit 播放器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140303 &lt;a href="http://lusir.me/google-cse-for-pelican.html" title="整合 Google 自定义搜索到 Pelican"&gt;添加 cse 自定义搜索页面&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140304 &lt;a href="http://lusir.me/start-using-qiniu.html" title="使用七牛镜像存储"&gt;添加 feed link，图床地址改到 &lt;code&gt;dn-nero.qbox.me&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140305 &lt;a href="http://lusir.me/add-google-profile.html" title="关联博客与 Google Profile"&gt;关联 google+ profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140309 &lt;a href="http://lusir.me/embed-hermit-player.html" title="在网页中嵌入 hermit 播放器"&gt;在网页中嵌入 hermit 播放器&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;20140311 添加面包屑导航&lt;/li&gt;
-&lt;li&gt;20140313 &lt;a href="http://www.lusir.me/after-enabling-application-cache.html" title="启用 Application Cache（续）"&gt;添加 html5 脱机数据属性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140314 &lt;a href="http://www.lusir.me/sticky-footer.html" title="置 footer 于页面底部"&gt;修改 css 使 footer 置底&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140313 &lt;a href="http://lusir.me/after-enabling-application-cache.html" title="启用 Application Cache（续）"&gt;添加 html5 脱机数据属性&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140314 &lt;a href="http://lusir.me/sticky-footer.html" title="置 footer 于页面底部"&gt;修改 css 使 footer 置底&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;20140324 修改 css 给链接添加颜色渐变&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
@@ -106,7 +106,7 @@
 &lt;p&gt;&lt;a href="http://dn-nero.qbox.me/sketch-2.jpg" title="璇子手绘-1" data-fancybox-group="gallery"&gt;&lt;img class="fancybox" src="http://dn-nero.qbox.me/sketch-2.jpg" alt="璇子手绘-1"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;div class="hidden"&gt;
 &lt;a href="http://dn-nero.qbox.me/sketch-1.jpg" title="璇子手绘-2" data-fancybox-group="gallery"&gt;&lt;img class="fancybox" src="http://dn-nero.qbox.me/sketch-1.jpg" alt="璇子手绘-2"/&gt;&lt;/a&gt;
-&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 23 Mar 2014 17:40:00 +0800</pubDate><guid>tag:lusir.me,2014-03-23:blog-modify-record.html</guid><category>Theme</category></item><item><title>将博客 Feed 推至微博</title><link>http://lusir.me/sync-feed-to-weibo.html</link><description>&lt;p&gt;注册了微博账号也不知道写些什么东西，就想着把博客上的文章推上去，至少看起来有些内容。之前一直是用无觅的“&lt;a href="http://www.wumii.com/site/index" title="无觅网网站管理中心"&gt;连接微博&lt;/a&gt;”来推的，&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;后，本打算给“连接微博”的 feed 改成带 &lt;code&gt;www&lt;/code&gt; 的，结果取消关联之后就不能重新绑定了，坑！
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 23 Mar 2014 17:40:00 +0800</pubDate><guid>tag:lusir.me,2014-03-23:blog-modify-record.html</guid><category>Theme</category></item><item><title>将博客 Feed 推至微博</title><link>http://lusir.me/sync-feed-to-weibo.html</link><description>&lt;p&gt;注册了微博账号也不知道写些什么东西，就想着把博客上的文章推上去，至少看起来有些内容。之前一直是用无觅的“&lt;a href="http://www.wumii.com/site/index" title="无觅网网站管理中心"&gt;连接微博&lt;/a&gt;”来推的，&lt;a href="http://lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;后，本打算给“连接微博”的 feed 改成带 &lt;code&gt;www&lt;/code&gt; 的，结果取消关联之后就不能重新绑定了，坑！
 &lt;/p&gt;
 &lt;p&gt;在网上搜寻一番，找到两个应用，试用之后感觉还不错，记录一下以作备忘……&lt;/p&gt;
 &lt;h3 id="8008e97c8aaa4f86189a8fe0c0109b3f"&gt;针对国内&lt;/h3&gt;
@@ -172,11 +172,11 @@
 &lt;/div&gt;
 &lt;div class="hermit-list"&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 18 Mar 2014 13:04:00 +0800</pubDate><guid>tag:lusir.me,2014-03-18:sticky-footer.html</guid><category>CSS</category></item><item><title>启用 Application Cache（续）</title><link>http://lusir.me/after-enabling-application-cache.html</link><description>&lt;p&gt;接着&lt;a href="http://www.lusir.me/enable-application-cache.html" title="启用 Application Cache"&gt;上一篇&lt;/a&gt;，上一篇的思路是在每一张网页的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 18 Mar 2014 13:04:00 +0800</pubDate><guid>tag:lusir.me,2014-03-18:sticky-footer.html</guid><category>CSS</category></item><item><title>启用 Application Cache（续）</title><link>http://lusir.me/after-enabling-application-cache.html</link><description>&lt;p&gt;接着&lt;a href="http://lusir.me/enable-application-cache.html" title="启用 Application Cache"&gt;上一篇&lt;/a&gt;，上一篇的思路是在每一张网页的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
 &lt;/p&gt;
 &lt;p&gt;感觉自己还没有能力折腾 HTML5 Local Storage，所以只能采取退而求其次的方法了：&lt;/p&gt;
 &lt;p&gt;仅只在一张不经常更新的页面的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中声明 manifest 文件，我选择了 search.html；同时，在除 search.html 外的每张网页中都声明“预加载”的页面（即预加载 search.html），预加载是 html5 的一个特性，中文详细介绍可以&lt;a href="http://blog.wpjam.com/m/3-html5-features/" title="三个 HTML5 不常见但非常实用的特性简介"&gt;看这篇&lt;/a&gt;，我在页面中是这样加的。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;link&lt;/span&gt; &lt;span class="na"&gt;rel=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;prefetch prerender&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.lusir.me/search.html&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;link&lt;/span&gt; &lt;span class="na"&gt;rel=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;prefetch prerender&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://lusir.me/search.html&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -206,7 +206,7 @@
 &lt;/div&gt;
 &lt;div class="hermit-list"&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 17 Mar 2014 22:40:00 +0800</pubDate><guid>tag:lusir.me,2014-03-17:after-enabling-application-cache.html</guid><category>HTML5</category></item><item><title>启用 Application Cache</title><link>http://lusir.me/enable-application-cache.html</link><description>&lt;p&gt;上篇&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 17 Mar 2014 22:40:00 +0800</pubDate><guid>tag:lusir.me,2014-03-17:after-enabling-application-cache.html</guid><category>HTML5</category></item><item><title>启用 Application Cache</title><link>http://lusir.me/enable-application-cache.html</link><description>&lt;p&gt;上篇&lt;a href="http://lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
 &lt;/p&gt;
 &lt;p&gt;启用 HTML5 Application Cache 的步骤全摘自网络，自己只是当了一次小白，具体的原理不明。具体步骤分 3 步：&lt;/p&gt;
 &lt;ol&gt;
@@ -236,7 +236,7 @@ NETWORK:
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;注：首行须确保为 CACHE MANIFEST。&lt;code&gt;#&lt;/code&gt; 表示注释，有文章或 css、js、img 等内容变化时需要更新 cache.appcache 以使来访浏览器更新 cache.appcache 中列出的条目，所以更新注释是一个简便方法。&lt;a href="http://www.lusir.me/nero.appcache" title="我的 cache.appcache"&gt;我的 cache.appcache&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;注：首行须确保为 CACHE MANIFEST。&lt;code&gt;#&lt;/code&gt; 表示注释，有文章或 css、js、img 等内容变化时需要更新 cache.appcache 以使来访浏览器更新 cache.appcache 中列出的条目，所以更新注释是一个简便方法。&lt;a href="http://lusir.me/nero.appcache" title="我的 cache.appcache"&gt;我的 cache.appcache&lt;/a&gt;。&lt;/p&gt;
 &lt;h3 id="e8d669ed787e0f6ca71ae5e3dcc9c41a"&gt;设置内容类型&lt;/h3&gt;
 &lt;p&gt;在 .htaccess 文件中添加以下内容（我没有 .htaccess，所以没添加）&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;AddType text/cache-manifest .manifest
@@ -581,7 +581,7 @@ jZ0RiiqGRCTVzwComUcXB-eiFWRBY6JpSsCNkmIxL5KsRCo442djHhTZE
 &lt;li&gt;&lt;a href="http://yige.org/p/374" title="JS获取url参数的函数_JavaScript"&gt;JS获取url参数的函数_JavaScript&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.w3schools.com/jsref/jsref_encodeuricomponent.asp" title="JavaScript encodeURIComponent() Function"&gt;JavaScript encodeURIComponent() Function&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.w3cplus.com/jquery/attr-removeAttr" title="jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性"&gt;jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 04 Mar 2014 21:40:00 +0800</pubDate><guid>tag:lusir.me,2014-03-04:google-cse-for-pelican.html</guid><category>Pelican</category><category>CSE</category></item><item><title>Thunderbird + Markdown 写邮件</title><link>http://lusir.me/markdown-emails.html</link><description>&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="http://www.lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 04 Mar 2014 21:40:00 +0800</pubDate><guid>tag:lusir.me,2014-03-04:google-cse-for-pelican.html</guid><category>Pelican</category><category>CSE</category></item><item><title>Thunderbird + Markdown 写邮件</title><link>http://lusir.me/markdown-emails.html</link><description>&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="http://lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
 &lt;/p&gt;
 &lt;h3 id="90633085fd7eb1c9483c3ce43cbf7619"&gt;绿色版 Thunderbird&lt;/h3&gt;
 &lt;p&gt;安装绿色版 Thunderbird（绿色版便携）&lt;/p&gt;
