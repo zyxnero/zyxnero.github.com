@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Nero Zheng" />
+<meta name="generator" content="Pelican" />
+<meta name="description" content="置 footer 于页面底部 - 作者: Nero Zheng，首发于『擼sirの避風港』">
+<meta property="qc:admins" content="315026325312655" />
+<meta property="wb:webmaster" content="8e383b094667a02d" />
+<title>置 footer 于页面底部 - 擼sirの避風港</title>
+<link rel="prefetch prerender" href="http://www.lusir.me/search.html" />
+<link href="http://www.lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
+<link href="http://www.lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
+<link rel="shortcut icon" type="image/x-icon" href="http://www.lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://www.lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.lusir.me/hermit/style/hermit.min.css" media="all" />
+<link rel='canonical' href="http://www.lusir.me/sticky-footer.html" />
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://dn-nero.qbox.me/element/js/html5shiv.js"></script>
+<script src="http://dn-nero.qbox.me/element/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<![endif]-->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+<meta itemprop="inLanguage" content="zh-CN">
+<div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://www.lusir.me"><i class="fa fa-home"></i>擼sirの避風港</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+<ul class="nav navbar-nav">
+<li><a href="http://www.lusir.me/about.html" title="关于"><i class="fa fa-anchor"></i>关于</a></li>
+<li><a href="http://www.lusir.me/archives.html" title="存档"><i class="fa fa-archive"></i>存档</a></li>
+<li><a href="http://www.lusir.me/tag/" title="标签"><i class="fa fa-tag"></i>标签</a></li>
+<!-- category dropdown list -->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://www.lusir.me/nonsense/index.html"><i class="fa fa-trash-o"></i>扯(1)</a></li>
+<li><a href="http://www.lusir.me/record/index.html"><i class="fa fa-book"></i>记录(37)</a></li>
+</ul>
+</li>
+<!--  self defined dropdown list --></ul>
+<!-- right nav bar -->
+<ul class="nav navbar-nav navbar-right">
+<!-- google custom search --><li>
+<div id="niu2-cse-wrapper">
+<div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+<form action="/search.html" method="get">
+<div class="form-group">
+<input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
+</div>
+</form>
+</div>
+<div id="niu2-cse-ctrl-box" class="navbar-nav"><i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span></div>
+</div>
+</li></ul>
+</nav>
+</div>
+</div></div>
+		
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">置 footer 于页面底部</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>前几天发现有些内容比较少的文章页面，其 footer 会上移浮在半空，看起来着实别扭，所以又调整了一下 CSS。
+</p>
+<p>由于<a href="https://github.com/mawenbao/niu-x2-sidebar" title="Niu-X2-Sidebar">现主题</a>是基于 bootstrap 的，在 <a href="http://getbootstrap.com/" title="Bootstrap">Bootstrap</a> 的 example 中找到了 2 份示例：<a href="http://xiemin.me/bootstrap-2.2.2/examples/sticky-footer.html" title="Sticky footer">Bootstrap2 示例</a>，<a href="http://getbootstrap.com/examples/sticky-footer/" title="Sticky footer">Bootstrap3 示例</a>。我选择模仿套用 Bootstrap2 的示例（感觉简单一点），在主题的 CSS 中添加了下面 2 行：</p>
+<div class="codehilite"><pre><span class="nt">html</span><span class="o">,</span><span class="nt">body</span> <span class="p">{</span><span class="k">height</span><span class="o">:</span> <span class="m">97</span><span class="o">.</span><span class="m">7</span><span class="o">%</span><span class="p">;}</span>
+<span class="nf">#body-content</span><span class="p">{</span><span class="k">min-height</span><span class="o">:</span><span class="m">100</span><span class="o">%</span><span class="p">;</span><span class="k">height</span><span class="o">:</span><span class="k">auto</span> <span class="cp">!important</span><span class="p">;}</span>
+</pre></div>
+
+
+<p>至于 Bootstrap3 的示例中采用的 <code>position: absolute;bottom: 0;</code> 的好处，或者说 Bootstrap2 的示例中采取的办法的缺陷，还不清楚，以后发现了再改……</p>
+<p>我们宿舍老二和老三自打吃过早饭就在宿舍里吵个不停，都说自己的女朋友比对方的强，争得不可开交。我实在看不下去了，对他们说：“别吵了，我来作个裁判吧。” 于是我搬来一张桌子，让他们俩掰起了手腕。</p>
+<div class="hermit" songs="songlist#:181454">
+<div class="hermit-box">
+<div class="hermit-controls">
+<div class="hermit-button">
+</div>
+<div class="hermit-detail">
+左键轻击列表播放或暂停。
+</div>
+<div class="hermit-duration">
+</div>
+<div class="hermit-listbutton">
+</div>
+</div>
+<div class="hermit-prosess">
+<div class="hermit-loaded">
+</div>
+<div class="hermit-prosess-bar">
+<div class="hermit-prosess-after">
+</div>
+</div>
+</div>
+</div>
+<div class="hermit-list">
+</div>
+</div>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>            
+<!-- Duoshuo Comment END -->
+</div>
+
+</div>
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-18 13:04</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://www.lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/css.html">CSS</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">置 footer 于页面底部</a></li>
+    
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">  
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;置 footer 于页面底部
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p>
+&copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+Theme by <a href="http://atime.me">Ma Wenbao</a>. 
+No Rights Reserved<a href="https://plus.google.com/118433343253566330284?rel=author">.</a>
+</p>
+</div></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/niu2.js"></script>
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+};
+</script>
+
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36540079-2', 'www.lusir.me');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script>
+
+<!-- Baidu Tongji -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script>var hermit = { url: 'http://www.lusir.me/hermit/swf/' }</script>
+<script src="http://www.lusir.me/hermit/script/hermit.min.js"></script>
+<script type="text/javascript">
+onContentLoaded();</script>
+
+</body>
+</html>

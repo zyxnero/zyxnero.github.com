@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Nero Zheng" />
+<meta name="generator" content="Pelican" />
+<meta name="description" content="整合 Google 自定义搜索到 Pelican - 作者: Nero Zheng，首发于『擼sirの避風港』">
+<meta property="qc:admins" content="315026325312655" />
+<meta property="wb:webmaster" content="8e383b094667a02d" />
+<title>整合 Google 自定义搜索到 Pelican - 擼sirの避風港</title>
+<link rel="prefetch prerender" href="http://www.lusir.me/search.html" />
+<link href="http://www.lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
+<link href="http://www.lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
+<link rel="shortcut icon" type="image/x-icon" href="http://www.lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://www.lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.lusir.me/hermit/style/hermit.min.css" media="all" />
+<link rel='canonical' href="http://www.lusir.me/google-cse-for-pelican.html" />
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://dn-nero.qbox.me/element/js/html5shiv.js"></script>
+<script src="http://dn-nero.qbox.me/element/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<![endif]-->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+<meta itemprop="inLanguage" content="zh-CN">
+<div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://www.lusir.me"><i class="fa fa-home"></i>擼sirの避風港</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+<ul class="nav navbar-nav">
+<li><a href="http://www.lusir.me/about.html" title="关于"><i class="fa fa-anchor"></i>关于</a></li>
+<li><a href="http://www.lusir.me/archives.html" title="存档"><i class="fa fa-archive"></i>存档</a></li>
+<li><a href="http://www.lusir.me/tag/" title="标签"><i class="fa fa-tag"></i>标签</a></li>
+<!-- category dropdown list -->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://www.lusir.me/nonsense/index.html"><i class="fa fa-trash-o"></i>扯(1)</a></li>
+<li><a href="http://www.lusir.me/record/index.html"><i class="fa fa-book"></i>记录(37)</a></li>
+</ul>
+</li>
+<!--  self defined dropdown list --></ul>
+<!-- right nav bar -->
+<ul class="nav navbar-nav navbar-right">
+<!-- google custom search --><li>
+<div id="niu2-cse-wrapper">
+<div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+<form action="/search.html" method="get">
+<div class="form-group">
+<input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
+</div>
+</form>
+</div>
+<div id="niu2-cse-ctrl-box" class="navbar-nav"><i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span></div>
+</div>
+</li></ul>
+</nav>
+</div>
+</div></div>
+		
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">整合 Google 自定义搜索到 Pelican</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>总感觉好像我搭建 Blog 的目的跟别人不太一样，小伙伴们都在正儿八经的写出一些有价值有意义的文章，我却在那折腾怎么实现这个功能，怎么实现那个功能。可问题是自己又不会整，只能到处搜寻答案然后慢慢试结果。好在人品不错，虽然浪费不少时间，但折腾出结果的满足感确实挺爽。本文记录一下将 Google 自定义搜索整合到 Pelican 的过程。
+</p>
+<p>说是整合到 Pelican，其实只是通过 jinja2 的一些规则将 Google 自定义搜索代码插入到主题的“搜索页面.html”中。</p>
+<h3 id="be5bf34c6756f3e3f7e20057e2c5c10b">第一步：注册并获取 Google 自定义搜索代码</h3>
+<hr />
+<p>先通过访问 http://www.google.com/cse/ 创建自定义搜索引擎。创建完毕后进入“外观”面板，选择“全宽”的布局模式。保存后进入“获取代码”,获得 Google 自定义搜索代码。</p>
+<div class="codehilite"><pre><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+  <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">cx</span> <span class="o">=</span> <span class="s1">&#39;012467883927724485227:eaoxbeaeyty&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">gcse</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+    <span class="nx">gcse</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span>
+    <span class="nx">gcse</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">gcse</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">==</span> <span class="s1">&#39;https:&#39;</span> <span class="o">?</span> <span class="s1">&#39;https:&#39;</span> <span class="o">:</span> <span class="s1">&#39;http:&#39;</span><span class="p">)</span> <span class="o">+</span>
+        <span class="s1">&#39;//www.google.com/cse/cse.js?cx=&#39;</span> <span class="o">+</span> <span class="nx">cx</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">gcse</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span>
+  <span class="p">})();</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+<span class="o">&lt;</span><span class="nx">gcse</span><span class="o">:</span><span class="nx">searchresults</span><span class="o">-</span><span class="nx">only</span><span class="o">&gt;&lt;</span><span class="err">/gcse:searchresults-only&gt;</span>
+</pre></div>
+
+
+<h3 id="3a2e8e53c47ef1f31c3c65ceed0d2411">第二步：创建搜索结果页</h3>
+<hr />
+<p>为了让搜索结果在博客内部显示，我们需要在主题的 templates 中创建一个新的页面，用来显示搜索结果。新建一个文件，命名为 search.html。我是直接复制 page.html，重命名为 search.html 并相应修改文件中的 title 及 description，然后插入第一步中得到的 Google 自定义搜索代码到相应的位置。至此搜索结果页创建就完成了。</p>
+<h3 id="1db2035cd12c3dd8d8e34366e93b222c">第三步：修改当前主题的搜索提交表单</h3>
+<hr />
+<p>这里算是最关键的一步啦，当用户点击你博客上任意页面的站内搜索按钮的时候，可以将用户引导到刚刚创建的搜索结果页上。我们需要在主题文件夹中找到搜索框所在的文件，每个主题都不同，一般是在 header.html 中，找到类似以下的代码：</p>
+<div class="codehilite"><pre>&lt;form method=&quot;get&quot; action=&quot;/search.html&quot; &gt;
+&lt;input type=&quot;text&quot; name=&quot;s&quot; class=&quot;textfield&quot; placeholder=&quot;Press enter to search ...&quot; /&gt;
+&lt;/form&gt;
+</pre></div>
+
+
+<p>需要注意的地方：</p>
+<ol>
+<li>method="get"</li>
+<li>action="/search.html"    action 的地址为 search.html 在生成的站点中的相对地址，一般是在根目录下，即 /search.html。</li>
+<li>文本框 name="s" 不管主题搜索框的 name 等于什么，都将引号内的字母改成 q，即 name="q"。</li>
+</ol>
+<h3 id="5aec29c358fa0dff64fe292979a341d1">第四步：使用 javascript 让搜索结果页的 title 中显示搜索关键字（可选）</h3>
+<hr />
+<p>由于静态页面不能从数据库获取输入的关键字，所以只能从搜索结果页的 URL 下手了，假设搜索结果页的 URL 为：http://lusir.me/search.html?q=solidworks。我们想得到参数 q 的值，则可以通过以下函数调用。</p>
+<div class="codehilite"><pre><span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">&quot;(^|&amp;)&quot;</span> <span class="o">+</span> <span class="s2">&quot;q&quot;</span> <span class="o">+</span> <span class="s2">&quot;=([^&amp;]*)(&amp;|$)&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">match</span><span class="p">(</span><span class="nx">reg</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">r</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+        <span class="nx">context</span> <span class="o">=</span> <span class="nx">r</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="s2">&quot;║&quot;</span> <span class="o">+</span> <span class="nb">decodeURIComponent</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;║&quot;</span> <span class="o">+</span> <span class="s2">&quot;的搜索结果 - 擼sirの避風港&quot;</span><span class="p">;}</span>
+</pre></div>
+
+
+<p>上面那段的具体意思我也不太清楚，大概就是使用正则式将 url 分为 3 部分，以 q 为分界点，我们需要的就是 q= 之后的那部分（即 context）。匹配成功之后利用 context 给 title 赋值，但是这样赋值之后的 title 不能正确显示中文字符，所以需要使用关键字 decodeURIComponent 来将 context 还原成中文字符。</p>
+<h3 id="effe4bed8cea1f7d427c950a4d195981">第五步：调整 CSS</h3>
+<hr />
+<p>功能实现了之后就是美化了。按照自己的意愿调整CSS即可。  <br/><br/></p>
+<p>大功告成，此后就可以在主题原始的搜索框上使用 Google 自定义搜索了。<br/><br/></p>
+<p>PS：研究这一功能的过程中参考了以下文章：</p>
+<ul>
+<li><a href="http://blog.wpjam.com/article/google-cse-for-wordpress/" title="无缝整合 Google 自定义搜索框到 WordPress">无缝整合 Google 自定义搜索框到 WordPress</a></li>
+<li><a href="http://www.ncku.edu.tw/~rcenter/book/html/JavaScript.html" title="簡易JavaScript語法結構">簡易JavaScript語法結構</a></li>
+<li><a href="http://yige.org/p/374" title="JS获取url参数的函数_JavaScript">JS获取url参数的函数_JavaScript</a></li>
+<li><a href="http://www.w3schools.com/jsref/jsref_encodeuricomponent.asp" title="JavaScript encodeURIComponent() Function">JavaScript encodeURIComponent() Function</a></li>
+<li><a href="http://www.w3cplus.com/jquery/attr-removeAttr" title="jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性">jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性</a></li>
+</ul>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>            
+<!-- Duoshuo Comment END -->
+</div>
+
+</div>
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-04 21:40</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://www.lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/pelican.html">Pelican</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/cse.html">CSE</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">整合 Google 自定义搜索到 Pelican</a></li>
+    <li><a href='#be5bf34c6756f3e3f7e20057e2c5c10b'>第一步：注册并获取 Google 自定义搜索代码</a></li><li><a href='#3a2e8e53c47ef1f31c3c65ceed0d2411'>第二步：创建搜索结果页</a></li><li><a href='#1db2035cd12c3dd8d8e34366e93b222c'>第三步：修改当前主题的搜索提交表单</a></li><li><a href='#5aec29c358fa0dff64fe292979a341d1'>第四步：使用 javascript 让搜索结果页的 title 中显示搜索关键字（可选）</a></li><li><a href='#effe4bed8cea1f7d427c950a4d195981'>第五步：调整 CSS</a></li>
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">  
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;整合 Google 自定义搜索到 Pelican
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p>
+&copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+Theme by <a href="http://atime.me">Ma Wenbao</a>. 
+No Rights Reserved<a href="https://plus.google.com/118433343253566330284?rel=author">.</a>
+</p>
+</div></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/niu2.js"></script>
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+};
+</script>
+
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36540079-2', 'www.lusir.me');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script>
+
+<!-- Baidu Tongji -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script>var hermit = { url: 'http://www.lusir.me/hermit/swf/' }</script>
+<script src="http://www.lusir.me/hermit/script/hermit.min.js"></script>
+<script type="text/javascript">
+onContentLoaded();</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+CACHE MANIFEST
+# 2014-03-25:v2
+CACHE:
+/hermit/images/icon.png
+/hermit/images/icon2x.png
+/hermit/images/iconx.png
+/hermit/images/nowplaying.gif
+/hermit/script/hermit.min.js
+/hermit/style/hermit.min.css
+/hermit/swf/soundmanager2.swf
+/images/favicon/favicon.ico
+/images/favicon/apple-touch-icon-114x114.png
+/images/favicon/favicon-32x32.png
+/images/loading.gif
+/images/nextlabel.gif
+/images/prevlabel.gif
+/theme/font-awesome/fonts/FontAwesome.otf
+/theme/font-awesome/fonts/fontawesome-webfont.eot
+/theme/font-awesome/fonts/fontawesome-webfont.svg
+/theme/font-awesome/fonts/fontawesome-webfont.ttf
+/theme/font-awesome/fonts/fontawesome-webfont.woff
+
+NETWORK:
+*

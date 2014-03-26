@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Nero Zheng" />
+<meta name="generator" content="Pelican" />
+<meta name="description" content="更改域名解析 - 作者: Nero Zheng，首发于『擼sirの避風港』">
+<meta property="qc:admins" content="315026325312655" />
+<meta property="wb:webmaster" content="8e383b094667a02d" />
+<title>更改域名解析 - 擼sirの避風港</title>
+<link rel="prefetch prerender" href="http://www.lusir.me/search.html" />
+<link href="http://www.lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
+<link href="http://www.lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
+<link rel="shortcut icon" type="image/x-icon" href="http://www.lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://www.lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.lusir.me/hermit/style/hermit.min.css" media="all" />
+<link rel='canonical' href="http://www.lusir.me/modify-dns-name-resolution.html" />
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://dn-nero.qbox.me/element/js/html5shiv.js"></script>
+<script src="http://dn-nero.qbox.me/element/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<![endif]-->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+<meta itemprop="inLanguage" content="zh-CN">
+<div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://www.lusir.me"><i class="fa fa-home"></i>擼sirの避風港</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+<ul class="nav navbar-nav">
+<li><a href="http://www.lusir.me/about.html" title="关于"><i class="fa fa-anchor"></i>关于</a></li>
+<li><a href="http://www.lusir.me/archives.html" title="存档"><i class="fa fa-archive"></i>存档</a></li>
+<li><a href="http://www.lusir.me/tag/" title="标签"><i class="fa fa-tag"></i>标签</a></li>
+<!-- category dropdown list -->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://www.lusir.me/nonsense/index.html"><i class="fa fa-trash-o"></i>扯(1)</a></li>
+<li><a href="http://www.lusir.me/record/index.html"><i class="fa fa-book"></i>记录(37)</a></li>
+</ul>
+</li>
+<!--  self defined dropdown list --></ul>
+<!-- right nav bar -->
+<ul class="nav navbar-nav navbar-right">
+<!-- google custom search --><li>
+<div id="niu2-cse-wrapper">
+<div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+<form action="/search.html" method="get">
+<div class="form-group">
+<input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
+</div>
+</form>
+</div>
+<div id="niu2-cse-ctrl-box" class="navbar-nav"><i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span></div>
+</div>
+</li></ul>
+</nav>
+</div>
+</div></div>
+		
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">更改域名解析</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>前阵子注册了个 QQ 企业邮箱，结果经常显示“MX 记录与 CNAME 记录冲突”，一直没弄明白是哪发生了问题。直到前几天看到<a href="http://blog.lanbing.org/used-with-caution-in-the-root-domain-cname-record-the-post-office-to-do-mx.cgi" title="慎用根域名 CNAME 记录">这篇文章</a>，于是科普了一下 CNAME 的意义<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>。
+</p>
+<h3 id="c950abf9dd2bdf2ef279a6e6470144d7">Google 的说明</h3>
+<blockquote>
+<p>正規名稱記錄又稱 CNAME 紀錄，是一種 DNS 紀錄類型，可將別名對應至實際或「正規」的網域名稱。CNAME 紀錄的用途通常是將子網域 (例如：「www」或「mail」) 對應至代管子網域內容的網域。舉例來說，CNAME 紀錄可以將網址「www.example.com」對應至「example.com」網域的實際網站。</p>
+</blockquote>
+<h3 id="2c60a750a8ff0f458bd2c3977b2e5680">Github 的说明</h3>
+<blockquote>
+<p><strong>Warning</strong>: You should not use a CNAME record with an apex domain, as this may cause issues with other services on the apex domain, like email.</p>
+</blockquote>
+<p>上面的引用表达的意思：根域名最好不要做 CNAME，否则会造成邮件解析出错（除非邮件解析与 www 解析的目的地是同一服务器）。</p>
+<h3 id="cfabea642b97269309366a07f48401e8">正确的解析方式</h3>
+<p>在域名运营商处修改（假设要把 www 与根域名指向同一个站点）：</p>
+<div class="codehilite"><pre>CNAME：www.example.com =&gt; username.github.io
+A：example.com =&gt; 192.30.252.153
+</pre></div>
+
+
+<h3 id="2a302fa545ce4445b25970650930debd">参考文章</h3>
+<ul>
+<li><a href="http://www.suoyine.com/archives/2297.html" title="根域名不能用 CNAME 解析，否则 MX 记录失效">根域名不能用 CNAME 解析，否则 MX 记录失效</a></li>
+<li><a href="http://support.dnsimple.com/articles/differences-between-a-cname-alias-url/" title="Differences between the A, CNAME, ALIAS and URL records">Differences between the A, CNAME, ALIAS and URL records</a></li>
+<li><a href="http://fancyoung.com/blog/host-to-github/" title="Github Page绑定自己域名">Github Page绑定自己域名</a></li>
+<li><a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages" title="Setting up a custom domain with Pages">Setting up a custom domain with Pages</a></li>
+</ul>
+<div class="footnote">
+<ol>
+<li id="fn:1">
+<p><a href="https://support.google.com/a/answer/112037?hl=zh-Hant" title="關於 CNAME 紀錄">關於 CNAME 紀錄</a>&#160;</p>
+</li>
+</ol>
+</div>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>            
+<!-- Duoshuo Comment END -->
+</div>
+
+</div>
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-11 23:20</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://www.lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/dns.html">DNS</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/cname.html">CNAME</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">更改域名解析</a></li>
+    <li><a href='#c950abf9dd2bdf2ef279a6e6470144d7'>Google 的说明</a></li><li><a href='#2c60a750a8ff0f458bd2c3977b2e5680'>Github 的说明</a></li><li><a href='#cfabea642b97269309366a07f48401e8'>正确的解析方式</a></li><li><a href='#2a302fa545ce4445b25970650930debd'>参考文章</a></li>
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">  
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;更改域名解析
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p>
+&copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+Theme by <a href="http://atime.me">Ma Wenbao</a>. 
+No Rights Reserved<a href="https://plus.google.com/118433343253566330284?rel=author">.</a>
+</p>
+</div></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/niu2.js"></script>
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+};
+</script>
+
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36540079-2', 'www.lusir.me');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script>
+
+<!-- Baidu Tongji -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script>var hermit = { url: 'http://www.lusir.me/hermit/swf/' }</script>
+<script src="http://www.lusir.me/hermit/script/hermit.min.js"></script>
+<script type="text/javascript">
+onContentLoaded();</script>
+
+</body>
+</html>

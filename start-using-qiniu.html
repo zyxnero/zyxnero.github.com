@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Nero Zheng" />
+<meta name="generator" content="Pelican" />
+<meta name="description" content="使用七牛镜像存储 - 作者: Nero Zheng，首发于『擼sirの避風港』">
+<meta property="qc:admins" content="315026325312655" />
+<meta property="wb:webmaster" content="8e383b094667a02d" />
+<title>使用七牛镜像存储 - 擼sirの避風港</title>
+<link rel="prefetch prerender" href="http://www.lusir.me/search.html" />
+<link href="http://www.lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
+<link href="http://www.lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
+<link rel="shortcut icon" type="image/x-icon" href="http://www.lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://www.lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.lusir.me/hermit/style/hermit.min.css" media="all" />
+<link rel='canonical' href="http://www.lusir.me/start-using-qiniu.html" />
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://dn-nero.qbox.me/element/js/html5shiv.js"></script>
+<script src="http://dn-nero.qbox.me/element/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<![endif]-->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+<meta itemprop="inLanguage" content="zh-CN">
+<div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://www.lusir.me"><i class="fa fa-home"></i>擼sirの避風港</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+<ul class="nav navbar-nav">
+<li><a href="http://www.lusir.me/about.html" title="关于"><i class="fa fa-anchor"></i>关于</a></li>
+<li><a href="http://www.lusir.me/archives.html" title="存档"><i class="fa fa-archive"></i>存档</a></li>
+<li><a href="http://www.lusir.me/tag/" title="标签"><i class="fa fa-tag"></i>标签</a></li>
+<!-- category dropdown list -->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://www.lusir.me/nonsense/index.html"><i class="fa fa-trash-o"></i>扯(1)</a></li>
+<li><a href="http://www.lusir.me/record/index.html"><i class="fa fa-book"></i>记录(37)</a></li>
+</ul>
+</li>
+<!--  self defined dropdown list --></ul>
+<!-- right nav bar -->
+<ul class="nav navbar-nav navbar-right">
+<!-- google custom search --><li>
+<div id="niu2-cse-wrapper">
+<div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+<form action="/search.html" method="get">
+<div class="form-group">
+<input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
+</div>
+</form>
+</div>
+<div id="niu2-cse-ctrl-box" class="navbar-nav"><i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span></div>
+</div>
+</li></ul>
+</nav>
+</div>
+</div></div>
+		
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">使用七牛镜像存储</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>看到很多博主都正在使用七牛作为图床或整站的 CDN 加速，本着外行凑热闹的精神，我也学着使用了一把。七牛的加速节点响应速度确实是很快，至少目前是这样，我 ping 了一下，结果如下。
+</p>
+<p><a href="http://dn-nero.qbox.me/ping-qbox-me.png" title="ping-qbox-me" data-fancybox-group="gallery">
+    <img class="aligncenter" src="http://dn-nero.qbox.me/ping-qbox-me.png" alt="ping-qbox-me" />
+</a></p>
+<p>下面记录一下七牛镜像存储的使用（本例为图床使用）：</p>
+<p>由于我没有备案的打算，所以使用的是七牛提供的三级域名。</p>
+<p>假设我想要镜像的源站为 <code>img.lusir.me</code>。而且我已经建立了名为 pic 的七牛 bucket（bucket 意指“空间”，理解为“坑”我觉得更形象）。</p>
+<ol>
+<li>
+<p>进入<a href="https://portal.qiniu.com/" title="七牛内容管理页面">七牛内容管理页面</a>，设置一键加速网站，修改镜像源为 <code>img.lusir.me</code>，底下的“镜像空间”默认是 pic（如果我只建立了一个“坑”）。这时点击“确定加速”即可将 <code>img.lusir.me</code> 与 <code>pic.u.qiniudn.com</code> 进行关联。</p>
+</li>
+<li>
+<p>更改文章里面的图片地址，搜寻关键字 <code>img.lusir.me</code> 并将其改为 <code>pic.u.qiniudn.com</code>，保存。</p>
+</li>
+<li>
+<p>访问一篇带图的文章，进入<a href="https://portal.qiniu.com/" title="七牛内容管理页面">七牛内容管理页面</a>的内容管理，此时文章里相应的图会被拉取到七牛的“坑”里面。也可以直接将所有的图通过<a href="http://docs.qiniu.com/tools/v6/qrsbox.html" title="QRSBox同步工具">QRSBox</a>上传到“坑”里面。</p>
+</li>
+</ol>
+<p>如此就完成整个迁移过程。此时 <code>img.lusir.me</code> 这个源站就可以暂时废弃不用了，即以后可以直接将 <code>pic.u.qiniudn.com</code> 作为图床。<br></p>
+<p>如果要保留源站的域名方式 <code>img.lusir.me</code>，七牛也提供了方法，<a href="http://kb.qiniu.com/how-to-use-image-storage-and-qrsync" title="镜像存储与qrsync数据同步的使用">点我查看</a></p>
+<h3 id="2a302fa545ce4445b25970650930debd">参考文章</h3>
+<ul>
+<li><a href="http://www.cjzsy.com/archives/1415" title="七牛云储存：从其他图床搬家到七牛的便捷方法">七牛云储存：从其他图床搬家到七牛的便捷方法</a></li>
+</ul>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>            
+<!-- Duoshuo Comment END -->
+</div>
+
+</div>
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-07 13:40</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://www.lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/qi-niu.html">七牛</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">使用七牛镜像存储</a></li>
+    <li><a href='#2a302fa545ce4445b25970650930debd'>参考文章</a>
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">  
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;使用七牛镜像存储
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p>
+&copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+Theme by <a href="http://atime.me">Ma Wenbao</a>. 
+No Rights Reserved<a href="https://plus.google.com/118433343253566330284?rel=author">.</a>
+</p>
+</div></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/niu2.js"></script>
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+};
+</script>
+
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36540079-2', 'www.lusir.me');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script>
+
+<!-- Baidu Tongji -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script>var hermit = { url: 'http://www.lusir.me/hermit/swf/' }</script>
+<script src="http://www.lusir.me/hermit/script/hermit.min.js"></script>
+<script type="text/javascript">
+onContentLoaded();</script>
+
+</body>
+</html>

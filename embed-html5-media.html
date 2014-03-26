@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Nero Zheng" />
+<meta name="generator" content="Pelican" />
+<meta name="description" content="在网页中嵌入 html5 音视频 - 作者: Nero Zheng，首发于『擼sirの避風港』">
+<meta property="qc:admins" content="315026325312655" />
+<meta property="wb:webmaster" content="8e383b094667a02d" />
+<title>在网页中嵌入 html5 音视频 - 擼sirの避風港</title>
+<link rel="prefetch prerender" href="http://www.lusir.me/search.html" />
+<link href="http://www.lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
+<link href="http://www.lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
+<link rel="shortcut icon" type="image/x-icon" href="http://www.lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://www.lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.lusir.me/hermit/style/hermit.min.css" media="all" />
+<link rel='canonical' href="http://www.lusir.me/embed-html5-media.html" />
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://dn-nero.qbox.me/element/js/html5shiv.js"></script>
+<script src="http://dn-nero.qbox.me/element/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<![endif]-->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+<meta itemprop="inLanguage" content="zh-CN">
+<div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://www.lusir.me"><i class="fa fa-home"></i>擼sirの避風港</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+<ul class="nav navbar-nav">
+<li><a href="http://www.lusir.me/about.html" title="关于"><i class="fa fa-anchor"></i>关于</a></li>
+<li><a href="http://www.lusir.me/archives.html" title="存档"><i class="fa fa-archive"></i>存档</a></li>
+<li><a href="http://www.lusir.me/tag/" title="标签"><i class="fa fa-tag"></i>标签</a></li>
+<!-- category dropdown list -->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://www.lusir.me/nonsense/index.html"><i class="fa fa-trash-o"></i>扯(1)</a></li>
+<li><a href="http://www.lusir.me/record/index.html"><i class="fa fa-book"></i>记录(37)</a></li>
+</ul>
+</li>
+<!--  self defined dropdown list --></ul>
+<!-- right nav bar -->
+<ul class="nav navbar-nav navbar-right">
+<!-- google custom search --><li>
+<div id="niu2-cse-wrapper">
+<div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+<form action="/search.html" method="get">
+<div class="form-group">
+<input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
+</div>
+</form>
+</div>
+<div id="niu2-cse-ctrl-box" class="navbar-nav"><i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span></div>
+</div>
+</li></ul>
+</nav>
+</div>
+</div></div>
+		
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">在网页中嵌入 html5 音视频</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>前几天看见一篇使用 FFmpeg 的文章，就尝试了一下这款“转码瑞士军刀”。本文记录一下初次使用 FFmpeg 的过程，顺便把转码之后的音视频嵌进来看看结果。
+</p>
+<h3 id="4e63f356b53969a3458a2e612a726df6">安装 FFmpeg</h3>
+<p>首先是到<a href="http://ffmpeg.zeranoe.com/builds/" title="Zeranoe FFmpeg">官网</a>下载 Windows Build Version，解压后添加 ffmpeg.exe 的路径到 <code>环境变量</code> 的 <code>path</code> 中，打开 cmd，输入 <code>ffmpeg -version</code> 查看是否安装成功。</p>
+<h3 id="d2b3b5b0e8e7ae02b05511465192f574">转码音视频</h3>
+<p>将要转码的音视频放到 <code>C:\Users\×××</code> 中，分别在 cmd 中输入以下命令（假设音频为 tao.mp3，视频为 man.mp4）：</p>
+<div class="codehilite"><pre><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="n">tao</span><span class="o">.</span><span class="n">mp3</span> <span class="o">-</span><span class="n">ab</span> <span class="mi">64</span><span class="n">k</span> <span class="n">output</span><span class="o">.</span><span class="n">mp3</span>
+
+<span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="n">tao</span><span class="o">.</span><span class="n">mp3</span> <span class="o">-</span><span class="n">f</span> <span class="n">ogg</span> <span class="o">-</span><span class="n">acodec</span> <span class="n">libvorbis</span> <span class="o">-</span><span class="n">ac</span> <span class="mi">2</span> <span class="o">-</span><span class="n">ab</span> <span class="mi">64</span><span class="n">k</span> <span class="o">-</span><span class="n">ar</span> <span class="mi">44100</span> <span class="n">output</span><span class="o">.</span><span class="n">ogg</span>
+
+<span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="n">man</span><span class="o">.</span><span class="n">mp4</span> <span class="o">-</span><span class="n">acodec</span> <span class="n">libvorbis</span> <span class="o">-</span><span class="n">ac</span> <span class="mi">2</span> <span class="o">-</span><span class="n">ab</span> <span class="mi">64</span><span class="n">k</span> <span class="o">-</span><span class="n">ar</span> <span class="mi">44100</span> <span class="o">-</span><span class="n">b</span> <span class="mi">345</span><span class="n">k</span> <span class="o">-</span><span class="n">s</span> <span class="mi">640</span><span class="n">x360</span> <span class="n">output</span><span class="o">.</span><span class="n">webm</span>
+
+<span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="n">man</span><span class="o">.</span><span class="n">mp4</span> <span class="o">-</span><span class="n">strict</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="n">c</span><span class="p">:</span><span class="n">a</span> <span class="n">aac</span> <span class="o">-</span><span class="n">b</span><span class="p">:</span><span class="n">a</span> <span class="mi">64</span><span class="n">k</span> <span class="o">-</span><span class="n">vcodec</span> <span class="n">libx264</span> <span class="o">-</span><span class="n">vprofile</span> <span class="n">high</span> <span class="o">-</span><span class="n">preset</span> <span class="n">slow</span> <span class="o">-</span><span class="n">b</span><span class="p">:</span><span class="n">v</span> <span class="mi">400</span><span class="n">k</span> <span class="o">-</span><span class="n">maxrate</span> <span class="mi">400</span><span class="n">k</span> <span class="o">-</span><span class="n">bufsize</span> <span class="mi">1000</span><span class="n">k</span> <span class="o">-</span><span class="n">threads</span> <span class="mi">0</span> <span class="o">-</span><span class="n">s</span> <span class="mi">640</span><span class="n">x360</span> <span class="n">output</span><span class="o">.</span><span class="n">mp4</span>
+</pre></div>
+
+
+<h3 id="9e068158b573d915ef69529b11ef2f6d">将媒体文件嵌入网页</h3>
+<p>此处使用了 <a href="http://html5media.info/" title="html5media">html5media.js</a>，使用 <audio> 与 <video> 标签插入，如下：</p>
+<div class="codehilite"><pre><span class="o">&lt;</span><span class="n">video</span> <span class="n">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s">&quot;360&quot;</span> <span class="n">controls</span> <span class="n">preload</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">source</span> <span class="n">src</span><span class="o">=</span><span class="s">&quot;clip.mp4&quot;</span><span class="o">&gt;&lt;/</span><span class="n">source</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">source</span> <span class="n">src</span><span class="o">=</span><span class="s">&quot;clip.webm&quot;</span><span class="o">&gt;&lt;/</span><span class="n">source</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">video</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<h3 id="158ce031b84d63c39e11ebcb03c83dfc">嵌入结果</h3>
+<h4 id="c4f92557d7c49823e0f5d3bde398e44c">嵌入视频（右键选择播放）</h4>
+<p><video controls preload>
+    <source src="http://dn-nero.qbox.me/man-in-black-clip.mp4"></source>
+    <source src="http://dn-nero.qbox.me/man-in-black-clip.webm"></source>
+</video></p>
+<h4 id="5c279a1704357d84f72d80a0c5e7768e">嵌入音频</h4>
+<p><audio controls preload autoplay>
+    <source src="http://dn-nero.qbox.me/taoshengyijiu.mp3"></source>
+    <source src="http://dn-nero.qbox.me/taoshengyijiu.ogg"></source>
+</audio></p>
+<p><br>
+生前何必久睡，死后自会长眠</p>
+<h3 id="2a302fa545ce4445b25970650930debd">参考文章</h3>
+<ul>
+<li><a href="http://zh.wikihow.com/%E5%9C%A8Windows%E4%B8%8A%E5%AE%89%E8%A3%85FFmpeg%E7%A8%8B%E5%BA%8F" title="如何在Windows上安装FFmpeg程序">如何在Windows上安装FFmpeg程序</a></li>
+<li><a href="http://paulrouget.com/e/converttohtml5video/" title="Converting to WebM, OGG/Theora and MP4">Converting to WebM, OGG/Theora and MP4</a></li>
+<li><a href="http://jalena.bcsytv.com/archives/1202" title="FFmpeg 批量转换HTML5视频">FFmpeg 批量转换HTML5视频</a></li>
+<li><a href="http://blog.xiaket.org/2010/notes-on-ffmpeg.html" title="FFMPEG使用">FFMPEG使用</a></li>
+<li><a href="http://blog.raphaelzhang.com/2013/05/some-usage-of-ffmpeg/" title="ffmpeg转码的几个小用法">ffmpeg转码的几个小用法</a></li>
+<li><a href="https://github.com/etianen/html5media/wiki/embedding-audio" title="Embedding audio">Embedding audio</a></li>
+<li><a href="https://github.com/etianen/html5media/wiki/embedding-video" title="Embedding video">Embedding video</a></li>
+</ul>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>            
+<!-- Duoshuo Comment END -->
+</div>
+
+</div>
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-08 20:40</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://www.lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://www.lusir.me/tag/html5.html">HTML5</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">在网页中嵌入 html5 音视频</a></li>
+    <li><a href='#4e63f356b53969a3458a2e612a726df6'>安装 FFmpeg</a></li><li><a href='#d2b3b5b0e8e7ae02b05511465192f574'>转码音视频</a></li><li><a href='#9e068158b573d915ef69529b11ef2f6d'>将媒体文件嵌入网页</a></li><li><a href='#158ce031b84d63c39e11ebcb03c83dfc'>嵌入结果</a><ol><li><a href='#c4f92557d7c49823e0f5d3bde398e44c'>嵌入视频（右键选择播放）</a></li><li><a href='#5c279a1704357d84f72d80a0c5e7768e'>嵌入音频</a></li></ol></li><li><a href='#2a302fa545ce4445b25970650930debd'>参考文章</a></li>
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">  
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;在网页中嵌入 html5 音视频
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p>
+&copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+Theme by <a href="http://atime.me">Ma Wenbao</a>. 
+No Rights Reserved<a href="https://plus.google.com/118433343253566330284?rel=author">.</a>
+</p>
+</div></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/niu2.js"></script>
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+};
+</script>
+
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36540079-2', 'www.lusir.me');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script>
+
+<!-- Baidu Tongji -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script>var hermit = { url: 'http://www.lusir.me/hermit/swf/' }</script>
+<script src="http://www.lusir.me/hermit/script/hermit.min.js"></script>
+<script type="text/javascript">
+onContentLoaded();</script>
+
+</body>
+</html>

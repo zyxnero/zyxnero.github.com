@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://www.lusir.me/</link><description>從零開始…</description><atom:link href="http://www.lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 25 Mar 2014 09:42:00 +0800</lastBuildDate><item><title>Weibo 提示 “Insufficient App Permissions” 的解决办法</title><link>http://www.lusir.me/solution-to-insufficient-permissions.html</link><description>&lt;p&gt;&lt;a href="http://www.lusir.me/sync-feed-to-weibo.html" title="将博客 Feed 推至微博"&gt;将博客 Feed 推至微博&lt;/a&gt;一文中，使用了“聚合通”来推送博客文章至微博，并且可以按照&lt;a href="http://roov.org/2014/02/fawave-from/" title="修改 FaWave 默认消息尾巴"&gt;这篇文章&lt;/a&gt;来对微博小尾巴进行修改（虽然感觉有些不道德，但自己用用应该问题不大）。
+&lt;/p&gt;
+&lt;p&gt;昨天晚上的一篇文章在推送的时候提示 "Insufficient App Permissions"，字面意思应该是“没有足够的应用权限”，考虑推送应该算是往微博里写东西，所以尝试着申请了“微博高级写入接口”这货，申请通过之后，推送就可以完成了。&lt;/p&gt;
+&lt;p&gt;之后去网上一搜，发现已经有小伙伴遇到相同的问题并好心的在博客中记下来了，在此也一并附上：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.csdn.net/hhhccckkk/article/details/9162525" title="android 新浪分享实例"&gt;android 新浪分享实例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.csdn.net/alincexiaohao/article/details/21699493" title="分享失败，错误描述:Insufficient app permissions!"&gt;分享失败，错误描述:Insufficient app permissions!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下雨了，心情也不能美丽……&lt;/p&gt;
+&lt;div class="hermit" songs="songlist#:1771509592"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;
+左键轻击列表播放或暂停。
+&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id="5825661b219e9e8c192784feee4f7462"&gt;附：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://hi.baidu.com/958719424/item/b049b27b57b7493cd6a89cd3" title="把 chrome 本地扩展打包成 crx 的方法"&gt;把 chrome 本地扩展打包成 crx 的方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 25 Mar 2014 09:42:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-25:solution-to-insufficient-permissions.html</guid><category>Weibo</category></item><item><title>Lusir Lubuntu - 安装篇</title><link>http://www.lusir.me/setup-lubuntu.html</link><description>&lt;p&gt;手上有个 Lenovo S10-3C，运行 XP 都感觉卡顿，于是想着安装一个 Arch Linux 学这玩玩儿，结果折腾半天楞装不上去，只好作罢，退而求其次，装个 Lubuntu 吧。
+&lt;/p&gt;
+&lt;h3 id="df3d2ab2b3159906f6954db0c2b4f633"&gt;Lenovo S10-3C 缺陷&lt;/h3&gt;
+&lt;p&gt;这款上网本不得不说奇异，用 U 盘引导进入安装界面之后，键盘却不能用了。据说是 BIOS 不支持 Linux 的 kernel，简单的解决办法是禁用电源管理，即在 grub.cfg 的 linux 行最后添加一句 &lt;code&gt;noapic acpi=off&lt;/code&gt;。此方法的后遗症就是耗电量增加，且关机不会切断电源，需要手动关机。&lt;a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/677633" title="bugs.launchpad.net"&gt;&lt;code&gt;bugs.launchpad.net&lt;/code&gt;&lt;/a&gt; 论坛上的一份开机启动键盘的脚本对我无解，有舍有得，我选择了键盘。&lt;/p&gt;
+&lt;h3 id="66c260d88c897e6c6353f6db6eacc3bd"&gt;分区&lt;/h3&gt;
+&lt;p&gt;经典分区法，如下：&lt;/p&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;root&lt;/th&gt;
+&lt;th&gt;swap&lt;/th&gt;
+&lt;th&gt;home&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;25G&lt;/td&gt;
+&lt;td&gt;1G&lt;/td&gt;
+&lt;td&gt;其余容量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;对于 Lubuntu，安装也就没有需要注意的东西了，按照提示不断下一步即可。安装完成后发现屏幕太小了，设置界面都不能点击确定键，这时需要了解两个很实用的快捷键：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;左键拖拽&lt;/kbd&gt; 移动窗口&lt;/li&gt;
+&lt;li&gt;&lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;右键拖拽&lt;/kbd&gt; 改变窗口大小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;哦，还折腾了一个透明主题，看起来还行。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/lubuntu-desktop.jpg" title="Lubuntu 桌面" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/lubuntu-desktop.jpg" alt="Lubuntu 桌面" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;暂时就记这么多吧。&lt;/p&gt;
+&lt;p&gt;王家卫有一次让他的演员翻译 I Love You，有的演员翻译成我爱你。墨镜王说，怎么可以讲这样的话，应该是“我已经很久没有坐过摩托车了，也很久未试过这么接近一个人了，虽然我知道这条路不是很远。我知道不久我就会下车。可是，这一分钟，我觉得好暖。”&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.csdn.net/lsbmaincpp/article/details/6554272" title="在Lenovo S10-3c 上安装 Ubuntu "&gt;在Lenovo S10-3c 上安装 Ubuntu &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://namakutux.blogspot.jp/2012/05/how-to-install-mac-os-x-lion-theme-on.html" title="How To Install Mac OS X Lion Theme On Lubuntu / LXDE"&gt;How To Install Mac OS X Lion Theme On Lubuntu / LXDE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 24 Mar 2014 10:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-24:setup-lubuntu.html</guid><category>Lubuntu</category></item><item><title>主题折腾记录</title><link>http://www.lusir.me/blog-modify-record.html</link><description>&lt;p&gt;接触到 pelican 之后就在使用 &lt;a href="http://atime.me/" title="Ma Wenbao"&gt;Ma Wenbao&lt;/a&gt; 的主题，然后就是一路折腾（折腾主题，折腾 pelican 配置），不过都是一些小改动，现记录一下折腾历史（能从 git 查看折腾记录还是挺方便的）。
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;20140122 更改自定义 404 页&lt;/li&gt;
+&lt;li&gt;20140218 添加 favicon&lt;/li&gt;
+&lt;li&gt;20140219 改作者名为 Nero Zheng&lt;/li&gt;
+&lt;li&gt;20140220 模仿添加结构化数据，能否有用未知&lt;/li&gt;
+&lt;li&gt;20140222 &lt;a href="http://www.lusir.me/about-unicode-bom.html" title="关于 Unicode BOM"&gt;找出 article_sidebar 文件中的 &amp;amp;#65279 符&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140223 学 Ma Wenbao 修改 footnote.py 与 tables.py&lt;/li&gt;
+&lt;li&gt;20140223 &lt;a href="http://www.lusir.me/fake-q-ban-yu-wen.html" title="荷塘月色 - Q 版语文"&gt;添加 fancybox 并图文混排&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140225 修改 about 页面，添加 picasa 相册并自适应居中&lt;/li&gt;
+&lt;li&gt;20140227 添加多说 CSS 样式&lt;/li&gt;
+&lt;li&gt;20140303 &lt;a href="http://www.lusir.me/google-cse-for-pelican.html" title="整合 Google 自定义搜索到 Pelican"&gt;添加 cse 自定义搜索页面&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140304 &lt;a href="http://www.lusir.me/start-using-qiniu.html" title="使用七牛镜像存储"&gt;添加 feed link，图床地址改到 &lt;code&gt;dn-nero.qbox.me&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140305 &lt;a href="http://www.lusir.me/add-google-profile.html" title="关联博客与 Google Profile"&gt;关联 google+ profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140309 &lt;a href="http://www.lusir.me/embed-hermit-player.html" title="在网页中嵌入 hermit 播放器"&gt;在网页中嵌入 hermit 播放器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140311 添加面包屑导航&lt;/li&gt;
+&lt;li&gt;20140313 &lt;a href="http://www.lusir.me/after-enabling-application-cache.html" title="启用 Application Cache（续）"&gt;添加 html5 脱机数据属性&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140314 &lt;a href="http://www.lusir.me/sticky-footer.html" title="置 footer 于页面底部"&gt;修改 css 使 footer 置底&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;20140324 修改 css 给链接添加颜色渐变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.mb5u.com/jscode/46121/" title="让多个 DIV 自由居中排列"&gt;让多个 DIV 自由居中排列&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://kagami.me/add-kaomoji-into-duoshuo.html" title="给多说评论框添加自定义颜文字表情功能"&gt;给多说评论框添加自定义颜文字表情功能&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.vsay.cn/one-more-custom-css-lets-you-say-comments-city.html" title="多说自定义 CSS 让你的多说评论动感起来"&gt;多说自定义CSS 让你的多说评论动感起来&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://yusi123.com/739.html" title="wordpress 多说评论插件中设置圆形旋转头像 css 代码"&gt;wordpress 多说评论插件中设置圆形旋转头像 css 代码&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fatesinger.com/wordpress-seo.html" title="我是如何做 wordpress seo 的"&gt;我是如何做wordpress seo的&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/sketch-2.jpg" title="璇子手绘-1" data-fancybox-group="gallery"&gt;&lt;img class="fancybox" src="http://dn-nero.qbox.me/sketch-2.jpg" alt="璇子手绘-1"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="hidden"&gt;
+&lt;a href="http://dn-nero.qbox.me/sketch-1.jpg" title="璇子手绘-2" data-fancybox-group="gallery"&gt;&lt;img class="fancybox" src="http://dn-nero.qbox.me/sketch-1.jpg" alt="璇子手绘-2"/&gt;&lt;/a&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 23 Mar 2014 17:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-23:blog-modify-record.html</guid><category>Theme</category></item><item><title>将博客 Feed 推至微博</title><link>http://www.lusir.me/sync-feed-to-weibo.html</link><description>&lt;p&gt;注册了微博账号也不知道写些什么东西，就想着把博客上的文章推上去，至少看起来有些内容。之前一直是用无觅的“&lt;a href="http://www.wumii.com/site/index" title="无觅网网站管理中心"&gt;连接微博&lt;/a&gt;”来推的，&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;后，本打算给“连接微博”的 feed 改成带 &lt;code&gt;www&lt;/code&gt; 的，结果取消关联之后就不能重新绑定了，坑！
+&lt;/p&gt;
+&lt;p&gt;在网上搜寻一番，找到两个应用，试用之后感觉还不错，记录一下以作备忘……&lt;/p&gt;
+&lt;h3 id="8008e97c8aaa4f86189a8fe0c0109b3f"&gt;针对国内&lt;/h3&gt;
+&lt;p&gt;对于新浪、腾讯等微博找到的是一款 Chrome 扩展，名为聚合通，&lt;a href="http://rss2weibo.danding.net/" title="聚合通"&gt;详细介绍见此&lt;/a&gt;。其实本想找一款类似“无觅连接微博”的服务，结果找到的却是一款离线应用，不过有总比没有好。它的原理是在用户开启了 Chrome 后定时轮询绑定的 RSS 地址，并将更新的内容推送到绑定的微博中去。&lt;/p&gt;
+&lt;h3 id="6f3e50c5880ddc1abc5c1ededb570033"&gt;针对国外&lt;/h3&gt;
+&lt;p&gt;对于非死不可、推特等社交网络找到的是 dlvr.it，这款服务很好很强大，具体不多介绍，&lt;a href="http://ikamu.me/736" title="用 dlvr.it 将豆瓣我的收藏/g+ 更新同步到 twitter、facebook"&gt;看它就行&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用了这俩货，就能将通过博客或者网站发表的文章第一时间生成微博推出去，不出意外，本篇文章应该已经自动推送到了我的新浪微博、腾讯微博、非死不可及推特了……&lt;/p&gt;
+&lt;div class="hermit" songs="songlist#:1771816757"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;
+左键轻击列表播放或暂停。
+&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 18 Mar 2014 17:04:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-18:sync-feed-to-weibo.html</guid><category>Feed</category><category>Weibo</category></item><item><title>置 footer 于页面底部</title><link>http://www.lusir.me/sticky-footer.html</link><description>&lt;p&gt;前几天发现有些内容比较少的文章页面，其 footer 会上移浮在半空，看起来着实别扭，所以又调整了一下 CSS。
+&lt;/p&gt;
+&lt;p&gt;由于&lt;a href="https://github.com/mawenbao/niu-x2-sidebar" title="Niu-X2-Sidebar"&gt;现主题&lt;/a&gt;是基于 bootstrap 的，在 &lt;a href="http://getbootstrap.com/" title="Bootstrap"&gt;Bootstrap&lt;/a&gt; 的 example 中找到了 2 份示例：&lt;a href="http://xiemin.me/bootstrap-2.2.2/examples/sticky-footer.html" title="Sticky footer"&gt;Bootstrap2 示例&lt;/a&gt;，&lt;a href="http://getbootstrap.com/examples/sticky-footer/" title="Sticky footer"&gt;Bootstrap3 示例&lt;/a&gt;。我选择模仿套用 Bootstrap2 的示例（感觉简单一点），在主题的 CSS 中添加了下面 2 行：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;97&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
+&lt;span class="nf"&gt;#body-content&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;min-height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="k"&gt;height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="k"&gt;auto&lt;/span&gt; &lt;span class="cp"&gt;!important&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;至于 Bootstrap3 的示例中采用的 &lt;code&gt;position: absolute;bottom: 0;&lt;/code&gt; 的好处，或者说 Bootstrap2 的示例中采取的办法的缺陷，还不清楚，以后发现了再改……&lt;/p&gt;
+&lt;p&gt;我们宿舍老二和老三自打吃过早饭就在宿舍里吵个不停，都说自己的女朋友比对方的强，争得不可开交。我实在看不下去了，对他们说：“别吵了，我来作个裁判吧。” 于是我搬来一张桌子，让他们俩掰起了手腕。&lt;/p&gt;
+&lt;div class="hermit" songs="songlist#:181454"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;
+左键轻击列表播放或暂停。
+&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 18 Mar 2014 13:04:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-18:sticky-footer.html</guid><category>CSS</category></item><item><title>启用 Application Cache（续）</title><link>http://www.lusir.me/after-enabling-application-cache.html</link><description>&lt;p&gt;接着&lt;a href="http://www.lusir.me/enable-application-cache.html" title="启用 Application Cache"&gt;上一篇&lt;/a&gt;，上一篇的思路是在每一张网页的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
+&lt;/p&gt;
+&lt;p&gt;感觉自己还没有能力折腾 HTML5 Local Storage，所以只能采取退而求其次的方法了：&lt;/p&gt;
+&lt;p&gt;仅只在一张不经常更新的页面的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中声明 manifest 文件，我选择了 search.html；同时，在除 search.html 外的每张网页中都声明“预加载”的页面（即预加载 search.html），预加载是 html5 的一个特性，中文详细介绍可以&lt;a href="http://blog.wpjam.com/m/3-html5-features/" title="三个 HTML5 不常见但非常实用的特性简介"&gt;看这篇&lt;/a&gt;，我在页面中是这样加的。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;link&lt;/span&gt; &lt;span class="na"&gt;rel=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;prefetch prerender&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.lusir.me/search.html&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如此一来，现代浏览器（最后能够剩下来的估计只有 Chrome 了）能够在除 search.html 外的网页中预加载 search.html，而后 search.html 会让浏览器去加载 manifest 清单，浏览器按照清单缓存元素。再加上监听函数，缓存策略就完成了。如此的缓存策略很粗糙，对浏览器也没有兼容，但我也不能再折腾到哪了。就这样了……&lt;/p&gt;
+&lt;p&gt;说武林中有四大高手，前三名分别是东眼，西嘴，南耳，请问第四名叫什么……&lt;/p&gt;
+&lt;div class="hermit" songs="songlist#:1770124461"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;
+左键轻击列表播放或暂停。
+&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 17 Mar 2014 22:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-17:after-enabling-application-cache.html</guid><category>HTML5</category></item><item><title>启用 Application Cache</title><link>http://www.lusir.me/enable-application-cache.html</link><description>&lt;p&gt;上篇&lt;a href="http://www.lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
+&lt;/p&gt;
+&lt;p&gt;启用 HTML5 Application Cache 的步骤全摘自网络，自己只是当了一次小白，具体的原理不明。具体步骤分 3 步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建一个 cache.appcache 文件，并确保文件具有正确的内容；&lt;/li&gt;
+&lt;li&gt;在服务器上设置内容类型；&lt;/li&gt;
+&lt;li&gt;所有的 HTML 文件都指向 cache.appcache。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="7902e56ddfc26a187defd7c20936eb0b"&gt;创建 appcache 文件&lt;/h3&gt;
+&lt;p&gt;新建 cache.appcache 文件，写入类似以下类容：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;CACHE MANIFEST
+#v1
+CACHE:
+index.html
+404.html
+favicon.ico
+robots.txt
+humans.txt
+apple-touch-icon.png
+css/normalize.min.css
+css/main.css
+css/bootmetro-icons.min.css
+img/pho-cat.jpg
+img/pho-huangshan.jpg
+
+NETWORK:
+*
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;注：首行须确保为 CACHE MANIFEST。&lt;code&gt;#&lt;/code&gt; 表示注释，有文章或 css、js、img 等内容变化时需要更新 cache.appcache 以使来访浏览器更新 cache.appcache 中列出的条目，所以更新注释是一个简便方法。&lt;a href="http://www.lusir.me/nero.appcache" title="我的 cache.appcache"&gt;我的 cache.appcache&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id="e8d669ed787e0f6ca71ae5e3dcc9c41a"&gt;设置内容类型&lt;/h3&gt;
+&lt;p&gt;在 .htaccess 文件中添加以下内容（我没有 .htaccess，所以没添加）&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;AddType text/cache-manifest .manifest
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="fe9e55b4442b03a4781c410d6a9596c1"&gt;将 HTML 页面指向清单文件 cache.appcache&lt;/h3&gt;
+&lt;p&gt;在页首的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中添加 &lt;code&gt;manifest="/cache.appcache"&lt;/code&gt;（假设该文件放置在根目录）。即：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;lt;html manifest=&amp;quot;/cache.appcache&amp;quot;&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;完成以上 3 个步骤，来访浏览器在下载完列表中文件后会通过直接访问本地缓存，从而使网页打开速度更快，甚至在离网的情况下仍能直接访问页面缓存。&lt;/p&gt;
+&lt;h3 id="1f03fb4a4295fecc5fbf72259a70cfd4"&gt;使用 js 让来访浏览器及时刷新缓存&lt;/h3&gt;
+&lt;p&gt;发布新文章时我尝试了更改 cache.appcache 的注释，但浏览器仍显示旧的信息，必须手动清除浏览器缓存。显然，这样把事情弄得更麻烦了，所以我在页面添加了如下类容以使浏览器自动强制刷新，带来的问题是强制刷新过程很明显，可能会使用户体验下降。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;load&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;applicationCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;updateready&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;applicationCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;status&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;applicationCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;UPDATEREADY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;reload&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;先试用一段时间再说，不行就把它撤了。&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://html5g.cn/html5-application-cache.html" title="利用HTML5应用程序缓存运行一个离线 Web 网页或应用"&gt;利用HTML5应用程序缓存运行一个离线 Web 网页或应用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.cnblogs.com/svage/archive/2011/11/24/2261365.html" title="html5 离线应用 application cache"&gt;html5 离线应用 application cache&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/" title="A Beginner's Guide to Using the Application Cache"&gt;A Beginner's Guide to Using the Application Cache&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;附：&lt;a href="http://manifest-validator.com/" title="Cache Manifest Validator"&gt;Cache Manifest Validator&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 13 Mar 2014 14:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-13:enable-application-cache.html</guid><category>HTML5</category></item><item><title>更改域名解析</title><link>http://www.lusir.me/modify-dns-name-resolution.html</link><description>&lt;p&gt;前阵子注册了个 QQ 企业邮箱，结果经常显示“MX 记录与 CNAME 记录冲突”，一直没弄明白是哪发生了问题。直到前几天看到&lt;a href="http://blog.lanbing.org/used-with-caution-in-the-root-domain-cname-record-the-post-office-to-do-mx.cgi" title="慎用根域名 CNAME 记录"&gt;这篇文章&lt;/a&gt;，于是科普了一下 CNAME 的意义&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;。
+&lt;/p&gt;
+&lt;h3 id="c950abf9dd2bdf2ef279a6e6470144d7"&gt;Google 的说明&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;正規名稱記錄又稱 CNAME 紀錄，是一種 DNS 紀錄類型，可將別名對應至實際或「正規」的網域名稱。CNAME 紀錄的用途通常是將子網域 (例如：「www」或「mail」) 對應至代管子網域內容的網域。舉例來說，CNAME 紀錄可以將網址「www.example.com」對應至「example.com」網域的實際網站。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="2c60a750a8ff0f458bd2c3977b2e5680"&gt;Github 的说明&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: You should not use a CNAME record with an apex domain, as this may cause issues with other services on the apex domain, like email.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;上面的引用表达的意思：根域名最好不要做 CNAME，否则会造成邮件解析出错（除非邮件解析与 www 解析的目的地是同一服务器）。&lt;/p&gt;
+&lt;h3 id="cfabea642b97269309366a07f48401e8"&gt;正确的解析方式&lt;/h3&gt;
+&lt;p&gt;在域名运营商处修改（假设要把 www 与根域名指向同一个站点）：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;CNAME：www.example.com =&amp;gt; username.github.io
+A：example.com =&amp;gt; 192.30.252.153
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.suoyine.com/archives/2297.html" title="根域名不能用 CNAME 解析，否则 MX 记录失效"&gt;根域名不能用 CNAME 解析，否则 MX 记录失效&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://support.dnsimple.com/articles/differences-between-a-cname-alias-url/" title="Differences between the A, CNAME, ALIAS and URL records"&gt;Differences between the A, CNAME, ALIAS and URL records&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fancyoung.com/blog/host-to-github/" title="Github Page绑定自己域名"&gt;Github Page绑定自己域名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages" title="Setting up a custom domain with Pages"&gt;Setting up a custom domain with Pages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="https://support.google.com/a/answer/112037?hl=zh-Hant" title="關於 CNAME 紀錄"&gt;關於 CNAME 紀錄&lt;/a&gt;&amp;#160;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 11 Mar 2014 23:20:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-11:modify-dns-name-resolution.html</guid><category>DNS</category><category>CNAME</category></item><item><title>“Beyond Compare 许可证密钥被撤销” 的解决办法</title><link>http://www.lusir.me/solution-to-bcompare-error.html</link><description>&lt;p&gt;前几天遇到的问题，打开 Beyond Compare 提示：&lt;code&gt;许可证密钥已被撤销&lt;/code&gt;。上网搜寻出解决方法，记录一下。
+&lt;/p&gt;
+&lt;h3 id="6f1fefa928e01b0bb4ba64071c7ad053"&gt;解决方法：&lt;/h3&gt;
+&lt;h4 id="ed752639f1c9e21123de5f01b230f9e3"&gt;保存配置&lt;/h4&gt;
+&lt;p&gt;打开 Beyond Compare，“菜单” → “工具” → “导出配置”，把 Beyond Compare 的配置备份一份。&lt;/p&gt;
+&lt;h4 id="9fb493ad79ed72cda3405c46ed9a24b4"&gt;删除相应目录&lt;/h4&gt;
+&lt;p&gt;根据系统进入相应文件夹，删除所有文件。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;WinXP   C:\Documents and Settings\[Your User Name]\Application Data\Scooter Software\Beyond Compare 3\
+Win7    C:\Users\[Your User Name]\AppData\Roaming\Scooter Software\Beyond Compare 3\
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4 id="f4305a6b2d192b4290a9a8c4353c6b13"&gt;重新安装&lt;/h4&gt;
+&lt;p&gt;重新打开 Beyond Compare，提示需要安装，安装时导入刚刚备份的配置文件，问题解决。&lt;/p&gt;
+&lt;h3 id="2af555fd2e8c2e68b0af48b312de1009"&gt;秘钥&lt;/h3&gt;
+&lt;p&gt;附两份秘钥，均来自网络，未经验证。使用方法为：复制 BEGIN 与 END 之间的所有内容。&lt;/p&gt;
+&lt;p&gt;密钥1：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;— BEGIN —
+rssAPVg2OpBjDVo3E0DhGWrjPIq0hsTSuNz13wTuzVHfb2mRgO9bZKn9B
+l42D5YEyMSYPXsxzcb08dqbRlbzWNJzJXE6YVapYW7f+tRRXRFI4yn4Nj
+jZ0RiiqGRCTVzwComUcXB-eiFWRBY6JpSsCNkmIxL5KsRCo442djHhTZE
+— END —
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;密钥2：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;— BEGIN —
+mv1nPlXAywBDCdhxFc9QOVv6TBcQHLAXBQUAKTh3ie4fqSEOnWrPsnVkF
+yt0wAkJHweoExRJWWVwwCniKNROSdJzJXE6YVapYW7f+tRRXRFI4yn4Nj
+jZ0RiiqGRCTVzwComUcXB-eiFWRBY6JpSsCNkmIxL5KsRCo442djHhTZE
+— END —
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 11 Mar 2014 21:43:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-11:solution-to-bcompare-error.html</guid><category>Beyond Compare</category></item><item><title>让 Excel 显示 + 号</title><link>http://www.lusir.me/show-excel-plus-sign.html</link><description>&lt;p&gt;由于不经常使用 Excel，遇到些问题只能上网查查了。默认情况下，Excel 单元格不包含特定的数字格式（输入负数显示 &lt;code&gt;-&lt;/code&gt; 号，输入正数不显示 &lt;code&gt;+&lt;/code&gt; 号），本文记录一下让 Excel 单元格显示 &lt;code&gt;+&lt;/code&gt; 号的方法。
+&lt;/p&gt;
+&lt;p&gt;方法很简单，首先选择想要格式化的单元格区域，然后右键“设置单元格格式”，弹出下图对话框。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/show-excel-plus.png" title="让 Excel 显示 + 号" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/show-excel-plus.png" alt="让 Excel 显示 + 号" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;上图中，在左侧“分类”处选择“自定义”，然后在“类型”下面的输入框中，输入 &lt;code&gt;+0;-0;0;@&lt;/code&gt;，确定即可。&lt;/p&gt;
+&lt;h3 id="77478f9f3f8025d06148b80f6538a8c0"&gt;字符含义&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;“+0”定义正数的显示格式；&lt;/li&gt;
+&lt;li&gt;“-0”定义负数的显示格式；&lt;/li&gt;
+&lt;li&gt;“0”定义零值的显示格式；&lt;/li&gt;
+&lt;li&gt;“@”定义文本的显示格式，即正常显示文本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果三个分号间的某个位置不键入任何字符，则会将该类型数据隐藏起来。例如格式 &lt;code&gt;0;-0;;@&lt;/code&gt; 将会隐藏选中单元格区域中的零值。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 11 Mar 2014 20:43:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-11:show-excel-plus-sign.html</guid><category>Excel</category></item><item><title>荷塘月色 - Q 版语文</title><link>http://www.lusir.me/fake-q-ban-yu-wen.html</link><description>&lt;p&gt;每个月都有那么几天，感觉颇不宁静。今晚在院子里坐着数蚊子，忽然想起日日走过的荷塘，在这满月的光里，荷塘里应该有MM在洗澡吧。月亮像“非典”病人的体温似的，不知什么时候已经升高了，墙外马路上收破烂的叫喊声，已经听不见了；老婆在屋里拍着孩子，跑着调地哼着“两只老虎”。好难听啊，我终于忍不住悄悄地披了衣服，带上门出去了。
+&lt;/p&gt;
+&lt;p&gt;&lt;a class="float-left" href="http://dn-nero.qbox.me/dufu2.jpg" title="杜甫涂鸦" data-fancybox-group="gallery"&gt;&lt;img src="http://dn-nero.qbox.me/dufu2.jpg" alt="杜甫涂鸦" /&gt;&lt;/a&gt;沿着荷塘，是一条曲折的小煤屑路，运气好的话还可以捡到几块煤炭和硬币。这条路白天少有人走，晚上更是鬼都不来。由于缺少压马路的恋人，所以路面显得凹凸不平。荷塘四面，长着许多树，可我就认识杨柳，其他的叫不上名字来，我想，比草大一点儿的植物就应该叫树吧。没有月光的晚上，这路上阴森森的，有些怕人。今晚却很好，虽然月光也还是淡淡的，但估计不会有女流氓出没。&lt;/p&gt;
+&lt;p&gt;路上只我一个人，这一片天地好像是我的；我也像是灵魂出窍，到了另一个世界里。我爱牛奶，也爱啤酒；爱同居，也爱独处。像今天晚上，一个人在这苍茫的月下，什么都可以想，什么都可以不想，思想出现冲突，开始不兼容的时候，我便觉得自己是个自由的人。平日里一定要做的事，一定要说的话，一定要憋的屁，现在都可以不理。就像是游荡在网络世界里，这就是独处的妙处。&lt;/p&gt;
+&lt;p&gt;弯弯勾勾的荷塘上面，放眼寻找 MM，可惜看到的都是叶子。&lt;/p&gt;
+&lt;p&gt;&lt;a class="float-right" href="http://dn-nero.qbox.me/dufu3.jpg" title="杜甫涂鸦" data-fancybox-group="gallery"&gt;&lt;img src="http://dn-nero.qbox.me/dufu3.jpg" alt="杜甫涂鸦" /&gt;&lt;/a&gt;叶子出水很高，像夏季少女的超短裙。叶子中间，有些白花，有开着的，有不开的，还有半开不开的；一阵阴风吹过，送来缕缕清香，比香蕉还香，比蚊香还香，仿佛帕瓦罗蒂在喜马拉雅山上唱歌似的。这时候，叶子与花像吃了摇头丸一般抖动了起来，像闪电似的，霎时整个荷塘的叶子和花都抖动了起来，其传染速度比禽流感还快啊。叶子底下是脉脉的流水，虽然被叶子遮住了，但是我仍能用人格保证它下面是流水，不是可乐或果汁。&lt;/p&gt;
+&lt;p&gt;月光如嘘嘘一般，哗哗地撒在这一片叶子和花上。叶子和花仿佛刚洗过牛奶浴，像婴儿的小屁屁，白里透红，与众不同。竟然是满月！不知道狼人和吸血鬼会不会出现，好在天上有一层淡淡的云，我认为这很好，遮住了月亮，狼人和吸血鬼就不会出现，我就是在这里睡觉也可以。月光是隔了树照过来的，因此荷叶上的黑影参差斑驳，并不均匀，但光与影却有着和谐的旋律，如周杰伦的歌一样，听不出歌词，但却有令人心动的旋律。&lt;/p&gt;
+&lt;p&gt;荷塘的四面，远远近近，高高低低竟然都是树，还好，大多是我认识的杨柳，而不是非洲杀人树。树缝里透着一两点路灯光，没精打采的，看得我直犯困。这时候最热闹的，要数远处烧烤摊的叫卖声了，真想去喝啤酒啊，可一摸口袋，我什么也没有。&lt;/p&gt;
+&lt;p&gt;突然想起二十元人民币有荷花图案，今晚这满塘荷花如果是人民币的话，我可就发了，只可惜它们只是荷花。这令我更加惦记发薪水的日子了。这样想着，猛一抬头，不觉已是自己的门前；轻轻地推门，什么声息也没有，老婆已睡熟好久了。竟然没给我留门？！看来我还真得去荷塘边上凑合一宿。明天跟老婆说我今晚去荷塘赏月了，她能信吗？&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/guanhanqing.jpg" title="关汉卿涂鸦" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/guanhanqing.jpg" alt="关汉卿涂鸦" /&gt;
+&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;这是一篇测试文……，文章版权作者所有。&lt;/p&gt;
+&lt;p&gt;今天心情不好。我只有四句话想说。包括这句和前面的两句。我的话说完了……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 09 Mar 2014 20:31:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-09:fake-q-ban-yu-wen.html</guid><category>Nonsense</category></item><item><title>在网页中嵌入 hermit 播放器</title><link>http://www.lusir.me/embed-hermit-player.html</link><description>&lt;p&gt;Hermit 播放器是&lt;a href="http://mufeng.me/" title="牧风"&gt;牧风&lt;/a&gt;兄整的一个音乐播放器，直接通过虾米的歌曲、专辑或精选集 ID 引用虾米的歌曲链接实现播放，且播放器的 css 写成自适应样式，在移动设备上的表现良好。实现方式应该是写了 API，具体的我也不太懂，可以直接去&lt;a href="http://mufeng.me/hermit-for-wordpress.html" title="Hermit 虾米音乐播放器"&gt;插件发布页&lt;/a&gt;查看。
+&lt;/p&gt;
+&lt;h3 id="3f66e73cbcc93c974d7c79d05f13653a"&gt;古事记 - 喜多郎&lt;/h3&gt;
+&lt;p&gt;推荐一张喜多郎&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;的专辑吧，《古事记》。偶尔听听感觉很不错……&lt;/p&gt;
+&lt;div class="hermit" songs="album#:4953"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;
+左键轻击列表播放或暂停。
+&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="footnote"&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="http://www.u148.net/article/1899.html" title="喜多郎：寂静之声·灵性之音"&gt;喜多郎：寂静之声·灵性之音&lt;/a&gt;&amp;#160;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;&lt;a href="http://wencanghai.blog.sohu.com/267381183.html" title="倾听喜多郎"&gt;倾听喜多郎&lt;/a&gt;&amp;#160;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 08 Mar 2014 22:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-08:embed-hermit-player.html</guid><category>Hermit</category><category>虾米</category></item><item><title>在网页中嵌入 html5 音视频</title><link>http://www.lusir.me/embed-html5-media.html</link><description>&lt;p&gt;前几天看见一篇使用 FFmpeg 的文章，就尝试了一下这款“转码瑞士军刀”。本文记录一下初次使用 FFmpeg 的过程，顺便把转码之后的音视频嵌进来看看结果。
+&lt;/p&gt;
+&lt;h3 id="4e63f356b53969a3458a2e612a726df6"&gt;安装 FFmpeg&lt;/h3&gt;
+&lt;p&gt;首先是到&lt;a href="http://ffmpeg.zeranoe.com/builds/" title="Zeranoe FFmpeg"&gt;官网&lt;/a&gt;下载 Windows Build Version，解压后添加 ffmpeg.exe 的路径到 &lt;code&gt;环境变量&lt;/code&gt; 的 &lt;code&gt;path&lt;/code&gt; 中，打开 cmd，输入 &lt;code&gt;ffmpeg -version&lt;/code&gt; 查看是否安装成功。&lt;/p&gt;
+&lt;h3 id="d2b3b5b0e8e7ae02b05511465192f574"&gt;转码音视频&lt;/h3&gt;
+&lt;p&gt;将要转码的音视频放到 &lt;code&gt;C:\Users\×××&lt;/code&gt; 中，分别在 cmd 中输入以下命令（假设音频为 tao.mp3，视频为 man.mp4）：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;tao&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ab&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp3&lt;/span&gt;
+
+&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;tao&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="n"&gt;ogg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;acodec&lt;/span&gt; &lt;span class="n"&gt;libvorbis&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ac&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ab&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ar&lt;/span&gt; &lt;span class="mi"&gt;44100&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ogg&lt;/span&gt;
+
+&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;man&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;acodec&lt;/span&gt; &lt;span class="n"&gt;libvorbis&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ac&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ab&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ar&lt;/span&gt; &lt;span class="mi"&gt;44100&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;345&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="mi"&gt;640&lt;/span&gt;&lt;span class="n"&gt;x360&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;webm&lt;/span&gt;
+
+&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;man&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;strict&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;aac&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vcodec&lt;/span&gt; &lt;span class="n"&gt;libx264&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vprofile&lt;/span&gt; &lt;span class="n"&gt;high&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;preset&lt;/span&gt; &lt;span class="n"&gt;slow&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;maxrate&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;bufsize&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;threads&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="mi"&gt;640&lt;/span&gt;&lt;span class="n"&gt;x360&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp4&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="9e068158b573d915ef69529b11ef2f6d"&gt;将媒体文件嵌入网页&lt;/h3&gt;
+&lt;p&gt;此处使用了 &lt;a href="http://html5media.info/" title="html5media"&gt;html5media.js&lt;/a&gt;，使用 &lt;audio&gt; 与 &lt;video&gt; 标签插入，如下：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;video&lt;/span&gt; &lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;640&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;360&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;controls&lt;/span&gt; &lt;span class="n"&gt;preload&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;clip.mp4&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;clip.webm&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;video&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="158ce031b84d63c39e11ebcb03c83dfc"&gt;嵌入结果&lt;/h3&gt;
+&lt;h4 id="c4f92557d7c49823e0f5d3bde398e44c"&gt;嵌入视频（右键选择播放）&lt;/h4&gt;
+&lt;p&gt;&lt;video controls preload&gt;
+    &lt;source src="http://dn-nero.qbox.me/man-in-black-clip.mp4"&gt;&lt;/source&gt;
+    &lt;source src="http://dn-nero.qbox.me/man-in-black-clip.webm"&gt;&lt;/source&gt;
+&lt;/video&gt;&lt;/p&gt;
+&lt;h4 id="5c279a1704357d84f72d80a0c5e7768e"&gt;嵌入音频&lt;/h4&gt;
+&lt;p&gt;&lt;audio controls preload autoplay&gt;
+    &lt;source src="http://dn-nero.qbox.me/taoshengyijiu.mp3"&gt;&lt;/source&gt;
+    &lt;source src="http://dn-nero.qbox.me/taoshengyijiu.ogg"&gt;&lt;/source&gt;
+&lt;/audio&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+生前何必久睡，死后自会长眠&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://zh.wikihow.com/%E5%9C%A8Windows%E4%B8%8A%E5%AE%89%E8%A3%85FFmpeg%E7%A8%8B%E5%BA%8F" title="如何在Windows上安装FFmpeg程序"&gt;如何在Windows上安装FFmpeg程序&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://paulrouget.com/e/converttohtml5video/" title="Converting to WebM, OGG/Theora and MP4"&gt;Converting to WebM, OGG/Theora and MP4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://jalena.bcsytv.com/archives/1202" title="FFmpeg 批量转换HTML5视频"&gt;FFmpeg 批量转换HTML5视频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.xiaket.org/2010/notes-on-ffmpeg.html" title="FFMPEG使用"&gt;FFMPEG使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.raphaelzhang.com/2013/05/some-usage-of-ffmpeg/" title="ffmpeg转码的几个小用法"&gt;ffmpeg转码的几个小用法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/etianen/html5media/wiki/embedding-audio" title="Embedding audio"&gt;Embedding audio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/etianen/html5media/wiki/embedding-video" title="Embedding video"&gt;Embedding video&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 08 Mar 2014 20:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-08:embed-html5-media.html</guid><category>HTML5</category></item><item><title>使用七牛镜像存储</title><link>http://www.lusir.me/start-using-qiniu.html</link><description>&lt;p&gt;看到很多博主都正在使用七牛作为图床或整站的 CDN 加速，本着外行凑热闹的精神，我也学着使用了一把。七牛的加速节点响应速度确实是很快，至少目前是这样，我 ping 了一下，结果如下。
+&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ping-qbox-me.png" title="ping-qbox-me" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ping-qbox-me.png" alt="ping-qbox-me" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下面记录一下七牛镜像存储的使用（本例为图床使用）：&lt;/p&gt;
+&lt;p&gt;由于我没有备案的打算，所以使用的是七牛提供的三级域名。&lt;/p&gt;
+&lt;p&gt;假设我想要镜像的源站为 &lt;code&gt;img.lusir.me&lt;/code&gt;。而且我已经建立了名为 pic 的七牛 bucket（bucket 意指“空间”，理解为“坑”我觉得更形象）。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;a href="https://portal.qiniu.com/" title="七牛内容管理页面"&gt;七牛内容管理页面&lt;/a&gt;，设置一键加速网站，修改镜像源为 &lt;code&gt;img.lusir.me&lt;/code&gt;，底下的“镜像空间”默认是 pic（如果我只建立了一个“坑”）。这时点击“确定加速”即可将 &lt;code&gt;img.lusir.me&lt;/code&gt; 与 &lt;code&gt;pic.u.qiniudn.com&lt;/code&gt; 进行关联。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更改文章里面的图片地址，搜寻关键字 &lt;code&gt;img.lusir.me&lt;/code&gt; 并将其改为 &lt;code&gt;pic.u.qiniudn.com&lt;/code&gt;，保存。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;访问一篇带图的文章，进入&lt;a href="https://portal.qiniu.com/" title="七牛内容管理页面"&gt;七牛内容管理页面&lt;/a&gt;的内容管理，此时文章里相应的图会被拉取到七牛的“坑”里面。也可以直接将所有的图通过&lt;a href="http://docs.qiniu.com/tools/v6/qrsbox.html" title="QRSBox同步工具"&gt;QRSBox&lt;/a&gt;上传到“坑”里面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如此就完成整个迁移过程。此时 &lt;code&gt;img.lusir.me&lt;/code&gt; 这个源站就可以暂时废弃不用了，即以后可以直接将 &lt;code&gt;pic.u.qiniudn.com&lt;/code&gt; 作为图床。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;如果要保留源站的域名方式 &lt;code&gt;img.lusir.me&lt;/code&gt;，七牛也提供了方法，&lt;a href="http://kb.qiniu.com/how-to-use-image-storage-and-qrsync" title="镜像存储与qrsync数据同步的使用"&gt;点我查看&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.cjzsy.com/archives/1415" title="七牛云储存：从其他图床搬家到七牛的便捷方法"&gt;七牛云储存：从其他图床搬家到七牛的便捷方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 07 Mar 2014 13:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-07:start-using-qiniu.html</guid><category>七牛</category></item><item><title>使用 Feedly 阅读器</title><link>http://www.lusir.me/start-using-feedly.html</link><description>&lt;p&gt;RSS 阅读器改变了我上网的习惯，让我习惯于将喜欢的站放到订阅里而不是浏览器书签里。Google Reader 是一款经典的应用，能够高效的获取订阅源的更新，而且丰富的扩展使得它与浏览器集成，使用方便。
+&lt;/p&gt;
+&lt;p&gt;Google Reader 走了之后尝试使用过 Feedly 与 Digg 两款免费的应用，直接通过 Google 账号就能导出 Google Reader 的订阅源，即所谓的无痛转移，当时由于 Feedly 经常抽疯，所以选择了 Digg 并一直使用着它。&lt;/p&gt;
+&lt;p&gt;昨晚整理 RSS 订阅源的时候发现很多站都在更新，但 Digg 里却不能正常显示，我明白我应该更换别家的 RSS 订阅服务了。&lt;/p&gt;
+&lt;p&gt;看到&lt;a href="http://www.playpcesor.com/2013/03/google-reader-feedly.html" title="Google Reader 將停止服務，最佳替代方案就是 Feedly"&gt;電腦玩物&lt;/a&gt;的推荐文章后决定再次尝试 Feedly，将整理到一半的订阅源从 Digg 导出，用 Google 账号登入 Feedly，导入 OPML 源，将 Feedly 主题改成绿色，将 Feedly 加入“科学上网”列表。检查发现 RSS 源可以正常更新。遂果断抛弃 Digg，加入 Feedly 的行列。安装 Feedly 扩展，这样一来，Feedly 的使用方法仿佛使人回到了 Google Reader 的时代，除开搜索功能（2014.03.08更新：Feedly 提供搜索功能，不过貌似 Pro 账号才能获取全部搜索条目）。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/feedly-thumb.png" title="我的 Feedly" &gt;
+    &lt;img src="http://dn-nero.qbox.me/feedly-thumb.png" alt="我的 Feedly" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://capbone.com/rss-readers/" title="RSS 阅读器一览"&gt;RSS 阅读器一览&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://capbone.com/mr-reader/" title="Mr. Reader：我心目中最好的 RSS 阅读器"&gt;Mr. Reader：我心目中最好的 RSS 阅读器&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 07 Mar 2014 10:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-07:start-using-feedly.html</guid><category>Feedly</category></item><item><title>关联博客与 Google Profile</title><link>http://www.lusir.me/add-google-profile.html</link><description>&lt;p&gt;使用 Google 搜索时经常会看到一些搜索到的文章标题下面有个头像，头像旁边写着 &lt;code&gt;By：×××&lt;/code&gt;，这时，只要标题下面的摘要中含有我们搜索的关键字，我想大多数人应该都会忍不住想点进去看看了。为了实现这一功能，我也找了好几篇文章学着操作，坐等 Google 重新爬取。
+&lt;/p&gt;
+&lt;p&gt;其实操作不难，&lt;a href="https://support.google.com/webmasters/answer/1408986?hl=zh-Hans" title="搜索结果中的作者信息"&gt;Google&lt;/a&gt; 已经给了我们方法，我们只需照着操作就行。我选择了&lt;a href="http://www.cmhello.com/" title="胡倡萌"&gt;胡倡萌&lt;/a&gt;使用的方法，即 Google 给的方法二。&lt;/p&gt;
+&lt;h3 id="27b152135057a08d88a562eac4a8dbc0"&gt;在网页上创建指向 Google+ 个人资料的链接&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://plus.google.com/118433343253566330284?rel=author&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Google+&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;链接必须包含 &lt;code&gt;?rel=author&lt;/code&gt; 参数。如果缺少该参数，就无法与 Google+ 个人资料关联。&lt;/p&gt;
+&lt;h3 id="fb4227b0fa5f176f42ab7de2f2dcc612"&gt;编辑 Google+ 个人资料以实现双向链接&lt;/h3&gt;
+&lt;p&gt;修改 &lt;a href="http://plus.google.com/me/about/edit/co" title="编辑撰稿者"&gt;Google+ 个人资料&lt;/a&gt;的撰稿者部分。在显示的对话框中点击&lt;code&gt;添加自定义链接&lt;/code&gt;，然后输入网站网址，保存即可。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;网上很多童鞋说还应该添加指向 Google+ ID 的 rel="publisher" 及 rel="me"，Glenn Gabe &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; 及 Google 给出了反驳，单博主博客是不需要 rel="me" 链接的。&lt;/p&gt;
+&lt;h3 id="85db889726449cb9c5fd0865a08fb7a9"&gt;使用 Google+ 个性网址&lt;/h3&gt;
+&lt;p&gt;标题的意思很明显，就是给个个性短连接，将 Google+ 个人资料的链接地址由 &lt;code&gt;https://plus.google.com/118433343253566330284&lt;/code&gt; 生成一个自定义的 &lt;code&gt;https://www.google.com/+NeroZheng&lt;/code&gt;,使得链接更美观、与众不同、方便记忆。&lt;a href="https://support.google.com/plus/answer/2676340?hl=zh-Hans" title="Google+个性网址使用入门"&gt; Google &lt;/a&gt;给出了详细的说明，在此我只把 Google 的要求列一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;十个或更多个关注者&lt;/li&gt;
+&lt;li&gt;帐户已创建至少30天&lt;/li&gt;
+&lt;li&gt;有个人资料照片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;就是这么简单，不过由于我只有 4 个关注者，所以我拉了几个不常上网的朋友给注册了 Google 账号才获得了资格，而且为了得到 +NeroZheng，我还把 Google+ 个人资料的名字改成了 Nero Zhen，改完才发现 Google 账号名 2 年只能改 3 次，世界真不美好。&lt;br&gt;&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.cmhello.com/add-author-information.html" title="在Google搜索结果中显示你网站的作者信息"&gt;在Google搜索结果中显示你网站的作者信息&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fatesinger.com/1252.html" title="把你的博客和 Google+ profile 连起来"&gt;把你的博客和 Google+ profile 连起来&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://fatesinger.com/968.html" title="Google Sitelink &amp;amp; Google+ Author Profile"&gt;Google Sitelink &amp;amp; Google+ Author Profile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="http://www.hmtweb.com/imd/?p=1587" title="避免 rel=author 与 rel=publisher 产生冲突"&gt;How To Troubleshoot Authorship Markup When rel=author and rel=publisher Clash&lt;/a&gt;&amp;#160;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 05 Mar 2014 01:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-05:add-google-profile.html</guid><category>Google</category></item><item><title>整合 Google 自定义搜索到 Pelican</title><link>http://www.lusir.me/google-cse-for-pelican.html</link><description>&lt;p&gt;总感觉好像我搭建 Blog 的目的跟别人不太一样，小伙伴们都在正儿八经的写出一些有价值有意义的文章，我却在那折腾怎么实现这个功能，怎么实现那个功能。可问题是自己又不会整，只能到处搜寻答案然后慢慢试结果。好在人品不错，虽然浪费不少时间，但折腾出结果的满足感确实挺爽。本文记录一下将 Google 自定义搜索整合到 Pelican 的过程。
+&lt;/p&gt;
+&lt;p&gt;说是整合到 Pelican，其实只是通过 jinja2 的一些规则将 Google 自定义搜索代码插入到主题的“搜索页面.html”中。&lt;/p&gt;
+&lt;h3 id="be5bf34c6756f3e3f7e20057e2c5c10b"&gt;第一步：注册并获取 Google 自定义搜索代码&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;先通过访问 http://www.google.com/cse/ 创建自定义搜索引擎。创建完毕后进入“外观”面板，选择“全宽”的布局模式。保存后进入“获取代码”,获得 Google 自定义搜索代码。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cx&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;012467883927724485227:eaoxbeaeyty&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;gcse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createElement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;text/javascript&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;src&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;protocol&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https:&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https:&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http:&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;//www.google.com/cse/cse.js?cx=&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;cx&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementsByTagName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+    &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parentNode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;insertBefore&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;})();&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;searchresults&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;only&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/gcse:searchresults-only&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="3a2e8e53c47ef1f31c3c65ceed0d2411"&gt;第二步：创建搜索结果页&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;为了让搜索结果在博客内部显示，我们需要在主题的 templates 中创建一个新的页面，用来显示搜索结果。新建一个文件，命名为 search.html。我是直接复制 page.html，重命名为 search.html 并相应修改文件中的 title 及 description，然后插入第一步中得到的 Google 自定义搜索代码到相应的位置。至此搜索结果页创建就完成了。&lt;/p&gt;
+&lt;h3 id="1db2035cd12c3dd8d8e34366e93b222c"&gt;第三步：修改当前主题的搜索提交表单&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;这里算是最关键的一步啦，当用户点击你博客上任意页面的站内搜索按钮的时候，可以将用户引导到刚刚创建的搜索结果页上。我们需要在主题文件夹中找到搜索框所在的文件，每个主题都不同，一般是在 header.html 中，找到类似以下的代码：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;lt;form method=&amp;quot;get&amp;quot; action=&amp;quot;/search.html&amp;quot; &amp;gt;
+&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;s&amp;quot; class=&amp;quot;textfield&amp;quot; placeholder=&amp;quot;Press enter to search ...&amp;quot; /&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;需要注意的地方：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;method="get"&lt;/li&gt;
+&lt;li&gt;action="/search.html"    action 的地址为 search.html 在生成的站点中的相对地址，一般是在根目录下，即 /search.html。&lt;/li&gt;
+&lt;li&gt;文本框 name="s" 不管主题搜索框的 name 等于什么，都将引号内的字母改成 q，即 name="q"。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="5aec29c358fa0dff64fe292979a341d1"&gt;第四步：使用 javascript 让搜索结果页的 title 中显示搜索关键字（可选）&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;由于静态页面不能从数据库获取输入的关键字，所以只能从搜索结果页的 URL 下手了，假设搜索结果页的 URL 为：http://lusir.me/search.html?q=solidworks。我们想得到参数 q 的值，则可以通过以下函数调用。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;reg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;RegExp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;(^|&amp;amp;)&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;q&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;=([^&amp;amp;]*)(&amp;amp;|$)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;i&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;search&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;substr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;reg&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;r&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;r&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;║&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;decodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;context&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;║&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;的搜索结果 - 擼sirの避風港&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面那段的具体意思我也不太清楚，大概就是使用正则式将 url 分为 3 部分，以 q 为分界点，我们需要的就是 q= 之后的那部分（即 context）。匹配成功之后利用 context 给 title 赋值，但是这样赋值之后的 title 不能正确显示中文字符，所以需要使用关键字 decodeURIComponent 来将 context 还原成中文字符。&lt;/p&gt;
+&lt;h3 id="effe4bed8cea1f7d427c950a4d195981"&gt;第五步：调整 CSS&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;功能实现了之后就是美化了。按照自己的意愿调整CSS即可。  &lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;大功告成，此后就可以在主题原始的搜索框上使用 Google 自定义搜索了。&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;PS：研究这一功能的过程中参考了以下文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.wpjam.com/article/google-cse-for-wordpress/" title="无缝整合 Google 自定义搜索框到 WordPress"&gt;无缝整合 Google 自定义搜索框到 WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.ncku.edu.tw/~rcenter/book/html/JavaScript.html" title="簡易JavaScript語法結構"&gt;簡易JavaScript語法結構&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://yige.org/p/374" title="JS获取url参数的函数_JavaScript"&gt;JS获取url参数的函数_JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.w3schools.com/jsref/jsref_encodeuricomponent.asp" title="JavaScript encodeURIComponent() Function"&gt;JavaScript encodeURIComponent() Function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.w3cplus.com/jquery/attr-removeAttr" title="jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性"&gt;jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 04 Mar 2014 21:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-03-04:google-cse-for-pelican.html</guid><category>Pelican</category><category>CSE</category></item><item><title>Thunderbird + Markdown 写邮件</title><link>http://www.lusir.me/markdown-emails.html</link><description>&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="http://www.lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
+&lt;/p&gt;
+&lt;h3 id="90633085fd7eb1c9483c3ce43cbf7619"&gt;绿色版 Thunderbird&lt;/h3&gt;
+&lt;p&gt;安装绿色版 Thunderbird（绿色版便携）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载安装 Thunderbird 至相应位置。&lt;/li&gt;
+&lt;li&gt;新建文件夹用来存放配置文件（名称可以是中文）。&lt;/li&gt;
+&lt;li&gt;将 thunderbird.exe 发送到桌面快捷方式，并在快捷方式的“目标”中添加 &lt;code&gt;-p&lt;/code&gt; 参数，如下图：
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/thunderbird-config1.jpg" title="添加 -p 参数" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;双击快捷方式新建配置文件指向第一步新建的文件夹，如下图，然后去掉快捷方式的 &lt;code&gt;-p&lt;/code&gt; 参数即可正常使用。
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/thunderbird-config2.jpg" title="新建用户配置" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="4f3d67d0b3a268ac8d99d670851c8b80"&gt;Markdown Here 插件&lt;/h3&gt;
+&lt;p&gt;Markdown Here 插件这一步就不详述了，直接在“附加组件管理器”中搜索 Markdown Here 扩展，然后安装即可。安装成功后，在使用 Markdown 编辑完邮件后，右键点击 &lt;code&gt;Markdown Toggle&lt;/code&gt; 即可在书写页面和预览之间进行切换，从而编辑出样式清爽的邮件。同时，还可以通过编辑 Markdown Here 扩展的 CSS 来自定义邮件样式、配色等方案以达到自己的需求。&lt;/p&gt;
+&lt;h3 id="5627d82f25e05d6225b4fb0f7f1d8c62"&gt;Thunderbird 扩展&lt;/h3&gt;
+&lt;p&gt;提到了 Thunderbird，顺便列一下我现在使用的扩展。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Contact Tabs。（通过 Thunderbird 主窗口快速访问联系人目录）&lt;/li&gt;
+&lt;li&gt;Markdown Here。（Write your email in Markdown, then make it pretty）&lt;/li&gt;
+&lt;li&gt;MinimizeToTray。（最小化窗口到系统托盘）&lt;/li&gt;
+&lt;li&gt;Quicktext。（添加快速文本）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Markdown 确实是比较方便，熟练运用可以提升不少效率，我还得努力……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 27 Feb 2014 20:40:00 +0800</pubDate><guid>tag:www.lusir.me,2014-02-27:markdown-emails.html</guid><category>Markdown</category><category>Thunderbird</category></item><item><title>Markdown 添加表格</title><link>http://www.lusir.me/markdown-add-tables.html</link><description>&lt;p&gt;搭建了 Pelican 之后就在慢慢尝试学习使用 Markdown 记录一些东西（包括尝试使用 Markdown 编辑邮件）。本文记录一下使用 Markdown 添加表格的方法。
+&lt;/p&gt;
+&lt;h3 id="9ac4d85e35db087be217f6a8bc1a5d9d"&gt;简单的表格&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;你好 | Markdown | 表格 | 这是表头
+---- | -------- | ---- | --------
+abc  |  123   |  ABC  |  cool
+111  |  222   |  333  |  444
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="7e8b2fa2745e37dfe2e609baf04e319f"&gt;效果&lt;/h3&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;你好&lt;/th&gt;
+&lt;th&gt;Markdown&lt;/th&gt;
+&lt;th&gt;表格&lt;/th&gt;
+&lt;th&gt;这是表头&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;abc&lt;/td&gt;
+&lt;td&gt;123&lt;/td&gt;
+&lt;td&gt;ABC&lt;/td&gt;
+&lt;td&gt;cool&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;111&lt;/td&gt;
+&lt;td&gt;222&lt;/td&gt;
+&lt;td&gt;333&lt;/td&gt;
+&lt;td&gt;444&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="b3d606cf1cfea15e42ec0b7784a414af"&gt;对齐的表格&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;|Tables     |Are             |Cool |
+| ----------- |:-------------:| -----:|
+| col 3 is    | right-aligned | $1600 |
+| col 2 is    | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="7e8b2fa2745e37dfe2e609baf04e319f_1"&gt;效果&lt;/h3&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tables&lt;/th&gt;
+&lt;th align="center"&gt;Are&lt;/th&gt;
+&lt;th align="right"&gt;Cool&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;col 3 is&lt;/td&gt;
+&lt;td align="center"&gt;right-aligned&lt;/td&gt;
+&lt;td align="right"&gt;$1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;col 2 is&lt;/td&gt;
+&lt;td align="center"&gt;centered&lt;/td&gt;
+&lt;td align="right"&gt;$12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zebra stripes&lt;/td&gt;
+&lt;td align="center"&gt;are neat&lt;/td&gt;
+&lt;td align="right"&gt;$1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="35808e79fa5f367a06c83a78b857519c"&gt;参考资料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Markdown 语法"&gt;Markdown Cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 22 Feb 2014 19:20:00 +0800</pubDate><guid>tag:www.lusir.me,2014-02-22:markdown-add-tables.html</guid><category>Markdown</category></item><item><title>关于 Unicode BOM</title><link>http://www.lusir.me/about-unicode-bom.html</link><description>&lt;p&gt;昨晚意识到侧边栏跟 Ma Wenbao 的不一样，好像是我这边的发生了错位。仔细比较一番，发现主题文件里面的东西居然是一样的。尝试添加 &lt;code&gt;margin:0; padding:0&lt;/code&gt; 也无效，只好作罢睡觉。
+&lt;/p&gt;
+&lt;p&gt;想到昨天用 Firefox 自带的元素查看器找到的一块空白区域，觉得应该就是它在作祟了。启用 Firebug，选中空白区域右键“编辑 html”，&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 前多了一个 &lt;code&gt;&amp;amp;#65279;&lt;/code&gt;，网上一搜，原来是 UTF-8 BOM 符（Byte-Order Mark，字节顺序标记）&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;想起之前编辑文件的时候还特意将 ANSI 转成了 UTF-8 格式，原来该格式会默认给添加上 BOM，而 UTF-8 无 BOM 格式则不会添加这个 BOM，引发这个问题的原因就是模板文件使用的是 UTF-8 编码格式，而这个 BOM 符被浏览器渲染成了一行空白，从而导致页面错位。于是将文档格式转成 ANSI，问题解决（保存成 UTF-8 无 BOM 格式同样可行）。&lt;/p&gt;
+&lt;h3 id="25f9c7fa3b50aebe5125112ac1187777"&gt;总结&lt;/h3&gt;
+&lt;p&gt;由于 BOM 是针对于 UTF-16 和 UTF-32 的，对于使用 UTF-8 编码格式的文件不需要 BOM ，所以在保存 UTF-8 文件时最好选择无 BOM 的编码。&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Wikipedia：&lt;a href="http://en.wikipedia.org/wiki/Byte_order_mark" title="字节顺序标记"&gt;字节顺序标记&lt;/a&gt;.&amp;#160;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 22 Feb 2014 17:00:00 +0800</pubDate><guid>tag:www.lusir.me,2014-02-22:about-unicode-bom.html</guid><category>BOM</category></item></channel></rss>
