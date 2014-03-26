@@ -25,4 +25,4 @@ Disallow: /search.html
 Disallow: /404.html
 Disallow: /wumii-verification.htm
 
-Sitemap: http://www.lusir.me/sitemap.xml
+Sitemap: http://lusir.me/sitemap.xml
