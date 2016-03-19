@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--
+(¯`·.¸¸.·´¯`·.¸¸.-> ĊÄĻĻ MË ĻŮŚÏŖ <-.¸¸.·´¯`·.¸¸.·´¯)
+-->
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="author" content="Nero Zheng" />
+<meta name="generator" content="Pelican" />
+<meta name="description" content="折腾 360 路由 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta property="qc:admins" content="315026325312655" />
+<meta property="wb:webmaster" content="8e383b094667a02d" />
+<title>折腾 360 路由 - 擼sirの避風港</title>
+<link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
+<link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
+<link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<script src="http://lusir.me/theme/js/basket.min.js"></script>
+<script>
+basket.require({ url: 'http://lusir.me/theme/css/bootstrap.min.css' },{ url: 'http://lusir.me/theme/css/niu2.css', unique: 0.5 },{ url: 'http://lusir.me/theme/font-awesome/css/font-awesome.min.css', unique: 0.5 },{ url: 'http://lusir.me/theme/css/pygments/github.css' },{ url: 'http://lusir.me/theme/css/jquery.fancybox.css' },{ url: 'http://lusir.me/hermit/style/hermit.min.css', unique: 0.5 })
+.then(function(responses) {
+_stylesheet.appendStyleSheet(responses[0], function() {});
+	basket.require({ url: 'http://lusir.me/theme/js/bootstrap.min.js' },{ url: 'http://lusir.me/theme/js/jquery-1.11.0.min.js' },{ url: 'http://lusir.me/theme/js/niu2.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/fancy-loading.js' },{ url: 'http://lusir.me/theme/js/jquery.fancybox.pack.js' },{ url: 'http://lusir.me/hermit/script/hermit.min.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/jquery-1.4.4.min.js' },{ url: 'http://lusir.me/theme/js/slimbox2.js' },{ url: 'http://lusir.me/theme/soundmanager2/script/soundmanager2.min.js' },{ url: 'http://lusir.me/theme/js/tagcloud.min.js' });});
+</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
+<script type="text/javascript">window.onload = function() {  };</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="canonical" href="http://lusir.me/try-openwrt.html" />
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://lusir.me/theme/js/html5shiv.js"></script>
+<script src="http://lusir.me/theme/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<![endif]-->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+<meta itemprop="inLanguage" content="zh-CN">
+<div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://lusir.me"><i class="fa fa-home"></i>擼sirの避風港</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+<ul class="nav navbar-nav">
+<li><a href="http://lusir.me/about.html" title="关于"><i class="fa fa-anchor"></i>关于</a></li>
+<li><a href="http://lusir.me/archives.html" title="存档"><i class="fa fa-archive"></i>存档</a></li>
+<li><a href="http://lusir.me/tag/" title="标签"><i class="fa fa-tag"></i>标签</a></li>
+<!-- category dropdown list -->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://lusir.me/collection/index.html"><i class="fa fa-briefcase"></i>搜藏(4)</a></li>
+<li><a href="http://lusir.me/nonsense/index.html"><i class="fa fa-trash"></i>扯(1)</a></li>
+<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(65)</a></li>
+</ul>
+</li>
+<!--  self defined dropdown list --></ul>
+<!-- right nav bar -->
+<ul class="nav navbar-nav navbar-right">
+<!-- google custom search --><li>
+<div id="niu2-cse-wrapper">
+<div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+<form action="/search.html" method="get">
+<div class="form-group">
+<input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
+</div>
+</form>
+</div>
+<div id="niu2-cse-ctrl-box" class="navbar-nav"><i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span></div>
+</div>
+</li></ul>
+</nav>
+</div>
+</div></div>
+		
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">折腾 360 路由</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>入手 360 路由之后基本没怎么使用，前阵子逛 360 路由讨论区的时候发现多了个 Openwrt 版块，便学着折腾了一下，现在也算物尽其用了。
+</p>
+<h3 id="300b34e58a0fc5ec5bb570dd6601f1c6">刷 Openwrt</h3>
+<ol>
+<li>路由器 lan 口与电脑相连，设置电脑 IPV4 为静态 IP：192.168.1.3，子网掩码：255.255.255.0，其余为空；</li>
+<li>断开路由器电源，按住 reset 键，插上电源，保持按住 reset 键等待 10 秒左右，看到黄灯闪烁证明已进入 uboot；</li>
+<li>电脑浏览器打开 <code>192.168.1.1</code>，出现上传 rom 界面；</li>
+<li>点击 <code>浏览</code>，找到下载的新固件，上传，等待大概3分钟，完成后再次打开 <code>192.168.1.1</code> 即可进入 openwrt 的 luci 登录界面；</li>
+<li>电脑 IPV4 还原之前设置。</li>
+</ol>
+<h3 id="3d9befcfabeff7e2972165d22183a838">刷不死 UBoot</h3>
+<p>360 路由重启一定次数后固件会恢复为 360 官方版本，因此需要 “不死” UBoot。刷入 OpenWrt 后，开启 Dropbear SSH 访问。</p>
+<ol>
+<li>使用 WinSCP 将下载的 UBoot 文件传输到路由的 <code>/tmp</code> 目录；</li>
+<li>使用 Putty 进入 OpenWrt ，运行命令 <code>mtd write -r /tmp/filename.bin u-boot</code>，（<code>filename.bin</code> 为待刷入的不死 UBoot 文件名）；</li>
+<li>进入不死 U-Boot 刷机界面，重新刷写 Openwrt 固件。</li>
+</ol>
+<h3 id="8c9b7d36a7d1bc1ee133bfe2e173c323">挂载 U 盘</h3>
+<p>不打算在路由上折腾 Shadowsocks 客户端及去广告功能，没必要把 openwrt 转移到 U 盘上，所以就没必要给 U 盘分区而是单纯格式化成 ext4 格式，</p>
+<ol>
+<li>使用 linux 下的分区指令 fdisk 来进行操作，<code>fdisk /dev/sda</code>；</li>
+<li>输入 p 指令查看当前磁盘分区情况；</li>
+<li>输入 d 指令删除掉旧分区（如果有多个分区删除程序会让你输入删除哪一个，范围是 1 到 4，如果只有一个会默认删除掉），一直删除到没有分区为止；</li>
+<li>输入 n 指令创建分区 → 输入 p 创建主"分区 1" → 输入开始位置直接回车，结束位置同样直接回车，表示使用全部容量；</li>
+<li>创建完成后再次输入 p 指令查看当前磁盘分区情况；</li>
+<li>输入 w 保存分区到磁盘上；</li>
+<li>重启系统以更改分区表；</li>
+<li>重启后使用 <code>fdisk -l</code> 查看当前分区状态；</li>
+<li>使用 <code>mkfs.ext4 -O ^has_journal /dev/sda1</code> 命令格式化 U 盘分区；</li>
+<li>使用 <code>blkid</code> 命令读取 U 盘 UUID 并设置其自动挂载。</li>
+</ol>
+<h3 id="d67f3f43de03f967069fae3e553e67d0">安装并配置 Aria2</h3>
+<p>在 Luci 界面的 <code>系统</code> → <code>软件包</code> 里找寻并安装 aria2，随后更新配置文件，以我自己的情况为例，我的 aria2.conf 内容如下：</p>
+<div class="codehilite"><pre>enable-rpc=true
+rpc-listen-all=true
+rpc-allow-origin-all=true
+log-level=error
+disable-ipv6=true
+max-concurrent-downloads=1
+max-connection-per-server=10
+min-split-size=2M
+split=10
+max-overall-download-limit=0
+max-download-limit=0
+force-save=false
+save-session-interval=60
+file-allocation=none
+disk-cache=16M
+dir=/mnt/sda1
+log=/mnt/sda1/aria2.log
+input-file=/root/aria2.session
+save-session=/root/aria2.session
+auto-file-renaming=true
+auto-save-interval=30
+</pre></div>
+
+
+<p>其中的 <code>aria2.session</code>、<code>aria2.log</code> 及 <code>aria2.conf</code> 3 个文件应按照 <code>aria2.conf</code> 中的配置置于相应地址。随后使用 Putty 进入路由，输入命令 <code>aria2c --conf-path=/mnt/sda1/aria2.conf -c -D</code>，此时 aria2 便可开启，也可以使用 yaaw，具体请参考 <a href="http://blog.binux.me/2012/06/aria2_yaaw/" title="aria2 + web 前端部署指南">“aria2 + web 前端部署指南”</a>。在开机启动项中添加 <code>nice -n 20 aria2c --conf-path=/mnt/sda1/aria2.conf -c -D</code> 便可使 aria2 开机启动，同时限制开启时的 cpu 使用率为 20%，不知道我的理解是否正确。</p>
+<h3 id="67ccb6ae961a467ce30943ab1cb1ac68">限制 Aria2 的 CPU 使用率</h3>
+<p>Aria2 在不受限制的情况下 CPU 使用率肯定是会影响路由稳定的，所以设个限制。在 <code>CPU 占用率限制</code> 中添加下图所示内容。</p>
+<p><a href="http://dn-nero.qbox.me/360-openwrt-1.png" title="Aria2 限制 CPU" data-fancybox-group="gallery">
+    <img class="aligncenter" src="http://dn-nero.qbox.me/360-openwrt-1.png" alt="Aria2 限制 CPU" />
+</a></p>
+<h3 id="60cf9f743716f2cf1ed0ac7a3563ad52">读取 ext4 格式 U 盘</h3>
+<p>前面设置 U 盘格式为 ext4，使用 Aria2 下载完成后一般开启 Samba 就能局域网访问，但访问速度不佳，所以考虑直接读取 U 盘，由于 Windows 系统不能直接读取 U 盘中的内容，所以需要借助第三方程序，经过反复测试，筛选出两个程序，在此记录并作推荐：<code>Ext2Fsd</code> 与 <code>Paragon ExtFS for Windows</code>，前者只能只读，后者可写 U 盘，两者均建议使用 <code>复制</code> 命令以减少文件被损坏的情况发生。复制速度参见下图：</p>
+<p><a href="http://dn-nero.qbox.me/360-openwrt-2.png" title="复制速度" data-fancybox-group="gallery">
+    <img class="aligncenter" src="http://dn-nero.qbox.me/360-openwrt-2.png" alt="复制速度" />
+</a></p>
+<h3 id="6aa4ba7e676ffeda11262cd5b7c18218">计划任务</h3>
+<p>白天人不在家，离线下载完成后可以关闭路由，等人回来之后在打开路由。让路由在早上 9 点 50 自动关闭 wifi，下午 5 点 50 分自动重启。</p>
+<div class="codehilite"><pre>50 09 * * * wifi down
+50 17 * * * reboot
+</pre></div>
+
+
+<h3 id="27d1215718e548798395f11e464e65cb">备份/恢复固件</h3>
+<p>设置太过麻烦，所以生成备份文件是比较稳妥的办法。如果只备份 <code>etc</code> 目录则可直接使用 <code>系统</code> 下的 <code>备份/升级</code>。若要备份整个固件则需要使用几行命令：</p>
+<ol>
+<li>
+<p>在 Putty 下使用 <code>cat /proc/mtd</code> 命令查看 firmware 分区对应的 mtd 设备。如下图，我的 firmware 分区为 mtd4。</p>
+<p><a href="http://dn-nero.qbox.me/360-openwrt-3.jpg" title="查看分区" data-fancybox-group="gallery">
+        <img class="aligncenter" src="http://dn-nero.qbox.me/360-openwrt-3.jpg" alt="查看分区" />
+</a></p>
+</li>
+<li>
+<p>生成固件备份文件于 <code>/tmp</code> 目录下：<code>dd if=/dev/mtd4 of=/tmp/customized_backup.bin</code>，然后使用 WinSCP 将 <code>/tmp</code> 目录下的 <code>customized_backup.bin</code> 文件拷贝至本地。</p>
+</li>
+<li>
+<p>反之，如要恢复系统，则需将本地的 <code>customized_backup.bin</code> 拷贝至路由 <code>/tmp</code> 目录下，然后使用命令：<code>mtd write -r /tmp/customized_backup.bin firmware</code> 即可完成系统恢复（或直接进入 UBoot 界面进行固件升级）。恢复完成路由器会自行重启（若出现 aria2c 添加 yaaw 任务即刻失败现象，请直接利用该法恢复系统）。</p>
+</li>
+</ol>
+<p><br>
+路由现在是中继别人的信号。虽然有访问上级路由的权限，但还是没有折腾出外网访二级问路由这一功能，挺失落的，暂时折腾到此……</p>
+<h3 id="d54d3b94ffaf07589de3006395891685">Update 2014-11-24 12:15</h3>
+<p>Adbyby 已有 openwrt 版本的程序，且可支持 360 路由器，<a href="http://bbs.360safe.com/thread-4934688-1-1.html" title="360 路由安装广告屏蔽大师">论坛</a> 上已有教程，且本人也已试用，效果还不错。不过我这边安装上 Adbyby 后路由经常无响应，可能是缓存不够（已暂停使用路由版 Adbyby）。</p>
+<p><br><br></p>
+<h3 id="2a302fa545ce4445b25970650930debd">参考文章</h3>
+<ul>
+<li><a href="http://www.right.com.cn/forum/thread-146084-1-1.html" title="360 安全路由器刷 openwrt 方法">360 安全路由器刷 openwrt 方法</a></li>
+<li><a href="http://www.right.com.cn/forum/thread-147319-1-1.html" title="360 路由 openwrt 固件">360 路由 openwrt 固件</a></li>
+<li><a href="http://www.leiphone.com/news/201406/diy-a-smart-router-topic-increase-memory-3.html" title="跟 hoowa 学做智能路由（十）：扩充 RAM 和 FLASH">跟 hoowa 学做智能路由（十）：扩充 RAM 和 FLASH</a></li>
+<li><a href="http://miantiao.me/play-openwrt-2.html" title="openwrt 折腾记（二）">openwrt 折腾记（二）</a></li>
+<li><a href="http://aria2.sourceforge.net/manual/en/html/aria2c.html" title="aria2c 参数手册">aria2c 参数手册</a></li>
+<li><a href="http://hi.baidu.com/lhaix/item/c69c1f87f7a442c498255fe0" title="利用 cpulimit 限制 aria2 的 cpu 占用">利用 cpulimit 限制 aria2 的 cpu 占用</a></li>
+</ul>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<div class="ds-thread" data-author-key="1"></div>
+<!-- Duoshuo Comment END -->
+</div>
+
+</div>
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-10-20 21:21</div>
+<div class="niu2-sidebar-label"><i class="fa fa-pencil"></i>最后修改</div>
+<div class="niu2-sidebar-value" itemprop="dateModified">2015-01-27 22:04</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/openwrt.html">Openwrt</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">折腾 360 路由</a></li>
+    <li><a href='#300b34e58a0fc5ec5bb570dd6601f1c6'>刷 Openwrt</a></li><li><a href='#3d9befcfabeff7e2972165d22183a838'>刷不死 UBoot</a></li><li><a href='#8c9b7d36a7d1bc1ee133bfe2e173c323'>挂载 U 盘</a></li><li><a href='#d67f3f43de03f967069fae3e553e67d0'>安装并配置 Aria2</a></li><li><a href='#67ccb6ae961a467ce30943ab1cb1ac68'>限制 Aria2 的 CPU 使用率</a></li><li><a href='#60cf9f743716f2cf1ed0ac7a3563ad52'>读取 ext4 格式 U 盘</a></li><li><a href='#6aa4ba7e676ffeda11262cd5b7c18218'>计划任务</a></li><li><a href='#27d1215718e548798395f11e464e65cb'>备份/恢复固件</a></li><li><a href='#d54d3b94ffaf07589de3006395891685'>Update 2014-11-24 12:15</a></li><li><a href='#2a302fa545ce4445b25970650930debd'>参考文章</a></li>
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;折腾 360 路由
+</div>
+
+<div class="hidden">
+<ul>
+<li class="prev"><a href="http://lusir.me/rec-songs-of-black-eyed-peas.html">上一篇</a></li>
+<li class="next"><a href="http://lusir.me/win-e-failure.html">下一篇</a></li>
+</ul>
+</div>
+
+<div class="hidden">
+ 
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p>
+&copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+Theme by <a href="http://atime.me">Ma Wenbao</a>. 
+No Right Reserved<a href="https://plus.google.com/+NeroZheng?rel=author" rel="author">.</a>
+</p>
+</div></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/niu2.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">onContentLoaded();</script>
+
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36540079-1', 'lusir.me');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script>
+
+<!-- Baidu Tongji -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

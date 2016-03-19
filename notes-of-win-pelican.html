@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--
+(¯`·.¸¸.·´¯`·.¸¸.-> ĊÄĻĻ MË ĻŮŚÏŖ <-.¸¸.·´¯`·.¸¸.·´¯)
+-->
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="author" content="Nero Zheng" />
+<meta name="generator" content="Pelican" />
+<meta name="description" content="Pelican 在 Windows 下的静态文件及目录拷贝 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta property="qc:admins" content="315026325312655" />
+<meta property="wb:webmaster" content="8e383b094667a02d" />
+<title>Pelican 在 Windows 下的静态文件及目录拷贝 - 擼sirの避風港</title>
+<link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
+<link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
+<link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<script src="http://lusir.me/theme/js/basket.min.js"></script>
+<script>
+basket.require({ url: 'http://lusir.me/theme/css/bootstrap.min.css' },{ url: 'http://lusir.me/theme/css/niu2.css', unique: 0.5 },{ url: 'http://lusir.me/theme/font-awesome/css/font-awesome.min.css', unique: 0.5 },{ url: 'http://lusir.me/theme/css/pygments/github.css' },{ url: 'http://lusir.me/theme/css/jquery.fancybox.css' },{ url: 'http://lusir.me/hermit/style/hermit.min.css', unique: 0.5 })
+.then(function(responses) {
+_stylesheet.appendStyleSheet(responses[0], function() {});
+	basket.require({ url: 'http://lusir.me/theme/js/bootstrap.min.js' },{ url: 'http://lusir.me/theme/js/jquery-1.11.0.min.js' },{ url: 'http://lusir.me/theme/js/niu2.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/fancy-loading.js' },{ url: 'http://lusir.me/theme/js/jquery.fancybox.pack.js' },{ url: 'http://lusir.me/hermit/script/hermit.min.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/jquery-1.4.4.min.js' },{ url: 'http://lusir.me/theme/js/slimbox2.js' },{ url: 'http://lusir.me/theme/soundmanager2/script/soundmanager2.min.js' },{ url: 'http://lusir.me/theme/js/tagcloud.min.js' });});
+</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
+<script type="text/javascript">window.onload = function() {  };</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="canonical" href="http://lusir.me/notes-of-win-pelican.html" />
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://lusir.me/theme/js/html5shiv.js"></script>
+<script src="http://lusir.me/theme/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<![endif]-->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+<meta itemprop="inLanguage" content="zh-CN">
+<div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://lusir.me"><i class="fa fa-home"></i>擼sirの避風港</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+<ul class="nav navbar-nav">
+<li><a href="http://lusir.me/about.html" title="关于"><i class="fa fa-anchor"></i>关于</a></li>
+<li><a href="http://lusir.me/archives.html" title="存档"><i class="fa fa-archive"></i>存档</a></li>
+<li><a href="http://lusir.me/tag/" title="标签"><i class="fa fa-tag"></i>标签</a></li>
+<!-- category dropdown list -->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://lusir.me/collection/index.html"><i class="fa fa-briefcase"></i>搜藏(4)</a></li>
+<li><a href="http://lusir.me/nonsense/index.html"><i class="fa fa-trash"></i>扯(1)</a></li>
+<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(65)</a></li>
+</ul>
+</li>
+<!--  self defined dropdown list --></ul>
+<!-- right nav bar -->
+<ul class="nav navbar-nav navbar-right">
+<!-- google custom search --><li>
+<div id="niu2-cse-wrapper">
+<div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+<form action="/search.html" method="get">
+<div class="form-group">
+<input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
+</div>
+</form>
+</div>
+<div id="niu2-cse-ctrl-box" class="navbar-nav"><i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span></div>
+</div>
+</li></ul>
+</nav>
+</div>
+</div></div>
+		
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">Pelican 在 Windows 下的静态文件及目录拷贝</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>此文乃 2 个月前的一篇草稿整理而成。</p>
+
+
+<p>今天在网上看到有人发布了整理过后的《七天学会 NodeJS》，就瞟了一下（简直就是天书），不过其中的<a href="http://nqdeng.github.io/7-days-nodejs/#3.2.4" title="Path（路径）">『Path（路径）』</a>一节看了却很有感触，不免想起 <a href="http://lusir.me/static-blog.html" title="Pelican + Niux2 使用记录">刚折腾 Pelican </a> 时遇到相同问题时的情景。
+</p>
+<p>在旧版 Pelican 中，如果我们想定义静态文件，使它在每次生成的时候拷贝到 output 目录，以 robots.txt 为例，则我们可以在 content/extra 下放置定义好的 robots.txt 文件，并在 pelicanconf.py 中更改或添加 FILES_TO_COPY项：</p>
+<div class="codehilite"><pre><span class="n">FILES_TO_COPY</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s">&quot;extra/robots.txt&quot;</span><span class="p">,</span> <span class="s">&quot;robots.txt&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>3.3 版的 Pelican 废弃了 <code>FILES_TO_COPY</code> 函数，转而使用 <code>STATIC_PATHS</code> 和 <code>EXTRA_PATH_METADATA</code> 进行代替：</p>
+<div class="codehilite"><pre><span class="c">#静态目录</span>
+<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">&#39;images&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="c">#静态文件</span>
+<span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&#39;extra/robots.txt&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;path&#39;</span><span class="p">:</span> <span class="s">&#39;robots.txt&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+</pre></div>
+
+
+<p>然而在 Windows 下，该函数是无效的，估计是因为 Windows 的路径写法对于斜杠（/）与反斜杠（\）的定义与大众定义不同。（经查阅，的确如此）</p>
+<p>我最后在 pelicanconf.py 中的写法如下：</p>
+<div class="codehilite"><pre><span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;extra&#39;</span><span class="p">,</span> <span class="s">&#39;robots.txt&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s">&#39;path&#39;</span><span class="p">:</span> <span class="s">&#39;robots.txt&#39;</span><span class="p">},</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;extra&#39;</span><span class="p">,</span> <span class="s">&#39;jquery.min.map&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s">&#39;path&#39;</span><span class="p">:</span> <span class="s">&#39;jquery.min.map&#39;</span><span class="p">},</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;extra&#39;</span><span class="p">,</span> <span class="s">&#39;CNAME&#39;</span><span class="p">):</span> <span class="p">{</span><span class="s">&#39;path&#39;</span><span class="p">:</span> <span class="s">&#39;CNAME&#39;</span><span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>当时不太了解具体的原理，<a href="http://nqdeng.github.io/7-days-nodejs/#3.2.4" title="Path（路径）">『Path（路径）』</a>一节给出的解释是：<code>path.join</code> 将传入的多个路径拼接为标准路径。该方法可避免手工拼接路径字符串的繁琐，并且能在不同系统下正确使用相应的路径分隔符。如：</p>
+<div class="codehilite"><pre><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;foo&#39;</span><span class="p">,</span> <span class="s">&#39;..&#39;</span><span class="p">,</span> <span class="s">&#39;bar&#39;</span><span class="p">,</span> <span class="s">&#39;baz/foo&#39;</span><span class="p">);</span> 
+<span class="o">//</span> <span class="s">&#39;bar/baz/foo&#39;</span> <span class="n">on</span> <span class="n">OSX</span> <span class="ow">and</span> <span class="n">Linux</span>
+<span class="o">//</span> <span class="s">&#39;bar</span><span class="se">\\</span><span class="s">baz</span><span class="se">\\</span><span class="s">foo&#39;</span> <span class="n">on</span> <span class="n">Windows</span>
+</pre></div>
+
+
+<p>这样一来就好理解多了，记录一下……</p>
+<p><strong>update 2015.03.05</strong>：Windows 与 Linux 的路径分隔符差异是一个需要注意的地方，前阵子将 Windows 中 Firefox 下的正常 uc 脚本拿到 Linux 下去使用结果发现没反应，检查好久才发现是路径分隔符在作祟。</p>
+<p>全世界是不是都在下雨……</p>
+<div class="hermit" xiami="collect:31574785" loop="1" auto="1">
+<div class="hermit-box">
+<div class="hermit-controls">
+<div class="hermit-button"></div>
+<div class="hermit-detail">左键轻击列表播放或暂停</div>
+<div class="hermit-duration"></div>
+<div class="hermit-volume"></div>
+<div class="hermit-listbutton"></div>
+</div>
+<div class="hermit-prosess">
+<div class="hermit-loaded"></div>
+<div class="hermit-prosess-bar">
+<div class="hermit-prosess-after"></div>
+</div>
+</div>
+</div>
+<div class="hermit-list"></div>
+</div>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<div class="ds-thread" data-author-key="1"></div>
+<!-- Duoshuo Comment END -->
+</div>
+
+</div>
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-05-24 16:40</div>
+<div class="niu2-sidebar-label"><i class="fa fa-pencil"></i>最后修改</div>
+<div class="niu2-sidebar-value" itemprop="dateModified">2015-03-05 22:32</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/pelican.html">Pelican</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/music.html">Music</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">Pelican 在 Windows 下的静态文件及目录拷贝</a></li>
+    
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;Pelican 在 Windows 下的静态文件及目录拷贝
+</div>
+
+<div class="hidden">
+<ul>
+<li class="prev"><a href="http://lusir.me/customize-purecodec-player.html">上一篇</a></li>
+<li class="next"><a href="http://lusir.me/enable-keyboard-in-linux.html">下一篇</a></li>
+</ul>
+</div>
+
+<div class="hidden">
+<p>相关文章</p>
+<ul>
+<li><a href="http://lusir.me/after-enabling-application-cache.html">启用 Application Cache（续）</a></li>
+<li><a href="http://lusir.me/embed-hermit-player.html">在网页中嵌入 hermit 播放器</a></li>
+<li><a href="http://lusir.me/solution-to-insufficient-permissions.html">Weibo 提示 “Insufficient App Permissions” 的解决办法</a></li>
+<li><a href="http://lusir.me/solutions-to-wp8.html">WP8 遭遇问题记录</a></li>
+<li><a href="http://lusir.me/rec-songs-of-black-eyed-peas.html">Black.Eyed.Peas 歌曲推荐</a></li>
+<li><a href="http://lusir.me/enable-keyboard-in-linux.html">Linux 下 Lenovo S10-3C 开启键盘</a></li>
+<li><a href="http://lusir.me/shutdown-windows-in-cmd.html">Windows 下命令行关机</a></li>
+<li><a href="http://lusir.me/customize-purecodec-player.html">修改注册表自定义完美解码播放器</a></li>
+</ul>
+ 
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p>
+&copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+Theme by <a href="http://atime.me">Ma Wenbao</a>. 
+No Right Reserved<a href="https://plus.google.com/+NeroZheng?rel=author" rel="author">.</a>
+</p>
+</div></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/niu2.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">onContentLoaded();</script>
+
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36540079-1', 'lusir.me');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script>
+
+<!-- Baidu Tongji -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

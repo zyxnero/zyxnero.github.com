@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+(¯`·.¸¸.·´¯`·.¸¸.-> ĊÄĻĻ MË ĻŮŚÏŖ <-.¸¸.·´¯`·.¸¸.·´¯)
+-->
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="author" content="Nero Zheng" />
+<meta name="generator" content="Pelican" />
+<meta name="description" content="优化 AutoCAD 启动运行速度 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta property="qc:admins" content="315026325312655" />
+<meta property="wb:webmaster" content="8e383b094667a02d" />
+<title>优化 AutoCAD 启动运行速度 - 擼sirの避風港</title>
+<link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
+<link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
+<link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<script src="http://lusir.me/theme/js/basket.min.js"></script>
+<script>
+basket.require({ url: 'http://lusir.me/theme/css/bootstrap.min.css' },{ url: 'http://lusir.me/theme/css/niu2.css', unique: 0.5 },{ url: 'http://lusir.me/theme/font-awesome/css/font-awesome.min.css', unique: 0.5 },{ url: 'http://lusir.me/theme/css/pygments/github.css' },{ url: 'http://lusir.me/theme/css/jquery.fancybox.css' },{ url: 'http://lusir.me/hermit/style/hermit.min.css', unique: 0.5 })
+.then(function(responses) {
+_stylesheet.appendStyleSheet(responses[0], function() {});
+	basket.require({ url: 'http://lusir.me/theme/js/bootstrap.min.js' },{ url: 'http://lusir.me/theme/js/jquery-1.11.0.min.js' },{ url: 'http://lusir.me/theme/js/niu2.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/fancy-loading.js' },{ url: 'http://lusir.me/theme/js/jquery.fancybox.pack.js' },{ url: 'http://lusir.me/hermit/script/hermit.min.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/jquery-1.4.4.min.js' },{ url: 'http://lusir.me/theme/js/slimbox2.js' },{ url: 'http://lusir.me/theme/soundmanager2/script/soundmanager2.min.js' },{ url: 'http://lusir.me/theme/js/tagcloud.min.js' });});
+</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
+<script type="text/javascript">window.onload = function() {  };</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="canonical" href="http://lusir.me/autocad-acc.html" />
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://lusir.me/theme/js/html5shiv.js"></script>
+<script src="http://lusir.me/theme/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<![endif]-->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+<meta itemprop="inLanguage" content="zh-CN">
+<div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://lusir.me"><i class="fa fa-home"></i>擼sirの避風港</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+<ul class="nav navbar-nav">
+<li><a href="http://lusir.me/about.html" title="关于"><i class="fa fa-anchor"></i>关于</a></li>
+<li><a href="http://lusir.me/archives.html" title="存档"><i class="fa fa-archive"></i>存档</a></li>
+<li><a href="http://lusir.me/tag/" title="标签"><i class="fa fa-tag"></i>标签</a></li>
+<!-- category dropdown list -->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://lusir.me/collection/index.html"><i class="fa fa-briefcase"></i>搜藏(4)</a></li>
+<li><a href="http://lusir.me/nonsense/index.html"><i class="fa fa-trash"></i>扯(1)</a></li>
+<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(65)</a></li>
+</ul>
+</li>
+<!--  self defined dropdown list --></ul>
+<!-- right nav bar -->
+<ul class="nav navbar-nav navbar-right">
+<!-- google custom search --><li>
+<div id="niu2-cse-wrapper">
+<div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+<form action="/search.html" method="get">
+<div class="form-group">
+<input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
+</div>
+</form>
+</div>
+<div id="niu2-cse-ctrl-box" class="navbar-nav"><i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span></div>
+</div>
+</li></ul>
+</nav>
+</div>
+</div></div>
+		
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">优化 AutoCAD 启动运行速度</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>最近几个版本的 AutoCAD 对于系统资源的要求越来越大了，还是老版本轻便一些。采用以下几个步骤将 AutoCAD 不必要的加载除掉。
+</p>
+<h3 id="f1054629ae86e030a566d033d7f0cddb">步骤一</h3>
+<p>安装 AutoCAD 产品后，顺便安装 AutoCAD 管理工具，亦即 <code>CMControl</code>。安装完成后打开 CAD 管理员控制实用程序，选择要修改的产品，即 CAD 版本号，禁用所有通信。</p>
+<p><a href="http://dn-nero.qbox.me/cad-opti.jpg" title="禁用 CAD 通信中心" data-fancybox-group="gallery">
+    <img class="aligncenter" src="http://dn-nero.qbox.me/cad-opti.jpg" alt="禁用 CAD 通信中心" />
+</a></p>
+<h3 id="7d1cce80eca81796dd816477c72e7b4b">步骤二</h3>
+<p>运行 AutoCAD 后，打开进程管理器，会发现这样一个进程：WSCommCntr1.exe，它是 AutoCAD 的后台程序，会发送 AutoCAD 的版本信息和注册信息给 AutoDesk 公司，并自动收集相关信资料，包括图集、信息、更新等。</p>
+<p>将 <code>C:\Program Files (x86)\Common Files\Autodesk Shared</code> 目录下的 <code>WSCommCntr1.exe</code> 与 AutoCAD 安装目录下的 <code>WSCommCntrAcCon.arx</code> 重命名。</p>
+<h3 id="73e8816f34559f5622f8eb4e41d8259b">步骤三</h3>
+<p>在 AutoCAD 命令行中输入 <code>VTENABLE</code>，依照提示输入 <code>0</code> 以启用平滑切换显示区域，加快启动速度，接着回车。</p>
+<h3 id="2eda685cfb7b0f9473eb4e03a9544214">步骤四（待验证）</h3>
+<p>打开 IE 浏览器，将“Internet 选项”→“高级”选项卡下的“检查发行商的证书是否已吊销”项取消勾选。</p>
+<h3 id="5ca581389e16babfae591593e9a717cb">步骤五</h3>
+<p>这一步是禁止 AutoCAD 联网，ESET Smart Security 及众多防火墙都能实现，参考<a href="http://lusir.me/ess-filter.html" title="ESET Smart Security 添加黑白名单">ESET Smart Security 添加黑白名单</a>。</p>
+<p><br></p>
+<p>近日 Autodesk 公司发布了 AutoCAD 2015，同时宣布向全球学生教师和教育机构提供全功能教育版，包括 AutoCAD、3DMax、Maya 等。不管出于什么目的，不管其影响如何，这种行为还是值得点个赞的！</p>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<div class="ds-thread" data-author-key="1"></div>
+<!-- Duoshuo Comment END -->
+</div>
+
+</div>
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-12-11 21:30</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/autocad.html">AutoCAD</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">优化 AutoCAD 启动运行速度</a></li>
+    <li><a href='#f1054629ae86e030a566d033d7f0cddb'>步骤一</a></li><li><a href='#7d1cce80eca81796dd816477c72e7b4b'>步骤二</a></li><li><a href='#73e8816f34559f5622f8eb4e41d8259b'>步骤三</a></li><li><a href='#2eda685cfb7b0f9473eb4e03a9544214'>步骤四（待验证）</a></li><li><a href='#5ca581389e16babfae591593e9a717cb'>步骤五</a></li>
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;优化 AutoCAD 启动运行速度
+</div>
+
+<div class="hidden">
+<ul>
+<li class="prev"><a href="http://lusir.me/proverb-with-thing.html">上一篇</a></li>
+<li class="next"><a href="http://lusir.me/merciless-bitches-and-actors.html">下一篇</a></li>
+</ul>
+</div>
+
+<div class="hidden">
+ 
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p>
+&copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+Theme by <a href="http://atime.me">Ma Wenbao</a>. 
+No Right Reserved<a href="https://plus.google.com/+NeroZheng?rel=author" rel="author">.</a>
+</p>
+</div></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/niu2.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">onContentLoaded();</script>
+
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36540079-1', 'lusir.me');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script>
+
+<!-- Baidu Tongji -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--
+(¯`·.¸¸.·´¯`·.¸¸.-> ĊÄĻĻ MË ĻŮŚÏŖ <-.¸¸.·´¯`·.¸¸.·´¯)
+-->
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="author" content="Nero Zheng" />
+<meta name="generator" content="Pelican" />
+<meta name="description" content="滥用“Chmod 777 -R /”后的补救措施 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta property="qc:admins" content="315026325312655" />
+<meta property="wb:webmaster" content="8e383b094667a02d" />
+<title>滥用“Chmod 777 -R /”后的补救措施 - 擼sirの避風港</title>
+<link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
+<link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
+<link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<script src="http://lusir.me/theme/js/basket.min.js"></script>
+<script>
+basket.require({ url: 'http://lusir.me/theme/css/bootstrap.min.css' },{ url: 'http://lusir.me/theme/css/niu2.css', unique: 0.5 },{ url: 'http://lusir.me/theme/font-awesome/css/font-awesome.min.css', unique: 0.5 },{ url: 'http://lusir.me/theme/css/pygments/github.css' },{ url: 'http://lusir.me/theme/css/jquery.fancybox.css' },{ url: 'http://lusir.me/hermit/style/hermit.min.css', unique: 0.5 })
+.then(function(responses) {
+_stylesheet.appendStyleSheet(responses[0], function() {});
+	basket.require({ url: 'http://lusir.me/theme/js/bootstrap.min.js' },{ url: 'http://lusir.me/theme/js/jquery-1.11.0.min.js' },{ url: 'http://lusir.me/theme/js/niu2.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/fancy-loading.js' },{ url: 'http://lusir.me/theme/js/jquery.fancybox.pack.js' },{ url: 'http://lusir.me/hermit/script/hermit.min.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/jquery-1.4.4.min.js' },{ url: 'http://lusir.me/theme/js/slimbox2.js' },{ url: 'http://lusir.me/theme/soundmanager2/script/soundmanager2.min.js' },{ url: 'http://lusir.me/theme/js/tagcloud.min.js' });});
+</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
+<script type="text/javascript">window.onload = function() {  };</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="canonical" href="http://lusir.me/rescue-linux-on-abusing-chmod.html" />
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://lusir.me/theme/js/html5shiv.js"></script>
+<script src="http://lusir.me/theme/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<![endif]-->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+<meta itemprop="inLanguage" content="zh-CN">
+<div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://lusir.me"><i class="fa fa-home"></i>擼sirの避風港</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+<ul class="nav navbar-nav">
+<li><a href="http://lusir.me/about.html" title="关于"><i class="fa fa-anchor"></i>关于</a></li>
+<li><a href="http://lusir.me/archives.html" title="存档"><i class="fa fa-archive"></i>存档</a></li>
+<li><a href="http://lusir.me/tag/" title="标签"><i class="fa fa-tag"></i>标签</a></li>
+<!-- category dropdown list -->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://lusir.me/collection/index.html"><i class="fa fa-briefcase"></i>搜藏(4)</a></li>
+<li><a href="http://lusir.me/nonsense/index.html"><i class="fa fa-trash"></i>扯(1)</a></li>
+<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(65)</a></li>
+</ul>
+</li>
+<!--  self defined dropdown list --></ul>
+<!-- right nav bar -->
+<ul class="nav navbar-nav navbar-right">
+<!-- google custom search --><li>
+<div id="niu2-cse-wrapper">
+<div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+<form action="/search.html" method="get">
+<div class="form-group">
+<input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
+</div>
+</form>
+</div>
+<div id="niu2-cse-ctrl-box" class="navbar-nav"><i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span></div>
+</div>
+</li></ul>
+</nav>
+</div>
+</div></div>
+		
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">滥用“Chmod 777 -R /”后的补救措施</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>很早就听人说过不要乱改 Linux 根目录下的文件，尤其不要使用 <code>rm -rf /*</code>，不过为了在登录时少输入一次密码，我使上了 <code>chmod 777 -R /</code>，本以为登录会更便捷，谁知连系统都无法登录进入了。
+</p>
+<p>解决办法如下：</p>
+<p>1. 找到另外一台系统相同的正常机，执行以下内容：</p>
+<div class="codehilite"><pre><span class="n">getfacl</span> <span class="o">/</span> <span class="o">-</span><span class="n">R</span> <span class="o">&gt;/</span><span class="n">root</span><span class="o">/</span><span class="n">facl</span><span class="p">.</span><span class="n">txt</span>
+<span class="n">find</span> <span class="o">/</span> <span class="o">-</span><span class="n">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">perm</span> <span class="o">-</span><span class="mo">02000</span> <span class="o">&gt;/</span><span class="n">root</span><span class="o">/</span><span class="n">file200</span><span class="p">.</span><span class="n">txt</span>
+<span class="n">find</span> <span class="o">/</span> <span class="o">-</span><span class="n">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">perm</span> <span class="o">-</span><span class="mo">04000</span> <span class="o">&gt;/</span><span class="n">root</span><span class="o">/</span><span class="n">file400</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+
+
+<p>2. 将正常机中 /root 下生成的 facl.txt、file200.txt 及 file400.txt 三个文件拷贝到异常机的 /root 目录下，新建 changemod.sh 后复制到异常机 root 目录（复制文件可能需要 LiveCD），内容如下：</p>
+<div class="codehilite"><pre><span class="cp">#!/bin/bash</span>
+<span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="err">`</span><span class="n">cat</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">file400</span><span class="p">.</span><span class="n">txt</span><span class="err">`</span>
+<span class="k">do</span>
+<span class="n">chmod</span> <span class="n">u</span><span class="o">+</span><span class="n">s</span> <span class="err">$</span><span class="n">i</span>
+<span class="n">done</span>
+<span class="k">for</span> <span class="n">j</span> <span class="n">in</span> <span class="err">`</span><span class="n">cat</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">file200</span><span class="p">.</span><span class="n">txt</span><span class="err">`</span>
+<span class="k">do</span>
+<span class="n">chmod</span> <span class="n">g</span><span class="o">+</span><span class="n">s</span> <span class="err">$</span><span class="n">i</span>
+<span class="n">done</span>
+<span class="n">chmod</span> <span class="n">o</span><span class="o">+</span><span class="n">t</span> <span class="o">/</span><span class="n">tmp</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">tmp</span>
+</pre></div>
+
+
+<p>3. 在异常机中分别键入以下两段（忘了是在 LiveCD 下还是 <code>恢复模式</code> 中了）</p>
+<div class="codehilite"><pre><span class="n">cd</span> <span class="o">/</span>
+<span class="n">setfacl</span> <span class="o">--</span><span class="n">restore</span><span class="o">=/</span><span class="n">root</span><span class="o">/</span><span class="n">facl</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span class="n">cd</span> <span class="o">/</span><span class="n">root</span>
+<span class="n">dos2unix</span> <span class="n">changemod</span><span class="p">.</span><span class="n">sh</span>
+<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">changemod</span><span class="p">.</span><span class="n">sh</span>
+<span class="p">.</span><span class="o">/</span><span class="n">changemod</span><span class="p">.</span><span class="n">sh</span>
+</pre></div>
+
+
+<p>至此，重启正常开机。</p>
+<p>文中方法来源于网络，测试可行，作备份……</p>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<div class="ds-thread" data-author-key="1"></div>
+<!-- Duoshuo Comment END -->
+</div>
+
+</div>
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2015-07-12 20:09</div>
+<div class="niu2-sidebar-label"><i class="fa fa-briefcase"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/collection/index.html">搜藏</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/linux.html">Linux</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">滥用“Chmod 777 -R /”后的补救措施</a></li>
+    
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/collection/index.html" itemprop="url"><span itemprop="title">搜藏</span></a></div>&nbsp;&gt;&nbsp;滥用“Chmod 777 -R /”后的补救措施
+</div>
+
+<div class="hidden">
+<ul>
+<li class="prev"><a href="http://lusir.me/some-essays-201503.html">上一篇</a></li>
+</ul>
+</div>
+
+<div class="hidden">
+<p>相关文章</p>
+<ul>
+<li><a href="http://lusir.me/cp-and-tar.html">Linux 中的复制与打包命令</a></li>
+</ul>
+ 
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p>
+&copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+Theme by <a href="http://atime.me">Ma Wenbao</a>. 
+No Right Reserved<a href="https://plus.google.com/+NeroZheng?rel=author" rel="author">.</a>
+</p>
+</div></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/niu2.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">onContentLoaded();</script>
+
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36540079-1', 'lusir.me');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script>
+
+<!-- Baidu Tongji -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

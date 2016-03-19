@@ -1,6 +1,12 @@
-/*
- * Depends on jquery 1.10
- */
+/* @author: mawenbao@hotmail.com */
+
+// set theme path, got from http://stackoverflow.com/questions/8523200/javascript-get-current-filescript-path
+(function() {
+    var scriptEls = document.getElementsByTagName('script');
+    var thisScriptEl = scriptEls[scriptEls.length - 1];
+    var scriptPath = thisScriptEl.src;
+    window.gThemePath = scriptPath.substr(0, scriptPath.lastIndexOf('/js/'));
+})();
 
 window.gEnableTocStatusUpdate = true;
 window.gEnableTocListAutoScroll = true;
@@ -15,14 +21,15 @@ $(document).ready(function() {
 });
 
 $(document.links).filter(function() {
-    return this.hostname != window.location.hostname;
+    return this.hostname != window.location.hostname && this.hostname != 'atime.me' && this.hostname != 'plus.google.com';
 }).attr('rel', 'external nofollow');
 
 $(document.links).filter(function() {
-    return this.hostname != window.location.hostname;
+    return this.hostname != window.location.hostname && this.hostname != 'plus.google.com';
 }).attr('target', '_blank');
 
 function onContentLoaded() {
+    initHermitPlayer();
     initFootnote();
     $(window).scroll(function() {
         toggleSidebarTocFixed();
@@ -43,6 +50,29 @@ function onContentLoaded() {
     initTocLinkScrollAnimation();
     initAllTocsCtrl();
     locateTocInViewport();
+}
+
+function initHermitPlayer() {
+    if ($('.hermit')[0]) {
+        appendCssFileToHead('/hermit/style/hermit.min.css');
+        window.hermit = {
+            'url': window.gThemePath + '/soundmanager2/swf'
+            //'debugMode': true,
+            //'debugFlash': true,
+            //'flashVersion': 9,
+			//'preferFlash': true,
+        }; // hermit should be global
+        appendJsFileToBody('/soundmanager2/script/soundmanager2.min.js');
+        appendJsFileToBody('/hermit/script/hermit.min.js');
+    }
+}
+
+function appendCssFileToHead(path) {
+    $('<link rel="stylesheet" href="' + window.gThemePath + path + '" type="text/css"/>').appendTo($('head'));
+}
+
+function appendJsFileToBody(path) {
+    $('<script src="' + window.gThemePath + path + '" type="text/javascript"></script>').appendTo($('body'));
 }
 
 function setSidebarTocSize() {

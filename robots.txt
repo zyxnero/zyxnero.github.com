@@ -1,12 +1,10 @@
 User-agent: *
-Disallow: /author/
-Disallow: /hermit/
-Disallow: /images/
-Disallow: /nonsense/
-Disallow: /record/
-Disallow: /tag/
-Disallow: /app/
-Disallow: /theme/
+Disallow: /author
+Disallow: /hermit
+Disallow: /images
+Disallow: /app
+Disallow: /tag
+Disallow: /theme
 Disallow: /*.js$
 Disallow: /*.css$
 Disallow: /*.ico$
@@ -21,8 +19,11 @@ Disallow: /baidu_verify_IO8QL3yBf4.html
 Disallow: /dead_link_sitemap.txt
 Disallow: /nero.appcache
 Disallow: /rss.xml
+Disallow: /baidu_deadlink.xml
 Disallow: /search.html
 Disallow: /404.html
+Disallow: /donate.html
 Disallow: /wumii-verification.htm
+Disallow: /jquery.min.map
 
 Sitemap: http://lusir.me/sitemap.xml

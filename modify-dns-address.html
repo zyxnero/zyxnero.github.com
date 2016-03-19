@@ -1,37 +1,46 @@
 <!DOCTYPE html>
+<!--
+(¯`·.¸¸.·´¯`·.¸¸.-> ĊÄĻĻ MË ĻŮŚÏŖ <-.¸¸.·´¯`·.¸¸.·´¯)
+-->
 <html lang="en-US">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="修改本地连接 DNS 地址 - 作者: Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="修改本地连接 DNS 地址 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
 <title>修改本地连接 DNS 地址 - 擼sirの避風港</title>
-<link rel="prefetch prerender" href="http://lusir.me" />
 <link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
 <link rel="apple-touch-icon" sizes="114x114" href="http://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
 <link rel="icon" type="image/png" href="http://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
-<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/bootstrap.min.css" type="text/css" />
-<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome.min.css" type="text/css" />
-<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/niu2.css" type="text/css" />
-<link rel="stylesheet" href="http://dn-nero.qbox.me/element/css/pygments/github.css" type="text/css" />
-<link rel="stylesheet" href="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.css" type="text/css" />
-<link rel="stylesheet" type="text/css" href="http://lusir.me/hermit/style/hermit.min.css" media="all" />
-<link rel='canonical' href="http://lusir.me/modify-dns-address.html" />
-
+<script src="http://lusir.me/theme/js/basket.min.js"></script>
+<script>
+basket.require({ url: 'http://lusir.me/theme/css/bootstrap.min.css' },{ url: 'http://lusir.me/theme/css/niu2.css', unique: 0.5 },{ url: 'http://lusir.me/theme/font-awesome/css/font-awesome.min.css', unique: 0.5 },{ url: 'http://lusir.me/theme/css/pygments/github.css' },{ url: 'http://lusir.me/theme/css/jquery.fancybox.css' },{ url: 'http://lusir.me/hermit/style/hermit.min.css', unique: 0.5 })
+.then(function(responses) {
+_stylesheet.appendStyleSheet(responses[0], function() {});
+	basket.require({ url: 'http://lusir.me/theme/js/bootstrap.min.js' },{ url: 'http://lusir.me/theme/js/jquery-1.11.0.min.js' },{ url: 'http://lusir.me/theme/js/niu2.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/fancy-loading.js' },{ url: 'http://lusir.me/theme/js/jquery.fancybox.pack.js' },{ url: 'http://lusir.me/hermit/script/hermit.min.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/jquery-1.4.4.min.js' },{ url: 'http://lusir.me/theme/js/slimbox2.js' },{ url: 'http://lusir.me/theme/soundmanager2/script/soundmanager2.min.js' },{ url: 'http://lusir.me/theme/js/tagcloud.min.js' });});
+</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
+<script type="text/javascript">window.onload = function() {  };</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="canonical" href="http://lusir.me/modify-dns-address.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-<script src="http://dn-nero.qbox.me/element/js/html5shiv.js"></script>
-<script src="http://dn-nero.qbox.me/element/js/respond.min.js"></script>
+<script src="http://lusir.me/theme/js/html5shiv.js"></script>
+<script src="http://lusir.me/theme/js/respond.min.js"></script>
 <![endif]-->
 <!--[if IE 7]>
-<link rel="stylesheet" href="http://dn-nero.qbox.me/element/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
 <![endif]-->
 </head>
 
@@ -57,8 +66,9 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
 <ul class="dropdown-menu">
-<li><a href="http://lusir.me/nonsense/index.html"><i class="fa fa-trash-o"></i>扯(1)</a></li>
-<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(37)</a></li>
+<li><a href="http://lusir.me/collection/index.html"><i class="fa fa-briefcase"></i>搜藏(4)</a></li>
+<li><a href="http://lusir.me/nonsense/index.html"><i class="fa fa-trash"></i>扯(1)</a></li>
+<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(65)</a></li>
 </ul>
 </li>
 <!--  self defined dropdown list --></ul>
@@ -85,20 +95,33 @@
 <div id="niu2-main-content" itemprop="articleBody">
 <p>之前的电信劫持门轰动一时，打开的正常页面及非正常页面时不时会跳转到电信的导航页面或其它广告页面。最近发现打开 hao123 后会强制跳转一次，而且后面会多一个 <code>tn=97236842_hao_pg</code> 的尾巴，看着很不舒服。于是在网上搜得以下 Opendns。
 </p>
-<hr />
-<h3 id="a33458dd02372c0059d095c6ce6a25a5">OpenerDNS</h3>
+<h3 id="efbd19d7f6c3790e0ea0d45d97ec32cd">OpenerDNS（貌似已失效）</h3>
 <p><pre>42.120.21.30</pre></p>
-<h3 id="45bdd11fa20b3d010f71cffe56101a2a">V2EX DNS</h3>
+<h3 id="ae3183642b418611ff5169b2cb9ae47c">V2EX DNS（延时稍稍）</h3>
 <p><pre>
 199.91.73.222     LA
 178.79.131.110   London
+</pre></p>
+<h3 id="843399b995ee857403526099413494da">AliDNS（速度还行）</h3>
+<p><pre>
+223.5.5.5
+223.6.6.6
+</pre></p>
+<h3 id="e947833278cde3f8c67429aac675d6c7">OneDNS（据说很纯洁）</h3>
+<p><pre>
+112.124.47.27
+114.215.126.16
+</pre></p>
+<h3 id="4194cbec9bb69ee83e20bd469549c604">本人现用 DNS（适配南方）</h3>
+<p><pre>
+223.5.5.5
+112.124.47.27
 </pre></p>
 <p>还有 Google 提供的 <code>8.8.8.8</code> 及 <code>8.8.4.4</code> 也是不错的选择，修改之后貌似是清爽一些了……</p>
 </div>
     
 <div id="content-comments">
 <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"lusir"};
 (function() {
@@ -109,7 +132,8 @@ var duoshuoQuery = {short_name:"lusir"};
  (document.getElementsByTagName('head')[0] 
   || document.getElementsByTagName('body')[0]).appendChild(ds);
  })();
-</script>            
+</script>
+<div class="ds-thread" data-author-key="1"></div>
 <!-- Duoshuo Comment END -->
 </div>
 
@@ -117,9 +141,11 @@ var duoshuoQuery = {short_name:"lusir"};
 <div id="niu2-right-container" class="col-md-3">
 <div id="niu2-sidebar-meta" class="niu2-sidebar">
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
-<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
 <div class="niu2-sidebar-value" itemprop="datePublished">2014-02-08 19:40</div>
+<div class="niu2-sidebar-label"><i class="fa fa-pencil"></i>最后修改</div>
+<div class="niu2-sidebar-value" itemprop="dateModified">2014-10-17 22:53</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
@@ -133,30 +159,44 @@ var duoshuoQuery = {short_name:"lusir"};
 </div>
 <ol id="niu2-sidebar-toc-list">
 <li><a href="#content-heading">修改本地连接 DNS 地址</a></li>
-    <li><a href='#a33458dd02372c0059d095c6ce6a25a5'>OpenerDNS</a></li><li><a href='#45bdd11fa20b3d010f71cffe56101a2a'>V2EX DNS</a></li>
+    <li><a href='#efbd19d7f6c3790e0ea0d45d97ec32cd'>OpenerDNS（貌似已失效）</a></li><li><a href='#ae3183642b418611ff5169b2cb9ae47c'>V2EX DNS（延时稍稍）</a></li><li><a href='#843399b995ee857403526099413494da'>AliDNS（速度还行）</a></li><li><a href='#e947833278cde3f8c67429aac675d6c7'>OneDNS（据说很纯洁）</a></li><li><a href='#4194cbec9bb69ee83e20bd469549c604'>本人现用 DNS（适配南方）</a></li>
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
-<div class="hidden">  
+<div class="hidden">
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;修改本地连接 DNS 地址
+</div>
+
+<div class="hidden">
+<ul>
+<li class="prev"><a href="http://lusir.me/removal-ads-of-yyets.html">上一篇</a></li>
+<li class="next"><a href="http://lusir.me/customize-page-number-of-docx.html">下一篇</a></li>
+</ul>
+</div>
+
+<div class="hidden">
+<p>相关文章</p>
+<ul>
+<li><a href="http://lusir.me/modify-dns-name-resolution.html">更改域名解析</a></li>
+</ul>
+ 
 </div></div>
 </div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>
 <p>
 &copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
 Theme by <a href="http://atime.me">Ma Wenbao</a>. 
-No Rights Reserved<a href="https://plus.google.com/118433343253566330284?rel=author">.</a>
+No Right Reserved<a href="https://plus.google.com/+NeroZheng?rel=author" rel="author">.</a>
 </p>
 </div></div>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/niu2.js"></script>
-<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-window.onload = function() {
-};
-</script>
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/niu2.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">onContentLoaded();</script>
 
 <!-- GoogleAnalytics -->
 <script>
@@ -174,13 +214,6 @@ ga('send', 'pageview');
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
 </script>
-
-<script type="text/javascript" src="http://dn-nero.qbox.me/element/js/fancy-loading.js"></script>
-<script type="text/javascript" src="http://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-<script>var hermit = { url: 'http://lusir.me/hermit/swf/' }</script>
-<script src="http://lusir.me/hermit/script/hermit.min.js"></script>
-<script type="text/javascript">
-onContentLoaded();</script>
 
 </body>
 </html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--
+(¯`·.¸¸.·´¯`·.¸¸.-> ĊÄĻĻ MË ĻŮŚÏŖ <-.¸¸.·´¯`·.¸¸.·´¯)
+-->
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="author" content="Nero Zheng" />
+<meta name="generator" content="Pelican" />
+<meta name="description" content="人人都撸 Alipay 快捷支付 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta property="qc:admins" content="315026325312655" />
+<meta property="wb:webmaster" content="8e383b094667a02d" />
+<title>人人都撸 Alipay 快捷支付 - 擼sirの避風港</title>
+<link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
+<link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
+<link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="http://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
+<script src="http://lusir.me/theme/js/basket.min.js"></script>
+<script>
+basket.require({ url: 'http://lusir.me/theme/css/bootstrap.min.css' },{ url: 'http://lusir.me/theme/css/niu2.css', unique: 0.5 },{ url: 'http://lusir.me/theme/font-awesome/css/font-awesome.min.css', unique: 0.5 },{ url: 'http://lusir.me/theme/css/pygments/github.css' },{ url: 'http://lusir.me/theme/css/jquery.fancybox.css' },{ url: 'http://lusir.me/hermit/style/hermit.min.css', unique: 0.5 })
+.then(function(responses) {
+_stylesheet.appendStyleSheet(responses[0], function() {});
+	basket.require({ url: 'http://lusir.me/theme/js/bootstrap.min.js' },{ url: 'http://lusir.me/theme/js/jquery-1.11.0.min.js' },{ url: 'http://lusir.me/theme/js/niu2.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/fancy-loading.js' },{ url: 'http://lusir.me/theme/js/jquery.fancybox.pack.js' },{ url: 'http://lusir.me/hermit/script/hermit.min.js', unique: 0.5 },{ url: 'http://lusir.me/theme/js/jquery-1.4.4.min.js' },{ url: 'http://lusir.me/theme/js/slimbox2.js' },{ url: 'http://lusir.me/theme/soundmanager2/script/soundmanager2.min.js' },{ url: 'http://lusir.me/theme/js/tagcloud.min.js' });});
+</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
+<script type="text/javascript">window.onload = function() {  };</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="canonical" href="http://lusir.me/alipay-qr-button.html" />
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://lusir.me/theme/js/html5shiv.js"></script>
+<script src="http://lusir.me/theme/js/respond.min.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<![endif]-->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"> 
+<meta itemprop="inLanguage" content="zh-CN">
+<div id="body-header">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-12">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://lusir.me"><i class="fa fa-home"></i>擼sirの避風港</a>
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+<ul class="nav navbar-nav">
+<li><a href="http://lusir.me/about.html" title="关于"><i class="fa fa-anchor"></i>关于</a></li>
+<li><a href="http://lusir.me/archives.html" title="存档"><i class="fa fa-archive"></i>存档</a></li>
+<li><a href="http://lusir.me/tag/" title="标签"><i class="fa fa-tag"></i>标签</a></li>
+<!-- category dropdown list -->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://lusir.me/collection/index.html"><i class="fa fa-briefcase"></i>搜藏(4)</a></li>
+<li><a href="http://lusir.me/nonsense/index.html"><i class="fa fa-trash"></i>扯(1)</a></li>
+<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(65)</a></li>
+</ul>
+</li>
+<!--  self defined dropdown list --></ul>
+<!-- right nav bar -->
+<ul class="nav navbar-nav navbar-right">
+<!-- google custom search --><li>
+<div id="niu2-cse-wrapper">
+<div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+<form action="/search.html" method="get">
+<div class="form-group">
+<input id="niu2-cse-search-input" class="niu2-cse-header form-control" type="text" name="q" placeholder="回车以搜索…" />
+</div>
+</form>
+</div>
+<div id="niu2-cse-ctrl-box" class="navbar-nav"><i id="niu2-cse-search-image" class="fa fa-search navbar-nav"></i><span id="niu2-cse-search-text">搜索</span></div>
+</div>
+</li></ul>
+</nav>
+</div>
+</div></div>
+		
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">人人都撸 Alipay 快捷支付</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>最近看到好几篇介绍给博客添加支付宝快捷支付按钮的文章，跑去点开支付宝才发现之前的支付宝收款页面果然经已下线。
+</p>
+<p>所以我也凑个热闹，取个标题唤作“人人都撸 Alipay 快捷支付”。</p>
+<h3 id="a4a575bcb6cdba8019ce30eea3a3514c">支付宝条码支付</h3>
+<ol>
+<li>
+<p>登陆支付宝官网：<code>https://qr.alipay.com</code>；</p>
+</li>
+<li>
+<p>通过发码平台领取“向我付款”的二维码；</p>
+</li>
+<li>
+<p>编辑个性二维码名称及 logo；</p>
+</li>
+<li>
+<p>保存生成的二维码自行使用。</p>
+</li>
+</ol>
+<p>据说出租车司机金师傅在副驾驶前面贴了一张可收款的二维码，乘客张先生恰巧没有零钱，于是用支付宝的扫码拍下二维码进行快捷支付，金师傅近乎即时收到款项。</p>
+<p><img class="aligncenter" src="http://lusir.me/images/paymeqr.jpg" alt="Alipay 个性二维码" /></p>
+<h3 id="017b185017df51d6df972d8407ad88f6">支付宝转账付款按钮</h3>
+<p>添加如下代码即可</p>
+<div class="codehilite"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;https://shenghuo.alipay.com/send/payment/fill.htm&quot;</span> <span class="na">method=</span><span class="s">&quot;POST&quot;</span> <span class="na">target=</span><span class="s">&quot;_blank&quot;</span> <span class="na">accept-charset=</span><span class="s">&quot;GBK&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">&quot;optEmail&quot;</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">value=</span><span class="s">&quot;zyxnero@gmail.com&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">&quot;payAmount&quot;</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">value=</span><span class="s">&quot;0.00&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">&quot;title&quot;</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">id=</span><span class="s">&quot;title&quot;</span> <span class="na">value=</span><span class="s">&quot;赞助『擼sirの避風港』&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">&quot;memo&quot;</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">value=</span><span class="s">&quot;请填写您的联系方式，以便答谢！！！&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">&quot;pay&quot;</span> <span class="na">type=</span><span class="s">&quot;image&quot;</span> <span class="na">src=</span><span class="s">&quot;http://lusir.me/images/payme.png&quot;</span> <span class="na">value=</span><span class="s">&quot;转账&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></div>
+
+
+<p><br></p>
+<form action="https://shenghuo.alipay.com/send/payment/fill.htm" method="POST" target="_blank" accept-charset="GBK">
+<input name="optEmail" type="hidden" value="zyxnero@gmail.com"/>
+<input name="payAmount" type="hidden" value="0.00"/>
+<input name="title" type="hidden" id="title" value="赞助『擼sirの避風港』"/>
+<input name="memo" type="hidden" value="请填写您的联系方式，以便答谢！！！"/>
+<input name="pay" type="image" title="为啥都喜欢喝咖啡？" class="aligncenter" src="http://lusir.me/images/payme.png" value="转账"/>
+</form>
+
+<p><br></p>
+<h3 id="2a302fa545ce4445b25970650930debd">参考文章</h3>
+<ul>
+<li><a href="http://ihuan.me/1828.html" title="给你的网站添加支付宝即时到帐按钮">给你的网站添加支付宝即时到帐按钮</a></li>
+<li><a href="http://www.baowz.cn/post/51.html" title="一行代码就能实现支付宝转账提交按钮">一行代码就能实现支付宝转账提交按钮</a></li>
+<li><a href="http://www.cnaoweisi.com/archives/715" title="收款主页下线后个人博客应对方法种种">收款主页下线后个人博客应对方法种种</a></li>
+</ul>
+</div>
+    
+<div id="content-comments">
+<!-- Duoshuo Comment BEGIN -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lusir"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<div class="ds-thread" data-author-key="1"></div>
+<!-- Duoshuo Comment END -->
+</div>
+
+</div>
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2014-12-03 17:00</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/alipay.html">Alipay</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/kuai-jie-zhi-fu.html">快捷支付</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">人人都撸 Alipay 快捷支付</a></li>
+    <li><a href='#a4a575bcb6cdba8019ce30eea3a3514c'>支付宝条码支付</a></li><li><a href='#017b185017df51d6df972d8407ad88f6'>支付宝转账付款按钮</a></li><li><a href='#2a302fa545ce4445b25970650930debd'>参考文章</a></li>
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;人人都撸 Alipay 快捷支付
+</div>
+
+<div class="hidden">
+<ul>
+<li class="prev"><a href="http://lusir.me/ess-filter.html">上一篇</a></li>
+<li class="next"><a href="http://lusir.me/proverb-with-thing.html">下一篇</a></li>
+</ul>
+</div>
+
+<div class="hidden">
+ 
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
+<hr/>
+<p>
+&copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
+Theme by <a href="http://atime.me">Ma Wenbao</a>. 
+No Right Reserved<a href="https://plus.google.com/+NeroZheng?rel=author" rel="author">.</a>
+</p>
+</div></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/niu2.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">onContentLoaded();</script>
+
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-36540079-1', 'lusir.me');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script>
+
+<!-- Baidu Tongji -->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fffe778a70caf3e0916e5372ab2ebb506' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

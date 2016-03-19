@@ -1,692 +1,656 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2014-03-25T09:42:00+08:00</updated><entry><title>Weibo 提示 “Insufficient App Permissions” 的解决办法</title><link href="http://lusir.me/solution-to-insufficient-permissions.html" rel="alternate"></link><updated>2014-03-25T09:42:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-25:solution-to-insufficient-permissions.html</id><summary type="html">&lt;p&gt;&lt;a href="http://lusir.me/sync-feed-to-weibo.html" title="将博客 Feed 推至微博"&gt;将博客 Feed 推至微博&lt;/a&gt;一文中，使用了“聚合通”来推送博客文章至微博，并且可以按照&lt;a href="http://roov.org/2014/02/fawave-from/" title="修改 FaWave 默认消息尾巴"&gt;这篇文章&lt;/a&gt;来对微博小尾巴进行修改（虽然感觉有些不道德，但自己用用应该问题不大）。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2015-07-12T20:09:00+08:00</updated><entry><title>滥用“Chmod 777 -R /”后的补救措施</title><link href="http://lusir.me/rescue-linux-on-abusing-chmod.html" rel="alternate"></link><updated>2015-07-12T20:09:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-07-12:rescue-linux-on-abusing-chmod.html</id><summary type="html">&lt;p&gt;很早就听人说过不要乱改 Linux 根目录下的文件，尤其不要使用 &lt;code&gt;rm -rf /*&lt;/code&gt;，不过为了在登录时少输入一次密码，我使上了 &lt;code&gt;chmod 777 -R /&lt;/code&gt;，本以为登录会更便捷，谁知连系统都无法登录进入了。
 &lt;/p&gt;
-&lt;p&gt;昨天晚上的一篇文章在推送的时候提示 "Insufficient App Permissions"，字面意思应该是“没有足够的应用权限”，考虑推送应该算是往微博里写东西，所以尝试着申请了“微博高级写入接口”这货，申请通过之后，推送就可以完成了。&lt;/p&gt;
-&lt;p&gt;之后去网上一搜，发现已经有小伙伴遇到相同的问题并好心的在博客中记下来了，在此也一并附上：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.csdn.net/hhhccckkk/article/details/9162525" title="android 新浪分享实例"&gt;android 新浪分享实例&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.csdn.net/alincexiaohao/article/details/21699493" title="分享失败，错误描述:Insufficient app permissions!"&gt;分享失败，错误描述:Insufficient app permissions!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;下雨了，心情也不能美丽……&lt;/p&gt;
-&lt;div class="hermit" songs="songlist#:1771509592"&gt;
-&lt;div class="hermit-box"&gt;
-&lt;div class="hermit-controls"&gt;
-&lt;div class="hermit-button"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-detail"&gt;
-左键轻击列表播放或暂停。
-&lt;/div&gt;
-&lt;div class="hermit-duration"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-listbutton"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess"&gt;
-&lt;div class="hermit-loaded"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess-bar"&gt;
-&lt;div class="hermit-prosess-after"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-list"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;解决办法如下：&lt;/p&gt;
+&lt;p&gt;1. 找到另外一台系统相同的正常机，执行以下内容：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;getfacl&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;facl&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;perm&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;02000&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;file200&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;perm&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;04000&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;file400&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id="5825661b219e9e8c192784feee4f7462"&gt;附：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://hi.baidu.com/958719424/item/b049b27b57b7493cd6a89cd3" title="把 chrome 本地扩展打包成 crx 的方法"&gt;把 chrome 本地扩展打包成 crx 的方法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Weibo"></category></entry><entry><title>Lusir Lubuntu - 安装篇</title><link href="http://lusir.me/setup-lubuntu.html" rel="alternate"></link><updated>2014-03-24T10:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-24:setup-lubuntu.html</id><summary type="html">&lt;p&gt;手上有个 Lenovo S10-3C，运行 XP 都感觉卡顿，于是想着安装一个 Arch Linux 学这玩玩儿，结果折腾半天楞装不上去，只好作罢，退而求其次，装个 Lubuntu 吧。
+
+&lt;p&gt;2. 将正常机中 /root 下生成的 facl.txt、file200.txt 及 file400.txt 三个文件拷贝到异常机的 /root 目录下，新建 changemod.sh 后复制到异常机 root 目录（复制文件可能需要 LiveCD），内容如下：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;file400&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;
+&lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
+&lt;span class="n"&gt;done&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;file200&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;
+&lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
+&lt;span class="n"&gt;done&lt;/span&gt;
+&lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3. 在异常机中分别键入以下两段（忘了是在 LiveCD 下还是 &lt;code&gt;恢复模式&lt;/code&gt; 中了）&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;setfacl&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;restore&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;facl&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;
+&lt;span class="n"&gt;dos2unix&lt;/span&gt; &lt;span class="n"&gt;changemod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
+&lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;changemod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;changemod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;至此，重启正常开机。&lt;/p&gt;
+&lt;p&gt;文中方法来源于网络，测试可行，作备份……&lt;/p&gt;</summary><category term="Linux"></category></entry><entry><title>寻章摘句 - 201503</title><link href="http://lusir.me/some-essays-201503.html" rel="alternate"></link><updated>2015-03-03T20:09:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-03-03:some-essays-201503.html</id><summary type="html">&lt;p&gt;Onenote 里收藏了一些个人觉得有意思或没意思的句段，大多来自《One · 一个》，还有一句自己敲的，至于鸡汤，已忘记出处……
 &lt;/p&gt;
-&lt;h3 id="df3d2ab2b3159906f6954db0c2b4f633"&gt;Lenovo S10-3C 缺陷&lt;/h3&gt;
-&lt;p&gt;这款上网本不得不说奇异，用 U 盘引导进入安装界面之后，键盘却不能用了。据说是 BIOS 不支持 Linux 的 kernel，简单的解决办法是禁用电源管理，即在 grub.cfg 的 linux 行最后添加一句 &lt;code&gt;noapic acpi=off&lt;/code&gt;。此方法的后遗症就是耗电量增加，且关机不会切断电源，需要手动关机。&lt;a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/677633" title="bugs.launchpad.net"&gt;&lt;code&gt;bugs.launchpad.net&lt;/code&gt;&lt;/a&gt; 论坛上的一份开机启动键盘的脚本对我无解，有舍有得，我选择了键盘。&lt;/p&gt;
-&lt;h3 id="66c260d88c897e6c6353f6db6eacc3bd"&gt;分区&lt;/h3&gt;
-&lt;p&gt;经典分区法，如下：&lt;/p&gt;
-&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;root&lt;/th&gt;
-&lt;th&gt;swap&lt;/th&gt;
-&lt;th&gt;home&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;25G&lt;/td&gt;
-&lt;td&gt;1G&lt;/td&gt;
-&lt;td&gt;其余容量&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;对于 Lubuntu，安装也就没有需要注意的东西了，按照提示不断下一步即可。安装完成后发现屏幕太小了，设置界面都不能点击确定键，这时需要了解两个很实用的快捷键：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;左键拖拽&lt;/kbd&gt; 移动窗口&lt;/li&gt;
-&lt;li&gt;&lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;右键拖拽&lt;/kbd&gt; 改变窗口大小&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;哦，还折腾了一个透明主题，看起来还行。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/lubuntu-desktop.jpg" title="Lubuntu 桌面" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/lubuntu-desktop.jpg" alt="Lubuntu 桌面" /&gt;
+&lt;h3 id="aa3f0f9135a0cdcf369d0b184768975e"&gt;情愫&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;从来都无法得知，人们是究竟为什么会爱上另一个人。我猜也许我们心上都有一个缺口，呼呼往灵魂里灌着寒风，我们急切需要一个正好形状的心来填上它，就算你是太阳一样完美正圆形，可是我心里的缺口，或许恰恰是个歪歪扭扭的锯齿形，你填不了。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;《好久不见》，算算应该有《十年》，《你现在还好吗》？早已过了《二十二》的年纪，既没有遇到下一位《天后》，也没体悟到《失恋无罪》，空觉《寂寞难耐》。好多个夜晚，我都想象着与妳见面时的情景，包括见面的契机，会是毕业 10 周年同学聚会？亦或是在萍与锐的婚礼当天？我不知道……
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;这十年里究竟发生了多少事呢，其实我们每个人都感到一言难尽。难得匆匆见上一面，往往也没什么可说，只顾着沉浸在往昔的幻觉里，幻觉里又有挥之不去的惘惘威胁。我们彼此都幼稚，却彼此都知道互相慰藉。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;我忽然觉得，我们的“激流勇进”船已经冲过了最危险的地域，直落平地，溅起一船水意。春天还没有来的时候，才会感觉比较凉。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;我这一生遇到过很多人，他们如同指间的烟火，忽明忽暗，最后只沦为一抹灰烬，而你不同，你如北斗，闪耀在我的整个人生。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;在这个城市里，我坚持的相信一定会有那么一个人，想着同样的事情，怀着相似的频率，在某站寂寞的出口，安排好了与我相遇。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;独一无二是一种什么体验，就像你偶然发现一个人，和心里的那家伙很像，脾气、说话方式、爱看的电影，但你却不会因为这些而被他吸引。于是你明白，这世上，没有你喜欢的那一种人，只有你喜欢的那一个人。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="348876e998b33a03b085bc528c2f365d"&gt;鸡汤&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;你不过是损失了一个不爱你的人，而他损失的是一个爱他的人，他的损失比你大，难过的人应该是他。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;不要在乎已经得到的东西，让自己变得慷慨和大方。只要你愿意，什么都可以送出去。它们一定能够回来，加倍偿还你的付出。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;意志力挑战就是两个自我之间的对抗。一个你想的是自己的长远利益（比如减肥），另一个你则想及时行乐（比如吃巧克力）。在面临诱惑的时候，你要让更理智的自己说话，战胜放纵自我的念头，但是，成功自控会在不经意间导致不好的后果，它会让你暂时感到满足，让更理智的自己闭嘴。当你取得进步的时候，你的大脑就停止了思维进程，而这个进程正是推动你追求长远目标的关键。然后，那个放纵自我的声音就会响起来，你就会转而关注那些还没有得到满足的目标。心理学家称之为“目标释放”。你曾努力克制的目标会变得更加强大，诱惑也会变得更加难以抵挡。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;哈兹立特有句话：“偏见是无知的孩子。”说得一点都不错，“人”、“扁”为偏，人一旦有了偏见，就会把“人”看“扁”、看“偏”了。大多数的人并不了解你，你也不完全了解这些人，既然如此，我们就不该轻易地去论断他人，当然也不必在意别人的论断。因为，每个人都可能扣错第一颗扣子，不是吗？
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;封其心眼，断其诱惑，眼不见心不乱，其奈我何？
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="ff78ec550506a7ba2fee2abfef7890e9"&gt;钓鱼诗&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;数凡绝丝入水中，金钩抛去永无踪，凡鱼不敢朝天子，万岁君主只钓龙。
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Collection"></category></entry><entry><title>设置 ESS 允许共享局域网</title><link href="http://lusir.me/set-ess-sharing-lan.html" rel="alternate"></link><updated>2015-03-02T21:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-03-02:set-ess-sharing-lan.html</id><summary type="html">&lt;p&gt;安装完 ESET Smart Security 后，若局域网或者外部网络设备不能正常运行（如：网络共享文件夹无法访问），则需更改个人防火墙的过滤模式。
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;呼出 ESS 主界面 → 按 &lt;kbd&gt;F5&lt;/kbd&gt; 键进入 &lt;code&gt;高级设置&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;规则和区域&lt;/code&gt; → &lt;code&gt;设置&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;选择需共享的子网络点击 &lt;code&gt;下一步&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;选择 &lt;code&gt;允许共享&lt;/code&gt; 并一路 &lt;code&gt;确定&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-sharing-lan-1.jpg" title="设置 ESS 允许共享局域网 - 1" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-sharing-lan-1.jpg" alt="设置 ESS 允许共享局域网 - 1" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;暂时就记这么多吧。&lt;/p&gt;
-&lt;p&gt;王家卫有一次让他的演员翻译 I Love You，有的演员翻译成我爱你。墨镜王说，怎么可以讲这样的话，应该是“我已经很久没有坐过摩托车了，也很久未试过这么接近一个人了，虽然我知道这条路不是很远。我知道不久我就会下车。可是，这一分钟，我觉得好暖。”&lt;/p&gt;
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.csdn.net/lsbmaincpp/article/details/6554272" title="在Lenovo S10-3c 上安装 Ubuntu "&gt;在Lenovo S10-3c 上安装 Ubuntu &lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://namakutux.blogspot.jp/2012/05/how-to-install-mac-os-x-lion-theme-on.html" title="How To Install Mac OS X Lion Theme On Lubuntu / LXDE"&gt;How To Install Mac OS X Lion Theme On Lubuntu / LXDE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Lubuntu"></category></entry><entry><title>主题折腾记录</title><link href="http://lusir.me/blog-modify-record.html" rel="alternate"></link><updated>2014-03-23T17:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-23:blog-modify-record.html</id><summary type="html">&lt;p&gt;接触到 pelican 之后就在使用 &lt;a href="http://atime.me/" title="Ma Wenbao"&gt;Ma Wenbao&lt;/a&gt; 的主题，然后就是一路折腾（折腾主题，折腾 pelican 配置），不过都是一些小改动，现记录一下折腾历史（能从 git 查看折腾记录还是挺方便的）。
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;20140122 更改自定义 404 页&lt;/li&gt;
-&lt;li&gt;20140218 添加 favicon&lt;/li&gt;
-&lt;li&gt;20140219 改作者名为 Nero Zheng&lt;/li&gt;
-&lt;li&gt;20140220 模仿添加结构化数据，能否有用未知&lt;/li&gt;
-&lt;li&gt;20140222 &lt;a href="http://lusir.me/about-unicode-bom.html" title="关于 Unicode BOM"&gt;找出 article_sidebar 文件中的 &amp;amp;#65279 符&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140223 学 Ma Wenbao 修改 footnote.py 与 tables.py&lt;/li&gt;
-&lt;li&gt;20140223 &lt;a href="http://lusir.me/fake-q-ban-yu-wen.html" title="荷塘月色 - Q 版语文"&gt;添加 fancybox 并图文混排&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140225 修改 about 页面，添加 picasa 相册并自适应居中&lt;/li&gt;
-&lt;li&gt;20140227 添加多说 CSS 样式&lt;/li&gt;
-&lt;li&gt;20140303 &lt;a href="http://lusir.me/google-cse-for-pelican.html" title="整合 Google 自定义搜索到 Pelican"&gt;添加 cse 自定义搜索页面&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140304 &lt;a href="http://lusir.me/start-using-qiniu.html" title="使用七牛镜像存储"&gt;添加 feed link，图床地址改到 &lt;code&gt;dn-nero.qbox.me&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140305 &lt;a href="http://lusir.me/add-google-profile.html" title="关联博客与 Google Profile"&gt;关联 google+ profile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140309 &lt;a href="http://lusir.me/embed-hermit-player.html" title="在网页中嵌入 hermit 播放器"&gt;在网页中嵌入 hermit 播放器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140311 添加面包屑导航&lt;/li&gt;
-&lt;li&gt;20140313 &lt;a href="http://lusir.me/after-enabling-application-cache.html" title="启用 Application Cache（续）"&gt;添加 html5 脱机数据属性&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140314 &lt;a href="http://lusir.me/sticky-footer.html" title="置 footer 于页面底部"&gt;修改 css 使 footer 置底&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;20140324 修改 css 给链接添加颜色渐变&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.mb5u.com/jscode/46121/" title="让多个 DIV 自由居中排列"&gt;让多个 DIV 自由居中排列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://kagami.me/add-kaomoji-into-duoshuo.html" title="给多说评论框添加自定义颜文字表情功能"&gt;给多说评论框添加自定义颜文字表情功能&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.vsay.cn/one-more-custom-css-lets-you-say-comments-city.html" title="多说自定义 CSS 让你的多说评论动感起来"&gt;多说自定义CSS 让你的多说评论动感起来&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://yusi123.com/739.html" title="wordpress 多说评论插件中设置圆形旋转头像 css 代码"&gt;wordpress 多说评论插件中设置圆形旋转头像 css 代码&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://fatesinger.com/wordpress-seo.html" title="我是如何做 wordpress seo 的"&gt;我是如何做wordpress seo的&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/sketch-2.jpg" title="璇子手绘-1" data-fancybox-group="gallery"&gt;&lt;img class="fancybox" src="http://dn-nero.qbox.me/sketch-2.jpg" alt="璇子手绘-1"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;div class="hidden"&gt;
-&lt;a href="http://dn-nero.qbox.me/sketch-1.jpg" title="璇子手绘-2" data-fancybox-group="gallery"&gt;&lt;img class="fancybox" src="http://dn-nero.qbox.me/sketch-1.jpg" alt="璇子手绘-2"/&gt;&lt;/a&gt;
-&lt;/div&gt;</summary><category term="Theme"></category></entry><entry><title>将博客 Feed 推至微博</title><link href="http://lusir.me/sync-feed-to-weibo.html" rel="alternate"></link><updated>2014-03-18T17:04:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-18:sync-feed-to-weibo.html</id><summary type="html">&lt;p&gt;注册了微博账号也不知道写些什么东西，就想着把博客上的文章推上去，至少看起来有些内容。之前一直是用无觅的“&lt;a href="http://www.wumii.com/site/index" title="无觅网网站管理中心"&gt;连接微博&lt;/a&gt;”来推的，&lt;a href="http://lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;后，本打算给“连接微博”的 feed 改成带 &lt;code&gt;www&lt;/code&gt; 的，结果取消关联之后就不能重新绑定了，坑！
-&lt;/p&gt;
-&lt;p&gt;在网上搜寻一番，找到两个应用，试用之后感觉还不错，记录一下以作备忘……&lt;/p&gt;
-&lt;h3 id="8008e97c8aaa4f86189a8fe0c0109b3f"&gt;针对国内&lt;/h3&gt;
-&lt;p&gt;对于新浪、腾讯等微博找到的是一款 Chrome 扩展，名为聚合通，&lt;a href="http://rss2weibo.danding.net/" title="聚合通"&gt;详细介绍见此&lt;/a&gt;。其实本想找一款类似“无觅连接微博”的服务，结果找到的却是一款离线应用，不过有总比没有好。它的原理是在用户开启了 Chrome 后定时轮询绑定的 RSS 地址，并将更新的内容推送到绑定的微博中去。&lt;/p&gt;
-&lt;h3 id="6f3e50c5880ddc1abc5c1ededb570033"&gt;针对国外&lt;/h3&gt;
-&lt;p&gt;对于非死不可、推特等社交网络找到的是 dlvr.it，这款服务很好很强大，具体不多介绍，&lt;a href="http://ikamu.me/736" title="用 dlvr.it 将豆瓣我的收藏/g+ 更新同步到 twitter、facebook"&gt;看它就行&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;使用了这俩货，就能将通过博客或者网站发表的文章第一时间生成微博推出去，不出意外，本篇文章应该已经自动推送到了我的新浪微博、腾讯微博、非死不可及推特了……&lt;/p&gt;
-&lt;div class="hermit" songs="songlist#:1771816757"&gt;
-&lt;div class="hermit-box"&gt;
-&lt;div class="hermit-controls"&gt;
-&lt;div class="hermit-button"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-detail"&gt;
-左键轻击列表播放或暂停。
-&lt;/div&gt;
-&lt;div class="hermit-duration"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-listbutton"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess"&gt;
-&lt;div class="hermit-loaded"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess-bar"&gt;
-&lt;div class="hermit-prosess-after"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-list"&gt;
-&lt;/div&gt;
-&lt;/div&gt;</summary><category term="Feed"></category><category term="Weibo"></category></entry><entry><title>置 footer 于页面底部</title><link href="http://lusir.me/sticky-footer.html" rel="alternate"></link><updated>2014-03-18T13:04:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-18:sticky-footer.html</id><summary type="html">&lt;p&gt;前几天发现有些内容比较少的文章页面，其 footer 会上移浮在半空，看起来着实别扭，所以又调整了一下 CSS。
-&lt;/p&gt;
-&lt;p&gt;由于&lt;a href="https://github.com/mawenbao/niu-x2-sidebar" title="Niu-X2-Sidebar"&gt;现主题&lt;/a&gt;是基于 bootstrap 的，在 &lt;a href="http://getbootstrap.com/" title="Bootstrap"&gt;Bootstrap&lt;/a&gt; 的 example 中找到了 2 份示例：&lt;a href="http://xiemin.me/bootstrap-2.2.2/examples/sticky-footer.html" title="Sticky footer"&gt;Bootstrap2 示例&lt;/a&gt;，&lt;a href="http://getbootstrap.com/examples/sticky-footer/" title="Sticky footer"&gt;Bootstrap3 示例&lt;/a&gt;。我选择模仿套用 Bootstrap2 的示例（感觉简单一点），在主题的 CSS 中添加了下面 2 行：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;97&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
-&lt;span class="nf"&gt;#body-content&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="k"&gt;min-height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="k"&gt;height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="k"&gt;auto&lt;/span&gt; &lt;span class="cp"&gt;!important&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;至于 Bootstrap3 的示例中采用的 &lt;code&gt;position: absolute;bottom: 0;&lt;/code&gt; 的好处，或者说 Bootstrap2 的示例中采取的办法的缺陷，还不清楚，以后发现了再改……&lt;/p&gt;
-&lt;p&gt;我们宿舍老二和老三自打吃过早饭就在宿舍里吵个不停，都说自己的女朋友比对方的强，争得不可开交。我实在看不下去了，对他们说：“别吵了，我来作个裁判吧。” 于是我搬来一张桌子，让他们俩掰起了手腕。&lt;/p&gt;
-&lt;div class="hermit" songs="songlist#:181454"&gt;
-&lt;div class="hermit-box"&gt;
-&lt;div class="hermit-controls"&gt;
-&lt;div class="hermit-button"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-detail"&gt;
-左键轻击列表播放或暂停。
-&lt;/div&gt;
-&lt;div class="hermit-duration"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-listbutton"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess"&gt;
-&lt;div class="hermit-loaded"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess-bar"&gt;
-&lt;div class="hermit-prosess-after"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-list"&gt;
-&lt;/div&gt;
-&lt;/div&gt;</summary><category term="CSS"></category></entry><entry><title>启用 Application Cache（续）</title><link href="http://lusir.me/after-enabling-application-cache.html" rel="alternate"></link><updated>2014-03-17T22:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-17:after-enabling-application-cache.html</id><summary type="html">&lt;p&gt;接着&lt;a href="http://lusir.me/enable-application-cache.html" title="启用 Application Cache"&gt;上一篇&lt;/a&gt;，上一篇的思路是在每一张网页的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
-&lt;/p&gt;
-&lt;p&gt;感觉自己还没有能力折腾 HTML5 Local Storage，所以只能采取退而求其次的方法了：&lt;/p&gt;
-&lt;p&gt;仅只在一张不经常更新的页面的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中声明 manifest 文件，我选择了 search.html；同时，在除 search.html 外的每张网页中都声明“预加载”的页面（即预加载 search.html），预加载是 html5 的一个特性，中文详细介绍可以&lt;a href="http://blog.wpjam.com/m/3-html5-features/" title="三个 HTML5 不常见但非常实用的特性简介"&gt;看这篇&lt;/a&gt;，我在页面中是这样加的。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;link&lt;/span&gt; &lt;span class="na"&gt;rel=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;prefetch prerender&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://lusir.me/search.html&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;如此一来，现代浏览器（最后能够剩下来的估计只有 Chrome 了）能够在除 search.html 外的网页中预加载 search.html，而后 search.html 会让浏览器去加载 manifest 清单，浏览器按照清单缓存元素。再加上监听函数，缓存策略就完成了。如此的缓存策略很粗糙，对浏览器也没有兼容，但我也不能再折腾到哪了。就这样了……&lt;/p&gt;
-&lt;p&gt;说武林中有四大高手，前三名分别是东眼，西嘴，南耳，请问第四名叫什么……&lt;/p&gt;
-&lt;div class="hermit" songs="songlist#:1770124461"&gt;
-&lt;div class="hermit-box"&gt;
-&lt;div class="hermit-controls"&gt;
-&lt;div class="hermit-button"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-detail"&gt;
-左键轻击列表播放或暂停。
-&lt;/div&gt;
-&lt;div class="hermit-duration"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-listbutton"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess"&gt;
-&lt;div class="hermit-loaded"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess-bar"&gt;
-&lt;div class="hermit-prosess-after"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-list"&gt;
-&lt;/div&gt;
-&lt;/div&gt;</summary><category term="HTML5"></category></entry><entry><title>启用 Application Cache</title><link href="http://lusir.me/enable-application-cache.html" rel="alternate"></link><updated>2014-03-13T14:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-13:enable-application-cache.html</id><summary type="html">&lt;p&gt;上篇&lt;a href="http://lusir.me/modify-dns-name-resolution.html" title="更改域名解析"&gt;更改域名解析&lt;/a&gt;之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
-&lt;/p&gt;
-&lt;p&gt;启用 HTML5 Application Cache 的步骤全摘自网络，自己只是当了一次小白，具体的原理不明。具体步骤分 3 步：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;创建一个 cache.appcache 文件，并确保文件具有正确的内容；&lt;/li&gt;
-&lt;li&gt;在服务器上设置内容类型；&lt;/li&gt;
-&lt;li&gt;所有的 HTML 文件都指向 cache.appcache。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="7902e56ddfc26a187defd7c20936eb0b"&gt;创建 appcache 文件&lt;/h3&gt;
-&lt;p&gt;新建 cache.appcache 文件，写入类似以下类容：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;CACHE MANIFEST
-#v1
-CACHE:
-index.html
-404.html
-favicon.ico
-robots.txt
-humans.txt
-apple-touch-icon.png
-css/normalize.min.css
-css/main.css
-css/bootmetro-icons.min.css
-img/pho-cat.jpg
-img/pho-huangshan.jpg
-
-NETWORK:
-*
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;注：首行须确保为 CACHE MANIFEST。&lt;code&gt;#&lt;/code&gt; 表示注释，有文章或 css、js、img 等内容变化时需要更新 cache.appcache 以使来访浏览器更新 cache.appcache 中列出的条目，所以更新注释是一个简便方法。&lt;a href="http://lusir.me/nero.appcache" title="我的 cache.appcache"&gt;我的 cache.appcache&lt;/a&gt;。&lt;/p&gt;
-&lt;h3 id="e8d669ed787e0f6ca71ae5e3dcc9c41a"&gt;设置内容类型&lt;/h3&gt;
-&lt;p&gt;在 .htaccess 文件中添加以下内容（我没有 .htaccess，所以没添加）&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;AddType text/cache-manifest .manifest
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id="fe9e55b4442b03a4781c410d6a9596c1"&gt;将 HTML 页面指向清单文件 cache.appcache&lt;/h3&gt;
-&lt;p&gt;在页首的 &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; 中添加 &lt;code&gt;manifest="/cache.appcache"&lt;/code&gt;（假设该文件放置在根目录）。即：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;lt;html manifest=&amp;quot;/cache.appcache&amp;quot;&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;完成以上 3 个步骤，来访浏览器在下载完列表中文件后会通过直接访问本地缓存，从而使网页打开速度更快，甚至在离网的情况下仍能直接访问页面缓存。&lt;/p&gt;
-&lt;h3 id="1f03fb4a4295fecc5fbf72259a70cfd4"&gt;使用 js 让来访浏览器及时刷新缓存&lt;/h3&gt;
-&lt;p&gt;发布新文章时我尝试了更改 cache.appcache 的注释，但浏览器仍显示旧的信息，必须手动清除浏览器缓存。显然，这样把事情弄得更麻烦了，所以我在页面添加了如下类容以使浏览器自动强制刷新，带来的问题是强制刷新过程很明显，可能会使用户体验下降。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt; &lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;load&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;applicationCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;addEventListener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;updateready&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;applicationCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;status&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;applicationCache&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;UPDATEREADY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;reload&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
-  &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;先试用一段时间再说，不行就把它撤了。&lt;/p&gt;
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://html5g.cn/html5-application-cache.html" title="利用HTML5应用程序缓存运行一个离线 Web 网页或应用"&gt;利用HTML5应用程序缓存运行一个离线 Web 网页或应用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.cnblogs.com/svage/archive/2011/11/24/2261365.html" title="html5 离线应用 application cache"&gt;html5 离线应用 application cache&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/" title="A Beginner's Guide to Using the Application Cache"&gt;A Beginner's Guide to Using the Application Cache&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;附：&lt;a href="http://manifest-validator.com/" title="Cache Manifest Validator"&gt;Cache Manifest Validator&lt;/a&gt;&lt;/p&gt;</summary><category term="HTML5"></category></entry><entry><title>更改域名解析</title><link href="http://lusir.me/modify-dns-name-resolution.html" rel="alternate"></link><updated>2014-03-11T23:20:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-11:modify-dns-name-resolution.html</id><summary type="html">&lt;p&gt;前阵子注册了个 QQ 企业邮箱，结果经常显示“MX 记录与 CNAME 记录冲突”，一直没弄明白是哪发生了问题。直到前几天看到&lt;a href="http://blog.lanbing.org/used-with-caution-in-the-root-domain-cname-record-the-post-office-to-do-mx.cgi" title="慎用根域名 CNAME 记录"&gt;这篇文章&lt;/a&gt;，于是科普了一下 CNAME 的意义&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;。
-&lt;/p&gt;
-&lt;h3 id="c950abf9dd2bdf2ef279a6e6470144d7"&gt;Google 的说明&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;正規名稱記錄又稱 CNAME 紀錄，是一種 DNS 紀錄類型，可將別名對應至實際或「正規」的網域名稱。CNAME 紀錄的用途通常是將子網域 (例如：「www」或「mail」) 對應至代管子網域內容的網域。舉例來說，CNAME 紀錄可以將網址「www.example.com」對應至「example.com」網域的實際網站。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id="2c60a750a8ff0f458bd2c3977b2e5680"&gt;Github 的说明&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: You should not use a CNAME record with an apex domain, as this may cause issues with other services on the apex domain, like email.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;上面的引用表达的意思：根域名最好不要做 CNAME，否则会造成邮件解析出错（除非邮件解析与 www 解析的目的地是同一服务器）。&lt;/p&gt;
-&lt;h3 id="cfabea642b97269309366a07f48401e8"&gt;正确的解析方式&lt;/h3&gt;
-&lt;p&gt;在域名运营商处修改（假设要把 www 与根域名指向同一个站点）：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;CNAME：www.example.com =&amp;gt; username.github.io
-A：example.com =&amp;gt; 192.30.252.153
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.suoyine.com/archives/2297.html" title="根域名不能用 CNAME 解析，否则 MX 记录失效"&gt;根域名不能用 CNAME 解析，否则 MX 记录失效&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://support.dnsimple.com/articles/differences-between-a-cname-alias-url/" title="Differences between the A, CNAME, ALIAS and URL records"&gt;Differences between the A, CNAME, ALIAS and URL records&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://fancyoung.com/blog/host-to-github/" title="Github Page绑定自己域名"&gt;Github Page绑定自己域名&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages" title="Setting up a custom domain with Pages"&gt;Setting up a custom domain with Pages&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="footnote"&gt;
-&lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;&lt;a href="https://support.google.com/a/answer/112037?hl=zh-Hant" title="關於 CNAME 紀錄"&gt;關於 CNAME 紀錄&lt;/a&gt;&amp;#160;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</summary><category term="DNS"></category><category term="CNAME"></category></entry><entry><title>“Beyond Compare 许可证密钥被撤销” 的解决办法</title><link href="http://lusir.me/solution-to-bcompare-error.html" rel="alternate"></link><updated>2014-03-11T21:43:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-11:solution-to-bcompare-error.html</id><summary type="html">&lt;p&gt;前几天遇到的问题，打开 Beyond Compare 提示：&lt;code&gt;许可证密钥已被撤销&lt;/code&gt;。上网搜寻出解决方法，记录一下。
-&lt;/p&gt;
-&lt;h3 id="6f1fefa928e01b0bb4ba64071c7ad053"&gt;解决方法：&lt;/h3&gt;
-&lt;h4 id="ed752639f1c9e21123de5f01b230f9e3"&gt;保存配置&lt;/h4&gt;
-&lt;p&gt;打开 Beyond Compare，“菜单” → “工具” → “导出配置”，把 Beyond Compare 的配置备份一份。&lt;/p&gt;
-&lt;h4 id="9fb493ad79ed72cda3405c46ed9a24b4"&gt;删除相应目录&lt;/h4&gt;
-&lt;p&gt;根据系统进入相应文件夹，删除所有文件。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;WinXP   C:\Documents and Settings\[Your User Name]\Application Data\Scooter Software\Beyond Compare 3\
-Win7    C:\Users\[Your User Name]\AppData\Roaming\Scooter Software\Beyond Compare 3\
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h4 id="f4305a6b2d192b4290a9a8c4353c6b13"&gt;重新安装&lt;/h4&gt;
-&lt;p&gt;重新打开 Beyond Compare，提示需要安装，安装时导入刚刚备份的配置文件，问题解决。&lt;/p&gt;
-&lt;h3 id="2af555fd2e8c2e68b0af48b312de1009"&gt;秘钥&lt;/h3&gt;
-&lt;p&gt;附两份秘钥，均来自网络，未经验证。使用方法为：复制 BEGIN 与 END 之间的所有内容。&lt;/p&gt;
-&lt;p&gt;密钥1：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;— BEGIN —
-rssAPVg2OpBjDVo3E0DhGWrjPIq0hsTSuNz13wTuzVHfb2mRgO9bZKn9B
-l42D5YEyMSYPXsxzcb08dqbRlbzWNJzJXE6YVapYW7f+tRRXRFI4yn4Nj
-jZ0RiiqGRCTVzwComUcXB-eiFWRBY6JpSsCNkmIxL5KsRCo442djHhTZE
-— END —
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;密钥2：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;— BEGIN —
-mv1nPlXAywBDCdhxFc9QOVv6TBcQHLAXBQUAKTh3ie4fqSEOnWrPsnVkF
-yt0wAkJHweoExRJWWVwwCniKNROSdJzJXE6YVapYW7f+tRRXRFI4yn4Nj
-jZ0RiiqGRCTVzwComUcXB-eiFWRBY6JpSsCNkmIxL5KsRCo442djHhTZE
-— END —
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Beyond Compare"></category></entry><entry><title>让 Excel 显示 + 号</title><link href="http://lusir.me/show-excel-plus-sign.html" rel="alternate"></link><updated>2014-03-11T20:43:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-11:show-excel-plus-sign.html</id><summary type="html">&lt;p&gt;由于不经常使用 Excel，遇到些问题只能上网查查了。默认情况下，Excel 单元格不包含特定的数字格式（输入负数显示 &lt;code&gt;-&lt;/code&gt; 号，输入正数不显示 &lt;code&gt;+&lt;/code&gt; 号），本文记录一下让 Excel 单元格显示 &lt;code&gt;+&lt;/code&gt; 号的方法。
-&lt;/p&gt;
-&lt;p&gt;方法很简单，首先选择想要格式化的单元格区域，然后右键“设置单元格格式”，弹出下图对话框。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/show-excel-plus.png" title="让 Excel 显示 + 号" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/show-excel-plus.png" alt="让 Excel 显示 + 号" /&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-sharing-lan-2.jpg" title="设置 ESS 允许共享局域网 - 2" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-sharing-lan-2.jpg" alt="设置 ESS 允许共享局域网 - 2" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;上图中，在左侧“分类”处选择“自定义”，然后在“类型”下面的输入框中，输入 &lt;code&gt;+0;-0;0;@&lt;/code&gt;，确定即可。&lt;/p&gt;
-&lt;h3 id="77478f9f3f8025d06148b80f6538a8c0"&gt;字符含义&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;“+0”定义正数的显示格式；&lt;/li&gt;
-&lt;li&gt;“-0”定义负数的显示格式；&lt;/li&gt;
-&lt;li&gt;“0”定义零值的显示格式；&lt;/li&gt;
-&lt;li&gt;“@”定义文本的显示格式，即正常显示文本。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果三个分号间的某个位置不键入任何字符，则会将该类型数据隐藏起来。例如格式 &lt;code&gt;0;-0;;@&lt;/code&gt; 将会隐藏选中单元格区域中的零值。&lt;/p&gt;</summary><category term="Excel"></category></entry><entry><title>荷塘月色 - Q 版语文</title><link href="http://lusir.me/fake-q-ban-yu-wen.html" rel="alternate"></link><updated>2014-03-09T20:31:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-09:fake-q-ban-yu-wen.html</id><summary type="html">&lt;p&gt;每个月都有那么几天，感觉颇不宁静。今晚在院子里坐着数蚊子，忽然想起日日走过的荷塘，在这满月的光里，荷塘里应该有MM在洗澡吧。月亮像“非典”病人的体温似的，不知什么时候已经升高了，墙外马路上收破烂的叫喊声，已经听不见了；老婆在屋里拍着孩子，跑着调地哼着“两只老虎”。好难听啊，我终于忍不住悄悄地披了衣服，带上门出去了。
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-sharing-lan-3.jpg" title="设置 ESS 允许共享局域网 - 3" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-sharing-lan-3.jpg" alt="设置 ESS 允许共享局域网 - 3" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;至此，局域网共享应正常……&lt;/p&gt;</summary><category term="ESET Smart Security"></category></entry><entry><title>利用 Firefox 为网页链接创建桌面快捷方式</title><link href="http://lusir.me/create-url-shortcuts-with-firefox.html" rel="alternate"></link><updated>2015-02-28T22:38:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-28:create-url-shortcuts-with-firefox.html</id><summary type="html">&lt;p&gt;精简掉桌面右键的 &lt;code&gt;新建快捷方式&lt;/code&gt; 后，发现原来还可以通过 Firefox 为网页链接创建桌面快捷方式：
 &lt;/p&gt;
-&lt;p&gt;&lt;a class="float-left" href="http://dn-nero.qbox.me/dufu2.jpg" title="杜甫涂鸦" data-fancybox-group="gallery"&gt;&lt;img src="http://dn-nero.qbox.me/dufu2.jpg" alt="杜甫涂鸦" /&gt;&lt;/a&gt;沿着荷塘，是一条曲折的小煤屑路，运气好的话还可以捡到几块煤炭和硬币。这条路白天少有人走，晚上更是鬼都不来。由于缺少压马路的恋人，所以路面显得凹凸不平。荷塘四面，长着许多树，可我就认识杨柳，其他的叫不上名字来，我想，比草大一点儿的植物就应该叫树吧。没有月光的晚上，这路上阴森森的，有些怕人。今晚却很好，虽然月光也还是淡淡的，但估计不会有女流氓出没。&lt;/p&gt;
-&lt;p&gt;路上只我一个人，这一片天地好像是我的；我也像是灵魂出窍，到了另一个世界里。我爱牛奶，也爱啤酒；爱同居，也爱独处。像今天晚上，一个人在这苍茫的月下，什么都可以想，什么都可以不想，思想出现冲突，开始不兼容的时候，我便觉得自己是个自由的人。平日里一定要做的事，一定要说的话，一定要憋的屁，现在都可以不理。就像是游荡在网络世界里，这就是独处的妙处。&lt;/p&gt;
-&lt;p&gt;弯弯勾勾的荷塘上面，放眼寻找 MM，可惜看到的都是叶子。&lt;/p&gt;
-&lt;p&gt;&lt;a class="float-right" href="http://dn-nero.qbox.me/dufu3.jpg" title="杜甫涂鸦" data-fancybox-group="gallery"&gt;&lt;img src="http://dn-nero.qbox.me/dufu3.jpg" alt="杜甫涂鸦" /&gt;&lt;/a&gt;叶子出水很高，像夏季少女的超短裙。叶子中间，有些白花，有开着的，有不开的，还有半开不开的；一阵阴风吹过，送来缕缕清香，比香蕉还香，比蚊香还香，仿佛帕瓦罗蒂在喜马拉雅山上唱歌似的。这时候，叶子与花像吃了摇头丸一般抖动了起来，像闪电似的，霎时整个荷塘的叶子和花都抖动了起来，其传染速度比禽流感还快啊。叶子底下是脉脉的流水，虽然被叶子遮住了，但是我仍能用人格保证它下面是流水，不是可乐或果汁。&lt;/p&gt;
-&lt;p&gt;月光如嘘嘘一般，哗哗地撒在这一片叶子和花上。叶子和花仿佛刚洗过牛奶浴，像婴儿的小屁屁，白里透红，与众不同。竟然是满月！不知道狼人和吸血鬼会不会出现，好在天上有一层淡淡的云，我认为这很好，遮住了月亮，狼人和吸血鬼就不会出现，我就是在这里睡觉也可以。月光是隔了树照过来的，因此荷叶上的黑影参差斑驳，并不均匀，但光与影却有着和谐的旋律，如周杰伦的歌一样，听不出歌词，但却有令人心动的旋律。&lt;/p&gt;
-&lt;p&gt;荷塘的四面，远远近近，高高低低竟然都是树，还好，大多是我认识的杨柳，而不是非洲杀人树。树缝里透着一两点路灯光，没精打采的，看得我直犯困。这时候最热闹的，要数远处烧烤摊的叫卖声了，真想去喝啤酒啊，可一摸口袋，我什么也没有。&lt;/p&gt;
-&lt;p&gt;突然想起二十元人民币有荷花图案，今晚这满塘荷花如果是人民币的话，我可就发了，只可惜它们只是荷花。这令我更加惦记发薪水的日子了。这样想着，猛一抬头，不觉已是自己的门前；轻轻地推门，什么声息也没有，老婆已睡熟好久了。竟然没给我留门？！看来我还真得去荷塘边上凑合一宿。明天跟老婆说我今晚去荷塘赏月了，她能信吗？&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/guanhanqing.jpg" title="关汉卿涂鸦" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/guanhanqing.jpg" alt="关汉卿涂鸦" /&gt;
-&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;这是一篇测试文……，文章版权作者所有。&lt;/p&gt;
-&lt;p&gt;今天心情不好。我只有四句话想说。包括这句和前面的两句。我的话说完了……&lt;/p&gt;</summary><category term="Nonsense"></category></entry><entry><title>在网页中嵌入 hermit 播放器</title><link href="http://lusir.me/embed-hermit-player.html" rel="alternate"></link><updated>2014-03-08T22:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-08:embed-hermit-player.html</id><summary type="html">&lt;p&gt;Hermit 播放器是&lt;a href="http://mufeng.me/" title="牧风"&gt;牧风&lt;/a&gt;兄整的一个音乐播放器，直接通过虾米的歌曲、专辑或精选集 ID 引用虾米的歌曲链接实现播放，且播放器的 css 写成自适应样式，在移动设备上的表现良好。实现方式应该是写了 API，具体的我也不太懂，可以直接去&lt;a href="http://mufeng.me/hermit-for-wordpress.html" title="Hermit 虾米音乐播放器"&gt;插件发布页&lt;/a&gt;查看。
-&lt;/p&gt;
-&lt;h3 id="3f66e73cbcc93c974d7c79d05f13653a"&gt;古事记 - 喜多郎&lt;/h3&gt;
-&lt;p&gt;推荐一张喜多郎&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;的专辑吧，《古事记》。偶尔听听感觉很不错……&lt;/p&gt;
-&lt;div class="hermit" songs="album#:4953"&gt;
-&lt;div class="hermit-box"&gt;
-&lt;div class="hermit-controls"&gt;
-&lt;div class="hermit-button"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-detail"&gt;
-左键轻击列表播放或暂停。
-&lt;/div&gt;
-&lt;div class="hermit-duration"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-listbutton"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess"&gt;
-&lt;div class="hermit-loaded"&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess-bar"&gt;
-&lt;div class="hermit-prosess-after"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-list"&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="footnote"&gt;
 &lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;&lt;a href="http://www.u148.net/article/1899.html" title="喜多郎：寂静之声·灵性之音"&gt;喜多郎：寂静之声·灵性之音&lt;/a&gt;&amp;#160;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn:2"&gt;
-&lt;p&gt;&lt;a href="http://wencanghai.blog.sohu.com/267381183.html" title="倾听喜多郎"&gt;倾听喜多郎&lt;/a&gt;&amp;#160;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;调整 Firefox 窗口，直到可以在同一个屏幕里同时看到桌面和 Firefox；&lt;/li&gt;
+&lt;li&gt;按住 &lt;code&gt;地址栏&lt;/code&gt; 左边的图标；&lt;/li&gt;
+&lt;li&gt;按住鼠标左键的同时，将指针移动到桌面，然后松开鼠标左键，快捷方式就创建好了。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="Hermit"></category><category term="虾米"></category></entry><entry><title>在网页中嵌入 html5 音视频</title><link href="http://lusir.me/embed-html5-media.html" rel="alternate"></link><updated>2014-03-08T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-08:embed-html5-media.html</id><summary type="html">&lt;p&gt;前几天看见一篇使用 FFmpeg 的文章，就尝试了一下这款“转码瑞士军刀”。本文记录一下初次使用 FFmpeg 的过程，顺便把转码之后的音视频嵌进来看看结果。
-&lt;/p&gt;
-&lt;h3 id="4e63f356b53969a3458a2e612a726df6"&gt;安装 FFmpeg&lt;/h3&gt;
-&lt;p&gt;首先是到&lt;a href="http://ffmpeg.zeranoe.com/builds/" title="Zeranoe FFmpeg"&gt;官网&lt;/a&gt;下载 Windows Build Version，解压后添加 ffmpeg.exe 的路径到 &lt;code&gt;环境变量&lt;/code&gt; 的 &lt;code&gt;path&lt;/code&gt; 中，打开 cmd，输入 &lt;code&gt;ffmpeg -version&lt;/code&gt; 查看是否安装成功。&lt;/p&gt;
-&lt;h3 id="d2b3b5b0e8e7ae02b05511465192f574"&gt;转码音视频&lt;/h3&gt;
-&lt;p&gt;将要转码的音视频放到 &lt;code&gt;C:\Users\×××&lt;/code&gt; 中，分别在 cmd 中输入以下命令（假设音频为 tao.mp3，视频为 man.mp4）：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;tao&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ab&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp3&lt;/span&gt;
-
-&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;tao&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="n"&gt;ogg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;acodec&lt;/span&gt; &lt;span class="n"&gt;libvorbis&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ac&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ab&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ar&lt;/span&gt; &lt;span class="mi"&gt;44100&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ogg&lt;/span&gt;
-
-&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;man&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;acodec&lt;/span&gt; &lt;span class="n"&gt;libvorbis&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ac&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ab&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ar&lt;/span&gt; &lt;span class="mi"&gt;44100&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;345&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="mi"&gt;640&lt;/span&gt;&lt;span class="n"&gt;x360&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;webm&lt;/span&gt;
-
-&lt;span class="n"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;man&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;strict&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;aac&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vcodec&lt;/span&gt; &lt;span class="n"&gt;libx264&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vprofile&lt;/span&gt; &lt;span class="n"&gt;high&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;preset&lt;/span&gt; &lt;span class="n"&gt;slow&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;maxrate&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;bufsize&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;threads&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="mi"&gt;640&lt;/span&gt;&lt;span class="n"&gt;x360&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mp4&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id="9e068158b573d915ef69529b11ef2f6d"&gt;将媒体文件嵌入网页&lt;/h3&gt;
-&lt;p&gt;此处使用了 &lt;a href="http://html5media.info/" title="html5media"&gt;html5media.js&lt;/a&gt;，使用 &lt;audio&gt; 与 &lt;video&gt; 标签插入，如下：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;video&lt;/span&gt; &lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;640&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;360&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;controls&lt;/span&gt; &lt;span class="n"&gt;preload&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;clip.mp4&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;clip.webm&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;video&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id="158ce031b84d63c39e11ebcb03c83dfc"&gt;嵌入结果&lt;/h3&gt;
-&lt;h4 id="c4f92557d7c49823e0f5d3bde398e44c"&gt;嵌入视频（右键选择播放）&lt;/h4&gt;
-&lt;p&gt;&lt;video controls preload&gt;
-    &lt;source src="http://dn-nero.qbox.me/man-in-black-clip.mp4"&gt;&lt;/source&gt;
-    &lt;source src="http://dn-nero.qbox.me/man-in-black-clip.webm"&gt;&lt;/source&gt;
-&lt;/video&gt;&lt;/p&gt;
-&lt;h4 id="5c279a1704357d84f72d80a0c5e7768e"&gt;嵌入音频&lt;/h4&gt;
-&lt;p&gt;&lt;audio controls preload autoplay&gt;
-    &lt;source src="http://dn-nero.qbox.me/taoshengyijiu.mp3"&gt;&lt;/source&gt;
-    &lt;source src="http://dn-nero.qbox.me/taoshengyijiu.ogg"&gt;&lt;/source&gt;
-&lt;/audio&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/create-url-shortcuts-with-firefox.png" title="为网页链接创建桌面快捷方式" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/create-url-shortcuts-with-firefox.png" alt="为网页链接创建桌面快捷方式" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其实，如果是在 Win7 以上版本的 Windows 下，可以直接将图标拖至屏幕右下角，待返回至桌面松开鼠标左键即可创建。&lt;/p&gt;
+&lt;p&gt;同理，我们也可以拖放书签菜单、书签和历史记录栏或者 &lt;code&gt;我的足迹&lt;/code&gt; 窗口中的项目到桌面上从而为其创建快捷方式。&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
-生前何必久睡，死后自会长眠&lt;/p&gt;
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://zh.wikihow.com/%E5%9C%A8Windows%E4%B8%8A%E5%AE%89%E8%A3%85FFmpeg%E7%A8%8B%E5%BA%8F" title="如何在Windows上安装FFmpeg程序"&gt;如何在Windows上安装FFmpeg程序&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://paulrouget.com/e/converttohtml5video/" title="Converting to WebM, OGG/Theora and MP4"&gt;Converting to WebM, OGG/Theora and MP4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://jalena.bcsytv.com/archives/1202" title="FFmpeg 批量转换HTML5视频"&gt;FFmpeg 批量转换HTML5视频&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.xiaket.org/2010/notes-on-ffmpeg.html" title="FFMPEG使用"&gt;FFMPEG使用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.raphaelzhang.com/2013/05/some-usage-of-ffmpeg/" title="ffmpeg转码的几个小用法"&gt;ffmpeg转码的几个小用法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/etianen/html5media/wiki/embedding-audio" title="Embedding audio"&gt;Embedding audio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/etianen/html5media/wiki/embedding-video" title="Embedding video"&gt;Embedding video&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="HTML5"></category></entry><entry><title>使用七牛镜像存储</title><link href="http://lusir.me/start-using-qiniu.html" rel="alternate"></link><updated>2014-03-07T13:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-07:start-using-qiniu.html</id><summary type="html">&lt;p&gt;看到很多博主都正在使用七牛作为图床或整站的 CDN 加速，本着外行凑热闹的精神，我也学着使用了一把。七牛的加速节点响应速度确实是很快，至少目前是这样，我 ping 了一下，结果如下。
+转载并修改自 &lt;a href="https://support.mozilla.org/zh-CN/kb/%E5%9C%A8%E6%A1%8C%E9%9D%A2%E5%88%9B%E5%BB%BA%E7%BD%91%E9%A1%B5%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F" title="在桌面创建网页快捷方式"&gt;Mozilla Support&lt;/a&gt;。&lt;/p&gt;</summary><category term="Firefox"></category></entry><entry><title>Mason 两个基础用法</title><link href="http://lusir.me/mason-usage.html" rel="alternate"></link><updated>2015-02-27T21:00:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-27:mason-usage.html</id><summary type="html">&lt;p&gt;Mason 是国人 tiramn 写的一个强大扩展。目前已实现功能如下：
 &lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ping-qbox-me.png" title="ping-qbox-me" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ping-qbox-me.png" alt="ping-qbox-me" /&gt;
+&lt;ol&gt;
+&lt;li&gt;同步下载网页音频和视频；&lt;/li&gt;
+&lt;li&gt;重定向 url / 阻止请求；&lt;/li&gt;
+&lt;li&gt;支持脚本，类似于 Grease Monkey，区别在于执行效率更高，使用更加灵活；&lt;/li&gt;
+&lt;li&gt;修改 http header。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以下内容系网上搜集，并根据个人实际应用堆叠……&lt;/p&gt;
+&lt;h3 id="66f8127d21a0e66e1284fa72008d8cdc"&gt;反防盗链&lt;/h3&gt;
+&lt;p&gt;用途为：让你能看到发图人以为别人也能看到的图片，如秋秋空间，百度图片，新浪博客上的相册。它们在被引用页不属于自己的网页时就会显示不正常。如 RSS Reader 里面就会出现一些图片无法显示。Mason 默认规则已解决上述几个站点的防盗链问题。下面沿用卡饭论坛上的例子（破图在 chrome 下真的很难看）。&lt;/p&gt;
+&lt;p&gt;&lt;img class="aligncenter" src="http://img01.pixiv.net/img/gofu/9881084_m.jpg" alt="我本是一幅图，若此时你只能看到文字，证明该站依旧设置了防盗链功能。" width="600" /&gt;&lt;/p&gt;
+&lt;h4 id="10ef0f51638a9430fa2358f1fdeefc3f"&gt;Mason 反防盗链设置&lt;/h4&gt;
+&lt;p&gt;安装 Mason 后添加规则，如图设置，① 为防盗链图片包含网址，② 为该图能正常显示的网址，一般情况下 ① 与 ② 是同一个网址。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/mason-pic-see.png" title="Mason 反防盗链设置" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/mason-pic-see.png" alt="Mason 反防盗链设置" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;下面记录一下七牛镜像存储的使用（本例为图床使用）：&lt;/p&gt;
-&lt;p&gt;由于我没有备案的打算，所以使用的是七牛提供的三级域名。&lt;/p&gt;
-&lt;p&gt;假设我想要镜像的源站为 &lt;code&gt;img.lusir.me&lt;/code&gt;。而且我已经建立了名为 pic 的七牛 bucket（bucket 意指“空间”，理解为“坑”我觉得更形象）。&lt;/p&gt;
+&lt;p&gt;update 2015.02.28：&lt;code&gt;大发博客&lt;/code&gt; 及 &lt;code&gt;zdfans&lt;/code&gt; 的站在 Inoreader 中均无法显示图片，经如上设置即可解决。&lt;/p&gt;
+&lt;h3 id="7290830a92acb91db82d8495694544dd"&gt;Mason 重定向&lt;/h3&gt;
+&lt;p&gt;使用联通网时 Google 搜索结果中的 wikipedia 条目打开后会直接跳转到 &lt;code&gt;http://nfdnserror3.wo.com.cn&lt;/code&gt;。将 &lt;code&gt;http://zh.wikipedia.org&lt;/code&gt; 重定向到 &lt;code&gt;https://zh.wikipedia.org&lt;/code&gt; 或 &lt;code&gt;http://zh.wikipedia.org/zh-cn/&lt;/code&gt; 即可解决问题。&lt;/p&gt;
+&lt;h4 id="37a5fb72e91bbc07441fe9fabc117b8e"&gt;Mason 重定向设置&lt;/h4&gt;
+&lt;p&gt;添加规则：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/mason-redirect-1.png" title="Mason 重定向设置 - 1" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/mason-redirect-1.png" alt="Mason 重定向设置 - 1" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;点击配置后输入：&lt;code&gt;http://&amp;gt;*(https?://zh\.wikipedia\.org)/(wiki|zh|zh((?!\-cn)[^\/])+)/&amp;gt;*$1/zh-cn/&lt;/code&gt;，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/mason-redirect-2.png" title="Mason 重定向设置 - 2" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/mason-redirect-2.png" alt="Mason 重定向设置 - 2" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我用的是&lt;a href="http://pan.baidu.com/s/1dDxpkGh" title="修改后的 Mason"&gt;修改后的版本&lt;/a&gt;（无视文件名，直接拖入 Firefox 安装），更多用法参阅 &lt;a href="https://sites.google.com/site/tiramason/" title="Mason 主页"&gt;Mason 主页&lt;/a&gt;。&lt;/p&gt;</summary><category term="Firefox"></category><category term="Mason"></category></entry><entry><title>Stylish2.0 Editor UC 脚本</title><link href="http://lusir.me/stylish2-editor-uc.html" rel="alternate"></link><updated>2015-02-26T10:04:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-26:stylish2-editor-uc.html</id><summary type="html">&lt;p&gt;Stylish 升级到 2.0 版本后，&lt;code&gt;Stylish_Edit&lt;/code&gt; 跟 &lt;code&gt;Stylish_Custom&lt;/code&gt; 两个 UC 脚本开始闹情绪了，不仅几个小功能按钮消失，编写新样式时还无法在新窗口中打开，还好有万能的 Google。
+&lt;/p&gt;
+&lt;p&gt;我是懒惰的搬运工。&lt;/p&gt;
+&lt;h3 id="e1abb88b1cec218ac876ff663caa0eb7"&gt;更新 Stylish_Edit2.0.uc.js 与 Stylish_Custom2.uc.js&lt;/h3&gt;
+&lt;p&gt;更新这两个脚本需要同时更新并修改 userChromeJS 扩展与 userChrome.js 脚本，本人奉行伸手主义，所以直接下载了 &lt;code&gt;boy3510817&lt;/code&gt; 与 &lt;code&gt;黑衣大螃蟹&lt;/code&gt; 的成品，经验证可用。&lt;/p&gt;
+&lt;h3 id="4e34a5b6412a86eea7a85c172728dedd"&gt;在新窗口中编写新样式&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;地址栏输入：&lt;code&gt;about:config&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;过滤器中输入：&lt;code&gt;extensions.stylish.editorWindowMode&lt;/code&gt; 并修改该项值为 &lt;code&gt;1&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由于电脑上的 Palemoon 还是 25.2 版，所以编辑器不支持语法高亮……&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/stylish-editor.png" title="Stylish 编辑器" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/stylish-editor.png" alt="Stylish 编辑器" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+附上 &lt;code&gt;boy3510817&lt;/code&gt; 与 &lt;code&gt;黑衣大螃蟹&lt;/code&gt; 的成品，&lt;a href="http://pan.baidu.com/s/1kTuvbYB" title="Stylish2.0 Editor"&gt;Stylish2.0 Editor&lt;/a&gt;。&lt;/p&gt;</summary><category term="Firefox"></category><category term="Stylish"></category></entry><entry><title>修改 Firefox 搜索引擎</title><link href="http://lusir.me/modify-firefox-search-engine.html" rel="alternate"></link><updated>2015-02-25T18:36:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-25:modify-firefox-search-engine.html</id><summary type="html">&lt;p&gt;Palemoon 默认的 Google 搜索引擎参数比较多，有时会影响搜索结果及其排序。修改之。
+&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;进入&lt;a href="https://portal.qiniu.com/" title="七牛内容管理页面"&gt;七牛内容管理页面&lt;/a&gt;，设置一键加速网站，修改镜像源为 &lt;code&gt;img.lusir.me&lt;/code&gt;，底下的“镜像空间”默认是 pic（如果我只建立了一个“坑”）。这时点击“确定加速”即可将 &lt;code&gt;img.lusir.me&lt;/code&gt; 与 &lt;code&gt;pic.u.qiniudn.com&lt;/code&gt; 进行关联。&lt;/p&gt;
+&lt;p&gt;打开 &lt;code&gt;www.google.com/ncr&lt;/code&gt;，&lt;code&gt;ncr&lt;/code&gt; 是指 &lt;code&gt;no country redirect&lt;/code&gt;，这样 Google 就不会自动跳转到 google.com.hk 了，且在不清除 Google 的 cookie 的前提下以后都可以直接打开 google.com；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;更改文章里面的图片地址，搜寻关键字 &lt;code&gt;img.lusir.me&lt;/code&gt; 并将其改为 &lt;code&gt;pic.u.qiniudn.com&lt;/code&gt;，保存。&lt;/p&gt;
+&lt;p&gt;打开 &lt;code&gt;程序安装路径\browser\searchplugins&lt;/code&gt; 下的 google.xml，删除所有 &lt;code&gt;param&lt;/code&gt; 行除 &lt;code&gt;q&lt;/code&gt;，如下：&lt;/p&gt;
+&lt;p&gt;&lt;script src="https://gist.github.com/zyxnero/96fd40bad15c15aa1c82.js"&gt;&lt;/script&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;访问一篇带图的文章，进入&lt;a href="https://portal.qiniu.com/" title="七牛内容管理页面"&gt;七牛内容管理页面&lt;/a&gt;的内容管理，此时文章里相应的图会被拉取到七牛的“坑”里面。也可以直接将所有的图通过&lt;a href="http://docs.qiniu.com/tools/v6/qrsbox.html" title="QRSBox同步工具"&gt;QRSBox&lt;/a&gt;上传到“坑”里面。&lt;/p&gt;
+&lt;p&gt;修改完 xml 文件后删除 Firefox 配置文件目录下的 search.json；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启 Firefox，地址栏中的 Google 搜索引擎应该就已经生效了，再次搜索地址栏中链接应该是这样的：&lt;code&gt;https://www.google.com/search?q={搜索关键字}&lt;/code&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;如此就完成整个迁移过程。此时 &lt;code&gt;img.lusir.me&lt;/code&gt; 这个源站就可以暂时废弃不用了，即以后可以直接将 &lt;code&gt;pic.u.qiniudn.com&lt;/code&gt; 作为图床。&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;如果要保留源站的域名方式 &lt;code&gt;img.lusir.me&lt;/code&gt;，七牛也提供了方法，&lt;a href="http://kb.qiniu.com/how-to-use-image-storage-and-qrsync" title="镜像存储与qrsync数据同步的使用"&gt;点我查看&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.cjzsy.com/archives/1415" title="七牛云储存：从其他图床搬家到七牛的便捷方法"&gt;七牛云储存：从其他图床搬家到七牛的便捷方法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="七牛"></category></entry><entry><title>使用 Feedly 阅读器</title><link href="http://lusir.me/start-using-feedly.html" rel="alternate"></link><updated>2014-03-07T10:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-07:start-using-feedly.html</id><summary type="html">&lt;p&gt;RSS 阅读器改变了我上网的习惯，让我习惯于将喜欢的站放到订阅里而不是浏览器书签里。Google Reader 是一款经典的应用，能够高效的获取订阅源的更新，而且丰富的扩展使得它与浏览器集成，使用方便。
+&lt;p&gt;如此这般，搜索结果将更加准确直接。&lt;/p&gt;
+&lt;p&gt;我已将 searchplugins 文件夹下的其余 xml 文件删掉……&lt;/p&gt;</summary><category term="Firefox"></category></entry><entry><title>Linux 中的复制与打包命令</title><link href="http://lusir.me/cp-and-tar.html" rel="alternate"></link><updated>2015-02-22T17:12:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-22:cp-and-tar.html</id><summary type="html">&lt;p&gt;最基本的 Linux 命令 &lt;code&gt;cp&lt;/code&gt; 与 &lt;code&gt;tar&lt;/code&gt;，粘贴至此以作备忘。
 &lt;/p&gt;
-&lt;p&gt;Google Reader 走了之后尝试使用过 Feedly 与 Digg 两款免费的应用，直接通过 Google 账号就能导出 Google Reader 的订阅源，即所谓的无痛转移，当时由于 Feedly 经常抽疯，所以选择了 Digg 并一直使用着它。&lt;/p&gt;
-&lt;p&gt;昨晚整理 RSS 订阅源的时候发现很多站都在更新，但 Digg 里却不能正常显示，我明白我应该更换别家的 RSS 订阅服务了。&lt;/p&gt;
-&lt;p&gt;看到&lt;a href="http://www.playpcesor.com/2013/03/google-reader-feedly.html" title="Google Reader 將停止服務，最佳替代方案就是 Feedly"&gt;電腦玩物&lt;/a&gt;的推荐文章后决定再次尝试 Feedly，将整理到一半的订阅源从 Digg 导出，用 Google 账号登入 Feedly，导入 OPML 源，将 Feedly 主题改成绿色，将 Feedly 加入“科学上网”列表。检查发现 RSS 源可以正常更新。遂果断抛弃 Digg，加入 Feedly 的行列。安装 Feedly 扩展，这样一来，Feedly 的使用方法仿佛使人回到了 Google Reader 的时代，除开搜索功能（2014.03.08更新：Feedly 提供搜索功能，不过貌似 Pro 账号才能获取全部搜索条目）。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/feedly-thumb.png" title="我的 Feedly" &gt;
-    &lt;img src="http://dn-nero.qbox.me/feedly-thumb.png" alt="我的 Feedly" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://capbone.com/rss-readers/" title="RSS 阅读器一览"&gt;RSS 阅读器一览&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://capbone.com/mr-reader/" title="Mr. Reader：我心目中最好的 RSS 阅读器"&gt;Mr. Reader：我心目中最好的 RSS 阅读器&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Feedly"></category></entry><entry><title>关联博客与 Google Profile</title><link href="http://lusir.me/add-google-profile.html" rel="alternate"></link><updated>2014-03-05T01:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-05:add-google-profile.html</id><summary type="html">&lt;p&gt;使用 Google 搜索时经常会看到一些搜索到的文章标题下面有个头像，头像旁边写着 &lt;code&gt;By：×××&lt;/code&gt;，这时，只要标题下面的摘要中含有我们搜索的关键字，我想大多数人应该都会忍不住想点进去看看了。为了实现这一功能，我也找了好几篇文章学着操作，坐等 Google 重新爬取。
-&lt;/p&gt;
-&lt;p&gt;其实操作不难，&lt;a href="https://support.google.com/webmasters/answer/1408986?hl=zh-Hans" title="搜索结果中的作者信息"&gt;Google&lt;/a&gt; 已经给了我们方法，我们只需照着操作就行。我选择了&lt;a href="http://www.cmhello.com/" title="胡倡萌"&gt;胡倡萌&lt;/a&gt;使用的方法，即 Google 给的方法二。&lt;/p&gt;
-&lt;h3 id="27b152135057a08d88a562eac4a8dbc0"&gt;在网页上创建指向 Google+ 个人资料的链接&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://plus.google.com/118433343253566330284?rel=author&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Google+&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;h3 id="9c95319bf274672d6eae7eb97c3dfda5"&gt;cp&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;cp&lt;/code&gt; 是常见的复制文件或目录的命令，是 copy 的缩写。譬如：&lt;/p&gt;
+&lt;p&gt;复制文件&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;cp /path/a /path/b
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;链接必须包含 &lt;code&gt;?rel=author&lt;/code&gt; 参数。如果缺少该参数，就无法与 Google+ 个人资料关联。&lt;/p&gt;
-&lt;h3 id="fb4227b0fa5f176f42ab7de2f2dcc612"&gt;编辑 Google+ 个人资料以实现双向链接&lt;/h3&gt;
-&lt;p&gt;修改 &lt;a href="http://plus.google.com/me/about/edit/co" title="编辑撰稿者"&gt;Google+ 个人资料&lt;/a&gt;的撰稿者部分。在显示的对话框中点击&lt;code&gt;添加自定义链接&lt;/code&gt;，然后输入网站网址，保存即可。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;网上很多童鞋说还应该添加指向 Google+ ID 的 rel="publisher" 及 rel="me"，Glenn Gabe &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; 及 Google 给出了反驳，单博主博客是不需要 rel="me" 链接的。&lt;/p&gt;
-&lt;h3 id="85db889726449cb9c5fd0865a08fb7a9"&gt;使用 Google+ 个性网址&lt;/h3&gt;
-&lt;p&gt;标题的意思很明显，就是给个个性短连接，将 Google+ 个人资料的链接地址由 &lt;code&gt;https://plus.google.com/118433343253566330284&lt;/code&gt; 生成一个自定义的 &lt;code&gt;https://www.google.com/+NeroZheng&lt;/code&gt;,使得链接更美观、与众不同、方便记忆。&lt;a href="https://support.google.com/plus/answer/2676340?hl=zh-Hans" title="Google+个性网址使用入门"&gt; Google &lt;/a&gt;给出了详细的说明，在此我只把 Google 的要求列一下：&lt;/p&gt;
+&lt;p&gt;复制文件夹&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;cp -r /path/dir-a /path/dir-b
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;cp&lt;/code&gt; 的一些常见的参数：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;十个或更多个关注者&lt;/li&gt;
-&lt;li&gt;帐户已创建至少30天&lt;/li&gt;
-&lt;li&gt;有个人资料照片&lt;/li&gt;
+&lt;li&gt;-a：相当于 -pd --preserve=all；&lt;/li&gt;
+&lt;li&gt;-b：类似 --backup，但不接受任何参数；&lt;/li&gt;
+&lt;li&gt;-d：若存在软链接档案，则复制链接文件的属性，而非文件本身；&lt;/li&gt;
+&lt;li&gt;-f：意为 force，强制覆盖；&lt;/li&gt;
+&lt;li&gt;-i：在覆盖相同档案时询问；&lt;/li&gt;
+&lt;li&gt;-r：递归参数，一般用于复制目录。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;就是这么简单，不过由于我只有 4 个关注者，所以我拉了几个不常上网的朋友给注册了 Google 账号才获得了资格，而且为了得到 +NeroZheng，我还把 Google+ 个人资料的名字改成了 Nero Zhen，改完才发现 Google 账号名 2 年只能改 3 次，世界真不美好。&lt;br&gt;&lt;/p&gt;
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;p&gt;详情使用 &lt;code&gt;man cp&lt;/code&gt; 来查看。&lt;/p&gt;
+&lt;h3 id="db5570bf61464b46e2bde31ed61a7dc6"&gt;tar&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;tar&lt;/code&gt; 命令可以对档案进行打包备份操作。&lt;/p&gt;
+&lt;p&gt;一些常见的参数：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.cmhello.com/add-author-information.html" title="在Google搜索结果中显示你网站的作者信息"&gt;在Google搜索结果中显示你网站的作者信息&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://fatesinger.com/1252.html" title="把你的博客和 Google+ profile 连起来"&gt;把你的博客和 Google+ profile 连起来&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://fatesinger.com/968.html" title="Google Sitelink &amp;amp; Google+ Author Profile"&gt;Google Sitelink &amp;amp; Google+ Author Profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;-c：create，建立一个 tar 包；&lt;/li&gt;
+&lt;li&gt;-x：解开一个压缩包；&lt;/li&gt;
+&lt;li&gt;-t：查看 tar 里的文件；&lt;/li&gt;
+&lt;li&gt;-z：使用 gzip 来压缩；&lt;/li&gt;
+&lt;li&gt;-j：使用 bzip2 来压缩；&lt;/li&gt;
+&lt;li&gt;-J：若存在 xz lzip lzma，则可以直接打包成 xz lzip lzma；&lt;/li&gt;
+&lt;li&gt;-v：列出打包进程；&lt;/li&gt;
+&lt;li&gt;-f：tar 包名，-f 参数后需紧跟 tar 包名；&lt;/li&gt;
+&lt;li&gt;-p：保留文件权限。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;常见的打包命令&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;tar cvf /path/name.tar /path/name
+tar cvjf /path/name.tar.bz2 /path/name
+tar cvzf /path/name.tar.gz /path/name
+tar cvJf /path/name.tar.xz /path/name
+tar cvJf /path/name.tar.lzma /path/name
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;常见的解包命令&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;tar xvf /path/name.tar
+tar xvjf /path/name.tar.bz2
+tar xvzf /path/name.tar.gz
+tar xvJf /path/name.tar.xz
+tar xvJf /path/name.tar.lzma
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;详细命令可以使用 &lt;code&gt;man tar&lt;/code&gt; 来查看，需注意的是单纯 &lt;code&gt;tar&lt;/code&gt; 仅打包不压缩。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+节选自&lt;a href="http://havee.me/linux/2014-12/copy-backup-and-mirror-image-on-linux.html" title="Linux 上的复制、备份与镜像"&gt;《Linux 上的复制、备份与镜像》&lt;/a&gt;。&lt;/p&gt;</summary><category term="Linux"></category></entry><entry><title>婊子无情，戏子无义</title><link href="http://lusir.me/merciless-bitches-and-actors.html" rel="alternate"></link><updated>2015-02-01T17:06:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-01:merciless-bitches-and-actors.html</id><summary type="html">&lt;p&gt;在岳云鹏的相声中听到“你们无情，我们无义”这样一句调侃，搜索之后才知道“婊子无情，戏子无义”是句老话，互文，大意是说婊子和戏子都是无情无义的东西。
+&lt;/p&gt;
+&lt;p&gt;不知这话出自何处，个人觉得一概而论失之偏颇，但又挤不出个所以然。只能引用几位网友观点了：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;这些全是废话，一个人没有那么多真感情可以出卖的，难道嫖客用的是真感情不成？
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;老子说：“失道而后德，失德而后仁，失仁而后义，失义而后礼。”故爱讲仁义的人往往是已经是道德有亏。
+
+世人所谓“婊子”、“戏子”皆是天性饱满之人，他们道德不亏，不必去用仁义伪饰。他们至情至性，天真若婴儿。因为世人常常达不到他们的境界，想把他们也纳入到世俗的规矩中，就千方百计的去诋毁他们。 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;《霸王别姬》开篇就是：“婊子无情，戏子无义。婊子合该在床上有情，戏子，只能在台上有义。”
+
+段小楼、程蝶衣和菊仙这两伶一妓闹了一整本书，但在20世纪70年代那段大灾难里，他们又成了一拨人。
+
+他们是戏子和优伶，是柔弱的、飘逸的、有情有义的、被鄙视的；而那些批斗他们的人，是当权的、粗暴的、把持主权地位的。
+
+知道这像什么吗？
+
+在《红楼梦》里，戏子和优伶与贾宝玉是柔弱的、飘逸的、有情义的，而批斗他们的是贾政那一类。
+
+在《吊柳七》里，戏子和优伶与柳永是柔弱的、飘逸的、有情义的，而朝廷那边儿是负责批斗他们的。
+
+其实想远一点，太史公《滑稽列传》里那些优伶，也都是戏子。而太史公这样被强权压迫的可怜人，一身会歌颂屈原贾谊的风骨，自然也对优伶们的风流滑稽相当首肯了。
+
+大概可以说，在士大夫的文艺世界里，戏子和优伶代表着女性化、柔弱、风流、隐逸、偏弱势的一群人；他们对立面的，是男权、严肃、秩序、权贵、端正、强势这一端。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;历史总是由胜利者写的，所以不管什么历史都带着胜利者的角度。
+
+同样，这话不是“婊子”，也不是“戏子”说的，而是文人墨客说了传出去的，所以并不是代表真正的“婊子”和“戏子”，而是代表文人墨客们对于“婊子”和“戏子”的一种普遍认识。
+
+对于一些清高的文人来说，青楼艺妓整天卖唱卖身，哪有什么感情？戏子整日在别人的故事里流自己的眼泪，唱戏的曲子怎么写的，他们就怎么唱，哪有自己的仁义道德观念？
+
+总之，这句话只是文人对他们的一种看法，不代表是真理。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;也许以后对这句话会有不一样的认识，但至少现在赞同以上观点……&lt;/p&gt;
+&lt;h3 id="73ba78871d960d9b82c5ccdba28d01a2"&gt;引用链接&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.zhihu.com/question/20408917" title="为何说“婊子无情，戏子无义”，这背后蕴含着什么深意吗？"&gt;为何说“婊子无情，戏子无义”，这背后蕴含着什么深意吗？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.douban.com/note/91866473/" title="所谓“婊子无情，戏子无义”"&gt;所谓“婊子无情，戏子无义”&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Collection"></category></entry><entry><title>优化 AutoCAD 启动运行速度</title><link href="http://lusir.me/autocad-acc.html" rel="alternate"></link><updated>2014-12-11T21:30:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-12-11:autocad-acc.html</id><summary type="html">&lt;p&gt;最近几个版本的 AutoCAD 对于系统资源的要求越来越大了，还是老版本轻便一些。采用以下几个步骤将 AutoCAD 不必要的加载除掉。
+&lt;/p&gt;
+&lt;h3 id="f1054629ae86e030a566d033d7f0cddb"&gt;步骤一&lt;/h3&gt;
+&lt;p&gt;安装 AutoCAD 产品后，顺便安装 AutoCAD 管理工具，亦即 &lt;code&gt;CMControl&lt;/code&gt;。安装完成后打开 CAD 管理员控制实用程序，选择要修改的产品，即 CAD 版本号，禁用所有通信。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cad-opti.jpg" title="禁用 CAD 通信中心" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/cad-opti.jpg" alt="禁用 CAD 通信中心" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="7d1cce80eca81796dd816477c72e7b4b"&gt;步骤二&lt;/h3&gt;
+&lt;p&gt;运行 AutoCAD 后，打开进程管理器，会发现这样一个进程：WSCommCntr1.exe，它是 AutoCAD 的后台程序，会发送 AutoCAD 的版本信息和注册信息给 AutoDesk 公司，并自动收集相关信资料，包括图集、信息、更新等。&lt;/p&gt;
+&lt;p&gt;将 &lt;code&gt;C:\Program Files (x86)\Common Files\Autodesk Shared&lt;/code&gt; 目录下的 &lt;code&gt;WSCommCntr1.exe&lt;/code&gt; 与 AutoCAD 安装目录下的 &lt;code&gt;WSCommCntrAcCon.arx&lt;/code&gt; 重命名。&lt;/p&gt;
+&lt;h3 id="73e8816f34559f5622f8eb4e41d8259b"&gt;步骤三&lt;/h3&gt;
+&lt;p&gt;在 AutoCAD 命令行中输入 &lt;code&gt;VTENABLE&lt;/code&gt;，依照提示输入 &lt;code&gt;0&lt;/code&gt; 以启用平滑切换显示区域，加快启动速度，接着回车。&lt;/p&gt;
+&lt;h3 id="2eda685cfb7b0f9473eb4e03a9544214"&gt;步骤四（待验证）&lt;/h3&gt;
+&lt;p&gt;打开 IE 浏览器，将“Internet 选项”→“高级”选项卡下的“检查发行商的证书是否已吊销”项取消勾选。&lt;/p&gt;
+&lt;h3 id="5ca581389e16babfae591593e9a717cb"&gt;步骤五&lt;/h3&gt;
+&lt;p&gt;这一步是禁止 AutoCAD 联网，ESET Smart Security 及众多防火墙都能实现，参考&lt;a href="http://lusir.me/ess-filter.html" title="ESET Smart Security 添加黑白名单"&gt;ESET Smart Security 添加黑白名单&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;div class="footnote"&gt;
-&lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;&lt;a href="http://www.hmtweb.com/imd/?p=1587" title="避免 rel=author 与 rel=publisher 产生冲突"&gt;How To Troubleshoot Authorship Markup When rel=author and rel=publisher Clash&lt;/a&gt;&amp;#160;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</summary><category term="Google"></category></entry><entry><title>整合 Google 自定义搜索到 Pelican</title><link href="http://lusir.me/google-cse-for-pelican.html" rel="alternate"></link><updated>2014-03-04T21:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-03-04:google-cse-for-pelican.html</id><summary type="html">&lt;p&gt;总感觉好像我搭建 Blog 的目的跟别人不太一样，小伙伴们都在正儿八经的写出一些有价值有意义的文章，我却在那折腾怎么实现这个功能，怎么实现那个功能。可问题是自己又不会整，只能到处搜寻答案然后慢慢试结果。好在人品不错，虽然浪费不少时间，但折腾出结果的满足感确实挺爽。本文记录一下将 Google 自定义搜索整合到 Pelican 的过程。
+&lt;p&gt;近日 Autodesk 公司发布了 AutoCAD 2015，同时宣布向全球学生教师和教育机构提供全功能教育版，包括 AutoCAD、3DMax、Maya 等。不管出于什么目的，不管其影响如何，这种行为还是值得点个赞的！&lt;/p&gt;</summary><category term="AutoCAD"></category></entry><entry><title>成语中“物”的几种解释</title><link href="http://lusir.me/proverb-with-thing.html" rel="alternate"></link><updated>2014-12-07T17:10:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-12-07:proverb-with-thing.html</id><summary type="html">&lt;p&gt;心血来潮整理了几个含“物”的成语。
 &lt;/p&gt;
-&lt;p&gt;说是整合到 Pelican，其实只是通过 jinja2 的一些规则将 Google 自定义搜索代码插入到主题的“搜索页面.html”中。&lt;/p&gt;
-&lt;h3 id="be5bf34c6756f3e3f7e20057e2c5c10b"&gt;第一步：注册并获取 Google 自定义搜索代码&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;先通过访问 http://www.google.com/cse/ 创建自定义搜索引擎。创建完毕后进入“外观”面板，选择“全宽”的布局模式。保存后进入“获取代码”,获得 Google 自定义搜索代码。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cx&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;012467883927724485227:eaoxbeaeyty&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;gcse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createElement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;text/javascript&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;src&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;protocol&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https:&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https:&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http:&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-        &lt;span class="s1"&gt;&amp;#39;//www.google.com/cse/cse.js?cx=&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;cx&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementsByTagName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
-    &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parentNode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;insertBefore&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-  &lt;span class="p"&gt;})();&lt;/span&gt;
-&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
-&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;searchresults&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;only&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/gcse:searchresults-only&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id="3a2e8e53c47ef1f31c3c65ceed0d2411"&gt;第二步：创建搜索结果页&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;为了让搜索结果在博客内部显示，我们需要在主题的 templates 中创建一个新的页面，用来显示搜索结果。新建一个文件，命名为 search.html。我是直接复制 page.html，重命名为 search.html 并相应修改文件中的 title 及 description，然后插入第一步中得到的 Google 自定义搜索代码到相应的位置。至此搜索结果页创建就完成了。&lt;/p&gt;
-&lt;h3 id="1db2035cd12c3dd8d8e34366e93b222c"&gt;第三步：修改当前主题的搜索提交表单&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;这里算是最关键的一步啦，当用户点击你博客上任意页面的站内搜索按钮的时候，可以将用户引导到刚刚创建的搜索结果页上。我们需要在主题文件夹中找到搜索框所在的文件，每个主题都不同，一般是在 header.html 中，找到类似以下的代码：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;lt;form method=&amp;quot;get&amp;quot; action=&amp;quot;/search.html&amp;quot; &amp;gt;
-&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;s&amp;quot; class=&amp;quot;textfield&amp;quot; placeholder=&amp;quot;Press enter to search ...&amp;quot; /&amp;gt;
-&amp;lt;/form&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;需要注意的地方：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;method="get"&lt;/li&gt;
-&lt;li&gt;action="/search.html"    action 的地址为 search.html 在生成的站点中的相对地址，一般是在根目录下，即 /search.html。&lt;/li&gt;
-&lt;li&gt;文本框 name="s" 不管主题搜索框的 name 等于什么，都将引号内的字母改成 q，即 name="q"。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="5aec29c358fa0dff64fe292979a341d1"&gt;第四步：使用 javascript 让搜索结果页的 title 中显示搜索关键字（可选）&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;由于静态页面不能从数据库获取输入的关键字，所以只能从搜索结果页的 URL 下手了，假设搜索结果页的 URL 为：http://lusir.me/search.html?q=solidworks。我们想得到参数 q 的值，则可以通过以下函数调用。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;reg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;RegExp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;(^|&amp;amp;)&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;q&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;=([^&amp;amp;]*)(&amp;amp;|$)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;i&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;search&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;substr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;reg&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;r&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="nx"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;r&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;║&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;decodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;context&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;║&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;的搜索结果 - 擼sirの避風港&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;上面那段的具体意思我也不太清楚，大概就是使用正则式将 url 分为 3 部分，以 q 为分界点，我们需要的就是 q= 之后的那部分（即 context）。匹配成功之后利用 context 给 title 赋值，但是这样赋值之后的 title 不能正确显示中文字符，所以需要使用关键字 decodeURIComponent 来将 context 还原成中文字符。&lt;/p&gt;
-&lt;h3 id="effe4bed8cea1f7d427c950a4d195981"&gt;第五步：调整 CSS&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;p&gt;功能实现了之后就是美化了。按照自己的意愿调整CSS即可。  &lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;大功告成，此后就可以在主题原始的搜索框上使用 Google 自定义搜索了。&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;PS：研究这一功能的过程中参考了以下文章：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.wpjam.com/article/google-cse-for-wordpress/" title="无缝整合 Google 自定义搜索框到 WordPress"&gt;无缝整合 Google 自定义搜索框到 WordPress&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.ncku.edu.tw/~rcenter/book/html/JavaScript.html" title="簡易JavaScript語法結構"&gt;簡易JavaScript語法結構&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://yige.org/p/374" title="JS获取url参数的函数_JavaScript"&gt;JS获取url参数的函数_JavaScript&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.w3schools.com/jsref/jsref_encodeuricomponent.asp" title="JavaScript encodeURIComponent() Function"&gt;JavaScript encodeURIComponent() Function&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.w3cplus.com/jquery/attr-removeAttr" title="jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性"&gt;jQuery学习笔记——.attr()和.removeAttr()方法操作元素属性&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Pelican"></category><category term="CSE"></category></entry><entry><title>Thunderbird + Markdown 写邮件</title><link href="http://lusir.me/markdown-emails.html" rel="alternate"></link><updated>2014-02-27T20:40:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-27:markdown-emails.html</id><summary type="html">&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="http://lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
-&lt;/p&gt;
-&lt;h3 id="90633085fd7eb1c9483c3ce43cbf7619"&gt;绿色版 Thunderbird&lt;/h3&gt;
-&lt;p&gt;安装绿色版 Thunderbird（绿色版便携）&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;下载安装 Thunderbird 至相应位置。&lt;/li&gt;
-&lt;li&gt;新建文件夹用来存放配置文件（名称可以是中文）。&lt;/li&gt;
-&lt;li&gt;将 thunderbird.exe 发送到桌面快捷方式，并在快捷方式的“目标”中添加 &lt;code&gt;-p&lt;/code&gt; 参数，如下图：
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/thunderbird-config1.jpg" title="添加 -p 参数" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;双击快捷方式新建配置文件指向第一步新建的文件夹，如下图，然后去掉快捷方式的 &lt;code&gt;-p&lt;/code&gt; 参数即可正常使用。
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/thunderbird-config2.jpg" title="新建用户配置" class="fancybox" data-fancybox-group="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="4f3d67d0b3a268ac8d99d670851c8b80"&gt;Markdown Here 插件&lt;/h3&gt;
-&lt;p&gt;Markdown Here 插件这一步就不详述了，直接在“附加组件管理器”中搜索 Markdown Here 扩展，然后安装即可。安装成功后，在使用 Markdown 编辑完邮件后，右键点击 &lt;code&gt;Markdown Toggle&lt;/code&gt; 即可在书写页面和预览之间进行切换，从而编辑出样式清爽的邮件。同时，还可以通过编辑 Markdown Here 扩展的 CSS 来自定义邮件样式、配色等方案以达到自己的需求。&lt;/p&gt;
-&lt;h3 id="5627d82f25e05d6225b4fb0f7f1d8c62"&gt;Thunderbird 扩展&lt;/h3&gt;
-&lt;p&gt;提到了 Thunderbird，顺便列一下我现在使用的扩展。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Contact Tabs。（通过 Thunderbird 主窗口快速访问联系人目录）&lt;/li&gt;
-&lt;li&gt;Markdown Here。（Write your email in Markdown, then make it pretty）&lt;/li&gt;
-&lt;li&gt;MinimizeToTray。（最小化窗口到系统托盘）&lt;/li&gt;
-&lt;li&gt;Quicktext。（添加快速文本）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Markdown 确实是比较方便，熟练运用可以提升不少效率，我还得努力……&lt;/p&gt;</summary><category term="Markdown"></category><category term="Thunderbird"></category></entry><entry><title>Markdown 添加表格</title><link href="http://lusir.me/markdown-add-tables.html" rel="alternate"></link><updated>2014-02-22T19:20:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-22:markdown-add-tables.html</id><summary type="html">&lt;p&gt;搭建了 Pelican 之后就在慢慢尝试学习使用 Markdown 记录一些东西（包括尝试使用 Markdown 编辑邮件）。本文记录一下使用 Markdown 添加表格的方法。
-&lt;/p&gt;
-&lt;h3 id="9ac4d85e35db087be217f6a8bc1a5d9d"&gt;简单的表格&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;你好 | Markdown | 表格 | 这是表头
----- | -------- | ---- | --------
-abc  |  123   |  ABC  |  cool
-111  |  222   |  333  |  444
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id="7e8b2fa2745e37dfe2e609baf04e319f"&gt;效果&lt;/h3&gt;
 &lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;你好&lt;/th&gt;
-&lt;th&gt;Markdown&lt;/th&gt;
-&lt;th&gt;表格&lt;/th&gt;
-&lt;th&gt;这是表头&lt;/th&gt;
+&lt;th&gt;序号&lt;/th&gt;
+&lt;th&gt;释义&lt;/th&gt;
+&lt;th&gt;词例&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;abc&lt;/td&gt;
-&lt;td&gt;123&lt;/td&gt;
-&lt;td&gt;ABC&lt;/td&gt;
-&lt;td&gt;cool&lt;/td&gt;
+&lt;td&gt;①&lt;/td&gt;
+&lt;td&gt;事物&lt;/td&gt;
+&lt;td&gt;玩物丧志、格物致知、物尽其用、物极必反&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;111&lt;/td&gt;
-&lt;td&gt;222&lt;/td&gt;
-&lt;td&gt;333&lt;/td&gt;
-&lt;td&gt;444&lt;/td&gt;
+&lt;td&gt;②&lt;/td&gt;
+&lt;td&gt;景物&lt;/td&gt;
+&lt;td&gt;触物兴怀、物换星移&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;③&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;①&lt;/code&gt; + &lt;code&gt;②&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;睹物思人、物是人非&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;④&lt;/td&gt;
+&lt;td&gt;东西&lt;/td&gt;
+&lt;td&gt;探囊取物、别无长物&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;⑤&lt;/td&gt;
+&lt;td&gt;任务&lt;/td&gt;
+&lt;td&gt;厚德载物&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;⑥&lt;/td&gt;
+&lt;td&gt;人&lt;/td&gt;
+&lt;td&gt;恃才傲物、待人接物、爱人利物&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;⑦&lt;/td&gt;
+&lt;td&gt;生物&lt;/td&gt;
+&lt;td&gt;物竞天择、物伤其类&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;⑧&lt;/td&gt;
+&lt;td&gt;万物&lt;/td&gt;
+&lt;td&gt;物华天宝、天工开物、厚德载物&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id="b3d606cf1cfea15e42ec0b7784a414af"&gt;对齐的表格&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;|Tables     |Are             |Cool |
-| ----------- |:-------------:| -----:|
-| col 3 is    | right-aligned | $1600 |
-| col 2 is    | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+&lt;p&gt;想象不出来别的语言会不会也有一个类似的词，譬如 “Thing” 或者“もの”？汉语博大精深 ……&lt;/p&gt;</summary><category term="Collection"></category></entry><entry><title>人人都撸 Alipay 快捷支付</title><link href="http://lusir.me/alipay-qr-button.html" rel="alternate"></link><updated>2014-12-03T17:00:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-12-03:alipay-qr-button.html</id><summary type="html">&lt;p&gt;最近看到好几篇介绍给博客添加支付宝快捷支付按钮的文章，跑去点开支付宝才发现之前的支付宝收款页面果然经已下线。
+&lt;/p&gt;
+&lt;p&gt;所以我也凑个热闹，取个标题唤作“人人都撸 Alipay 快捷支付”。&lt;/p&gt;
+&lt;h3 id="a4a575bcb6cdba8019ce30eea3a3514c"&gt;支付宝条码支付&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;登陆支付宝官网：&lt;code&gt;https://qr.alipay.com&lt;/code&gt;；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过发码平台领取“向我付款”的二维码；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编辑个性二维码名称及 logo；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;保存生成的二维码自行使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;据说出租车司机金师傅在副驾驶前面贴了一张可收款的二维码，乘客张先生恰巧没有零钱，于是用支付宝的扫码拍下二维码进行快捷支付，金师傅近乎即时收到款项。&lt;/p&gt;
+&lt;p&gt;&lt;img class="aligncenter" src="http://lusir.me/images/paymeqr.jpg" alt="Alipay 个性二维码" /&gt;&lt;/p&gt;
+&lt;h3 id="017b185017df51d6df972d8407ad88f6"&gt;支付宝转账付款按钮&lt;/h3&gt;
+&lt;p&gt;添加如下代码即可&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;form&lt;/span&gt; &lt;span class="na"&gt;action=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://shenghuo.alipay.com/send/payment/fill.htm&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;method=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;POST&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;target=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;_blank&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;accept-charset=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;GBK&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;optEmail&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;zyxnero@gmail.com&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;payAmount&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;0.00&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;title&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;title&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;赞助『擼sirの避風港』&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;memo&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;请填写您的联系方式，以便答谢！！！&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pay&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;image&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://lusir.me/images/payme.png&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;转账&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3 id="7e8b2fa2745e37dfe2e609baf04e319f_1"&gt;效果&lt;/h3&gt;
-&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Tables&lt;/th&gt;
-&lt;th align="center"&gt;Are&lt;/th&gt;
-&lt;th align="right"&gt;Cool&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;col 3 is&lt;/td&gt;
-&lt;td align="center"&gt;right-aligned&lt;/td&gt;
-&lt;td align="right"&gt;$1600&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;col 2 is&lt;/td&gt;
-&lt;td align="center"&gt;centered&lt;/td&gt;
-&lt;td align="right"&gt;$12&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;zebra stripes&lt;/td&gt;
-&lt;td align="center"&gt;are neat&lt;/td&gt;
-&lt;td align="right"&gt;$1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id="35808e79fa5f367a06c83a78b857519c"&gt;参考资料&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;form action="https://shenghuo.alipay.com/send/payment/fill.htm" method="POST" target="_blank" accept-charset="GBK"&gt;
+&lt;input name="optEmail" type="hidden" value="zyxnero@gmail.com"/&gt;
+&lt;input name="payAmount" type="hidden" value="0.00"/&gt;
+&lt;input name="title" type="hidden" id="title" value="赞助『擼sirの避風港』"/&gt;
+&lt;input name="memo" type="hidden" value="请填写您的联系方式，以便答谢！！！"/&gt;
+&lt;input name="pay" type="image" title="为啥都喜欢喝咖啡？" class="aligncenter" src="http://lusir.me/images/payme.png" value="转账"/&gt;
+&lt;/form&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Markdown 语法"&gt;Markdown Cheatsheet&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Markdown"></category></entry><entry><title>关于 Unicode BOM</title><link href="http://lusir.me/about-unicode-bom.html" rel="alternate"></link><updated>2014-02-22T17:00:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-02-22:about-unicode-bom.html</id><summary type="html">&lt;p&gt;昨晚意识到侧边栏跟 Ma Wenbao 的不一样，好像是我这边的发生了错位。仔细比较一番，发现主题文件里面的东西居然是一样的。尝试添加 &lt;code&gt;margin:0; padding:0&lt;/code&gt; 也无效，只好作罢睡觉。
+&lt;li&gt;&lt;a href="http://ihuan.me/1828.html" title="给你的网站添加支付宝即时到帐按钮"&gt;给你的网站添加支付宝即时到帐按钮&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.baowz.cn/post/51.html" title="一行代码就能实现支付宝转账提交按钮"&gt;一行代码就能实现支付宝转账提交按钮&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.cnaoweisi.com/archives/715" title="收款主页下线后个人博客应对方法种种"&gt;收款主页下线后个人博客应对方法种种&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Alipay"></category><category term="快捷支付"></category></entry><entry><title>ESET Smart Security 添加黑白名单</title><link href="http://lusir.me/ess-filter.html" rel="alternate"></link><updated>2014-12-01T20:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-12-01:ess-filter.html</id><summary type="html">&lt;p&gt;NOD32 系列的杀毒软件已经更新到了 8.0 版本了，不过我用的依然是老版本 ESET Smart Security 4。本篇记录一下使用 ESS 阻止、排除特定的站点及程序。
 &lt;/p&gt;
-&lt;p&gt;想到昨天用 Firefox 自带的元素查看器找到的一块空白区域，觉得应该就是它在作祟了。启用 Firebug，选中空白区域右键“编辑 html”，&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 前多了一个 &lt;code&gt;&amp;amp;#65279;&lt;/code&gt;，网上一搜，原来是 UTF-8 BOM 符（Byte-Order Mark，字节顺序标记）&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
-&lt;p&gt;想起之前编辑文件的时候还特意将 ANSI 转成了 UTF-8 格式，原来该格式会默认给添加上 BOM，而 UTF-8 无 BOM 格式则不会添加这个 BOM，引发这个问题的原因就是模板文件使用的是 UTF-8 编码格式，而这个 BOM 符被浏览器渲染成了一行空白，从而导致页面错位。于是将文档格式转成 ANSI，问题解决（保存成 UTF-8 无 BOM 格式同样可行）。&lt;/p&gt;
-&lt;h3 id="25f9c7fa3b50aebe5125112ac1187777"&gt;总结&lt;/h3&gt;
-&lt;p&gt;由于 BOM 是针对于 UTF-16 和 UTF-32 的，对于使用 UTF-8 编码格式的文件不需要 BOM ，所以在保存 UTF-8 文件时最好选择无 BOM 的编码。&lt;/p&gt;
-&lt;div class="footnote"&gt;
+&lt;h3 id="a6a74276e789bb3a546721ec6ac5c6fa"&gt;ESS 排除/阻止访问特定站点&lt;/h3&gt;
+&lt;p&gt;访问站点时，ESS 会分析站点信息，如果网页含有不良信息便禁止访问，这样很不错。但偶尔已知的安全站点被强制禁止访问也很伤脑筋。&lt;/p&gt;
+&lt;p&gt;解决方法：&lt;/p&gt;
+&lt;p&gt;调出 ESS 主界面，点击 &lt;kbd&gt;F5&lt;/kbd&gt;，会弹出如下界面，按照图上的顺序依次操作并输入要排除的站点地址，一路确定下去即可。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-5.jpg" title="ESS 排除特定站点" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-5.jpg" alt="ESS 排除特定站点" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;同理，在“9 月我不撸”活动期间，如果想强制性禁止访问 &lt;code&gt;The Pirate Bay&lt;/code&gt;，则按照下图顺序依次操作并输入要禁止访问的站点地址，一路确定下去即可。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-6.jpg" title="ESS 阻止访问特定站点" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-6.jpg" alt="ESS 阻止访问特定站点" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="9974cbc5ed263a56cb6765ffa5be1561"&gt;ESS 阻止程序联网&lt;/h3&gt;
+&lt;p&gt;现在的程序基本上都联网更新或联网校验，但有时不联网程序的运行状态可能更好，操作如下：&lt;/p&gt;
+&lt;p&gt;调出 ESS 主界面，点击 &lt;kbd&gt;F5&lt;/kbd&gt;，会弹出如下界面，按照图上的顺序依次点击，&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-7.jpg" title="ESS 阻止 CAD 联网（1）" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-7.jpg" alt="ESS 阻止 CAD 联网（1）" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-8.jpg" title="ESS 阻止 CAD 联网（2）" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-8.jpg" alt="ESS 阻止 CAD 联网（2）" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;点击&lt;code&gt;“新建”&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-1.jpg" title="ESS 阻止 CAD 联网（3）" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-1.jpg" alt="ESS 阻止 CAD 联网（3）" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-2.jpg" title="ESS 阻止 CAD 联网（4）" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-2.jpg" alt="ESS 阻止 CAD 联网（4）" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;若仅要阻止程序访问某个站点，可以 &lt;code&gt;ping&lt;/code&gt; 出该站点的地址，然后添加，如下：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-3.jpg" title="ESS 阻止 CAD 联网（5）" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-3.jpg" alt="ESS 阻止 CAD 联网（5）" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-4.jpg" title="ESS 阻止 CAD 联网（6）" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-4.jpg" alt="ESS 阻止 CAD 联网（6）" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;至此，设置完成。&lt;/p&gt;
+&lt;h3 id="438777008e750b99006606f949e73b5c"&gt;附：ESS 强制卸载&lt;/h3&gt;
+&lt;p&gt;下载&lt;a href="http://pan.baidu.com/s/1daih4" title="ESET 强制卸载工具"&gt;强制卸载工具&lt;/a&gt;后重启进入安全模式，在安全模式中运行卸载工具并根据&lt;code&gt;命令提示符&lt;/code&gt;的步骤进行操作。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div class="hermit" xiami="songlist:1771862045" loop="1" auto="1"&gt;
+&lt;div class="hermit-box"&gt;
+&lt;div class="hermit-controls"&gt;
+&lt;div class="hermit-button"&gt;&lt;/div&gt;
+&lt;div class="hermit-detail"&gt;左键轻击列表播放或暂停&lt;/div&gt;
+&lt;div class="hermit-duration"&gt;&lt;/div&gt;
+&lt;div class="hermit-volume"&gt;&lt;/div&gt;
+&lt;div class="hermit-listbutton"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-prosess"&gt;
+&lt;div class="hermit-loaded"&gt;&lt;/div&gt;
+&lt;div class="hermit-prosess-bar"&gt;
+&lt;div class="hermit-prosess-after"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hermit-list"&gt;&lt;/div&gt;
+&lt;/div&gt;</summary><category term="ESET Smart Security"></category></entry><entry><title>PaleMoon 修改起始页</title><link href="http://lusir.me/palemoon-tab-modify.html" rel="alternate"></link><updated>2014-11-30T17:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-11-30:palemoon-tab-modify.html</id><summary type="html">&lt;p&gt;不记得具体开始使用 PaleMoon 的时间了，只记得说是 Firefox 的优化版，其实用起来也没感觉出太大的差别。不过最近一次更新 PaleMoon 后起始页和新标签页的内容都变成了 PaleMoon 的 logo。本人还是习惯将两者都设置成 &lt;code&gt;about:blank&lt;/code&gt;。
+&lt;/p&gt;
+&lt;h3 id="307371c5a920711c40deedb9542fea6d"&gt;修改新标签页地址为 about:blank&lt;/h3&gt;
+&lt;p&gt;在地址栏输入 &lt;code&gt;about:config&lt;/code&gt;，在搜索栏中输入 &lt;code&gt;newtab&lt;/code&gt;，如图，将其修改为 &lt;code&gt;about:blank&lt;/code&gt; 即可。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/palemoon-tab-modify-1.png" title="修改新标签页地址" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/palemoon-tab-modify-1.png" alt="修改新标签页地址" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="f289ed1aa39af564b24ec84b72bc2e30"&gt;修改起始页地址为 about:blank&lt;/h3&gt;
+&lt;p&gt;查看起始页源代码得知起始页文件路径为 &lt;code&gt;omni.ja&lt;/code&gt; 中的 &lt;code&gt;\omni\chrome\toolkit\content\global\logopage.xhtml&lt;/code&gt;，其中 &lt;code&gt;omni.ja&lt;/code&gt; 位于 PaleMoon 安装路径根目录且可用 WinRar 打开并解压。修改 &lt;code&gt;logopage.xhtml&lt;/code&gt; 为“空白”文件即可，如下图。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/palemoon-tab-modify-2.png" title="修改起始页" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/palemoon-tab-modify-2.png" alt="修改起始页" /&gt;
+&lt;/a&gt;&lt;/p&gt;</summary><category term="PaleMoon"></category><category term="Firefox"></category></entry><entry><title>RTL8187 CW 小记</title><link href="http://lusir.me/minidwep-cw-record.html" rel="alternate"></link><updated>2014-11-29T17:25:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-11-29:minidwep-cw-record.html</id><summary type="html">&lt;p&gt;搬“家”之后就得 CW 以解燃眉之急。我用的是傻瓜工具 &lt;code&gt;VMware + CDLinux + minidwep&lt;/code&gt;。
+&lt;/p&gt;
+&lt;h3 id="85bcb58bc46753c97220abbe5ff00a79"&gt;VMware 提示 USB 设备正在使用中&lt;/h3&gt;
+&lt;p&gt;我用的是绿色版的 &lt;code&gt;VMware Workstation 8&lt;/code&gt;，所以出现这个提示的时候我的第一反应是 VMware 的 USB 服务没有启动。事实是 &lt;code&gt;VMware Workstation 8&lt;/code&gt; 不支持 USB3.0。根据电脑现有的情况（只有一个 USB2.0 接口）我选择了升级 VMware 到 10.0.3。&lt;/p&gt;
+&lt;h3 id="693031d990b3aa4d643c9c45b7b05bd8"&gt;保存 minidwep 进度&lt;/h3&gt;
+&lt;p&gt;跑 pin 也是要有经验的，pin 排序合理了能省不少时间。我是个外码，所以需要的时间比较长。CDLinux 太过小巧，有必要进行进度保存。&lt;/p&gt;
 &lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;Wikipedia：&lt;a href="http://en.wikipedia.org/wiki/Byte_order_mark" title="字节顺序标记"&gt;字节顺序标记&lt;/a&gt;.&amp;#160;&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;记住排序码；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;到 &lt;code&gt;/tmp/minidwep&lt;/code&gt; 目录下打开需要保存进度的 mac 地址对应的 &lt;code&gt;.wpc&lt;/code&gt; 文件，记下第一行数字；&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="BOM"></category></entry></feed>
+&lt;p&gt;同上，恢复进度为其逆向过程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用 &lt;code&gt;minidwep&lt;/code&gt; 扫描并选中需要恢复进度的信号；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入之前保存的排序码；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;到 &lt;code&gt;/tmp/minidwep&lt;/code&gt; 目录下打开需要恢复进度的 mac 地址对应的 &lt;code&gt;.wpc&lt;/code&gt; 文件，输入上次记录的第一行数字；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击 &lt;code&gt;Reaver&lt;/code&gt; 接着 pin。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;PS：如果通过某种算法已经能够确定对方的 pin 码，则通过修改  &lt;code&gt;/tmp/minidwep&lt;/code&gt; 目录下的对应的 &lt;code&gt;.wpc&lt;/code&gt; 文件中的前 3 行数值就能直接定位到 pin 码。第一行数值与 pin 码的前 4 位关联（故最大修改为 4 位数）；第二行数值与 pin 码后 4 位中的前 3 位关联（故最大修改为 3 位数）；第三行数值与 pin 码的最后一位（校验位）关联，故为 1 位数。假定某 pin 码为 35108146，pin 排序为 0123456789，则将对应的 &lt;code&gt;.wpc&lt;/code&gt; 文件中的前 3 行数值分别修改为 &lt;code&gt;3510&lt;/code&gt;，&lt;code&gt;814&lt;/code&gt;，&lt;code&gt;6&lt;/code&gt; 即可直接定位。&lt;/p&gt;
+&lt;p&gt;待续……&lt;/p&gt;</summary><category term="CDLinux"></category><category term="Vmware"></category></entry><entry><title>重置 Google Apps 账号密码</title><link href="http://lusir.me/reset-gapps-account.html" rel="alternate"></link><updated>2014-11-28T20:24:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-11-28:reset-gapps-account.html</id><summary type="html">&lt;p&gt;近日整理浏览器书签的时候发现一个 Google Apps 管理员控制台的登录地址，打开之后却显示无法登录，账号密码也忘得一干二净了。观察地址栏记起来是早前用 &lt;code&gt;.tk&lt;/code&gt; 域名申请的 Google Apps 教育版（现已无法免费申请 Google Apps，教育版貌似难度也加大了）。一直没怎么管的 &lt;code&gt;.tk&lt;/code&gt; 域名没想到几年了还没被收回（另一个经常折腾的被回收了），Google 也没给注销账户，只能说，运气不错。
+&lt;/p&gt;
+&lt;p&gt;按照网友提示，访问账号密码重设链接 &lt;code&gt;https://www.google.com/a/cpanel/your_domain.com/VerifyAdminAccountPasswordReset&lt;/code&gt;（注：
+将以上链接中的 &lt;code&gt;your_domain.com&lt;/code&gt; 换成自己对应的域名），根据提示输入收信邮箱，然后修改域名 &lt;code&gt;CName&lt;/code&gt; 到指定地址即可重新认证域名所有权。&lt;/p&gt;
+&lt;p&gt;不知道这个 Google Apps 提供的邮箱可不可以作为 &lt;code&gt;edu&lt;/code&gt; 邮箱使用。。。&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.dingding.biz/archives/387" title="忘记了google app的用户名和密码~"&gt;忘记了google app的用户名和密码~&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Google"></category></entry><entry><title>Excel 显示长数值</title><link href="http://lusir.me/show-excel-long-num.html" rel="alternate"></link><updated>2014-11-25T14:28:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-11-25:show-excel-long-num.html</id><summary type="html">&lt;p&gt;貌似我把标题定义复杂了。默认情况下，Excel 中每个单元格所能显示的数字为 11 位，输入超过 11 位的数值，系统自动将其转换为科学记数格式，如果输入超过 15 位的数值，系统自动将 15 位以后的数值转换为 “0”。比如 123456789012 ，就会显示为 1.23457E+11。
+&lt;/p&gt;
+&lt;p&gt;所以如果我们需要在单元格中输入身份证号码或银行卡卡号，以上设置就不能符合我们的要求。为了能让这些长位数数值完整显示，需要将单元格转换成文本格式，然后再输入内容。&lt;/p&gt;
+&lt;h3 id="2eed9a7684ee328ed262ea4fcafa14a7"&gt;方法一&lt;/h3&gt;
+&lt;p&gt;在输入前，先选中待输入长位数数值的列，然后右键，点击弹出的&lt;code&gt;“设置单元格格式”&lt;/code&gt;，在&lt;code&gt;“数字”&lt;/code&gt;选项卡中选择&lt;code&gt;“文本”&lt;/code&gt;即可。或在&lt;code&gt;“数字”&lt;/code&gt;选项卡中选择&lt;code&gt;“自定义”&lt;/code&gt;，然后在右边&lt;code&gt;“类型”&lt;/code&gt;选项中选择 &lt;code&gt;“@”&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;注意：必须先定义格式，再输入内容，否则无效。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/excel-show-long-num-1.jpg" title="Excel 显示长数值（1）" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/excel-show-long-num-1.jpg" alt="Excel 显示长数值（1）" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/excel-show-long-num-2.jpg" title="Excel 显示长数值（2）" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/excel-show-long-num-2.jpg" alt="Excel 显示长数值（2）" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="f3deb6e7023fec7047c839dc68f897bf"&gt;方法二&lt;/h3&gt;
+&lt;p&gt;在输入长数值前，先敲入一个英文状态的单引号符 &lt;code&gt;'&lt;/code&gt;。该法适合输入少量的长数值，单引号不影响显示和打印。&lt;/p&gt;</summary><category term="Excel"></category></entry><entry><title>去除 Win7 右键“使用 Windows Media Player 播放”项</title><link href="http://lusir.me/win7-menuext-fix.html" rel="alternate"></link><updated>2014-11-09T12:54:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-11-09:win7-menuext-fix.html</id><summary type="html">&lt;p&gt;我不是处女座，但还是会对右键菜单非常在意，经常会留意右键菜单是否需要清理，经常使用的工具为：&lt;code&gt;RightMenuMgr&lt;/code&gt;。今天记录一下 &lt;code&gt;.avi&lt;/code&gt; 文件右键菜单上“使用 Windows Media Player 播放”项的整理过程。
+&lt;/p&gt;
+&lt;p&gt;如下图，由于我常不使用 Windows Media Player，所以该菜单项对于我来讲很多余。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-1.jpg" title="右键菜单（前）" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-1.jpg" alt="右键菜单（前）" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其实，这主要是 Windows 7 的默认设置在发生作用。解决的办法很简单：&lt;/p&gt;
+&lt;p&gt;点击开始菜单中的&lt;code&gt;“默认程序”&lt;/code&gt;→&lt;code&gt;“设置程序访问和计算机的默认值”&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-2.jpg" title="修改“默认程序”" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-2.jpg" alt="修改“默认程序”" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-3.jpg" title="设置程序访问和计算机的默认值" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-3.jpg" alt="设置程序访问和计算机的默认值" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在弹出的窗口中选择&lt;code&gt;“自定义”&lt;/code&gt;并单击右边的向下箭头。然后取消对&lt;code&gt;“选择默认的媒体播放机”&lt;/code&gt;下的 &lt;code&gt;“Windows Media Player”&lt;/code&gt; 与 &lt;code&gt;“Windows Media Center”&lt;/code&gt; 右边的&lt;code&gt;“启用对此程序的访问”&lt;/code&gt;的勾选。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-4.jpg" title="选择默认的媒体播放机" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-4.jpg" alt="选择默认的媒体播放机" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;至此，媒体文件的右键菜单将不再出现与 &lt;code&gt;Windows Media Player&lt;/code&gt; 有关的多余选项了。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-5.jpg" title="右键菜单（后）" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-5.jpg" alt="右键菜单（后）" /&gt;
+&lt;/a&gt;&lt;/p&gt;</summary><category term="Win7"></category></entry><entry><title>修复 Win + E 出现 explorer.exe 未指定错误</title><link href="http://lusir.me/win-e-failure.html" rel="alternate"></link><updated>2014-10-24T21:28:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-10-24:win-e-failure.html</id><summary type="html">&lt;p&gt;我的笔记本一直是用 Win7 优化大师进行优化，没有出现太大问题。但不久前在台式机上像往常一样运行优化之后，按下 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;E&lt;/kbd&gt;，会弹出一个对话框，说是 “&lt;code&gt;explorer.exe&lt;/code&gt; 出现未指定的错误”，大致猜到可能是优化过度，但具体原因是什么原因就弄不清楚了……
+&lt;/p&gt;
+&lt;p&gt;在网上搜寻到了几个注册表文件，经测试，最满意的为下面这个：&lt;/p&gt;
+&lt;script src="https://gist.github.com/zyxnero/f544c3f34753f2c613f2.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;将其另存为 &lt;code&gt;.reg&lt;/code&gt; 文件到本地，双击导入便可。该 &lt;code&gt;.reg&lt;/code&gt; 文件同时在计算机右键上隐藏了 &lt;code&gt;opennewprocess&lt;/code&gt; 和 &lt;code&gt;opennewwindow&lt;/code&gt; 菜单。&lt;/p&gt;</summary><category term="Windows"></category></entry><entry><title>折腾 360 路由</title><link href="http://lusir.me/try-openwrt.html" rel="alternate"></link><updated>2014-10-20T21:21:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-10-20:try-openwrt.html</id><summary type="html">&lt;p&gt;入手 360 路由之后基本没怎么使用，前阵子逛 360 路由讨论区的时候发现多了个 Openwrt 版块，便学着折腾了一下，现在也算物尽其用了。
+&lt;/p&gt;
+&lt;h3 id="300b34e58a0fc5ec5bb570dd6601f1c6"&gt;刷 Openwrt&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;路由器 lan 口与电脑相连，设置电脑 IPV4 为静态 IP：192.168.1.3，子网掩码：255.255.255.0，其余为空；&lt;/li&gt;
+&lt;li&gt;断开路由器电源，按住 reset 键，插上电源，保持按住 reset 键等待 10 秒左右，看到黄灯闪烁证明已进入 uboot；&lt;/li&gt;
+&lt;li&gt;电脑浏览器打开 &lt;code&gt;192.168.1.1&lt;/code&gt;，出现上传 rom 界面；&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;浏览&lt;/code&gt;，找到下载的新固件，上传，等待大概3分钟，完成后再次打开 &lt;code&gt;192.168.1.1&lt;/code&gt; 即可进入 openwrt 的 luci 登录界面；&lt;/li&gt;
+&lt;li&gt;电脑 IPV4 还原之前设置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="3d9befcfabeff7e2972165d22183a838"&gt;刷不死 UBoot&lt;/h3&gt;
+&lt;p&gt;360 路由重启一定次数后固件会恢复为 360 官方版本，因此需要 “不死” UBoot。刷入 OpenWrt 后，开启 Dropbear SSH 访问。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 WinSCP 将下载的 UBoot 文件传输到路由的 &lt;code&gt;/tmp&lt;/code&gt; 目录；&lt;/li&gt;
+&lt;li&gt;使用 Putty 进入 OpenWrt ，运行命令 &lt;code&gt;mtd write -r /tmp/filename.bin u-boot&lt;/code&gt;，（&lt;code&gt;filename.bin&lt;/code&gt; 为待刷入的不死 UBoot 文件名）；&lt;/li&gt;
+&lt;li&gt;进入不死 U-Boot 刷机界面，重新刷写 Openwrt 固件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="8c9b7d36a7d1bc1ee133bfe2e173c323"&gt;挂载 U 盘&lt;/h3&gt;
+&lt;p&gt;不打算在路由上折腾 Shadowsocks 客户端及去广告功能，没必要把 openwrt 转移到 U 盘上，所以就没必要给 U 盘分区而是单纯格式化成 ext4 格式，&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 linux 下的分区指令 fdisk 来进行操作，&lt;code&gt;fdisk /dev/sda&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;输入 p 指令查看当前磁盘分区情况；&lt;/li&gt;
+&lt;li&gt;输入 d 指令删除掉旧分区（如果有多个分区删除程序会让你输入删除哪一个，范围是 1 到 4，如果只有一个会默认删除掉），一直删除到没有分区为止；&lt;/li&gt;
+&lt;li&gt;输入 n 指令创建分区 → 输入 p 创建主"分区 1" → 输入开始位置直接回车，结束位置同样直接回车，表示使用全部容量；&lt;/li&gt;
+&lt;li&gt;创建完成后再次输入 p 指令查看当前磁盘分区情况；&lt;/li&gt;
+&lt;li&gt;输入 w 保存分区到磁盘上；&lt;/li&gt;
+&lt;li&gt;重启系统以更改分区表；&lt;/li&gt;
+&lt;li&gt;重启后使用 &lt;code&gt;fdisk -l&lt;/code&gt; 查看当前分区状态；&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;mkfs.ext4 -O ^has_journal /dev/sda1&lt;/code&gt; 命令格式化 U 盘分区；&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;blkid&lt;/code&gt; 命令读取 U 盘 UUID 并设置其自动挂载。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="d67f3f43de03f967069fae3e553e67d0"&gt;安装并配置 Aria2&lt;/h3&gt;
+&lt;p&gt;在 Luci 界面的 &lt;code&gt;系统&lt;/code&gt; → &lt;code&gt;软件包&lt;/code&gt; 里找寻并安装 aria2，随后更新配置文件，以我自己的情况为例，我的 aria2.conf 内容如下：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;enable-rpc=true
+rpc-listen-all=true
+rpc-allow-origin-all=true
+log-level=error
+disable-ipv6=true
+max-concurrent-downloads=1
+max-connection-per-server=10
+min-split-size=2M
+split=10
+max-overall-download-limit=0
+max-download-limit=0
+force-save=false
+save-session-interval=60
+file-allocation=none
+disk-cache=16M
+dir=/mnt/sda1
+log=/mnt/sda1/aria2.log
+input-file=/root/aria2.session
+save-session=/root/aria2.session
+auto-file-renaming=true
+auto-save-interval=30
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;其中的 &lt;code&gt;aria2.session&lt;/code&gt;、&lt;code&gt;aria2.log&lt;/code&gt; 及 &lt;code&gt;aria2.conf&lt;/code&gt; 3 个文件应按照 &lt;code&gt;aria2.conf&lt;/code&gt; 中的配置置于相应地址。随后使用 Putty 进入路由，输入命令 &lt;code&gt;aria2c --conf-path=/mnt/sda1/aria2.conf -c -D&lt;/code&gt;，此时 aria2 便可开启，也可以使用 yaaw，具体请参考 &lt;a href="http://blog.binux.me/2012/06/aria2_yaaw/" title="aria2 + web 前端部署指南"&gt;“aria2 + web 前端部署指南”&lt;/a&gt;。在开机启动项中添加 &lt;code&gt;nice -n 20 aria2c --conf-path=/mnt/sda1/aria2.conf -c -D&lt;/code&gt; 便可使 aria2 开机启动，同时限制开启时的 cpu 使用率为 20%，不知道我的理解是否正确。&lt;/p&gt;
+&lt;h3 id="67ccb6ae961a467ce30943ab1cb1ac68"&gt;限制 Aria2 的 CPU 使用率&lt;/h3&gt;
+&lt;p&gt;Aria2 在不受限制的情况下 CPU 使用率肯定是会影响路由稳定的，所以设个限制。在 &lt;code&gt;CPU 占用率限制&lt;/code&gt; 中添加下图所示内容。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/360-openwrt-1.png" title="Aria2 限制 CPU" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/360-openwrt-1.png" alt="Aria2 限制 CPU" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="60cf9f743716f2cf1ed0ac7a3563ad52"&gt;读取 ext4 格式 U 盘&lt;/h3&gt;
+&lt;p&gt;前面设置 U 盘格式为 ext4，使用 Aria2 下载完成后一般开启 Samba 就能局域网访问，但访问速度不佳，所以考虑直接读取 U 盘，由于 Windows 系统不能直接读取 U 盘中的内容，所以需要借助第三方程序，经过反复测试，筛选出两个程序，在此记录并作推荐：&lt;code&gt;Ext2Fsd&lt;/code&gt; 与 &lt;code&gt;Paragon ExtFS for Windows&lt;/code&gt;，前者只能只读，后者可写 U 盘，两者均建议使用 &lt;code&gt;复制&lt;/code&gt; 命令以减少文件被损坏的情况发生。复制速度参见下图：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/360-openwrt-2.png" title="复制速度" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/360-openwrt-2.png" alt="复制速度" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="6aa4ba7e676ffeda11262cd5b7c18218"&gt;计划任务&lt;/h3&gt;
+&lt;p&gt;白天人不在家，离线下载完成后可以关闭路由，等人回来之后在打开路由。让路由在早上 9 点 50 自动关闭 wifi，下午 5 点 50 分自动重启。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;50 09 * * * wifi down
+50 17 * * * reboot
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="27d1215718e548798395f11e464e65cb"&gt;备份/恢复固件&lt;/h3&gt;
+&lt;p&gt;设置太过麻烦，所以生成备份文件是比较稳妥的办法。如果只备份 &lt;code&gt;etc&lt;/code&gt; 目录则可直接使用 &lt;code&gt;系统&lt;/code&gt; 下的 &lt;code&gt;备份/升级&lt;/code&gt;。若要备份整个固件则需要使用几行命令：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在 Putty 下使用 &lt;code&gt;cat /proc/mtd&lt;/code&gt; 命令查看 firmware 分区对应的 mtd 设备。如下图，我的 firmware 分区为 mtd4。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/360-openwrt-3.jpg" title="查看分区" data-fancybox-group="gallery"&gt;
+        &lt;img class="aligncenter" src="http://dn-nero.qbox.me/360-openwrt-3.jpg" alt="查看分区" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生成固件备份文件于 &lt;code&gt;/tmp&lt;/code&gt; 目录下：&lt;code&gt;dd if=/dev/mtd4 of=/tmp/customized_backup.bin&lt;/code&gt;，然后使用 WinSCP 将 &lt;code&gt;/tmp&lt;/code&gt; 目录下的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 文件拷贝至本地。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;反之，如要恢复系统，则需将本地的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 拷贝至路由 &lt;code&gt;/tmp&lt;/code&gt; 目录下，然后使用命令：&lt;code&gt;mtd write -r /tmp/customized_backup.bin firmware&lt;/code&gt; 即可完成系统恢复（或直接进入 UBoot 界面进行固件升级）。恢复完成路由器会自行重启（若出现 aria2c 添加 yaaw 任务即刻失败现象，请直接利用该法恢复系统）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;
+路由现在是中继别人的信号。虽然有访问上级路由的权限，但还是没有折腾出外网访二级问路由这一功能，挺失落的，暂时折腾到此……&lt;/p&gt;
+&lt;h3 id="d54d3b94ffaf07589de3006395891685"&gt;Update 2014-11-24 12:15&lt;/h3&gt;
+&lt;p&gt;Adbyby 已有 openwrt 版本的程序，且可支持 360 路由器，&lt;a href="http://bbs.360safe.com/thread-4934688-1-1.html" title="360 路由安装广告屏蔽大师"&gt;论坛&lt;/a&gt; 上已有教程，且本人也已试用，效果还不错。不过我这边安装上 Adbyby 后路由经常无响应，可能是缓存不够（已暂停使用路由版 Adbyby）。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.right.com.cn/forum/thread-146084-1-1.html" title="360 安全路由器刷 openwrt 方法"&gt;360 安全路由器刷 openwrt 方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.right.com.cn/forum/thread-147319-1-1.html" title="360 路由 openwrt 固件"&gt;360 路由 openwrt 固件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.leiphone.com/news/201406/diy-a-smart-router-topic-increase-memory-3.html" title="跟 hoowa 学做智能路由（十）：扩充 RAM 和 FLASH"&gt;跟 hoowa 学做智能路由（十）：扩充 RAM 和 FLASH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://miantiao.me/play-openwrt-2.html" title="openwrt 折腾记（二）"&gt;openwrt 折腾记（二）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://aria2.sourceforge.net/manual/en/html/aria2c.html" title="aria2c 参数手册"&gt;aria2c 参数手册&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://hi.baidu.com/lhaix/item/c69c1f87f7a442c498255fe0" title="利用 cpulimit 限制 aria2 的 cpu 占用"&gt;利用 cpulimit 限制 aria2 的 cpu 占用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="Openwrt"></category></entry></feed>
