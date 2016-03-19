@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* @author: mawenbao@hotmail.com */
 
 // set theme path, got from http://stackoverflow.com/questions/8523200/javascript-get-current-filescript-path
@@ -8,11 +7,6 @@
     var scriptPath = thisScriptEl.src;
     window.gThemePath = scriptPath.substr(0, scriptPath.lastIndexOf('/js/'));
 })();
-=======
-/*
- * Depends on jquery 1.10
- */
->>>>>>> a8aa99ef417a5f60ca998b28b8ae0749f7ed36a4
 
 window.gEnableTocStatusUpdate = true;
 window.gEnableTocListAutoScroll = true;
@@ -27,7 +21,6 @@ $(document).ready(function() {
 });
 
 $(document.links).filter(function() {
-<<<<<<< HEAD
     return this.hostname != window.location.hostname && this.hostname != 'atime.me' && this.hostname != 'plus.google.com';
 }).attr('rel', 'external nofollow');
 
@@ -37,12 +30,6 @@ $(document.links).filter(function() {
 
 function onContentLoaded() {
     initHermitPlayer();
-=======
-    return this.hostname != window.location.hostname;
-}).attr('rel', 'external nofollow');
-
-function onContentLoaded() {
->>>>>>> a8aa99ef417a5f60ca998b28b8ae0749f7ed36a4
     initFootnote();
     $(window).scroll(function() {
         toggleSidebarTocFixed();
@@ -65,7 +52,6 @@ function onContentLoaded() {
     locateTocInViewport();
 }
 
-<<<<<<< HEAD
 function initHermitPlayer() {
     if ($('.hermit')[0]) {
         appendCssFileToHead('/hermit/style/hermit.min.css');
@@ -89,8 +75,6 @@ function appendJsFileToBody(path) {
     $('<script src="' + window.gThemePath + path + '" type="text/javascript"></script>').appendTo($('body'));
 }
 
-=======
->>>>>>> a8aa99ef417a5f60ca998b28b8ae0749f7ed36a4
 function setSidebarTocSize() {
     getSidebarToc().attr('style', 'max-width:' + getSidebarToc().width() + 'px;');
 }
