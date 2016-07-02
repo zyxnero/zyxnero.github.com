@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2015-07-12T20:09:00+08:00</updated><entry><title>滥用“Chmod 777 -R /”后的补救措施</title><link href="http://lusir.me/rescue-linux-on-abusing-chmod.html" rel="alternate"></link><updated>2015-07-12T20:09:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-07-12:rescue-linux-on-abusing-chmod.html</id><summary type="html">&lt;p&gt;很早就听人说过不要乱改 Linux 根目录下的文件，尤其不要使用 &lt;code&gt;rm -rf /*&lt;/code&gt;，不过为了在登录时少输入一次密码，我使上了 &lt;code&gt;chmod 777 -R /&lt;/code&gt;，本以为登录会更便捷，谁知连系统都无法登录进入了。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2016-06-09T20:37:00+08:00</updated><entry><title>OpenWrt 设置 MAC 地址过滤</title><link href="http://lusir.me/macfilter-of-openwrt.html" rel="alternate"></link><updated>2016-06-09T20:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-06-09:macfilter-of-openwrt.html</id><summary type="html">&lt;p&gt;两年前入手的 360 路由器稳定性不是太好，需要定期恢复固件。
+&lt;/p&gt;
+&lt;p&gt;恢复固件的过程比较简单，用 &lt;code&gt;WinSCP&lt;/code&gt; 将本地的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 拷贝至路由 &lt;code&gt;/tmp&lt;/code&gt; 目录下，然后在 &lt;code&gt;Putty&lt;/code&gt; 下敲击：&lt;code&gt;mtd write -r /tmp/customized_backup.bin firmware&lt;/code&gt; 并回车即可完成系统恢复。不过个人习惯给无线设置 MAC 过滤，仅允许列表内 MAC 联网。&lt;/p&gt;
+&lt;p&gt;之前是每次恢复固件之后就在路由后台一个一个添加允许通过的 MAC 地址，前阵子突然觉得这样做好傻，遂 Google 该控制 MAC 地址过滤的文件路径，得到的结果是 &lt;code&gt;/etc/config/wireless&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;打开路由器内该文件，搜索无线名称，得到：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;config&lt;/span&gt; &lt;span class="n"&gt;wifi&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;iface&lt;/span&gt;
+    &lt;span class="n"&gt;option&lt;/span&gt; &lt;span class="n"&gt;device&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;radio1&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;option&lt;/span&gt; &lt;span class="n"&gt;mode&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ap&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;option&lt;/span&gt; &lt;span class="n"&gt;ssid&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;qihoo&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;option&lt;/span&gt; &lt;span class="n"&gt;network&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;lan&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;option&lt;/span&gt; &lt;span class="n"&gt;encryption&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;psk2&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;option&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;***&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;option&lt;/span&gt; &lt;span class="n"&gt;macfilter&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="n"&gt;maclist&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;33&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;44&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;55&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;66&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="n"&gt;maclist&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="mi"&gt;33&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;44&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;55&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;66&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;77&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;88&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如此，只需将需要添加的 MAC 地址复制进去，保存重启路由。&lt;/p&gt;
+&lt;p&gt;Macfilter 选项提供三个模式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认是 Disable，表示不启用硬件地址过滤功能；&lt;/li&gt;
+&lt;li&gt;Allow 表示白名单模式，即只允许列出的硬件地址连入网络；&lt;/li&gt;
+&lt;li&gt;Deny 表示黑名单模式，即禁止列出的硬件地址连入网络。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前我采取白名单模式，每连入一个新设备都要添加其硬件地址。&lt;/p&gt;</summary><category term="Openwrt"></category></entry><entry><title>滥用“Chmod 777 -R /”后的补救措施</title><link href="http://lusir.me/rescue-linux-on-abusing-chmod.html" rel="alternate"></link><updated>2015-07-12T20:09:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-07-12:rescue-linux-on-abusing-chmod.html</id><summary type="html">&lt;p&gt;很早就听人说过不要乱改 Linux 根目录下的文件，尤其不要使用 &lt;code&gt;rm -rf /*&lt;/code&gt;，不过为了在登录时少输入一次密码，我使上了 &lt;code&gt;chmod 777 -R /&lt;/code&gt;，本以为登录会更便捷，谁知连系统都无法登录进入了。
 &lt;/p&gt;
 &lt;p&gt;解决办法如下：&lt;/p&gt;
 &lt;p&gt;1. 找到另外一台系统相同的正常机，执行以下内容：&lt;/p&gt;
@@ -549,108 +574,4 @@ tar xvJf /path/name.tar.lzma
 &lt;p&gt;在网上搜寻到了几个注册表文件，经测试，最满意的为下面这个：&lt;/p&gt;
 &lt;script src="https://gist.github.com/zyxnero/f544c3f34753f2c613f2.js"&gt;&lt;/script&gt;
 
-&lt;p&gt;将其另存为 &lt;code&gt;.reg&lt;/code&gt; 文件到本地，双击导入便可。该 &lt;code&gt;.reg&lt;/code&gt; 文件同时在计算机右键上隐藏了 &lt;code&gt;opennewprocess&lt;/code&gt; 和 &lt;code&gt;opennewwindow&lt;/code&gt; 菜单。&lt;/p&gt;</summary><category term="Windows"></category></entry><entry><title>折腾 360 路由</title><link href="http://lusir.me/try-openwrt.html" rel="alternate"></link><updated>2014-10-20T21:21:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-10-20:try-openwrt.html</id><summary type="html">&lt;p&gt;入手 360 路由之后基本没怎么使用，前阵子逛 360 路由讨论区的时候发现多了个 Openwrt 版块，便学着折腾了一下，现在也算物尽其用了。
-&lt;/p&gt;
-&lt;h3 id="300b34e58a0fc5ec5bb570dd6601f1c6"&gt;刷 Openwrt&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;路由器 lan 口与电脑相连，设置电脑 IPV4 为静态 IP：192.168.1.3，子网掩码：255.255.255.0，其余为空；&lt;/li&gt;
-&lt;li&gt;断开路由器电源，按住 reset 键，插上电源，保持按住 reset 键等待 10 秒左右，看到黄灯闪烁证明已进入 uboot；&lt;/li&gt;
-&lt;li&gt;电脑浏览器打开 &lt;code&gt;192.168.1.1&lt;/code&gt;，出现上传 rom 界面；&lt;/li&gt;
-&lt;li&gt;点击 &lt;code&gt;浏览&lt;/code&gt;，找到下载的新固件，上传，等待大概3分钟，完成后再次打开 &lt;code&gt;192.168.1.1&lt;/code&gt; 即可进入 openwrt 的 luci 登录界面；&lt;/li&gt;
-&lt;li&gt;电脑 IPV4 还原之前设置。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="3d9befcfabeff7e2972165d22183a838"&gt;刷不死 UBoot&lt;/h3&gt;
-&lt;p&gt;360 路由重启一定次数后固件会恢复为 360 官方版本，因此需要 “不死” UBoot。刷入 OpenWrt 后，开启 Dropbear SSH 访问。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;使用 WinSCP 将下载的 UBoot 文件传输到路由的 &lt;code&gt;/tmp&lt;/code&gt; 目录；&lt;/li&gt;
-&lt;li&gt;使用 Putty 进入 OpenWrt ，运行命令 &lt;code&gt;mtd write -r /tmp/filename.bin u-boot&lt;/code&gt;，（&lt;code&gt;filename.bin&lt;/code&gt; 为待刷入的不死 UBoot 文件名）；&lt;/li&gt;
-&lt;li&gt;进入不死 U-Boot 刷机界面，重新刷写 Openwrt 固件。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="8c9b7d36a7d1bc1ee133bfe2e173c323"&gt;挂载 U 盘&lt;/h3&gt;
-&lt;p&gt;不打算在路由上折腾 Shadowsocks 客户端及去广告功能，没必要把 openwrt 转移到 U 盘上，所以就没必要给 U 盘分区而是单纯格式化成 ext4 格式，&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;使用 linux 下的分区指令 fdisk 来进行操作，&lt;code&gt;fdisk /dev/sda&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;输入 p 指令查看当前磁盘分区情况；&lt;/li&gt;
-&lt;li&gt;输入 d 指令删除掉旧分区（如果有多个分区删除程序会让你输入删除哪一个，范围是 1 到 4，如果只有一个会默认删除掉），一直删除到没有分区为止；&lt;/li&gt;
-&lt;li&gt;输入 n 指令创建分区 → 输入 p 创建主"分区 1" → 输入开始位置直接回车，结束位置同样直接回车，表示使用全部容量；&lt;/li&gt;
-&lt;li&gt;创建完成后再次输入 p 指令查看当前磁盘分区情况；&lt;/li&gt;
-&lt;li&gt;输入 w 保存分区到磁盘上；&lt;/li&gt;
-&lt;li&gt;重启系统以更改分区表；&lt;/li&gt;
-&lt;li&gt;重启后使用 &lt;code&gt;fdisk -l&lt;/code&gt; 查看当前分区状态；&lt;/li&gt;
-&lt;li&gt;使用 &lt;code&gt;mkfs.ext4 -O ^has_journal /dev/sda1&lt;/code&gt; 命令格式化 U 盘分区；&lt;/li&gt;
-&lt;li&gt;使用 &lt;code&gt;blkid&lt;/code&gt; 命令读取 U 盘 UUID 并设置其自动挂载。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id="d67f3f43de03f967069fae3e553e67d0"&gt;安装并配置 Aria2&lt;/h3&gt;
-&lt;p&gt;在 Luci 界面的 &lt;code&gt;系统&lt;/code&gt; → &lt;code&gt;软件包&lt;/code&gt; 里找寻并安装 aria2，随后更新配置文件，以我自己的情况为例，我的 aria2.conf 内容如下：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;enable-rpc=true
-rpc-listen-all=true
-rpc-allow-origin-all=true
-log-level=error
-disable-ipv6=true
-max-concurrent-downloads=1
-max-connection-per-server=10
-min-split-size=2M
-split=10
-max-overall-download-limit=0
-max-download-limit=0
-force-save=false
-save-session-interval=60
-file-allocation=none
-disk-cache=16M
-dir=/mnt/sda1
-log=/mnt/sda1/aria2.log
-input-file=/root/aria2.session
-save-session=/root/aria2.session
-auto-file-renaming=true
-auto-save-interval=30
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;其中的 &lt;code&gt;aria2.session&lt;/code&gt;、&lt;code&gt;aria2.log&lt;/code&gt; 及 &lt;code&gt;aria2.conf&lt;/code&gt; 3 个文件应按照 &lt;code&gt;aria2.conf&lt;/code&gt; 中的配置置于相应地址。随后使用 Putty 进入路由，输入命令 &lt;code&gt;aria2c --conf-path=/mnt/sda1/aria2.conf -c -D&lt;/code&gt;，此时 aria2 便可开启，也可以使用 yaaw，具体请参考 &lt;a href="http://blog.binux.me/2012/06/aria2_yaaw/" title="aria2 + web 前端部署指南"&gt;“aria2 + web 前端部署指南”&lt;/a&gt;。在开机启动项中添加 &lt;code&gt;nice -n 20 aria2c --conf-path=/mnt/sda1/aria2.conf -c -D&lt;/code&gt; 便可使 aria2 开机启动，同时限制开启时的 cpu 使用率为 20%，不知道我的理解是否正确。&lt;/p&gt;
-&lt;h3 id="67ccb6ae961a467ce30943ab1cb1ac68"&gt;限制 Aria2 的 CPU 使用率&lt;/h3&gt;
-&lt;p&gt;Aria2 在不受限制的情况下 CPU 使用率肯定是会影响路由稳定的，所以设个限制。在 &lt;code&gt;CPU 占用率限制&lt;/code&gt; 中添加下图所示内容。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/360-openwrt-1.png" title="Aria2 限制 CPU" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/360-openwrt-1.png" alt="Aria2 限制 CPU" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="60cf9f743716f2cf1ed0ac7a3563ad52"&gt;读取 ext4 格式 U 盘&lt;/h3&gt;
-&lt;p&gt;前面设置 U 盘格式为 ext4，使用 Aria2 下载完成后一般开启 Samba 就能局域网访问，但访问速度不佳，所以考虑直接读取 U 盘，由于 Windows 系统不能直接读取 U 盘中的内容，所以需要借助第三方程序，经过反复测试，筛选出两个程序，在此记录并作推荐：&lt;code&gt;Ext2Fsd&lt;/code&gt; 与 &lt;code&gt;Paragon ExtFS for Windows&lt;/code&gt;，前者只能只读，后者可写 U 盘，两者均建议使用 &lt;code&gt;复制&lt;/code&gt; 命令以减少文件被损坏的情况发生。复制速度参见下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/360-openwrt-2.png" title="复制速度" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/360-openwrt-2.png" alt="复制速度" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="6aa4ba7e676ffeda11262cd5b7c18218"&gt;计划任务&lt;/h3&gt;
-&lt;p&gt;白天人不在家，离线下载完成后可以关闭路由，等人回来之后在打开路由。让路由在早上 9 点 50 自动关闭 wifi，下午 5 点 50 分自动重启。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;50 09 * * * wifi down
-50 17 * * * reboot
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id="27d1215718e548798395f11e464e65cb"&gt;备份/恢复固件&lt;/h3&gt;
-&lt;p&gt;设置太过麻烦，所以生成备份文件是比较稳妥的办法。如果只备份 &lt;code&gt;etc&lt;/code&gt; 目录则可直接使用 &lt;code&gt;系统&lt;/code&gt; 下的 &lt;code&gt;备份/升级&lt;/code&gt;。若要备份整个固件则需要使用几行命令：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;在 Putty 下使用 &lt;code&gt;cat /proc/mtd&lt;/code&gt; 命令查看 firmware 分区对应的 mtd 设备。如下图，我的 firmware 分区为 mtd4。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/360-openwrt-3.jpg" title="查看分区" data-fancybox-group="gallery"&gt;
-        &lt;img class="aligncenter" src="http://dn-nero.qbox.me/360-openwrt-3.jpg" alt="查看分区" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;生成固件备份文件于 &lt;code&gt;/tmp&lt;/code&gt; 目录下：&lt;code&gt;dd if=/dev/mtd4 of=/tmp/customized_backup.bin&lt;/code&gt;，然后使用 WinSCP 将 &lt;code&gt;/tmp&lt;/code&gt; 目录下的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 文件拷贝至本地。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;反之，如要恢复系统，则需将本地的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 拷贝至路由 &lt;code&gt;/tmp&lt;/code&gt; 目录下，然后使用命令：&lt;code&gt;mtd write -r /tmp/customized_backup.bin firmware&lt;/code&gt; 即可完成系统恢复（或直接进入 UBoot 界面进行固件升级）。恢复完成路由器会自行重启（若出现 aria2c 添加 yaaw 任务即刻失败现象，请直接利用该法恢复系统）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;br&gt;
-路由现在是中继别人的信号。虽然有访问上级路由的权限，但还是没有折腾出外网访二级问路由这一功能，挺失落的，暂时折腾到此……&lt;/p&gt;
-&lt;h3 id="d54d3b94ffaf07589de3006395891685"&gt;Update 2014-11-24 12:15&lt;/h3&gt;
-&lt;p&gt;Adbyby 已有 openwrt 版本的程序，且可支持 360 路由器，&lt;a href="http://bbs.360safe.com/thread-4934688-1-1.html" title="360 路由安装广告屏蔽大师"&gt;论坛&lt;/a&gt; 上已有教程，且本人也已试用，效果还不错。不过我这边安装上 Adbyby 后路由经常无响应，可能是缓存不够（已暂停使用路由版 Adbyby）。&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.right.com.cn/forum/thread-146084-1-1.html" title="360 安全路由器刷 openwrt 方法"&gt;360 安全路由器刷 openwrt 方法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.right.com.cn/forum/thread-147319-1-1.html" title="360 路由 openwrt 固件"&gt;360 路由 openwrt 固件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.leiphone.com/news/201406/diy-a-smart-router-topic-increase-memory-3.html" title="跟 hoowa 学做智能路由（十）：扩充 RAM 和 FLASH"&gt;跟 hoowa 学做智能路由（十）：扩充 RAM 和 FLASH&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://miantiao.me/play-openwrt-2.html" title="openwrt 折腾记（二）"&gt;openwrt 折腾记（二）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://aria2.sourceforge.net/manual/en/html/aria2c.html" title="aria2c 参数手册"&gt;aria2c 参数手册&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://hi.baidu.com/lhaix/item/c69c1f87f7a442c498255fe0" title="利用 cpulimit 限制 aria2 的 cpu 占用"&gt;利用 cpulimit 限制 aria2 的 cpu 占用&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Openwrt"></category></entry></feed>
+&lt;p&gt;将其另存为 &lt;code&gt;.reg&lt;/code&gt; 文件到本地，双击导入便可。该 &lt;code&gt;.reg&lt;/code&gt; 文件同时在计算机右键上隐藏了 &lt;code&gt;opennewprocess&lt;/code&gt; 和 &lt;code&gt;opennewwindow&lt;/code&gt; 菜单。&lt;/p&gt;</summary><category term="Windows"></category></entry></feed>

@@ -11,10 +11,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="使用七牛镜像存储 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="OpenWrt 设置 MAC 地址过滤 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>使用七牛镜像存储 - 擼sirの避風港</title>
+<title>OpenWrt 设置 MAC 地址过滤 - 擼sirの避風港</title>
 <link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
@@ -33,7 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
-<link rel="canonical" href="http://lusir.me/start-using-qiniu.html" />
+<link rel="canonical" href="http://lusir.me/macfilter-of-openwrt.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="http://lusir.me/theme/js/html5shiv.js"></script>
@@ -90,34 +90,35 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 		
-<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">使用七牛镜像存储</h1></div>
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">OpenWrt 设置 MAC 地址过滤</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>看到很多博主都正在使用七牛作为图床或整站的 CDN 加速，本着外行凑热闹的精神，我也学着使用了一把。七牛的加速节点响应速度确实是很快，至少目前是这样，我 ping 了一下，结果如下。
+<p>两年前入手的 360 路由器稳定性不是太好，需要定期恢复固件。
 </p>
-<p><a href="http://dn-nero.qbox.me/ping-qbox-me.png" title="ping-qbox-me" data-fancybox-group="gallery">
-    <img class="aligncenter" src="http://dn-nero.qbox.me/ping-qbox-me.png" alt="ping-qbox-me" />
-</a></p>
-<p>下面记录一下七牛镜像存储的使用（本例为图床使用）：</p>
-<p>由于我没有备案的打算，所以使用的是七牛提供的三级域名。</p>
-<p>假设我想要镜像的源站为 <code>img.lusir.me</code>。而且我已经建立了名为 pic 的七牛 bucket（bucket 意指“空间”，理解为“坑”我觉得更形象）。</p>
-<ol>
-<li>
-<p>进入<a href="https://portal.qiniu.com/" title="七牛内容管理页面">七牛内容管理页面</a>，设置一键加速网站，修改镜像源为 <code>img.lusir.me</code>，底下的“镜像空间”默认是 pic（如果我只建立了一个“坑”）。这时点击“确定加速”即可将 <code>img.lusir.me</code> 与 <code>pic.u.qiniudn.com</code> 进行关联。</p>
-</li>
-<li>
-<p>更改文章里面的图片地址，搜寻关键字 <code>img.lusir.me</code> 并将其改为 <code>pic.u.qiniudn.com</code>，保存。</p>
-</li>
-<li>
-<p>访问一篇带图的文章，进入<a href="https://portal.qiniu.com/" title="七牛内容管理页面">七牛内容管理页面</a>的内容管理，此时文章里相应的图会被拉取到七牛的“坑”里面。也可以直接将所有的图通过<a href="http://docs.qiniu.com/tools/v6/qrsbox.html" title="QRSBox同步工具">QRSBox</a>上传到“坑”里面。</p>
-</li>
-</ol>
-<p>如此就完成整个迁移过程。此时 <code>img.lusir.me</code> 这个源站就可以暂时废弃不用了，即以后可以直接将 <code>pic.u.qiniudn.com</code> 作为图床。<br></p>
-<p>如果要保留源站的域名方式 <code>img.lusir.me</code>，七牛也提供了方法，<a href="http://kb.qiniu.com/how-to-use-image-storage-and-qrsync" title="镜像存储与qrsync数据同步的使用">点我查看</a></p>
-<h3 id="2a302fa545ce4445b25970650930debd">参考文章</h3>
+<p>恢复固件的过程比较简单，用 <code>WinSCP</code> 将本地的 <code>customized_backup.bin</code> 拷贝至路由 <code>/tmp</code> 目录下，然后在 <code>Putty</code> 下敲击：<code>mtd write -r /tmp/customized_backup.bin firmware</code> 并回车即可完成系统恢复。不过个人习惯给无线设置 MAC 过滤，仅允许列表内 MAC 联网。</p>
+<p>之前是每次恢复固件之后就在路由后台一个一个添加允许通过的 MAC 地址，前阵子突然觉得这样做好傻，遂 Google 该控制 MAC 地址过滤的文件路径，得到的结果是 <code>/etc/config/wireless</code>。</p>
+<p>打开路由器内该文件，搜索无线名称，得到：</p>
+<div class="codehilite"><pre><span class="n">config</span> <span class="n">wifi</span><span class="o">-</span><span class="n">iface</span>
+    <span class="n">option</span> <span class="n">device</span> <span class="err">&#39;</span><span class="n">radio1</span><span class="err">&#39;</span>
+    <span class="n">option</span> <span class="n">mode</span> <span class="err">&#39;</span><span class="n">ap</span><span class="err">&#39;</span>
+    <span class="n">option</span> <span class="n">ssid</span> <span class="err">&#39;</span><span class="n">qihoo</span><span class="o">-</span><span class="mi">2</span><span class="n">g</span><span class="err">&#39;</span>
+    <span class="n">option</span> <span class="n">network</span> <span class="err">&#39;</span><span class="n">lan</span><span class="err">&#39;</span>
+    <span class="n">option</span> <span class="n">encryption</span> <span class="err">&#39;</span><span class="n">psk2</span><span class="err">&#39;</span>
+    <span class="n">option</span> <span class="n">key</span> <span class="err">&#39;</span><span class="o">***</span><span class="err">&#39;</span>
+    <span class="n">option</span> <span class="n">macfilter</span> <span class="err">&#39;</span><span class="n">allow</span><span class="err">&#39;</span>
+    <span class="n">list</span> <span class="n">maclist</span> <span class="err">&#39;</span><span class="mi">11</span><span class="o">:</span><span class="mi">22</span><span class="o">:</span><span class="mi">33</span><span class="o">:</span><span class="mi">44</span><span class="o">:</span><span class="mi">55</span><span class="o">:</span><span class="mi">66</span><span class="err">&#39;</span>
+    <span class="n">list</span> <span class="n">maclist</span> <span class="err">&#39;</span><span class="mi">33</span><span class="o">:</span><span class="mi">44</span><span class="o">:</span><span class="mi">55</span><span class="o">:</span><span class="mi">66</span><span class="o">:</span><span class="mi">77</span><span class="o">:</span><span class="mi">88</span><span class="err">&#39;</span>
+</pre></div>
+
+
+<p>如此，只需将需要添加的 MAC 地址复制进去，保存重启路由。</p>
+<p>Macfilter 选项提供三个模式：</p>
 <ul>
-<li><a href="http://www.cjzsy.com/archives/1415" title="七牛云储存：从其他图床搬家到七牛的便捷方法">七牛云储存：从其他图床搬家到七牛的便捷方法</a></li>
+<li>默认是 Disable，表示不启用硬件地址过滤功能；</li>
+<li>Allow 表示白名单模式，即只允许列出的硬件地址连入网络；</li>
+<li>Deny 表示黑名单模式，即禁止列出的硬件地址连入网络。</li>
 </ul>
+<p>目前我采取白名单模式，每连入一个新设备都要添加其硬件地址。</p>
 </div>
     
 <div id="content-comments">
@@ -143,11 +144,11 @@ var duoshuoQuery = {short_name:"lusir"};
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-07 13:40</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2016-06-09 20:37</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/qi-niu.html">七牛</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/openwrt.html">Openwrt</a></div>
  
 </div>
 
@@ -156,24 +157,27 @@ var duoshuoQuery = {short_name:"lusir"};
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">使用七牛镜像存储</a></li>
-    <li><a href='#2a302fa545ce4445b25970650930debd'>参考文章</a>
+<li><a href="#content-heading">OpenWrt 设置 MAC 地址过滤</a></li>
+    
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;使用七牛镜像存储
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;OpenWrt 设置 MAC 地址过滤
 </div>
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="http://lusir.me/start-using-feedly.html">上一篇</a></li>
-<li class="next"><a href="http://lusir.me/embed-html5-media.html">下一篇</a></li>
+<li class="prev"><a href="http://lusir.me/rescue-linux-on-abusing-chmod.html">上一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
+<p>相关文章</p>
+<ul>
+<li><a href="http://lusir.me/try-openwrt.html">折腾 360 路由</a></li>
+</ul>
  
 </div></div>
 </div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
