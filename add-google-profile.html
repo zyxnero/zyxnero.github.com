@@ -68,7 +68,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <ul class="dropdown-menu">
 <li><a href="http://lusir.me/collection/index.html"><i class="fa fa-briefcase"></i>搜藏(4)</a></li>
 <li><a href="http://lusir.me/nonsense/index.html"><i class="fa fa-trash"></i>扯(1)</a></li>
-<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(66)</a></li>
+<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(67)</a></li>
 </ul>
 </li>
 <!--  self defined dropdown list --></ul>
@@ -95,7 +95,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <div id="niu2-main-content" itemprop="articleBody">
 <p>使用 Google 搜索时经常会看到一些搜索到的文章标题下面有个头像，头像旁边写着 <code>By：×××</code>，这时，只要标题下面的摘要中含有我们搜索的关键字，我想大多数人应该都会忍不住想点进去看看了。为了实现这一功能，我也找了好几篇文章学着操作，坐等 Google 重新爬取。
 </p>
-<p>其实操作不难，<a href="https://support.google.com/webmasters/answer/1408986?hl=zh-Hans" title="搜索结果中的作者信息">Google</a> 已经给了我们方法，我们只需照着操作就行。我选择了<a href="http://www.cmhello.com/" title="胡倡萌">胡倡萌</a>使用的方法，即 Google 给的方法二。</p>
+<p>其实操作不难，Google 已经给了我们方法，我们只需照着操作就行。我选择了<a href="http://www.cmhello.com/" title="胡倡萌">胡倡萌</a>使用的方法，即 Google 给的方法二。</p>
 <h3 id="27b152135057a08d88a562eac4a8dbc0">在网页上创建指向 Google+ 个人资料的链接</h3>
 <div class="codehilite"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://plus.google.com/118433343253566330284?rel=author&quot;</span><span class="nt">&gt;</span>Google+<span class="nt">&lt;/a&gt;</span>
 </pre></div>
@@ -103,7 +103,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 
 <p>链接必须包含 <code>?rel=author</code> 参数。如果缺少该参数，就无法与 Google+ 个人资料关联。</p>
 <h3 id="fb4227b0fa5f176f42ab7de2f2dcc612">编辑 Google+ 个人资料以实现双向链接</h3>
-<p>修改 <a href="http://plus.google.com/me/about/edit/co" title="编辑撰稿者">Google+ 个人资料</a>的撰稿者部分。在显示的对话框中点击<code>添加自定义链接</code>，然后输入网站网址，保存即可。</p>
+<p>修改 <a href="https://plus.google.com/me/about/edit/co" title="编辑撰稿者">Google+ 个人资料</a>的撰稿者部分。在显示的对话框中点击<code>添加自定义链接</code>，然后输入网站网址，保存即可。</p>
 <p>网上很多童鞋说还应该添加指向 Google+ ID 的 rel="publisher" 及 rel="me"，Glenn Gabe <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> 及 Google 给出了反驳，单博主博客是不需要 rel="me" 链接的。</p>
 <h3 id="85db889726449cb9c5fd0865a08fb7a9">使用 Google+ 个性网址</h3>
 <p>标题的意思很明显，就是给个个性短连接，将 Google+ 个人资料的链接地址由 <code>https://plus.google.com/118433343253566330284</code> 生成一个自定义的 <code>https://www.google.com/+NeroZheng</code>,使得链接更美观、与众不同、方便记忆。<a href="https://support.google.com/plus/answer/2676340?hl=zh-Hans" title="Google+个性网址使用入门"> Google </a>给出了详细的说明，在此我只把 Google 的要求列一下：</p>
@@ -118,8 +118,6 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <h3 id="2a302fa545ce4445b25970650930debd">参考文章</h3>
 <ul>
 <li><a href="http://www.cmhello.com/add-author-information.html" title="在Google搜索结果中显示你网站的作者信息">在Google搜索结果中显示你网站的作者信息</a></li>
-<li><a href="http://fatesinger.com/1252.html" title="把你的博客和 Google+ profile 连起来">把你的博客和 Google+ profile 连起来</a></li>
-<li><a href="http://fatesinger.com/968.html" title="Google Sitelink &amp; Google+ Author Profile">Google Sitelink &amp; Google+ Author Profile</a></li>
 </ul>
 <p><br></p>
 <div class="footnote">
@@ -197,8 +195,8 @@ var duoshuoQuery = {short_name:"lusir"};
 <hr/>
 <p>
 &copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
-Theme by <a href="http://atime.me">Ma Wenbao</a>. 
-No Right Reserved<a href="https://plus.google.com/+NeroZheng?rel=author" rel="author">.</a>
+Theme by <a href="https://blog.atime.me/">Ma Wenbao</a>. 
+No Right Reserved<a href="https://plus.google.com/+NeroZheng" rel="author">.</a>
 </p>
 </div></div>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

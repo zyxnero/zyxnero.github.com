@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2016-06-09T20:37:00+08:00</updated><entry><title>OpenWrt 设置 MAC 地址过滤</title><link href="http://lusir.me/macfilter-of-openwrt.html" rel="alternate"></link><updated>2016-06-09T20:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-06-09:macfilter-of-openwrt.html</id><summary type="html">&lt;p&gt;两年前入手的 360 路由器稳定性不是太好，需要定期恢复固件。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2016-06-10T21:32:00+08:00</updated><entry><title>OpenWrt 中文文件名乱码</title><link href="http://lusir.me/repair-the-garbled-chinese-in-openwrt.html" rel="alternate"></link><updated>2016-06-10T21:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-06-10:repair-the-garbled-chinese-in-openwrt.html</id><summary type="html">&lt;p&gt;入了 360 路由之后就一直在使用 Aria2 + Yaaw 下载，即通过浏览器将资源先下载到路由器挂载的移动存储设备上，然后再将文件从路由转移电脑、手机。麻烦是麻烦了点，好歹省了个 NAS。。。。。。
+&lt;/p&gt;
+&lt;p&gt;好些软件通过 SSH 或 FTP 连接到 OpenWrt 的时候会出现乱码（好些软件包括 Winscp、Putty、FileZilla）。据说是因为 OpenWrt 默认使用 utf-8 编码，而电脑端的软件默认不是使用 utf-8。但经试用发现以上软件即使在设置里面将默认编码改成 utf-8 也没用，除了 FlashFXP，故此记录，以作备忘。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;FlashFXP 版本：4.4.2；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F6&lt;/code&gt; 打开“参数选择”，在“连接”下的“字符编码”中选择 utf-8；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F4&lt;/code&gt; 打开“站点管理器”，在相应站点下设置“字符编码”为 utf-8；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" title="参数选择" data-fancybox-group="gallery"&gt;&lt;img class="aligncenter" src="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" alt="参数选择" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" title="站点管理器" data-fancybox-group="gallery"&gt;&lt;img class="aligncenter" src="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" alt="站点管理器" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;再次打开站点目录，文件名中的中文已能正常识别。&lt;/p&gt;</summary><category term="Openwrt"></category></entry><entry><title>OpenWrt 设置 MAC 地址过滤</title><link href="http://lusir.me/macfilter-of-openwrt.html" rel="alternate"></link><updated>2016-06-09T20:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-06-09:macfilter-of-openwrt.html</id><summary type="html">&lt;p&gt;两年前入手的 360 路由器稳定性不是太好，需要定期恢复固件。
 &lt;/p&gt;
 &lt;p&gt;恢复固件的过程比较简单，用 &lt;code&gt;WinSCP&lt;/code&gt; 将本地的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 拷贝至路由 &lt;code&gt;/tmp&lt;/code&gt; 目录下，然后在 &lt;code&gt;Putty&lt;/code&gt; 下敲击：&lt;code&gt;mtd write -r /tmp/customized_backup.bin firmware&lt;/code&gt; 并回车即可完成系统恢复。不过个人习惯给无线设置 MAC 过滤，仅允许列表内 MAC 联网。&lt;/p&gt;
 &lt;p&gt;之前是每次恢复固件之后就在路由后台一个一个添加允许通过的 MAC 地址，前阵子突然觉得这样做好傻，遂 Google 该控制 MAC 地址过滤的文件路径，得到的结果是 &lt;code&gt;/etc/config/wireless&lt;/code&gt;。&lt;/p&gt;
@@ -427,8 +437,6 @@ tar xvJf /path/name.tar.lzma
 &lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://ihuan.me/1828.html" title="给你的网站添加支付宝即时到帐按钮"&gt;给你的网站添加支付宝即时到帐按钮&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.baowz.cn/post/51.html" title="一行代码就能实现支付宝转账提交按钮"&gt;一行代码就能实现支付宝转账提交按钮&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.cnaoweisi.com/archives/715" title="收款主页下线后个人博客应对方法种种"&gt;收款主页下线后个人博客应对方法种种&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</summary><category term="Alipay"></category><category term="快捷支付"></category></entry><entry><title>ESET Smart Security 添加黑白名单</title><link href="http://lusir.me/ess-filter.html" rel="alternate"></link><updated>2014-12-01T20:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-12-01:ess-filter.html</id><summary type="html">&lt;p&gt;NOD32 系列的杀毒软件已经更新到了 8.0 版本了，不过我用的依然是老版本 ESET Smart Security 4。本篇记录一下使用 ESS 阻止、排除特定的站点及程序。
 &lt;/p&gt;
 &lt;h3 id="a6a74276e789bb3a546721ec6ac5c6fa"&gt;ESS 排除/阻止访问特定站点&lt;/h3&gt;
@@ -467,7 +475,7 @@ tar xvJf /path/name.tar.lzma
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;至此，设置完成。&lt;/p&gt;
 &lt;h3 id="438777008e750b99006606f949e73b5c"&gt;附：ESS 强制卸载&lt;/h3&gt;
-&lt;p&gt;下载&lt;a href="http://pan.baidu.com/s/1daih4" title="ESET 强制卸载工具"&gt;强制卸载工具&lt;/a&gt;后重启进入安全模式，在安全模式中运行卸载工具并根据&lt;code&gt;命令提示符&lt;/code&gt;的步骤进行操作。&lt;/p&gt;
+&lt;p&gt;下载&lt;a href="http://pan.baidu.com/s/1mibDOyk" title="ESET 强制卸载工具"&gt;强制卸载工具&lt;/a&gt;后重启进入安全模式，在安全模式中运行卸载工具并根据&lt;code&gt;命令提示符&lt;/code&gt;的步骤进行操作。&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;div class="hermit" xiami="songlist:1771862045" loop="1" auto="1"&gt;
 &lt;div class="hermit-box"&gt;
@@ -569,9 +577,4 @@ tar xvJf /path/name.tar.lzma
 &lt;p&gt;至此，媒体文件的右键菜单将不再出现与 &lt;code&gt;Windows Media Player&lt;/code&gt; 有关的多余选项了。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-5.jpg" title="右键菜单（后）" data-fancybox-group="gallery"&gt;
     &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-5.jpg" alt="右键菜单（后）" /&gt;
-&lt;/a&gt;&lt;/p&gt;</summary><category term="Win7"></category></entry><entry><title>修复 Win + E 出现 explorer.exe 未指定错误</title><link href="http://lusir.me/win-e-failure.html" rel="alternate"></link><updated>2014-10-24T21:28:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-10-24:win-e-failure.html</id><summary type="html">&lt;p&gt;我的笔记本一直是用 Win7 优化大师进行优化，没有出现太大问题。但不久前在台式机上像往常一样运行优化之后，按下 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;E&lt;/kbd&gt;，会弹出一个对话框，说是 “&lt;code&gt;explorer.exe&lt;/code&gt; 出现未指定的错误”，大致猜到可能是优化过度，但具体原因是什么原因就弄不清楚了……
-&lt;/p&gt;
-&lt;p&gt;在网上搜寻到了几个注册表文件，经测试，最满意的为下面这个：&lt;/p&gt;
-&lt;script src="https://gist.github.com/zyxnero/f544c3f34753f2c613f2.js"&gt;&lt;/script&gt;
-
-&lt;p&gt;将其另存为 &lt;code&gt;.reg&lt;/code&gt; 文件到本地，双击导入便可。该 &lt;code&gt;.reg&lt;/code&gt; 文件同时在计算机右键上隐藏了 &lt;code&gt;opennewprocess&lt;/code&gt; 和 &lt;code&gt;opennewwindow&lt;/code&gt; 菜单。&lt;/p&gt;</summary><category term="Windows"></category></entry></feed>
+&lt;/a&gt;&lt;/p&gt;</summary><category term="Win7"></category></entry></feed>

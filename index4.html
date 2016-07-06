@@ -65,7 +65,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <ul class="dropdown-menu">
 <li><a href="http://lusir.me/collection/index.html"><i class="fa fa-briefcase"></i>搜藏(4)</a></li>
 <li><a href="http://lusir.me/nonsense/index.html"><i class="fa fa-trash"></i>扯(1)</a></li>
-<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(66)</a></li>
+<li><a href="http://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(67)</a></li>
 </ul>
 </li>
 <!--  self defined dropdown list --></ul>
@@ -90,6 +90,22 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 class="niu2-index-title">擼sirの避風港</h1></div>
 
 <div class="col-md-8 col-md-offset-2"><div class="niu2-index-article">
+<div class="niu2-index-article-title">
+<span itemprop="headline"><a itemprop="url" href="http://lusir.me/notes-of-win-pelican.html">Pelican 在 Windows 下的静态文件及目录拷贝</a></span>
+</div><div class="niu2-meta-index">
+<span class="niu2-meta-date-index" itemprop="datePublished"><i class="fa fa-calendar"></i>2014-05-24</span>
+<span class="niu2-meta-category-index" itemprop="articleSection"><i class="fa fa-book"></i><a href="http://lusir.me/record/index.html">记录</a></span>
+<span class="niu2-meta-tag-index" itemprop="keywords">
+<i class="fa fa-tag"></i><a href="http://lusir.me/tag/pelican.html">Pelican</a>
+<a href="http://lusir.me/tag/music.html">Music</a>
+</span>
+</div><div class="niu2-article-summary" itemprop="description">
+    
+
+<p>今天在网上看到有人发布了整理过后的《七天学会 NodeJS》，就瞟了一下（简直就是天书），不过其中的<a href="http://nqdeng.github.io/7-days-nodejs/#3.2.4" title="Path（路径）">『Path（路径）』</a>一节看了却很有感触，不免想起 <a href="http://lusir.me/static-blog.html" title="Pelican + Niux2 使用记录">刚折腾 Pelican </a> 时遇到相同问题时的情景。
+
+</div>
+</div><div class="niu2-index-article">
 <div class="niu2-index-article-title">
 <span itemprop="headline"><a itemprop="url" href="http://lusir.me/customize-purecodec-player.html">修改注册表自定义完美解码播放器</a></span>
 </div><div class="niu2-meta-index">
@@ -214,27 +230,14 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
     <p>接着<a href="http://lusir.me/enable-application-cache.html" title="启用 Application Cache">上一篇</a>，上一篇的思路是在每一张网页的 <code>&lt;html&gt;</code> 中都声明 manifest 文件，manifest 文件中声明想要缓存的元素，如此一来，来访浏览器会将每一张网页都缓存到本地，而浏览器对于缓存的更新是一个很不能控制的过程，即使采用了监听函数来对比本地与远程的 manifest 版本从而更新缓存元素，浏览器也不能及时的刷新网页（虽然理论上是可以及时刷新的），这不是我想要的。
 
 </div>
-</div><div class="niu2-index-article">
-<div class="niu2-index-article-title">
-<span itemprop="headline"><a itemprop="url" href="http://lusir.me/enable-application-cache.html">启用 Application Cache</a></span>
-</div><div class="niu2-meta-index">
-<span class="niu2-meta-date-index" itemprop="datePublished"><i class="fa fa-calendar"></i>2014-03-13</span>
-<span class="niu2-meta-category-index" itemprop="articleSection"><i class="fa fa-book"></i><a href="http://lusir.me/record/index.html">记录</a></span>
-<span class="niu2-meta-tag-index" itemprop="keywords">
-<i class="fa fa-tag"></i><a href="http://lusir.me/tag/html5.html">HTML5</a>
-</span>
-</div><div class="niu2-article-summary" itemprop="description">
-    <p>上篇<a href="http://lusir.me/modify-dns-name-resolution.html" title="更改域名解析">更改域名解析</a>之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
-
-</div>
 </div><ul class="pagination"><li><a href="http://lusir.me/index3.html">
 <i class="fa fa-caret-left fa-lg"></i></a>
 </li><li><a href="http://lusir.me/index.html">1</a></li><li><a href="http://lusir.me/index2.html">2</a></li><li><a href="http://lusir.me/index3.html">3</a></li><li class="active"><span>4</span></li><li><a href="http://lusir.me/index5.html">5</a></li><li><a href="http://lusir.me/index6.html">6</a></li><li><a href="http://lusir.me/index7.html">7</a></li><li><a href="http://lusir.me/index8.html">8</a></li><li><a href="http://lusir.me/index5.html"><i class="fa fa-caret-right fa-lg"></i></a></li></ul></div></div><div id="body-footer" class="col-md-8 col-md-offset-2"><div class="niu2-footer">
 <hr/>
 <p>
 &copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
-Theme by <a href="http://atime.me">Ma Wenbao</a>. 
-No Right Reserved<a href="https://plus.google.com/+NeroZheng?rel=author" rel="author">.</a>
+Theme by <a href="https://blog.atime.me/">Ma Wenbao</a>. 
+No Right Reserved<a href="https://plus.google.com/+NeroZheng" rel="author">.</a>
 </p>
 </div></div>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

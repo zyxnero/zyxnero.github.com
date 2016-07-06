@@ -11,10 +11,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="Pelican + Niux2 使用记录 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="OpenWrt 中文文件名乱码 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>Pelican + Niux2 使用记录 - 擼sirの避風港</title>
+<title>OpenWrt 中文文件名乱码 - 擼sirの避風港</title>
 <link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
@@ -33,7 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
-<link rel="canonical" href="http://lusir.me/static-blog.html" />
+<link rel="canonical" href="http://lusir.me/repair-the-garbled-chinese-in-openwrt.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="http://lusir.me/theme/js/html5shiv.js"></script>
@@ -90,30 +90,20 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 		
-<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">Pelican + Niux2 使用记录</h1></div>
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">OpenWrt 中文文件名乱码</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>果然还是需要一个可以宣泄情感垃圾的地方。域名被恶意泛解析之后就没管了，闲置大半年。最近看网上教程学着搭了个静态博客，接触到了 git、python、pelican 等名词，很新鲜。于是又动了记录一些生活琐事的念头。
+<p>入了 360 路由之后就一直在使用 Aria2 + Yaaw 下载，即通过浏览器将资源先下载到路由器挂载的移动存储设备上，然后再将文件从路由转移电脑、手机。麻烦是麻烦了点，好歹省了个 NAS。。。。。。
 </p>
-<p>现在使用的是 <a href="http://blog.atime.me/" title="Mawenbao">Mawenbao</a> 的 Niu-X2 主题，很好看，很喜欢，希望以后能更加自适应。记录一下启用主题之后的微小修改：</p>
+<p>好些软件通过 SSH 或 FTP 连接到 OpenWrt 的时候会出现乱码（好些软件包括 Winscp、Putty、FileZilla）。据说是因为 OpenWrt 默认使用 utf-8 编码，而电脑端的软件默认不是使用 utf-8。但经试用发现以上软件即使在设置里面将默认编码改成 utf-8 也没用，除了 FlashFXP，故此记录，以作备忘。</p>
 <ol>
-<li>改主题下所有 css 文件中 underline 为 none；</li>
-<li>修改 footer；</li>
-<li>强制显示浏览器侧边栏（niu2.css）； <br />
-<pre><code>body, html {min-height:101%;}</code></pre></li>
-<li>文章侧边栏增加 Author，显示 fa-bug 图标；</li>
-<li><s>修改搜索栏高度（Chrome 跟 Firefox 下显示高度不一样）。</s></li>
+<li>FlashFXP 版本：4.4.2；</li>
+<li><code>F6</code> 打开“参数选择”，在“连接”下的“字符编码”中选择 utf-8；</li>
+<li><code>F4</code> 打开“站点管理器”，在相应站点下设置“字符编码”为 utf-8；</li>
 </ol>
-<p>Windows 下使用 python 貌似还是有些问题，路径的写法跟网上找到的不一样，导致 extra 目录下的文件是不能拷到根目录。</p>
-<hr />
-<h3 id="06933067aafd48425d67bcb01bba5cb6">Update</h3>
-<ul>
-<li>2014.01.25 将静态目录由 gitcafe 转移至 github，搜索栏高度改回 Niux2 主题默认。</li>
-<li>2014.02.11 添加 html5media.min.js 至主题 base.html 中。</li>
-<li>2014.02.17 给 index、article、page及 404 页面添加 meta。</li>
-<li>2014.03.25 去除加载 html5media.min.js。</li>
-<li>2014.03.26 重新将静态 blog 搬至 gitcafe。</li>
-</ul>
+<p><a href="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" title="参数选择" data-fancybox-group="gallery"><img class="aligncenter" src="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" alt="参数选择" /></a></p>
+<p><a href="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" title="站点管理器" data-fancybox-group="gallery"><img class="aligncenter" src="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" alt="站点管理器" /></a></p>
+<p>再次打开站点目录，文件名中的中文已能正常识别。</p>
 </div>
     
 <div id="content-comments">
@@ -139,13 +129,11 @@ var duoshuoQuery = {short_name:"lusir"};
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2014-01-19 19:40</div>
-<div class="niu2-sidebar-label"><i class="fa fa-pencil"></i>最后修改</div>
-<div class="niu2-sidebar-value" itemprop="dateModified">2014-03-26 23:05</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2016-06-10 21:32</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/pelican.html">Pelican</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/openwrt.html">Openwrt</a></div>
  
 </div>
 
@@ -154,28 +142,27 @@ var duoshuoQuery = {short_name:"lusir"};
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">Pelican + Niux2 使用记录</a></li>
-    <li><a href='#06933067aafd48425d67bcb01bba5cb6'>Update</a>
+<li><a href="#content-heading">OpenWrt 中文文件名乱码</a></li>
+    
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;Pelican + Niux2 使用记录
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;OpenWrt 中文文件名乱码
 </div>
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="http://lusir.me/gcdn.html">上一篇</a></li>
-<li class="next"><a href="http://lusir.me/move-to-github.html">下一篇</a></li>
+<li class="prev"><a href="http://lusir.me/macfilter-of-openwrt.html">上一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="http://lusir.me/google-cse-for-pelican.html">整合 Google 自定义搜索到 Pelican</a></li>
-<li><a href="http://lusir.me/notes-of-win-pelican.html">Pelican 在 Windows 下的静态文件及目录拷贝</a></li>
+<li><a href="http://lusir.me/macfilter-of-openwrt.html">OpenWrt 设置 MAC 地址过滤</a></li>
+<li><a href="http://lusir.me/try-openwrt.html">折腾 360 路由</a></li>
 </ul>
  
 </div></div>
