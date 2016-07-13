@@ -113,8 +113,8 @@
 &lt;li&gt;&lt;code&gt;F6&lt;/code&gt; 打开“参数选择”，在“连接”下的“字符编码”中选择 utf-8；&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;F4&lt;/code&gt; 打开“站点管理器”，在相应站点下设置“字符编码”为 utf-8；&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" title="参数选择" data-fancybox-group="gallery"&gt;&lt;img class="aligncenter" src="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" alt="参数选择" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" title="站点管理器" data-fancybox-group="gallery"&gt;&lt;img class="aligncenter" src="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" alt="站点管理器" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="float-left" href="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" title="参数选择" data-fancybox-group="gallery"&gt;&lt;img src="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" alt="参数选择" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="float-left" href="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" title="站点管理器" data-fancybox-group="gallery"&gt;&lt;img src="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" alt="站点管理器" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;再次打开站点目录，文件名中的中文已能正常识别。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 10 Jun 2016 21:32:00 +0800</pubDate><guid>tag:lusir.me,2016-06-10:repair-the-garbled-chinese-in-openwrt.html</guid><category>Openwrt</category></item><item><title>OpenWrt 设置 MAC 地址过滤</title><link>http://lusir.me/macfilter-of-openwrt.html</link><description>&lt;p&gt;两年前入手的 360 路由器稳定性不是太好，需要定期恢复固件。
 &lt;/p&gt;
 &lt;p&gt;恢复固件的过程比较简单，用 &lt;code&gt;WinSCP&lt;/code&gt; 将本地的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 拷贝至路由 &lt;code&gt;/tmp&lt;/code&gt; 目录下，然后在 &lt;code&gt;Putty&lt;/code&gt; 下敲击：&lt;code&gt;mtd write -r /tmp/customized_backup.bin firmware&lt;/code&gt; 并回车即可完成系统恢复。不过个人习惯给无线设置 MAC 过滤，仅允许列表内 MAC 联网。&lt;/p&gt;
