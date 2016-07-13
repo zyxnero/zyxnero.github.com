@@ -1,5 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2016-06-10T21:32:00+08:00</updated><entry><title>OpenWrt 中文文件名乱码</title><link href="http://lusir.me/repair-the-garbled-chinese-in-openwrt.html" rel="alternate"></link><updated>2016-06-10T21:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-06-10:repair-the-garbled-chinese-in-openwrt.html</id><summary type="html">&lt;p&gt;入了 360 路由之后就一直在使用 Aria2 + Yaaw 下载，即通过浏览器将资源先下载到路由器挂载的移动存储设备上，然后再将文件从路由转移电脑、手机。麻烦是麻烦了点，好歹省了个 NAS。。。。。。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2016-07-02T21:35:00+08:00</updated><entry><title>升级到 Sublime Text 3</title><link href="http://lusir.me/get-to-sublime3.html" rel="alternate"></link><updated>2016-07-02T21:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-07-02:get-to-sublime3.html</id><summary type="html">&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
+&lt;/p&gt;
+&lt;h3 id="e655a410ff21cd07e7a0150491e04371"&gt;安装&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;从&lt;a href="https://www.sublimetext.com/3" title="Sublime Text 3"&gt;官方下载地址&lt;/a&gt;下载对应的 Portable 版本并解压到自定义目录；&lt;/li&gt;
+&lt;li&gt;注册，我用的下面的码：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;—– &lt;span class="n"&gt;BEGIN&lt;/span&gt; &lt;span class="n"&gt;LICENSE&lt;/span&gt; —–
+&lt;span class="n"&gt;Anthony&lt;/span&gt; &lt;span class="n"&gt;Sansone&lt;/span&gt;
+&lt;span class="n"&gt;Single&lt;/span&gt; &lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;License&lt;/span&gt;
+&lt;span class="n"&gt;EA7E&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;878563&lt;/span&gt;
+&lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="n"&gt;B9A648&lt;/span&gt; &lt;span class="mi"&gt;42&lt;/span&gt;&lt;span class="n"&gt;B99D8A&lt;/span&gt; &lt;span class="n"&gt;F2E3E9E0&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="n"&gt;DE076E&lt;/span&gt;
+&lt;span class="n"&gt;E218B3DC&lt;/span&gt; &lt;span class="n"&gt;F3606379&lt;/span&gt; &lt;span class="n"&gt;C33C1526&lt;/span&gt; &lt;span class="n"&gt;E8B58964&lt;/span&gt;
+&lt;span class="n"&gt;B2CB3F63&lt;/span&gt; &lt;span class="n"&gt;BDF901BE&lt;/span&gt; &lt;span class="n"&gt;D31424D2&lt;/span&gt; &lt;span class="mi"&gt;082891&lt;/span&gt;&lt;span class="n"&gt;B5&lt;/span&gt;
+&lt;span class="n"&gt;F7058694&lt;/span&gt; &lt;span class="mi"&gt;55&lt;/span&gt;&lt;span class="n"&gt;FA46D8&lt;/span&gt; &lt;span class="n"&gt;EFC11878&lt;/span&gt; &lt;span class="mi"&gt;0868&lt;/span&gt;&lt;span class="n"&gt;F093&lt;/span&gt;
+&lt;span class="n"&gt;B17CAFE7&lt;/span&gt; &lt;span class="mi"&gt;63&lt;/span&gt;&lt;span class="n"&gt;A78881&lt;/span&gt; &lt;span class="mi"&gt;86&lt;/span&gt;&lt;span class="n"&gt;B78E38&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;F146238&lt;/span&gt;
+&lt;span class="n"&gt;BAE22DBB&lt;/span&gt; &lt;span class="n"&gt;D4EC71A1&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="n"&gt;EC2E701&lt;/span&gt; &lt;span class="n"&gt;C7F9C648&lt;/span&gt;
+&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;CF29CA3&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;CB14285&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="n"&gt;A46991&lt;/span&gt; &lt;span class="n"&gt;E9A98676&lt;/span&gt;
+&lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="n"&gt;FD4777&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;D8A0AB6&lt;/span&gt; &lt;span class="n"&gt;A444EE0D&lt;/span&gt; &lt;span class="n"&gt;CA009B54&lt;/span&gt;
+—— &lt;span class="n"&gt;END&lt;/span&gt; &lt;span class="n"&gt;LICENSE&lt;/span&gt; ——
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="324d7d8af1915367f6824f56a4533b41"&gt;汉化&lt;/h3&gt;
+&lt;p&gt;我用的好像是 &lt;a href="http://ihacklog.com" title="荒野无灯"&gt;荒野无灯&lt;/a&gt; 提供的 Sublime Text 2 汉化包，扔到 Sublime Text 3 里发现可以通用，将汉化包文件（Default.sublime-package）拷到程序目录下的 &lt;code&gt;\Data\Installed Packages&lt;/code&gt; 中，无需重启即可看到汉化效果。如果不想看到菜单栏“帮助”下汉化者的太多个人信息，可以编辑 &lt;code&gt;\Data\Packages\Default&lt;/code&gt; 目录下的 &lt;code&gt;Main.sublime-menu&lt;/code&gt; 文件，搜索汉化者的个人信息关键字，将其注释掉。&lt;/p&gt;
+&lt;h3 id="236b0cdd2e18418fd17d3cdfcace239e"&gt;插件&lt;/h3&gt;
+&lt;p&gt;首先是要装上 &lt;code&gt;Package Control&lt;/code&gt; 组件，以后就利用它来管理各种插件。&lt;/p&gt;
+&lt;p&gt;通过 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;`&lt;/kbd&gt; 打开调试窗口，在输入框内粘贴如下代码，然后回车自动安装，安装完成重启。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nn"&gt;os&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nn"&gt;hashlib&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;2915d1851351e5ee549c20394736b442&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;8bc59f460fa1548d1514676163dafc88&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;pf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Package Control.sublime-package&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;ipp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sublime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;installed_packages_path&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;install_opener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;build_opener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ProxyHandler&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://packagecontrol.io/&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;pf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;%20&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="n"&gt;dh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hashlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sha256&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hexdigest&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Error validating download (got &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; instead of &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;), please try manual install&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dh&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;dh&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;ipp&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pf&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;wb&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;推荐插件列表，效果就不贴上来了。&lt;/p&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Alignment&lt;/td&gt;
+&lt;td&gt;将格式按等号对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;All Autocomplete&lt;/td&gt;
+&lt;td&gt;从全部打开文件中进行查找&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BracketHighlighter&lt;/td&gt;
+&lt;td&gt;标签匹配高亮提示&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Clipboard Manager&lt;/td&gt;
+&lt;td&gt;剪贴板增强&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Emmet&lt;/td&gt;
+&lt;td&gt;快速生成 HTML 代码段&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Markdown Preview&lt;/td&gt;
+&lt;td&gt;预览 Markdown 效果&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SideBarEnhancements&lt;/td&gt;
+&lt;td&gt;侧边栏增强&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ConvertToUTF8&lt;/td&gt;
+&lt;td&gt;GBK编码兼容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="f7d2996639d97b4a03fc0e40e2eb853a"&gt;快捷键&lt;/h3&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;L&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;将当前选中区域进行同时编辑&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;J&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;将当前选中区域当前选中区域合并为一行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;←&lt;/kbd&gt;/&lt;kbd&gt;→&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;逐词移动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;&lt;kbd&gt;←&lt;/kbd&gt;/&lt;kbd&gt;→&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;逐词选择&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;&lt;kbd&gt;↑&lt;/kbd&gt;/&lt;kbd&gt;↓&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;移动当前行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;暂时记这么多。。。&lt;/p&gt;</summary><category term="Sublime"></category></entry><entry><title>OpenWrt 中文文件名乱码</title><link href="http://lusir.me/repair-the-garbled-chinese-in-openwrt.html" rel="alternate"></link><updated>2016-06-10T21:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-06-10:repair-the-garbled-chinese-in-openwrt.html</id><summary type="html">&lt;p&gt;入了 360 路由之后就一直在使用 Aria2 + Yaaw 下载，即通过浏览器将资源先下载到路由器挂载的移动存储设备上，然后再将文件从路由转移电脑、手机。麻烦是麻烦了点，好歹省了个 NAS。。。。。。
 &lt;/p&gt;
 &lt;p&gt;好些软件通过 SSH 或 FTP 连接到 OpenWrt 的时候会出现乱码（好些软件包括 Winscp、Putty、FileZilla）。据说是因为 OpenWrt 默认使用 utf-8 编码，而电脑端的软件默认不是使用 utf-8。但经试用发现以上软件即使在设置里面将默认编码改成 utf-8 也没用，除了 FlashFXP，故此记录，以作备忘。&lt;/p&gt;
 &lt;ol&gt;
@@ -556,25 +662,4 @@ tar xvJf /path/name.tar.lzma
     &lt;img class="aligncenter" src="http://dn-nero.qbox.me/excel-show-long-num-2.jpg" alt="Excel 显示长数值（2）" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="f3deb6e7023fec7047c839dc68f897bf"&gt;方法二&lt;/h3&gt;
-&lt;p&gt;在输入长数值前，先敲入一个英文状态的单引号符 &lt;code&gt;'&lt;/code&gt;。该法适合输入少量的长数值，单引号不影响显示和打印。&lt;/p&gt;</summary><category term="Excel"></category></entry><entry><title>去除 Win7 右键“使用 Windows Media Player 播放”项</title><link href="http://lusir.me/win7-menuext-fix.html" rel="alternate"></link><updated>2014-11-09T12:54:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-11-09:win7-menuext-fix.html</id><summary type="html">&lt;p&gt;我不是处女座，但还是会对右键菜单非常在意，经常会留意右键菜单是否需要清理，经常使用的工具为：&lt;code&gt;RightMenuMgr&lt;/code&gt;。今天记录一下 &lt;code&gt;.avi&lt;/code&gt; 文件右键菜单上“使用 Windows Media Player 播放”项的整理过程。
-&lt;/p&gt;
-&lt;p&gt;如下图，由于我常不使用 Windows Media Player，所以该菜单项对于我来讲很多余。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-1.jpg" title="右键菜单（前）" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-1.jpg" alt="右键菜单（前）" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;其实，这主要是 Windows 7 的默认设置在发生作用。解决的办法很简单：&lt;/p&gt;
-&lt;p&gt;点击开始菜单中的&lt;code&gt;“默认程序”&lt;/code&gt;→&lt;code&gt;“设置程序访问和计算机的默认值”&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-2.jpg" title="修改“默认程序”" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-2.jpg" alt="修改“默认程序”" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-3.jpg" title="设置程序访问和计算机的默认值" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-3.jpg" alt="设置程序访问和计算机的默认值" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在弹出的窗口中选择&lt;code&gt;“自定义”&lt;/code&gt;并单击右边的向下箭头。然后取消对&lt;code&gt;“选择默认的媒体播放机”&lt;/code&gt;下的 &lt;code&gt;“Windows Media Player”&lt;/code&gt; 与 &lt;code&gt;“Windows Media Center”&lt;/code&gt; 右边的&lt;code&gt;“启用对此程序的访问”&lt;/code&gt;的勾选。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-4.jpg" title="选择默认的媒体播放机" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-4.jpg" alt="选择默认的媒体播放机" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;至此，媒体文件的右键菜单将不再出现与 &lt;code&gt;Windows Media Player&lt;/code&gt; 有关的多余选项了。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-menuext-fix-5.jpg" title="右键菜单（后）" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/win7-menuext-fix-5.jpg" alt="右键菜单（后）" /&gt;
-&lt;/a&gt;&lt;/p&gt;</summary><category term="Win7"></category></entry></feed>
+&lt;p&gt;在输入长数值前，先敲入一个英文状态的单引号符 &lt;code&gt;'&lt;/code&gt;。该法适合输入少量的长数值，单引号不影响显示和打印。&lt;/p&gt;</summary><category term="Excel"></category></entry></feed>
