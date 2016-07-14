@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 02 Jul 2016 21:35:00 +0800</lastBuildDate><item><title>升级到 Sublime Text 3</title><link>http://lusir.me/get-to-sublime3.html</link><description>&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 14 Jul 2016 22:08:00 +0800</lastBuildDate><item><title>用上了 You-Get</title><link>http://lusir.me/try-you-get.html</link><description>&lt;p&gt;在优酷上订阅了几个视频节目，像《罗辑思维》、《暴走大事件》。之前一直在用硕鼠下载观看，不过前阵子硕鼠好像停止服务了，遂用上了开源跨平台的 &lt;a href="https://github.com/soimort/you-get/" title="You-Get"&gt;You-Get&lt;/a&gt;。之前在 Lubuntu 下使用过，绝对的神器！
+&lt;/p&gt;
+&lt;p&gt;从官网下载压缩包，解压即用。需要注意的是如果命令行里面提示“无法定位程序输入点ucrtbase.terminate”这个错误，那么去下载个&lt;code&gt;Microsoft Visual C++ 2015 Redistributable&lt;/code&gt;，安装以后就不会再报错了。如果命令行程序用的是 &lt;code&gt;Cmder&lt;/code&gt;，那么看起来就是这样的。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/you-get.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/you-get.png" alt="用上了 You-Get" /&gt;
+&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 14 Jul 2016 22:08:00 +0800</pubDate><guid>tag:lusir.me,2016-07-14:try-you-get.html</guid><category>You-Get</category></item><item><title>升级到 Sublime Text 3</title><link>http://lusir.me/get-to-sublime3.html</link><description>&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
 &lt;/p&gt;
 &lt;h3 id="e655a410ff21cd07e7a0150491e04371"&gt;安装&lt;/h3&gt;
 &lt;ol&gt;
@@ -649,17 +654,4 @@ tar xvJf /path/name.tar.lzma
 &lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.dingding.biz/archives/387" title="忘记了google app的用户名和密码~"&gt;忘记了google app的用户名和密码~&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 28 Nov 2014 20:24:00 +0800</pubDate><guid>tag:lusir.me,2014-11-28:reset-gapps-account.html</guid><category>Google</category></item><item><title>Excel 显示长数值</title><link>http://lusir.me/show-excel-long-num.html</link><description>&lt;p&gt;貌似我把标题定义复杂了。默认情况下，Excel 中每个单元格所能显示的数字为 11 位，输入超过 11 位的数值，系统自动将其转换为科学记数格式，如果输入超过 15 位的数值，系统自动将 15 位以后的数值转换为 “0”。比如 123456789012 ，就会显示为 1.23457E+11。
-&lt;/p&gt;
-&lt;p&gt;所以如果我们需要在单元格中输入身份证号码或银行卡卡号，以上设置就不能符合我们的要求。为了能让这些长位数数值完整显示，需要将单元格转换成文本格式，然后再输入内容。&lt;/p&gt;
-&lt;h3 id="2eed9a7684ee328ed262ea4fcafa14a7"&gt;方法一&lt;/h3&gt;
-&lt;p&gt;在输入前，先选中待输入长位数数值的列，然后右键，点击弹出的&lt;code&gt;“设置单元格格式”&lt;/code&gt;，在&lt;code&gt;“数字”&lt;/code&gt;选项卡中选择&lt;code&gt;“文本”&lt;/code&gt;即可。或在&lt;code&gt;“数字”&lt;/code&gt;选项卡中选择&lt;code&gt;“自定义”&lt;/code&gt;，然后在右边&lt;code&gt;“类型”&lt;/code&gt;选项中选择 &lt;code&gt;“@”&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;注意：必须先定义格式，再输入内容，否则无效。&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/excel-show-long-num-1.jpg" title="Excel 显示长数值（1）" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/excel-show-long-num-1.jpg" alt="Excel 显示长数值（1）" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/excel-show-long-num-2.jpg" title="Excel 显示长数值（2）" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/excel-show-long-num-2.jpg" alt="Excel 显示长数值（2）" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="f3deb6e7023fec7047c839dc68f897bf"&gt;方法二&lt;/h3&gt;
-&lt;p&gt;在输入长数值前，先敲入一个英文状态的单引号符 &lt;code&gt;'&lt;/code&gt;。该法适合输入少量的长数值，单引号不影响显示和打印。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 25 Nov 2014 14:28:00 +0800</pubDate><guid>tag:lusir.me,2014-11-25:show-excel-long-num.html</guid><category>Excel</category></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 28 Nov 2014 20:24:00 +0800</pubDate><guid>tag:lusir.me,2014-11-28:reset-gapps-account.html</guid><category>Google</category></item></channel></rss>
