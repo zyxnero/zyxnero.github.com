@@ -4,7 +4,26 @@
 &lt;p&gt;从官网下载压缩包，解压即用。需要注意的是如果命令行里面提示“无法定位程序输入点ucrtbase.terminate”这个错误，那么去下载个&lt;code&gt;Microsoft Visual C++ 2015 Redistributable&lt;/code&gt;，安装以后就不会再报错了。如果命令行程序用的是 &lt;code&gt;Cmder&lt;/code&gt;，那么看起来就是这样的。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://dn-nero.qbox.me/you-get.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
     &lt;img class="aligncenter" src="http://dn-nero.qbox.me/you-get.png" alt="用上了 You-Get" /&gt;
-&lt;/a&gt;&lt;/p&gt;</summary><category term="You-Get"></category></entry><entry><title>升级到 Sublime Text 3</title><link href="http://lusir.me/get-to-sublime3.html" rel="alternate"></link><updated>2016-07-02T21:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-07-02:get-to-sublime3.html</id><summary type="html">&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
+&lt;/a&gt;&lt;/p&gt;</summary><category term="You-Get"></category></entry><entry><title>为 TortoiseGit 设置代理</title><link href="http://lusir.me/applying-tortoisegit-with-proxy.html" rel="alternate"></link><updated>2016-07-13T20:20:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-07-13:applying-tortoisegit-with-proxy.html</id><summary type="html">&lt;p&gt;又一篇流水账。昨天“中菲南海仲裁案”出结果，今天就发现博客内容不能更新到 Github 了。老毛病，为了提交更新，只能为 &lt;code&gt;TortoiseGit&lt;/code&gt; “另辟蹊径”了。
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开“袋里”并启用系统袋里；&lt;/li&gt;
+&lt;li&gt;留意袋里程序提供的端口，举个栗子：54213；&lt;/li&gt;
+&lt;li&gt;打开 &lt;code&gt;TortoiseGit&lt;/code&gt;→进入设置→打开全局设置文件（如下图）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/applying-tortoisegit-with-proxy.png" title="为 TortoiseGit 设置代理" data-fancybox-group="gallery"&gt;
+    &lt;img src="http://dn-nero.qbox.me/applying-tortoisegit-with-proxy.png" alt="为 TortoiseGit 设置代理" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在全局设置文件中添加以下两行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;[http]
+    proxy = http://127.0.0.1:54213
+    sslVerify = false
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;再次推送，成功提交！！！&lt;/p&gt;</summary><category term="Git"></category></entry><entry><title>升级到 Sublime Text 3</title><link href="http://lusir.me/get-to-sublime3.html" rel="alternate"></link><updated>2016-07-02T21:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-07-02:get-to-sublime3.html</id><summary type="html">&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
 &lt;/p&gt;
 &lt;h3 id="e655a410ff21cd07e7a0150491e04371"&gt;安装&lt;/h3&gt;
 &lt;ol&gt;
@@ -646,12 +665,4 @@ tar xvJf /path/name.tar.lzma
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;PS：如果通过某种算法已经能够确定对方的 pin 码，则通过修改  &lt;code&gt;/tmp/minidwep&lt;/code&gt; 目录下的对应的 &lt;code&gt;.wpc&lt;/code&gt; 文件中的前 3 行数值就能直接定位到 pin 码。第一行数值与 pin 码的前 4 位关联（故最大修改为 4 位数）；第二行数值与 pin 码后 4 位中的前 3 位关联（故最大修改为 3 位数）；第三行数值与 pin 码的最后一位（校验位）关联，故为 1 位数。假定某 pin 码为 35108146，pin 排序为 0123456789，则将对应的 &lt;code&gt;.wpc&lt;/code&gt; 文件中的前 3 行数值分别修改为 &lt;code&gt;3510&lt;/code&gt;，&lt;code&gt;814&lt;/code&gt;，&lt;code&gt;6&lt;/code&gt; 即可直接定位。&lt;/p&gt;
-&lt;p&gt;待续……&lt;/p&gt;</summary><category term="CDLinux"></category><category term="Vmware"></category></entry><entry><title>重置 Google Apps 账号密码</title><link href="http://lusir.me/reset-gapps-account.html" rel="alternate"></link><updated>2014-11-28T20:24:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-11-28:reset-gapps-account.html</id><summary type="html">&lt;p&gt;近日整理浏览器书签的时候发现一个 Google Apps 管理员控制台的登录地址，打开之后却显示无法登录，账号密码也忘得一干二净了。观察地址栏记起来是早前用 &lt;code&gt;.tk&lt;/code&gt; 域名申请的 Google Apps 教育版（现已无法免费申请 Google Apps，教育版貌似难度也加大了）。一直没怎么管的 &lt;code&gt;.tk&lt;/code&gt; 域名没想到几年了还没被收回（另一个经常折腾的被回收了），Google 也没给注销账户，只能说，运气不错。
-&lt;/p&gt;
-&lt;p&gt;按照网友提示，访问账号密码重设链接 &lt;code&gt;https://www.google.com/a/cpanel/your_domain.com/VerifyAdminAccountPasswordReset&lt;/code&gt;（注：
-将以上链接中的 &lt;code&gt;your_domain.com&lt;/code&gt; 换成自己对应的域名），根据提示输入收信邮箱，然后修改域名 &lt;code&gt;CName&lt;/code&gt; 到指定地址即可重新认证域名所有权。&lt;/p&gt;
-&lt;p&gt;不知道这个 Google Apps 提供的邮箱可不可以作为 &lt;code&gt;edu&lt;/code&gt; 邮箱使用。。。&lt;/p&gt;
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.dingding.biz/archives/387" title="忘记了google app的用户名和密码~"&gt;忘记了google app的用户名和密码~&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Google"></category></entry></feed>
+&lt;p&gt;待续……&lt;/p&gt;</summary><category term="CDLinux"></category><category term="Vmware"></category></entry></feed>
