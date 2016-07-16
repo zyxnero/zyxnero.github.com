@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 14 Jul 2016 22:08:00 +0800</lastBuildDate><item><title>用上了 You-Get</title><link>http://lusir.me/try-you-get.html</link><description>&lt;p&gt;在优酷上订阅了几个视频节目，像《罗辑思维》、《暴走大事件》。之前一直在用硕鼠下载观看，不过前阵子硕鼠好像停止服务了，遂用上了开源跨平台的 &lt;a href="https://github.com/soimort/you-get/" title="You-Get"&gt;You-Get&lt;/a&gt;。之前在 Lubuntu 下使用过，绝对的神器！
-&lt;/p&gt;
-&lt;p&gt;从官网下载压缩包，解压即用。需要注意的是如果命令行里面提示“无法定位程序输入点ucrtbase.terminate”这个错误，那么去下载个&lt;code&gt;Microsoft Visual C++ 2015 Redistributable&lt;/code&gt;，安装以后就不会再报错了。如果命令行程序用的是 &lt;code&gt;Cmder&lt;/code&gt;，那么看起来就是这样的。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/you-get.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/you-get.png" alt="用上了 You-Get" /&gt;
-&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 14 Jul 2016 22:08:00 +0800</pubDate><guid>tag:lusir.me,2016-07-14:try-you-get.html</guid><category>You-Get</category></item><item><title>为 TortoiseGit 设置代理</title><link>http://lusir.me/applying-tortoisegit-with-proxy.html</link><description>&lt;p&gt;又一篇流水账。昨天“中菲南海仲裁案”出结果，今天就发现博客内容不能更新到 Github 了。老毛病，为了提交更新，只能为 &lt;code&gt;TortoiseGit&lt;/code&gt; “另辟蹊径”了。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 16 Jul 2016 13:45:00 +0800</lastBuildDate><item><title>为 TortoiseGit 设置代理</title><link>http://lusir.me/applying-tortoisegit-with-proxy.html</link><description>&lt;p&gt;又一篇流水账。昨天“中菲南海仲裁案”出结果，今天就发现博客内容不能更新到 Github 了。老毛病，为了提交更新，只能为 &lt;code&gt;TortoiseGit&lt;/code&gt; “另辟蹊径”了。
 &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;打开“袋里”并启用系统袋里；&lt;/li&gt;
@@ -23,7 +18,12 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;再次推送，成功提交！！！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 13 Jul 2016 20:20:00 +0800</pubDate><guid>tag:lusir.me,2016-07-13:applying-tortoisegit-with-proxy.html</guid><category>Git</category></item><item><title>升级到 Sublime Text 3</title><link>http://lusir.me/get-to-sublime3.html</link><description>&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
+&lt;p&gt;再次推送，成功提交！！！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 16 Jul 2016 13:45:00 +0800</pubDate><guid>tag:lusir.me,2016-07-16:applying-tortoisegit-with-proxy.html</guid><category>Git</category></item><item><title>用上了 You-Get</title><link>http://lusir.me/try-you-get.html</link><description>&lt;p&gt;在优酷上订阅了几个视频节目，像《罗辑思维》、《暴走大事件》。之前一直在用硕鼠下载观看，不过前阵子硕鼠好像停止服务了，遂用上了开源跨平台的 &lt;a href="https://github.com/soimort/you-get/" title="You-Get"&gt;You-Get&lt;/a&gt;。之前在 Lubuntu 下使用过，绝对的神器！
+&lt;/p&gt;
+&lt;p&gt;从官网下载压缩包，解压即用。需要注意的是如果命令行里面提示“无法定位程序输入点ucrtbase.terminate”这个错误，那么去下载个&lt;code&gt;Microsoft Visual C++ 2015 Redistributable&lt;/code&gt;，安装以后就不会再报错了。如果命令行程序用的是 &lt;code&gt;Cmder&lt;/code&gt;，那么看起来就是这样的。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/you-get.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/you-get.png" alt="用上了 You-Get" /&gt;
+&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 14 Jul 2016 22:08:00 +0800</pubDate><guid>tag:lusir.me,2016-07-14:try-you-get.html</guid><category>You-Get</category></item><item><title>升级到 Sublime Text 3</title><link>http://lusir.me/get-to-sublime3.html</link><description>&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
 &lt;/p&gt;
 &lt;h3 id="e655a410ff21cd07e7a0150491e04371"&gt;安装&lt;/h3&gt;
 &lt;ol&gt;
