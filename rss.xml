@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 16 Jul 2016 13:45:00 +0800</lastBuildDate><item><title>为 TortoiseGit 设置代理</title><link>http://lusir.me/applying-tortoisegit-with-proxy.html</link><description>&lt;p&gt;又一篇流水账。昨天“中菲南海仲裁案”出结果，今天就发现博客内容不能更新到 Github 了。老毛病，为了提交更新，只能为 &lt;code&gt;TortoiseGit&lt;/code&gt; “另辟蹊径”了。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 11 Sep 2016 12:33:00 +0800</lastBuildDate><item><title>批量下载喜马拉雅节目</title><link>http://lusir.me/download-ximalaya-shows-in-batch.html</link><description>&lt;p&gt;最近两年多听喜马拉雅比较多，主要是上下班在路上花费时间太长，听听节目还能涨点姿势。
+&lt;/p&gt;
+&lt;p&gt;早期喜马拉雅的爪机 APP 没什么广告，我也一直是在用爪机客户端；现在每个音频前面都会有一段音频广告，感觉很不好，所以干脆就把节目下载下来听。下载方式采用过 IDM、音乐间谍，前者无法批量，后者不太稳定。&lt;/p&gt;
+&lt;p&gt;不久前在 &lt;a href="http://fabing.blog.51cto.com/" title="weifabing 的 Blog"&gt;weifabing'Blog&lt;/a&gt; 上看到他的解决办法，于是尝试了一下，果然是很好用啊。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.album_soundlist ul li&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;each&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;sound_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;sound_id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;json_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://www.ximalaya.com/tracks/&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;sound_id&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;.json&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;json_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;save_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;nickname&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;-&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;.m4a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;down_cmd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;wget &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;play_path_64&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot; -O &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;save_name&lt;/span&gt;
+        &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;down_cmd&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;})&lt;/span&gt;
+&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;以上是他的代码。打开相应的专辑页，在浏览器 console 中粘贴该段命令就能返回相应下载链接。他用的 Linux 系统，直接在终端里面粘贴命令就能下载了。我用的 Windows，所以下载安装了个 GNU 的 wget，配合 cmder，也还是比较方便的。下载完成后批量改个名，改下媒体文件标签，使用本地播放器简直是完美（虽然音频比特率只有 64k）。&lt;/p&gt;
+&lt;p&gt;最后我也感谢一下喜马拉雅平台，祝越办越好……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 11 Sep 2016 12:33:00 +0800</pubDate><guid>tag:lusir.me,2016-09-11:download-ximalaya-shows-in-batch.html</guid><category>wget</category><category>cmder</category><category>喜马拉雅</category></item><item><title>为 TortoiseGit 设置代理</title><link>http://lusir.me/applying-tortoisegit-with-proxy.html</link><description>&lt;p&gt;又一篇流水账。昨天“中菲南海仲裁案”出结果，今天就发现博客内容不能更新到 Github 了。老毛病，为了提交更新，只能为 &lt;code&gt;TortoiseGit&lt;/code&gt; “另辟蹊径”了。
 &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;打开“袋里”并启用系统袋里；&lt;/li&gt;
@@ -635,34 +652,4 @@ tar xvJf /path/name.tar.lzma
 &lt;p&gt;查看起始页源代码得知起始页文件路径为 &lt;code&gt;omni.ja&lt;/code&gt; 中的 &lt;code&gt;\omni\chrome\toolkit\content\global\logopage.xhtml&lt;/code&gt;，其中 &lt;code&gt;omni.ja&lt;/code&gt; 位于 PaleMoon 安装路径根目录且可用 WinRar 打开并解压。修改 &lt;code&gt;logopage.xhtml&lt;/code&gt; 为“空白”文件即可，如下图。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://dn-nero.qbox.me/palemoon-tab-modify-2.png" title="修改起始页" data-fancybox-group="gallery"&gt;
     &lt;img class="aligncenter" src="http://dn-nero.qbox.me/palemoon-tab-modify-2.png" alt="修改起始页" /&gt;
-&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 30 Nov 2014 17:35:00 +0800</pubDate><guid>tag:lusir.me,2014-11-30:palemoon-tab-modify.html</guid><category>PaleMoon</category><category>Firefox</category></item><item><title>RTL8187 CW 小记</title><link>http://lusir.me/minidwep-cw-record.html</link><description>&lt;p&gt;搬“家”之后就得 CW 以解燃眉之急。我用的是傻瓜工具 &lt;code&gt;VMware + CDLinux + minidwep&lt;/code&gt;。
-&lt;/p&gt;
-&lt;h3 id="85bcb58bc46753c97220abbe5ff00a79"&gt;VMware 提示 USB 设备正在使用中&lt;/h3&gt;
-&lt;p&gt;我用的是绿色版的 &lt;code&gt;VMware Workstation 8&lt;/code&gt;，所以出现这个提示的时候我的第一反应是 VMware 的 USB 服务没有启动。事实是 &lt;code&gt;VMware Workstation 8&lt;/code&gt; 不支持 USB3.0。根据电脑现有的情况（只有一个 USB2.0 接口）我选择了升级 VMware 到 10.0.3。&lt;/p&gt;
-&lt;h3 id="693031d990b3aa4d643c9c45b7b05bd8"&gt;保存 minidwep 进度&lt;/h3&gt;
-&lt;p&gt;跑 pin 也是要有经验的，pin 排序合理了能省不少时间。我是个外码，所以需要的时间比较长。CDLinux 太过小巧，有必要进行进度保存。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;记住排序码；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;到 &lt;code&gt;/tmp/minidwep&lt;/code&gt; 目录下打开需要保存进度的 mac 地址对应的 &lt;code&gt;.wpc&lt;/code&gt; 文件，记下第一行数字；&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;同上，恢复进度为其逆向过程：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;使用 &lt;code&gt;minidwep&lt;/code&gt; 扫描并选中需要恢复进度的信号；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;输入之前保存的排序码；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;到 &lt;code&gt;/tmp/minidwep&lt;/code&gt; 目录下打开需要恢复进度的 mac 地址对应的 &lt;code&gt;.wpc&lt;/code&gt; 文件，输入上次记录的第一行数字；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;点击 &lt;code&gt;Reaver&lt;/code&gt; 接着 pin。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;PS：如果通过某种算法已经能够确定对方的 pin 码，则通过修改  &lt;code&gt;/tmp/minidwep&lt;/code&gt; 目录下的对应的 &lt;code&gt;.wpc&lt;/code&gt; 文件中的前 3 行数值就能直接定位到 pin 码。第一行数值与 pin 码的前 4 位关联（故最大修改为 4 位数）；第二行数值与 pin 码后 4 位中的前 3 位关联（故最大修改为 3 位数）；第三行数值与 pin 码的最后一位（校验位）关联，故为 1 位数。假定某 pin 码为 35108146，pin 排序为 0123456789，则将对应的 &lt;code&gt;.wpc&lt;/code&gt; 文件中的前 3 行数值分别修改为 &lt;code&gt;3510&lt;/code&gt;，&lt;code&gt;814&lt;/code&gt;，&lt;code&gt;6&lt;/code&gt; 即可直接定位。&lt;/p&gt;
-&lt;p&gt;待续……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 29 Nov 2014 17:25:00 +0800</pubDate><guid>tag:lusir.me,2014-11-29:minidwep-cw-record.html</guid><category>CDLinux</category><category>Vmware</category></item></channel></rss>
+&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 30 Nov 2014 17:35:00 +0800</pubDate><guid>tag:lusir.me,2014-11-30:palemoon-tab-modify.html</guid><category>PaleMoon</category><category>Firefox</category></item></channel></rss>
