@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2016-09-11T12:33:00+08:00</updated><entry><title>批量下载喜马拉雅节目</title><link href="http://lusir.me/download-ximalaya-shows-in-batch.html" rel="alternate"></link><updated>2016-09-11T12:33:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-11:download-ximalaya-shows-in-batch.html</id><summary type="html">&lt;p&gt;最近两年多听喜马拉雅比较多，主要是上下班在路上花费时间太长，听听节目还能涨点姿势。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2016-09-11T21:24:00+08:00</updated><entry><title>设置 cmder 默认目录</title><link href="http://lusir.me/set-default-dir-of-cmder.html" rel="alternate"></link><updated>2016-09-11T21:24:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-11:set-default-dir-of-cmder.html</id><summary type="html">&lt;p&gt;目前主要用 cmder 来下载 youku 视频和 ximalaya 音频。方便起见，我直接把 cmder 开启后的默认目录设置为所需的下载目录了。
+&lt;/p&gt;
+&lt;p&gt;设置其实也很容易，找到 cmder 安装目录，在其 config 目录下有个 user-startup.cmd 文件，cmder 启动时会自动执行该文件中的命令，每次打开都会。所以只在该文件中增加一句切换目录的命令即可。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;:: use this file to run your own startup commands 
+:: use @ in front of the command to prevent printing the command
+
+::cd to E when startup
+@e:
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面我切换目录到了 E 盘。为了让该命令不显示，在 &lt;code&gt;E:&lt;/code&gt; 的前面加了个 &lt;code&gt;@&lt;/code&gt;。&lt;/p&gt;</summary><category term="cmder"></category></entry><entry><title>批量下载喜马拉雅节目</title><link href="http://lusir.me/download-ximalaya-shows-in-batch.html" rel="alternate"></link><updated>2016-09-11T12:33:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-11:download-ximalaya-shows-in-batch.html</id><summary type="html">&lt;p&gt;最近两年多听喜马拉雅比较多，主要是上下班在路上花费时间太长，听听节目还能涨点姿势。
 &lt;/p&gt;
 &lt;p&gt;早期喜马拉雅的爪机 APP 没什么广告，我也一直是在用爪机客户端；现在每个音频前面都会有一段音频广告，感觉很不好，所以干脆就把节目下载下来听。下载方式采用过 IDM、音乐间谍，前者无法批量，后者不太稳定。&lt;/p&gt;
 &lt;p&gt;不久前在 &lt;a href="http://fabing.blog.51cto.com/" title="weifabing 的 Blog"&gt;weifabing'Blog&lt;/a&gt; 上看到他的解决办法，于是尝试了一下，果然是很好用啊。&lt;/p&gt;
@@ -641,15 +652,4 @@ tar xvJf /path/name.tar.lzma
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="hermit-list"&gt;&lt;/div&gt;
-&lt;/div&gt;</summary><category term="ESET Smart Security"></category></entry><entry><title>PaleMoon 修改起始页</title><link href="http://lusir.me/palemoon-tab-modify.html" rel="alternate"></link><updated>2014-11-30T17:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-11-30:palemoon-tab-modify.html</id><summary type="html">&lt;p&gt;不记得具体开始使用 PaleMoon 的时间了，只记得说是 Firefox 的优化版，其实用起来也没感觉出太大的差别。不过最近一次更新 PaleMoon 后起始页和新标签页的内容都变成了 PaleMoon 的 logo。本人还是习惯将两者都设置成 &lt;code&gt;about:blank&lt;/code&gt;。
-&lt;/p&gt;
-&lt;h3 id="307371c5a920711c40deedb9542fea6d"&gt;修改新标签页地址为 about:blank&lt;/h3&gt;
-&lt;p&gt;在地址栏输入 &lt;code&gt;about:config&lt;/code&gt;，在搜索栏中输入 &lt;code&gt;newtab&lt;/code&gt;，如图，将其修改为 &lt;code&gt;about:blank&lt;/code&gt; 即可。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/palemoon-tab-modify-1.png" title="修改新标签页地址" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/palemoon-tab-modify-1.png" alt="修改新标签页地址" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="f289ed1aa39af564b24ec84b72bc2e30"&gt;修改起始页地址为 about:blank&lt;/h3&gt;
-&lt;p&gt;查看起始页源代码得知起始页文件路径为 &lt;code&gt;omni.ja&lt;/code&gt; 中的 &lt;code&gt;\omni\chrome\toolkit\content\global\logopage.xhtml&lt;/code&gt;，其中 &lt;code&gt;omni.ja&lt;/code&gt; 位于 PaleMoon 安装路径根目录且可用 WinRar 打开并解压。修改 &lt;code&gt;logopage.xhtml&lt;/code&gt; 为“空白”文件即可，如下图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/palemoon-tab-modify-2.png" title="修改起始页" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/palemoon-tab-modify-2.png" alt="修改起始页" /&gt;
-&lt;/a&gt;&lt;/p&gt;</summary><category term="PaleMoon"></category><category term="Firefox"></category></entry></feed>
+&lt;/div&gt;</summary><category term="ESET Smart Security"></category></entry></feed>
