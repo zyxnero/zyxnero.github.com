@@ -11,10 +11,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="Win7 桌面如何只显示图片文件缩略图 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="PCCAD2010 在 Win7×64 中的安装与设置 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>Win7 桌面如何只显示图片文件缩略图 - 擼sirの避風港</title>
+<title>PCCAD2010 在 Win7×64 中的安装与设置 - 擼sirの避風港</title>
 <link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
@@ -33,7 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
-<link rel="canonical" href="http://lusir.me/just-display-win7-pic-thumbnail.html" />
+<link rel="canonical" href="http://lusir.me/installation-and-setting-of-pccad.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="http://lusir.me/theme/js/html5shiv.js"></script>
@@ -90,51 +90,48 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 		
-<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">Win7 桌面如何只显示图片文件缩略图</h1></div>
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">PCCAD2010 在 Win7×64 中的安装与设置</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>Win7 默认开启桌面缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，以下三步可开启图片文件的桌面缩略图而不显示其余类型的缩略图。
+<p>在 Win7×64 中安装 PCCAD2010 是一件麻烦事，好记性不如烂笔头，为了下次少走弯路，还是记一下吧。
 </p>
-<h3 id="2ddccf93aab2d7057bfc87a6a469b7db">阉割掉 pdf、ppt、视频文件的缩略图功能。</h3>
-<p>具体操作：进注册表，分别找到需要修改的键值，将其 <code>shellex</code> 键给删掉。注册表文件内容如下
-<pre>
-Windows Registry Editor Version 5.00
-[-HKEY_CLASSES_ROOT.avi\ShellEx]
-[-HKEY_CLASSES_ROOT.asf\ShellEx]
-[-HKEY_CLASSES_ROOT.wmv\ShellEx]
-[-HKEY_CLASSES_ROOT.rm\ShellEx]
-[-HKEY_CLASSES_ROOT.rmvb\ShellEx]
-[-HKEY_CLASSES_ROOT.mkv\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp\ShellEx]
-[-HKEY_CLASSES_ROOT.3g2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
-[-HKEY_CLASSES_ROOT.f4v\ShellEx]
-[-HKEY_CLASSES_ROOT.flv\ShellEx]
-[-HKEY_CLASSES_ROOT.m4v\ShellEx]
-[-HKEY_CLASSES_ROOT.mov\ShellEx]
-[-HKEY_CLASSES_ROOT.mp4\ShellEx]
-[-HKEY_CLASSES_ROOT.mp4v\ShellEx]
-[-HKEY_CLASSES_ROOT.mpg\ShellEx]
-[-HKEY_CLASSES_ROOT.mpeg\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp\ShellEx]
-[-HKEY_CLASSES_ROOT.3g2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
-[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
-[-HKEY_CLASSES_ROOT.f4v\ShellEx]
-[-HKEY_CLASSES_ROOT.flv\ShellEx]
-[-HKEY_CLASSES_ROOT.pdf\ShellEx]
-[-HKEY_CLASSES_ROOT.pptx\ShellEx]
-[-HKEY_CLASSES_ROOT\AcroExch.Document.7\Shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.mpp\shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.msg\shellex]
-[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
-</pre></p>
-<h3 id="34d776cf9e3a1907877d8eb0a708f191">关掉缩略图的数据库</h3>
-<p>进组策略：Win + R → gpedit.msc → 用户配置 → 管理模板 → Windows 组件 → Windows 资源管理器，双击右边的“关闭隐藏的 thumbs.db 文件中的缩略图片缓存” → 选择“已启用”。</p>
-<h3 id="d1d4bbf2a67893815f376083ba63d7b6">删除之前已经存档的缩略图</h3>
-<p>即删除缩略图的数据库 thumbs.db 文件，它们都在系统盘的 <code>Users\（当前用户）\AppData\Local\Microsoft\Windows\Explorer</code> 下，用 Diskgenius 或在另一系统下将其删除，之后重启。开启缩略图功能，这次显示缩略图的就只有图片文件了。</p>
+<h3 id="fca40e38c5d7651dea6f4157b569be53">准备材料</h3>
+<ol>
+<li>AutoCAD2010×32、AutoCAD2010×64 与 PCCAD2010 安装包；</li>
+<li>修改 MSI 安装包的工具：ORCA 或 ScriptLogic MSIStudio。</li>
+</ol>
+<h3 id="0cedb67ec7ec9799e630f30381db83f4">修改 AutoCAD2010×32 安装包</h3>
+<ol>
+<li>用 ORCA 打开位于目录 <code>\x86\acad\</code> 下的 <code>acad.msi</code>，点击左侧表栏中的 <code>InstallExecuteSequence</code> 项，并在右侧找到 <code>CheckFor64bitOS</code> 和 <code>LaunchConditions</code>，删除之；</li>
+<li>用 ORCA 打开位于目录 <code>\x86\acad\zh-CN\</code> 下的 <code>AcadLP.msi</code>，点击左侧表栏中的 <code>InstallExecuteSequence</code> 项，并在右侧找到 <code>LaunchConditions</code>，删除之；</li>
+<li>用 ORCA 打开位于目录 <code>\x86\acad\en-us\</code> 下的 <code>AcadLP.msi</code>，点击左侧表栏中的 <code>InstallExecuteSequence</code> 项，并在右侧找到 <code>LaunchConditions</code>，删除之；</li>
+<li>打开根目录下的 <code>setup.ini</code>，将第 10 行的 <code>x64_IMAGE_PATH=x64</code> 改为 <code>x64_IMAGE_PATH=x86</code>，将第 344 行的 <code>PLATFORM=NATIVE</code> 改为 <code>PLATFORM=ALL</code>，删除第 345 行中的 <code>OS</code> 及其后的 <code>;</code>。</li>
+</ol>
+<h3 id="675e9a5f699ef7f53edd8a6887158cdf">安装 AutoCAD2010</h3>
+<ol>
+<li>安装 <code>AutoCAD2010×64</code>，安装完成后卸载之，最好重启一次；</li>
+<li>安装前步骤已经修改过的 <code>AutoCAD2010×32</code>，安装成功后激活之；</li>
+<li>安装 <code>PCCAD</code> 并激活之。</li>
+</ol>
+<h3 id="09ded52d159061f26b12a095d10dad72">自定义命令快捷键</h3>
+<p>依次点击 <code>工具</code> → <code>自定义</code> → <code>编辑程序参数</code>，或直接打开 <code>PCCAD2010</code> 根目录下的 <code>acad.pgp</code> 文件，并在文件最后添加需要自定义的快捷键，保存后使用 <code>reinit</code> 命令刷新 <code>acad.pgp</code> 即可生效，如下图：</p>
+<p><a href="http://dn-nero.qbox.me/cad-hotkey-setting-2.jpg" title="自定义 CAD 命令快捷键" data-fancybox-group="gallery">
+    <img src="http://dn-nero.qbox.me/cad-hotkey-setting-2.jpg" alt="自定义 CAD 命令快捷键" />
+</a></p>
+<h3 id="5861fd52feadb27efb78eb002421bfeb">自定义键盘快捷键</h3>
+<p>以设置 <kbd>Ctrl</kbd>+<kbd>W</kbd> 作为关闭当前图纸为例，依次点击 <code>工具</code> → <code>自定义</code> → <code>界面</code>，在命令列表中搜索 <code>关闭</code>，将其拖入 <code>工作空间</code> 下的 <code>键盘快捷键</code>，于窗口右侧设置快捷键后确定即可，如下图：</p>
+<p><a href="http://dn-nero.qbox.me/cad-hotkey-setting-1.jpg" title="自定义 CAD 键盘快捷键" data-fancybox-group="gallery">
+    <img src="http://dn-nero.qbox.me/cad-hotkey-setting-1.jpg" alt="自定义 CAD 键盘快捷键" />
+</a></p>
+<h3 id="e2555fe37ace93dac001d4291029fdbd">修改极限偏差字体高度</h3>
+<p>PCCAD 默认的极限偏差字体大小与公称尺寸看起来不太协调，将其字体高度比例修改为 <code>0.44</code> 看起来比较合适。依次点击 <code>标注</code> → <code>标注样式</code> → <code>修改</code> → <code>公差</code>，在 <code>方式</code> 中选择 <code>极限偏差</code>，设置高度比例为 <code>0.44</code>，接着将 <code>方式</code> 改为 <code>无</code> 即可，如下图：</p>
+<p><a href="http://dn-nero.qbox.me/pccad-tolerance-1.jpg" title="修改极限偏差字体高度-1" data-fancybox-group="gallery">
+    <img src="http://dn-nero.qbox.me/pccad-tolerance-1.jpg" alt="修改极限偏差字体高度-1" />
+</a></p>
+<p><a href="http://dn-nero.qbox.me/pccad-tolerance-2.jpg" title="修改极限偏差字体高度-2" data-fancybox-group="gallery">
+    <img src="http://dn-nero.qbox.me/pccad-tolerance-2.jpg" alt="修改极限偏差字体高度-2" />
+</a></p>
+<p>以上。。。</p>
 </div>
     
 <div id="content-comments">
@@ -160,11 +157,11 @@ var duoshuoQuery = {short_name:"lusir"};
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2012-02-07 13:40</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2016-09-14 17:47</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/win7.html">Win7</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/autocad.html">AutoCAD</a></div>
  
 </div>
 
@@ -173,27 +170,26 @@ var duoshuoQuery = {short_name:"lusir"};
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">Win7 桌面如何只显示图片文件缩略图</a></li>
-    <li><a href='#2ddccf93aab2d7057bfc87a6a469b7db'>阉割掉 pdf、ppt、视频文件的缩略图功能。</a></li><li><a href='#34d776cf9e3a1907877d8eb0a708f191'>关掉缩略图的数据库</a></li><li><a href='#d1d4bbf2a67893815f376083ba63d7b6'>删除之前已经存档的缩略图</a></li>
+<li><a href="#content-heading">PCCAD2010 在 Win7×64 中的安装与设置</a></li>
+    <li><a href='#fca40e38c5d7651dea6f4157b569be53'>准备材料</a></li><li><a href='#0cedb67ec7ec9799e630f30381db83f4'>修改 AutoCAD2010×32 安装包</a></li><li><a href='#675e9a5f699ef7f53edd8a6887158cdf'>安装 AutoCAD2010</a></li><li><a href='#09ded52d159061f26b12a095d10dad72'>自定义命令快捷键</a></li><li><a href='#5861fd52feadb27efb78eb002421bfeb'>自定义键盘快捷键</a></li><li><a href='#e2555fe37ace93dac001d4291029fdbd'>修改极限偏差字体高度</a></li>
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;Win7 桌面如何只显示图片文件缩略图
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;PCCAD2010 在 Win7×64 中的安装与设置
 </div>
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="http://lusir.me/online-installer-download-path.html">上一篇</a></li>
-<li class="next"><a href="http://lusir.me/save-solidworks-custom-settings.html">下一篇</a></li>
+<li class="prev"><a href="http://lusir.me/set-default-dir-of-cmder.html">上一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="http://lusir.me/win7-menuext-fix.html">去除 Win7 右键“使用 Windows Media Player 播放”项</a></li>
+<li><a href="http://lusir.me/autocad-acc.html">优化 AutoCAD 启动运行速度</a></li>
 </ul>
  
 </div></div>

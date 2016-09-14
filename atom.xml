@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2016-09-11T21:24:00+08:00</updated><entry><title>设置 cmder 默认目录</title><link href="http://lusir.me/set-default-dir-of-cmder.html" rel="alternate"></link><updated>2016-09-11T21:24:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-11:set-default-dir-of-cmder.html</id><summary type="html">&lt;p&gt;目前主要用 cmder 来下载 youku 视频和 ximalaya 音频。方便起见，我直接把 cmder 开启后的默认目录设置为所需的下载目录了。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2016-09-14T17:47:00+08:00</updated><entry><title>PCCAD2010 在 Win7×64 中的安装与设置</title><link href="http://lusir.me/installation-and-setting-of-pccad.html" rel="alternate"></link><updated>2016-09-14T17:47:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-14:installation-and-setting-of-pccad.html</id><summary type="html">&lt;p&gt;在 Win7×64 中安装 PCCAD2010 是一件麻烦事，好记性不如烂笔头，为了下次少走弯路，还是记一下吧。
+&lt;/p&gt;
+&lt;h3 id="fca40e38c5d7651dea6f4157b569be53"&gt;准备材料&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;AutoCAD2010×32、AutoCAD2010×64 与 PCCAD2010 安装包；&lt;/li&gt;
+&lt;li&gt;修改 MSI 安装包的工具：ORCA 或 ScriptLogic MSIStudio。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="0cedb67ec7ec9799e630f30381db83f4"&gt;修改 AutoCAD2010×32 安装包&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;用 ORCA 打开位于目录 &lt;code&gt;\x86\acad\&lt;/code&gt; 下的 &lt;code&gt;acad.msi&lt;/code&gt;，点击左侧表栏中的 &lt;code&gt;InstallExecuteSequence&lt;/code&gt; 项，并在右侧找到 &lt;code&gt;CheckFor64bitOS&lt;/code&gt; 和 &lt;code&gt;LaunchConditions&lt;/code&gt;，删除之；&lt;/li&gt;
+&lt;li&gt;用 ORCA 打开位于目录 &lt;code&gt;\x86\acad\zh-CN\&lt;/code&gt; 下的 &lt;code&gt;AcadLP.msi&lt;/code&gt;，点击左侧表栏中的 &lt;code&gt;InstallExecuteSequence&lt;/code&gt; 项，并在右侧找到 &lt;code&gt;LaunchConditions&lt;/code&gt;，删除之；&lt;/li&gt;
+&lt;li&gt;用 ORCA 打开位于目录 &lt;code&gt;\x86\acad\en-us\&lt;/code&gt; 下的 &lt;code&gt;AcadLP.msi&lt;/code&gt;，点击左侧表栏中的 &lt;code&gt;InstallExecuteSequence&lt;/code&gt; 项，并在右侧找到 &lt;code&gt;LaunchConditions&lt;/code&gt;，删除之；&lt;/li&gt;
+&lt;li&gt;打开根目录下的 &lt;code&gt;setup.ini&lt;/code&gt;，将第 10 行的 &lt;code&gt;x64_IMAGE_PATH=x64&lt;/code&gt; 改为 &lt;code&gt;x64_IMAGE_PATH=x86&lt;/code&gt;，将第 344 行的 &lt;code&gt;PLATFORM=NATIVE&lt;/code&gt; 改为 &lt;code&gt;PLATFORM=ALL&lt;/code&gt;，删除第 345 行中的 &lt;code&gt;OS&lt;/code&gt; 及其后的 &lt;code&gt;;&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="675e9a5f699ef7f53edd8a6887158cdf"&gt;安装 AutoCAD2010&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 &lt;code&gt;AutoCAD2010×64&lt;/code&gt;，安装完成后卸载之，最好重启一次；&lt;/li&gt;
+&lt;li&gt;安装前步骤已经修改过的 &lt;code&gt;AutoCAD2010×32&lt;/code&gt;，安装成功后激活之；&lt;/li&gt;
+&lt;li&gt;安装 &lt;code&gt;PCCAD&lt;/code&gt; 并激活之。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="09ded52d159061f26b12a095d10dad72"&gt;自定义命令快捷键&lt;/h3&gt;
+&lt;p&gt;依次点击 &lt;code&gt;工具&lt;/code&gt; → &lt;code&gt;自定义&lt;/code&gt; → &lt;code&gt;编辑程序参数&lt;/code&gt;，或直接打开 &lt;code&gt;PCCAD2010&lt;/code&gt; 根目录下的 &lt;code&gt;acad.pgp&lt;/code&gt; 文件，并在文件最后添加需要自定义的快捷键，保存后使用 &lt;code&gt;reinit&lt;/code&gt; 命令刷新 &lt;code&gt;acad.pgp&lt;/code&gt; 即可生效，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cad-hotkey-setting-2.jpg" title="自定义 CAD 命令快捷键" data-fancybox-group="gallery"&gt;
+    &lt;img src="http://dn-nero.qbox.me/cad-hotkey-setting-2.jpg" alt="自定义 CAD 命令快捷键" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="5861fd52feadb27efb78eb002421bfeb"&gt;自定义键盘快捷键&lt;/h3&gt;
+&lt;p&gt;以设置 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;W&lt;/kbd&gt; 作为关闭当前图纸为例，依次点击 &lt;code&gt;工具&lt;/code&gt; → &lt;code&gt;自定义&lt;/code&gt; → &lt;code&gt;界面&lt;/code&gt;，在命令列表中搜索 &lt;code&gt;关闭&lt;/code&gt;，将其拖入 &lt;code&gt;工作空间&lt;/code&gt; 下的 &lt;code&gt;键盘快捷键&lt;/code&gt;，于窗口右侧设置快捷键后确定即可，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cad-hotkey-setting-1.jpg" title="自定义 CAD 键盘快捷键" data-fancybox-group="gallery"&gt;
+    &lt;img src="http://dn-nero.qbox.me/cad-hotkey-setting-1.jpg" alt="自定义 CAD 键盘快捷键" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="e2555fe37ace93dac001d4291029fdbd"&gt;修改极限偏差字体高度&lt;/h3&gt;
+&lt;p&gt;PCCAD 默认的极限偏差字体大小与公称尺寸看起来不太协调，将其字体高度比例修改为 &lt;code&gt;0.44&lt;/code&gt; 看起来比较合适。依次点击 &lt;code&gt;标注&lt;/code&gt; → &lt;code&gt;标注样式&lt;/code&gt; → &lt;code&gt;修改&lt;/code&gt; → &lt;code&gt;公差&lt;/code&gt;，在 &lt;code&gt;方式&lt;/code&gt; 中选择 &lt;code&gt;极限偏差&lt;/code&gt;，设置高度比例为 &lt;code&gt;0.44&lt;/code&gt;，接着将 &lt;code&gt;方式&lt;/code&gt; 改为 &lt;code&gt;无&lt;/code&gt; 即可，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/pccad-tolerance-1.jpg" title="修改极限偏差字体高度-1" data-fancybox-group="gallery"&gt;
+    &lt;img src="http://dn-nero.qbox.me/pccad-tolerance-1.jpg" alt="修改极限偏差字体高度-1" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/pccad-tolerance-2.jpg" title="修改极限偏差字体高度-2" data-fancybox-group="gallery"&gt;
+    &lt;img src="http://dn-nero.qbox.me/pccad-tolerance-2.jpg" alt="修改极限偏差字体高度-2" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以上。。。&lt;/p&gt;</summary><category term="AutoCAD"></category></entry><entry><title>设置 cmder 默认目录</title><link href="http://lusir.me/set-default-dir-of-cmder.html" rel="alternate"></link><updated>2016-09-11T21:24:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-11:set-default-dir-of-cmder.html</id><summary type="html">&lt;p&gt;目前主要用 cmder 来下载 youku 视频和 ximalaya 音频。方便起见，我直接把 cmder 开启后的默认目录设置为所需的下载目录了。
 &lt;/p&gt;
 &lt;p&gt;设置其实也很容易，找到 cmder 安装目录，在其 config 目录下有个 user-startup.cmd 文件，cmder 启动时会自动执行该文件中的命令，每次打开都会。所以只在该文件中增加一句切换目录的命令即可。&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;:: use this file to run your own startup commands 
@@ -595,61 +633,4 @@ tar xvJf /path/name.tar.lzma
 &lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://ihuan.me/1828.html" title="给你的网站添加支付宝即时到帐按钮"&gt;给你的网站添加支付宝即时到帐按钮&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Alipay"></category><category term="快捷支付"></category></entry><entry><title>ESET Smart Security 添加黑白名单</title><link href="http://lusir.me/ess-filter.html" rel="alternate"></link><updated>2014-12-01T20:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-12-01:ess-filter.html</id><summary type="html">&lt;p&gt;NOD32 系列的杀毒软件已经更新到了 8.0 版本了，不过我用的依然是老版本 ESET Smart Security 4。本篇记录一下使用 ESS 阻止、排除特定的站点及程序。
-&lt;/p&gt;
-&lt;h3 id="a6a74276e789bb3a546721ec6ac5c6fa"&gt;ESS 排除/阻止访问特定站点&lt;/h3&gt;
-&lt;p&gt;访问站点时，ESS 会分析站点信息，如果网页含有不良信息便禁止访问，这样很不错。但偶尔已知的安全站点被强制禁止访问也很伤脑筋。&lt;/p&gt;
-&lt;p&gt;解决方法：&lt;/p&gt;
-&lt;p&gt;调出 ESS 主界面，点击 &lt;kbd&gt;F5&lt;/kbd&gt;，会弹出如下界面，按照图上的顺序依次操作并输入要排除的站点地址，一路确定下去即可。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-5.jpg" title="ESS 排除特定站点" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-5.jpg" alt="ESS 排除特定站点" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;同理，在“9 月我不撸”活动期间，如果想强制性禁止访问 &lt;code&gt;The Pirate Bay&lt;/code&gt;，则按照下图顺序依次操作并输入要禁止访问的站点地址，一路确定下去即可。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-6.jpg" title="ESS 阻止访问特定站点" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-6.jpg" alt="ESS 阻止访问特定站点" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="9974cbc5ed263a56cb6765ffa5be1561"&gt;ESS 阻止程序联网&lt;/h3&gt;
-&lt;p&gt;现在的程序基本上都联网更新或联网校验，但有时不联网程序的运行状态可能更好，操作如下：&lt;/p&gt;
-&lt;p&gt;调出 ESS 主界面，点击 &lt;kbd&gt;F5&lt;/kbd&gt;，会弹出如下界面，按照图上的顺序依次点击，&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-7.jpg" title="ESS 阻止 CAD 联网（1）" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-7.jpg" alt="ESS 阻止 CAD 联网（1）" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-8.jpg" title="ESS 阻止 CAD 联网（2）" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-8.jpg" alt="ESS 阻止 CAD 联网（2）" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;点击&lt;code&gt;“新建”&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-1.jpg" title="ESS 阻止 CAD 联网（3）" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-1.jpg" alt="ESS 阻止 CAD 联网（3）" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-2.jpg" title="ESS 阻止 CAD 联网（4）" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-2.jpg" alt="ESS 阻止 CAD 联网（4）" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;若仅要阻止程序访问某个站点，可以 &lt;code&gt;ping&lt;/code&gt; 出该站点的地址，然后添加，如下：&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-3.jpg" title="ESS 阻止 CAD 联网（5）" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-3.jpg" alt="ESS 阻止 CAD 联网（5）" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-config-4.jpg" title="ESS 阻止 CAD 联网（6）" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/ess-config-4.jpg" alt="ESS 阻止 CAD 联网（6）" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;至此，设置完成。&lt;/p&gt;
-&lt;h3 id="438777008e750b99006606f949e73b5c"&gt;附：ESS 强制卸载&lt;/h3&gt;
-&lt;p&gt;下载&lt;a href="http://pan.baidu.com/s/1mibDOyk" title="ESET 强制卸载工具"&gt;强制卸载工具&lt;/a&gt;后重启进入安全模式，在安全模式中运行卸载工具并根据&lt;code&gt;命令提示符&lt;/code&gt;的步骤进行操作。&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;div class="hermit" xiami="songlist:1771862045" loop="1" auto="1"&gt;
-&lt;div class="hermit-box"&gt;
-&lt;div class="hermit-controls"&gt;
-&lt;div class="hermit-button"&gt;&lt;/div&gt;
-&lt;div class="hermit-detail"&gt;左键轻击列表播放或暂停&lt;/div&gt;
-&lt;div class="hermit-duration"&gt;&lt;/div&gt;
-&lt;div class="hermit-volume"&gt;&lt;/div&gt;
-&lt;div class="hermit-listbutton"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-prosess"&gt;
-&lt;div class="hermit-loaded"&gt;&lt;/div&gt;
-&lt;div class="hermit-prosess-bar"&gt;
-&lt;div class="hermit-prosess-after"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="hermit-list"&gt;&lt;/div&gt;
-&lt;/div&gt;</summary><category term="ESET Smart Security"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="Alipay"></category><category term="快捷支付"></category></entry></feed>
