@@ -11,10 +11,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="Linux 中的复制与打包命令 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="PaleMoon 的几项优化 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>Linux 中的复制与打包命令 - 擼sirの避風港</title>
+<title>PaleMoon 的几项优化 - 擼sirの避風港</title>
 <link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
@@ -33,7 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
-<link rel="canonical" href="http://lusir.me/cp-and-tar.html" />
+<link rel="canonical" href="http://lusir.me/several-optimization-of-palemoon.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="http://lusir.me/theme/js/html5shiv.js"></script>
@@ -90,68 +90,25 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 		
-<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">Linux 中的复制与打包命令</h1></div>
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">PaleMoon 的几项优化</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>最基本的 Linux 命令 <code>cp</code> 与 <code>tar</code>，粘贴至此以作备忘。
-</p>
-<h3 id="9c95319bf274672d6eae7eb97c3dfda5">cp</h3>
-<p><code>cp</code> 是常见的复制文件或目录的命令，是 copy 的缩写。譬如：</p>
-<p>复制文件</p>
-<div class="codehilite"><pre>cp /path/a /path/b
+<p>今天是中秋佳节，祝大家国庆快乐！！！</p>
+<p>2014 年记录过一篇 <a href="http://lusir.me/palemoon-tab-modify.html" title="PaleMoon 修改起始页">修改 PaleMoon 起始页</a> 的文章，本文接着记。</p>
+
+
+<h3 id="4f95ed363fe3f8d9ef17b4a1aca2fd91">禁用 urlclassifier3.sqlite</h3>
+<p><code>urlclassifier3.sqlite</code> 是防止钓鱼网站的数据库，体积较大。禁用方法：打开 <code>about:config</code>，将以下条目的值按右侧进行设置。</p>
+<div class="codehilite"><pre>browser.safebrowsing.enabled —— false
+browser.safebrowsing.malware.enabled —— false
+Browser.safebrowsing.remoteLookups —— false
+browser.safebrowsing.dataProvider —— -1
 </pre></div>
 
 
-<p>复制文件夹</p>
-<div class="codehilite"><pre>cp -r /path/dir-a /path/dir-b
-</pre></div>
-
-
-<p><code>cp</code> 的一些常见的参数：</p>
-<ul>
-<li>-a：相当于 -pd --preserve=all；</li>
-<li>-b：类似 --backup，但不接受任何参数；</li>
-<li>-d：若存在软链接档案，则复制链接文件的属性，而非文件本身；</li>
-<li>-f：意为 force，强制覆盖；</li>
-<li>-i：在覆盖相同档案时询问；</li>
-<li>-r：递归参数，一般用于复制目录。</li>
-</ul>
-<p>详情使用 <code>man cp</code> 来查看。</p>
-<h3 id="db5570bf61464b46e2bde31ed61a7dc6">tar</h3>
-<p><code>tar</code> 命令可以对档案进行打包备份操作。</p>
-<p>一些常见的参数：</p>
-<ul>
-<li>-c：create，建立一个 tar 包；</li>
-<li>-x：解开一个压缩包；</li>
-<li>-t：查看 tar 里的文件；</li>
-<li>-z：使用 gzip 来压缩；</li>
-<li>-j：使用 bzip2 来压缩；</li>
-<li>-J：若存在 xz lzip lzma，则可以直接打包成 xz lzip lzma；</li>
-<li>-v：列出打包进程；</li>
-<li>-f：tar 包名，-f 参数后需紧跟 tar 包名；</li>
-<li>-p：保留文件权限。</li>
-</ul>
-<p>常见的打包命令</p>
-<div class="codehilite"><pre>tar cvf /path/name.tar /path/name
-tar cvjf /path/name.tar.bz2 /path/name
-tar cvzf /path/name.tar.gz /path/name
-tar cvJf /path/name.tar.xz /path/name
-tar cvJf /path/name.tar.lzma /path/name
-</pre></div>
-
-
-<p>常见的解包命令</p>
-<div class="codehilite"><pre>tar xvf /path/name.tar
-tar xvjf /path/name.tar.bz2
-tar xvzf /path/name.tar.gz
-tar xvJf /path/name.tar.xz
-tar xvJf /path/name.tar.lzma
-</pre></div>
-
-
-<p>详细命令可以使用 <code>man tar</code> 来查看，需注意的是单纯 <code>tar</code> 仅打包不压缩。</p>
-<p><br>
-节选自<a href="http://havee.me/linux/2014-12/copy-backup-and-mirror-image-on-linux.html" title="Linux 上的复制、备份与镜像">《Linux 上的复制、备份与镜像》</a>。</p>
+<p>据说最后一条参数是关键，设置以后配置文件夹下的 <code>urlclassifier3.sqlite</code> 将彻底消失，不会再自动生成，但最好还是把这几条参数都设置一下。</p>
+<h3 id="6cd6f47e1bbb6c3302c29fec1b47ee85">禁用 addonsreconciler.json</h3>
+<p>该文件位于配置文件夹下的 <code>weave</code> 目录下，体积也较大，据说是因为国内网络质量问题导致多次同步失败而造成。禁用方法：取消同步后删除该文件。</p>
 </div>
     
 <div id="content-comments">
@@ -177,11 +134,11 @@ var duoshuoQuery = {short_name:"lusir"};
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2015-02-22 17:12</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2016-09-15 16:37</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/linux.html">Linux</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/palemoon.html">palemoon</a></div>
  
 </div>
 
@@ -190,27 +147,26 @@ var duoshuoQuery = {short_name:"lusir"};
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">Linux 中的复制与打包命令</a></li>
-    <li><a href='#9c95319bf274672d6eae7eb97c3dfda5'>cp</a></li><li><a href='#db5570bf61464b46e2bde31ed61a7dc6'>tar</a></li>
+<li><a href="#content-heading">PaleMoon 的几项优化</a></li>
+    <li><a href='#4f95ed363fe3f8d9ef17b4a1aca2fd91'>禁用 urlclassifier3.sqlite</a></li><li><a href='#6cd6f47e1bbb6c3302c29fec1b47ee85'>禁用 addonsreconciler.json</a></li>
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;Linux 中的复制与打包命令
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;PaleMoon 的几项优化
 </div>
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="http://lusir.me/merciless-bitches-and-actors.html">上一篇</a></li>
-<li class="next"><a href="http://lusir.me/modify-firefox-search-engine.html">下一篇</a></li>
+<li class="prev"><a href="http://lusir.me/installation-and-setting-of-pccad.html">上一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="http://lusir.me/rescue-linux-on-abusing-chmod.html">滥用“Chmod 777 -R /”后的补救措施</a></li>
+<li><a href="http://lusir.me/palemoon-tab-modify.html">PaleMoon 修改起始页</a></li>
 </ul>
  
 </div></div>

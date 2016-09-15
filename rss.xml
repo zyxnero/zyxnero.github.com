@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 14 Sep 2016 17:47:00 +0800</lastBuildDate><item><title>PCCAD2010 在 Win7×64 中的安装与设置</title><link>http://lusir.me/installation-and-setting-of-pccad.html</link><description>&lt;p&gt;在 Win7×64 中安装 PCCAD2010 是一件麻烦事，好记性不如烂笔头，为了下次少走弯路，还是记一下吧。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>從零開始…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 15 Sep 2016 16:37:00 +0800</lastBuildDate><item><title>PaleMoon 的几项优化</title><link>http://lusir.me/several-optimization-of-palemoon.html</link><description>&lt;p&gt;今天是中秋佳节，祝大家国庆快乐！！！&lt;/p&gt;
+&lt;p&gt;2014 年记录过一篇 &lt;a href="http://lusir.me/palemoon-tab-modify.html" title="PaleMoon 修改起始页"&gt;修改 PaleMoon 起始页&lt;/a&gt; 的文章，本文接着记。&lt;/p&gt;
+
+
+&lt;h3 id="4f95ed363fe3f8d9ef17b4a1aca2fd91"&gt;禁用 urlclassifier3.sqlite&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;urlclassifier3.sqlite&lt;/code&gt; 是防止钓鱼网站的数据库，体积较大。禁用方法：打开 &lt;code&gt;about:config&lt;/code&gt;，将以下条目的值按右侧进行设置。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;browser.safebrowsing.enabled —— false
+browser.safebrowsing.malware.enabled —— false
+Browser.safebrowsing.remoteLookups —— false
+browser.safebrowsing.dataProvider —— -1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;据说最后一条参数是关键，设置以后配置文件夹下的 &lt;code&gt;urlclassifier3.sqlite&lt;/code&gt; 将彻底消失，不会再自动生成，但最好还是把这几条参数都设置一下。&lt;/p&gt;
+&lt;h3 id="6cd6f47e1bbb6c3302c29fec1b47ee85"&gt;禁用 addonsreconciler.json&lt;/h3&gt;
+&lt;p&gt;该文件位于配置文件夹下的 &lt;code&gt;weave&lt;/code&gt; 目录下，体积也较大，据说是因为国内网络质量问题导致多次同步失败而造成。禁用方法：取消同步后删除该文件。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 15 Sep 2016 16:37:00 +0800</pubDate><guid>tag:lusir.me,2016-09-15:several-optimization-of-palemoon.html</guid><category>palemoon</category></item><item><title>PCCAD2010 在 Win7×64 中的安装与设置</title><link>http://lusir.me/installation-and-setting-of-pccad.html</link><description>&lt;p&gt;在 Win7×64 中安装 PCCAD2010 是一件麻烦事，好记性不如烂笔头，为了下次少走弯路，还是记一下吧。
 &lt;/p&gt;
 &lt;h3 id="fca40e38c5d7651dea6f4157b569be53"&gt;准备材料&lt;/h3&gt;
 &lt;ol&gt;
@@ -588,49 +603,4 @@ tar xvJf /path/name.tar.lzma
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;想象不出来别的语言会不会也有一个类似的词，譬如 “Thing” 或者“もの”？汉语博大精深 ……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 07 Dec 2014 17:10:00 +0800</pubDate><guid>tag:lusir.me,2014-12-07:proverb-with-thing.html</guid><category>Collection</category></item><item><title>人人都撸 Alipay 快捷支付</title><link>http://lusir.me/alipay-qr-button.html</link><description>&lt;p&gt;最近看到好几篇介绍给博客添加支付宝快捷支付按钮的文章，跑去点开支付宝才发现之前的支付宝收款页面果然经已下线。
-&lt;/p&gt;
-&lt;p&gt;所以我也凑个热闹，取个标题唤作“人人都撸 Alipay 快捷支付”。&lt;/p&gt;
-&lt;h3 id="a4a575bcb6cdba8019ce30eea3a3514c"&gt;支付宝条码支付&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;登陆支付宝官网：&lt;code&gt;https://qr.alipay.com&lt;/code&gt;；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;通过发码平台领取“向我付款”的二维码；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;编辑个性二维码名称及 logo；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;保存生成的二维码自行使用。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;据说出租车司机金师傅在副驾驶前面贴了一张可收款的二维码，乘客张先生恰巧没有零钱，于是用支付宝的扫码拍下二维码进行快捷支付，金师傅近乎即时收到款项。&lt;/p&gt;
-&lt;p&gt;&lt;img class="aligncenter" src="http://lusir.me/images/paymeqr.jpg" alt="Alipay 个性二维码" /&gt;&lt;/p&gt;
-&lt;h3 id="017b185017df51d6df972d8407ad88f6"&gt;支付宝转账付款按钮&lt;/h3&gt;
-&lt;p&gt;添加如下代码即可&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;form&lt;/span&gt; &lt;span class="na"&gt;action=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://shenghuo.alipay.com/send/payment/fill.htm&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;method=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;POST&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;target=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;_blank&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;accept-charset=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;GBK&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;optEmail&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;zyxnero@gmail.com&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;payAmount&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;0.00&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;title&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;title&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;赞助『擼sirの避風港』&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;memo&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;请填写您的联系方式，以便答谢！！！&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pay&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;image&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://lusir.me/images/payme.png&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;转账&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;form action="https://shenghuo.alipay.com/send/payment/fill.htm" method="POST" target="_blank" accept-charset="GBK"&gt;
-&lt;input name="optEmail" type="hidden" value="zyxnero@gmail.com"/&gt;
-&lt;input name="payAmount" type="hidden" value="0.00"/&gt;
-&lt;input name="title" type="hidden" id="title" value="赞助『擼sirの避風港』"/&gt;
-&lt;input name="memo" type="hidden" value="请填写您的联系方式，以便答谢！！！"/&gt;
-&lt;input name="pay" type="image" title="为啥都喜欢喝咖啡？" class="aligncenter" src="http://lusir.me/images/payme.png" value="转账"/&gt;
-&lt;/form&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://ihuan.me/1828.html" title="给你的网站添加支付宝即时到帐按钮"&gt;给你的网站添加支付宝即时到帐按钮&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 03 Dec 2014 17:00:00 +0800</pubDate><guid>tag:lusir.me,2014-12-03:alipay-qr-button.html</guid><category>Alipay</category><category>快捷支付</category></item></channel></rss>
+&lt;p&gt;想象不出来别的语言会不会也有一个类似的词，譬如 “Thing” 或者“もの”？汉语博大精深 ……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 07 Dec 2014 17:10:00 +0800</pubDate><guid>tag:lusir.me,2014-12-07:proverb-with-thing.html</guid><category>Collection</category></item></channel></rss>
