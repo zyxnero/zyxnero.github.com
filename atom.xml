@@ -104,6 +104,10 @@ browser.safebrowsing.dataProvider —— -1
 &lt;p&gt;从官网下载压缩包，解压即用。需要注意的是如果命令行里面提示“无法定位程序输入点ucrtbase.terminate”这个错误，那么去下载个&lt;code&gt;Microsoft Visual C++ 2015 Redistributable&lt;/code&gt;，安装以后就不会再报错了。如果命令行程序用的是 &lt;code&gt;Cmder&lt;/code&gt;，那么看起来就是这样的。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://dn-nero.qbox.me/you-get.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
     &lt;img class="aligncenter" src="http://dn-nero.qbox.me/you-get.png" alt="用上了 You-Get" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;update 2017.04.18&lt;/strong&gt;：近期 &lt;code&gt;You-Get&lt;/code&gt; 更新不提供 Win 下的预编译文件了，所以我使用 &lt;code&gt;pip install --upgrade you-get&lt;/code&gt; 命令在 Python3 的 Scripts 目录下生成了 &lt;code&gt;you-get.exe&lt;/code&gt; 并将它扔到了 Python2 的 Scripts 目录下（博客文章渲染需要使用 Python2），这个 100k 不到的 exe 文件居然也能正常下载合并文件，真神奇！&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/you-get-2.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/you-get-2.png" alt="用上了 You-Get" /&gt;
 &lt;/a&gt;&lt;/p&gt;</summary><category term="You-Get"></category></entry><entry><title>升级到 Sublime Text 3</title><link href="http://lusir.me/get-to-sublime3.html" rel="alternate"></link><updated>2016-07-02T21:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-07-02:get-to-sublime3.html</id><summary type="html">&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
 &lt;/p&gt;
 &lt;h3 id="e655a410ff21cd07e7a0150491e04371"&gt;安装&lt;/h3&gt;
