@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2016-09-15T16:37:00+08:00</updated><entry><title>PaleMoon 的几项优化</title><link href="http://lusir.me/several-optimization-of-palemoon.html" rel="alternate"></link><updated>2016-09-15T16:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-15:several-optimization-of-palemoon.html</id><summary type="html">&lt;p&gt;今天是中秋佳节，祝大家国庆快乐！！！&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2017-04-22T22:02:00+08:00</updated><entry><title>共析钢的定义</title><link href="http://lusir.me/definition-of-eutectoid-steel.html" rel="alternate"></link><updated>2017-04-22T22:02:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-22:definition-of-eutectoid-steel.html</id><summary type="html">&lt;p&gt;也都是学校里的知识了，整理一下方便以后重新学习。
+&lt;/p&gt;
+&lt;h3 id="fec5050eeea132b15a3072913febbdba"&gt;共析反应&lt;/h3&gt;
+&lt;p&gt;共析钢（含碳量0.77%）中的奥氏体（A）与渗碳体（Fe&lt;sub&gt;3&lt;/sub&gt;C）在平衡状态下完全溶解析出珠光体（P）的反应。&lt;/p&gt;
+&lt;h3 id="7a82576ab61f9f1a41f392f2ba6a0460"&gt;共析钢&lt;/h3&gt;
+&lt;p&gt;碳溶解在铁的晶格中会形成固溶体，碳溶解到 α-铁中形成的固溶体叫铁素体（F），溶解到 γ-铁中的固溶体叫奥氏体（A）。铁素体与奥氏体都具有良好的塑性。当铁碳合金中的碳不能全部溶入铁素体或奥氏体中时，剩余出来的碳将与铁形成碳化铁（Fe&lt;sub&gt;3&lt;/sub&gt;C），这种化合物的晶体组织叫渗碳体，它的硬度极高，塑性几乎为零。&lt;/p&gt;
+&lt;p&gt;从铁碳平衡相图可见，当碳的含量正好等于 0.77% 时，该合金的相变是在恒温下实现的。即在这种特定比例下的渗碳体和铁素体在发生相变时，如果消失则两者同时消失（加热时），如果出现则两者又同时出现（冷却时），基于这个原因，人们把这种由特定比例构成的两相组织命名为珠光体（P），这种钢就叫做共析钢。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/eutectoid-steel.png" title="铁碳相图" data-fancybox-group="gallery"&gt;
+    &lt;img src="http://dn-nero.qbox.me/eutectoid-steel.png" alt="铁碳相图" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="2271b0fcf4b5e8cafc04a2115712eaf8"&gt;亚共析钢&lt;/h3&gt;
+&lt;p&gt;常用的结构钢含碳量大都在 0.5% 以下。由于含碳量低于 0.77%，所以组织中的铁素体除去一部分要与渗碳体形成珠光体外，还会有多余的出现，这种钢的组织是铁素体（F） + 珠光体（P）。碳含量越少，钢组织中珠光体比例也越小，钢的强度也越低，但塑性越好，这类钢统称为亚共析钢。&lt;/p&gt;
+&lt;h3 id="2a431fc3acb87199d7d3e1fccf17b0e2"&gt;过共析钢&lt;/h3&gt;
+&lt;p&gt;工具用钢的含碳量往往超过 0.77%，这种钢组织中的渗碳体除与铁素体形成珠光体外，还会有多余的渗碳体，这类钢的组织是珠光体 + 渗碳体。这类钢统称为过共析钢。&lt;/p&gt;
+&lt;h3 id="c8fd5ecab896ff0333b6aa921f06b974"&gt;临界温度&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ac1：共析钢在加热时珠光体向奥氏体转变的开始温度。&lt;/li&gt;
+&lt;li&gt;Ac3：亚共析钢在加热时铁素体全部转变为奥氏体的终了温度。&lt;/li&gt;
+&lt;li&gt;Accm：过共析钢在加热时二次渗碳体全部溶入奥氏体的终了温度。&lt;/li&gt;
+&lt;li&gt;Ar1：共析钢在冷却时奥氏体向珠光体转变的开始温度。&lt;/li&gt;
+&lt;li&gt;Ar3：亚共析钢在冷却时开始析出游离铁素体的温度。&lt;/li&gt;
+&lt;li&gt;Arcm：过共析钢在冷却时奥氏体开始析出二次渗碳体的温度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中 A 是法语临界点的首字母，c 是法语加热的首字母，r 是法语冷却的首字母。&lt;/p&gt;</summary><category term="机械"></category></entry><entry><title>PaleMoon 的几项优化</title><link href="http://lusir.me/several-optimization-of-palemoon.html" rel="alternate"></link><updated>2016-09-15T16:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-15:several-optimization-of-palemoon.html</id><summary type="html">&lt;p&gt;今天是中秋佳节，祝大家国庆快乐！！！&lt;/p&gt;
 &lt;p&gt;2014 年记录过一篇 &lt;a href="http://lusir.me/palemoon-tab-modify.html" title="PaleMoon 修改起始页"&gt;修改 PaleMoon 起始页&lt;/a&gt; 的文章，本文接着记。&lt;/p&gt;
 
 
@@ -554,57 +577,4 @@ tar xvJf /path/name.tar.lzma
 &lt;h3 id="5ca581389e16babfae591593e9a717cb"&gt;步骤五&lt;/h3&gt;
 &lt;p&gt;这一步是禁止 AutoCAD 联网，ESET Smart Security 及众多防火墙都能实现，参考&lt;a href="http://lusir.me/ess-filter.html" title="ESET Smart Security 添加黑白名单"&gt;ESET Smart Security 添加黑白名单&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;近日 Autodesk 公司发布了 AutoCAD 2015，同时宣布向全球学生教师和教育机构提供全功能教育版，包括 AutoCAD、3DMax、Maya 等。不管出于什么目的，不管其影响如何，这种行为还是值得点个赞的！&lt;/p&gt;</summary><category term="AutoCAD"></category></entry><entry><title>成语中“物”的几种解释</title><link href="http://lusir.me/proverb-with-thing.html" rel="alternate"></link><updated>2014-12-07T17:10:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-12-07:proverb-with-thing.html</id><summary type="html">&lt;p&gt;心血来潮整理了几个含“物”的成语。
-&lt;/p&gt;
-&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;序号&lt;/th&gt;
-&lt;th&gt;释义&lt;/th&gt;
-&lt;th&gt;词例&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;①&lt;/td&gt;
-&lt;td&gt;事物&lt;/td&gt;
-&lt;td&gt;玩物丧志、格物致知、物尽其用、物极必反&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;②&lt;/td&gt;
-&lt;td&gt;景物&lt;/td&gt;
-&lt;td&gt;触物兴怀、物换星移&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;③&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;①&lt;/code&gt; + &lt;code&gt;②&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;睹物思人、物是人非&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;④&lt;/td&gt;
-&lt;td&gt;东西&lt;/td&gt;
-&lt;td&gt;探囊取物、别无长物&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;⑤&lt;/td&gt;
-&lt;td&gt;任务&lt;/td&gt;
-&lt;td&gt;厚德载物&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;⑥&lt;/td&gt;
-&lt;td&gt;人&lt;/td&gt;
-&lt;td&gt;恃才傲物、待人接物、爱人利物&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;⑦&lt;/td&gt;
-&lt;td&gt;生物&lt;/td&gt;
-&lt;td&gt;物竞天择、物伤其类&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;⑧&lt;/td&gt;
-&lt;td&gt;万物&lt;/td&gt;
-&lt;td&gt;物华天宝、天工开物、厚德载物&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;想象不出来别的语言会不会也有一个类似的词，譬如 “Thing” 或者“もの”？汉语博大精深 ……&lt;/p&gt;</summary><category term="Collection"></category></entry></feed>
+&lt;p&gt;近日 Autodesk 公司发布了 AutoCAD 2015，同时宣布向全球学生教师和教育机构提供全功能教育版，包括 AutoCAD、3DMax、Maya 等。不管出于什么目的，不管其影响如何，这种行为还是值得点个赞的！&lt;/p&gt;</summary><category term="AutoCAD"></category></entry></feed>
