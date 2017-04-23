@@ -11,10 +11,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="『Theme』标签下的文章存档">
+<meta name="description" content="Sublime 侧边栏字体大小调整 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>Theme - 擼sirの避風港</title>
+<title>Sublime 侧边栏字体大小调整 - 擼sirの避風港</title>
 <link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
@@ -31,6 +31,9 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <link rel="stylesheet" href="http://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/niu2.css" type="text/css" />
 <script type="text/javascript">window.onload = function() {  };</script>
+<link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
+<link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="canonical" href="http://lusir.me/customize-sidebar-font-of-sublime.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="http://lusir.me/theme/js/html5shiv.js"></script>
@@ -87,23 +90,117 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 		
-<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 class="niu2-index-title"><i class="fa fa-tag fa-lg"></i>Theme</h1>
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">Sublime 侧边栏字体大小调整</h1></div>
+<div id="niu2-left-container" class="col-md-6 col-md-offset-2">
+<div id="niu2-main-content" itemprop="articleBody">
+<p>最近感觉视力好像又下降了，无奈。前几天调大了 Sublime Text 3 的侧边栏字体使正文区和侧边栏看起来更和谐。过程记录如下。
+</p>
+<h3 id="59b78b7a8b75e0b1373086e89ecce8be">安装插件 PackageResourceViewer</h3>
+<ol>
+<li>输入 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> 调出命令面板；</li>
+<li>输入 <code>Package Control:Install</code> 回车，等待加载 package 列表；</li>
+<li>搜索并安装 <code>PackageResourceViewer</code> 包。</li>
+</ol>
+<h3 id="9142bbff309e484a0b0d006e53d4e117">修改侧边栏字体</h3>
+<ol>
+<li>输入 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> 调出命令面板；</li>
+<li>输入 PackageResourceViewer: Open Resource 进入到 XXX - Default 主题的目录下，打开对应的 XXX.sublime-theme 主题文件。（XXX 为待修改主题的名称）</li>
+<li>搜索 sidebar_label 关键词，在 "class": "sidebar_label" 后面增加一行：<code>"font.size": 13,</code>;</li>
+<li>若要更改标签栏的字体和大小，同样是在该文件中搜索 tab_label 关键词，在 "class": "tab_label" 后增加增加一行：<code>"font.size": 12,</code>。</li>
+</ol>
+<p>更改后，我的侧边栏字体设置如下：</p>
+<div class="codehilite"><pre>&quot;class&quot;: &quot;sidebar_label&quot;,
+&quot;font.size&quot;: 14,
+&quot;color&quot;: [180, 180, 180],
+&quot;shadow_color&quot;: [0, 0, 0],
+&quot;shadow_offset&quot;: [0, 0.5]
+</pre></div>
+
+
+<p>标签栏字体设置如下：</p>
+<div class="codehilite"><pre>&quot;class&quot;: &quot;tab_label&quot;,
+&quot;font.size&quot;: 12, 
+&quot;fg&quot;: [180, 180, 180],
+&quot;shadow_color&quot;: [0, 0, 0, 200],
+&quot;shadow_offset&quot;: [0, 0.5]
+</pre></div>
+
+
+<h3 id="52dd24ccdb45137f1803b6c057680941">快捷键一枚</h3>
+<table class="table table-bordered table-striped table-condensed table-hover">
+<thead>
+<tr>
+<th>名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></td>
+<td>在侧边栏文件中查找</td>
+</tr>
+</tbody>
+</table>
+</div>
+    
+<div id="content-comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'nnero'; // required: replace example with your forum shortname
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 
-<div class="col-md-8 col-md-offset-2"><div class="niu2-index-article">
-<div class="niu2-index-article-title">
-<span itemprop="headline"><a itemprop="url" href="http://lusir.me/blog-modify-record.html">『避風港』折腾记录</a></span>
-</div><div class="niu2-meta-index">
-<span class="niu2-meta-date-index" itemprop="datePublished"><i class="fa fa-calendar"></i>2014-03-23</span>
-<span class="niu2-meta-category-index" itemprop="articleSection"><i class="fa fa-book"></i><a href="http://lusir.me/record/index.html">记录</a></span>
-<span class="niu2-meta-tag-index" itemprop="keywords">
-<i class="fa fa-tag"></i><a href="http://lusir.me/tag/theme.html">Theme</a>
-</span>
-</div><div class="niu2-article-summary" itemprop="description">
-    <p>接触到 pelican 之后就在使用 <a href="http://atime.me/" title="Ma Wenbao">Ma Wenbao</a> 的主题，然后就是一路折腾（折腾主题，折腾 pelican 配置），不过都是一些小改动，现记录一下折腾历史（能从 git 查看折腾记录还是挺方便的）。
-
 </div>
-</div></div></div><div id="body-footer" class="col-md-8 col-md-offset-2"><div class="niu2-footer">
+<div id="niu2-right-container" class="col-md-3">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
+<div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
+<div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
+<div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2017-04-23 13:08</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
+<div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/sublime.html">Sublime</a></div>
+ 
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar" data-status="closed">
+<div class="niu2-sidebar-label">
+<i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
+</div>
+<ol id="niu2-sidebar-toc-list">
+<li><a href="#content-heading">Sublime 侧边栏字体大小调整</a></li>
+    <li><a href='#59b78b7a8b75e0b1373086e89ecce8be'>安装插件 PackageResourceViewer</a></li><li><a href='#9142bbff309e484a0b0d006e53d4e117'>修改侧边栏字体</a></li><li><a href='#52dd24ccdb45137f1803b6c057680941'>快捷键一枚</a></li>
+<li><a href="#content-comments">评论</a></li>
+</ol></div>
+
+<div class="hidden">
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;Sublime 侧边栏字体大小调整
+</div>
+
+<div class="hidden">
+<ul>
+<li class="prev"><a href="http://lusir.me/definition-of-eutectoid-steel.html">上一篇</a></li>
+</ul>
+</div>
+
+<div class="hidden">
+<p>相关文章</p>
+<ul>
+<li><a href="http://lusir.me/get-to-sublime3.html">升级到 Sublime Text 3</a></li>
+</ul>
+ 
+</div></div>
+</div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
 <hr/>
 <p>
 &copy; 擼sirの避風港.&nbsp;Powered by <a href="https://github.com/getpelican/pelican">Pelican</a>, 
@@ -115,7 +212,9 @@ No Right Reserved<a href="https://plus.google.com/+NeroZheng" rel="author">.</a>
 <script type="text/javascript" src="http://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://lusir.me/theme/js/niu2.js"></script>
 <script type="text/javascript" src="http://lusir.me/theme/js/bootstrap.min.js"></script>
-<script type="text/javascript"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/fancy-loading.js"></script>
+<script type="text/javascript" src="http://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">onContentLoaded();</script>
 
 <!-- GoogleAnalytics -->
 <script>

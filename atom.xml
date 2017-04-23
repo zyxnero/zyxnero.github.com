@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2017-04-22T22:02:00+08:00</updated><entry><title>共析钢的定义</title><link href="http://lusir.me/definition-of-eutectoid-steel.html" rel="alternate"></link><updated>2017-04-22T22:02:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-22:definition-of-eutectoid-steel.html</id><summary type="html">&lt;p&gt;也都是学校里的知识了，整理一下方便以后重新学习。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2017-04-23T13:08:00+08:00</updated><entry><title>Sublime 侧边栏字体大小调整</title><link href="http://lusir.me/customize-sidebar-font-of-sublime.html" rel="alternate"></link><updated>2017-04-23T13:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-23:customize-sidebar-font-of-sublime.html</id><summary type="html">&lt;p&gt;最近感觉视力好像又下降了，无奈。前几天调大了 Sublime Text 3 的侧边栏字体使正文区和侧边栏看起来更和谐。过程记录如下。
+&lt;/p&gt;
+&lt;h3 id="59b78b7a8b75e0b1373086e89ecce8be"&gt;安装插件 PackageResourceViewer&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;输入 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;P&lt;/kbd&gt; 调出命令面板；&lt;/li&gt;
+&lt;li&gt;输入 &lt;code&gt;Package Control:Install&lt;/code&gt; 回车，等待加载 package 列表；&lt;/li&gt;
+&lt;li&gt;搜索并安装 &lt;code&gt;PackageResourceViewer&lt;/code&gt; 包。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="9142bbff309e484a0b0d006e53d4e117"&gt;修改侧边栏字体&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;输入 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;P&lt;/kbd&gt; 调出命令面板；&lt;/li&gt;
+&lt;li&gt;输入 PackageResourceViewer: Open Resource 进入到 XXX - Default 主题的目录下，打开对应的 XXX.sublime-theme 主题文件。（XXX 为待修改主题的名称）&lt;/li&gt;
+&lt;li&gt;搜索 sidebar_label 关键词，在 "class": "sidebar_label" 后面增加一行：&lt;code&gt;"font.size": 13,&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;若要更改标签栏的字体和大小，同样是在该文件中搜索 tab_label 关键词，在 "class": "tab_label" 后增加增加一行：&lt;code&gt;"font.size": 12,&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;更改后，我的侧边栏字体设置如下：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;quot;class&amp;quot;: &amp;quot;sidebar_label&amp;quot;,
+&amp;quot;font.size&amp;quot;: 14,
+&amp;quot;color&amp;quot;: [180, 180, 180],
+&amp;quot;shadow_color&amp;quot;: [0, 0, 0],
+&amp;quot;shadow_offset&amp;quot;: [0, 0.5]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;标签栏字体设置如下：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;quot;class&amp;quot;: &amp;quot;tab_label&amp;quot;,
+&amp;quot;font.size&amp;quot;: 12, 
+&amp;quot;fg&amp;quot;: [180, 180, 180],
+&amp;quot;shadow_color&amp;quot;: [0, 0, 0, 200],
+&amp;quot;shadow_offset&amp;quot;: [0, 0.5]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="52dd24ccdb45137f1803b6c057680941"&gt;快捷键一枚&lt;/h3&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt;+&lt;kbd&gt;F&lt;/kbd&gt;&lt;/td&gt;
+&lt;td&gt;在侧边栏文件中查找&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</summary><category term="Sublime"></category></entry><entry><title>共析钢的定义</title><link href="http://lusir.me/definition-of-eutectoid-steel.html" rel="alternate"></link><updated>2017-04-22T22:02:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-22:definition-of-eutectoid-steel.html</id><summary type="html">&lt;p&gt;也都是学校里的知识了，整理一下方便以后重新学习。
 &lt;/p&gt;
 &lt;h3 id="fec5050eeea132b15a3072913febbdba"&gt;共析反应&lt;/h3&gt;
 &lt;p&gt;共析钢（含碳量0.77%）中的奥氏体（A）与渗碳体（Fe&lt;sub&gt;3&lt;/sub&gt;C）在平衡状态下完全溶解析出珠光体（P）的反应。&lt;/p&gt;
@@ -560,21 +607,4 @@ tar xvJf /path/name.tar.lzma
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.zhihu.com/question/20408917" title="为何说“婊子无情，戏子无义”，这背后蕴含着什么深意吗？"&gt;为何说“婊子无情，戏子无义”，这背后蕴含着什么深意吗？&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.douban.com/note/91866473/" title="所谓“婊子无情，戏子无义”"&gt;所谓“婊子无情，戏子无义”&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Collection"></category></entry><entry><title>优化 AutoCAD 启动运行速度</title><link href="http://lusir.me/autocad-acc.html" rel="alternate"></link><updated>2014-12-11T21:30:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2014-12-11:autocad-acc.html</id><summary type="html">&lt;p&gt;最近几个版本的 AutoCAD 对于系统资源的要求越来越大了，还是老版本轻便一些。采用以下几个步骤将 AutoCAD 不必要的加载除掉。
-&lt;/p&gt;
-&lt;h3 id="f1054629ae86e030a566d033d7f0cddb"&gt;步骤一&lt;/h3&gt;
-&lt;p&gt;安装 AutoCAD 产品后，顺便安装 AutoCAD 管理工具，亦即 &lt;code&gt;CMControl&lt;/code&gt;。安装完成后打开 CAD 管理员控制实用程序，选择要修改的产品，即 CAD 版本号，禁用所有通信。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cad-opti.jpg" title="禁用 CAD 通信中心" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/cad-opti.jpg" alt="禁用 CAD 通信中心" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="7d1cce80eca81796dd816477c72e7b4b"&gt;步骤二&lt;/h3&gt;
-&lt;p&gt;运行 AutoCAD 后，打开进程管理器，会发现这样一个进程：WSCommCntr1.exe，它是 AutoCAD 的后台程序，会发送 AutoCAD 的版本信息和注册信息给 AutoDesk 公司，并自动收集相关信资料，包括图集、信息、更新等。&lt;/p&gt;
-&lt;p&gt;将 &lt;code&gt;C:\Program Files (x86)\Common Files\Autodesk Shared&lt;/code&gt; 目录下的 &lt;code&gt;WSCommCntr1.exe&lt;/code&gt; 与 AutoCAD 安装目录下的 &lt;code&gt;WSCommCntrAcCon.arx&lt;/code&gt; 重命名。&lt;/p&gt;
-&lt;h3 id="73e8816f34559f5622f8eb4e41d8259b"&gt;步骤三&lt;/h3&gt;
-&lt;p&gt;在 AutoCAD 命令行中输入 &lt;code&gt;VTENABLE&lt;/code&gt;，依照提示输入 &lt;code&gt;0&lt;/code&gt; 以启用平滑切换显示区域，加快启动速度，接着回车。&lt;/p&gt;
-&lt;h3 id="2eda685cfb7b0f9473eb4e03a9544214"&gt;步骤四（待验证）&lt;/h3&gt;
-&lt;p&gt;打开 IE 浏览器，将“Internet 选项”→“高级”选项卡下的“检查发行商的证书是否已吊销”项取消勾选。&lt;/p&gt;
-&lt;h3 id="5ca581389e16babfae591593e9a717cb"&gt;步骤五&lt;/h3&gt;
-&lt;p&gt;这一步是禁止 AutoCAD 联网，ESET Smart Security 及众多防火墙都能实现，参考&lt;a href="http://lusir.me/ess-filter.html" title="ESET Smart Security 添加黑白名单"&gt;ESET Smart Security 添加黑白名单&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;近日 Autodesk 公司发布了 AutoCAD 2015，同时宣布向全球学生教师和教育机构提供全功能教育版，包括 AutoCAD、3DMax、Maya 等。不管出于什么目的，不管其影响如何，这种行为还是值得点个赞的！&lt;/p&gt;</summary><category term="AutoCAD"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="Collection"></category></entry></feed>
