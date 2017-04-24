@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>走走停停…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 23 Apr 2017 13:08:00 +0800</lastBuildDate><item><title>Sublime 侧边栏字体大小调整</title><link>http://lusir.me/customize-sidebar-font-of-sublime.html</link><description>&lt;p&gt;最近感觉视力好像又下降了，无奈。前几天调大了 Sublime Text 3 的侧边栏字体使正文区和侧边栏看起来更和谐。过程记录如下。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>走走停停…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 24 Apr 2017 16:08:00 +0800</lastBuildDate><item><title>Win7 运行栏不保存历史记录的解决办法</title><link>http://lusir.me/win7-running-record.html</link><description>&lt;p&gt;偶尔会碰到优化过度的 Windows 系统，运行框内没有历史记录。本篇记录一下恢复记录的解决办法。
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Q1：打开 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;，以前输入过的网络路径、命令全都没有记录，非常不方便。&lt;/p&gt;
+&lt;p&gt;A：右键点击开始菜单，点击“属性”，勾选&lt;code&gt;“存储并显示最近在开始菜单中打开的程序”&lt;/code&gt;，如下图。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-running-record.png" title="恢复运行栏保存历史记录" data-fancybox-group="gallery"&gt;
+    &lt;img src="http://dn-nero.qbox.me/win7-running-record.png" alt="恢复运行栏保存历史记录" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Q2：Q1解决方法中的&lt;code&gt;“存储并显示最近在开始菜单中打开的程序”&lt;/code&gt;复选框灰色不可用。&lt;/p&gt;
+&lt;p&gt;A：打开 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;，输入&lt;code&gt;gpedit.msc&lt;/code&gt;，打开“组策略”，在左侧选项中依次点击“用户配置”、“管理模板”、“开始菜单和任务栏”，然后在右侧的选项中双击“关闭用户跟踪”，选择“已禁用”即可，如下图。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-running-record-2.png" title="恢复运行栏保存历史记录" data-fancybox-group="gallery"&gt;
+    &lt;img src="http://dn-nero.qbox.me/win7-running-record-2.png" alt="恢复运行栏保存历史记录" /&gt;
+&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 24 Apr 2017 16:08:00 +0800</pubDate><guid>tag:lusir.me,2017-04-24:win7-running-record.html</guid><category>Win7</category></item><item><title>Sublime 侧边栏字体大小调整</title><link>http://lusir.me/customize-sidebar-font-of-sublime.html</link><description>&lt;p&gt;最近感觉视力好像又下降了，无奈。前几天调大了 Sublime Text 3 的侧边栏字体使正文区和侧边栏看起来更和谐。过程记录如下。
 &lt;/p&gt;
 &lt;h3 id="59b78b7a8b75e0b1373086e89ecce8be"&gt;安装插件 PackageResourceViewer&lt;/h3&gt;
 &lt;ol&gt;
@@ -561,50 +574,4 @@ tar xvJf /path/name.tar.lzma
 
 &lt;p&gt;详细命令可以使用 &lt;code&gt;man tar&lt;/code&gt; 来查看，需注意的是单纯 &lt;code&gt;tar&lt;/code&gt; 仅打包不压缩。&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
-节选自&lt;a href="http://havee.me/linux/2014-12/copy-backup-and-mirror-image-on-linux.html" title="Linux 上的复制、备份与镜像"&gt;《Linux 上的复制、备份与镜像》&lt;/a&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 22 Feb 2015 17:12:00 +0800</pubDate><guid>tag:lusir.me,2015-02-22:cp-and-tar.html</guid><category>Linux</category></item><item><title>婊子无情，戏子无义</title><link>http://lusir.me/merciless-bitches-and-actors.html</link><description>&lt;p&gt;在岳云鹏的相声中听到“你们无情，我们无义”这样一句调侃，搜索之后才知道“婊子无情，戏子无义”是句老话，互文，大意是说婊子和戏子都是无情无义的东西。
-&lt;/p&gt;
-&lt;p&gt;不知这话出自何处，个人觉得一概而论失之偏颇，但又挤不出个所以然。只能引用几位网友观点了：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;这些全是废话，一个人没有那么多真感情可以出卖的，难道嫖客用的是真感情不成？
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="codehilite"&gt;&lt;pre&gt;老子说：“失道而后德，失德而后仁，失仁而后义，失义而后礼。”故爱讲仁义的人往往是已经是道德有亏。
-
-世人所谓“婊子”、“戏子”皆是天性饱满之人，他们道德不亏，不必去用仁义伪饰。他们至情至性，天真若婴儿。因为世人常常达不到他们的境界，想把他们也纳入到世俗的规矩中，就千方百计的去诋毁他们。 
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="codehilite"&gt;&lt;pre&gt;《霸王别姬》开篇就是：“婊子无情，戏子无义。婊子合该在床上有情，戏子，只能在台上有义。”
-
-段小楼、程蝶衣和菊仙这两伶一妓闹了一整本书，但在20世纪70年代那段大灾难里，他们又成了一拨人。
-
-他们是戏子和优伶，是柔弱的、飘逸的、有情有义的、被鄙视的；而那些批斗他们的人，是当权的、粗暴的、把持主权地位的。
-
-知道这像什么吗？
-
-在《红楼梦》里，戏子和优伶与贾宝玉是柔弱的、飘逸的、有情义的，而批斗他们的是贾政那一类。
-
-在《吊柳七》里，戏子和优伶与柳永是柔弱的、飘逸的、有情义的，而朝廷那边儿是负责批斗他们的。
-
-其实想远一点，太史公《滑稽列传》里那些优伶，也都是戏子。而太史公这样被强权压迫的可怜人，一身会歌颂屈原贾谊的风骨，自然也对优伶们的风流滑稽相当首肯了。
-
-大概可以说，在士大夫的文艺世界里，戏子和优伶代表着女性化、柔弱、风流、隐逸、偏弱势的一群人；他们对立面的，是男权、严肃、秩序、权贵、端正、强势这一端。
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="codehilite"&gt;&lt;pre&gt;历史总是由胜利者写的，所以不管什么历史都带着胜利者的角度。
-
-同样，这话不是“婊子”，也不是“戏子”说的，而是文人墨客说了传出去的，所以并不是代表真正的“婊子”和“戏子”，而是代表文人墨客们对于“婊子”和“戏子”的一种普遍认识。
-
-对于一些清高的文人来说，青楼艺妓整天卖唱卖身，哪有什么感情？戏子整日在别人的故事里流自己的眼泪，唱戏的曲子怎么写的，他们就怎么唱，哪有自己的仁义道德观念？
-
-总之，这句话只是文人对他们的一种看法，不代表是真理。
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;也许以后对这句话会有不一样的认识，但至少现在赞同以上观点……&lt;/p&gt;
-&lt;h3 id="73ba78871d960d9b82c5ccdba28d01a2"&gt;引用链接&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.zhihu.com/question/20408917" title="为何说“婊子无情，戏子无义”，这背后蕴含着什么深意吗？"&gt;为何说“婊子无情，戏子无义”，这背后蕴含着什么深意吗？&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.douban.com/note/91866473/" title="所谓“婊子无情，戏子无义”"&gt;所谓“婊子无情，戏子无义”&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 01 Feb 2015 17:06:00 +0800</pubDate><guid>tag:lusir.me,2015-02-01:merciless-bitches-and-actors.html</guid><category>Collection</category></item></channel></rss>
+节选自&lt;a href="http://havee.me/linux/2014-12/copy-backup-and-mirror-image-on-linux.html" title="Linux 上的复制、备份与镜像"&gt;《Linux 上的复制、备份与镜像》&lt;/a&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 22 Feb 2015 17:12:00 +0800</pubDate><guid>tag:lusir.me,2015-02-22:cp-and-tar.html</guid><category>Linux</category></item></channel></rss>

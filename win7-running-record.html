@@ -11,10 +11,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="批量下载喜马拉雅节目 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="Win7 运行栏不保存历史记录的解决办法 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>批量下载喜马拉雅节目 - 擼sirの避風港</title>
+<title>Win7 运行栏不保存历史记录的解决办法 - 擼sirの避風港</title>
 <link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
@@ -33,7 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
-<link rel="canonical" href="http://lusir.me/download-ximalaya-shows-in-batch.html" />
+<link rel="canonical" href="http://lusir.me/win7-running-record.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="http://lusir.me/theme/js/html5shiv.js"></script>
@@ -90,27 +90,23 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 		
-<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">批量下载喜马拉雅节目</h1></div>
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">Win7 运行栏不保存历史记录的解决办法</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>最近两年多听喜马拉雅比较多，主要是上下班在路上花费时间太长，听听节目还能涨点姿势。
+<p>偶尔会碰到优化过度的 Windows 系统，运行框内没有历史记录。本篇记录一下恢复记录的解决办法。
 </p>
-<p>早期喜马拉雅的爪机 APP 没什么广告，我也一直是在用爪机客户端；现在每个音频前面都会有一段音频广告，感觉很不好，所以干脆就把节目下载下来听。下载方式采用过 IDM、音乐间谍，前者无法批量，后者不太稳定。</p>
-<p>不久前在 <a href="http://fabing.blog.51cto.com/" title="weifabing 的 Blog">weifabing'Blog</a> 上看到他的解决办法，于是尝试了一下，果然是很好用啊。</p>
-<div class="codehilite"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.album_soundlist ul li&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">sound_id</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;sound_id&quot;</span><span class="p">);</span>
-    <span class="kd">var</span> <span class="nx">json_url</span> <span class="o">=</span> <span class="s2">&quot;http://www.ximalaya.com/tracks/&quot;</span> <span class="o">+</span> <span class="nx">sound_id</span> <span class="o">+</span> <span class="s2">&quot;.json&quot;</span><span class="p">;</span>
-    <span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">json_url</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">){</span>
-        <span class="kd">var</span> <span class="nx">save_name</span> <span class="o">=</span> <span class="nx">json</span><span class="p">.</span><span class="nx">nickname</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="nx">json</span><span class="p">.</span><span class="nx">title</span> <span class="o">+</span> <span class="s2">&quot;.m4a&quot;</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">down_cmd</span> <span class="o">=</span> <span class="s2">&quot;wget &quot;</span> <span class="o">+</span> <span class="nx">json</span><span class="p">.</span><span class="nx">play_path_64</span> <span class="o">+</span> <span class="s2">&quot; -O &quot;</span> <span class="o">+</span> <span class="nx">save_name</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">down_cmd</span><span class="p">);</span>
-    <span class="p">})</span>
-<span class="p">})</span>
-</pre></div>
-
-
-<p>以上是他的代码。打开相应的专辑页，在浏览器 console 中粘贴该段命令就能返回相应下载链接。他用的 Linux 系统，直接在终端里面粘贴命令就能下载了。我用的 Windows，所以下载安装了个 GNU 的 wget，配合 cmder，也还是比较方便的。下载完成后批量改个名，改下媒体文件标签，使用本地播放器简直是完美（虽然音频比特率只有 64k）。</p>
-<p>最后我也感谢一下喜马拉雅平台，祝越办越好……</p>
+<hr />
+<p>Q1：打开 <kbd>Win</kbd> + <kbd>R</kbd>，以前输入过的网络路径、命令全都没有记录，非常不方便。</p>
+<p>A：右键点击开始菜单，点击“属性”，勾选<code>“存储并显示最近在开始菜单中打开的程序”</code>，如下图。</p>
+<p><a href="http://dn-nero.qbox.me/win7-running-record.png" title="恢复运行栏保存历史记录" data-fancybox-group="gallery">
+    <img src="http://dn-nero.qbox.me/win7-running-record.png" alt="恢复运行栏保存历史记录" />
+</a></p>
+<hr />
+<p>Q2：Q1解决方法中的<code>“存储并显示最近在开始菜单中打开的程序”</code>复选框灰色不可用。</p>
+<p>A：打开 <kbd>Win</kbd> + <kbd>R</kbd>，输入<code>gpedit.msc</code>，打开“组策略”，在左侧选项中依次点击“用户配置”、“管理模板”、“开始菜单和任务栏”，然后在右侧的选项中双击“关闭用户跟踪”，选择“已禁用”即可，如下图。</p>
+<p><a href="http://dn-nero.qbox.me/win7-running-record-2.png" title="恢复运行栏保存历史记录" data-fancybox-group="gallery">
+    <img src="http://dn-nero.qbox.me/win7-running-record-2.png" alt="恢复运行栏保存历史记录" />
+</a></p>
 </div>
     
 <div id="content-comments">
@@ -134,13 +130,11 @@ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2016-09-11 12:33</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2017-04-24 16:08</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/wget.html">wget</a></div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/cmder.html">cmder</a></div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/xi-ma-la-ya.html">喜马拉雅</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/win7.html">Win7</a></div>
  
 </div>
 
@@ -149,27 +143,27 @@ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">批量下载喜马拉雅节目</a></li>
+<li><a href="#content-heading">Win7 运行栏不保存历史记录的解决办法</a></li>
     
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;批量下载喜马拉雅节目
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;Win7 运行栏不保存历史记录的解决办法
 </div>
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="http://lusir.me/applying-tortoisegit-with-proxy.html">上一篇</a></li>
-<li class="next"><a href="http://lusir.me/set-default-dir-of-cmder.html">下一篇</a></li>
+<li class="prev"><a href="http://lusir.me/customize-sidebar-font-of-sublime.html">上一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="http://lusir.me/set-default-dir-of-cmder.html">设置 cmder 默认目录</a></li>
+<li><a href="http://lusir.me/just-display-win7-pic-thumbnail.html">Win7 桌面如何只显示图片文件缩略图</a></li>
+<li><a href="http://lusir.me/win7-menuext-fix.html">去除 Win7 右键“使用 Windows Media Player 播放”项</a></li>
 </ul>
  
 </div></div>
