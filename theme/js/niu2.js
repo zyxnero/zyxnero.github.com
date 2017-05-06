@@ -52,21 +52,6 @@ function onContentLoaded() {
     locateTocInViewport();
 }
 
-function initHermitPlayer() {
-    if ($('.hermit')[0]) {
-        appendCssFileToHead('/hermit/style/hermit.min.css');
-        window.hermit = {
-            'url': window.gThemePath + '/soundmanager2/swf'
-            //'debugMode': true,
-            //'debugFlash': true,
-            //'flashVersion': 9,
-			//'preferFlash': true,
-        }; // hermit should be global
-        appendJsFileToBody('/soundmanager2/script/soundmanager2.min.js');
-        appendJsFileToBody('/hermit/script/hermit.min.js');
-    }
-}
-
 function appendCssFileToHead(path) {
     $('<link rel="stylesheet" href="' + window.gThemePath + path + '" type="text/css"/>').appendTo($('head'));
 }
