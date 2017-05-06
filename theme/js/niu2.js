@@ -29,7 +29,6 @@ $(document.links).filter(function() {
 }).attr('target', '_blank');
 
 function onContentLoaded() {
-    initHermitPlayer();
     initFootnote();
     $(window).scroll(function() {
         toggleSidebarTocFixed();
@@ -52,13 +51,6 @@ function onContentLoaded() {
     locateTocInViewport();
 }
 
-function appendCssFileToHead(path) {
-    $('<link rel="stylesheet" href="' + window.gThemePath + path + '" type="text/css"/>').appendTo($('head'));
-}
-
-function appendJsFileToBody(path) {
-    $('<script src="' + window.gThemePath + path + '" type="text/javascript"></script>').appendTo($('body'));
-}
 
 function setSidebarTocSize() {
     getSidebarToc().attr('style', 'max-width:' + getSidebarToc().width() + 'px;');
