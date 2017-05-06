@@ -133,24 +133,25 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <h3 id="438777008e750b99006606f949e73b5c">附：ESS 强制卸载</h3>
 <p>下载<a href="http://pan.baidu.com/s/1mibDOyk" title="ESET 强制卸载工具">强制卸载工具</a>后重启进入安全模式，在安全模式中运行卸载工具并根据<code>命令提示符</code>的步骤进行操作。</p>
 <p><br><br></p>
-<div class="hermit" xiami="songlist:1771862045" loop="1" auto="1">
-<div class="hermit-box">
-<div class="hermit-controls">
-<div class="hermit-button"></div>
-<div class="hermit-detail">左键轻击列表播放或暂停</div>
-<div class="hermit-duration"></div>
-<div class="hermit-volume"></div>
-<div class="hermit-listbutton"></div>
-</div>
-<div class="hermit-prosess">
-<div class="hermit-loaded"></div>
-<div class="hermit-prosess-bar">
-<div class="hermit-prosess-after"></div>
-</div>
-</div>
-</div>
-<div class="hermit-list"></div>
-</div>
+<div id="player" class="aplayer"></div>
+
+<script>
+var ap = new APlayer({
+    element: document.getElementById('player'),
+    narrow: false,
+    autoplay: true,
+    showlrc: false,
+    mutex: true,
+    theme: '#615754',
+    mode: 'circulation',
+    listmaxheight: '297px',
+    preload: 'auto',
+    music: [
+    {title: '我说今晚月光那么美 你说是的',author: '好妹妹乐队',
+    url: 'http://m2.music.126.net/xMkcqbdGFOe184udcindNw==/3417282158644277.mp3',
+    pic: 'http://p1.music.126.net/DESI7B-JbCc5lc82W9OApw==/18618030394501261.jpg',}
+    ]});
+</script>
 </div>
     
 <div id="content-comments">

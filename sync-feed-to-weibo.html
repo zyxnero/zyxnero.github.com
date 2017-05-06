@@ -101,24 +101,25 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <h3 id="6f3e50c5880ddc1abc5c1ededb570033">针对国外</h3>
 <p>对于非死不可、推特等社交网络找到的是 dlvr.it，这款服务很好很强大，具体不多介绍，<a href="http://ikamu.me/736" title="用 dlvr.it 将豆瓣我的收藏/g+ 更新同步到 twitter、facebook">看它就行</a></p>
 <p>使用了这俩货，就能将通过博客或者网站发表的文章第一时间生成微博推出去，不出意外，本篇文章应该已经自动推送到了我的新浪微博、腾讯微博、非死不可及推特了……</p>
-<div class="hermit" netease="songlist:26354015" loop="1" auto="0">
-<div class="hermit-box">
-<div class="hermit-controls">
-<div class="hermit-button"></div>
-<div class="hermit-detail">左键轻击列表播放或暂停</div>
-<div class="hermit-duration"></div>
-<div class="hermit-volume"></div>
-<div class="hermit-listbutton"></div>
-</div>
-<div class="hermit-prosess">
-<div class="hermit-loaded"></div>
-<div class="hermit-prosess-bar">
-<div class="hermit-prosess-after"></div>
-</div>
-</div>
-</div>
-<div class="hermit-list"></div>
-</div>
+<div id="player" class="aplayer"></div>
+
+<script>
+var ap = new APlayer({
+    element: document.getElementById('player'),
+    narrow: false,
+    autoplay: true,
+    showlrc: false,
+    mutex: true,
+    theme: '#615754',
+    mode: 'circulation',
+    listmaxheight: '297px',
+    preload: 'auto',
+    music: [
+    {title: 'Give Life Back to Music',author: 'Daft Punk',
+    url: 'http://m2.music.126.net/_B63rmyv1mfuuRMAZerGug==/2531075767325469.mp3',
+    pic: 'http://p1.music.126.net/6fsHmEqq9hdOl4pTNdA-_Q==/6650945837436324.jpg',}
+    ]});
+</script>
 </div>
     
 <div id="content-comments">
@@ -175,13 +176,13 @@ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 <p>相关文章</p>
 <ul>
 <li><a href="http://lusir.me/solution-to-insufficient-permissions.html">Weibo 提示 “Insufficient App Permissions” 的解决办法</a></li>
-<li><a href="http://lusir.me/embed-html5-media.html">在网页中嵌入 html5 音视频</a></li>
-<li><a href="http://lusir.me/customize-purecodec-player.html">修改注册表自定义完美解码播放器</a></li>
-<li><a href="http://lusir.me/enable-keyboard-in-linux.html">Linux 下 Lenovo S10-3C 开启键盘</a></li>
-<li><a href="http://lusir.me/solutions-to-wp8.html">WP8 遭遇问题记录</a></li>
 <li><a href="http://lusir.me/sticky-footer.html">置 footer 于页面底部</a></li>
-<li><a href="http://lusir.me/shutdown-windows-in-cmd.html">Windows 下命令行关机</a></li>
+<li><a href="http://lusir.me/delete-watermarks-with-pitstop.html">通过 PitStop 插件批量删除水印</a></li>
+<li><a href="http://lusir.me/solutions-to-wp8.html">WP8 遭遇问题记录</a></li>
+<li><a href="http://lusir.me/customize-purecodec-player.html">修改注册表自定义完美解码播放器</a></li>
+<li><a href="http://lusir.me/after-enabling-application-cache.html">启用 Application Cache（续）</a></li>
 <li><a href="http://lusir.me/notes-of-win-pelican.html">Pelican 在 Windows 下的静态文件及目录拷贝</a></li>
+<li><a href="http://lusir.me/embed-hermit-player.html">在网页中嵌入 hermit 播放器</a></li>
 </ul>
  
 </div></div>

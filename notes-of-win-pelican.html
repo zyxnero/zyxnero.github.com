@@ -137,24 +137,25 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p>这样一来就好理解多了，记录一下……</p>
 <p><strong>update 2015.03.05</strong>：Windows 与 Linux 的路径分隔符差异是一个需要注意的地方，前阵子将 Windows 中 Firefox 下的正常 uc 脚本拿到 Linux 下去使用结果发现没反应，检查好久才发现是路径分隔符在作祟。</p>
 <p>全世界是不是都在下雨……</p>
-<div class="hermit" netease="songlist:5243367" loop="1" auto="1">
-<div class="hermit-box">
-<div class="hermit-controls">
-<div class="hermit-button"></div>
-<div class="hermit-detail">左键轻击列表播放或暂停</div>
-<div class="hermit-duration"></div>
-<div class="hermit-volume"></div>
-<div class="hermit-listbutton"></div>
-</div>
-<div class="hermit-prosess">
-<div class="hermit-loaded"></div>
-<div class="hermit-prosess-bar">
-<div class="hermit-prosess-after"></div>
-</div>
-</div>
-</div>
-<div class="hermit-list"></div>
-</div>
+<div id="player" class="aplayer"></div>
+
+<script>
+var ap = new APlayer({
+    element: document.getElementById('player'),
+    narrow: false,
+    autoplay: true,
+    showlrc: false,
+    mutex: true,
+    theme: '#615754',
+    mode: 'circulation',
+    listmaxheight: '297px',
+    preload: 'auto',
+    music: [
+    {title: '下雨天',author: '南拳妈妈',
+    url: 'http://m2.music.126.net/O6iljKz8Bgwsll2JqxnoTA==/1187472558006444.mp3',
+    pic: 'http://p1.music.126.net/gJkg-Ibvz6psMLdpC0opbg==/104453604656007.jpg',}
+    ]});
+</script>
 </div>
     
 <div id="content-comments">
@@ -211,14 +212,14 @@ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="http://lusir.me/embed-html5-media.html">在网页中嵌入 html5 音视频</a></li>
-<li><a href="http://lusir.me/solution-to-insufficient-permissions.html">Weibo 提示 “Insufficient App Permissions” 的解决办法</a></li>
-<li><a href="http://lusir.me/customize-purecodec-player.html">修改注册表自定义完美解码播放器</a></li>
-<li><a href="http://lusir.me/embed-hermit-player.html">在网页中嵌入 hermit 播放器</a></li>
-<li><a href="http://lusir.me/delete-watermarks-with-pitstop.html">通过 PitStop 插件批量删除水印</a></li>
-<li><a href="http://lusir.me/enable-keyboard-in-linux.html">Linux 下 Lenovo S10-3C 开启键盘</a></li>
-<li><a href="http://lusir.me/solutions-to-wp8.html">WP8 遭遇问题记录</a></li>
 <li><a href="http://lusir.me/sticky-footer.html">置 footer 于页面底部</a></li>
+<li><a href="http://lusir.me/delete-watermarks-with-pitstop.html">通过 PitStop 插件批量删除水印</a></li>
+<li><a href="http://lusir.me/google-cse-for-pelican.html">整合 Google 自定义搜索到 Pelican</a></li>
+<li><a href="http://lusir.me/solutions-to-wp8.html">WP8 遭遇问题记录</a></li>
+<li><a href="http://lusir.me/customize-purecodec-player.html">修改注册表自定义完美解码播放器</a></li>
+<li><a href="http://lusir.me/static-blog.html">Pelican + Niux2 使用记录</a></li>
+<li><a href="http://lusir.me/after-enabling-application-cache.html">启用 Application Cache（续）</a></li>
+<li><a href="http://lusir.me/solution-to-insufficient-permissions.html">Weibo 提示 “Insufficient App Permissions” 的解决办法</a></li>
 </ul>
  
 </div></div>

@@ -144,9 +144,9 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 
 <p>上面那段的具体意思我也不太清楚，大概就是使用正则式将 url 分为 3 部分，以 q 为分界点，我们需要的就是 q= 之后的那部分（即 context）。匹配成功之后利用 context 给 title 赋值，但是这样赋值之后的 title 不能正确显示中文字符，所以需要使用关键字 decodeURIComponent 来将 context 还原成中文字符。</p>
 <h3 id="effe4bed8cea1f7d427c950a4d195981">第五步：调整 CSS</h3>
-<p>功能实现了之后就是美化了。按照自己的意愿调整CSS即可。  <br/><br/></p>
-<p>大功告成，此后就可以在主题原始的搜索框上使用 Google 自定义搜索了。<br/><br/></p>
-<p>PS：研究这一功能的过程中参考了以下文章：</p>
+<p>功能实现了之后就是美化了。按照自己的意愿调整CSS即可。</p>
+<p>大功告成，此后就可以在主题原始的搜索框上使用 Google 自定义搜索了。</p>
+<p>PS：参考文章如下：</p>
 <ul>
 <li><a href="http://blog.wpjam.com/article/google-cse-for-wordpress/" title="无缝整合 Google 自定义搜索框到 WordPress">无缝整合 Google 自定义搜索框到 WordPress</a></li>
 <li><a href="http://www.ncku.edu.tw/~rcenter/book/html/JavaScript.html" title="簡易JavaScript語法結構">簡易JavaScript語法結構</a></li>
@@ -207,8 +207,8 @@ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="http://lusir.me/static-blog.html">Pelican + Niux2 使用记录</a></li>
 <li><a href="http://lusir.me/notes-of-win-pelican.html">Pelican 在 Windows 下的静态文件及目录拷贝</a></li>
+<li><a href="http://lusir.me/static-blog.html">Pelican + Niux2 使用记录</a></li>
 </ul>
  
 </div></div>
