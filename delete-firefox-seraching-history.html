@@ -11,10 +11,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="RTL8187 CW 小记 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="清理 Firefox 搜索记录 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>RTL8187 CW 小记 - 擼sirの避風港</title>
+<title>清理 Firefox 搜索记录 - 擼sirの避風港</title>
 <link href="http://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="http://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="http://lusir.me/images/favicon/favicon.ico" />
@@ -33,7 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="http://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="http://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
-<link rel="canonical" href="http://lusir.me/minidwep-cw-record.html" />
+<link rel="canonical" href="http://lusir.me/delete-firefox-seraching-history.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="http://lusir.me/theme/js/html5shiv.js"></script>
@@ -90,40 +90,23 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 
-<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">RTL8187 CW 小记</h1></div>
+<div id="body-content" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">清理 Firefox 搜索记录</h1></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>搬“家”之后就得 CW 以解燃眉之急。我用的是傻瓜工具 <code>VMware + CDLinux + minidwep</code>。
+<p>整理一下清理 Firefox 搜索记录的方法。
 </p>
-<h3 id="85bcb58bc46753c97220abbe5ff00a79">VMware 提示 USB 设备正在使用中</h3>
-<p>我用的是绿色版的 <code>VMware Workstation 8</code>，所以出现这个提示的时候我的第一反应是 VMware 的 USB 服务没有启动。事实是 <code>VMware Workstation 8</code> 不支持 USB3.0。根据电脑现有的情况（只有一个 USB2.0 接口）我选择了升级 VMware 到 10.0.3。</p>
-<h3 id="693031d990b3aa4d643c9c45b7b05bd8">保存 minidwep 进度</h3>
-<p>跑 pin 也是要有经验的，pin 排序合理了能省不少时间。我是个外码，所以需要的时间比较长。CDLinux 太过小巧，有必要进行进度保存。</p>
-<ol>
-<li>
-<p>记住排序码；</p>
-</li>
-<li>
-<p>到 <code>/tmp/minidwep</code> 目录下打开需要保存进度的 mac 地址对应的 <code>.wpc</code> 文件，记下第一行数字；</p>
-</li>
-</ol>
-<p>同上，恢复进度为其逆向过程：</p>
-<ol>
-<li>
-<p>使用 <code>minidwep</code> 扫描并选中需要恢复进度的信号；</p>
-</li>
-<li>
-<p>输入之前保存的排序码；</p>
-</li>
-<li>
-<p>到 <code>/tmp/minidwep</code> 目录下打开需要恢复进度的 mac 地址对应的 <code>.wpc</code> 文件，输入上次记录的第一行数字；</p>
-</li>
-<li>
-<p>点击 <code>Reaver</code> 接着 pin。</p>
-</li>
-</ol>
-<p>PS：如果通过某种算法已经能够确定对方的 pin 码，则通过修改  <code>/tmp/minidwep</code> 目录下的对应的 <code>.wpc</code> 文件中的前 3 行数值就能直接定位到 pin 码。第一行数值与 pin 码的前 4 位关联（故最大修改为 4 位数）；第二行数值与 pin 码后 4 位中的前 3 位关联（故最大修改为 3 位数）；第三行数值与 pin 码的最后一位（校验位）关联，故为 1 位数。假定某 pin 码为 35108146，pin 排序为 0123456789，则将对应的 <code>.wpc</code> 文件中的前 3 行数值分别修改为 <code>3510</code>，<code>814</code>，<code>6</code> 即可直接定位。</p>
-<p>待续……</p>
+<p>Firefox 用久了就会产生很多垃圾文件，包括搜索记录。一般直接在设置里面清除表单和搜索历史，如下图。</p>
+<p><a href="http://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery">
+    <img class="aligncenter" src="http://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" alt="删除 Firefox 搜索记录" />
+</a></p>
+<p>但如果想选择性的删掉其中的某些记录，就需要找到搜索记录数据库文件并修改该文件了。</p>
+<p>数据库目录是：<code>\我的火狐配置\formhistory.sqlite</code></p>
+<p>打开该文件，并清理其中的项目，如下图。</p>
+<p><a href="http://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery">
+    <img class="aligncenter" src="http://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" alt="删除 Firefox 搜索记录" />
+</a></p>
+<p>顺便记录一下让 Firefox 地址下拉栏不显示的方法：</p>
+<p>进入 <code>about:config</code>，搜索 <code>browser.urlbar.maxRichResults</code> 项并将其值修改为 -1。以后地址栏下拉就不会显示一长串访问地址历史记录了。</p>
 </div>
     
 <div id="content-comments">
@@ -144,12 +127,11 @@ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2014-11-29 17:25</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2017-05-31 20:27</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/cdlinux.html">CDLinux</a></div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/vmware.html">Vmware</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/firefox.html">Firefox</a></div>
  
 </div>
 
@@ -158,24 +140,31 @@ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">RTL8187 CW 小记</a></li>
-    <li><a href='#85bcb58bc46753c97220abbe5ff00a79'>VMware 提示 USB 设备正在使用中</a></li><li><a href='#693031d990b3aa4d643c9c45b7b05bd8'>保存 minidwep 进度</a></li>
+<li><a href="#content-heading">清理 Firefox 搜索记录</a></li>
+    
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;RTL8187 CW 小记
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;清理 Firefox 搜索记录
 </div>
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="http://lusir.me/reset-gapps-account.html">上一篇</a></li>
-<li class="next"><a href="http://lusir.me/palemoon-tab-modify.html">下一篇</a></li>
+<li class="prev"><a href="http://lusir.me/win7-running-record.html">上一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
+<p>相关文章</p>
+<ul>
+<li><a href="http://lusir.me/modify-firefox-search-engine.html">修改 Firefox 搜索引擎</a></li>
+<li><a href="http://lusir.me/create-url-shortcuts-with-firefox.html">利用 Firefox 为网页链接创建桌面快捷方式</a></li>
+<li><a href="http://lusir.me/mason-usage.html">Mason 两个基础用法</a></li>
+<li><a href="http://lusir.me/stylish2-editor-uc.html">Stylish2.0 Editor UC 脚本</a></li>
+<li><a href="http://lusir.me/palemoon-tab-modify.html">PaleMoon 修改起始页</a></li>
+</ul>
  
 </div></div>
 </div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">

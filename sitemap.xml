@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/index.html</loc>
-<lastmod>2017-05-06T22:13:42-00:00</lastmod>
+<lastmod>2017-05-31T21:54:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://lusir.me/archives.html</loc>
-<lastmod>2017-05-06T22:13:42-00:00</lastmod>
+<lastmod>2017-05-31T21:54:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://lusir.me/categories.html</loc>
-<lastmod>2017-05-06T22:13:42-00:00</lastmod>
+<lastmod>2017-05-31T21:54:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -35,6 +35,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://lusir.me/gallery.html</loc>
 <lastmod>2014-01-19T01:40:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://lusir.me/delete-firefox-seraching-history.html</loc>
+<lastmod>2017-05-31T20:27:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -628,7 +635,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/record/index.html</loc>
-<lastmod>2017-04-24T16:08:00-00:00</lastmod>
+<lastmod>2017-05-31T20:27:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -663,7 +670,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/tag/firefox.html</loc>
-<lastmod>2015-02-28T22:38:00-00:00</lastmod>
+<lastmod>2017-05-31T20:27:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1174,7 +1181,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/author/nero-zheng.html</loc>
-<lastmod>2017-04-24T16:08:00-00:00</lastmod>
+<lastmod>2017-05-31T20:27:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

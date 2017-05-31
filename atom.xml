@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2017-04-24T16:08:00+08:00</updated><entry><title>Win7 运行栏不保存历史记录的解决办法</title><link href="http://lusir.me/win7-running-record.html" rel="alternate"></link><updated>2017-04-24T16:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-24:win7-running-record.html</id><summary type="html">&lt;p&gt;偶尔会碰到优化过度的 Windows 系统，运行框内没有历史记录。本篇记录一下恢复记录的解决办法。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2017-05-31T20:27:00+08:00</updated><entry><title>清理 Firefox 搜索记录</title><link href="http://lusir.me/delete-firefox-seraching-history.html" rel="alternate"></link><updated>2017-05-31T20:27:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-05-31:delete-firefox-seraching-history.html</id><summary type="html">&lt;p&gt;整理一下清理 Firefox 搜索记录的方法。
+&lt;/p&gt;
+&lt;p&gt;Firefox 用久了就会产生很多垃圾文件，包括搜索记录。一般直接在设置里面清除表单和搜索历史，如下图。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" alt="删除 Firefox 搜索记录" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但如果想选择性的删掉其中的某些记录，就需要找到搜索记录数据库文件并修改该文件了。&lt;/p&gt;
+&lt;p&gt;数据库目录是：&lt;code&gt;\我的火狐配置\formhistory.sqlite&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;打开该文件，并清理其中的项目，如下图。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" alt="删除 Firefox 搜索记录" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;顺便记录一下让 Firefox 地址下拉栏不显示的方法：&lt;/p&gt;
+&lt;p&gt;进入 &lt;code&gt;about:config&lt;/code&gt;，搜索 &lt;code&gt;browser.urlbar.maxRichResults&lt;/code&gt; 项并将其值修改为 -1。以后地址栏下拉就不会显示一长串访问地址历史记录了。&lt;/p&gt;</summary><category term="Firefox"></category></entry><entry><title>Win7 运行栏不保存历史记录的解决办法</title><link href="http://lusir.me/win7-running-record.html" rel="alternate"></link><updated>2017-04-24T16:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-24:win7-running-record.html</id><summary type="html">&lt;p&gt;偶尔会碰到优化过度的 Windows 系统，运行框内没有历史记录。本篇记录一下恢复记录的解决办法。
 &lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Q1：打开 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;，以前输入过的网络路径、命令全都没有记录，非常不方便。&lt;/p&gt;
@@ -516,62 +529,4 @@ browser.safebrowsing.dataProvider —— -1
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;如此这般，搜索结果将更加准确直接。&lt;/p&gt;
-&lt;p&gt;我已将 searchplugins 文件夹下的其余 xml 文件删掉……&lt;/p&gt;</summary><category term="Firefox"></category></entry><entry><title>Linux 中的复制与打包命令</title><link href="http://lusir.me/cp-and-tar.html" rel="alternate"></link><updated>2015-02-22T17:12:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-22:cp-and-tar.html</id><summary type="html">&lt;p&gt;最基本的 Linux 命令 &lt;code&gt;cp&lt;/code&gt; 与 &lt;code&gt;tar&lt;/code&gt;，粘贴至此以作备忘。
-&lt;/p&gt;
-&lt;h3 id="9c95319bf274672d6eae7eb97c3dfda5"&gt;cp&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;cp&lt;/code&gt; 是常见的复制文件或目录的命令，是 copy 的缩写。譬如：&lt;/p&gt;
-&lt;p&gt;复制文件&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;cp /path/a /path/b
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;复制文件夹&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;cp -r /path/dir-a /path/dir-b
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;code&gt;cp&lt;/code&gt; 的一些常见的参数：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;-a：相当于 -pd --preserve=all；&lt;/li&gt;
-&lt;li&gt;-b：类似 --backup，但不接受任何参数；&lt;/li&gt;
-&lt;li&gt;-d：若存在软链接档案，则复制链接文件的属性，而非文件本身；&lt;/li&gt;
-&lt;li&gt;-f：意为 force，强制覆盖；&lt;/li&gt;
-&lt;li&gt;-i：在覆盖相同档案时询问；&lt;/li&gt;
-&lt;li&gt;-r：递归参数，一般用于复制目录。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;详情使用 &lt;code&gt;man cp&lt;/code&gt; 来查看。&lt;/p&gt;
-&lt;h3 id="db5570bf61464b46e2bde31ed61a7dc6"&gt;tar&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;tar&lt;/code&gt; 命令可以对档案进行打包备份操作。&lt;/p&gt;
-&lt;p&gt;一些常见的参数：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;-c：create，建立一个 tar 包；&lt;/li&gt;
-&lt;li&gt;-x：解开一个压缩包；&lt;/li&gt;
-&lt;li&gt;-t：查看 tar 里的文件；&lt;/li&gt;
-&lt;li&gt;-z：使用 gzip 来压缩；&lt;/li&gt;
-&lt;li&gt;-j：使用 bzip2 来压缩；&lt;/li&gt;
-&lt;li&gt;-J：若存在 xz lzip lzma，则可以直接打包成 xz lzip lzma；&lt;/li&gt;
-&lt;li&gt;-v：列出打包进程；&lt;/li&gt;
-&lt;li&gt;-f：tar 包名，-f 参数后需紧跟 tar 包名；&lt;/li&gt;
-&lt;li&gt;-p：保留文件权限。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;常见的打包命令&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;tar cvf /path/name.tar /path/name
-tar cvjf /path/name.tar.bz2 /path/name
-tar cvzf /path/name.tar.gz /path/name
-tar cvJf /path/name.tar.xz /path/name
-tar cvJf /path/name.tar.lzma /path/name
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;常见的解包命令&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;tar xvf /path/name.tar
-tar xvjf /path/name.tar.bz2
-tar xvzf /path/name.tar.gz
-tar xvJf /path/name.tar.xz
-tar xvJf /path/name.tar.lzma
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;详细命令可以使用 &lt;code&gt;man tar&lt;/code&gt; 来查看，需注意的是单纯 &lt;code&gt;tar&lt;/code&gt; 仅打包不压缩。&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;
-节选自&lt;a href="http://havee.me/linux/2014-12/copy-backup-and-mirror-image-on-linux.html" title="Linux 上的复制、备份与镜像"&gt;《Linux 上的复制、备份与镜像》&lt;/a&gt;。&lt;/p&gt;</summary><category term="Linux"></category></entry></feed>
+&lt;p&gt;我已将 searchplugins 文件夹下的其余 xml 文件删掉……&lt;/p&gt;</summary><category term="Firefox"></category></entry></feed>
