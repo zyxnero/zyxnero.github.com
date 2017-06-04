@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2017-05-31T20:27:00+08:00</updated><entry><title>清理 Firefox 搜索记录</title><link href="http://lusir.me/delete-firefox-seraching-history.html" rel="alternate"></link><updated>2017-05-31T20:27:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-05-31:delete-firefox-seraching-history.html</id><summary type="html">&lt;p&gt;整理一下清理 Firefox 搜索记录的方法。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2017-06-04T10:57:00+08:00</updated><entry><title>cmder 中文显示乱码</title><link href="http://lusir.me/repair-the-garbled-chinese-in-cmder.html" rel="alternate"></link><updated>2017-06-04T10:57:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-06-04:repair-the-garbled-chinese-in-cmder.html</id><summary type="html">&lt;p&gt;整理一下 cmder 中文显示乱码及重叠问题的方法。
+&lt;/p&gt;
+&lt;h3 id="e7cdff1528689ef0374c8e81356e9406"&gt;解决中文重叠问题&lt;/h3&gt;
+&lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Main 菜单下去掉 Monospace 前面的勾选，如图。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cmder-chinese-encode.png" title="cmder 中文显示重叠" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/cmder-chinese-encode.png" alt="cmder 中文显示重叠" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PS：据说这个问题在 v1.3.0 以上版本中已经修复，不需要进行任何操作。但我的 v1.2.9 不进行操作也显示正常。&lt;/p&gt;
+&lt;h3 id="e37ddfc7be6a1ba58af40607e923c0d3"&gt;解决中文乱码问题&lt;/h3&gt;
+&lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Environment 菜单的变量中添加 &lt;code&gt;chcp utf-8&lt;/code&gt;，如图。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cmder-chinese-encode-2.png" title="cmder 中文显示乱码" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/cmder-chinese-encode-2.png" alt="cmder 中文显示乱码" /&gt;
+&lt;/a&gt;&lt;/p&gt;</summary><category term="cmder"></category></entry><entry><title>清理 Firefox 搜索记录</title><link href="http://lusir.me/delete-firefox-seraching-history.html" rel="alternate"></link><updated>2017-05-31T20:27:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-05-31:delete-firefox-seraching-history.html</id><summary type="html">&lt;p&gt;整理一下清理 Firefox 搜索记录的方法。
 &lt;/p&gt;
 &lt;p&gt;Firefox 用久了就会产生很多垃圾文件，包括搜索记录。一般直接在设置里面清除表单和搜索历史，如下图。&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery"&gt;
@@ -12,19 +24,7 @@
     &lt;img class="aligncenter" src="http://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" alt="删除 Firefox 搜索记录" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;顺便记录一下让 Firefox 地址下拉栏不显示的方法：&lt;/p&gt;
-&lt;p&gt;进入 &lt;code&gt;about:config&lt;/code&gt;，搜索 &lt;code&gt;browser.urlbar.maxRichResults&lt;/code&gt; 项并将其值修改为 -1。以后地址栏下拉就不会显示一长串访问地址历史记录了。&lt;/p&gt;</summary><category term="Firefox"></category></entry><entry><title>cmder 中文显示乱码</title><link href="http://lusir.me/repair-the-garbled-chinese-in-cmder.html" rel="alternate"></link><updated>2017-05-31T20:27:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-05-31:repair-the-garbled-chinese-in-cmder.html</id><summary type="html">&lt;p&gt;整理一下 cmder 中文显示乱码及重叠问题的方法。
-&lt;/p&gt;
-&lt;h3 id="e7cdff1528689ef0374c8e81356e9406"&gt;解决中文重叠问题&lt;/h3&gt;
-&lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Main 菜单下去掉 Monospace 前面的勾选，如图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cmder-chinese-encode.png" title="cmder 中文显示重叠" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/cmder-chinese-encode.png" alt="cmder 中文显示重叠" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PS：据说这个问题在 v1.3.0 以上版本中已经修复，不需要进行任何操作。但我的 v1.2.9 不进行操作也显示正常。&lt;/p&gt;
-&lt;h3 id="e37ddfc7be6a1ba58af40607e923c0d3"&gt;解决中文乱码问题&lt;/h3&gt;
-&lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Environment 菜单的变量中添加 &lt;code&gt;chcp utf-8&lt;/code&gt;，如图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cmder-chinese-encode-2.png" title="cmder 中文显示乱码" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/cmder-chinese-encode-2.png" alt="cmder 中文显示乱码" /&gt;
-&lt;/a&gt;&lt;/p&gt;</summary><category term="cmder"></category></entry><entry><title>Win7 运行栏不保存历史记录的解决办法</title><link href="http://lusir.me/win7-running-record.html" rel="alternate"></link><updated>2017-04-24T16:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-24:win7-running-record.html</id><summary type="html">&lt;p&gt;偶尔会碰到优化过度的 Windows 系统，运行框内没有历史记录。本篇记录一下恢复记录的解决办法。
+&lt;p&gt;进入 &lt;code&gt;about:config&lt;/code&gt;，搜索 &lt;code&gt;browser.urlbar.maxRichResults&lt;/code&gt; 项并将其值修改为 -1。以后地址栏下拉就不会显示一长串访问地址历史记录了。&lt;/p&gt;</summary><category term="Firefox"></category></entry><entry><title>Win7 运行栏不保存历史记录的解决办法</title><link href="http://lusir.me/win7-running-record.html" rel="alternate"></link><updated>2017-04-24T16:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-24:win7-running-record.html</id><summary type="html">&lt;p&gt;偶尔会碰到优化过度的 Windows 系统，运行框内没有历史记录。本篇记录一下恢复记录的解决办法。
 &lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Q1：打开 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;，以前输入过的网络路径、命令全都没有记录，非常不方便。&lt;/p&gt;
