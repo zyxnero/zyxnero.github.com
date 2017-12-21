@@ -201,8 +201,5 @@ a img {padding:2px;border:1px solid #aaa;-webkit-box-shadow:rgba(0,0,0,.2) 0px 0
 #back-to-home{background:#adeb51 none repeat scroll 0 0;border-color:#d0f29d #398a38 #398a38 #d0f29d;border-style:solid;border-width:1px;color:#333;font-size:16px;margin-right:19px;padding:6px;text-decoration:none;-moz-border-radius:5px;-webkit-border-radius:5px;}
 .button:hover,#back-to-home:hover{background:#9CD941;}
 
-.post-meta {color: rgba(0, 0, 0, 0.44);font-size: 16px;font-family: dinmedium;margin: -12px 0 18px 0px;}
+.post-meta {color: rgba(0, 0, 0, 0.44);font-size: 18px;font-family: dinmedium;margin: -12px 0 18px 0px;}
 #content-heading {font-size: 30px;}
-.col-md-8 {width: 60%;}
-.col-md-offset-2  {margin-left: 20%;}
-@media (min-width:1080px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}
