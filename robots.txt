@@ -26,4 +26,4 @@ Disallow: /donate.html
 Disallow: /wumii-verification.htm
 Disallow: /jquery.min.map
 
-Sitemap: http://lusir.me/sitemap.xml
+Sitemap: https://lusir.me/sitemap.xml

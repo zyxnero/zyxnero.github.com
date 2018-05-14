@@ -3,25 +3,25 @@
 &lt;/p&gt;
 &lt;h3 id="e7cdff1528689ef0374c8e81356e9406"&gt;解决中文重叠问题&lt;/h3&gt;
 &lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Main 菜单下去掉 Monospace 前面的勾选，如图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cmder-chinese-encode.png" title="cmder 中文显示重叠" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/cmder-chinese-encode.png" alt="cmder 中文显示重叠" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/cmder-chinese-encode.png" title="cmder 中文显示重叠" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/cmder-chinese-encode.png" alt="cmder 中文显示重叠" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;PS：据说这个问题在 v1.3.0 以上版本中已经修复，不需要进行任何操作。但我的 v1.2.9 不进行操作也显示正常。&lt;/p&gt;
 &lt;h3 id="e37ddfc7be6a1ba58af40607e923c0d3"&gt;解决中文乱码问题&lt;/h3&gt;
 &lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Environment 菜单的变量中添加 &lt;code&gt;chcp utf-8&lt;/code&gt;，如图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cmder-chinese-encode-2.png" title="cmder 中文显示乱码" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/cmder-chinese-encode-2.png" alt="cmder 中文显示乱码" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/cmder-chinese-encode-2.png" title="cmder 中文显示乱码" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/cmder-chinese-encode-2.png" alt="cmder 中文显示乱码" /&gt;
 &lt;/a&gt;&lt;/p&gt;</summary><category term="cmder"></category></entry><entry><title>清理 Firefox 搜索记录</title><link href="http://lusir.me/delete-firefox-seraching-history.html" rel="alternate"></link><updated>2017-05-31T20:27:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-05-31:delete-firefox-seraching-history.html</id><summary type="html">&lt;p&gt;整理一下清理 Firefox 搜索记录的方法。
 &lt;/p&gt;
 &lt;p&gt;Firefox 用久了就会产生很多垃圾文件，包括搜索记录。一般直接在设置里面清除表单和搜索历史，如下图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" alt="删除 Firefox 搜索记录" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" alt="删除 Firefox 搜索记录" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;但如果想选择性的删掉其中的某些记录，就需要找到搜索记录数据库文件并修改该文件了。&lt;/p&gt;
 &lt;p&gt;数据库目录是：&lt;code&gt;\我的火狐配置\formhistory.sqlite&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;打开该文件，并清理其中的项目，如下图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" alt="删除 Firefox 搜索记录" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" alt="删除 Firefox 搜索记录" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;顺便记录一下让 Firefox 地址下拉栏不显示的方法：&lt;/p&gt;
 &lt;p&gt;进入 &lt;code&gt;about:config&lt;/code&gt;，搜索 &lt;code&gt;browser.urlbar.maxRichResults&lt;/code&gt; 项并将其值修改为 -1。以后地址栏下拉就不会显示一长串访问地址历史记录了。&lt;/p&gt;</summary><category term="Firefox"></category></entry><entry><title>Win7 运行栏不保存历史记录的解决办法</title><link href="http://lusir.me/win7-running-record.html" rel="alternate"></link><updated>2017-04-24T16:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-24:win7-running-record.html</id><summary type="html">&lt;p&gt;偶尔会碰到优化过度的 Windows 系统，运行框内没有历史记录。本篇记录一下恢复记录的解决办法。
@@ -29,14 +29,14 @@
 &lt;hr /&gt;
 &lt;p&gt;Q1：打开 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;，以前输入过的网络路径、命令全都没有记录，非常不方便。&lt;/p&gt;
 &lt;p&gt;A：右键点击开始菜单，点击“属性”，勾选&lt;code&gt;“存储并显示最近在开始菜单中打开的程序”&lt;/code&gt;，如下图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-running-record.png" title="恢复运行栏保存历史记录" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/win7-running-record.png" alt="恢复运行栏保存历史记录" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/win7-running-record.png" title="恢复运行栏保存历史记录" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/win7-running-record.png" alt="恢复运行栏保存历史记录" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Q2：Q1解决方法中的&lt;code&gt;“存储并显示最近在开始菜单中打开的程序”&lt;/code&gt;复选框灰色不可用。&lt;/p&gt;
 &lt;p&gt;A：打开 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;，输入&lt;code&gt;gpedit.msc&lt;/code&gt;，打开“组策略”，在左侧选项中依次点击“用户配置”、“管理模板”、“开始菜单和任务栏”，然后在右侧的选项中双击“关闭用户跟踪”，选择“已禁用”即可，如下图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/win7-running-record-2.png" title="恢复运行栏保存历史记录" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/win7-running-record-2.png" alt="恢复运行栏保存历史记录" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/win7-running-record-2.png" title="恢复运行栏保存历史记录" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/win7-running-record-2.png" alt="恢复运行栏保存历史记录" /&gt;
 &lt;/a&gt;&lt;/p&gt;</summary><category term="Win7"></category></entry><entry><title>Sublime 侧边栏字体大小调整</title><link href="http://lusir.me/customize-sidebar-font-of-sublime.html" rel="alternate"></link><updated>2017-04-23T13:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-23:customize-sidebar-font-of-sublime.html</id><summary type="html">&lt;p&gt;最近感觉视力好像又下降了，无奈。前几天调大了 Sublime Text 3 的侧边栏字体使正文区和侧边栏看起来更和谐。过程记录如下。
 &lt;/p&gt;
 &lt;h3 id="59b78b7a8b75e0b1373086e89ecce8be"&gt;安装插件 PackageResourceViewer&lt;/h3&gt;
@@ -91,8 +91,8 @@
 &lt;h3 id="7a82576ab61f9f1a41f392f2ba6a0460"&gt;共析钢&lt;/h3&gt;
 &lt;p&gt;碳溶解在铁的晶格中会形成固溶体，碳溶解到 α-铁中形成的固溶体叫铁素体（F），溶解到 γ-铁中的固溶体叫奥氏体（A）。铁素体与奥氏体都具有良好的塑性。当铁碳合金中的碳不能全部溶入铁素体或奥氏体中时，剩余出来的碳将与铁形成碳化铁（Fe&lt;sub&gt;3&lt;/sub&gt;C），这种化合物的晶体组织叫渗碳体，它的硬度极高，塑性几乎为零。&lt;/p&gt;
 &lt;p&gt;从铁碳平衡相图可见，当碳的含量正好等于 0.77% 时，该合金的相变是在恒温下实现的。即在这种特定比例下的渗碳体和铁素体在发生相变时，如果消失则两者同时消失（加热时），如果出现则两者又同时出现（冷却时），基于这个原因，人们把这种由特定比例构成的两相组织命名为珠光体（P），这种钢就叫做共析钢。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/eutectoid-steel.png" title="铁碳相图" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/eutectoid-steel.png" alt="铁碳相图" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/eutectoid-steel.png" title="铁碳相图" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="https://dn-nero.qbox.me/eutectoid-steel.png" alt="铁碳相图" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="2271b0fcf4b5e8cafc04a2115712eaf8"&gt;亚共析钢&lt;/h3&gt;
 &lt;p&gt;常用的结构钢含碳量大都在 0.5% 以下。由于含碳量低于 0.77%，所以组织中的铁素体除去一部分要与渗碳体形成珠光体外，还会有多余的出现，这种钢的组织是铁素体（F） + 珠光体（P）。碳含量越少，钢组织中珠光体比例也越小，钢的强度也越低，但塑性越好，这类钢统称为亚共析钢。&lt;/p&gt;
@@ -108,7 +108,7 @@
 &lt;li&gt;Arcm：过共析钢在冷却时奥氏体开始析出二次渗碳体的温度。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;其中 A 是法语临界点的首字母，c 是法语加热的首字母，r 是法语冷却的首字母。&lt;/p&gt;</summary><category term="机械常识"></category></entry><entry><title>PaleMoon 的几项优化</title><link href="http://lusir.me/several-optimization-of-palemoon.html" rel="alternate"></link><updated>2016-09-15T16:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-15:several-optimization-of-palemoon.html</id><summary type="html">&lt;p&gt;今天是中秋佳节，祝大家国庆快乐！！！&lt;/p&gt;
-&lt;p&gt;2014 年记录过一篇 &lt;a href="http://lusir.me/palemoon-tab-modify.html" title="PaleMoon 修改起始页"&gt;修改 PaleMoon 起始页&lt;/a&gt; 的文章，本文接着记。&lt;/p&gt;
+&lt;p&gt;2014 年记录过一篇 &lt;a href="https://lusir.me/palemoon-tab-modify.html" title="PaleMoon 修改起始页"&gt;修改 PaleMoon 起始页&lt;/a&gt; 的文章，本文接着记。&lt;/p&gt;
 
 
 &lt;h3 id="4f95ed363fe3f8d9ef17b4a1aca2fd91"&gt;禁用 urlclassifier3.sqlite&lt;/h3&gt;
@@ -144,21 +144,21 @@ browser.safebrowsing.dataProvider —— -1
 &lt;/ol&gt;
 &lt;h3 id="09ded52d159061f26b12a095d10dad72"&gt;自定义命令快捷键&lt;/h3&gt;
 &lt;p&gt;依次点击 &lt;code&gt;工具&lt;/code&gt; → &lt;code&gt;自定义&lt;/code&gt; → &lt;code&gt;编辑程序参数&lt;/code&gt;，或直接打开 &lt;code&gt;PCCAD2010&lt;/code&gt; 根目录下的 &lt;code&gt;acad.pgp&lt;/code&gt; 文件，并在文件最后添加需要自定义的快捷键，保存后使用 &lt;code&gt;reinit&lt;/code&gt; 命令刷新 &lt;code&gt;acad.pgp&lt;/code&gt; 即可生效，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cad-hotkey-setting-2.jpg" title="自定义 CAD 命令快捷键" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/cad-hotkey-setting-2.jpg" alt="自定义 CAD 命令快捷键" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/cad-hotkey-setting-2.jpg" title="自定义 CAD 命令快捷键" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/cad-hotkey-setting-2.jpg" alt="自定义 CAD 命令快捷键" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="5861fd52feadb27efb78eb002421bfeb"&gt;自定义键盘快捷键&lt;/h3&gt;
 &lt;p&gt;以设置 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;W&lt;/kbd&gt; 作为关闭当前图纸为例，依次点击 &lt;code&gt;工具&lt;/code&gt; → &lt;code&gt;自定义&lt;/code&gt; → &lt;code&gt;界面&lt;/code&gt;，在命令列表中搜索 &lt;code&gt;关闭&lt;/code&gt;，将其拖入 &lt;code&gt;工作空间&lt;/code&gt; 下的 &lt;code&gt;键盘快捷键&lt;/code&gt;，于窗口右侧设置快捷键后确定即可，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/cad-hotkey-setting-1.jpg" title="自定义 CAD 键盘快捷键" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/cad-hotkey-setting-1.jpg" alt="自定义 CAD 键盘快捷键" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/cad-hotkey-setting-1.jpg" title="自定义 CAD 键盘快捷键" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/cad-hotkey-setting-1.jpg" alt="自定义 CAD 键盘快捷键" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="e2555fe37ace93dac001d4291029fdbd"&gt;修改极限偏差字体高度&lt;/h3&gt;
 &lt;p&gt;PCCAD 默认的极限偏差字体大小与公称尺寸看起来不太协调，将其字体高度比例修改为 &lt;code&gt;0.44&lt;/code&gt; 看起来比较合适。依次点击 &lt;code&gt;标注&lt;/code&gt; → &lt;code&gt;标注样式&lt;/code&gt; → &lt;code&gt;修改&lt;/code&gt; → &lt;code&gt;公差&lt;/code&gt;，在 &lt;code&gt;方式&lt;/code&gt; 中选择 &lt;code&gt;极限偏差&lt;/code&gt;，设置高度比例为 &lt;code&gt;0.44&lt;/code&gt;，接着将 &lt;code&gt;方式&lt;/code&gt; 改为 &lt;code&gt;无&lt;/code&gt; 即可，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/pccad-tolerance-1.jpg" title="修改极限偏差字体高度-1" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/pccad-tolerance-1.jpg" alt="修改极限偏差字体高度-1" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/pccad-tolerance-1.jpg" title="修改极限偏差字体高度-1" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/pccad-tolerance-1.jpg" alt="修改极限偏差字体高度-1" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/pccad-tolerance-2.jpg" title="修改极限偏差字体高度-2" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/pccad-tolerance-2.jpg" alt="修改极限偏差字体高度-2" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/pccad-tolerance-2.jpg" title="修改极限偏差字体高度-2" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/pccad-tolerance-2.jpg" alt="修改极限偏差字体高度-2" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;以上。。。&lt;/p&gt;</summary><category term="AutoCAD"></category></entry><entry><title>设置 cmder 默认目录</title><link href="http://lusir.me/set-default-dir-of-cmder.html" rel="alternate"></link><updated>2016-09-11T21:24:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-11:set-default-dir-of-cmder.html</id><summary type="html">&lt;p&gt;目前主要用 cmder 来下载 youku 视频和 ximalaya 音频。方便起见，我直接把 cmder 开启后的默认目录设置为所需的下载目录了。
 &lt;/p&gt;
@@ -195,8 +195,8 @@ browser.safebrowsing.dataProvider —— -1
 &lt;li&gt;留意袋里程序提供的端口，举个栗子：54213；&lt;/li&gt;
 &lt;li&gt;打开 &lt;code&gt;TortoiseGit&lt;/code&gt;→进入设置→打开全局设置文件（如下图）&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/applying-tortoisegit-with-proxy.png" title="为 TortoiseGit 设置代理" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/applying-tortoisegit-with-proxy.png" alt="为 TortoiseGit 设置代理" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/applying-tortoisegit-with-proxy.png" title="为 TortoiseGit 设置代理" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/applying-tortoisegit-with-proxy.png" alt="为 TortoiseGit 设置代理" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在全局设置文件中添加以下两行&lt;/li&gt;
@@ -210,12 +210,12 @@ browser.safebrowsing.dataProvider —— -1
 &lt;p&gt;再次推送，成功提交！！！&lt;/p&gt;</summary><category term="Git"></category></entry><entry><title>用上了 You-Get</title><link href="http://lusir.me/try-you-get.html" rel="alternate"></link><updated>2016-07-14T22:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-07-14:try-you-get.html</id><summary type="html">&lt;p&gt;在优酷上订阅了几个视频节目，像《罗辑思维》、《暴走大事件》。之前一直在用硕鼠下载观看，不过前阵子硕鼠好像停止服务了，遂用上了开源跨平台的 &lt;a href="https://github.com/soimort/you-get/" title="You-Get"&gt;You-Get&lt;/a&gt;。之前在 Lubuntu 下使用过，绝对的神器！
 &lt;/p&gt;
 &lt;p&gt;从官网下载压缩包，解压即用。需要注意的是如果命令行里面提示“无法定位程序输入点ucrtbase.terminate”这个错误，那么去下载个&lt;code&gt;Microsoft Visual C++ 2015 Redistributable&lt;/code&gt;，安装以后就不会再报错了。如果命令行程序用的是 &lt;code&gt;Cmder&lt;/code&gt;，那么看起来就是这样的。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/you-get.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/you-get.png" alt="用上了 You-Get" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/you-get.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="https://dn-nero.qbox.me/you-get.png" alt="用上了 You-Get" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;update 2017.04.18&lt;/strong&gt;：近期 You-Get 的 Release 不提供 Win 下的预编译文件了，所以我使用 &lt;code&gt;pip install --upgrade you-get&lt;/code&gt; 命令在 Python3 的 Scripts 目录下生成了 &lt;code&gt;you-get.exe&lt;/code&gt; 并将它扔到了 Python2 的 Scripts 目录下（博客文章渲染需要使用 Python2），这个 100k 不到的 exe 文件居然也能正常下载合并文件，真神奇！&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/you-get-2.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
-    &lt;img class="aligncenter" src="http://dn-nero.qbox.me/you-get-2.png" alt="用上了 You-Get" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/you-get-2.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="https://dn-nero.qbox.me/you-get-2.png" alt="用上了 You-Get" /&gt;
 &lt;/a&gt;&lt;/p&gt;</summary><category term="You-Get"></category></entry><entry><title>升级到 Sublime Text 3</title><link href="http://lusir.me/get-to-sublime3.html" rel="alternate"></link><updated>2016-07-02T21:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-07-02:get-to-sublime3.html</id><summary type="html">&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
 &lt;/p&gt;
 &lt;h3 id="e655a410ff21cd07e7a0150491e04371"&gt;安装&lt;/h3&gt;
@@ -330,8 +330,8 @@ browser.safebrowsing.dataProvider —— -1
 &lt;li&gt;&lt;code&gt;F6&lt;/code&gt; 打开“参数选择”，在“连接”下的“字符编码”中选择 utf-8；&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;F4&lt;/code&gt; 打开“站点管理器”，在相应站点下设置“字符编码”为 utf-8；&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" title="参数选择" data-fancybox-group="gallery"&gt;&lt;img src="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" alt="参数选择" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" title="站点管理器" data-fancybox-group="gallery"&gt;&lt;img src="http://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" alt="站点管理器" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" title="参数选择" data-fancybox-group="gallery"&gt;&lt;img src="https://dn-nero.qbox.me/garbled-chinese-in-openwrt-1.png" alt="参数选择" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" title="站点管理器" data-fancybox-group="gallery"&gt;&lt;img src="https://dn-nero.qbox.me/garbled-chinese-in-openwrt-2.png" alt="站点管理器" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;再次打开站点目录，文件名中的中文已能正常识别。&lt;/p&gt;</summary><category term="Openwrt"></category></entry><entry><title>OpenWrt 设置 MAC 地址过滤</title><link href="http://lusir.me/macfilter-of-openwrt.html" rel="alternate"></link><updated>2016-06-09T20:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-06-09:macfilter-of-openwrt.html</id><summary type="html">&lt;p&gt;两年前入手的 360 路由器稳定性不是太好，需要定期恢复固件。
 &lt;/p&gt;
 &lt;p&gt;恢复固件的过程比较简单，用 &lt;code&gt;WinSCP&lt;/code&gt; 将本地的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 拷贝至路由 &lt;code&gt;/tmp&lt;/code&gt; 目录下，然后在 &lt;code&gt;Putty&lt;/code&gt; 下敲击：&lt;code&gt;mtd write -r /tmp/customized_backup.bin firmware&lt;/code&gt; 并回车即可完成系统恢复。不过个人习惯给无线设置 MAC 过滤，仅允许列表内 MAC 联网。&lt;/p&gt;
@@ -457,14 +457,14 @@ browser.safebrowsing.dataProvider —— -1
 &lt;li&gt;选择需共享的子网络点击 &lt;code&gt;下一步&lt;/code&gt;；&lt;/li&gt;
 &lt;li&gt;选择 &lt;code&gt;允许共享&lt;/code&gt; 并一路 &lt;code&gt;确定&lt;/code&gt;。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-sharing-lan-1.jpg" title="设置 ESS 允许共享局域网 - 1" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/ess-sharing-lan-1.jpg" alt="设置 ESS 允许共享局域网 - 1" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/ess-sharing-lan-1.jpg" title="设置 ESS 允许共享局域网 - 1" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/ess-sharing-lan-1.jpg" alt="设置 ESS 允许共享局域网 - 1" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-sharing-lan-2.jpg" title="设置 ESS 允许共享局域网 - 2" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/ess-sharing-lan-2.jpg" alt="设置 ESS 允许共享局域网 - 2" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/ess-sharing-lan-2.jpg" title="设置 ESS 允许共享局域网 - 2" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/ess-sharing-lan-2.jpg" alt="设置 ESS 允许共享局域网 - 2" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/ess-sharing-lan-3.jpg" title="设置 ESS 允许共享局域网 - 3" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/ess-sharing-lan-3.jpg" alt="设置 ESS 允许共享局域网 - 3" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/ess-sharing-lan-3.jpg" title="设置 ESS 允许共享局域网 - 3" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/ess-sharing-lan-3.jpg" alt="设置 ESS 允许共享局域网 - 3" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;至此，局域网共享应正常……&lt;/p&gt;</summary><category term="ESET Smart Security"></category></entry><entry><title>利用 Firefox 为网页链接创建桌面快捷方式</title><link href="http://lusir.me/create-url-shortcuts-with-firefox.html" rel="alternate"></link><updated>2015-02-28T22:38:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-28:create-url-shortcuts-with-firefox.html</id><summary type="html">&lt;p&gt;精简掉桌面右键的 &lt;code&gt;新建快捷方式&lt;/code&gt; 后，发现原来还可以通过 Firefox 为网页链接创建桌面快捷方式：
 &lt;/p&gt;
@@ -473,8 +473,8 @@ browser.safebrowsing.dataProvider —— -1
 &lt;li&gt;按住 &lt;code&gt;地址栏&lt;/code&gt; 左边的图标；&lt;/li&gt;
 &lt;li&gt;按住鼠标左键的同时，将指针移动到桌面，然后松开鼠标左键，快捷方式就创建好了。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/create-url-shortcuts-with-firefox.png" title="为网页链接创建桌面快捷方式" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/create-url-shortcuts-with-firefox.png" alt="为网页链接创建桌面快捷方式" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/create-url-shortcuts-with-firefox.png" title="为网页链接创建桌面快捷方式" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/create-url-shortcuts-with-firefox.png" alt="为网页链接创建桌面快捷方式" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;其实，如果是在 Win7 以上版本的 Windows 下，可以直接将图标拖至屏幕右下角，待返回至桌面松开鼠标左键即可创建。&lt;/p&gt;
 &lt;p&gt;同理，我们也可以拖放书签菜单、书签和历史记录栏或者 &lt;code&gt;我的足迹&lt;/code&gt; 窗口中的项目到桌面上从而为其创建快捷方式。&lt;/p&gt;
@@ -493,20 +493,20 @@ browser.safebrowsing.dataProvider —— -1
 &lt;p&gt;&lt;img src="http://img01.pixiv.net/img/gofu/9881084_m.jpg" alt="我本是一幅图，若此时你只能看到文字，证明该站依旧设置了防盗链功能。" width="600" /&gt;&lt;/p&gt;
 &lt;h4 id="10ef0f51638a9430fa2358f1fdeefc3f"&gt;Mason 反防盗链设置&lt;/h4&gt;
 &lt;p&gt;安装 Mason 后添加规则，如图设置，① 为防盗链图片包含网址，② 为该图能正常显示的网址，一般情况下 ① 与 ② 是同一个网址。&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/mason-pic-see.png" title="Mason 反防盗链设置" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/mason-pic-see.png" alt="Mason 反防盗链设置" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/mason-pic-see.png" title="Mason 反防盗链设置" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/mason-pic-see.png" alt="Mason 反防盗链设置" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;update 2015.02.28：&lt;code&gt;大发博客&lt;/code&gt; 及 &lt;code&gt;zdfans&lt;/code&gt; 的站在 Inoreader 中均无法显示图片，经如上设置即可解决。&lt;/p&gt;
 &lt;h3 id="7290830a92acb91db82d8495694544dd"&gt;Mason 重定向&lt;/h3&gt;
 &lt;p&gt;使用联通网时 Google 搜索结果中的 wikipedia 条目打开后会直接跳转到 &lt;code&gt;http://nfdnserror3.wo.com.cn&lt;/code&gt;。将 &lt;code&gt;http://zh.wikipedia.org&lt;/code&gt; 重定向到 &lt;code&gt;https://zh.wikipedia.org&lt;/code&gt; 或 &lt;code&gt;http://zh.wikipedia.org/zh-cn/&lt;/code&gt; 即可解决问题。&lt;/p&gt;
 &lt;h4 id="37a5fb72e91bbc07441fe9fabc117b8e"&gt;Mason 重定向设置&lt;/h4&gt;
 &lt;p&gt;添加规则：&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/mason-redirect-1.png" title="Mason 重定向设置 - 1" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/mason-redirect-1.png" alt="Mason 重定向设置 - 1" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/mason-redirect-1.png" title="Mason 重定向设置 - 1" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/mason-redirect-1.png" alt="Mason 重定向设置 - 1" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;点击配置后输入：&lt;code&gt;http://&amp;gt;*(https?://zh\.wikipedia\.org)/(wiki|zh|zh((?!\-cn)[^\/])+)/&amp;gt;*$1/zh-cn/&lt;/code&gt;，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/mason-redirect-2.png" title="Mason 重定向设置 - 2" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/mason-redirect-2.png" alt="Mason 重定向设置 - 2" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/mason-redirect-2.png" title="Mason 重定向设置 - 2" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/mason-redirect-2.png" alt="Mason 重定向设置 - 2" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;我用的是&lt;a href="http://pan.baidu.com/s/1dDxpkGh" title="修改后的 Mason"&gt;修改后的版本&lt;/a&gt;（无视文件名，直接拖入 Firefox 安装），更多用法参阅 &lt;a href="https://sites.google.com/site/tiramason/" title="Mason 主页"&gt;Mason 主页&lt;/a&gt;。&lt;/p&gt;</summary><category term="Firefox"></category><category term="Mason"></category></entry><entry><title>Stylish2.0 Editor UC 脚本</title><link href="http://lusir.me/stylish2-editor-uc.html" rel="alternate"></link><updated>2015-02-26T10:04:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-26:stylish2-editor-uc.html</id><summary type="html">&lt;p&gt;Stylish 升级到 2.0 版本后，&lt;code&gt;Stylish_Edit&lt;/code&gt; 跟 &lt;code&gt;Stylish_Custom&lt;/code&gt; 两个 UC 脚本开始闹情绪了，不仅几个小功能按钮消失，编写新样式时还无法在新窗口中打开，还好有万能的 Google。
 &lt;/p&gt;
@@ -519,8 +519,8 @@ browser.safebrowsing.dataProvider —— -1
 &lt;li&gt;过滤器中输入：&lt;code&gt;extensions.stylish.editorWindowMode&lt;/code&gt; 并修改该项值为 &lt;code&gt;1&lt;/code&gt;。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;由于电脑上的 Palemoon 还是 25.2 版，所以编辑器不支持语法高亮……&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://dn-nero.qbox.me/stylish-editor.png" title="Stylish 编辑器" data-fancybox-group="gallery"&gt;
-    &lt;img src="http://dn-nero.qbox.me/stylish-editor.png" alt="Stylish 编辑器" /&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/stylish-editor.png" title="Stylish 编辑器" data-fancybox-group="gallery"&gt;
+    &lt;img src="https://dn-nero.qbox.me/stylish-editor.png" alt="Stylish 编辑器" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 附上 &lt;code&gt;boy3510817&lt;/code&gt; 与 &lt;code&gt;黑衣大螃蟹&lt;/code&gt; 的成品，&lt;a href="http://pan.baidu.com/s/1kTuvbYB" title="Stylish2.0 Editor"&gt;Stylish2.0 Editor&lt;/a&gt;。&lt;/p&gt;</summary><category term="Firefox"></category><category term="Stylish"></category></entry></feed>
