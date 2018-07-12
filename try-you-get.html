@@ -100,10 +100,16 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p><a href="https://dn-nero.qbox.me/you-get.png" title="用上了 You-Get" data-fancybox-group="gallery">
     <img class="aligncenter" src="https://dn-nero.qbox.me/you-get.png" alt="用上了 You-Get" />
 </a></p>
-<p><strong>update 2017.04.18</strong>：近期 You-Get 的 Release 不提供 Win 下的预编译文件了，所以我使用 <code>pip install --upgrade you-get</code> 命令在 Python3 的 Scripts 目录下生成了 <code>you-get.exe</code> 并将它扔到了 Python2 的 Scripts 目录下（博客文章渲染需要使用 Python2），这个 100k 不到的 exe 文件居然也能正常下载合并文件，真神奇！</p>
+<p><strong>updated 2017.04.18</strong>：近期 You-Get 的 Release 不提供 Win 下的预编译文件了，所以我使用 <code>pip install --upgrade you-get</code> 命令在 Python3 的 Scripts 目录下生成了 <code>you-get.exe</code> 并将它扔到了 Python2 的 Scripts 目录下（博客文章渲染需要使用 Python2），这个 100k 不到的 exe 文件居然也能正常下载合并文件，真神奇！</p>
 <p><a href="https://dn-nero.qbox.me/you-get-2.png" title="用上了 You-Get" data-fancybox-group="gallery">
     <img class="aligncenter" src="https://dn-nero.qbox.me/you-get-2.png" alt="用上了 You-Get" />
 </a></p>
+<p><strong>updated 2018.07.12</strong>：最近用 You-Get 下载 B 站视频时，发现长视频默认仅下载第一部分，下载全部需要使用 -l 命令，如下：</p>
+<div class="codehilite"><pre>you-get -l https://www.bilibili.com/video/av26508282
+</pre></div>
+
+
+<p>分段下载完成后可以参照 <a href="https://lusir.me/embed-html5-media.html" title="在网页中嵌入 html5 音视频">这一篇记录</a> 进行合并。</p>
 </div>
     
 <div id="content-comments">
