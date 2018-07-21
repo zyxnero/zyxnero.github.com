@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2017-06-04T10:57:00+08:00</updated><entry><title>cmder 中文显示乱码</title><link href="http://lusir.me/repair-the-garbled-chinese-in-cmder.html" rel="alternate"></link><updated>2017-06-04T10:57:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-06-04:repair-the-garbled-chinese-in-cmder.html</id><summary type="html">&lt;p&gt;整理一下 cmder 中文显示乱码及重叠问题的方法。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2018-07-21T20:07:00+08:00</updated><entry><title>Win 及 Ubuntu 下插入鼠标禁用触摸板</title><link href="http://lusir.me/disable-touchpad-when-moused.html" rel="alternate"></link><updated>2018-07-21T20:07:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2018-07-21:disable-touchpad-when-moused.html</id><summary type="html">&lt;p&gt;我们在日常使用笔记本的时候，打字会经常不经意碰到触摸板，导致光标移动。常规做法是禁用触摸板，然后在鼠标拔出时重新启用触摸板。其实当我们使用鼠标的时候，触摸板可以自动禁用；当拔下鼠标时，触摸板可以自动启用。完全不需要我们手动去干扰，省去很多麻烦。以下介绍 Windows 和 Ubuntu 下的相应软件。
+&lt;/p&gt;
+&lt;h3 id="6dadad9e0c52b16179ff6cb8e187431b"&gt;Windows 下禁用触摸板&lt;/h3&gt;
+&lt;p&gt;首先需要确认我们的笔记本电脑驱动是 Synaptics 驱动。确认方法：右键个性化→更改鼠标指针，最后一个选项卡如下图：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/disable-touchpad-when-moused.png" title="插入鼠标禁用触摸板" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="https://dn-nero.qbox.me/disable-touchpad-when-moused.png" alt="插入鼠标禁用触摸板" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果当前选项卡下能看到&lt;code&gt;“连接外部 USB 指向装置时禁用内部指向装置”&lt;/code&gt;，说明当前驱动可以直接自动禁用触摸板，勾选其前面的对勾即可。&lt;/p&gt;
+&lt;p&gt;如果当前选项卡下没有该选项或没有安装 Synaptics，请下载&lt;a href="https://pan.baidu.com/s/1EVAMOL-ZCXl2oe1UFZsVfA#j1vv" title="插入鼠标禁用触摸板驱动及补丁"&gt;驱动及补丁&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;解压后安装 Synaptics 驱动，同时可以看到两个注册表文件，分别是 1.reg、2.reg。按照顺序双击导入 1、2，（如果提示 UAC，请放行），然后注销一下系统，或者重启电脑。&lt;/p&gt;
+&lt;p&gt;重启后就会看到效果，插入鼠标，自动禁用触摸板，拔出鼠标，触摸板又可以使用，很方便。当然当我们不想使用该功能的时候再次打开选项界面，去掉&lt;code&gt;“连接外部 USB 指向装置时禁用内部指向装置”&lt;/code&gt;前的对钩即可。&lt;/p&gt;
+&lt;h3 id="301488e72c8c6ee11bc8660aa186f456"&gt;Ubuntu 下禁用触摸板&lt;/h3&gt;
+&lt;p&gt;Linux 下类同 Windows，运行以下命令安装软件。然后打开软件进行设置，勾选&lt;code&gt;“开机启动”&lt;/code&gt;和&lt;code&gt;“插入鼠标时禁用触摸板”&lt;/code&gt;即可。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;repository&lt;/span&gt; &lt;span class="n"&gt;ppa&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;atareao&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;atareao&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;touchpad&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;indicator&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Windows"></category><category term="Linux"></category><category term="Synaptics"></category><category term="触摸板"></category></entry><entry><title>cmder 中文显示乱码</title><link href="http://lusir.me/repair-the-garbled-chinese-in-cmder.html" rel="alternate"></link><updated>2017-06-04T10:57:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-06-04:repair-the-garbled-chinese-in-cmder.html</id><summary type="html">&lt;p&gt;整理一下 cmder 中文显示乱码及重叠问题的方法。
 &lt;/p&gt;
 &lt;h3 id="e7cdff1528689ef0374c8e81356e9406"&gt;解决中文重叠问题&lt;/h3&gt;
 &lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Main 菜单下去掉 Monospace 前面的勾选，如图。&lt;/p&gt;
@@ -514,19 +530,4 @@ browser.safebrowsing.dataProvider —— -1
 &lt;p&gt;&lt;a href="https://dn-nero.qbox.me/mason-redirect-2.png" title="Mason 重定向设置 - 2" data-fancybox-group="gallery"&gt;
     &lt;img src="https://dn-nero.qbox.me/mason-redirect-2.png" alt="Mason 重定向设置 - 2" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;我用的是&lt;a href="http://pan.baidu.com/s/1dDxpkGh" title="修改后的 Mason"&gt;修改后的版本&lt;/a&gt;（无视文件名，直接拖入 Firefox 安装），更多用法参阅 &lt;a href="https://sites.google.com/site/tiramason/" title="Mason 主页"&gt;Mason 主页&lt;/a&gt;。&lt;/p&gt;</summary><category term="Firefox"></category><category term="Mason"></category></entry><entry><title>Stylish2.0 Editor UC 脚本</title><link href="http://lusir.me/stylish2-editor-uc.html" rel="alternate"></link><updated>2015-02-26T10:04:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-26:stylish2-editor-uc.html</id><summary type="html">&lt;p&gt;Stylish 升级到 2.0 版本后，&lt;code&gt;Stylish_Edit&lt;/code&gt; 跟 &lt;code&gt;Stylish_Custom&lt;/code&gt; 两个 UC 脚本开始闹情绪了，不仅几个小功能按钮消失，编写新样式时还无法在新窗口中打开，还好有万能的 Google。
-&lt;/p&gt;
-&lt;p&gt;我是懒惰的搬运工。&lt;/p&gt;
-&lt;h3 id="e1abb88b1cec218ac876ff663caa0eb7"&gt;更新 Stylish_Edit2.0.uc.js 与 Stylish_Custom2.uc.js&lt;/h3&gt;
-&lt;p&gt;更新这两个脚本需要同时更新并修改 userChromeJS 扩展与 userChrome.js 脚本，本人奉行伸手主义，所以直接下载了 &lt;code&gt;boy3510817&lt;/code&gt; 与 &lt;code&gt;黑衣大螃蟹&lt;/code&gt; 的成品，经验证可用。&lt;/p&gt;
-&lt;h3 id="4e34a5b6412a86eea7a85c172728dedd"&gt;在新窗口中编写新样式&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;地址栏输入：&lt;code&gt;about:config&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;过滤器中输入：&lt;code&gt;extensions.stylish.editorWindowMode&lt;/code&gt; 并修改该项值为 &lt;code&gt;1&lt;/code&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;由于电脑上的 Palemoon 还是 25.2 版，所以编辑器不支持语法高亮……&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/stylish-editor.png" title="Stylish 编辑器" data-fancybox-group="gallery"&gt;
-    &lt;img src="https://dn-nero.qbox.me/stylish-editor.png" alt="Stylish 编辑器" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;
-附上 &lt;code&gt;boy3510817&lt;/code&gt; 与 &lt;code&gt;黑衣大螃蟹&lt;/code&gt; 的成品，&lt;a href="http://pan.baidu.com/s/1kTuvbYB" title="Stylish2.0 Editor"&gt;Stylish2.0 Editor&lt;/a&gt;。&lt;/p&gt;</summary><category term="Firefox"></category><category term="Stylish"></category></entry></feed>
+&lt;p&gt;我用的是&lt;a href="http://pan.baidu.com/s/1dDxpkGh" title="修改后的 Mason"&gt;修改后的版本&lt;/a&gt;（无视文件名，直接拖入 Firefox 安装），更多用法参阅 &lt;a href="https://sites.google.com/site/tiramason/" title="Mason 主页"&gt;Mason 主页&lt;/a&gt;。&lt;/p&gt;</summary><category term="Firefox"></category><category term="Mason"></category></entry></feed>

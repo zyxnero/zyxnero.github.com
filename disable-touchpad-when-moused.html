@@ -11,10 +11,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="设置 ESS 允许共享局域网 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="Win 及 Ubuntu 下插入鼠标禁用触摸板 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>设置 ESS 允许共享局域网 - 擼sirの避風港</title>
+<title>Win 及 Ubuntu 下插入鼠标禁用触摸板 - 擼sirの避風港</title>
 <link href="https://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="https://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="https://lusir.me/images/favicon/favicon.ico" />
@@ -33,7 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
-<link rel="canonical" href="http://lusir.me/set-ess-sharing-lan.html" />
+<link rel="canonical" href="http://lusir.me/disable-touchpad-when-moused.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="https://lusir.me/theme/js/html5shiv.js"></script>
@@ -90,28 +90,27 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 
-<div id="body-content" itemscope="itemscope" itemtype="https://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">设置 ESS 允许共享局域网</h1>
-<div class="post-meta" itemprop="datePublished">Mar 02,2015</div></div>
+<div id="body-content" itemscope="itemscope" itemtype="https://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">Win 及 Ubuntu 下插入鼠标禁用触摸板</h1>
+<div class="post-meta" itemprop="datePublished">Jul 21,2018</div></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>安装完 ESET Smart Security 后，若局域网或者外部网络设备不能正常运行（如：网络共享文件夹无法访问），则需更改个人防火墙的过滤模式。
+<p>我们在日常使用笔记本的时候，打字会经常不经意碰到触摸板，导致光标移动。常规做法是禁用触摸板，然后在鼠标拔出时重新启用触摸板。其实当我们使用鼠标的时候，触摸板可以自动禁用；当拔下鼠标时，触摸板可以自动启用。完全不需要我们手动去干扰，省去很多麻烦。以下介绍 Windows 和 Ubuntu 下的相应软件。
 </p>
-<ol>
-<li>呼出 ESS 主界面 → 按 <kbd>F5</kbd> 键进入 <code>高级设置</code>；</li>
-<li>点击 <code>规则和区域</code> → <code>设置</code>；</li>
-<li>选择需共享的子网络点击 <code>下一步</code>；</li>
-<li>选择 <code>允许共享</code> 并一路 <code>确定</code>。</li>
-</ol>
-<p><a href="https://dn-nero.qbox.me/ess-sharing-lan-1.jpg" title="设置 ESS 允许共享局域网 - 1" data-fancybox-group="gallery">
-    <img src="https://dn-nero.qbox.me/ess-sharing-lan-1.jpg" alt="设置 ESS 允许共享局域网 - 1" />
+<h3 id="6dadad9e0c52b16179ff6cb8e187431b">Windows 下禁用触摸板</h3>
+<p>首先需要确认我们的笔记本电脑驱动是 Synaptics 驱动。确认方法：右键个性化→更改鼠标指针，最后一个选项卡如下图：</p>
+<p><a href="https://dn-nero.qbox.me/disable-touchpad-when-moused.png" title="插入鼠标禁用触摸板" data-fancybox-group="gallery">
+    <img class="aligncenter" src="https://dn-nero.qbox.me/disable-touchpad-when-moused.png" alt="插入鼠标禁用触摸板" />
 </a></p>
-<p><a href="https://dn-nero.qbox.me/ess-sharing-lan-2.jpg" title="设置 ESS 允许共享局域网 - 2" data-fancybox-group="gallery">
-    <img src="https://dn-nero.qbox.me/ess-sharing-lan-2.jpg" alt="设置 ESS 允许共享局域网 - 2" />
-</a></p>
-<p><a href="https://dn-nero.qbox.me/ess-sharing-lan-3.jpg" title="设置 ESS 允许共享局域网 - 3" data-fancybox-group="gallery">
-    <img src="https://dn-nero.qbox.me/ess-sharing-lan-3.jpg" alt="设置 ESS 允许共享局域网 - 3" />
-</a></p>
-<p>至此，局域网共享应正常……</p>
+<p>如果当前选项卡下能看到<code>“连接外部 USB 指向装置时禁用内部指向装置”</code>，说明当前驱动可以直接自动禁用触摸板，勾选其前面的对勾即可。</p>
+<p>如果当前选项卡下没有该选项或没有安装 Synaptics，请下载<a href="https://pan.baidu.com/s/1EVAMOL-ZCXl2oe1UFZsVfA#j1vv" title="插入鼠标禁用触摸板驱动及补丁">驱动及补丁</a>。</p>
+<p>解压后安装 Synaptics 驱动，同时可以看到两个注册表文件，分别是 1.reg、2.reg。按照顺序双击导入 1、2，（如果提示 UAC，请放行），然后注销一下系统，或者重启电脑。</p>
+<p>重启后就会看到效果，插入鼠标，自动禁用触摸板，拔出鼠标，触摸板又可以使用，很方便。当然当我们不想使用该功能的时候再次打开选项界面，去掉<code>“连接外部 USB 指向装置时禁用内部指向装置”</code>前的对钩即可。</p>
+<h3 id="301488e72c8c6ee11bc8660aa186f456">Ubuntu 下禁用触摸板</h3>
+<p>Linux 下类同 Windows，运行以下命令安装软件。然后打开软件进行设置，勾选<code>“开机启动”</code>和<code>“插入鼠标时禁用触摸板”</code>即可。</p>
+<div class="codehilite"><pre><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">atareao</span><span class="o">/</span><span class="n">atareao</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">touchpad</span><span class="o">-</span><span class="n">indicator</span>
+</pre></div>
 </div>
     
 <div id="content-comments">
@@ -124,11 +123,14 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2015-03-02 21:32</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2018-07-21 20:07</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/eset-smart-security.html">ESET Smart Security</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/windows.html">Windows</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/linux.html">Linux</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/synaptics.html">Synaptics</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/hong-mo-ban.html">触摸板</a></div>
  
 </div>
 
@@ -137,26 +139,28 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">设置 ESS 允许共享局域网</a></li>
-    
+<li><a href="#content-heading">Win 及 Ubuntu 下插入鼠标禁用触摸板</a></li>
+    <li><a href='#6dadad9e0c52b16179ff6cb8e187431b'>Windows 下禁用触摸板</a></li><li><a href='#301488e72c8c6ee11bc8660aa186f456'>Ubuntu 下禁用触摸板</a></li>
 </ol></div>
 
 <div class="hidden">
 <div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="https://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;设置 ESS 允许共享局域网
+<div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;Win 及 Ubuntu 下插入鼠标禁用触摸板
 </div>
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="http://lusir.me/create-url-shortcuts-with-firefox.html">上一篇</a></li>
-<li class="next"><a href="http://lusir.me/some-essays-201503.html">下一篇</a></li>
+<li class="prev"><a href="http://lusir.me/repair-the-garbled-chinese-in-cmder.html">上一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="http://lusir.me/ess-filter.html">ESET Smart Security 添加黑白名单</a></li>
+<li><a href="http://lusir.me/win-e-failure.html">修复 Win + E 出现 explorer.exe 未指定错误</a></li>
+<li><a href="http://lusir.me/cp-and-tar.html">Linux 中的复制与打包命令</a></li>
+<li><a href="http://lusir.me/shutdown-windows-in-cmd.html">Windows 下命令行关机</a></li>
+<li><a href="http://lusir.me/rescue-linux-on-abusing-chmod.html">滥用“Chmod 777 -R /”后的补救措施</a></li>
 </ul>
  
 </div></div>

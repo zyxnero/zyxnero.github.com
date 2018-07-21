@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/index.html</loc>
-<lastmod>2018-07-21T19:47:47-00:00</lastmod>
+<lastmod>2018-07-21T20:52:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://lusir.me/archives.html</loc>
-<lastmod>2018-07-21T19:47:47-00:00</lastmod>
+<lastmod>2018-07-21T20:52:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://lusir.me/categories.html</loc>
-<lastmod>2018-07-21T19:47:47-00:00</lastmod>
+<lastmod>2018-07-21T20:52:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -35,6 +35,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://lusir.me/gallery.html</loc>
 <lastmod>2014-01-19T01:40:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://lusir.me/disable-touchpad-when-moused.html</loc>
+<lastmod>2018-07-21T20:07:00-00:00</lastmod>
+<changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -642,7 +649,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/record/index.html</loc>
-<lastmod>2017-06-04T10:57:00-00:00</lastmod>
+<lastmod>2018-07-21T20:07:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -754,7 +761,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/tag/linux.html</loc>
-<lastmod>2015-07-12T20:09:00-00:00</lastmod>
+<lastmod>2018-07-21T20:07:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -949,8 +956,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://lusir.me/tag/hermit.html</loc>
-<lastmod>2014-03-08T22:40:00-00:00</lastmod>
+<loc>http://lusir.me/tag/synaptics.html</loc>
+<lastmod>2018-07-21T20:07:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://lusir.me/tag/jquery.html</loc>
+<lastmod>2014-02-20T20:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1040,8 +1054,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://lusir.me/tag/jquery.html</loc>
-<lastmod>2014-02-20T20:40:00-00:00</lastmod>
+<loc>http://lusir.me/tag/hong-mo-ban.html</loc>
+<lastmod>2018-07-21T20:07:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1083,7 +1097,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/tag/windows.html</loc>
-<lastmod>2014-10-24T21:28:00-00:00</lastmod>
+<lastmod>2018-07-21T20:07:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1180,6 +1194,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://lusir.me/tag/hermit.html</loc>
+<lastmod>2014-03-08T22:40:00-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://lusir.me/tag/sublime.html</loc>
 <lastmod>2017-04-23T13:08:00-00:00</lastmod>
 <changefreq>daily</changefreq>
@@ -1188,7 +1209,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://lusir.me/author/nero-zheng.html</loc>
-<lastmod>2017-06-04T10:57:00-00:00</lastmod>
+<lastmod>2018-07-21T20:07:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
