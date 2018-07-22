@@ -11,10 +11,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="启用 Application Cache - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="使用批处理临时切换环境变量 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>启用 Application Cache - 擼sirの避風港</title>
+<title>使用批处理临时切换环境变量 - 擼sirの避風港</title>
 <link href="https://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="https://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="https://lusir.me/images/favicon/favicon.ico" />
@@ -33,7 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
-<link rel="canonical" href="http://lusir.me/enable-application-cache.html" />
+<link rel="canonical" href="http://lusir.me/switch-env-variable-temporarily.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="https://lusir.me/theme/js/html5shiv.js"></script>
@@ -90,80 +90,44 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 
-<div id="body-content" itemscope="itemscope" itemtype="https://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">启用 Application Cache</h1>
-<div class="post-meta" itemprop="datePublished">Mar 13,2014</div></div>
+<div id="body-content" itemscope="itemscope" itemtype="https://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">使用批处理临时切换环境变量</h1>
+<div class="post-meta" itemprop="datePublished">Jul 22,2018</div></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>上篇<a href="https://lusir.me/modify-dns-name-resolution.html" title="更改域名解析">更改域名解析</a>之后，本站裸域名改成 A 记录到 IP，也就是不能享受 CDN 加速了。由于现在站点目录下全是静态页，HTML5 的脱机数据功能说不定会带来更好的用户体验，于是尝试启用了，记录一下折腾过程。
+<p>话题要从我使用 <code>Pelican</code> 生成静态站 <code>html</code> 文件说起。使用 <code>Pelican</code> 大概是在 2014 年，那时 <code>Pelican</code> 还是基于 Python 2.x，虽然后期 <code>Pelican</code> 也更新到基于 Python 3.x，但由于个人太懒，所以截至目前还在使用旧版的 <code>Pelican</code>（一直未更新^.^）。
 </p>
-<p>启用 HTML5 Application Cache 的步骤全摘自网络，自己只是当了一次小白，具体的原理不明。具体步骤分 3 步：</p>
-<ol>
-<li>创建一个 cache.appcache 文件，并确保文件具有正确的内容；</li>
-<li>在服务器上设置内容类型；</li>
-<li>所有的 HTML 文件都指向 cache.appcache。</li>
-</ol>
-<h3 id="7902e56ddfc26a187defd7c20936eb0b">创建 appcache 文件</h3>
-<p>新建 cache.appcache 文件，写入类似以下类容：</p>
-<div class="codehilite"><pre>CACHE MANIFEST
-#v1
-CACHE:
-index.html
-404.html
-favicon.ico
-robots.txt
-humans.txt
-apple-touch-icon.png
-css/normalize.min.css
-css/main.css
-css/bootmetro-icons.min.css
-img/pho-cat.jpg
-img/pho-huangshan.jpg
-
-NETWORK:
-*
+<p>但随着时间推移 Python 3.x 已成为主流，例如 You-Get。所以目前我有同时安装 Python 2.7 与 Python 3.5，使用前按需求先切换环境变量。如下图：</p>
+<p><a href="https://dn-nero.qbox.me/switch-env-variable-temporarily-1.png" title="使用批处理临时切换环境变量" data-fancybox-group="gallery">
+    <img class="aligncenter" src="https://dn-nero.qbox.me/switch-env-variable-temporarily-1.png" alt="使用批处理临时切换环境变量" />
+</a></p>
+<p>但是每次使用前都需要切换环境变量也算是比较麻烦了。上网查询知道可以使用批处理临时切换环境变量，正好我在 Windows 下使用 <code>Pelican</code> 也采用批处理，所以决定尝试一下。</p>
+<p>打开 cmder 测试，依次输入以下命令：</p>
+<div class="codehilite"><pre>@echo %PATH%
+set my_path=D:\Python27\App;D:\Python27\App\Scripts;
+set path=%my_path%
+@echo %PATH%
 </pre></div>
 
 
-<p>注：首行须确保为 CACHE MANIFEST。<code>#</code> 表示注释，有文章或 css、js、img 等内容变化时需要更新 cache.appcache 以使来访浏览器更新 cache.appcache 中列出的条目，所以更新注释是一个简便方法。<a href="https://lusir.me/nero.appcache" title="我的 cache.appcache">我的 cache.appcache</a>。</p>
-<h3 id="e8d669ed787e0f6ca71ae5e3dcc9c41a">设置内容类型</h3>
-<p>在 .htaccess 文件中添加以下内容（我没有 .htaccess，所以没添加）</p>
-<div class="codehilite"><pre>AddType text/cache-manifest .manifest
+<p>将得到以下结果。</p>
+<p><a href="https://dn-nero.qbox.me/switch-env-variable-temporarily-2.png" title="使用批处理临时切换环境变量" data-fancybox-group="gallery">
+    <img class="aligncenter" src="https://dn-nero.qbox.me/switch-env-variable-temporarily-2.png" alt="使用批处理临时切换环境变量" />
+</a></p>
+<p>第一条命令是显示当前系统变量下的 <code>path</code> 变量；</p>
+<p>第二条命令是将 Python 2.7 的工作路径添加到中间路径变量中；</p>
+<p>第三条命令是将中间路径变量赋值给 <code>系统路径变量</code>；</p>
+<p>第四条命令是再次显示 <code>系统路径变量值</code>。</p>
+<p>可见系统环境变量经过上述步骤已被更改。不过当再次打开系统属性环境变量选项会发现环境变量与图 1 保持一致，未发生变动，说明以上命令确实只在当前命令窗口有效，这样正好满足使用需求。需要注意的是上述命令无法直接将待添加的工作路径直接赋值给 <code>系统路径变量</code> 而需要使用中间路径变量进行过渡。</p>
+<p>在原 bat 文件内添加第二条、第三条命令如下：</p>
+<div class="codehilite"><pre>set my_path=D:\Python27\App;D:\Python27\App\Scripts;
+set path=%my_path%
+cd /d %~dp0
+pelican -D -s pelicanconf.py content -o nero
+pause
 </pre></div>
 
 
-<h3 id="fe9e55b4442b03a4781c410d6a9596c1">将 HTML 页面指向清单文件 cache.appcache</h3>
-<p>在页首的 <code>&lt;html&gt;</code> 中添加 <code>manifest="/cache.appcache"</code>（假设该文件放置在根目录）。即：</p>
-<div class="codehilite"><pre>&lt;html manifest=&quot;/cache.appcache&quot;&gt;
-</pre></div>
-
-
-<p>完成以上 3 个步骤，来访浏览器在下载完列表中文件后会通过直接访问本地缓存，从而使网页打开速度更快，甚至在离网的情况下仍能直接访问页面缓存。</p>
-<h3 id="1f03fb4a4295fecc5fbf72259a70cfd4">使用 js 让来访浏览器及时刷新缓存</h3>
-<p>发布新文章时我尝试了更改 cache.appcache 的注释，但浏览器仍显示旧的信息，必须手动清除浏览器缓存。显然，这样把事情弄得更麻烦了，所以我在页面添加了如下类容以使浏览器自动强制刷新，带来的问题是强制刷新过程很明显，可能会使用户体验下降。</p>
-<div class="codehilite"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">applicationCache</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;updateready&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">applicationCache</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="nb">window</span><span class="p">.</span><span class="nx">applicationCache</span><span class="p">.</span><span class="nx">UPDATEREADY</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">reload</span><span class="p">();</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{}</span>
-  <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
-<span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
-<span class="o">&lt;</span><span class="err">/script&gt;</span>
-</pre></div>
-
-
-<p>先试用一段时间再说，不行就把它撤了。</p>
-<h3 id="2a302fa545ce4445b25970650930debd">参考文章</h3>
-<ul>
-<li><a href="http://html5g.cn/html5-application-cache.html" title="利用HTML5应用程序缓存运行一个离线 Web 网页或应用">利用HTML5应用程序缓存运行一个离线 Web 网页或应用</a></li>
-<li><a href="http://www.cnblogs.com/svage/archive/2011/11/24/2261365.html" title="html5 离线应用 application cache">html5 离线应用 application cache</a></li>
-<li><a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/" title="A Beginner's Guide to Using the Application Cache">A Beginner's Guide to Using the Application Cache</a></li>
-</ul>
-<p>附：<a href="http://manifest-validator.com/" title="Cache Manifest Validator">Cache Manifest Validator</a></p>
-<h3 id="06933067aafd48425d67bcb01bba5cb6">Update</h3>
-<ul>
-<li>2014.04.01 由于没能处理好 appcache 对于加载元素的缓存与更新之间的矛盾，放弃使用 Application Cache 转投 <a href="https://lusir.me/enable-localstorage.html" title="启用 Localstorage">localstorage</a>。</li>
-</ul>
+<p>嗯，测试可行。</p>
 </div>
     
 <div id="content-comments">
@@ -176,13 +140,13 @@ NETWORK:
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2014-03-13 14:40</div>
-<div class="niu2-sidebar-label"><i class="fa fa-pencil"></i>最后修改</div>
-<div class="niu2-sidebar-value" itemprop="dateModified">2014-04-01 10:25</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2018-07-22 11:08</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="http://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/html5.html">HTML5</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/bat.html">Bat</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/huan-jing-bian-liang.html">环境变量</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="http://lusir.me/tag/windows.html">Windows</a></div>
  
 </div>
 
@@ -191,28 +155,28 @@ NETWORK:
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">启用 Application Cache</a></li>
-    <li><a href='#7902e56ddfc26a187defd7c20936eb0b'>创建 appcache 文件</a></li><li><a href='#e8d669ed787e0f6ca71ae5e3dcc9c41a'>设置内容类型</a></li><li><a href='#fe9e55b4442b03a4781c410d6a9596c1'>将 HTML 页面指向清单文件 cache.appcache</a></li><li><a href='#1f03fb4a4295fecc5fbf72259a70cfd4'>使用 js 让来访浏览器及时刷新缓存</a></li><li><a href='#2a302fa545ce4445b25970650930debd'>参考文章</a></li><li><a href='#06933067aafd48425d67bcb01bba5cb6'>Update</a></li>
+<li><a href="#content-heading">使用批处理临时切换环境变量</a></li>
+    
 </ol></div>
 
 <div class="hidden">
 <div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="https://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;启用 Application Cache
+<div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="http://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;使用批处理临时切换环境变量
 </div>
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="http://lusir.me/modify-dns-name-resolution.html">上一篇</a></li>
-<li class="next"><a href="http://lusir.me/after-enabling-application-cache.html">下一篇</a></li>
+<li class="prev"><a href="http://lusir.me/disable-touchpad-when-moused.html">上一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="http://lusir.me/embed-html5-media.html">在网页中嵌入 html5 音视频</a></li>
-<li><a href="http://lusir.me/enable-localstorage.html">启用 LocalSotrage</a></li>
-<li><a href="http://lusir.me/after-enabling-application-cache.html">启用 Application Cache（续）</a></li>
+<li><a href="http://lusir.me/disable-touchpad-when-moused.html">Win 及 Ubuntu 下插入鼠标禁用触摸板</a></li>
+<li><a href="http://lusir.me/shutdown-windows-in-cmd.html">Windows 下命令行关机</a></li>
+<li><a href="http://lusir.me/backup-environment-variables.html">Windows 环境变量备份</a></li>
+<li><a href="http://lusir.me/win-e-failure.html">修复 Win + E 出现 explorer.exe 未指定错误</a></li>
 </ul>
  
 </div></div>

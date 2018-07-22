@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>走走停停…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 21 Jul 2018 20:07:00 +0800</lastBuildDate><item><title>Win 及 Ubuntu 下插入鼠标禁用触摸板</title><link>http://lusir.me/disable-touchpad-when-moused.html</link><description>&lt;p&gt;我们在日常使用笔记本的时候，打字会经常不经意碰到触摸板，导致光标移动。常规做法是禁用触摸板，然后在鼠标拔出时重新启用触摸板。其实当我们使用鼠标的时候，触摸板可以自动禁用；当拔下鼠标时，触摸板可以自动启用。完全不需要我们手动去干扰，省去很多麻烦。以下介绍 Windows 和 Ubuntu 下的相应软件。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>http://lusir.me/</link><description>走走停停…</description><atom:link href="http://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 22 Jul 2018 11:08:00 +0800</lastBuildDate><item><title>使用批处理临时切换环境变量</title><link>http://lusir.me/switch-env-variable-temporarily.html</link><description>&lt;p&gt;话题要从我使用 &lt;code&gt;Pelican&lt;/code&gt; 生成静态站 &lt;code&gt;html&lt;/code&gt; 文件说起。使用 &lt;code&gt;Pelican&lt;/code&gt; 大概是在 2014 年，那时 &lt;code&gt;Pelican&lt;/code&gt; 还是基于 Python 2.x，虽然后期 &lt;code&gt;Pelican&lt;/code&gt; 也更新到基于 Python 3.x，但由于个人太懒，所以截至目前还在使用旧版的 &lt;code&gt;Pelican&lt;/code&gt;（一直未更新^.^）。
+&lt;/p&gt;
+&lt;p&gt;但随着时间推移 Python 3.x 已成为主流，例如 You-Get。所以目前我有同时安装 Python 2.7 与 Python 3.5，使用前按需求先切换环境变量。如下图：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/switch-env-variable-temporarily-1.png" title="使用批处理临时切换环境变量" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="https://dn-nero.qbox.me/switch-env-variable-temporarily-1.png" alt="使用批处理临时切换环境变量" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但是每次使用前都需要切换环境变量也算是比较麻烦了。上网查询知道可以使用批处理临时切换环境变量，正好我在 Windows 下使用 &lt;code&gt;Pelican&lt;/code&gt; 也采用批处理，所以决定尝试一下。&lt;/p&gt;
+&lt;p&gt;打开 cmder 测试，依次输入以下命令：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;@echo %PATH%
+set my_path=D:\Python27\App;D:\Python27\App\Scripts;
+set path=%my_path%
+@echo %PATH%
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;将得到以下结果。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/switch-env-variable-temporarily-2.png" title="使用批处理临时切换环境变量" data-fancybox-group="gallery"&gt;
+    &lt;img class="aligncenter" src="https://dn-nero.qbox.me/switch-env-variable-temporarily-2.png" alt="使用批处理临时切换环境变量" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;第一条命令是显示当前系统变量下的 &lt;code&gt;path&lt;/code&gt; 变量；&lt;/p&gt;
+&lt;p&gt;第二条命令是将 Python 2.7 的工作路径添加到中间路径变量中；&lt;/p&gt;
+&lt;p&gt;第三条命令是将中间路径变量赋值给 &lt;code&gt;系统路径变量&lt;/code&gt;；&lt;/p&gt;
+&lt;p&gt;第四条命令是再次显示 &lt;code&gt;系统路径变量值&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;可见系统环境变量经过上述步骤已被更改。不过当再次打开系统属性环境变量选项会发现环境变量与图 1 保持一致，未发生变动，说明以上命令确实只在当前命令窗口有效，这样正好满足使用需求。需要注意的是上述命令无法直接将待添加的工作路径直接赋值给 &lt;code&gt;系统路径变量&lt;/code&gt; 而需要使用中间路径变量进行过渡。&lt;/p&gt;
+&lt;p&gt;在原 bat 文件内添加第二条、第三条命令如下：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;set my_path=D:\Python27\App;D:\Python27\App\Scripts;
+set path=%my_path%
+cd /d %~dp0
+pelican -D -s pelicanconf.py content -o nero
+pause
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;嗯，测试可行。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 22 Jul 2018 11:08:00 +0800</pubDate><guid>tag:lusir.me,2018-07-22:switch-env-variable-temporarily.html</guid><category>Bat</category><category>环境变量</category><category>Windows</category></item><item><title>Win 及 Ubuntu 下插入鼠标禁用触摸板</title><link>http://lusir.me/disable-touchpad-when-moused.html</link><description>&lt;p&gt;我们在日常使用笔记本的时候，打字会经常不经意碰到触摸板，导致光标移动。常规做法是禁用触摸板，然后在鼠标拔出时重新启用触摸板。其实当我们使用鼠标的时候，触摸板可以自动禁用；当拔下鼠标时，触摸板可以自动启用。完全不需要我们手动去干扰，省去很多麻烦。以下介绍 Windows 和 Ubuntu 下的相应软件。
 &lt;/p&gt;
 &lt;h3 id="6dadad9e0c52b16179ff6cb8e187431b"&gt;Windows 下禁用触摸板&lt;/h3&gt;
 &lt;p&gt;首先需要确认我们的笔记本电脑驱动是 Synaptics 驱动。确认方法：右键个性化→更改鼠标指针，最后一个选项卡如下图：&lt;/p&gt;
@@ -501,33 +534,4 @@ browser.safebrowsing.dataProvider —— -1
 &lt;p&gt;其实，如果是在 Win7 以上版本的 Windows 下，可以直接将图标拖至屏幕右下角，待返回至桌面松开鼠标左键即可创建。&lt;/p&gt;
 &lt;p&gt;同理，我们也可以拖放书签菜单、书签和历史记录栏或者 &lt;code&gt;我的足迹&lt;/code&gt; 窗口中的项目到桌面上从而为其创建快捷方式。&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
-转载并修改自 &lt;a href="https://support.mozilla.org/zh-CN/kb/%E5%9C%A8%E6%A1%8C%E9%9D%A2%E5%88%9B%E5%BB%BA%E7%BD%91%E9%A1%B5%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F" title="在桌面创建网页快捷方式"&gt;Mozilla Support&lt;/a&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 28 Feb 2015 22:38:00 +0800</pubDate><guid>tag:lusir.me,2015-02-28:create-url-shortcuts-with-firefox.html</guid><category>Firefox</category></item><item><title>Mason 两个基础用法</title><link>http://lusir.me/mason-usage.html</link><description>&lt;p&gt;Mason 是国人 tiramn 写的一个强大扩展。目前已实现功能如下：
-&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;同步下载网页音频和视频；&lt;/li&gt;
-&lt;li&gt;重定向 url / 阻止请求；&lt;/li&gt;
-&lt;li&gt;支持脚本，类似于 Grease Monkey，区别在于执行效率更高，使用更加灵活；&lt;/li&gt;
-&lt;li&gt;修改 http header。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;以下内容系网上搜集，并根据个人实际应用堆叠……&lt;/p&gt;
-&lt;h3 id="66f8127d21a0e66e1284fa72008d8cdc"&gt;反防盗链&lt;/h3&gt;
-&lt;p&gt;用途为：让你能看到发图人以为别人也能看到的图片，如秋秋空间，百度图片，新浪博客上的相册。它们在被引用页不属于自己的网页时就会显示不正常。如 RSS Reader 里面就会出现一些图片无法显示。Mason 默认规则已解决上述几个站点的防盗链问题。下面沿用卡饭论坛上的例子（破图在 chrome 下真的很难看）。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://img01.pixiv.net/img/gofu/9881084_m.jpg" alt="我本是一幅图，若此时你只能看到文字，证明该站依旧设置了防盗链功能。" width="600" /&gt;&lt;/p&gt;
-&lt;h4 id="10ef0f51638a9430fa2358f1fdeefc3f"&gt;Mason 反防盗链设置&lt;/h4&gt;
-&lt;p&gt;安装 Mason 后添加规则，如图设置，① 为防盗链图片包含网址，② 为该图能正常显示的网址，一般情况下 ① 与 ② 是同一个网址。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/mason-pic-see.png" title="Mason 反防盗链设置" data-fancybox-group="gallery"&gt;
-    &lt;img src="https://dn-nero.qbox.me/mason-pic-see.png" alt="Mason 反防盗链设置" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;update 2015.02.28：&lt;code&gt;大发博客&lt;/code&gt; 及 &lt;code&gt;zdfans&lt;/code&gt; 的站在 Inoreader 中均无法显示图片，经如上设置即可解决。&lt;/p&gt;
-&lt;h3 id="7290830a92acb91db82d8495694544dd"&gt;Mason 重定向&lt;/h3&gt;
-&lt;p&gt;使用联通网时 Google 搜索结果中的 wikipedia 条目打开后会直接跳转到 &lt;code&gt;http://nfdnserror3.wo.com.cn&lt;/code&gt;。将 &lt;code&gt;http://zh.wikipedia.org&lt;/code&gt; 重定向到 &lt;code&gt;https://zh.wikipedia.org&lt;/code&gt; 或 &lt;code&gt;http://zh.wikipedia.org/zh-cn/&lt;/code&gt; 即可解决问题。&lt;/p&gt;
-&lt;h4 id="37a5fb72e91bbc07441fe9fabc117b8e"&gt;Mason 重定向设置&lt;/h4&gt;
-&lt;p&gt;添加规则：&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/mason-redirect-1.png" title="Mason 重定向设置 - 1" data-fancybox-group="gallery"&gt;
-    &lt;img src="https://dn-nero.qbox.me/mason-redirect-1.png" alt="Mason 重定向设置 - 1" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;点击配置后输入：&lt;code&gt;http://&amp;gt;*(https?://zh\.wikipedia\.org)/(wiki|zh|zh((?!\-cn)[^\/])+)/&amp;gt;*$1/zh-cn/&lt;/code&gt;，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://dn-nero.qbox.me/mason-redirect-2.png" title="Mason 重定向设置 - 2" data-fancybox-group="gallery"&gt;
-    &lt;img src="https://dn-nero.qbox.me/mason-redirect-2.png" alt="Mason 重定向设置 - 2" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;我用的是&lt;a href="http://pan.baidu.com/s/1dDxpkGh" title="修改后的 Mason"&gt;修改后的版本&lt;/a&gt;（无视文件名，直接拖入 Firefox 安装），更多用法参阅 &lt;a href="https://sites.google.com/site/tiramason/" title="Mason 主页"&gt;Mason 主页&lt;/a&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 27 Feb 2015 21:00:00 +0800</pubDate><guid>tag:lusir.me,2015-02-27:mason-usage.html</guid><category>Firefox</category><category>Mason</category></item></channel></rss>
+转载并修改自 &lt;a href="https://support.mozilla.org/zh-CN/kb/%E5%9C%A8%E6%A1%8C%E9%9D%A2%E5%88%9B%E5%BB%BA%E7%BD%91%E9%A1%B5%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F" title="在桌面创建网页快捷方式"&gt;Mozilla Support&lt;/a&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 28 Feb 2015 22:38:00 +0800</pubDate><guid>tag:lusir.me,2015-02-28:create-url-shortcuts-with-firefox.html</guid><category>Firefox</category></item></channel></rss>
