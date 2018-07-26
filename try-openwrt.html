@@ -154,13 +154,13 @@ auto-save-interval=30
 <p>其中的 <code>aria2.session</code>、<code>aria2.log</code> 及 <code>aria2.conf</code> 3 个文件应按照 <code>aria2.conf</code> 中的配置置于相应地址。随后使用 Putty 进入路由，输入命令 <code>aria2c --conf-path=/mnt/sda1/aria2.conf -c -D</code>，此时 aria2 便可开启，也可以使用 yaaw，具体请参考 <a href="http://blog.binux.me/2012/06/aria2_yaaw/" title="aria2 + web 前端部署指南">“aria2 + web 前端部署指南”</a>。在开机启动项中添加 <code>nice -n 20 aria2c --conf-path=/mnt/sda1/aria2.conf -c -D</code> 便可使 aria2 开机启动，同时限制开启时的 cpu 使用率为 20%，不知道我的理解是否正确。</p>
 <h3 id="67ccb6ae961a467ce30943ab1cb1ac68">限制 Aria2 的 CPU 使用率</h3>
 <p>Aria2 在不受限制的情况下 CPU 使用率肯定是会影响路由稳定的，所以设个限制。在 <code>CPU 占用率限制</code> 中添加下图所示内容。</p>
-<p><a href="https://nnero.gitee.io/demo/tu/360-openwrt-1.png" title="Aria2 限制 CPU" data-fancybox-group="gallery">
-    <img class="aligncenter" src="https://nnero.gitee.io/demo/tu/360-openwrt-1.png" alt="Aria2 限制 CPU" />
+<p><a href="https://nnero.gitee.io/demo/360-openwrt-1.png" title="Aria2 限制 CPU" data-fancybox-group="gallery">
+    <img class="aligncenter" src="https://nnero.gitee.io/demo/360-openwrt-1.png" alt="Aria2 限制 CPU" />
 </a></p>
 <h3 id="60cf9f743716f2cf1ed0ac7a3563ad52">读取 ext4 格式 U 盘</h3>
 <p>前面设置 U 盘格式为 ext4，使用 Aria2 下载完成后一般开启 Samba 就能局域网访问，但访问速度不佳，所以考虑直接读取 U 盘，由于 Windows 系统不能直接读取 U 盘中的内容，所以需要借助第三方程序，经过反复测试，筛选出两个程序，在此记录并作推荐：<code>Ext2Fsd</code> 与 <code>Paragon ExtFS for Windows</code>，前者只能只读，后者可写 U 盘，两者均建议使用 <code>复制</code> 命令以减少文件被损坏的情况发生。复制速度参见下图：</p>
-<p><a href="https://nnero.gitee.io/demo/tu/360-openwrt-2.png" title="复制速度" data-fancybox-group="gallery">
-    <img class="aligncenter" src="https://nnero.gitee.io/demo/tu/360-openwrt-2.png" alt="复制速度" />
+<p><a href="https://nnero.gitee.io/demo/360-openwrt-2.png" title="复制速度" data-fancybox-group="gallery">
+    <img class="aligncenter" src="https://nnero.gitee.io/demo/360-openwrt-2.png" alt="复制速度" />
 </a></p>
 <h3 id="6aa4ba7e676ffeda11262cd5b7c18218">计划任务</h3>
 <p>白天人不在家，离线下载完成后可以关闭路由，等人回来之后在打开路由。让路由在早上 9 点 50 自动关闭 wifi，下午 5 点 50 分自动重启。</p>
@@ -174,8 +174,8 @@ auto-save-interval=30
 <ol>
 <li>
 <p>在 Putty 下使用 <code>cat /proc/mtd</code> 命令查看 firmware 分区对应的 mtd 设备。如下图，我的 firmware 分区为 mtd4。</p>
-<p><a href="https://nnero.gitee.io/demo/tu/360-openwrt-3.jpg" title="查看分区" data-fancybox-group="gallery">
-        <img class="aligncenter" src="https://nnero.gitee.io/demo/tu/360-openwrt-3.jpg" alt="查看分区" />
+<p><a href="https://nnero.gitee.io/demo/360-openwrt-3.jpg" title="查看分区" data-fancybox-group="gallery">
+        <img class="aligncenter" src="https://nnero.gitee.io/demo/360-openwrt-3.jpg" alt="查看分区" />
 </a></p>
 </li>
 <li>
