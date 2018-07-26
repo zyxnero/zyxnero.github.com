@@ -17,30 +17,30 @@
 <title>Thunderbird + Markdown 写邮件 - 擼sirの避風港</title>
 <link href="https://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="https://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
-<link rel="shortcut icon" type="image/x-icon" href="https://lusir.me/images/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="114x114" href="https://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
-<link rel="icon" type="image/png" href="https://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
-<script src="https://lusir.me/theme/js/basket.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32" />
+<script src="/theme/js/basket.min.js"></script>
 <script>
-basket.require({ url: 'https://lusir.me/theme/css/bootstrap.min.css' },{ url: 'https://lusir.me/theme/css/niu2.css', unique: 0.1 },{ url: 'https://lusir.me/theme/font-awesome/css/font-awesome.min.css', unique: 0.1 },{ url: 'https://lusir.me/theme/css/pygments/github.css' },{ url: 'https://lusir.me/theme/css/jquery.fancybox.css' })
+basket.require({ url: '/theme/css/bootstrap.min.css' },{ url: '/theme/css/niu2.css', unique: 0.1 },{ url: '/theme/font-awesome/css/font-awesome.min.css', unique: 0.1 },{ url: '/theme/css/pygments/github.css' },{ url: '/theme/css/jquery.fancybox.css' })
 .then(function(responses) {
 _stylesheet.appendStyleSheet(responses[0], function() {});
-	basket.require({ url: 'https://lusir.me/theme/js/bootstrap.min.js' },{ url: 'https://lusir.me/theme/js/jquery-1.11.0.min.js' },{ url: 'https://lusir.me/theme/js/niu2.js', unique: 0.2 },{ url: 'https://lusir.me/theme/js/fancy-loading.js' },{ url: 'https://lusir.me/theme/js/jquery.fancybox.pack.js' },{ url: 'https://lusir.me/theme/js/jquery-1.4.4.min.js' },{ url: 'https://lusir.me/theme/js/slimbox2.js' },{ url: 'https://lusir.me/theme/js/APlayer.min.js' },{ url: 'https://lusir.me/theme/js/tagcloud.min.js' });});
+	basket.require({ url: '/theme/js/bootstrap.min.js' },{ url: '/theme/js/jquery-1.11.0.min.js' },{ url: '/theme/js/niu2.js', unique: 0.2 },{ url: '/theme/js/fancy-loading.js' },{ url: '/theme/js/jquery.fancybox.pack.js' },{ url: '/theme/js/jquery-1.4.4.min.js' },{ url: '/theme/js/slimbox2.js' },{ url: '/theme/js/APlayer.min.js' },{ url: '/theme/js/tagcloud.min.js' });});
 </script>
-<link rel="stylesheet" href="https://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
-<link rel="stylesheet" href="https://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
-<link rel="stylesheet" href="https://lusir.me/theme/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/css/niu2.css" type="text/css" />
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
 <link rel="canonical" href="http://lusir.me/markdown-emails.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-<script src="https://lusir.me/theme/js/html5shiv.js"></script>
-<script src="https://lusir.me/theme/js/respond.min.js"></script>
+<script src="/theme/js/html5shiv.js"></script>
+<script src="/theme/js/respond.min.js"></script>
 <![endif]-->
 <!--[if IE 7]>
-<link rel="stylesheet" href="https://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
 <![endif]-->
 </head>
 
@@ -102,9 +102,9 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <li>下载安装 Thunderbird 至相应位置。</li>
 <li>新建文件夹用来存放配置文件（名称可以是中文）。</li>
 <li>将 thunderbird.exe 发送到桌面快捷方式，并在快捷方式的“目标”中添加 <code>-p</code> 参数，如下图：
-<p><a href="https://dn-nero.qbox.me/thunderbird-config1.jpg" title="添加 -p 参数" data-fancybox-group="gallery">看图点我</a></p></li>
+<p><a href="https://nnero.gitee.io/demo/tu/thunderbird-config1.jpg" title="添加 -p 参数" data-fancybox-group="gallery">看图点我</a></p></li>
 <li>双击快捷方式新建配置文件指向第一步新建的文件夹，如下图，然后去掉快捷方式的 <code>-p</code> 参数即可正常使用。
-<p><a href="https://dn-nero.qbox.me/thunderbird-config2.jpg" title="新建用户配置" data-fancybox-group="gallery">看图点我</a></p></li>
+<p><a href="https://nnero.gitee.io/demo/tu/thunderbird-config2.jpg" title="新建用户配置" data-fancybox-group="gallery">看图点我</a></p></li>
 </ol>
 <h3 id="4f3d67d0b3a268ac8d99d670851c8b80">Markdown Here 插件</h3>
 <p>Markdown Here 插件这一步就不详述了，直接在“附加组件管理器”中搜索 Markdown Here 扩展，然后安装即可。安装成功后，在使用 Markdown 编辑完邮件后，右键点击 <code>Markdown Toggle</code> 即可在书写页面和预览之间进行切换，从而编辑出样式清爽的邮件。同时，还可以通过编辑 Markdown Here 扩展的 CSS 来自定义邮件样式、配色等方案以达到自己的需求。</p>
@@ -170,9 +170,9 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p>Generated by <a href="https://github.com/getpelican/pelican">Pelican</a> with Theme <a href="https://github.com/mawenbao/niu-x2-sidebar">Niu-X2</a> & Hosted by <a href="https://github.com">Github</a>, No Right Reserved<a href="https://plus.google.com/+NeroZheng" rel="author">.</a>
 </p>
 </div></div>
-<script type="text/javascript" src="https://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://lusir.me/theme/js/niu2.js"></script>
-<script type="text/javascript" src="https://lusir.me/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/theme/js/niu2.js"></script>
+<script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">onContentLoaded();</script>

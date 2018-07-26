@@ -17,30 +17,30 @@
 <title>Mason 两个基础用法 - 擼sirの避風港</title>
 <link href="https://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="https://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
-<link rel="shortcut icon" type="image/x-icon" href="https://lusir.me/images/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="114x114" href="https://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
-<link rel="icon" type="image/png" href="https://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
-<script src="https://lusir.me/theme/js/basket.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32" />
+<script src="/theme/js/basket.min.js"></script>
 <script>
-basket.require({ url: 'https://lusir.me/theme/css/bootstrap.min.css' },{ url: 'https://lusir.me/theme/css/niu2.css', unique: 0.1 },{ url: 'https://lusir.me/theme/font-awesome/css/font-awesome.min.css', unique: 0.1 },{ url: 'https://lusir.me/theme/css/pygments/github.css' },{ url: 'https://lusir.me/theme/css/jquery.fancybox.css' })
+basket.require({ url: '/theme/css/bootstrap.min.css' },{ url: '/theme/css/niu2.css', unique: 0.1 },{ url: '/theme/font-awesome/css/font-awesome.min.css', unique: 0.1 },{ url: '/theme/css/pygments/github.css' },{ url: '/theme/css/jquery.fancybox.css' })
 .then(function(responses) {
 _stylesheet.appendStyleSheet(responses[0], function() {});
-	basket.require({ url: 'https://lusir.me/theme/js/bootstrap.min.js' },{ url: 'https://lusir.me/theme/js/jquery-1.11.0.min.js' },{ url: 'https://lusir.me/theme/js/niu2.js', unique: 0.2 },{ url: 'https://lusir.me/theme/js/fancy-loading.js' },{ url: 'https://lusir.me/theme/js/jquery.fancybox.pack.js' },{ url: 'https://lusir.me/theme/js/jquery-1.4.4.min.js' },{ url: 'https://lusir.me/theme/js/slimbox2.js' },{ url: 'https://lusir.me/theme/js/APlayer.min.js' },{ url: 'https://lusir.me/theme/js/tagcloud.min.js' });});
+	basket.require({ url: '/theme/js/bootstrap.min.js' },{ url: '/theme/js/jquery-1.11.0.min.js' },{ url: '/theme/js/niu2.js', unique: 0.2 },{ url: '/theme/js/fancy-loading.js' },{ url: '/theme/js/jquery.fancybox.pack.js' },{ url: '/theme/js/jquery-1.4.4.min.js' },{ url: '/theme/js/slimbox2.js' },{ url: '/theme/js/APlayer.min.js' },{ url: '/theme/js/tagcloud.min.js' });});
 </script>
-<link rel="stylesheet" href="https://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
-<link rel="stylesheet" href="https://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
-<link rel="stylesheet" href="https://lusir.me/theme/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/css/niu2.css" type="text/css" />
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
 <link rel="canonical" href="http://lusir.me/mason-usage.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-<script src="https://lusir.me/theme/js/html5shiv.js"></script>
-<script src="https://lusir.me/theme/js/respond.min.js"></script>
+<script src="/theme/js/html5shiv.js"></script>
+<script src="/theme/js/respond.min.js"></script>
 <![endif]-->
 <!--[if IE 7]>
-<link rel="stylesheet" href="https://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
 <![endif]-->
 </head>
 
@@ -108,22 +108,22 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p><img src="https://img01.pixiv.net/img/gofu/9881084_m.jpg" alt="我本是一幅图，若此时你只能看到文字，证明该站依旧设置了防盗链功能。" width="600" /></p>
 <h4 id="10ef0f51638a9430fa2358f1fdeefc3f">Mason 反防盗链设置</h4>
 <p>安装 Mason 后添加规则，如图设置，① 为防盗链图片包含网址，② 为该图能正常显示的网址，一般情况下 ① 与 ② 是同一个网址。</p>
-<p><a href="https://dn-nero.qbox.me/mason-pic-see.png" title="Mason 反防盗链设置" data-fancybox-group="gallery">
-    <img src="https://dn-nero.qbox.me/mason-pic-see.png" alt="Mason 反防盗链设置" />
+<p><a href="https://nnero.gitee.io/demo/tu/mason-pic-see.png" title="Mason 反防盗链设置" data-fancybox-group="gallery">
+    <img src="https://nnero.gitee.io/demo/tu/mason-pic-see.png" alt="Mason 反防盗链设置" />
 </a></p>
 <p>update 2015.02.28：<code>大发博客</code> 及 <code>zdfans</code> 的站在 Inoreader 中均无法显示图片，经如上设置即可解决。</p>
 <h3 id="7290830a92acb91db82d8495694544dd">Mason 重定向</h3>
 <p>使用联通网时 Google 搜索结果中的 wikipedia 条目打开后会直接跳转到 <code>http://nfdnserror3.wo.com.cn</code>。将 <code>http://zh.wikipedia.org</code> 重定向到 <code>https://zh.wikipedia.org</code> 或 <code>http://zh.wikipedia.org/zh-cn/</code> 即可解决问题。</p>
 <h4 id="37a5fb72e91bbc07441fe9fabc117b8e">Mason 重定向设置</h4>
 <p>添加规则：</p>
-<p><a href="https://dn-nero.qbox.me/mason-redirect-1.png" title="Mason 重定向设置 - 1" data-fancybox-group="gallery">
-    <img src="https://dn-nero.qbox.me/mason-redirect-1.png" alt="Mason 重定向设置 - 1" />
+<p><a href="https://nnero.gitee.io/demo/tu/mason-redirect-1.png" title="Mason 重定向设置 - 1" data-fancybox-group="gallery">
+    <img src="https://nnero.gitee.io/demo/tu/mason-redirect-1.png" alt="Mason 重定向设置 - 1" />
 </a></p>
 <p>点击配置后输入：<code>http://&gt;*(https?://zh\.wikipedia\.org)/(wiki|zh|zh((?!\-cn)[^\/])+)/&gt;*$1/zh-cn/</code>，如下图：</p>
-<p><a href="https://dn-nero.qbox.me/mason-redirect-2.png" title="Mason 重定向设置 - 2" data-fancybox-group="gallery">
-    <img src="https://dn-nero.qbox.me/mason-redirect-2.png" alt="Mason 重定向设置 - 2" />
+<p><a href="https://nnero.gitee.io/demo/tu/mason-redirect-2.png" title="Mason 重定向设置 - 2" data-fancybox-group="gallery">
+    <img src="https://nnero.gitee.io/demo/tu/mason-redirect-2.png" alt="Mason 重定向设置 - 2" />
 </a></p>
-<p>我用的是<a href="http://pan.baidu.com/s/1dDxpkGh" title="修改后的 Mason">修改后的版本</a>（无视文件名，直接拖入 Firefox 安装），更多用法参阅 <a href="https://sites.google.com/site/tiramason/" title="Mason 主页">Mason 主页</a>。</p>
+<p>我用的是<a href="https://pan.baidu.com/s/1dDxpkGh" title="修改后的 Mason">修改后的版本</a>（无视文件名，直接拖入 Firefox 安装），更多用法参阅 <a href="https://sites.google.com/site/tiramason/" title="Mason 主页">Mason 主页</a>。</p>
 </div>
     
 <div id="content-comments">
@@ -171,11 +171,11 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="http://lusir.me/delete-firefox-seraching-history.html">清理 Firefox 搜索记录</a></li>
-<li><a href="http://lusir.me/modify-firefox-search-engine.html">修改 Firefox 搜索引擎</a></li>
-<li><a href="http://lusir.me/palemoon-tab-modify.html">PaleMoon 修改起始页</a></li>
 <li><a href="http://lusir.me/stylish2-editor-uc.html">Stylish2.0 Editor UC 脚本</a></li>
 <li><a href="http://lusir.me/create-url-shortcuts-with-firefox.html">利用 Firefox 为网页链接创建桌面快捷方式</a></li>
+<li><a href="http://lusir.me/palemoon-tab-modify.html">PaleMoon 修改起始页</a></li>
+<li><a href="http://lusir.me/modify-firefox-search-engine.html">修改 Firefox 搜索引擎</a></li>
+<li><a href="http://lusir.me/delete-firefox-seraching-history.html">清理 Firefox 搜索记录</a></li>
 </ul>
  
 </div></div>
@@ -183,9 +183,9 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p>Generated by <a href="https://github.com/getpelican/pelican">Pelican</a> with Theme <a href="https://github.com/mawenbao/niu-x2-sidebar">Niu-X2</a> & Hosted by <a href="https://github.com">Github</a>, No Right Reserved<a href="https://plus.google.com/+NeroZheng" rel="author">.</a>
 </p>
 </div></div>
-<script type="text/javascript" src="https://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://lusir.me/theme/js/niu2.js"></script>
-<script type="text/javascript" src="https://lusir.me/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/theme/js/niu2.js"></script>
+<script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">onContentLoaded();</script>

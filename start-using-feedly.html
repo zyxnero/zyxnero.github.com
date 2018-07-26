@@ -17,30 +17,30 @@
 <title>使用 Feedly 阅读器 - 擼sirの避風港</title>
 <link href="https://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="https://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
-<link rel="shortcut icon" type="image/x-icon" href="https://lusir.me/images/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="114x114" href="https://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
-<link rel="icon" type="image/png" href="https://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
-<script src="https://lusir.me/theme/js/basket.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32" />
+<script src="/theme/js/basket.min.js"></script>
 <script>
-basket.require({ url: 'https://lusir.me/theme/css/bootstrap.min.css' },{ url: 'https://lusir.me/theme/css/niu2.css', unique: 0.1 },{ url: 'https://lusir.me/theme/font-awesome/css/font-awesome.min.css', unique: 0.1 },{ url: 'https://lusir.me/theme/css/pygments/github.css' },{ url: 'https://lusir.me/theme/css/jquery.fancybox.css' })
+basket.require({ url: '/theme/css/bootstrap.min.css' },{ url: '/theme/css/niu2.css', unique: 0.1 },{ url: '/theme/font-awesome/css/font-awesome.min.css', unique: 0.1 },{ url: '/theme/css/pygments/github.css' },{ url: '/theme/css/jquery.fancybox.css' })
 .then(function(responses) {
 _stylesheet.appendStyleSheet(responses[0], function() {});
-	basket.require({ url: 'https://lusir.me/theme/js/bootstrap.min.js' },{ url: 'https://lusir.me/theme/js/jquery-1.11.0.min.js' },{ url: 'https://lusir.me/theme/js/niu2.js', unique: 0.2 },{ url: 'https://lusir.me/theme/js/fancy-loading.js' },{ url: 'https://lusir.me/theme/js/jquery.fancybox.pack.js' },{ url: 'https://lusir.me/theme/js/jquery-1.4.4.min.js' },{ url: 'https://lusir.me/theme/js/slimbox2.js' },{ url: 'https://lusir.me/theme/js/APlayer.min.js' },{ url: 'https://lusir.me/theme/js/tagcloud.min.js' });});
+	basket.require({ url: '/theme/js/bootstrap.min.js' },{ url: '/theme/js/jquery-1.11.0.min.js' },{ url: '/theme/js/niu2.js', unique: 0.2 },{ url: '/theme/js/fancy-loading.js' },{ url: '/theme/js/jquery.fancybox.pack.js' },{ url: '/theme/js/jquery-1.4.4.min.js' },{ url: '/theme/js/slimbox2.js' },{ url: '/theme/js/APlayer.min.js' },{ url: '/theme/js/tagcloud.min.js' });});
 </script>
-<link rel="stylesheet" href="https://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
-<link rel="stylesheet" href="https://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
-<link rel="stylesheet" href="https://lusir.me/theme/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/css/niu2.css" type="text/css" />
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
 <link rel="canonical" href="http://lusir.me/start-using-feedly.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-<script src="https://lusir.me/theme/js/html5shiv.js"></script>
-<script src="https://lusir.me/theme/js/respond.min.js"></script>
+<script src="/theme/js/html5shiv.js"></script>
+<script src="/theme/js/respond.min.js"></script>
 <![endif]-->
 <!--[if IE 7]>
-<link rel="stylesheet" href="https://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
 <![endif]-->
 </head>
 
@@ -99,11 +99,11 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p>Google Reader 走了之后尝试使用过 Feedly 与 Digg 两款免费的应用，直接通过 Google 账号就能导出 Google Reader 的订阅源，即所谓的无痛转移，当时由于 Feedly 经常抽疯，所以选择了 Digg 并一直使用着它。</p>
 <p>昨晚整理 RSS 订阅源的时候发现很多站都在更新，但 Digg 里却不能正常显示，我明白我应该更换别家的 RSS 订阅服务了。</p>
 <p>看到<a href="http://www.playpcesor.com/2013/03/google-reader-feedly.html" title="Google Reader 將停止服務，最佳替代方案就是 Feedly">電腦玩物</a>的推荐文章后决定再次尝试 Feedly，将整理到一半的订阅源从 Digg 导出，用 Google 账号登入 Feedly，导入 OPML 源，将 Feedly 主题改成绿色，将 Feedly 加入“科学上网”列表。检查发现 RSS 源可以正常更新。遂果断抛弃 Digg，加入 Feedly 的行列。安装 Feedly 扩展，这样一来，Feedly 的使用方法仿佛使人回到了 Google Reader 的时代，除开搜索功能（2014.03.08更新：Feedly 提供搜索功能，不过貌似 Pro 账号才能获取全部搜索条目）。</p>
-<p><a href="https://dn-nero.qbox.me/feedly-thumb.png" title="我的 Feedly" >
-    <img src="https://dn-nero.qbox.me/feedly-thumb.png" alt="我的 Feedly" />
+<p><a href="https://nnero.gitee.io/demo/tu/feedly-thumb.png" title="我的 Feedly" >
+    <img src="https://nnero.gitee.io/demo/tu/feedly-thumb.png" alt="我的 Feedly" />
 </a></p>
 <h3 id="2699a7fa763f7dc9058d4f9d5142118e">Update 2014-11-24 12:01</h3>
-<p>发现 <a href="http://www.inoreader.com" title="Inoreader">Inoreader</a> 的免费功能比 <code>Feedly</code> 强大，且访问速度更快，故已改用前者。</p>
+<p>发现 <a href="https://www.inoreader.com" title="Inoreader">Inoreader</a> 的免费功能比 <code>Feedly</code> 强大，且访问速度更快，故已改用前者。</p>
 <h3 id="2a302fa545ce4445b25970650930debd">参考文章</h3>
 <ul>
 <li><a href="http://capbone.com/rss-readers/" title="RSS 阅读器一览">RSS 阅读器一览</a></li>
@@ -159,9 +159,9 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p>Generated by <a href="https://github.com/getpelican/pelican">Pelican</a> with Theme <a href="https://github.com/mawenbao/niu-x2-sidebar">Niu-X2</a> & Hosted by <a href="https://github.com">Github</a>, No Right Reserved<a href="https://plus.google.com/+NeroZheng" rel="author">.</a>
 </p>
 </div></div>
-<script type="text/javascript" src="https://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://lusir.me/theme/js/niu2.js"></script>
-<script type="text/javascript" src="https://lusir.me/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/theme/js/niu2.js"></script>
+<script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">onContentLoaded();</script>

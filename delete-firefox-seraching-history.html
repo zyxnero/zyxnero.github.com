@@ -17,30 +17,30 @@
 <title>清理 Firefox 搜索记录 - 擼sirの避風港</title>
 <link href="https://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="https://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
-<link rel="shortcut icon" type="image/x-icon" href="https://lusir.me/images/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="114x114" href="https://lusir.me/images/favicon/apple-touch-icon-114x114.png" />
-<link rel="icon" type="image/png" href="https://lusir.me/images/favicon/favicon-32x32.png" sizes="32x32" />
-<script src="https://lusir.me/theme/js/basket.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32" />
+<script src="/theme/js/basket.min.js"></script>
 <script>
-basket.require({ url: 'https://lusir.me/theme/css/bootstrap.min.css' },{ url: 'https://lusir.me/theme/css/niu2.css', unique: 0.1 },{ url: 'https://lusir.me/theme/font-awesome/css/font-awesome.min.css', unique: 0.1 },{ url: 'https://lusir.me/theme/css/pygments/github.css' },{ url: 'https://lusir.me/theme/css/jquery.fancybox.css' })
+basket.require({ url: '/theme/css/bootstrap.min.css' },{ url: '/theme/css/niu2.css', unique: 0.1 },{ url: '/theme/font-awesome/css/font-awesome.min.css', unique: 0.1 },{ url: '/theme/css/pygments/github.css' },{ url: '/theme/css/jquery.fancybox.css' })
 .then(function(responses) {
 _stylesheet.appendStyleSheet(responses[0], function() {});
-	basket.require({ url: 'https://lusir.me/theme/js/bootstrap.min.js' },{ url: 'https://lusir.me/theme/js/jquery-1.11.0.min.js' },{ url: 'https://lusir.me/theme/js/niu2.js', unique: 0.2 },{ url: 'https://lusir.me/theme/js/fancy-loading.js' },{ url: 'https://lusir.me/theme/js/jquery.fancybox.pack.js' },{ url: 'https://lusir.me/theme/js/jquery-1.4.4.min.js' },{ url: 'https://lusir.me/theme/js/slimbox2.js' },{ url: 'https://lusir.me/theme/js/APlayer.min.js' },{ url: 'https://lusir.me/theme/js/tagcloud.min.js' });});
+	basket.require({ url: '/theme/js/bootstrap.min.js' },{ url: '/theme/js/jquery-1.11.0.min.js' },{ url: '/theme/js/niu2.js', unique: 0.2 },{ url: '/theme/js/fancy-loading.js' },{ url: '/theme/js/jquery.fancybox.pack.js' },{ url: '/theme/js/jquery-1.4.4.min.js' },{ url: '/theme/js/slimbox2.js' },{ url: '/theme/js/APlayer.min.js' },{ url: '/theme/js/tagcloud.min.js' });});
 </script>
-<link rel="stylesheet" href="https://lusir.me/theme/css/bootstrap.min.css" type="text/css" />
-<link rel="stylesheet" href="https://lusir.me/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
-<link rel="stylesheet" href="https://lusir.me/theme/css/niu2.css" type="text/css" />
+<link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/font-awesome/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/css/niu2.css" type="text/css" />
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
 <link rel="canonical" href="http://lusir.me/delete-firefox-seraching-history.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-<script src="https://lusir.me/theme/js/html5shiv.js"></script>
-<script src="https://lusir.me/theme/js/respond.min.js"></script>
+<script src="/theme/js/html5shiv.js"></script>
+<script src="/theme/js/respond.min.js"></script>
 <![endif]-->
 <!--[if IE 7]>
-<link rel="stylesheet" href="https://lusir.me/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
+<link rel="stylesheet" href="/theme/font-awesome/css/font-awesome-ie7.min.css" type="text/css" />
 <![endif]-->
 </head>
 
@@ -97,14 +97,14 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p>整理一下清理 Firefox 搜索记录的方法。
 </p>
 <p>Firefox 用久了就会产生很多垃圾文件，包括搜索记录。一般直接在设置里面清除表单和搜索历史，如下图。</p>
-<p><a href="https://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery">
-    <img src="https://dn-nero.qbox.me/delete-firefox-seraching-history-1.png" alt="删除 Firefox 搜索记录" />
+<p><a href="https://nnero.gitee.io/demo/tu/delete-firefox-seraching-history-1.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery">
+    <img src="https://nnero.gitee.io/demo/tu/delete-firefox-seraching-history-1.png" alt="删除 Firefox 搜索记录" />
 </a></p>
 <p>但如果想选择性的删掉其中的某些记录，就需要找到搜索记录数据库文件并修改该文件了。</p>
 <p>数据库目录是：<code>\我的火狐配置\formhistory.sqlite</code></p>
 <p>打开该文件，并清理其中的项目，如下图。</p>
-<p><a href="https://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery">
-    <img src="https://dn-nero.qbox.me/delete-firefox-seraching-history-2.png" alt="删除 Firefox 搜索记录" />
+<p><a href="https://nnero.gitee.io/demo/tu/delete-firefox-seraching-history-2.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery">
+    <img src="https://nnero.gitee.io/demo/tu/delete-firefox-seraching-history-2.png" alt="删除 Firefox 搜索记录" />
 </a></p>
 <p>顺便记录一下让 Firefox 地址下拉栏不显示的方法：</p>
 <p>进入 <code>about:config</code>，搜索 <code>browser.urlbar.maxRichResults</code> 项并将其值修改为 -1。以后地址栏下拉就不会显示一长串访问地址历史记录了。</p>
@@ -152,10 +152,10 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="http://lusir.me/modify-firefox-search-engine.html">修改 Firefox 搜索引擎</a></li>
-<li><a href="http://lusir.me/palemoon-tab-modify.html">PaleMoon 修改起始页</a></li>
 <li><a href="http://lusir.me/stylish2-editor-uc.html">Stylish2.0 Editor UC 脚本</a></li>
 <li><a href="http://lusir.me/create-url-shortcuts-with-firefox.html">利用 Firefox 为网页链接创建桌面快捷方式</a></li>
+<li><a href="http://lusir.me/palemoon-tab-modify.html">PaleMoon 修改起始页</a></li>
+<li><a href="http://lusir.me/modify-firefox-search-engine.html">修改 Firefox 搜索引擎</a></li>
 <li><a href="http://lusir.me/mason-usage.html">Mason 两个基础用法</a></li>
 </ul>
  
@@ -164,9 +164,9 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p>Generated by <a href="https://github.com/getpelican/pelican">Pelican</a> with Theme <a href="https://github.com/mawenbao/niu-x2-sidebar">Niu-X2</a> & Hosted by <a href="https://github.com">Github</a>, No Right Reserved<a href="https://plus.google.com/+NeroZheng" rel="author">.</a>
 </p>
 </div></div>
-<script type="text/javascript" src="https://lusir.me/theme/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://lusir.me/theme/js/niu2.js"></script>
-<script type="text/javascript" src="https://lusir.me/theme/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/theme/js/niu2.js"></script>
+<script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">onContentLoaded();</script>
