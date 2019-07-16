@@ -4,1225 +4,1225 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://lusir.me/index.html</loc>
-<lastmod>2018-07-27T01:19:04-00:00</lastmod>
+<loc>https://lusir.me/index.html</loc>
+<lastmod>2019-07-17T00:11:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/archives.html</loc>
-<lastmod>2018-07-27T01:19:04-00:00</lastmod>
+<loc>https://lusir.me/archives.html</loc>
+<lastmod>2019-07-17T00:11:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/categories.html</loc>
-<lastmod>2018-07-27T01:19:04-00:00</lastmod>
+<loc>https://lusir.me/categories.html</loc>
+<lastmod>2019-07-17T00:11:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/donate.html</loc>
+<loc>https://lusir.me/donate.html</loc>
 <lastmod>2014-12-03T20:56:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/gallery.html</loc>
+<loc>https://lusir.me/gallery.html</loc>
 <lastmod>2014-01-19T01:40:00-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/switch-env-variable-temporarily.html</loc>
+<loc>https://lusir.me/switch-env-variable-temporarily.html</loc>
 <lastmod>2018-07-22T11:08:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/disable-touchpad-when-moused.html</loc>
+<loc>https://lusir.me/disable-touchpad-when-moused.html</loc>
 <lastmod>2018-07-21T20:07:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/repair-the-garbled-chinese-in-cmder.html</loc>
+<loc>https://lusir.me/repair-the-garbled-chinese-in-cmder.html</loc>
 <lastmod>2017-06-04T10:57:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/delete-firefox-seraching-history.html</loc>
+<loc>https://lusir.me/delete-firefox-seraching-history.html</loc>
 <lastmod>2017-05-31T20:27:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/win7-running-record.html</loc>
+<loc>https://lusir.me/win7-running-record.html</loc>
 <lastmod>2017-04-24T16:08:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/customize-sidebar-font-of-sublime.html</loc>
+<loc>https://lusir.me/customize-sidebar-font-of-sublime.html</loc>
 <lastmod>2017-04-23T13:08:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/definition-of-eutectoid-steel.html</loc>
+<loc>https://lusir.me/definition-of-eutectoid-steel.html</loc>
 <lastmod>2017-04-22T22:02:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/several-optimization-of-palemoon.html</loc>
+<loc>https://lusir.me/several-optimization-of-palemoon.html</loc>
 <lastmod>2016-09-15T16:37:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/installation-and-setting-of-pccad.html</loc>
+<loc>https://lusir.me/installation-and-setting-of-pccad.html</loc>
 <lastmod>2016-09-14T17:47:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/set-default-dir-of-cmder.html</loc>
+<loc>https://lusir.me/set-default-dir-of-cmder.html</loc>
 <lastmod>2016-09-11T21:24:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/download-ximalaya-shows-in-batch.html</loc>
+<loc>https://lusir.me/download-ximalaya-shows-in-batch.html</loc>
 <lastmod>2016-09-11T12:33:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/applying-tortoisegit-with-proxy.html</loc>
+<loc>https://lusir.me/applying-tortoisegit-with-proxy.html</loc>
 <lastmod>2016-07-16T13:45:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/try-you-get.html</loc>
+<loc>https://lusir.me/try-you-get.html</loc>
 <lastmod>2016-07-14T22:08:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/get-to-sublime3.html</loc>
+<loc>https://lusir.me/get-to-sublime3.html</loc>
 <lastmod>2016-07-02T21:35:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/repair-the-garbled-chinese-in-openwrt.html</loc>
+<loc>https://lusir.me/repair-the-garbled-chinese-in-openwrt.html</loc>
 <lastmod>2016-06-10T21:32:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/macfilter-of-openwrt.html</loc>
+<loc>https://lusir.me/macfilter-of-openwrt.html</loc>
 <lastmod>2016-06-09T20:37:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/rescue-linux-on-abusing-chmod.html</loc>
+<loc>https://lusir.me/rescue-linux-on-abusing-chmod.html</loc>
 <lastmod>2015-07-12T20:09:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/some-essays-201503.html</loc>
+<loc>https://lusir.me/some-essays-201503.html</loc>
 <lastmod>2015-03-03T20:09:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/set-ess-sharing-lan.html</loc>
+<loc>https://lusir.me/set-ess-sharing-lan.html</loc>
 <lastmod>2015-03-02T21:32:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/create-url-shortcuts-with-firefox.html</loc>
+<loc>https://lusir.me/create-url-shortcuts-with-firefox.html</loc>
 <lastmod>2015-02-28T22:38:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/mason-usage.html</loc>
+<loc>https://lusir.me/mason-usage.html</loc>
 <lastmod>2015-02-27T21:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/stylish2-editor-uc.html</loc>
+<loc>https://lusir.me/stylish2-editor-uc.html</loc>
 <lastmod>2015-02-26T10:04:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/modify-firefox-search-engine.html</loc>
+<loc>https://lusir.me/modify-firefox-search-engine.html</loc>
 <lastmod>2015-02-25T18:36:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/cp-and-tar.html</loc>
+<loc>https://lusir.me/cp-and-tar.html</loc>
 <lastmod>2015-02-22T17:12:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/merciless-bitches-and-actors.html</loc>
+<loc>https://lusir.me/merciless-bitches-and-actors.html</loc>
 <lastmod>2015-02-01T17:06:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/autocad-acc.html</loc>
+<loc>https://lusir.me/autocad-acc.html</loc>
 <lastmod>2014-12-11T21:30:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/proverb-with-thing.html</loc>
+<loc>https://lusir.me/proverb-with-thing.html</loc>
 <lastmod>2014-12-07T17:10:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/alipay-qr-button.html</loc>
+<loc>https://lusir.me/alipay-qr-button.html</loc>
 <lastmod>2014-12-03T17:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/ess-filter.html</loc>
+<loc>https://lusir.me/ess-filter.html</loc>
 <lastmod>2014-12-01T20:35:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/palemoon-tab-modify.html</loc>
+<loc>https://lusir.me/palemoon-tab-modify.html</loc>
 <lastmod>2014-11-30T17:35:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/minidwep-cw-record.html</loc>
+<loc>https://lusir.me/minidwep-cw-record.html</loc>
 <lastmod>2014-11-29T17:25:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/reset-gapps-account.html</loc>
+<loc>https://lusir.me/reset-gapps-account.html</loc>
 <lastmod>2014-11-28T20:24:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/show-excel-long-num.html</loc>
+<loc>https://lusir.me/show-excel-long-num.html</loc>
 <lastmod>2014-11-25T14:28:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/win7-menuext-fix.html</loc>
+<loc>https://lusir.me/win7-menuext-fix.html</loc>
 <lastmod>2014-11-09T12:54:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/win-e-failure.html</loc>
+<loc>https://lusir.me/win-e-failure.html</loc>
 <lastmod>2014-10-24T21:28:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/try-openwrt.html</loc>
+<loc>https://lusir.me/try-openwrt.html</loc>
 <lastmod>2014-10-20T21:21:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/rec-songs-of-black-eyed-peas.html</loc>
+<loc>https://lusir.me/rec-songs-of-black-eyed-peas.html</loc>
 <lastmod>2014-10-19T23:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/solutions-to-wp8.html</loc>
+<loc>https://lusir.me/solutions-to-wp8.html</loc>
 <lastmod>2014-10-12T18:19:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/re-activate-acrobat.html</loc>
+<loc>https://lusir.me/re-activate-acrobat.html</loc>
 <lastmod>2014-10-08T20:28:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/shutdown-windows-in-cmd.html</loc>
+<loc>https://lusir.me/shutdown-windows-in-cmd.html</loc>
 <lastmod>2014-10-07T18:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/submit-badlink-to-baidu.html</loc>
+<loc>https://lusir.me/submit-badlink-to-baidu.html</loc>
 <lastmod>2014-10-06T12:15:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/delete-watermarks-with-pitstop.html</loc>
+<loc>https://lusir.me/delete-watermarks-with-pitstop.html</loc>
 <lastmod>2014-10-05T11:54:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/flash-bios-of-p151em.html</loc>
+<loc>https://lusir.me/flash-bios-of-p151em.html</loc>
 <lastmod>2014-05-29T16:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/enable-keyboard-in-linux.html</loc>
+<loc>https://lusir.me/enable-keyboard-in-linux.html</loc>
 <lastmod>2014-05-25T10:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/notes-of-win-pelican.html</loc>
+<loc>https://lusir.me/notes-of-win-pelican.html</loc>
 <lastmod>2014-05-24T16:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/customize-purecodec-player.html</loc>
+<loc>https://lusir.me/customize-purecodec-player.html</loc>
 <lastmod>2014-04-02T10:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/enable-localstorage.html</loc>
+<loc>https://lusir.me/enable-localstorage.html</loc>
 <lastmod>2014-04-01T11:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/software-of-lubuntu.html</loc>
+<loc>https://lusir.me/software-of-lubuntu.html</loc>
 <lastmod>2014-03-26T10:20:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/solution-to-insufficient-permissions.html</loc>
+<loc>https://lusir.me/solution-to-insufficient-permissions.html</loc>
 <lastmod>2014-03-25T09:42:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/setup-lubuntu.html</loc>
+<loc>https://lusir.me/setup-lubuntu.html</loc>
 <lastmod>2014-03-24T10:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/blog-modify-record.html</loc>
+<loc>https://lusir.me/blog-modify-record.html</loc>
 <lastmod>2014-03-23T17:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/sync-feed-to-weibo.html</loc>
+<loc>https://lusir.me/sync-feed-to-weibo.html</loc>
 <lastmod>2014-03-18T17:04:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/sticky-footer.html</loc>
+<loc>https://lusir.me/sticky-footer.html</loc>
 <lastmod>2014-03-18T13:04:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/after-enabling-application-cache.html</loc>
+<loc>https://lusir.me/after-enabling-application-cache.html</loc>
 <lastmod>2014-03-17T22:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/enable-application-cache.html</loc>
+<loc>https://lusir.me/enable-application-cache.html</loc>
 <lastmod>2014-03-13T14:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/modify-dns-name-resolution.html</loc>
+<loc>https://lusir.me/modify-dns-name-resolution.html</loc>
 <lastmod>2014-03-11T23:20:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/solution-to-bcompare-error.html</loc>
+<loc>https://lusir.me/solution-to-bcompare-error.html</loc>
 <lastmod>2014-03-11T21:43:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/show-excel-plus-sign.html</loc>
+<loc>https://lusir.me/show-excel-plus-sign.html</loc>
 <lastmod>2014-03-11T20:43:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/fake-q-ban-yu-wen.html</loc>
+<loc>https://lusir.me/fake-q-ban-yu-wen.html</loc>
 <lastmod>2014-03-09T20:31:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/embed-hermit-player.html</loc>
+<loc>https://lusir.me/embed-hermit-player.html</loc>
 <lastmod>2014-03-08T22:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/embed-html5-media.html</loc>
+<loc>https://lusir.me/embed-html5-media.html</loc>
 <lastmod>2014-03-08T20:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/start-using-qiniu.html</loc>
+<loc>https://lusir.me/start-using-qiniu.html</loc>
 <lastmod>2014-03-07T13:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/start-using-feedly.html</loc>
+<loc>https://lusir.me/start-using-feedly.html</loc>
 <lastmod>2014-03-07T10:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/add-google-profile.html</loc>
+<loc>https://lusir.me/add-google-profile.html</loc>
 <lastmod>2014-03-05T01:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/google-cse-for-pelican.html</loc>
+<loc>https://lusir.me/google-cse-for-pelican.html</loc>
 <lastmod>2014-03-04T21:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/markdown-emails.html</loc>
+<loc>https://lusir.me/markdown-emails.html</loc>
 <lastmod>2014-02-27T20:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/markdown-add-tables.html</loc>
+<loc>https://lusir.me/markdown-add-tables.html</loc>
 <lastmod>2014-02-22T19:20:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/about-unicode-bom.html</loc>
+<loc>https://lusir.me/about-unicode-bom.html</loc>
 <lastmod>2014-02-22T17:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/jquery-src-switching.html</loc>
+<loc>https://lusir.me/jquery-src-switching.html</loc>
 <lastmod>2014-02-20T20:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/customize-page-number-of-docx.html</loc>
+<loc>https://lusir.me/customize-page-number-of-docx.html</loc>
 <lastmod>2014-02-20T16:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/modify-dns-address.html</loc>
+<loc>https://lusir.me/modify-dns-address.html</loc>
 <lastmod>2014-02-08T19:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/removal-ads-of-yyets.html</loc>
+<loc>https://lusir.me/removal-ads-of-yyets.html</loc>
 <lastmod>2014-02-07T19:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/shutdown-8x-led-and-vibrator.html</loc>
+<loc>https://lusir.me/shutdown-8x-led-and-vibrator.html</loc>
 <lastmod>2014-02-06T21:20:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/url-forwarding.html</loc>
+<loc>https://lusir.me/url-forwarding.html</loc>
 <lastmod>2014-01-27T14:00:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/try-to-use-tortoisegit.html</loc>
+<loc>https://lusir.me/try-to-use-tortoisegit.html</loc>
 <lastmod>2014-01-26T10:25:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/gear-oil-testing-standards.html</loc>
+<loc>https://lusir.me/gear-oil-testing-standards.html</loc>
 <lastmod>2014-01-25T23:50:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/backup-environment-variables.html</loc>
+<loc>https://lusir.me/backup-environment-variables.html</loc>
 <lastmod>2014-01-25T23:25:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/move-to-github.html</loc>
+<loc>https://lusir.me/move-to-github.html</loc>
 <lastmod>2014-01-25T15:25:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/static-blog.html</loc>
+<loc>https://lusir.me/static-blog.html</loc>
 <lastmod>2014-01-19T19:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/gcdn.html</loc>
+<loc>https://lusir.me/gcdn.html</loc>
 <lastmod>2013-06-27T14:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/using-pbk-for-vpn.html</loc>
+<loc>https://lusir.me/using-pbk-for-vpn.html</loc>
 <lastmod>2012-12-19T01:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/prohibit-win7-to-scan-u-disk.html</loc>
+<loc>https://lusir.me/prohibit-win7-to-scan-u-disk.html</loc>
 <lastmod>2012-08-15T01:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/front-view-the-solidworks-model.html</loc>
+<loc>https://lusir.me/front-view-the-solidworks-model.html</loc>
 <lastmod>2012-06-08T01:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/save-solidworks-custom-settings.html</loc>
+<loc>https://lusir.me/save-solidworks-custom-settings.html</loc>
 <lastmod>2012-06-06T19:32:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/just-display-win7-pic-thumbnail.html</loc>
+<loc>https://lusir.me/just-display-win7-pic-thumbnail.html</loc>
 <lastmod>2012-02-07T13:40:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/online-installer-download-path.html</loc>
+<loc>https://lusir.me/online-installer-download-path.html</loc>
 <lastmod>2011-11-25T10:27:00-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/collection/index.html</loc>
+<loc>https://lusir.me/collection/index.html</loc>
 <lastmod>2015-07-12T20:09:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/nonsense/index.html</loc>
+<loc>https://lusir.me/nonsense/index.html</loc>
 <lastmod>2014-03-09T20:31:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/record/index.html</loc>
+<loc>https://lusir.me/record/index.html</loc>
 <lastmod>2018-07-22T11:08:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/alipay.html</loc>
+<loc>https://lusir.me/tag/alipay.html</loc>
 <lastmod>2014-12-03T17:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/pelican.html</loc>
+<loc>https://lusir.me/tag/pelican.html</loc>
 <lastmod>2014-05-24T16:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/feed.html</loc>
+<loc>https://lusir.me/tag/feed.html</loc>
 <lastmod>2014-03-18T17:04:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/google.html</loc>
+<loc>https://lusir.me/tag/google.html</loc>
 <lastmod>2014-11-28T20:24:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/firefox.html</loc>
+<loc>https://lusir.me/tag/firefox.html</loc>
 <lastmod>2017-05-31T20:27:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/prema.html</loc>
+<loc>https://lusir.me/tag/prema.html</loc>
 <lastmod>2014-05-29T16:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/beyond-compare.html</loc>
+<loc>https://lusir.me/tag/beyond-compare.html</loc>
 <lastmod>2014-03-11T21:43:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/xia-mi.html</loc>
+<loc>https://lusir.me/tag/xia-mi.html</loc>
 <lastmod>2014-03-08T22:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/blackeyedpeas.html</loc>
+<loc>https://lusir.me/tag/blackeyedpeas.html</loc>
 <lastmod>2014-10-19T23:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/nonsense.html</loc>
+<loc>https://lusir.me/tag/nonsense.html</loc>
 <lastmod>2014-03-09T20:31:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/biao-zhun.html</loc>
+<loc>https://lusir.me/tag/biao-zhun.html</loc>
 <lastmod>2014-01-25T23:50:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/lubuntu.html</loc>
+<loc>https://lusir.me/tag/lubuntu.html</loc>
 <lastmod>2014-05-25T10:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/markdown.html</loc>
+<loc>https://lusir.me/tag/markdown.html</loc>
 <lastmod>2014-02-27T20:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/localstorage.html</loc>
+<loc>https://lusir.me/tag/localstorage.html</loc>
 <lastmod>2014-04-01T11:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/kuai-jie-zhi-fu.html</loc>
+<loc>https://lusir.me/tag/kuai-jie-zhi-fu.html</loc>
 <lastmod>2014-12-03T17:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/linux.html</loc>
+<loc>https://lusir.me/tag/linux.html</loc>
 <lastmod>2018-07-21T20:07:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/you-get.html</loc>
+<loc>https://lusir.me/tag/you-get.html</loc>
 <lastmod>2016-07-14T22:08:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/wp8.html</loc>
+<loc>https://lusir.me/tag/wp8.html</loc>
 <lastmod>2014-10-12T18:19:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/bei-fen.html</loc>
+<loc>https://lusir.me/tag/bei-fen.html</loc>
 <lastmod>2014-01-25T23:25:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/si-lian.html</loc>
+<loc>https://lusir.me/tag/si-lian.html</loc>
 <lastmod>2014-10-06T12:15:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/openwrt.html</loc>
+<loc>https://lusir.me/tag/openwrt.html</loc>
 <lastmod>2016-06-10T21:32:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/cmder.html</loc>
+<loc>https://lusir.me/tag/cmder.html</loc>
 <lastmod>2017-06-04T10:57:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/weibo.html</loc>
+<loc>https://lusir.me/tag/weibo.html</loc>
 <lastmod>2014-03-25T09:42:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/git.html</loc>
+<loc>https://lusir.me/tag/git.html</loc>
 <lastmod>2016-07-16T13:45:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/autocad.html</loc>
+<loc>https://lusir.me/tag/autocad.html</loc>
 <lastmod>2016-09-14T17:47:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/qi-niu.html</loc>
+<loc>https://lusir.me/tag/qi-niu.html</loc>
 <lastmod>2014-03-07T13:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/cse.html</loc>
+<loc>https://lusir.me/tag/cse.html</loc>
 <lastmod>2014-03-04T21:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/feng-dian.html</loc>
+<loc>https://lusir.me/tag/feng-dian.html</loc>
 <lastmod>2014-01-25T23:50:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/palemoon.html</loc>
+<loc>https://lusir.me/tag/palemoon.html</loc>
 <lastmod>2016-09-15T16:37:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/excel.html</loc>
+<loc>https://lusir.me/tag/excel.html</loc>
 <lastmod>2014-11-25T14:28:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/win7.html</loc>
+<loc>https://lusir.me/tag/win7.html</loc>
 <lastmod>2017-04-24T16:08:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/mason.html</loc>
+<loc>https://lusir.me/tag/mason.html</loc>
 <lastmod>2015-02-27T21:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/bios.html</loc>
+<loc>https://lusir.me/tag/bios.html</loc>
 <lastmod>2014-05-29T16:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/theme.html</loc>
+<loc>https://lusir.me/tag/theme.html</loc>
 <lastmod>2014-03-23T17:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/404.html</loc>
+<loc>https://lusir.me/tag/404.html</loc>
 <lastmod>2014-01-25T15:25:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/music.html</loc>
+<loc>https://lusir.me/tag/music.html</loc>
 <lastmod>2014-10-19T23:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/vmware.html</loc>
+<loc>https://lusir.me/tag/vmware.html</loc>
 <lastmod>2014-11-29T17:25:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/dns.html</loc>
+<loc>https://lusir.me/tag/dns.html</loc>
 <lastmod>2014-03-11T23:20:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/8x.html</loc>
+<loc>https://lusir.me/tag/8x.html</loc>
 <lastmod>2014-02-06T21:20:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/feedly.html</loc>
+<loc>https://lusir.me/tag/feedly.html</loc>
 <lastmod>2014-03-07T10:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/xi-ma-la-ya.html</loc>
+<loc>https://lusir.me/tag/xi-ma-la-ya.html</loc>
 <lastmod>2016-09-11T12:33:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/dnsla.html</loc>
+<loc>https://lusir.me/tag/dnsla.html</loc>
 <lastmod>2014-01-27T14:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/css.html</loc>
+<loc>https://lusir.me/tag/css.html</loc>
 <lastmod>2014-03-18T13:04:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/synaptics.html</loc>
+<loc>https://lusir.me/tag/synaptics.html</loc>
 <lastmod>2018-07-21T20:07:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/jquery.html</loc>
+<loc>https://lusir.me/tag/jquery.html</loc>
 <lastmod>2014-02-20T20:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/url-zhuan-fa.html</loc>
+<loc>https://lusir.me/tag/url-zhuan-fa.html</loc>
 <lastmod>2014-01-27T14:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/pitstop.html</loc>
+<loc>https://lusir.me/tag/pitstop.html</loc>
 <lastmod>2014-10-05T11:54:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/shui-yin.html</loc>
+<loc>https://lusir.me/tag/shui-yin.html</loc>
 <lastmod>2014-10-05T11:54:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/pbk.html</loc>
+<loc>https://lusir.me/tag/pbk.html</loc>
 <lastmod>2012-12-19T01:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/huan-jing-bian-liang.html</loc>
+<loc>https://lusir.me/tag/huan-jing-bian-liang.html</loc>
 <lastmod>2018-07-22T11:08:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/ji-jie-chang-shi.html</loc>
+<loc>https://lusir.me/tag/ji-jie-chang-shi.html</loc>
 <lastmod>2017-04-22T22:02:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/u-pan.html</loc>
+<loc>https://lusir.me/tag/u-pan.html</loc>
 <lastmod>2012-08-15T01:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/fan-yu-ming.html</loc>
+<loc>https://lusir.me/tag/fan-yu-ming.html</loc>
 <lastmod>2014-10-06T12:15:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/html5.html</loc>
+<loc>https://lusir.me/tag/html5.html</loc>
 <lastmod>2014-04-01T11:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/wget.html</loc>
+<loc>https://lusir.me/tag/wget.html</loc>
 <lastmod>2016-09-11T12:33:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/acrobat.html</loc>
+<loc>https://lusir.me/tag/acrobat.html</loc>
 <lastmod>2014-10-08T20:28:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/p151em.html</loc>
+<loc>https://lusir.me/tag/p151em.html</loc>
 <lastmod>2014-05-29T16:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/hong-mo-ban.html</loc>
+<loc>https://lusir.me/tag/hong-mo-ban.html</loc>
 <lastmod>2018-07-21T20:07:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/s10-3c.html</loc>
+<loc>https://lusir.me/tag/s10-3c.html</loc>
 <lastmod>2014-05-25T10:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/bat.html</loc>
+<loc>https://lusir.me/tag/bat.html</loc>
 <lastmod>2018-07-22T11:08:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/github.html</loc>
+<loc>https://lusir.me/tag/github.html</loc>
 <lastmod>2014-01-25T15:25:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/word.html</loc>
+<loc>https://lusir.me/tag/word.html</loc>
 <lastmod>2014-02-20T16:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/google-cdn.html</loc>
+<loc>https://lusir.me/tag/google-cdn.html</loc>
 <lastmod>2013-06-27T14:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/adblock.html</loc>
+<loc>https://lusir.me/tag/adblock.html</loc>
 <lastmod>2014-02-07T19:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/windows.html</loc>
+<loc>https://lusir.me/tag/windows.html</loc>
 <lastmod>2018-07-22T11:08:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/xia-zai-lu-jing.html</loc>
+<loc>https://lusir.me/tag/xia-zai-lu-jing.html</loc>
 <lastmod>2011-11-25T10:27:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/solidworks.html</loc>
+<loc>https://lusir.me/tag/solidworks.html</loc>
 <lastmod>2012-06-08T01:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/thunderbird.html</loc>
+<loc>https://lusir.me/tag/thunderbird.html</loc>
 <lastmod>2014-02-27T20:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/eset-smart-security.html</loc>
+<loc>https://lusir.me/tag/eset-smart-security.html</loc>
 <lastmod>2015-03-02T21:32:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/chi-lun-you.html</loc>
+<loc>https://lusir.me/tag/chi-lun-you.html</loc>
 <lastmod>2014-01-25T23:50:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/guan-ji.html</loc>
+<loc>https://lusir.me/tag/guan-ji.html</loc>
 <lastmod>2014-10-07T18:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/cname.html</loc>
+<loc>https://lusir.me/tag/cname.html</loc>
 <lastmod>2014-03-11T23:20:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/tortoisegit.html</loc>
+<loc>https://lusir.me/tag/tortoisegit.html</loc>
 <lastmod>2014-01-26T10:25:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/bom.html</loc>
+<loc>https://lusir.me/tag/bom.html</loc>
 <lastmod>2014-02-22T17:00:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/potplayer.html</loc>
+<loc>https://lusir.me/tag/potplayer.html</loc>
 <lastmod>2014-04-02T10:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/collection.html</loc>
+<loc>https://lusir.me/tag/collection.html</loc>
 <lastmod>2015-03-03T20:09:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/stylish.html</loc>
+<loc>https://lusir.me/tag/stylish.html</loc>
 <lastmod>2015-02-26T10:04:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/cdlinux.html</loc>
+<loc>https://lusir.me/tag/cdlinux.html</loc>
 <lastmod>2014-11-29T17:25:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/hermit.html</loc>
+<loc>https://lusir.me/tag/hermit.html</loc>
 <lastmod>2014-03-08T22:40:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/tag/sublime.html</loc>
+<loc>https://lusir.me/tag/sublime.html</loc>
 <lastmod>2017-04-23T13:08:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://lusir.me/author/nero-zheng.html</loc>
+<loc>https://lusir.me/author/nero-zheng.html</loc>
 <lastmod>2018-07-22T11:08:00-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>

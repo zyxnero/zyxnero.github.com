@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="http://lusir.me/" rel="alternate"></link><link href="http://lusir.me/atom.xml" rel="self"></link><id>http://lusir.me/</id><updated>2018-07-22T11:08:00+08:00</updated><entry><title>使用批处理临时切换环境变量</title><link href="http://lusir.me/switch-env-variable-temporarily.html" rel="alternate"></link><updated>2018-07-22T11:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2018-07-22:switch-env-variable-temporarily.html</id><summary type="html">&lt;p&gt;话题要从我使用 &lt;code&gt;Pelican&lt;/code&gt; 生成静态站 &lt;code&gt;html&lt;/code&gt; 文件说起。使用 &lt;code&gt;Pelican&lt;/code&gt; 大概是在 2014 年，那时 &lt;code&gt;Pelican&lt;/code&gt; 还是基于 Python 2.x，虽然后期 &lt;code&gt;Pelican&lt;/code&gt; 也更新到基于 Python 3.x，但由于个人太懒，所以截至目前还在使用旧版的 &lt;code&gt;Pelican&lt;/code&gt;（一直未更新^.^）。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="https://lusir.me/" rel="alternate"></link><link href="https://lusir.me/atom.xml" rel="self"></link><id>https://lusir.me/</id><updated>2018-07-22T11:08:00+08:00</updated><entry><title>使用批处理临时切换环境变量</title><link href="https://lusir.me/switch-env-variable-temporarily.html" rel="alternate"></link><updated>2018-07-22T11:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2018-07-22:switch-env-variable-temporarily.html</id><summary type="html">&lt;p&gt;话题要从我使用 &lt;code&gt;Pelican&lt;/code&gt; 生成静态站 &lt;code&gt;html&lt;/code&gt; 文件说起。使用 &lt;code&gt;Pelican&lt;/code&gt; 大概是在 2014 年，那时 &lt;code&gt;Pelican&lt;/code&gt; 还是基于 Python 2.x，虽然后期 &lt;code&gt;Pelican&lt;/code&gt; 也更新到基于 Python 3.x，但由于个人太懒，所以截至目前还在使用旧版的 &lt;code&gt;Pelican&lt;/code&gt;（一直未更新^.^）。
 &lt;/p&gt;
 &lt;p&gt;但随着时间推移 Python 3.x 已成为主流，例如 You-Get。所以目前我有同时安装 Python 2.7 与 Python 3.5，使用前按需求先切换环境变量。如下图：&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/switch-env-variable-temporarily-1.png" title="使用批处理临时切换环境变量" data-fancybox-group="gallery"&gt;
@@ -32,7 +32,7 @@ pause
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;嗯，测试可行。&lt;/p&gt;</summary><category term="Bat"></category><category term="环境变量"></category><category term="Windows"></category></entry><entry><title>Win 及 Ubuntu 下插入鼠标禁用触摸板</title><link href="http://lusir.me/disable-touchpad-when-moused.html" rel="alternate"></link><updated>2018-07-21T20:07:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2018-07-21:disable-touchpad-when-moused.html</id><summary type="html">&lt;p&gt;我们在日常使用笔记本的时候，打字会经常不经意碰到触摸板，导致光标移动。常规做法是禁用触摸板，然后在鼠标拔出时重新启用触摸板。其实当我们使用鼠标的时候，触摸板可以自动禁用；当拔下鼠标时，触摸板可以自动启用。完全不需要我们手动去干扰，省去很多麻烦。以下介绍 Windows 和 Ubuntu 下的相应软件。
+&lt;p&gt;嗯，测试可行。&lt;/p&gt;</summary><category term="Bat"></category><category term="环境变量"></category><category term="Windows"></category></entry><entry><title>Win 及 Ubuntu 下插入鼠标禁用触摸板</title><link href="https://lusir.me/disable-touchpad-when-moused.html" rel="alternate"></link><updated>2018-07-21T20:07:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2018-07-21:disable-touchpad-when-moused.html</id><summary type="html">&lt;p&gt;我们在日常使用笔记本的时候，打字会经常不经意碰到触摸板，导致光标移动。常规做法是禁用触摸板，然后在鼠标拔出时重新启用触摸板。其实当我们使用鼠标的时候，触摸板可以自动禁用；当拔下鼠标时，触摸板可以自动启用。完全不需要我们手动去干扰，省去很多麻烦。以下介绍 Windows 和 Ubuntu 下的相应软件。
 &lt;/p&gt;
 &lt;h3 id="6dadad9e0c52b16179ff6cb8e187431b"&gt;Windows 下禁用触摸板&lt;/h3&gt;
 &lt;p&gt;首先需要确认我们的笔记本电脑驱动是 Synaptics 驱动。确认方法：右键个性化→更改鼠标指针，最后一个选项卡如下图：&lt;/p&gt;
@@ -48,7 +48,7 @@ pause
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;repository&lt;/span&gt; &lt;span class="n"&gt;ppa&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;atareao&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;atareao&lt;/span&gt;
 &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;
 &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;touchpad&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;indicator&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Windows"></category><category term="Linux"></category><category term="Synaptics"></category><category term="触摸板"></category></entry><entry><title>cmder 中文显示乱码</title><link href="http://lusir.me/repair-the-garbled-chinese-in-cmder.html" rel="alternate"></link><updated>2017-06-04T10:57:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-06-04:repair-the-garbled-chinese-in-cmder.html</id><summary type="html">&lt;p&gt;整理一下 cmder 中文显示乱码及重叠问题的方法。
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Windows"></category><category term="Linux"></category><category term="Synaptics"></category><category term="触摸板"></category></entry><entry><title>cmder 中文显示乱码</title><link href="https://lusir.me/repair-the-garbled-chinese-in-cmder.html" rel="alternate"></link><updated>2017-06-04T10:57:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2017-06-04:repair-the-garbled-chinese-in-cmder.html</id><summary type="html">&lt;p&gt;整理一下 cmder 中文显示乱码及重叠问题的方法。
 &lt;/p&gt;
 &lt;h3 id="e7cdff1528689ef0374c8e81356e9406"&gt;解决中文重叠问题&lt;/h3&gt;
 &lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Main 菜单下去掉 Monospace 前面的勾选，如图。&lt;/p&gt;
@@ -60,7 +60,7 @@ pause
 &lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Environment 菜单的变量中添加 &lt;code&gt;chcp utf-8&lt;/code&gt;，如图。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/cmder-chinese-encode-2.png" title="cmder 中文显示乱码" data-fancybox-group="gallery"&gt;
     &lt;img src="https://nnero.gitee.io/demo/cmder-chinese-encode-2.png" alt="cmder 中文显示乱码" /&gt;
-&lt;/a&gt;&lt;/p&gt;</summary><category term="cmder"></category></entry><entry><title>清理 Firefox 搜索记录</title><link href="http://lusir.me/delete-firefox-seraching-history.html" rel="alternate"></link><updated>2017-05-31T20:27:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-05-31:delete-firefox-seraching-history.html</id><summary type="html">&lt;p&gt;整理一下清理 Firefox 搜索记录的方法。
+&lt;/a&gt;&lt;/p&gt;</summary><category term="cmder"></category></entry><entry><title>清理 Firefox 搜索记录</title><link href="https://lusir.me/delete-firefox-seraching-history.html" rel="alternate"></link><updated>2017-05-31T20:27:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2017-05-31:delete-firefox-seraching-history.html</id><summary type="html">&lt;p&gt;整理一下清理 Firefox 搜索记录的方法。
 &lt;/p&gt;
 &lt;p&gt;Firefox 用久了就会产生很多垃圾文件，包括搜索记录。一般直接在设置里面清除表单和搜索历史，如下图。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/delete-firefox-seraching-history-1.png" title="删除 Firefox 搜索记录" data-fancybox-group="gallery"&gt;
@@ -73,7 +73,7 @@ pause
     &lt;img src="https://nnero.gitee.io/demo/delete-firefox-seraching-history-2.png" alt="删除 Firefox 搜索记录" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;顺便记录一下让 Firefox 地址下拉栏不显示的方法：&lt;/p&gt;
-&lt;p&gt;进入 &lt;code&gt;about:config&lt;/code&gt;，搜索 &lt;code&gt;browser.urlbar.maxRichResults&lt;/code&gt; 项并将其值修改为 -1。以后地址栏下拉就不会显示一长串访问地址历史记录了。&lt;/p&gt;</summary><category term="Firefox"></category></entry><entry><title>Win7 运行栏不保存历史记录的解决办法</title><link href="http://lusir.me/win7-running-record.html" rel="alternate"></link><updated>2017-04-24T16:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-24:win7-running-record.html</id><summary type="html">&lt;p&gt;偶尔会碰到优化过度的 Windows 系统，运行框内没有历史记录。本篇记录一下恢复记录的解决办法。
+&lt;p&gt;进入 &lt;code&gt;about:config&lt;/code&gt;，搜索 &lt;code&gt;browser.urlbar.maxRichResults&lt;/code&gt; 项并将其值修改为 -1。以后地址栏下拉就不会显示一长串访问地址历史记录了。&lt;/p&gt;</summary><category term="Firefox"></category></entry><entry><title>Win7 运行栏不保存历史记录的解决办法</title><link href="https://lusir.me/win7-running-record.html" rel="alternate"></link><updated>2017-04-24T16:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2017-04-24:win7-running-record.html</id><summary type="html">&lt;p&gt;偶尔会碰到优化过度的 Windows 系统，运行框内没有历史记录。本篇记录一下恢复记录的解决办法。
 &lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Q1：打开 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;，以前输入过的网络路径、命令全都没有记录，非常不方便。&lt;/p&gt;
@@ -86,7 +86,7 @@ pause
 &lt;p&gt;A：打开 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;，输入&lt;code&gt;gpedit.msc&lt;/code&gt;，打开“组策略”，在左侧选项中依次点击“用户配置”、“管理模板”、“开始菜单和任务栏”，然后在右侧的选项中双击“关闭用户跟踪”，选择“已禁用”即可，如下图。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/win7-running-record-2.png" title="恢复运行栏保存历史记录" data-fancybox-group="gallery"&gt;
     &lt;img src="https://nnero.gitee.io/demo/win7-running-record-2.png" alt="恢复运行栏保存历史记录" /&gt;
-&lt;/a&gt;&lt;/p&gt;</summary><category term="Win7"></category></entry><entry><title>Sublime 侧边栏字体大小调整</title><link href="http://lusir.me/customize-sidebar-font-of-sublime.html" rel="alternate"></link><updated>2017-04-23T13:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-23:customize-sidebar-font-of-sublime.html</id><summary type="html">&lt;p&gt;最近感觉视力好像又下降了，无奈。前几天调大了 Sublime Text 3 的侧边栏字体使正文区和侧边栏看起来更和谐。过程记录如下。
+&lt;/a&gt;&lt;/p&gt;</summary><category term="Win7"></category></entry><entry><title>Sublime 侧边栏字体大小调整</title><link href="https://lusir.me/customize-sidebar-font-of-sublime.html" rel="alternate"></link><updated>2017-04-23T13:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2017-04-23:customize-sidebar-font-of-sublime.html</id><summary type="html">&lt;p&gt;最近感觉视力好像又下降了，无奈。前几天调大了 Sublime Text 3 的侧边栏字体使正文区和侧边栏看起来更和谐。过程记录如下。
 &lt;/p&gt;
 &lt;h3 id="59b78b7a8b75e0b1373086e89ecce8be"&gt;安装插件 PackageResourceViewer&lt;/h3&gt;
 &lt;ol&gt;
@@ -133,7 +133,7 @@ pause
 &lt;td&gt;在侧边栏文件中查找&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</summary><category term="Sublime"></category></entry><entry><title>共析钢的定义</title><link href="http://lusir.me/definition-of-eutectoid-steel.html" rel="alternate"></link><updated>2017-04-22T22:02:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2017-04-22:definition-of-eutectoid-steel.html</id><summary type="html">&lt;p&gt;也都是学校里的知识了，整理一下方便以后重新学习。
+&lt;/table&gt;</summary><category term="Sublime"></category></entry><entry><title>共析钢的定义</title><link href="https://lusir.me/definition-of-eutectoid-steel.html" rel="alternate"></link><updated>2017-04-22T22:02:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2017-04-22:definition-of-eutectoid-steel.html</id><summary type="html">&lt;p&gt;也都是学校里的知识了，整理一下方便以后重新学习。
 &lt;/p&gt;
 &lt;h3 id="fec5050eeea132b15a3072913febbdba"&gt;共析反应&lt;/h3&gt;
 &lt;p&gt;共析钢（含碳量0.77%）中的奥氏体（A）与渗碳体（Fe&lt;sub&gt;3&lt;/sub&gt;C）在平衡状态下完全溶解析出珠光体（P）的反应。&lt;/p&gt;
@@ -156,7 +156,7 @@ pause
 &lt;li&gt;Ar3：亚共析钢在冷却时开始析出游离铁素体的温度。&lt;/li&gt;
 &lt;li&gt;Arcm：过共析钢在冷却时奥氏体开始析出二次渗碳体的温度。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;其中 A 是法语临界点的首字母，c 是法语加热的首字母，r 是法语冷却的首字母。&lt;/p&gt;</summary><category term="机械常识"></category></entry><entry><title>PaleMoon 的几项优化</title><link href="http://lusir.me/several-optimization-of-palemoon.html" rel="alternate"></link><updated>2016-09-15T16:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-15:several-optimization-of-palemoon.html</id><summary type="html">&lt;p&gt;今天是中秋佳节，祝大家国庆快乐！！！&lt;/p&gt;
+&lt;p&gt;其中 A 是法语临界点的首字母，c 是法语加热的首字母，r 是法语冷却的首字母。&lt;/p&gt;</summary><category term="机械常识"></category></entry><entry><title>PaleMoon 的几项优化</title><link href="https://lusir.me/several-optimization-of-palemoon.html" rel="alternate"></link><updated>2016-09-15T16:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2016-09-15:several-optimization-of-palemoon.html</id><summary type="html">&lt;p&gt;今天是中秋佳节，祝大家国庆快乐！！！&lt;/p&gt;
 &lt;p&gt;2014 年记录过一篇 &lt;a href="https://lusir.me/palemoon-tab-modify.html" title="PaleMoon 修改起始页"&gt;修改 PaleMoon 起始页&lt;/a&gt; 的文章，本文接着记。&lt;/p&gt;
 
 
@@ -171,7 +171,7 @@ browser.safebrowsing.dataProvider —— -1
 
 &lt;p&gt;据说最后一条参数是关键，设置以后配置文件夹下的 &lt;code&gt;urlclassifier3.sqlite&lt;/code&gt; 将彻底消失，不会再自动生成，但最好还是把这几条参数都设置一下。&lt;/p&gt;
 &lt;h3 id="6cd6f47e1bbb6c3302c29fec1b47ee85"&gt;禁用 addonsreconciler.json&lt;/h3&gt;
-&lt;p&gt;该文件位于配置文件夹下的 &lt;code&gt;weave&lt;/code&gt; 目录下，体积也较大，据说是因为国内网络质量问题导致多次同步失败而造成。禁用方法：取消同步后删除该文件。&lt;/p&gt;</summary><category term="palemoon"></category></entry><entry><title>PCCAD2010 在 Win7×64 中的安装与设置</title><link href="http://lusir.me/installation-and-setting-of-pccad.html" rel="alternate"></link><updated>2016-09-14T17:47:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-14:installation-and-setting-of-pccad.html</id><summary type="html">&lt;p&gt;在 Win7×64 中安装 PCCAD2010 是一件麻烦事，好记性不如烂笔头，为了下次少走弯路，还是记一下吧。
+&lt;p&gt;该文件位于配置文件夹下的 &lt;code&gt;weave&lt;/code&gt; 目录下，体积也较大，据说是因为国内网络质量问题导致多次同步失败而造成。禁用方法：取消同步后删除该文件。&lt;/p&gt;</summary><category term="palemoon"></category></entry><entry><title>PCCAD2010 在 Win7×64 中的安装与设置</title><link href="https://lusir.me/installation-and-setting-of-pccad.html" rel="alternate"></link><updated>2016-09-14T17:47:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2016-09-14:installation-and-setting-of-pccad.html</id><summary type="html">&lt;p&gt;在 Win7×64 中安装 PCCAD2010 是一件麻烦事，好记性不如烂笔头，为了下次少走弯路，还是记一下吧。
 &lt;/p&gt;
 &lt;h3 id="fca40e38c5d7651dea6f4157b569be53"&gt;准备材料&lt;/h3&gt;
 &lt;ol&gt;
@@ -209,7 +209,7 @@ browser.safebrowsing.dataProvider —— -1
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/pccad-tolerance-2.jpg" title="修改极限偏差字体高度-2" data-fancybox-group="gallery"&gt;
     &lt;img src="https://nnero.gitee.io/demo/pccad-tolerance-2.jpg" alt="修改极限偏差字体高度-2" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;以上。。。&lt;/p&gt;</summary><category term="AutoCAD"></category></entry><entry><title>设置 cmder 默认目录</title><link href="http://lusir.me/set-default-dir-of-cmder.html" rel="alternate"></link><updated>2016-09-11T21:24:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-11:set-default-dir-of-cmder.html</id><summary type="html">&lt;p&gt;目前主要用 cmder 来下载 youku 视频和 ximalaya 音频。方便起见，我直接把 cmder 开启后的默认目录设置为所需的下载目录了。
+&lt;p&gt;以上。。。&lt;/p&gt;</summary><category term="AutoCAD"></category></entry><entry><title>设置 cmder 默认目录</title><link href="https://lusir.me/set-default-dir-of-cmder.html" rel="alternate"></link><updated>2016-09-11T21:24:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2016-09-11:set-default-dir-of-cmder.html</id><summary type="html">&lt;p&gt;目前主要用 cmder 来下载 youku 视频和 ximalaya 音频。方便起见，我直接把 cmder 开启后的默认目录设置为所需的下载目录了。
 &lt;/p&gt;
 &lt;p&gt;设置其实也很容易，找到 cmder 安装目录，在其 config 目录下有个 user-startup.cmd 文件，cmder 启动时会自动执行该文件中的命令，每次打开都会。所以只在该文件中增加一句切换目录的命令即可。&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;:: use this file to run your own startup commands 
@@ -220,7 +220,7 @@ browser.safebrowsing.dataProvider —— -1
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;上面我切换目录到了 E 盘。为了让该命令不显示，在 &lt;code&gt;E:&lt;/code&gt; 的前面加了个 &lt;code&gt;@&lt;/code&gt;。&lt;/p&gt;</summary><category term="cmder"></category></entry><entry><title>批量下载喜马拉雅节目</title><link href="http://lusir.me/download-ximalaya-shows-in-batch.html" rel="alternate"></link><updated>2016-09-11T12:33:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-09-11:download-ximalaya-shows-in-batch.html</id><summary type="html">&lt;p&gt;最近两年多听喜马拉雅比较多，主要是上下班在路上花费时间太长，听听节目还能涨点姿势。
+&lt;p&gt;上面我切换目录到了 E 盘。为了让该命令不显示，在 &lt;code&gt;E:&lt;/code&gt; 的前面加了个 &lt;code&gt;@&lt;/code&gt;。&lt;/p&gt;</summary><category term="cmder"></category></entry><entry><title>批量下载喜马拉雅节目</title><link href="https://lusir.me/download-ximalaya-shows-in-batch.html" rel="alternate"></link><updated>2016-09-11T12:33:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2016-09-11:download-ximalaya-shows-in-batch.html</id><summary type="html">&lt;p&gt;最近两年多听喜马拉雅比较多，主要是上下班在路上花费时间太长，听听节目还能涨点姿势。
 &lt;/p&gt;
 &lt;p&gt;早期喜马拉雅的爪机 APP 没什么广告，我也一直是在用爪机客户端；现在每个音频前面都会有一段音频广告，感觉很不好，所以干脆就把节目下载下来听。下载方式采用过 IDM、音乐间谍，前者无法批量，后者不太稳定。&lt;/p&gt;
 &lt;p&gt;不久前在 &lt;a href="http://fabing.blog.51cto.com/" title="weifabing 的 Blog"&gt;weifabing'Blog&lt;/a&gt; 上看到他的解决办法，于是尝试了一下，果然是很好用啊。&lt;/p&gt;
@@ -237,7 +237,7 @@ browser.safebrowsing.dataProvider —— -1
 
 
 &lt;p&gt;以上是他的代码。打开相应的专辑页，在浏览器 console 中粘贴该段命令就能返回相应下载链接。他用的 Linux 系统，直接在终端里面粘贴命令就能下载了。我用的 Windows，所以下载安装了个 GNU 的 wget，配合 cmder，也还是比较方便的。下载完成后批量改个名，改下媒体文件标签，使用本地播放器简直是完美（虽然音频比特率只有 64k）。&lt;/p&gt;
-&lt;p&gt;最后我也感谢一下喜马拉雅平台，祝越办越好……&lt;/p&gt;</summary><category term="wget"></category><category term="cmder"></category><category term="喜马拉雅"></category></entry><entry><title>为 TortoiseGit 设置代理</title><link href="http://lusir.me/applying-tortoisegit-with-proxy.html" rel="alternate"></link><updated>2016-07-16T13:45:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-07-16:applying-tortoisegit-with-proxy.html</id><summary type="html">&lt;p&gt;又一篇流水账。昨天“中菲南海仲裁案”出结果，今天就发现博客内容不能更新到 Github 了。老毛病，为了提交更新，只能为 &lt;code&gt;TortoiseGit&lt;/code&gt; “另辟蹊径”了。
+&lt;p&gt;最后我也感谢一下喜马拉雅平台，祝越办越好……&lt;/p&gt;</summary><category term="wget"></category><category term="cmder"></category><category term="喜马拉雅"></category></entry><entry><title>为 TortoiseGit 设置代理</title><link href="https://lusir.me/applying-tortoisegit-with-proxy.html" rel="alternate"></link><updated>2016-07-16T13:45:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2016-07-16:applying-tortoisegit-with-proxy.html</id><summary type="html">&lt;p&gt;又一篇流水账。昨天“中菲南海仲裁案”出结果，今天就发现博客内容不能更新到 Github 了。老毛病，为了提交更新，只能为 &lt;code&gt;TortoiseGit&lt;/code&gt; “另辟蹊径”了。
 &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;打开“袋里”并启用系统袋里；&lt;/li&gt;
@@ -256,7 +256,7 @@ browser.safebrowsing.dataProvider —— -1
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;再次推送，成功提交！！！&lt;/p&gt;</summary><category term="Git"></category></entry><entry><title>用上了 You-Get</title><link href="http://lusir.me/try-you-get.html" rel="alternate"></link><updated>2016-07-14T22:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-07-14:try-you-get.html</id><summary type="html">&lt;p&gt;在优酷上订阅了几个视频节目，像《罗辑思维》、《暴走大事件》。之前一直在用硕鼠下载观看，不过前阵子硕鼠好像停止服务了，遂用上了开源跨平台的 &lt;a href="https://github.com/soimort/you-get/" title="You-Get"&gt;You-Get&lt;/a&gt;。之前在 Lubuntu 下使用过，绝对的神器！
+&lt;p&gt;再次推送，成功提交！！！&lt;/p&gt;</summary><category term="Git"></category></entry><entry><title>用上了 You-Get</title><link href="https://lusir.me/try-you-get.html" rel="alternate"></link><updated>2016-07-14T22:08:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2016-07-14:try-you-get.html</id><summary type="html">&lt;p&gt;在优酷上订阅了几个视频节目，像《罗辑思维》、《暴走大事件》。之前一直在用硕鼠下载观看，不过前阵子硕鼠好像停止服务了，遂用上了开源跨平台的 &lt;a href="https://github.com/soimort/you-get/" title="You-Get"&gt;You-Get&lt;/a&gt;。之前在 Lubuntu 下使用过，绝对的神器！
 &lt;/p&gt;
 &lt;p&gt;从官网下载压缩包，解压即用。需要注意的是如果命令行里面提示“无法定位程序输入点ucrtbase.terminate”这个错误，那么去下载个&lt;code&gt;Microsoft Visual C++ 2015 Redistributable&lt;/code&gt;，安装以后就不会再报错了。如果命令行程序用的是 &lt;code&gt;Cmder&lt;/code&gt;，那么看起来就是这样的。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/you-get.png" title="用上了 You-Get" data-fancybox-group="gallery"&gt;
@@ -271,7 +271,7 @@ browser.safebrowsing.dataProvider —— -1
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;分段下载完成后可以参照 &lt;a href="https://lusir.me/embed-html5-media.html" title="在网页中嵌入 html5 音视频"&gt;这一篇记录&lt;/a&gt; 进行合并。&lt;/p&gt;</summary><category term="You-Get"></category></entry><entry><title>升级到 Sublime Text 3</title><link href="http://lusir.me/get-to-sublime3.html" rel="alternate"></link><updated>2016-07-02T21:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-07-02:get-to-sublime3.html</id><summary type="html">&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
+&lt;p&gt;分段下载完成后可以参照 &lt;a href="https://lusir.me/embed-html5-media.html" title="在网页中嵌入 html5 音视频"&gt;这一篇记录&lt;/a&gt; 进行合并。&lt;/p&gt;</summary><category term="You-Get"></category></entry><entry><title>升级到 Sublime Text 3</title><link href="https://lusir.me/get-to-sublime3.html" rel="alternate"></link><updated>2016-07-02T21:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2016-07-02:get-to-sublime3.html</id><summary type="html">&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
 &lt;/p&gt;
 &lt;h3 id="e655a410ff21cd07e7a0150491e04371"&gt;安装&lt;/h3&gt;
 &lt;ol&gt;
@@ -377,7 +377,7 @@ browser.safebrowsing.dataProvider —— -1
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;暂时记这么多。。。&lt;/p&gt;</summary><category term="Sublime"></category></entry><entry><title>OpenWrt 中文文件名乱码</title><link href="http://lusir.me/repair-the-garbled-chinese-in-openwrt.html" rel="alternate"></link><updated>2016-06-10T21:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-06-10:repair-the-garbled-chinese-in-openwrt.html</id><summary type="html">&lt;p&gt;入了 360 路由之后就一直在使用 Aria2 + Yaaw 下载，即通过浏览器将资源先下载到路由器挂载的移动存储设备上，然后再将文件从路由转移电脑、手机。麻烦是麻烦了点，好歹省了个 NAS。。。。。。
+&lt;p&gt;暂时记这么多。。。&lt;/p&gt;</summary><category term="Sublime"></category></entry><entry><title>OpenWrt 中文文件名乱码</title><link href="https://lusir.me/repair-the-garbled-chinese-in-openwrt.html" rel="alternate"></link><updated>2016-06-10T21:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2016-06-10:repair-the-garbled-chinese-in-openwrt.html</id><summary type="html">&lt;p&gt;入了 360 路由之后就一直在使用 Aria2 + Yaaw 下载，即通过浏览器将资源先下载到路由器挂载的移动存储设备上，然后再将文件从路由转移电脑、手机。麻烦是麻烦了点，好歹省了个 NAS。。。。。。
 &lt;/p&gt;
 &lt;p&gt;好些软件通过 SSH 或 FTP 连接到 OpenWrt 的时候会出现乱码（好些软件包括 Winscp、Putty、FileZilla）。据说是因为 OpenWrt 默认使用 utf-8 编码，而电脑端的软件默认不是使用 utf-8。但经试用发现以上软件即使在设置里面将默认编码改成 utf-8 也没用，除了 FlashFXP，故此记录，以作备忘。&lt;/p&gt;
 &lt;ol&gt;
@@ -387,7 +387,7 @@ browser.safebrowsing.dataProvider —— -1
 &lt;/ol&gt;
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/garbled-chinese-in-openwrt-1.png" title="参数选择" data-fancybox-group="gallery"&gt;&lt;img src="https://nnero.gitee.io/demo/garbled-chinese-in-openwrt-1.png" alt="参数选择" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/garbled-chinese-in-openwrt-2.png" title="站点管理器" data-fancybox-group="gallery"&gt;&lt;img src="https://nnero.gitee.io/demo/garbled-chinese-in-openwrt-2.png" alt="站点管理器" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;再次打开站点目录，文件名中的中文已能正常识别。&lt;/p&gt;</summary><category term="Openwrt"></category></entry><entry><title>OpenWrt 设置 MAC 地址过滤</title><link href="http://lusir.me/macfilter-of-openwrt.html" rel="alternate"></link><updated>2016-06-09T20:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2016-06-09:macfilter-of-openwrt.html</id><summary type="html">&lt;p&gt;两年前入手的 360 路由器稳定性不是太好，需要定期恢复固件。
+&lt;p&gt;再次打开站点目录，文件名中的中文已能正常识别。&lt;/p&gt;</summary><category term="Openwrt"></category></entry><entry><title>OpenWrt 设置 MAC 地址过滤</title><link href="https://lusir.me/macfilter-of-openwrt.html" rel="alternate"></link><updated>2016-06-09T20:37:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2016-06-09:macfilter-of-openwrt.html</id><summary type="html">&lt;p&gt;两年前入手的 360 路由器稳定性不是太好，需要定期恢复固件。
 &lt;/p&gt;
 &lt;p&gt;恢复固件的过程比较简单，用 &lt;code&gt;WinSCP&lt;/code&gt; 将本地的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 拷贝至路由 &lt;code&gt;/tmp&lt;/code&gt; 目录下，然后在 &lt;code&gt;Putty&lt;/code&gt; 下敲击：&lt;code&gt;mtd write -r /tmp/customized_backup.bin firmware&lt;/code&gt; 并回车即可完成系统恢复。不过个人习惯给无线设置 MAC 过滤，仅允许列表内 MAC 联网。&lt;/p&gt;
 &lt;p&gt;之前是每次恢复固件之后就在路由后台一个一个添加允许通过的 MAC 地址，前阵子突然觉得这样做好傻，遂 Google 该控制 MAC 地址过滤的文件路径，得到的结果是 &lt;code&gt;/etc/config/wireless&lt;/code&gt;。&lt;/p&gt;
@@ -412,7 +412,7 @@ browser.safebrowsing.dataProvider —— -1
 &lt;li&gt;Allow 表示白名单模式，即只允许列出的硬件地址连入网络；&lt;/li&gt;
 &lt;li&gt;Deny 表示黑名单模式，即禁止列出的硬件地址连入网络。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;目前我采取白名单模式，每连入一个新设备都要添加其硬件地址。&lt;/p&gt;</summary><category term="Openwrt"></category></entry><entry><title>滥用“Chmod 777 -R /”后的补救措施</title><link href="http://lusir.me/rescue-linux-on-abusing-chmod.html" rel="alternate"></link><updated>2015-07-12T20:09:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-07-12:rescue-linux-on-abusing-chmod.html</id><summary type="html">&lt;p&gt;很早就听人说过不要乱改 Linux 根目录下的文件，尤其不要使用 &lt;code&gt;rm -rf /*&lt;/code&gt;，不过为了在登录时少输入一次密码，我使上了 &lt;code&gt;chmod 777 -R /&lt;/code&gt;，本以为登录会更便捷，谁知连系统都无法登录进入了。
+&lt;p&gt;目前我采取白名单模式，每连入一个新设备都要添加其硬件地址。&lt;/p&gt;</summary><category term="Openwrt"></category></entry><entry><title>滥用“Chmod 777 -R /”后的补救措施</title><link href="https://lusir.me/rescue-linux-on-abusing-chmod.html" rel="alternate"></link><updated>2015-07-12T20:09:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2015-07-12:rescue-linux-on-abusing-chmod.html</id><summary type="html">&lt;p&gt;很早就听人说过不要乱改 Linux 根目录下的文件，尤其不要使用 &lt;code&gt;rm -rf /*&lt;/code&gt;，不过为了在登录时少输入一次密码，我使上了 &lt;code&gt;chmod 777 -R /&lt;/code&gt;，本以为登录会更便捷，谁知连系统都无法登录进入了。
 &lt;/p&gt;
 &lt;p&gt;解决办法如下：&lt;/p&gt;
 &lt;p&gt;1. 找到另外一台系统相同的正常机，执行以下内容：&lt;/p&gt;
@@ -450,7 +450,7 @@ browser.safebrowsing.dataProvider —— -1
 
 
 &lt;p&gt;至此，重启正常开机。&lt;/p&gt;
-&lt;p&gt;文中方法来源于网络，测试可行，作备份……&lt;/p&gt;</summary><category term="Linux"></category></entry><entry><title>寻章摘句 - 201503</title><link href="http://lusir.me/some-essays-201503.html" rel="alternate"></link><updated>2015-03-03T20:09:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-03-03:some-essays-201503.html</id><summary type="html">&lt;p&gt;Onenote 里收藏了一些个人觉得有意思或没意思的句段，大多来自《One · 一个》，还有一句自己敲的，至于鸡汤，已忘记出处……
+&lt;p&gt;文中方法来源于网络，测试可行，作备份……&lt;/p&gt;</summary><category term="Linux"></category></entry><entry><title>寻章摘句 - 201503</title><link href="https://lusir.me/some-essays-201503.html" rel="alternate"></link><updated>2015-03-03T20:09:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2015-03-03:some-essays-201503.html</id><summary type="html">&lt;p&gt;Onenote 里收藏了一些个人觉得有意思或没意思的句段，大多来自《One · 一个》，还有一句自己敲的，至于鸡汤，已忘记出处……
 &lt;/p&gt;
 &lt;h3 id="aa3f0f9135a0cdcf369d0b184768975e"&gt;情愫&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;从来都无法得知，人们是究竟为什么会爱上另一个人。我猜也许我们心上都有一个缺口，呼呼往灵魂里灌着寒风，我们急切需要一个正好形状的心来填上它，就算你是太阳一样完美正圆形，可是我心里的缺口，或许恰恰是个歪歪扭扭的锯齿形，你填不了。
@@ -504,7 +504,7 @@ browser.safebrowsing.dataProvider —— -1
 
 &lt;h3 id="ff78ec550506a7ba2fee2abfef7890e9"&gt;钓鱼诗&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;数凡绝丝入水中，金钩抛去永无踪，凡鱼不敢朝天子，万岁君主只钓龙。
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Collection"></category></entry><entry><title>设置 ESS 允许共享局域网</title><link href="http://lusir.me/set-ess-sharing-lan.html" rel="alternate"></link><updated>2015-03-02T21:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-03-02:set-ess-sharing-lan.html</id><summary type="html">&lt;p&gt;安装完 ESET Smart Security 后，若局域网或者外部网络设备不能正常运行（如：网络共享文件夹无法访问），则需更改个人防火墙的过滤模式。
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Collection"></category></entry><entry><title>设置 ESS 允许共享局域网</title><link href="https://lusir.me/set-ess-sharing-lan.html" rel="alternate"></link><updated>2015-03-02T21:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2015-03-02:set-ess-sharing-lan.html</id><summary type="html">&lt;p&gt;安装完 ESET Smart Security 后，若局域网或者外部网络设备不能正常运行（如：网络共享文件夹无法访问），则需更改个人防火墙的过滤模式。
 &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;呼出 ESS 主界面 → 按 &lt;kbd&gt;F5&lt;/kbd&gt; 键进入 &lt;code&gt;高级设置&lt;/code&gt;；&lt;/li&gt;
@@ -521,7 +521,7 @@ browser.safebrowsing.dataProvider —— -1
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/ess-sharing-lan-3.jpg" title="设置 ESS 允许共享局域网 - 3" data-fancybox-group="gallery"&gt;
     &lt;img src="https://nnero.gitee.io/demo/ess-sharing-lan-3.jpg" alt="设置 ESS 允许共享局域网 - 3" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;至此，局域网共享应正常……&lt;/p&gt;</summary><category term="ESET Smart Security"></category></entry><entry><title>利用 Firefox 为网页链接创建桌面快捷方式</title><link href="http://lusir.me/create-url-shortcuts-with-firefox.html" rel="alternate"></link><updated>2015-02-28T22:38:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:lusir.me,2015-02-28:create-url-shortcuts-with-firefox.html</id><summary type="html">&lt;p&gt;精简掉桌面右键的 &lt;code&gt;新建快捷方式&lt;/code&gt; 后，发现原来还可以通过 Firefox 为网页链接创建桌面快捷方式：
+&lt;p&gt;至此，局域网共享应正常……&lt;/p&gt;</summary><category term="ESET Smart Security"></category></entry><entry><title>利用 Firefox 为网页链接创建桌面快捷方式</title><link href="https://lusir.me/create-url-shortcuts-with-firefox.html" rel="alternate"></link><updated>2015-02-28T22:38:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2015-02-28:create-url-shortcuts-with-firefox.html</id><summary type="html">&lt;p&gt;精简掉桌面右键的 &lt;code&gt;新建快捷方式&lt;/code&gt; 后，发现原来还可以通过 Firefox 为网页链接创建桌面快捷方式：
 &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;调整 Firefox 窗口，直到可以在同一个屏幕里同时看到桌面和 Firefox；&lt;/li&gt;
