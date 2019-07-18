@@ -205,4 +205,5 @@ a img {padding:2px;border:1px solid #aaa;-webkit-box-shadow:rgba(0,0,0,.2) 0px 0
 #content-heading {font-size: 30px;}
 
 .gallery-album {text-align:center;}
-.gallery-visible{margin:20px 40px;text-align:center;display:inline-block;}
+.gallery-visible {margin:20px;text-align:center;display:inline-block;}
+.center-block {max-height: 200px;}
