@@ -33,6 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <link rel="canonical" href="https://lusir.me/embed-html5-media.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -160,7 +161,19 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 
 <div id="content-comments">
-
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+const gitalk = new Gitalk({
+  clientID: '29ad16e437499c65fd47',
+  clientSecret: '4fb856f7af197c75b7188ba0744c0f10b7f9ff14',
+  repo: 'zyxnero.github.io',
+  owner: 'zyxnero',
+  admin: ['zyxnero'],
+  id: location.pathname,
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
 </div>
 
 </div>
@@ -185,6 +198,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <ol id="niu2-sidebar-toc-list">
 <li><a href="#content-heading">在网页中嵌入 html5 音视频</a></li>
     <li><a href='#4e63f356b53969a3458a2e612a726df6'>安装 FFmpeg</a></li><li><a href='#d2b3b5b0e8e7ae02b05511465192f574'>转码音视频</a></li><li><a href='#9e068158b573d915ef69529b11ef2f6d'>将媒体文件嵌入网页</a></li><li><a href='#79d8bad7cbaec17875e2803d09bad01e'>无损合并视频片段（Updated 2018.07.12）</a></li><li><a href='#158ce031b84d63c39e11ebcb03c83dfc'>嵌入结果</a><ul><li><a href='#c4f92557d7c49823e0f5d3bde398e44c'>嵌入视频（右键选择播放）</a></li><li><a href='#5c279a1704357d84f72d80a0c5e7768e'>嵌入音频</a></li></ul></li><li><a href='#2a302fa545ce4445b25970650930debd'>参考文章</a></li>
+<li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
@@ -203,13 +217,13 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p>相关文章</p>
 <ul>
 <li><a href="https://lusir.me/after-enabling-application-cache.html">启用 Application Cache（续）</a></li>
-<li><a href="https://lusir.me/notes-of-win-pelican.html">Pelican 在 Windows 下的静态文件及目录拷贝</a></li>
+<li><a href="https://lusir.me/sync-feed-to-weibo.html">将博客 Feed 推至微博</a></li>
 <li><a href="https://lusir.me/enable-localstorage.html">启用 LocalSotrage</a></li>
-<li><a href="https://lusir.me/customize-purecodec-player.html">修改注册表自定义完美解码播放器</a></li>
-<li><a href="https://lusir.me/solutions-to-wp8.html">WP8 遭遇问题记录</a></li>
-<li><a href="https://lusir.me/solution-to-insufficient-permissions.html">Weibo 提示 “Insufficient App Permissions” 的解决办法</a></li>
+<li><a href="https://lusir.me/enable-keyboard-in-linux.html">Linux 下 Lenovo S10-3C 开启键盘</a></li>
+<li><a href="https://lusir.me/notes-of-win-pelican.html">Pelican 在 Windows 下的静态文件及目录拷贝</a></li>
 <li><a href="https://lusir.me/delete-watermarks-with-pitstop.html">通过 PitStop 插件批量删除水印</a></li>
-<li><a href="https://lusir.me/embed-hermit-player.html">在网页中嵌入 hermit 播放器</a></li>
+<li><a href="https://lusir.me/rec-songs-of-black-eyed-peas.html">Black.Eyed.Peas 歌曲推荐</a></li>
+<li><a href="https://lusir.me/shutdown-windows-in-cmd.html">Windows 下命令行关机</a></li>
 </ul>
  
 </div></div>
@@ -222,6 +236,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">onContentLoaded();</script>
 
 <!-- GoogleAnalytics -->

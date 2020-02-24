@@ -33,6 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <link rel="canonical" href="https://lusir.me/shutdown-windows-in-cmd.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -165,7 +166,19 @@ var ap = new APlayer({
 </div>
 
 <div id="content-comments">
-
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+const gitalk = new Gitalk({
+  clientID: '29ad16e437499c65fd47',
+  clientSecret: '4fb856f7af197c75b7188ba0744c0f10b7f9ff14',
+  repo: 'zyxnero.github.io',
+  owner: 'zyxnero',
+  admin: ['zyxnero'],
+  id: location.pathname,
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
 </div>
 
 </div>
@@ -193,6 +206,7 @@ var ap = new APlayer({
 <ol id="niu2-sidebar-toc-list">
 <li><a href="#content-heading">Windows 下命令行关机</a></li>
     <li><a href='#5360d5e348f741b19068be96ee97b6d1'>倒计时关机</a></li><li><a href='#22db59606a62cf7f732b93fc9bbe06be'>定时关机</a></li><li><a href='#8a9cd9a55db1b8df34a891b54bf330f1'>取消定时关机</a></li><li><a href='#12ecc4e4aae2be130ed32753ae1ace8c'>shutdown.exe 的参数含义</a></li><li><a href='#7c1c67d7a68f37c0bcdd4e43df86e770'>kill 进程小技巧（补充于 2014-10-14）</a></li>
+<li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
@@ -210,14 +224,14 @@ var ap = new APlayer({
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="https://lusir.me/after-enabling-application-cache.html">启用 Application Cache（续）</a></li>
-<li><a href="https://lusir.me/notes-of-win-pelican.html">Pelican 在 Windows 下的静态文件及目录拷贝</a></li>
-<li><a href="https://lusir.me/win-e-failure.html">修复 Win + E 出现 explorer.exe 未指定错误</a></li>
+<li><a href="https://lusir.me/sync-feed-to-weibo.html">将博客 Feed 推至微博</a></li>
+<li><a href="https://lusir.me/embed-html5-media.html">在网页中嵌入 html5 音视频</a></li>
 <li><a href="https://lusir.me/switch-env-variable-temporarily.html">使用批处理临时切换环境变量</a></li>
+<li><a href="https://lusir.me/win-e-failure.html">修复 Win + E 出现 explorer.exe 未指定错误</a></li>
 <li><a href="https://lusir.me/solutions-to-wp8.html">WP8 遭遇问题记录</a></li>
-<li><a href="https://lusir.me/solution-to-insufficient-permissions.html">Weibo 提示 “Insufficient App Permissions” 的解决办法</a></li>
+<li><a href="https://lusir.me/enable-keyboard-in-linux.html">Linux 下 Lenovo S10-3C 开启键盘</a></li>
+<li><a href="https://lusir.me/notes-of-win-pelican.html">Pelican 在 Windows 下的静态文件及目录拷贝</a></li>
 <li><a href="https://lusir.me/delete-watermarks-with-pitstop.html">通过 PitStop 插件批量删除水印</a></li>
-<li><a href="https://lusir.me/rec-songs-of-black-eyed-peas.html">Black.Eyed.Peas 歌曲推荐</a></li>
 </ul>
  
 </div></div>
@@ -230,6 +244,7 @@ var ap = new APlayer({
 <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">onContentLoaded();</script>
 
 <!-- GoogleAnalytics -->

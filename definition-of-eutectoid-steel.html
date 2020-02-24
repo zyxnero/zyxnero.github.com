@@ -33,6 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <link rel="canonical" href="https://lusir.me/definition-of-eutectoid-steel.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -121,7 +122,19 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 
 <div id="content-comments">
-
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+const gitalk = new Gitalk({
+  clientID: '29ad16e437499c65fd47',
+  clientSecret: '4fb856f7af197c75b7188ba0744c0f10b7f9ff14',
+  repo: 'zyxnero.github.io',
+  owner: 'zyxnero',
+  admin: ['zyxnero'],
+  id: location.pathname,
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
 </div>
 
 </div>
@@ -145,6 +158,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <ol id="niu2-sidebar-toc-list">
 <li><a href="#content-heading">共析钢的定义</a></li>
     <li><a href='#fec5050eeea132b15a3072913febbdba'>共析反应</a></li><li><a href='#7a82576ab61f9f1a41f392f2ba6a0460'>共析钢</a></li><li><a href='#2271b0fcf4b5e8cafc04a2115712eaf8'>亚共析钢</a></li><li><a href='#2a431fc3acb87199d7d3e1fccf17b0e2'>过共析钢</a></li><li><a href='#c8fd5ecab896ff0333b6aa921f06b974'>临界温度</a></li>
+<li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
@@ -171,6 +185,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">onContentLoaded();</script>
 
 <!-- GoogleAnalytics -->

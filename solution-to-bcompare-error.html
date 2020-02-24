@@ -33,6 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <link rel="canonical" href="https://lusir.me/solution-to-bcompare-error.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -130,7 +131,19 @@ Win7    C:\Users\[Your User Name]\AppData\Roaming\Scooter Software\Beyond Compar
 </div>
 
 <div id="content-comments">
-
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+const gitalk = new Gitalk({
+  clientID: '29ad16e437499c65fd47',
+  clientSecret: '4fb856f7af197c75b7188ba0744c0f10b7f9ff14',
+  repo: 'zyxnero.github.io',
+  owner: 'zyxnero',
+  admin: ['zyxnero'],
+  id: location.pathname,
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
 </div>
 
 </div>
@@ -154,6 +167,7 @@ Win7    C:\Users\[Your User Name]\AppData\Roaming\Scooter Software\Beyond Compar
 <ol id="niu2-sidebar-toc-list">
 <li><a href="#content-heading">“Beyond Compare 许可证密钥被撤销” 的解决办法</a></li>
     <li><a href='#6f1fefa928e01b0bb4ba64071c7ad053'>解决方法：</a><ul><li><a href='#ed752639f1c9e21123de5f01b230f9e3'>保存配置</a></li><li><a href='#9fb493ad79ed72cda3405c46ed9a24b4'>删除相应目录</a></li><li><a href='#f4305a6b2d192b4290a9a8c4353c6b13'>重新安装</a></li></ul></li>
+<li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
@@ -180,6 +194,7 @@ Win7    C:\Users\[Your User Name]\AppData\Roaming\Scooter Software\Beyond Compar
 <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">onContentLoaded();</script>
 
 <!-- GoogleAnalytics -->

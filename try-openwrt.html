@@ -33,6 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <link rel="canonical" href="https://lusir.me/try-openwrt.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -201,7 +202,19 @@ auto-save-interval=30
 </div>
 
 <div id="content-comments">
-
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+const gitalk = new Gitalk({
+  clientID: '29ad16e437499c65fd47',
+  clientSecret: '4fb856f7af197c75b7188ba0744c0f10b7f9ff14',
+  repo: 'zyxnero.github.io',
+  owner: 'zyxnero',
+  admin: ['zyxnero'],
+  id: location.pathname,
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
 </div>
 
 </div>
@@ -227,6 +240,7 @@ auto-save-interval=30
 <ol id="niu2-sidebar-toc-list">
 <li><a href="#content-heading">折腾 360 路由</a></li>
     <li><a href='#300b34e58a0fc5ec5bb570dd6601f1c6'>刷 Openwrt</a></li><li><a href='#3d9befcfabeff7e2972165d22183a838'>刷不死 UBoot</a></li><li><a href='#8c9b7d36a7d1bc1ee133bfe2e173c323'>挂载 U 盘</a></li><li><a href='#d67f3f43de03f967069fae3e553e67d0'>安装并配置 Aria2</a></li><li><a href='#67ccb6ae961a467ce30943ab1cb1ac68'>限制 Aria2 的 CPU 使用率</a></li><li><a href='#60cf9f743716f2cf1ed0ac7a3563ad52'>读取 ext4 格式 U 盘</a></li><li><a href='#6aa4ba7e676ffeda11262cd5b7c18218'>计划任务</a></li><li><a href='#27d1215718e548798395f11e464e65cb'>备份/恢复固件</a></li><li><a href='#d54d3b94ffaf07589de3006395891685'>Update 2014-11-24 12:15</a></li><li><a href='#2a302fa545ce4445b25970650930debd'>参考文章</a></li>
+<li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
@@ -258,6 +272,7 @@ auto-save-interval=30
 <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">onContentLoaded();</script>
 
 <!-- GoogleAnalytics -->

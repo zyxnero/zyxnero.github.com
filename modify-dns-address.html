@@ -33,6 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <link rel="canonical" href="https://lusir.me/modify-dns-address.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -122,7 +123,19 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 
 <div id="content-comments">
-
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+const gitalk = new Gitalk({
+  clientID: '29ad16e437499c65fd47',
+  clientSecret: '4fb856f7af197c75b7188ba0744c0f10b7f9ff14',
+  repo: 'zyxnero.github.io',
+  owner: 'zyxnero',
+  admin: ['zyxnero'],
+  id: location.pathname,
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
 </div>
 
 </div>
@@ -148,6 +161,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <ol id="niu2-sidebar-toc-list">
 <li><a href="#content-heading">修改本地连接 DNS 地址</a></li>
     <li><a href='#efbd19d7f6c3790e0ea0d45d97ec32cd'>OpenerDNS（貌似已失效）</a></li><li><a href='#ae3183642b418611ff5169b2cb9ae47c'>V2EX DNS（延时稍稍）</a></li><li><a href='#843399b995ee857403526099413494da'>AliDNS（速度还行）</a></li><li><a href='#e947833278cde3f8c67429aac675d6c7'>OneDNS（据说很纯洁）</a></li><li><a href='#4194cbec9bb69ee83e20bd469549c604'>本人现用 DNS（适配南方）</a></li>
+<li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
@@ -178,6 +192,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">onContentLoaded();</script>
 
 <!-- GoogleAnalytics -->

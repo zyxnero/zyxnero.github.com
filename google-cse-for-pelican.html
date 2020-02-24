@@ -33,6 +33,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript">window.onload = function() {  };</script>
 <link rel="stylesheet" href="https://lusir.me/theme/css/pygments/github.css" type="text/css" />
 <link rel="stylesheet" href="https://lusir.me/theme/css/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <link rel="canonical" href="https://lusir.me/google-cse-for-pelican.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -157,7 +158,19 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 
 <div id="content-comments">
-
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+const gitalk = new Gitalk({
+  clientID: '29ad16e437499c65fd47',
+  clientSecret: '4fb856f7af197c75b7188ba0744c0f10b7f9ff14',
+  repo: 'zyxnero.github.io',
+  owner: 'zyxnero',
+  admin: ['zyxnero'],
+  id: location.pathname,
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
 </div>
 
 </div>
@@ -182,6 +195,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <ol id="niu2-sidebar-toc-list">
 <li><a href="#content-heading">整合 Google 自定义搜索到 Pelican</a></li>
     <li><a href='#be5bf34c6756f3e3f7e20057e2c5c10b'>第一步：注册并获取 Google 自定义搜索代码</a></li><li><a href='#3a2e8e53c47ef1f31c3c65ceed0d2411'>第二步：创建搜索结果页</a></li><li><a href='#1db2035cd12c3dd8d8e34366e93b222c'>第三步：修改当前主题的搜索提交表单</a></li><li><a href='#5aec29c358fa0dff64fe292979a341d1'>第四步：使用 javascript 让搜索结果页的 title 中显示搜索关键字（可选）</a></li><li><a href='#effe4bed8cea1f7d427c950a4d195981'>第五步：调整 CSS</a></li>
+<li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
@@ -213,6 +227,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/fancy-loading.js"></script>
 <script type="text/javascript" src="https://lusir.me/theme/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">onContentLoaded();</script>
 
 <!-- GoogleAnalytics -->
