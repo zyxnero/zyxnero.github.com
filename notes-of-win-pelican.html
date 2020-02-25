@@ -161,13 +161,15 @@ var ap = new APlayer({
 <div id="content-comments">
 <div id="gitalk-container"></div>
 <script type="text/javascript">
-const gitalk = new Gitalk({
+var gitalk = new Gitalk({
   clientID: '29ad16e437499c65fd47',
   clientSecret: '4fb856f7af197c75b7188ba0744c0f10b7f9ff14',
   repo: 'zyxnero.github.com',
   owner: 'zyxnero',
   admin: ['zyxnero'],
   id: location.pathname,
+  perPage: 15,
+  pagerDirection: 'first',
   distractionFreeMode: false
 })
 gitalk.render('gitalk-container')
@@ -216,14 +218,14 @@ gitalk.render('gitalk-container')
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="https://lusir.me/sticky-footer.html">置 footer 于页面底部</a></li>
-<li><a href="https://lusir.me/sync-feed-to-weibo.html">将博客 Feed 推至微博</a></li>
 <li><a href="https://lusir.me/delete-watermarks-with-pitstop.html">通过 PitStop 插件批量删除水印</a></li>
+<li><a href="https://lusir.me/embed-hermit-player.html">在网页中嵌入 hermit 播放器</a></li>
+<li><a href="https://lusir.me/sync-feed-to-weibo.html">将博客 Feed 推至微博</a></li>
 <li><a href="https://lusir.me/after-enabling-application-cache.html">启用 Application Cache（续）</a></li>
 <li><a href="https://lusir.me/static-blog.html">Pelican + Niux2 使用记录</a></li>
+<li><a href="https://lusir.me/embed-html5-media.html">在网页中嵌入 html5 音视频</a></li>
 <li><a href="https://lusir.me/solutions-to-wp8.html">WP8 遭遇问题记录</a></li>
 <li><a href="https://lusir.me/enable-keyboard-in-linux.html">Linux 下 Lenovo S10-3C 开启键盘</a></li>
-<li><a href="https://lusir.me/embed-html5-media.html">在网页中嵌入 html5 音视频</a></li>
 </ul>
  
 </div></div>
