@@ -114,20 +114,14 @@ browser.safebrowsing.dataProvider —— -1
 </div>
 
 <div id="content-comments">
-<div id="gitalk-container"></div>
+<div id="disqus_thread"></div>
 <script type="text/javascript">
-var gitalk = new Gitalk({
-  clientID: '29ad16e437499c65fd47',
-  clientSecret: '4fb856f7af197c75b7188ba0744c0f10b7f9ff14',
-  repo: 'zyxnero.github.com',
-  owner: 'zyxnero',
-  admin: ['zyxnero'],
-  id: location.pathname,
-  perPage: 15,
-  pagerDirection: 'first',
-  distractionFreeMode: false
-})
-gitalk.render('gitalk-container')
+var disqus_shortname = 'nnero';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
 </script>
 </div>
 
