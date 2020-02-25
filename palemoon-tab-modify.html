@@ -111,14 +111,21 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 
 <div id="content-comments">
-<div id="disqus_thread"></div>
+<div id="gitalk-container"></div>
 <script type="text/javascript">
-var disqus_shortname = 'nnero';
-(function() {
-var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+var gitalk = new Gitalk({
+  clientID: 'aa5daf9e45c43db0bed1',
+  clientSecret: '8cc2895c3e012a61d4838829954023ec697c7d4c',
+  repo: 'zyxnero.github.com',
+  owner: 'zyxnero',
+  admin: ['zyxnero'],
+  id: location.pathname,
+  labels: ['Gitalk'],
+  perPage: 15,
+  pagerDirection: 'first',
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
 </script>
 </div>
 
@@ -162,11 +169,11 @@ dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="https://lusir.me/mason-usage.html">Mason 两个基础用法</a></li>
 <li><a href="https://lusir.me/delete-firefox-seraching-history.html">清理 Firefox 搜索记录</a></li>
-<li><a href="https://lusir.me/stylish2-editor-uc.html">Stylish2.0 Editor UC 脚本</a></li>
 <li><a href="https://lusir.me/create-url-shortcuts-with-firefox.html">利用 Firefox 为网页链接创建桌面快捷方式</a></li>
 <li><a href="https://lusir.me/modify-firefox-search-engine.html">修改 Firefox 搜索引擎</a></li>
+<li><a href="https://lusir.me/mason-usage.html">Mason 两个基础用法</a></li>
+<li><a href="https://lusir.me/stylish2-editor-uc.html">Stylish2.0 Editor UC 脚本</a></li>
 <li><a href="https://lusir.me/several-optimization-of-palemoon.html">PaleMoon 的几项优化</a></li>
 </ul>
  
