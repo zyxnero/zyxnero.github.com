@@ -110,24 +110,24 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <li>刷 magisk.zip → 开机安装 magisk manager；</li>
 <li>安装 Xposed Installer → 禁用资源钩子 → 安装专用版 Xposed_Framework。</li>
 </ol>
-<h3 id="dd9de3857bae15b6f306d168006b5637">禁用系统自带'应用商店'等程序开机自启动：</h3>
+<h3 id="cd00a391e0e99b6b9acd580a7b7716ab">禁用系统自带<code>应用商店</code>等程序开机自启动：</h3>
 <ul>
-<li>修改替换 '/system/framework/services.jar' 并更改权限 '0644'；</li>
-<li>删除 '/system/framework/oat/arm64/services.odex'；</li>
-<li>删除 '/system/app' 及 '/system/priv-app' 下的自带程序，其中 'PersonalAssistant' 不能删。</li>
+<li>修改替换 <code>/system/framework/services.jar</code> 并更改权限 <code>0644</code>；</li>
+<li>删除 <code>/system/framework/oat/arm64/services.odex</code>；</li>
+<li>删除 <code>/system/app</code> 及 <code>/system/priv-app</code> 下的自带程序，其中 <code>PersonalAssistant</code> 不能删。</li>
 </ul>
 <h3 id="8c1133c4e5c9af3cf27e3bac4e829a6a">使同时支持 Mi 公交卡及 NFC 门禁卡功能：</h3>
 <ul>
 <li>安装 Card Emulator；</li>
 <li>读取门禁信息；</li>
-<li>删除 /data/nfc 目录下的 'libnfc-nxpTransit.conf'；刷门禁时设置默认钱包为“使用HCE钱包”，使用公交卡功能设置为“使用小米钱包”即可。</li>
+<li>删除 /data/nfc 目录下的 <code>libnfc-nxpTransit.conf</code>；刷门禁时设置默认钱包为“使用HCE钱包”，使用公交卡功能设置为“使用小米钱包”即可。</li>
 </ul>
 <h3 id="97021cd4b1bee98550a441e377902114">其它：</h3>
 <ul>
 <li>替换声音、主题等文件；</li>
 <li>安装 GMS，安装 GCAM、Authy 等程序；</li>
 <li>恢复备份的相关文件信息；</li>
-<li>将字体文件置入 'Android/data/cn.wps.moffice_eng/.cache/KingsoftOffice/.fonts' 目录内。</li>
+<li>将字体文件置入 <code>Android/data/cn.wps.moffice_eng/.cache/KingsoftOffice/.fonts</code> 目录内。</li>
 </ul>
 <h3 id="36477c4f66c0578c3af2becac5b7b60c">PC 机上开启手机共享目录：</h3>
 <ol>
@@ -181,7 +181,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 <ol id="niu2-sidebar-toc-list">
 <li><a href="#content-heading">重装 Mi6 过程</a></li>
-    <li><a href='#8b3c020abb7f52c21fd76e994f78e8a0'>备份相关信息至 PC，大致包括：</a></li><li><a href='#788131d44ac9bcb8270c6379374af8b7'>解锁 bootloader，使用线刷工具安装对应的 Recovery 程序并 root，大致如下：</a></li><li><a href='#dd9de3857bae15b6f306d168006b5637'>禁用系统自带'应用商店'等程序开机自启动：</a></li><li><a href='#8c1133c4e5c9af3cf27e3bac4e829a6a'>使同时支持 Mi 公交卡及 NFC 门禁卡功能：</a></li><li><a href='#97021cd4b1bee98550a441e377902114'>其它：</a></li><li><a href='#36477c4f66c0578c3af2becac5b7b60c'>PC 机上开启手机共享目录：</a></li>
+    <li><a href='#8b3c020abb7f52c21fd76e994f78e8a0'>备份相关信息至 PC，大致包括：</a></li><li><a href='#788131d44ac9bcb8270c6379374af8b7'>解锁 bootloader，使用线刷工具安装对应的 Recovery 程序并 root，大致如下：</a></li><li><a href='#d9dd6ba88ce4c35f40ba010d20100a18'>应用商店</a></li><li><a href='#8c1133c4e5c9af3cf27e3bac4e829a6a'>使同时支持 Mi 公交卡及 NFC 门禁卡功能：</a></li><li><a href='#97021cd4b1bee98550a441e377902114'>其它：</a></li><li><a href='#36477c4f66c0578c3af2becac5b7b60c'>PC 机上开启手机共享目录：</a></li>
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
