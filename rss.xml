@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>https://lusir.me/</link><description>走走停停…</description><atom:link href="https://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 22 Jul 2018 11:08:00 +0800</lastBuildDate><item><title>使用批处理临时切换环境变量</title><link>https://lusir.me/switch-env-variable-temporarily.html</link><description>&lt;p&gt;话题要从我使用 &lt;code&gt;Pelican&lt;/code&gt; 生成静态站 &lt;code&gt;html&lt;/code&gt; 文件说起。使用 &lt;code&gt;Pelican&lt;/code&gt; 大概是在 2014 年，那时 &lt;code&gt;Pelican&lt;/code&gt; 还是基于 Python 2.x，虽然后期 &lt;code&gt;Pelican&lt;/code&gt; 也更新到基于 Python 3.x，但由于个人太懒，所以截至目前还在使用旧版的 &lt;code&gt;Pelican&lt;/code&gt;（一直未更新^.^）。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>擼sirの避風港</title><link>https://lusir.me/</link><description>走走停停…</description><atom:link href="https://lusir.me/rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 26 Sep 2020 17:35:00 +0800</lastBuildDate><item><title>重装 Mi6 过程</title><link>https://lusir.me/reinstall-os-for-mi6.html</link><description>&lt;p&gt;记录一下 Mi6 开发版系统安装的过程。
+&lt;/p&gt;
+&lt;h3 id="8b3c020abb7f52c21fd76e994f78e8a0"&gt;备份相关信息至 PC，大致包括：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;备份通讯录、短信、照片、视频、音乐、笔记等；&lt;/li&gt;
+&lt;li&gt;备份程序配置文件如 Tasker、GMD Gestures、MyAndroidTools 等；&lt;/li&gt;
+&lt;li&gt;备份必要的聊天记录如微信、QQ 等；&lt;/li&gt;
+&lt;li&gt;通过系统备份程序备份相关 APP；&lt;/li&gt;
+&lt;li&gt;备份 SD 卡下的其它相关目录内的文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="788131d44ac9bcb8270c6379374af8b7"&gt;解锁 bootloader，使用线刷工具安装对应的 Recovery 程序并 root，大致如下：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;清除Dalvik、Data、Cache、System；&lt;/li&gt;
+&lt;li&gt;刷入开发版系统 zip 包（7.10.12）；&lt;/li&gt;
+&lt;li&gt;Rec 高级设置 → 取消强制加密 → 格式化data分区；&lt;/li&gt;
+&lt;li&gt;刷 magisk.zip → 开机安装 magisk manager；&lt;/li&gt;
+&lt;li&gt;安装 Xposed Installer → 禁用资源钩子 → 安装专用版 Xposed_Framework。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="dd9de3857bae15b6f306d168006b5637"&gt;禁用系统自带'应用商店'等程序开机自启动：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;修改替换 '/system/framework/services.jar' 并更改权限 '0644'；&lt;/li&gt;
+&lt;li&gt;删除 '/system/framework/oat/arm64/services.odex'；&lt;/li&gt;
+&lt;li&gt;删除 '/system/app' 及 '/system/priv-app' 下的自带程序，其中 'PersonalAssistant' 不能删。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="8c1133c4e5c9af3cf27e3bac4e829a6a"&gt;使同时支持 Mi 公交卡及 NFC 门禁卡功能：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;安装 Card Emulator；&lt;/li&gt;
+&lt;li&gt;读取门禁信息；&lt;/li&gt;
+&lt;li&gt;删除 /data/nfc 目录下的 'libnfc-nxpTransit.conf'；刷门禁时设置默认钱包为“使用HCE钱包”，使用公交卡功能设置为“使用小米钱包”即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="97021cd4b1bee98550a441e377902114"&gt;其它：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;替换声音、主题等文件；&lt;/li&gt;
+&lt;li&gt;安装 GMS，安装 GCAM、Authy 等程序；&lt;/li&gt;
+&lt;li&gt;恢复备份的相关文件信息；&lt;/li&gt;
+&lt;li&gt;将字体文件置入 'Android/data/cn.wps.moffice_eng/.cache/KingsoftOffice/.fonts' 目录内。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="36477c4f66c0578c3af2becac5b7b60c"&gt;PC 机上开启手机共享目录：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;手机与 PC 在同一局域网内；&lt;/li&gt;
+&lt;li&gt;PC 新建目录 → 右键“属性” → 共享 → 选择 Everyone → 确认；&lt;/li&gt;
+&lt;li&gt;使用 RE 或 Mix 添加共享目录入口。&lt;/li&gt;
+&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 26 Sep 2020 17:35:00 +0800</pubDate><guid>tag:https://lusir.me,2020-09-26:reinstall-os-for-mi6.html</guid><category>Mi6</category></item><item><title>使用批处理临时切换环境变量</title><link>https://lusir.me/switch-env-variable-temporarily.html</link><description>&lt;p&gt;话题要从我使用 &lt;code&gt;Pelican&lt;/code&gt; 生成静态站 &lt;code&gt;html&lt;/code&gt; 文件说起。使用 &lt;code&gt;Pelican&lt;/code&gt; 大概是在 2014 年，那时 &lt;code&gt;Pelican&lt;/code&gt; 还是基于 Python 2.x，虽然后期 &lt;code&gt;Pelican&lt;/code&gt; 也更新到基于 Python 3.x，但由于个人太懒，所以截至目前还在使用旧版的 &lt;code&gt;Pelican&lt;/code&gt;（一直未更新^.^）。
 &lt;/p&gt;
 &lt;p&gt;但随着时间推移 Python 3.x 已成为主流，例如 You-Get。所以目前我有同时安装 Python 2.7 与 Python 3.5，使用前按需求先切换环境变量。如下图：&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/switch-env-variable-temporarily-1.png" title="使用批处理临时切换环境变量" data-fancybox="gallery"&gt;
@@ -521,17 +563,4 @@ browser.safebrowsing.dataProvider —— -1
 &lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/ess-sharing-lan-3.jpg" title="设置 ESS 允许共享局域网 - 3" data-fancybox="gallery"&gt;
     &lt;img src="https://nnero.gitee.io/demo/ess-sharing-lan-3.jpg" alt="设置 ESS 允许共享局域网 - 3" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;至此，局域网共享应正常……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 02 Mar 2015 21:32:00 +0800</pubDate><guid>tag:https://lusir.me,2015-03-02:set-ess-sharing-lan.html</guid><category>ESET Smart Security</category></item><item><title>利用 Firefox 为网页链接创建桌面快捷方式</title><link>https://lusir.me/create-url-shortcuts-with-firefox.html</link><description>&lt;p&gt;精简掉桌面右键的 &lt;code&gt;新建快捷方式&lt;/code&gt; 后，发现原来还可以通过 Firefox 为网页链接创建桌面快捷方式：
-&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;调整 Firefox 窗口，直到可以在同一个屏幕里同时看到桌面和 Firefox；&lt;/li&gt;
-&lt;li&gt;按住 &lt;code&gt;地址栏&lt;/code&gt; 左边的图标；&lt;/li&gt;
-&lt;li&gt;按住鼠标左键的同时，将指针移动到桌面，然后松开鼠标左键，快捷方式就创建好了。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/create-url-shortcuts-with-firefox.png" title="为网页链接创建桌面快捷方式" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/create-url-shortcuts-with-firefox.png" alt="为网页链接创建桌面快捷方式" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;其实，如果是在 Win7 以上版本的 Windows 下，可以直接将图标拖至屏幕右下角，待返回至桌面松开鼠标左键即可创建。&lt;/p&gt;
-&lt;p&gt;同理，我们也可以拖放书签菜单、书签和历史记录栏或者 &lt;code&gt;我的足迹&lt;/code&gt; 窗口中的项目到桌面上从而为其创建快捷方式。&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;
-转载并修改自 &lt;a href="https://support.mozilla.org/zh-CN/kb/%E5%9C%A8%E6%A1%8C%E9%9D%A2%E5%88%9B%E5%BB%BA%E7%BD%91%E9%A1%B5%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F" title="在桌面创建网页快捷方式"&gt;Mozilla Support&lt;/a&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 28 Feb 2015 22:38:00 +0800</pubDate><guid>tag:https://lusir.me,2015-02-28:create-url-shortcuts-with-firefox.html</guid><category>Firefox</category></item></channel></rss>
+&lt;p&gt;至此，局域网共享应正常……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 02 Mar 2015 21:32:00 +0800</pubDate><guid>tag:https://lusir.me,2015-03-02:set-ess-sharing-lan.html</guid><category>ESET Smart Security</category></item></channel></rss>

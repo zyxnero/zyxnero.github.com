@@ -9,10 +9,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="成语中“物”的几种解释 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="重装 Mi6 过程 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>成语中“物”的几种解释 - 擼sirの避風港</title>
+<title>重装 Mi6 过程 - 擼sirの避風港</title>
 <link href="https://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="https://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
@@ -31,7 +31,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <link rel="stylesheet" href="/theme/css/pygments/github.css">
 <link rel="stylesheet" href="/theme/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/theme/css/gitalk.css">
-<link rel="canonical" href="https://lusir.me/proverb-with-thing.html" />
+<link rel="canonical" href="https://lusir.me/reinstall-os-for-mi6.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="/theme/js/html5shiv.js"></script>
@@ -88,64 +88,53 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 
-<div id="body-content" itemscope="itemscope" itemtype="https://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">成语中“物”的几种解释</h1>
-<div class="post-meta" itemprop="datePublished">Dec 07,2014</div></div>
+<div id="body-content" itemscope="itemscope" itemtype="https://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">重装 Mi6 过程</h1>
+<div class="post-meta" itemprop="datePublished">Sep 26,2020</div></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>心血来潮整理了几个含“物”的成语。
+<p>记录一下 Mi6 开发版系统安装的过程。
 </p>
-<table class="table table-bordered table-striped table-condensed table-hover">
-<thead>
-<tr>
-<th>序号</th>
-<th>释义</th>
-<th>词例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>①</td>
-<td>事物</td>
-<td>玩物丧志、格物致知、物尽其用、物极必反</td>
-</tr>
-<tr>
-<td>②</td>
-<td>景物</td>
-<td>触物兴怀、物换星移</td>
-</tr>
-<tr>
-<td>③</td>
-<td><code>①</code> + <code>②</code></td>
-<td>睹物思人、物是人非</td>
-</tr>
-<tr>
-<td>④</td>
-<td>东西</td>
-<td>探囊取物、别无长物</td>
-</tr>
-<tr>
-<td>⑤</td>
-<td>任务</td>
-<td>厚德载物</td>
-</tr>
-<tr>
-<td>⑥</td>
-<td>人</td>
-<td>恃才傲物、待人接物、爱人利物</td>
-</tr>
-<tr>
-<td>⑦</td>
-<td>生物</td>
-<td>物竞天择、物伤其类</td>
-</tr>
-<tr>
-<td>⑧</td>
-<td>万物</td>
-<td>物华天宝、天工开物、厚德载物</td>
-</tr>
-</tbody>
-</table>
-<p>想象不出来别的语言会不会也有一个类似的词，譬如 “Thing” 或者“もの”？汉语博大精深 ……</p>
+<h3 id="8b3c020abb7f52c21fd76e994f78e8a0">备份相关信息至 PC，大致包括：</h3>
+<ul>
+<li>备份通讯录、短信、照片、视频、音乐、笔记等；</li>
+<li>备份程序配置文件如 Tasker、GMD Gestures、MyAndroidTools 等；</li>
+<li>备份必要的聊天记录如微信、QQ 等；</li>
+<li>通过系统备份程序备份相关 APP；</li>
+<li>备份 SD 卡下的其它相关目录内的文件。</li>
+</ul>
+<h3 id="788131d44ac9bcb8270c6379374af8b7">解锁 bootloader，使用线刷工具安装对应的 Recovery 程序并 root，大致如下：</h3>
+<ol>
+<li>清除Dalvik、Data、Cache、System；</li>
+<li>刷入开发版系统 zip 包（7.10.12）；</li>
+<li>Rec 高级设置 → 取消强制加密 → 格式化data分区；</li>
+<li>刷 magisk.zip → 开机安装 magisk manager；</li>
+<li>安装 Xposed Installer → 禁用资源钩子 → 安装专用版 Xposed_Framework。</li>
+</ol>
+<h3 id="dd9de3857bae15b6f306d168006b5637">禁用系统自带'应用商店'等程序开机自启动：</h3>
+<ul>
+<li>修改替换 '/system/framework/services.jar' 并更改权限 '0644'；</li>
+<li>删除 '/system/framework/oat/arm64/services.odex'；</li>
+<li>删除 '/system/app' 及 '/system/priv-app' 下的自带程序，其中 'PersonalAssistant' 不能删。</li>
+</ul>
+<h3 id="8c1133c4e5c9af3cf27e3bac4e829a6a">使同时支持 Mi 公交卡及 NFC 门禁卡功能：</h3>
+<ul>
+<li>安装 Card Emulator；</li>
+<li>读取门禁信息；</li>
+<li>删除 /data/nfc 目录下的 'libnfc-nxpTransit.conf'；刷门禁时设置默认钱包为“使用HCE钱包”，使用公交卡功能设置为“使用小米钱包”即可。</li>
+</ul>
+<h3 id="97021cd4b1bee98550a441e377902114">其它：</h3>
+<ul>
+<li>替换声音、主题等文件；</li>
+<li>安装 GMS，安装 GCAM、Authy 等程序；</li>
+<li>恢复备份的相关文件信息；</li>
+<li>将字体文件置入 'Android/data/cn.wps.moffice_eng/.cache/KingsoftOffice/.fonts' 目录内。</li>
+</ul>
+<h3 id="36477c4f66c0578c3af2becac5b7b60c">PC 机上开启手机共享目录：</h3>
+<ol>
+<li>手机与 PC 在同一局域网内；</li>
+<li>PC 新建目录 → 右键“属性” → 共享 → 选择 Everyone → 确认；</li>
+<li>使用 RE 或 Mix 添加共享目录入口。</li>
+</ol>
 </div>
 
 <div id="content-comments">
@@ -178,11 +167,11 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2014-12-07 17:10</div>
-<div class="niu2-sidebar-label"><i class="fa fa-briefcase"></i>分类</div>
-<div class="niu2-sidebar-value" itemprop="articleSection"><a href="https://lusir.me/collection/index.html">搜藏</a></div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2020-09-26 17:35</div>
+<div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
+<div class="niu2-sidebar-value" itemprop="articleSection"><a href="https://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="https://lusir.me/tag/collection.html">Collection</a></div>
+<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="https://lusir.me/tag/mi6.html">Mi6</a></div>
  
 </div>
 
@@ -191,29 +180,23 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">成语中“物”的几种解释</a></li>
-    
+<li><a href="#content-heading">重装 Mi6 过程</a></li>
+    <li><a href='#8b3c020abb7f52c21fd76e994f78e8a0'>备份相关信息至 PC，大致包括：</a></li><li><a href='#788131d44ac9bcb8270c6379374af8b7'>解锁 bootloader，使用线刷工具安装对应的 Recovery 程序并 root，大致如下：</a></li><li><a href='#dd9de3857bae15b6f306d168006b5637'>禁用系统自带'应用商店'等程序开机自启动：</a></li><li><a href='#8c1133c4e5c9af3cf27e3bac4e829a6a'>使同时支持 Mi 公交卡及 NFC 门禁卡功能：</a></li><li><a href='#97021cd4b1bee98550a441e377902114'>其它：</a></li><li><a href='#36477c4f66c0578c3af2becac5b7b60c'>PC 机上开启手机共享目录：</a></li>
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
 <div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="https://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="https://lusir.me/collection/index.html" itemprop="url"><span itemprop="title">搜藏</span></a></div>&nbsp;&gt;&nbsp;成语中“物”的几种解释
+<div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="https://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;重装 Mi6 过程
 </div>
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="https://lusir.me/alipay-qr-button.html">上一篇</a></li>
-<li class="next"><a href="https://lusir.me/autocad-acc.html">下一篇</a></li>
+<li class="prev"><a href="https://lusir.me/switch-env-variable-temporarily.html">上一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
-<p>相关文章</p>
-<ul>
-<li><a href="https://lusir.me/some-essays-201503.html">寻章摘句 - 201503</a></li>
-<li><a href="https://lusir.me/merciless-bitches-and-actors.html">婊子无情，戏子无义</a></li>
-</ul>
  
 </div></div>
 </div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
