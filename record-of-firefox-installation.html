@@ -9,10 +9,10 @@
 <meta name="renderer" content="webkit">
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
-<meta name="description" content="PaleMoon 修改起始页 - 作者：Nero Zheng，首发于『擼sirの避風港』">
+<meta name="description" content="Firefox 安装记录 - 作者：Nero Zheng，首发于『擼sirの避風港』">
 <meta property="qc:admins" content="315026325312655" />
 <meta property="wb:webmaster" content="8e383b094667a02d" />
-<title>PaleMoon 修改起始页 - 擼sirの避風港</title>
+<title>Firefox 安装记录 - 擼sirの避風港</title>
 <link href="https://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="https://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
 <link rel="shortcut icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
@@ -31,7 +31,7 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <link rel="stylesheet" href="/theme/css/pygments/github.css">
 <link rel="stylesheet" href="/theme/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/theme/css/gitalk.css">
-<link rel="canonical" href="https://lusir.me/palemoon-tab-modify.html" />
+<link rel="canonical" href="https://lusir.me/record-of-firefox-installation.html" />
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="/theme/js/html5shiv.js"></script>
@@ -88,23 +88,124 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 </div>
 </div></div>
 
-<div id="body-content" itemscope="itemscope" itemtype="https://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">PaleMoon 修改起始页</h1>
-<div class="post-meta" itemprop="datePublished">Nov 30,2014</div></div>
+<div id="body-content" itemscope="itemscope" itemtype="https://schema.org/Article"><div class="col-md-8 col-md-offset-2"><h1 id="content-heading" itemprop="headline">Firefox 安装记录</h1>
+<div class="post-meta" itemprop="datePublished">Oct 01,2020</div></div>
 <div id="niu2-left-container" class="col-md-6 col-md-offset-2">
 <div id="niu2-main-content" itemprop="articleBody">
-<p>不记得具体开始使用 PaleMoon 的时间了，只记得说是 Firefox 的优化版，其实用起来也没感觉出太大的差别。不过最近一次更新 PaleMoon 后起始页和新标签页的内容都变成了 PaleMoon 的 logo。本人还是习惯将两者都设置成 <code>about:blank</code>。
+<p>记录一下 Firefox 66 版本的安装过程。
 </p>
-<h3 id="307371c5a920711c40deedb9542fea6d">修改新标签页地址为 about:blank</h3>
-<p>在地址栏输入 <code>about:config</code>，在搜索栏中输入 <code>newtab</code>，如图，将其修改为 <code>about:blank</code> 即可。</p>
-<p><a href="https://nnero.gitee.io/demo/palemoon-tab-modify-1.png" title="修改新标签页地址" data-fancybox="gallery">
-    <img class="aligncenter" src="https://nnero.gitee.io/demo/palemoon-tab-modify-1.png" alt="修改新标签页地址" />
-</a></p>
-<h3 id="f289ed1aa39af564b24ec84b72bc2e30">修改起始页地址为 about:blank</h3>
-<p>查看起始页源代码得知起始页文件路径为 <code>omni.ja</code> 中的 <code>\omni\chrome\toolkit\content\global\logopage.xhtml</code>，其中 <code>omni.ja</code> 位于 PaleMoon 安装路径根目录且可用 WinRar 打开并解压。修改 <code>logopage.xhtml</code> 为“空白”文件即可，如下图。</p>
-<p><a href="https://nnero.gitee.io/demo/palemoon-tab-modify-2.png" title="修改起始页" data-fancybox="gallery">
-    <img class="aligncenter" src="https://nnero.gitee.io/demo/palemoon-tab-modify-2.png" alt="修改起始页" />
-</a></p>
-<p><strong>update 2016.09.14</strong>：如果对程序文件的大小比较在意，可以看看 <a href="https://lusir.me/several-optimization-of-palemoon.html" title="PaleMoon 的几项优化">这一篇</a>。</p>
+<h3 id="7f95901ea7943d724c39c5d87416c5a5">安装及语言包</h3>
+<ol>
+<li>下载安装包，<a href="https://download-installer.cdn.mozilla.net/pub/firefox/releases/68.7.0esr/win64/en-US/Firefox%20Setup%2068.7.0esr.exe" title="Firefox 安装包">下载地址</a>；</li>
+<li>解压文件，复制 core 目录的内容到 <code>D:\Program File\Firefox\</code> 下；</li>
+<li>下载语言包，<a href="https://ftp.mozilla.org/pub/firefox/releases/68.7.0esr/win64/xpi/zh-CN.xpi" title="Firefox 语言包">下载地址</a>并安装；</li>
+<li>便携化后在浏览器 <code>about:config</code> 中添加 <code>string</code> 类项目 <code>intl.locale.requested</code>，值为 <code>zh-CN</code>。</li>
+</ol>
+<h3 id="a7861ba08459c0205f8db95964e612c3">便携化</h3>
+<ol>
+<li>下载 <code>libportable</code> 便携化 Firefox，设置 <code>portable.ini</code> 中的选项如下：</li>
+</ol>
+<div class="codehilite"><pre>Portable=1
+PortableDataPath=./Profiles
+TmpDataPath=./Profiles/Cache
+</pre></div>
+
+
+<ol>
+<li>在 Firefox 快捷方式属性中的“启动路径”参数后添加 <code>-p</code>，设置配置文件路径与 <code>PortableDataPath</code> 一致，配置完成可删除快捷方式中的 <code>-p</code> 参数；</li>
+</ol>
+<h3 id="0563f7233e15ac00e6bcfca103c15c96">禁用更新</h3>
+<p>在 Firefox 程序根目录新建 <code>distribution</code> 文件夹并新建 <code>policies.json</code> 文件，填入以下内容：</p>
+<div class="codehilite"><pre>{&quot;policies&quot;: {&quot;DisableAppUpdate&quot;: true}}
+</pre></div>
+
+
+<h3 id="01820262aa9ad5b130f8f5b86bfd2968">自定义选项</h3>
+<p>在配置文件夹目录 <code>./Profiles</code> 下新建 <code>user.js</code> 文件，其中 <code>user_pref(key,value)</code> 等同于从 <code>about:config</code> 修改，删除之后，修改的设置仍然有效。<code>pref(key,value)</code> 删除之后，修改的设置将失效。例如：</p>
+<div class="codehilite"><pre>pref(&quot;accessibility.force_disabled&quot;, 0); //禁用无障碍环境
+pref(&quot;network.http.speculative-parallel-limit&quot;, 0); //禁用后台数据回传
+user_pref(&quot;extensions.webservice.discoverURL&quot;, &quot;127.0.0.1&quot;); //关闭获取附加组件建议
+pref(&quot;lightweightThemes.update.enabled&quot;, 0); //关闭轻量主题建议
+user_pref(&quot;view_source.editor.path&quot;, &quot;D:\\Program Files\\Notepad++\\Notepad++.exe&quot;);
+user_pref(&quot;findbar.highlightAll&quot;, true); //ctrl+F关键词高亮
+pref(&quot;network.standard-url.enable-rust&quot;, true); //Rust的URL解析器
+pref(&quot;network.tcp.tcp_fastopen_enable&quot;, true); //TCP快速启用过滤,减少http延迟
+pref(&quot;browser.xul.error_pages.expert_bad_cert&quot;, true); //自动展开：此连接是不受信任的
+pref(&quot;network.IDN_show_punycode&quot;, true);
+user_pref(&quot;xpinstall.signatures.required&quot;,false); //可以安装未在AMO被验证扩展
+</pre></div>
+
+
+<h3 id="2f3f8e816f105ec416109a13c38715c0">安装扩展</h3>
+<ul>
+<li>暴力猴</li>
+<li>闪耀拖拽</li>
+<li>Header Editor</li>
+<li>Proxy SwitchyOmega</li>
+<li>uBlock Origin</li>
+<li>xStyle</li>
+<li>mozlz4-edit</li>
+</ul>
+<h3 id="e57710fdea07b767d19115e4d011305d">更改默认搜索引擎</h3>
+<ol>
+<li>
+<p>将 <code>.\aProfiles\search.json.mozlz4</code> 文件拖入mozlz4-edit 编辑器中，删除不需要的引擎及搜索关键字中的多余参数，修改完成后另存为 <code>search.json.mozlz4</code> 文件，退出 Firefox 后覆盖源文件；</p>
+</li>
+<li>
+<p>用 WinRar 或类似程序打开 Firefox 目录下的 <code>browser\omni.ja</code> 文件，浏览到 <code>\chrome\browser\search-extensions</code>，删除目录下不需要的搜索引擎子目录；</p>
+</li>
+<li>
+<p>打开 <code>list.json</code>，滑到最底部，编辑"zh-CN"下的对应项目；</p>
+</li>
+<li>
+<p>进入搜索引擎子目录，修改 <code>manifest.json</code> 文件及 <code>_locales</code> 目录下的 <code>messages.json</code> 文件。</p>
+</li>
+<li>
+<p>备份修改好的 <code>list.json</code>、<code>manifest.json</code>、<code>messages.json</code> 及 <code>search.json.mozlz4</code> 文件，Firefox 后期更新时覆盖即可。</p>
+</li>
+</ol>
+<h3 id="5e0e75872765ca2b4be97f02e8b9f161">UserChrome 脚本</h3>
+<p>使用Endor8的<a href="https://github.com/Endor8/userChrome.js/tree/master/userChrome" title="userChrome脚本">方案</a>，下载压缩包。开启方式如下：</p>
+<ol>
+<li>
+<p>将 <code>config.js</code> 及 <code>userChromeJS</code> 目录放在 Firefox 安装根目录下；</p>
+</li>
+<li>
+<p><code>config-prefs.js</code> 放在 Firefox 安装目录 <code>\defaults\pref</code> 下，在 <code>config-pref.js</code> 中加上：<code>pref("general.config.sandbox_enabled", false);</code> </p>
+</li>
+<li>
+<p><code>userChrome.js</code> 放在配置文件夹 <code>.\Profiles\chrome</code> 下，UC 脚本放入 <code>SubScript</code> 子目录中（子目录增删改可以通过修改 <code>userChrome.js</code> 中的 <code>var arrSubdir</code> 参数进行添加修改）。</p>
+</li>
+</ol>
+<h3 id="97597e33dcb31dc732ff2454e5a15e7c">使用的 UC 脚本</h3>
+<ul>
+<li>addMenuPlus.uc（修改右键菜单）</li>
+<li>KeyChanger.uc（快捷键）</li>
+<li>MouseGestures2_e10s.uc（鼠标手势）</li>
+<li>textLink.uc（文字链接双击打开）</li>
+</ul>
+<h3 id="930a6f373755d3370c09966d944d0a6d">使用的油猴脚本</h3>
+<ul>
+<li>Picviewer CE+</li>
+<li>知乎真实链接地址重定向</li>
+</ul>
+<h3 id="f085b3dae221da03c58f538db635cd6e">UserChrome.css 脚本</h3>
+<p>通过修改该文件隐藏浏览器界面上的“三道杠”按钮。</p>
+<ol>
+<li>在浏览器中打开 <code>chrome://browser/content/browser.xul</code>，<code>F12</code> 查询“三道杠”的元素 id 为 <code>PanelUI-menu-button</code>，</li>
+<li>在 <code>userChrome.css</code> 中添加 <code>#PanelUI-menu-button {display: none !important;}</code></li>
+</ol>
+<h3 id="6f2d7cfe3ad1f5de4c5ea98d2b572c1d">Selenium 驱动 Firefox</h3>
+<p>下载 <code>geckodriver.exe</code> 放到 Python 根目录下，将 Python 目录及 Firefox 目录地址添加至<code>环境变量</code>，测试：</p>
+<div class="codehilite"><pre>from selenium.webdriver import Firefox
+chrome = Firefox()
+chrome.get(&quot;https://baidu.com&quot;)
+chrome.quit()
+</pre></div>
+
+
+<h3 id="0d98c74797e49d00bcc4c17c9d557a2b">其他</h3>
+<p>地址栏会将带 <code>.</code> 的搜索关键字误认为是网址，这时需在关键字前输入一个半角 <code>?</code>，如 <code>?search.json.mozlz4</code> 将会搜索 <code>search.json.mozlz4</code> ，而不是进入一个被误识别的网站。</p>
 </div>
 
 <div id="content-comments">
@@ -137,11 +238,10 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <div class="niu2-sidebar-label"><i class="fa fa-bug"></i>文章作者</div>
 <div class="niu2-sidebar-value" itemprop="author">Nero Zheng</div><p class="hidden">By Nero Zheng</p>
 <div class="niu2-sidebar-label"><i class="fa fa-calendar"></i>发布时间</div>
-<div class="niu2-sidebar-value" itemprop="datePublished">2014-11-30 17:35</div>
+<div class="niu2-sidebar-value" itemprop="datePublished">2020-10-01 18:19</div>
 <div class="niu2-sidebar-label"><i class="fa fa-book"></i>分类</div>
 <div class="niu2-sidebar-value" itemprop="articleSection"><a href="https://lusir.me/record/index.html">记录</a></div>
 <div class="niu2-sidebar-label"><i class="fa fa-tag"></i>标签</div>
-<div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="https://lusir.me/tag/palemoon.html">PaleMoon</a></div>
 <div class="niu2-sidebar-inter-value niu2-sidebar-tag" itemprop="keywords"><a href="https://lusir.me/tag/firefox.html">Firefox</a></div>
  
 </div>
@@ -151,29 +251,27 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <i id="niu2-sidebar-toc-ctrl" class="fa fa-plus"></i>目录
 </div>
 <ol id="niu2-sidebar-toc-list">
-<li><a href="#content-heading">PaleMoon 修改起始页</a></li>
-    <li><a href='#307371c5a920711c40deedb9542fea6d'>修改新标签页地址为 about:blank</a></li><li><a href='#f289ed1aa39af564b24ec84b72bc2e30'>修改起始页地址为 about:blank</a></li>
+<li><a href="#content-heading">Firefox 安装记录</a></li>
+    <li><a href='#7f95901ea7943d724c39c5d87416c5a5'>安装及语言包</a></li><li><a href='#a7861ba08459c0205f8db95964e612c3'>便携化</a></li><li><a href='#0563f7233e15ac00e6bcfca103c15c96'>禁用更新</a></li><li><a href='#01820262aa9ad5b130f8f5b86bfd2968'>自定义选项</a></li><li><a href='#2f3f8e816f105ec416109a13c38715c0'>安装扩展</a></li><li><a href='#e57710fdea07b767d19115e4d011305d'>更改默认搜索引擎</a></li><li><a href='#5e0e75872765ca2b4be97f02e8b9f161'>UserChrome 脚本</a></li><li><a href='#97597e33dcb31dc732ff2454e5a15e7c'>使用的 UC 脚本</a></li><li><a href='#930a6f373755d3370c09966d944d0a6d'>使用的油猴脚本</a></li><li><a href='#f085b3dae221da03c58f538db635cd6e'>UserChrome.css 脚本</a></li><li><a href='#6f2d7cfe3ad1f5de4c5ea98d2b572c1d'>Selenium 驱动 Firefox</a></li><li><a href='#0d98c74797e49d00bcc4c17c9d557a2b'>其他</a></li>
 <li><a href="#content-comments">评论</a></li>
 </ol></div>
 
 <div class="hidden">
 <div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="https://lusir.me" itemprop="url"><span itemprop="title">Home</span></a>&nbsp;&gt;&nbsp;</div>
-<div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="https://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;PaleMoon 修改起始页
+<div itemscope itemtype="https://data-vocabulary.org/Breadcrumb"><a href="https://lusir.me/record/index.html" itemprop="url"><span itemprop="title">记录</span></a></div>&nbsp;&gt;&nbsp;Firefox 安装记录
 </div>
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="https://lusir.me/minidwep-cw-record.html">上一篇</a></li>
-<li class="next"><a href="https://lusir.me/ess-filter.html">下一篇</a></li>
+<li class="prev"><a href="https://lusir.me/reinstall-os-for-mi6.html">上一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
 <p>相关文章</p>
 <ul>
-<li><a href="https://lusir.me/record-of-firefox-installation.html">Firefox 安装记录</a></li>
+<li><a href="https://lusir.me/palemoon-tab-modify.html">PaleMoon 修改起始页</a></li>
 <li><a href="https://lusir.me/create-url-shortcuts-with-firefox.html">利用 Firefox 为网页链接创建桌面快捷方式</a></li>
-<li><a href="https://lusir.me/several-optimization-of-palemoon.html">PaleMoon 的几项优化</a></li>
 <li><a href="https://lusir.me/delete-firefox-seraching-history.html">清理 Firefox 搜索记录</a></li>
 <li><a href="https://lusir.me/modify-firefox-search-engine.html">修改 Firefox 搜索引擎</a></li>
 <li><a href="https://lusir.me/stylish2-editor-uc.html">Stylish2.0 Editor UC 脚本</a></li>

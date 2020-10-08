@@ -1,11 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="https://lusir.me/" rel="alternate"></link><link href="https://lusir.me/atom.xml" rel="self"></link><id>https://lusir.me/</id><updated>2020-09-26T17:35:00+08:00</updated><entry><title>重装 Mi6 过程</title><link href="https://lusir.me/reinstall-os-for-mi6.html" rel="alternate"></link><updated>2020-09-26T17:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2020-09-26:reinstall-os-for-mi6.html</id><summary type="html">&lt;p&gt;记录一下 Mi6 开发版系统安装的过程。
+<feed xmlns="http://www.w3.org/2005/Atom"><title>擼sirの避風港</title><link href="https://lusir.me/" rel="alternate"></link><link href="https://lusir.me/atom.xml" rel="self"></link><id>https://lusir.me/</id><updated>2020-10-01T18:19:00+08:00</updated><entry><title>Firefox 安装记录</title><link href="https://lusir.me/record-of-firefox-installation.html" rel="alternate"></link><updated>2020-10-01T18:19:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2020-10-01:record-of-firefox-installation.html</id><summary type="html">&lt;p&gt;记录一下 Firefox 66 版本的安装过程。
+&lt;/p&gt;
+&lt;h3 id="7f95901ea7943d724c39c5d87416c5a5"&gt;安装及语言包&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;下载安装包，&lt;a href="https://download-installer.cdn.mozilla.net/pub/firefox/releases/68.7.0esr/win64/en-US/Firefox%20Setup%2068.7.0esr.exe" title="Firefox 安装包"&gt;下载地址&lt;/a&gt;；&lt;/li&gt;
+&lt;li&gt;解压文件，复制 core 目录的内容到 &lt;code&gt;D:\Program File\Firefox\&lt;/code&gt; 下；&lt;/li&gt;
+&lt;li&gt;下载语言包，&lt;a href="https://ftp.mozilla.org/pub/firefox/releases/68.7.0esr/win64/xpi/zh-CN.xpi" title="Firefox 语言包"&gt;下载地址&lt;/a&gt;并安装；&lt;/li&gt;
+&lt;li&gt;便携化后在浏览器 &lt;code&gt;about:config&lt;/code&gt; 中添加 &lt;code&gt;string&lt;/code&gt; 类项目 &lt;code&gt;intl.locale.requested&lt;/code&gt;，值为 &lt;code&gt;zh-CN&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="a7861ba08459c0205f8db95964e612c3"&gt;便携化&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;下载 &lt;code&gt;libportable&lt;/code&gt; 便携化 Firefox，设置 &lt;code&gt;portable.ini&lt;/code&gt; 中的选项如下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;Portable=1
+PortableDataPath=./Profiles
+TmpDataPath=./Profiles/Cache
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;在 Firefox 快捷方式属性中的“启动路径”参数后添加 &lt;code&gt;-p&lt;/code&gt;，设置配置文件路径与 &lt;code&gt;PortableDataPath&lt;/code&gt; 一致，配置完成可删除快捷方式中的 &lt;code&gt;-p&lt;/code&gt; 参数；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="0563f7233e15ac00e6bcfca103c15c96"&gt;禁用更新&lt;/h3&gt;
+&lt;p&gt;在 Firefox 程序根目录新建 &lt;code&gt;distribution&lt;/code&gt; 文件夹并新建 &lt;code&gt;policies.json&lt;/code&gt; 文件，填入以下内容：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;{&amp;quot;policies&amp;quot;: {&amp;quot;DisableAppUpdate&amp;quot;: true}}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="01820262aa9ad5b130f8f5b86bfd2968"&gt;自定义选项&lt;/h3&gt;
+&lt;p&gt;在配置文件夹目录 &lt;code&gt;./Profiles&lt;/code&gt; 下新建 &lt;code&gt;user.js&lt;/code&gt; 文件，其中 &lt;code&gt;user_pref(key,value)&lt;/code&gt; 等同于从 &lt;code&gt;about:config&lt;/code&gt; 修改，删除之后，修改的设置仍然有效。&lt;code&gt;pref(key,value)&lt;/code&gt; 删除之后，修改的设置将失效。例如：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;pref(&amp;quot;accessibility.force_disabled&amp;quot;, 0); //禁用无障碍环境
+pref(&amp;quot;network.http.speculative-parallel-limit&amp;quot;, 0); //禁用后台数据回传
+user_pref(&amp;quot;extensions.webservice.discoverURL&amp;quot;, &amp;quot;127.0.0.1&amp;quot;); //关闭获取附加组件建议
+pref(&amp;quot;lightweightThemes.update.enabled&amp;quot;, 0); //关闭轻量主题建议
+user_pref(&amp;quot;view_source.editor.path&amp;quot;, &amp;quot;D:\\Program Files\\Notepad++\\Notepad++.exe&amp;quot;);
+user_pref(&amp;quot;findbar.highlightAll&amp;quot;, true); //ctrl+F关键词高亮
+pref(&amp;quot;network.standard-url.enable-rust&amp;quot;, true); //Rust的URL解析器
+pref(&amp;quot;network.tcp.tcp_fastopen_enable&amp;quot;, true); //TCP快速启用过滤,减少http延迟
+pref(&amp;quot;browser.xul.error_pages.expert_bad_cert&amp;quot;, true); //自动展开：此连接是不受信任的
+pref(&amp;quot;network.IDN_show_punycode&amp;quot;, true);
+user_pref(&amp;quot;xpinstall.signatures.required&amp;quot;,false); //可以安装未在AMO被验证扩展
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="2f3f8e816f105ec416109a13c38715c0"&gt;安装扩展&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;暴力猴&lt;/li&gt;
+&lt;li&gt;闪耀拖拽&lt;/li&gt;
+&lt;li&gt;Header Editor&lt;/li&gt;
+&lt;li&gt;Proxy SwitchyOmega&lt;/li&gt;
+&lt;li&gt;uBlock Origin&lt;/li&gt;
+&lt;li&gt;xStyle&lt;/li&gt;
+&lt;li&gt;mozlz4-edit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="e57710fdea07b767d19115e4d011305d"&gt;更改默认搜索引擎&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;将 &lt;code&gt;.\aProfiles\search.json.mozlz4&lt;/code&gt; 文件拖入mozlz4-edit 编辑器中，删除不需要的引擎及搜索关键字中的多余参数，修改完成后另存为 &lt;code&gt;search.json.mozlz4&lt;/code&gt; 文件，退出 Firefox 后覆盖源文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用 WinRar 或类似程序打开 Firefox 目录下的 &lt;code&gt;browser\omni.ja&lt;/code&gt; 文件，浏览到 &lt;code&gt;\chrome\browser\search-extensions&lt;/code&gt;，删除目录下不需要的搜索引擎子目录；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开 &lt;code&gt;list.json&lt;/code&gt;，滑到最底部，编辑"zh-CN"下的对应项目；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入搜索引擎子目录，修改 &lt;code&gt;manifest.json&lt;/code&gt; 文件及 &lt;code&gt;_locales&lt;/code&gt; 目录下的 &lt;code&gt;messages.json&lt;/code&gt; 文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;备份修改好的 &lt;code&gt;list.json&lt;/code&gt;、&lt;code&gt;manifest.json&lt;/code&gt;、&lt;code&gt;messages.json&lt;/code&gt; 及 &lt;code&gt;search.json.mozlz4&lt;/code&gt; 文件，Firefox 后期更新时覆盖即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="5e0e75872765ca2b4be97f02e8b9f161"&gt;UserChrome 脚本&lt;/h3&gt;
+&lt;p&gt;使用Endor8的&lt;a href="https://github.com/Endor8/userChrome.js/tree/master/userChrome" title="userChrome脚本"&gt;方案&lt;/a&gt;，下载压缩包。开启方式如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;将 &lt;code&gt;config.js&lt;/code&gt; 及 &lt;code&gt;userChromeJS&lt;/code&gt; 目录放在 Firefox 安装根目录下；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;config-prefs.js&lt;/code&gt; 放在 Firefox 安装目录 &lt;code&gt;\defaults\pref&lt;/code&gt; 下，在 &lt;code&gt;config-pref.js&lt;/code&gt; 中加上：&lt;code&gt;pref("general.config.sandbox_enabled", false);&lt;/code&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;userChrome.js&lt;/code&gt; 放在配置文件夹 &lt;code&gt;.\Profiles\chrome&lt;/code&gt; 下，UC 脚本放入 &lt;code&gt;SubScript&lt;/code&gt; 子目录中（子目录增删改可以通过修改 &lt;code&gt;userChrome.js&lt;/code&gt; 中的 &lt;code&gt;var arrSubdir&lt;/code&gt; 参数进行添加修改）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="97597e33dcb31dc732ff2454e5a15e7c"&gt;使用的 UC 脚本&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;addMenuPlus.uc（修改右键菜单）&lt;/li&gt;
+&lt;li&gt;KeyChanger.uc（快捷键）&lt;/li&gt;
+&lt;li&gt;MouseGestures2_e10s.uc（鼠标手势）&lt;/li&gt;
+&lt;li&gt;textLink.uc（文字链接双击打开）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="930a6f373755d3370c09966d944d0a6d"&gt;使用的油猴脚本&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Picviewer CE+&lt;/li&gt;
+&lt;li&gt;知乎真实链接地址重定向&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="f085b3dae221da03c58f538db635cd6e"&gt;UserChrome.css 脚本&lt;/h3&gt;
+&lt;p&gt;通过修改该文件隐藏浏览器界面上的“三道杠”按钮。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在浏览器中打开 &lt;code&gt;chrome://browser/content/browser.xul&lt;/code&gt;，&lt;code&gt;F12&lt;/code&gt; 查询“三道杠”的元素 id 为 &lt;code&gt;PanelUI-menu-button&lt;/code&gt;，&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;userChrome.css&lt;/code&gt; 中添加 &lt;code&gt;#PanelUI-menu-button {display: none !important;}&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="6f2d7cfe3ad1f5de4c5ea98d2b572c1d"&gt;Selenium 驱动 Firefox&lt;/h3&gt;
+&lt;p&gt;下载 &lt;code&gt;geckodriver.exe&lt;/code&gt; 放到 Python 根目录下，将 Python 目录及 Firefox 目录地址添加至&lt;code&gt;环境变量&lt;/code&gt;，测试：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;from selenium.webdriver import Firefox
+chrome = Firefox()
+chrome.get(&amp;quot;https://baidu.com&amp;quot;)
+chrome.quit()
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="0d98c74797e49d00bcc4c17c9d557a2b"&gt;其他&lt;/h3&gt;
+&lt;p&gt;地址栏会将带 &lt;code&gt;.&lt;/code&gt; 的搜索关键字误认为是网址，这时需在关键字前输入一个半角 &lt;code&gt;?&lt;/code&gt;，如 &lt;code&gt;?search.json.mozlz4&lt;/code&gt; 将会搜索 &lt;code&gt;search.json.mozlz4&lt;/code&gt; ，而不是进入一个被误识别的网站。&lt;/p&gt;</summary><category term="Firefox"></category></entry><entry><title>重装 Mi6 过程</title><link href="https://lusir.me/reinstall-os-for-mi6.html" rel="alternate"></link><updated>2020-09-26T17:35:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2020-09-26:reinstall-os-for-mi6.html</id><summary type="html">&lt;p&gt;记录一下 Mi6 开发版系统安装的过程。
 &lt;/p&gt;
 &lt;h3 id="8b3c020abb7f52c21fd76e994f78e8a0"&gt;备份相关信息至 PC，大致包括：&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;备份通讯录、短信、照片、视频、音乐、笔记等；&lt;/li&gt;
 &lt;li&gt;备份程序配置文件如 Tasker、GMD Gestures、MyAndroidTools 等；&lt;/li&gt;
 &lt;li&gt;备份必要的聊天记录如微信、QQ 等；&lt;/li&gt;
+&lt;li&gt;备份hosts；&lt;/li&gt;
 &lt;li&gt;通过系统备份程序备份相关 APP；&lt;/li&gt;
 &lt;li&gt;备份 SD 卡下的其它相关目录内的文件。&lt;/li&gt;
 &lt;/ul&gt;
@@ -546,21 +660,4 @@ browser.safebrowsing.dataProvider —— -1
 
 &lt;h3 id="ff78ec550506a7ba2fee2abfef7890e9"&gt;钓鱼诗&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;数凡绝丝入水中，金钩抛去永无踪，凡鱼不敢朝天子，万岁君主只钓龙。
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Collection"></category></entry><entry><title>设置 ESS 允许共享局域网</title><link href="https://lusir.me/set-ess-sharing-lan.html" rel="alternate"></link><updated>2015-03-02T21:32:00+08:00</updated><author><name>Nero Zheng</name></author><id>tag:https://lusir.me,2015-03-02:set-ess-sharing-lan.html</id><summary type="html">&lt;p&gt;安装完 ESET Smart Security 后，若局域网或者外部网络设备不能正常运行（如：网络共享文件夹无法访问），则需更改个人防火墙的过滤模式。
-&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;呼出 ESS 主界面 → 按 &lt;kbd&gt;F5&lt;/kbd&gt; 键进入 &lt;code&gt;高级设置&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;点击 &lt;code&gt;规则和区域&lt;/code&gt; → &lt;code&gt;设置&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;选择需共享的子网络点击 &lt;code&gt;下一步&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;选择 &lt;code&gt;允许共享&lt;/code&gt; 并一路 &lt;code&gt;确定&lt;/code&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/ess-sharing-lan-1.jpg" title="设置 ESS 允许共享局域网 - 1" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/ess-sharing-lan-1.jpg" alt="设置 ESS 允许共享局域网 - 1" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/ess-sharing-lan-2.jpg" title="设置 ESS 允许共享局域网 - 2" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/ess-sharing-lan-2.jpg" alt="设置 ESS 允许共享局域网 - 2" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/ess-sharing-lan-3.jpg" title="设置 ESS 允许共享局域网 - 3" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/ess-sharing-lan-3.jpg" alt="设置 ESS 允许共享局域网 - 3" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;至此，局域网共享应正常……&lt;/p&gt;</summary><category term="ESET Smart Security"></category></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Collection"></category></entry></feed>
