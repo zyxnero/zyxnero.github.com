@@ -158,8 +158,8 @@ chrome.quit()
 &lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 26 Sep 2020 17:35:00 +0800</pubDate><guid>tag:https://lusir.me,2020-09-26:reinstall-os-for-mi6.html</guid><category>Mi6</category></item><item><title>使用批处理临时切换环境变量</title><link>https://lusir.me/switch-env-variable-temporarily.html</link><description>&lt;p&gt;话题要从我使用 &lt;code&gt;Pelican&lt;/code&gt; 生成静态站 &lt;code&gt;html&lt;/code&gt; 文件说起。使用 &lt;code&gt;Pelican&lt;/code&gt; 大概是在 2014 年，那时 &lt;code&gt;Pelican&lt;/code&gt; 还是基于 Python 2.x，虽然后期 &lt;code&gt;Pelican&lt;/code&gt; 也更新到基于 Python 3.x，但由于个人太懒，所以截至目前还在使用旧版的 &lt;code&gt;Pelican&lt;/code&gt;（一直未更新^.^）。
 &lt;/p&gt;
 &lt;p&gt;但随着时间推移 Python 3.x 已成为主流，例如 You-Get。所以目前我有同时安装 Python 2.7 与 Python 3.5，使用前按需求先切换环境变量。如下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/switch-env-variable-temporarily-1.png" title="使用批处理临时切换环境变量" data-fancybox="gallery"&gt;
-    &lt;img class="aligncenter" src="https://nnero.gitee.io/demo/switch-env-variable-temporarily-1.png" alt="使用批处理临时切换环境变量" /&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/switch-env-variable-temporarily-1.png" title="使用批处理临时切换环境变量" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/switch-env-variable-temporarily-1.png" alt="使用批处理临时切换环境变量" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;但是每次使用前都需要切换环境变量也算是比较麻烦了。上网查询知道可以使用批处理临时切换环境变量，正好我在 Windows 下使用 &lt;code&gt;Pelican&lt;/code&gt; 也采用批处理，所以决定尝试一下。&lt;/p&gt;
 &lt;p&gt;打开 cmder 测试，依次输入以下命令：&lt;/p&gt;
@@ -171,8 +171,8 @@ set path=%my_path%
 
 
 &lt;p&gt;将得到以下结果。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/switch-env-variable-temporarily-2.png" title="使用批处理临时切换环境变量" data-fancybox="gallery"&gt;
-    &lt;img class="aligncenter" src="https://nnero.gitee.io/demo/switch-env-variable-temporarily-2.png" alt="使用批处理临时切换环境变量" /&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/switch-env-variable-temporarily-2.png" title="使用批处理临时切换环境变量" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/switch-env-variable-temporarily-2.png" alt="使用批处理临时切换环境变量" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;第一条命令是显示当前系统变量下的 &lt;code&gt;path&lt;/code&gt; 变量；&lt;/p&gt;
 &lt;p&gt;第二条命令是将 Python 2.7 的工作路径添加到中间路径变量中；&lt;/p&gt;
@@ -188,61 +188,20 @@ pause
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;嗯，测试可行。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 22 Jul 2018 11:08:00 +0800</pubDate><guid>tag:https://lusir.me,2018-07-22:switch-env-variable-temporarily.html</guid><category>Bat</category><category>环境变量</category><category>Windows</category></item><item><title>Win 及 Ubuntu 下插入鼠标禁用触摸板</title><link>https://lusir.me/disable-touchpad-when-moused.html</link><description>&lt;p&gt;我们在日常使用笔记本的时候，打字会经常不经意碰到触摸板，导致光标移动。常规做法是禁用触摸板，然后在鼠标拔出时重新启用触摸板。其实当我们使用鼠标的时候，触摸板可以自动禁用；当拔下鼠标时，触摸板可以自动启用。完全不需要我们手动去干扰，省去很多麻烦。以下介绍 Windows 和 Ubuntu 下的相应软件。
-&lt;/p&gt;
-&lt;h3 id="6dadad9e0c52b16179ff6cb8e187431b"&gt;Windows 下禁用触摸板&lt;/h3&gt;
-&lt;p&gt;首先需要确认我们的笔记本电脑驱动是 Synaptics 驱动。确认方法：右键个性化→更改鼠标指针，最后一个选项卡如下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/disable-touchpad-when-moused.png" title="插入鼠标禁用触摸板" data-fancybox="gallery"&gt;
-    &lt;img class="aligncenter" src="https://nnero.gitee.io/demo/disable-touchpad-when-moused.png" alt="插入鼠标禁用触摸板" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;如果当前选项卡下能看到&lt;code&gt;“连接外部 USB 指向装置时禁用内部指向装置”&lt;/code&gt;，说明当前驱动可以直接自动禁用触摸板，勾选其前面的对勾即可。&lt;/p&gt;
-&lt;p&gt;如果当前选项卡下没有该选项或没有安装 Synaptics，请下载&lt;a href="https://pan.baidu.com/s/1EVAMOL-ZCXl2oe1UFZsVfA#j1vv" title="插入鼠标禁用触摸板驱动及补丁"&gt;驱动及补丁&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;解压后安装 Synaptics 驱动，同时可以看到两个注册表文件，分别是 1.reg、2.reg。按照顺序双击导入 1、2，（如果提示 UAC，请放行），然后注销一下系统，或者重启电脑。&lt;/p&gt;
-&lt;p&gt;重启后就会看到效果，插入鼠标，自动禁用触摸板，拔出鼠标，触摸板又可以使用，很方便。当然当我们不想使用该功能的时候再次打开选项界面，去掉&lt;code&gt;“连接外部 USB 指向装置时禁用内部指向装置”&lt;/code&gt;前的对钩即可。&lt;/p&gt;
-&lt;h3 id="301488e72c8c6ee11bc8660aa186f456"&gt;Ubuntu 下禁用触摸板&lt;/h3&gt;
-&lt;p&gt;Linux 下类同 Windows，运行以下命令安装软件。然后打开软件进行设置，勾选&lt;code&gt;“开机启动”&lt;/code&gt;和&lt;code&gt;“插入鼠标时禁用触摸板”&lt;/code&gt;即可。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;repository&lt;/span&gt; &lt;span class="n"&gt;ppa&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;atareao&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;atareao&lt;/span&gt;
-&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;
-&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;touchpad&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;indicator&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 21 Jul 2018 20:07:00 +0800</pubDate><guid>tag:https://lusir.me,2018-07-21:disable-touchpad-when-moused.html</guid><category>Windows</category><category>Linux</category><category>Synaptics</category><category>触摸板</category></item><item><title>cmder 中文显示乱码</title><link>https://lusir.me/repair-the-garbled-chinese-in-cmder.html</link><description>&lt;p&gt;整理一下 cmder 中文显示乱码及重叠问题的方法。
-&lt;/p&gt;
-&lt;h3 id="e7cdff1528689ef0374c8e81356e9406"&gt;解决中文重叠问题&lt;/h3&gt;
-&lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Main 菜单下去掉 Monospace 前面的勾选，如图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/cmder-chinese-encode.png" title="cmder 中文显示重叠" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/cmder-chinese-encode.png" alt="cmder 中文显示重叠" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PS：据说这个问题在 v1.3.0 以上版本中已经修复，不需要进行任何操作。但我的 v1.2.9 不进行操作也显示正常。&lt;/p&gt;
-&lt;h3 id="e37ddfc7be6a1ba58af40607e923c0d3"&gt;解决中文乱码问题&lt;/h3&gt;
-&lt;p&gt;通过快捷键 &lt;kbd&gt;Win&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;P&lt;/kbd&gt; 打开设置面板，在 Environment 菜单的变量中添加 &lt;code&gt;chcp utf-8&lt;/code&gt;，如图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/cmder-chinese-encode-2.png" title="cmder 中文显示乱码" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/cmder-chinese-encode-2.png" alt="cmder 中文显示乱码" /&gt;
-&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 04 Jun 2017 10:57:00 +0800</pubDate><guid>tag:https://lusir.me,2017-06-04:repair-the-garbled-chinese-in-cmder.html</guid><category>cmder</category></item><item><title>清理 Firefox 搜索记录</title><link>https://lusir.me/delete-firefox-seraching-history.html</link><description>&lt;p&gt;整理一下清理 Firefox 搜索记录的方法。
+&lt;p&gt;嗯，测试可行。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 22 Jul 2018 11:08:00 +0800</pubDate><guid>tag:https://lusir.me,2018-07-22:switch-env-variable-temporarily.html</guid><category>Bat</category><category>环境变量</category><category>Windows</category></item><item><title>清理 Firefox 搜索记录</title><link>https://lusir.me/delete-firefox-seraching-history.html</link><description>&lt;p&gt;整理一下清理 Firefox 搜索记录的方法。
 &lt;/p&gt;
 &lt;p&gt;Firefox 用久了就会产生很多垃圾文件，包括搜索记录。一般直接在设置里面清除表单和搜索历史，如下图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/delete-firefox-seraching-history-1.png" title="删除 Firefox 搜索记录" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/delete-firefox-seraching-history-1.png" alt="删除 Firefox 搜索记录" /&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/delete-firefox-seraching-history-1.png" title="删除 Firefox 搜索记录" data-fancybox="gallery"&gt;
+    &lt;img src="https://demo.lusir.me/delete-firefox-seraching-history-1.png" alt="删除 Firefox 搜索记录" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;但如果想选择性的删掉其中的某些记录，就需要找到搜索记录数据库文件并修改该文件了。&lt;/p&gt;
 &lt;p&gt;数据库目录是：&lt;code&gt;\我的火狐配置\formhistory.sqlite&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;打开该文件，并清理其中的项目，如下图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/delete-firefox-seraching-history-2.png" title="删除 Firefox 搜索记录" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/delete-firefox-seraching-history-2.png" alt="删除 Firefox 搜索记录" /&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/delete-firefox-seraching-history-2.png" title="删除 Firefox 搜索记录" data-fancybox="gallery"&gt;
+    &lt;img src="https://demo.lusir.me/delete-firefox-seraching-history-2.png" alt="删除 Firefox 搜索记录" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;顺便记录一下让 Firefox 地址下拉栏不显示的方法：&lt;/p&gt;
-&lt;p&gt;进入 &lt;code&gt;about:config&lt;/code&gt;，搜索 &lt;code&gt;browser.urlbar.maxRichResults&lt;/code&gt; 项并将其值修改为 -1。以后地址栏下拉就不会显示一长串访问地址历史记录了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 31 May 2017 20:27:00 +0800</pubDate><guid>tag:https://lusir.me,2017-05-31:delete-firefox-seraching-history.html</guid><category>Firefox</category></item><item><title>Win7 运行栏不保存历史记录的解决办法</title><link>https://lusir.me/win7-running-record.html</link><description>&lt;p&gt;偶尔会碰到优化过度的 Windows 系统，运行框内没有历史记录。本篇记录一下恢复记录的解决办法。
-&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Q1：打开 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;，以前输入过的网络路径、命令全都没有记录，非常不方便。&lt;/p&gt;
-&lt;p&gt;A：右键点击开始菜单，点击“属性”，勾选&lt;code&gt;“存储并显示最近在开始菜单中打开的程序”&lt;/code&gt;，如下图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/win7-running-record.png" title="恢复运行栏保存历史记录" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/win7-running-record.png" alt="恢复运行栏保存历史记录" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;Q2：Q1解决方法中的&lt;code&gt;“存储并显示最近在开始菜单中打开的程序”&lt;/code&gt;复选框灰色不可用。&lt;/p&gt;
-&lt;p&gt;A：打开 &lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt;，输入&lt;code&gt;gpedit.msc&lt;/code&gt;，打开“组策略”，在左侧选项中依次点击“用户配置”、“管理模板”、“开始菜单和任务栏”，然后在右侧的选项中双击“关闭用户跟踪”，选择“已禁用”即可，如下图。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/win7-running-record-2.png" title="恢复运行栏保存历史记录" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/win7-running-record-2.png" alt="恢复运行栏保存历史记录" /&gt;
-&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 24 Apr 2017 16:08:00 +0800</pubDate><guid>tag:https://lusir.me,2017-04-24:win7-running-record.html</guid><category>Win7</category></item><item><title>Sublime 侧边栏字体大小调整</title><link>https://lusir.me/customize-sidebar-font-of-sublime.html</link><description>&lt;p&gt;最近感觉视力好像又下降了，无奈。前几天调大了 Sublime Text 3 的侧边栏字体使正文区和侧边栏看起来更和谐。过程记录如下。
+&lt;p&gt;进入 &lt;code&gt;about:config&lt;/code&gt;，搜索 &lt;code&gt;browser.urlbar.maxRichResults&lt;/code&gt; 项并将其值修改为 -1。以后地址栏下拉就不会显示一长串访问地址历史记录了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 31 May 2017 20:27:00 +0800</pubDate><guid>tag:https://lusir.me,2017-05-31:delete-firefox-seraching-history.html</guid><category>Firefox</category></item><item><title>Sublime 侧边栏字体大小调整</title><link>https://lusir.me/customize-sidebar-font-of-sublime.html</link><description>&lt;p&gt;最近感觉视力好像又下降了，无奈。前几天调大了 Sublime Text 3 的侧边栏字体使正文区和侧边栏看起来更和谐。过程记录如下。
 &lt;/p&gt;
 &lt;h3 id="59b78b7a8b75e0b1373086e89ecce8be"&gt;安装插件 PackageResourceViewer&lt;/h3&gt;
 &lt;ol&gt;
@@ -289,45 +248,7 @@ pause
 &lt;td&gt;在侧边栏文件中查找&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 23 Apr 2017 13:08:00 +0800</pubDate><guid>tag:https://lusir.me,2017-04-23:customize-sidebar-font-of-sublime.html</guid><category>Sublime</category></item><item><title>共析钢的定义</title><link>https://lusir.me/definition-of-eutectoid-steel.html</link><description>&lt;p&gt;也都是学校里的知识了，整理一下方便以后重新学习。
-&lt;/p&gt;
-&lt;h3 id="fec5050eeea132b15a3072913febbdba"&gt;共析反应&lt;/h3&gt;
-&lt;p&gt;共析钢（含碳量0.77%）中的奥氏体（A）与渗碳体（Fe&lt;sub&gt;3&lt;/sub&gt;C）在平衡状态下完全溶解析出珠光体（P）的反应。&lt;/p&gt;
-&lt;h3 id="7a82576ab61f9f1a41f392f2ba6a0460"&gt;共析钢&lt;/h3&gt;
-&lt;p&gt;碳溶解在铁的晶格中会形成固溶体，碳溶解到 α-铁中形成的固溶体叫铁素体（F），溶解到 γ-铁中的固溶体叫奥氏体（A）。铁素体与奥氏体都具有良好的塑性。当铁碳合金中的碳不能全部溶入铁素体或奥氏体中时，剩余出来的碳将与铁形成碳化铁（Fe&lt;sub&gt;3&lt;/sub&gt;C），这种化合物的晶体组织叫渗碳体，它的硬度极高，塑性几乎为零。&lt;/p&gt;
-&lt;p&gt;从铁碳平衡相图可见，当碳的含量正好等于 0.77% 时，该合金的相变是在恒温下实现的。即在这种特定比例下的渗碳体和铁素体在发生相变时，如果消失则两者同时消失（加热时），如果出现则两者又同时出现（冷却时），基于这个原因，人们把这种由特定比例构成的两相组织命名为珠光体（P），这种钢就叫做共析钢。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/eutectoid-steel.png" title="铁碳相图" data-fancybox="gallery"&gt;
-    &lt;img class="aligncenter" src="https://nnero.gitee.io/demo/eutectoid-steel.png" alt="铁碳相图" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="2271b0fcf4b5e8cafc04a2115712eaf8"&gt;亚共析钢&lt;/h3&gt;
-&lt;p&gt;常用的结构钢含碳量大都在 0.5% 以下。由于含碳量低于 0.77%，所以组织中的铁素体除去一部分要与渗碳体形成珠光体外，还会有多余的出现，这种钢的组织是铁素体（F） + 珠光体（P）。碳含量越少，钢组织中珠光体比例也越小，钢的强度也越低，但塑性越好，这类钢统称为亚共析钢。&lt;/p&gt;
-&lt;h3 id="2a431fc3acb87199d7d3e1fccf17b0e2"&gt;过共析钢&lt;/h3&gt;
-&lt;p&gt;工具用钢的含碳量往往超过 0.77%，这种钢组织中的渗碳体除与铁素体形成珠光体外，还会有多余的渗碳体，这类钢的组织是珠光体 + 渗碳体。这类钢统称为过共析钢。&lt;/p&gt;
-&lt;h3 id="c8fd5ecab896ff0333b6aa921f06b974"&gt;临界温度&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Ac1：共析钢在加热时珠光体向奥氏体转变的开始温度。&lt;/li&gt;
-&lt;li&gt;Ac3：亚共析钢在加热时铁素体全部转变为奥氏体的终了温度。&lt;/li&gt;
-&lt;li&gt;Accm：过共析钢在加热时二次渗碳体全部溶入奥氏体的终了温度。&lt;/li&gt;
-&lt;li&gt;Ar1：共析钢在冷却时奥氏体向珠光体转变的开始温度。&lt;/li&gt;
-&lt;li&gt;Ar3：亚共析钢在冷却时开始析出游离铁素体的温度。&lt;/li&gt;
-&lt;li&gt;Arcm：过共析钢在冷却时奥氏体开始析出二次渗碳体的温度。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其中 A 是法语临界点的首字母，c 是法语加热的首字母，r 是法语冷却的首字母。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 22 Apr 2017 22:02:00 +0800</pubDate><guid>tag:https://lusir.me,2017-04-22:definition-of-eutectoid-steel.html</guid><category>机械常识</category></item><item><title>PaleMoon 的几项优化</title><link>https://lusir.me/several-optimization-of-palemoon.html</link><description>&lt;p&gt;今天是中秋佳节，祝大家国庆快乐！！！&lt;/p&gt;
-&lt;p&gt;2014 年记录过一篇 &lt;a href="https://lusir.me/palemoon-tab-modify.html" title="PaleMoon 修改起始页"&gt;修改 PaleMoon 起始页&lt;/a&gt; 的文章，本文接着记。&lt;/p&gt;
-
-
-&lt;h3 id="4f95ed363fe3f8d9ef17b4a1aca2fd91"&gt;禁用 urlclassifier3.sqlite&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;urlclassifier3.sqlite&lt;/code&gt; 是防止钓鱼网站的数据库，体积较大。禁用方法：打开 &lt;code&gt;about:config&lt;/code&gt;，将以下条目的值按右侧进行设置。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;browser.safebrowsing.enabled —— false
-browser.safebrowsing.malware.enabled —— false
-Browser.safebrowsing.remoteLookups —— false
-browser.safebrowsing.dataProvider —— -1
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;据说最后一条参数是关键，设置以后配置文件夹下的 &lt;code&gt;urlclassifier3.sqlite&lt;/code&gt; 将彻底消失，不会再自动生成，但最好还是把这几条参数都设置一下。&lt;/p&gt;
-&lt;h3 id="6cd6f47e1bbb6c3302c29fec1b47ee85"&gt;禁用 addonsreconciler.json&lt;/h3&gt;
-&lt;p&gt;该文件位于配置文件夹下的 &lt;code&gt;weave&lt;/code&gt; 目录下，体积也较大，据说是因为国内网络质量问题导致多次同步失败而造成。禁用方法：取消同步后删除该文件。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 15 Sep 2016 16:37:00 +0800</pubDate><guid>tag:https://lusir.me,2016-09-15:several-optimization-of-palemoon.html</guid><category>palemoon</category></item><item><title>PCCAD2010 在 Win7×64 中的安装与设置</title><link>https://lusir.me/installation-and-setting-of-pccad.html</link><description>&lt;p&gt;在 Win7×64 中安装 PCCAD2010 是一件麻烦事，好记性不如烂笔头，为了下次少走弯路，还是记一下吧。
+&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 23 Apr 2017 13:08:00 +0800</pubDate><guid>tag:https://lusir.me,2017-04-23:customize-sidebar-font-of-sublime.html</guid><category>Sublime</category></item><item><title>PCCAD2010 在 Win7×64 中的安装与设置</title><link>https://lusir.me/installation-and-setting-of-pccad.html</link><description>&lt;p&gt;在 Win7×64 中安装 PCCAD2010 是一件麻烦事，好记性不如烂笔头，为了下次少走弯路，还是记一下吧。
 &lt;/p&gt;
 &lt;h3 id="fca40e38c5d7651dea6f4157b569be53"&gt;准备材料&lt;/h3&gt;
 &lt;ol&gt;
@@ -349,34 +270,23 @@ browser.safebrowsing.dataProvider —— -1
 &lt;/ol&gt;
 &lt;h3 id="09ded52d159061f26b12a095d10dad72"&gt;自定义命令快捷键&lt;/h3&gt;
 &lt;p&gt;依次点击 &lt;code&gt;工具&lt;/code&gt; → &lt;code&gt;自定义&lt;/code&gt; → &lt;code&gt;编辑程序参数&lt;/code&gt;，或直接打开 &lt;code&gt;PCCAD2010&lt;/code&gt; 根目录下的 &lt;code&gt;acad.pgp&lt;/code&gt; 文件，并在文件最后添加需要自定义的快捷键，保存后使用 &lt;code&gt;reinit&lt;/code&gt; 命令刷新 &lt;code&gt;acad.pgp&lt;/code&gt; 即可生效，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/cad-hotkey-setting-2.jpg" title="自定义 CAD 命令快捷键" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/cad-hotkey-setting-2.jpg" alt="自定义 CAD 命令快捷键" /&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/cad-hotkey-setting-2.jpg" title="自定义 CAD 命令快捷键" data-fancybox="gallery"&gt;
+    &lt;img src="https://demo.lusir.me/cad-hotkey-setting-2.jpg" alt="自定义 CAD 命令快捷键" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="5861fd52feadb27efb78eb002421bfeb"&gt;自定义键盘快捷键&lt;/h3&gt;
 &lt;p&gt;以设置 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;W&lt;/kbd&gt; 作为关闭当前图纸为例，依次点击 &lt;code&gt;工具&lt;/code&gt; → &lt;code&gt;自定义&lt;/code&gt; → &lt;code&gt;界面&lt;/code&gt;，在命令列表中搜索 &lt;code&gt;关闭&lt;/code&gt;，将其拖入 &lt;code&gt;工作空间&lt;/code&gt; 下的 &lt;code&gt;键盘快捷键&lt;/code&gt;，于窗口右侧设置快捷键后确定即可，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/cad-hotkey-setting-1.jpg" title="自定义 CAD 键盘快捷键" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/cad-hotkey-setting-1.jpg" alt="自定义 CAD 键盘快捷键" /&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/cad-hotkey-setting-1.jpg" title="自定义 CAD 键盘快捷键" data-fancybox="gallery"&gt;
+    &lt;img src="https://demo.lusir.me/cad-hotkey-setting-1.jpg" alt="自定义 CAD 键盘快捷键" /&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="e2555fe37ace93dac001d4291029fdbd"&gt;修改极限偏差字体高度&lt;/h3&gt;
 &lt;p&gt;PCCAD 默认的极限偏差字体大小与公称尺寸看起来不太协调，将其字体高度比例修改为 &lt;code&gt;0.44&lt;/code&gt; 看起来比较合适。依次点击 &lt;code&gt;标注&lt;/code&gt; → &lt;code&gt;标注样式&lt;/code&gt; → &lt;code&gt;修改&lt;/code&gt; → &lt;code&gt;公差&lt;/code&gt;，在 &lt;code&gt;方式&lt;/code&gt; 中选择 &lt;code&gt;极限偏差&lt;/code&gt;，设置高度比例为 &lt;code&gt;0.44&lt;/code&gt;，接着将 &lt;code&gt;方式&lt;/code&gt; 改为 &lt;code&gt;无&lt;/code&gt; 即可，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/pccad-tolerance-1.jpg" title="修改极限偏差字体高度-1" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/pccad-tolerance-1.jpg" alt="修改极限偏差字体高度-1" /&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/pccad-tolerance-1.jpg" title="修改极限偏差字体高度-1" data-fancybox="gallery"&gt;
+    &lt;img src="https://demo.lusir.me/pccad-tolerance-1.jpg" alt="修改极限偏差字体高度-1" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/pccad-tolerance-2.jpg" title="修改极限偏差字体高度-2" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/pccad-tolerance-2.jpg" alt="修改极限偏差字体高度-2" /&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/pccad-tolerance-2.jpg" title="修改极限偏差字体高度-2" data-fancybox="gallery"&gt;
+    &lt;img src="https://demo.lusir.me/pccad-tolerance-2.jpg" alt="修改极限偏差字体高度-2" /&gt;
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;以上。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 14 Sep 2016 17:47:00 +0800</pubDate><guid>tag:https://lusir.me,2016-09-14:installation-and-setting-of-pccad.html</guid><category>AutoCAD</category></item><item><title>设置 cmder 默认目录</title><link>https://lusir.me/set-default-dir-of-cmder.html</link><description>&lt;p&gt;目前主要用 cmder 来下载 youku 视频和 ximalaya 音频。方便起见，我直接把 cmder 开启后的默认目录设置为所需的下载目录了。
-&lt;/p&gt;
-&lt;p&gt;设置其实也很容易，找到 cmder 安装目录，在其 config 目录下有个 user-startup.cmd 文件，cmder 启动时会自动执行该文件中的命令，每次打开都会。所以只在该文件中增加一句切换目录的命令即可。&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;:: use this file to run your own startup commands 
-:: use @ in front of the command to prevent printing the command
-
-::cd to E when startup
-@e:
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;上面我切换目录到了 E 盘。为了让该命令不显示，在 &lt;code&gt;E:&lt;/code&gt; 的前面加了个 &lt;code&gt;@&lt;/code&gt;。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 11 Sep 2016 21:24:00 +0800</pubDate><guid>tag:https://lusir.me,2016-09-11:set-default-dir-of-cmder.html</guid><category>cmder</category></item><item><title>批量下载喜马拉雅节目</title><link>https://lusir.me/download-ximalaya-shows-in-batch.html</link><description>&lt;p&gt;最近两年多听喜马拉雅比较多，主要是上下班在路上花费时间太长，听听节目还能涨点姿势。
+&lt;p&gt;以上。。。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Wed, 14 Sep 2016 17:47:00 +0800</pubDate><guid>tag:https://lusir.me,2016-09-14:installation-and-setting-of-pccad.html</guid><category>AutoCAD</category></item><item><title>批量下载喜马拉雅节目</title><link>https://lusir.me/download-ximalaya-shows-in-batch.html</link><description>&lt;p&gt;最近两年多听喜马拉雅比较多，主要是上下班在路上花费时间太长，听听节目还能涨点姿势。
 &lt;/p&gt;
 &lt;p&gt;早期喜马拉雅的爪机 APP 没什么广告，我也一直是在用爪机客户端；现在每个音频前面都会有一段音频广告，感觉很不好，所以干脆就把节目下载下来听。下载方式采用过 IDM、音乐间谍，前者无法批量，后者不太稳定。&lt;/p&gt;
 &lt;p&gt;不久前在 &lt;a href="http://fabing.blog.51cto.com/" title="weifabing 的 Blog"&gt;weifabing'Blog&lt;/a&gt; 上看到他的解决办法，于是尝试了一下，果然是很好用啊。&lt;/p&gt;
@@ -393,41 +303,7 @@ browser.safebrowsing.dataProvider —— -1
 
 
 &lt;p&gt;以上是他的代码。打开相应的专辑页，在浏览器 console 中粘贴该段命令就能返回相应下载链接。他用的 Linux 系统，直接在终端里面粘贴命令就能下载了。我用的 Windows，所以下载安装了个 GNU 的 wget，配合 cmder，也还是比较方便的。下载完成后批量改个名，改下媒体文件标签，使用本地播放器简直是完美（虽然音频比特率只有 64k）。&lt;/p&gt;
-&lt;p&gt;最后我也感谢一下喜马拉雅平台，祝越办越好……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 11 Sep 2016 12:33:00 +0800</pubDate><guid>tag:https://lusir.me,2016-09-11:download-ximalaya-shows-in-batch.html</guid><category>wget</category><category>cmder</category><category>喜马拉雅</category></item><item><title>为 TortoiseGit 设置代理</title><link>https://lusir.me/applying-tortoisegit-with-proxy.html</link><description>&lt;p&gt;又一篇流水账。昨天“中菲南海仲裁案”出结果，今天就发现博客内容不能更新到 Github 了。老毛病，为了提交更新，只能为 &lt;code&gt;TortoiseGit&lt;/code&gt; “另辟蹊径”了。
-&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;打开“袋里”并启用系统袋里；&lt;/li&gt;
-&lt;li&gt;留意袋里程序提供的端口，举个栗子：54213；&lt;/li&gt;
-&lt;li&gt;打开 &lt;code&gt;TortoiseGit&lt;/code&gt;→进入设置→打开全局设置文件（如下图）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/applying-tortoisegit-with-proxy.png" title="为 TortoiseGit 设置代理" data-fancybox="gallery"&gt;
-    &lt;img src="https://nnero.gitee.io/demo/applying-tortoisegit-with-proxy.png" alt="为 TortoiseGit 设置代理" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在全局设置文件中添加以下两行&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;[http]
-    proxy = http://127.0.0.1:54213
-    sslVerify = false
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;再次推送，成功提交！！！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 16 Jul 2016 13:45:00 +0800</pubDate><guid>tag:https://lusir.me,2016-07-16:applying-tortoisegit-with-proxy.html</guid><category>Git</category></item><item><title>用上了 You-Get</title><link>https://lusir.me/try-you-get.html</link><description>&lt;p&gt;在优酷上订阅了几个视频节目，像《罗辑思维》、《暴走大事件》。之前一直在用硕鼠下载观看，不过前阵子硕鼠好像停止服务了，遂用上了开源跨平台的 &lt;a href="https://github.com/soimort/you-get/" title="You-Get"&gt;You-Get&lt;/a&gt;。之前在 Lubuntu 下使用过，绝对的神器！
-&lt;/p&gt;
-&lt;p&gt;从官网下载压缩包，解压即用。需要注意的是如果命令行里面提示“无法定位程序输入点ucrtbase.terminate”这个错误，那么去下载个&lt;code&gt;Microsoft Visual C++ 2015 Redistributable&lt;/code&gt;，安装以后就不会再报错了。如果命令行程序用的是 &lt;code&gt;Cmder&lt;/code&gt;，那么看起来就是这样的。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/you-get.png" title="用上了 You-Get" data-fancybox="gallery"&gt;
-    &lt;img class="aligncenter" src="https://nnero.gitee.io/demo/you-get.png" alt="用上了 You-Get" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;updated 2017.04.18&lt;/strong&gt;：近期 You-Get 的 Release 不提供 Win 下的预编译文件了，所以我使用 &lt;code&gt;pip install --upgrade you-get&lt;/code&gt; 命令在 Python3 的 Scripts 目录下生成了 &lt;code&gt;you-get.exe&lt;/code&gt; 并将它扔到了 Python2 的 Scripts 目录下（博客文章渲染需要使用 Python2），这个 100k 不到的 exe 文件居然也能正常下载合并文件，真神奇！&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/you-get-2.png" title="用上了 You-Get" data-fancybox="gallery"&gt;
-    &lt;img class="aligncenter" src="https://nnero.gitee.io/demo/you-get-2.png" alt="用上了 You-Get" /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;updated 2018.07.12&lt;/strong&gt;：最近用 You-Get 下载 B 站视频时，发现长视频默认仅下载第一部分，下载全部需要使用 -l 命令，如下：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;you-get -l https://www.bilibili.com/video/av26508282
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;分段下载完成后可以参照 &lt;a href="https://lusir.me/embed-html5-media.html" title="在网页中嵌入 html5 音视频"&gt;这一篇记录&lt;/a&gt; 进行合并。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 14 Jul 2016 22:08:00 +0800</pubDate><guid>tag:https://lusir.me,2016-07-14:try-you-get.html</guid><category>You-Get</category></item><item><title>升级到 Sublime Text 3</title><link>https://lusir.me/get-to-sublime3.html</link><description>&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
+&lt;p&gt;最后我也感谢一下喜马拉雅平台，祝越办越好……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 11 Sep 2016 12:33:00 +0800</pubDate><guid>tag:https://lusir.me,2016-09-11:download-ximalaya-shows-in-batch.html</guid><category>wget</category><category>cmder</category><category>喜马拉雅</category></item><item><title>升级到 Sublime Text 3</title><link>https://lusir.me/get-to-sublime3.html</link><description>&lt;p&gt;常用 Sublime Text 2 和 Notepad++ 编辑文本，非重度使用。忍不了 Sublime Text 2 启动速度的时候就换用 Notepad++，也还将就。Sublime Text 3 出现的时候也试用过，当时插件不够给力，也没太在意启动速度，遂弃之。前几天心血来潮又试了一下 Sublime Text 3，于是这一次从右键菜单里消失的是 Sublime Text 2 和 Notepad++。
 &lt;/p&gt;
 &lt;h3 id="e655a410ff21cd07e7a0150491e04371"&gt;安装&lt;/h3&gt;
 &lt;ol&gt;
@@ -541,8 +417,8 @@ browser.safebrowsing.dataProvider —— -1
 &lt;li&gt;&lt;code&gt;F6&lt;/code&gt; 打开“参数选择”，在“连接”下的“字符编码”中选择 utf-8；&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;F4&lt;/code&gt; 打开“站点管理器”，在相应站点下设置“字符编码”为 utf-8；&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/garbled-chinese-in-openwrt-1.png" title="参数选择" data-fancybox="gallery"&gt;&lt;img src="https://nnero.gitee.io/demo/garbled-chinese-in-openwrt-1.png" alt="参数选择" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nnero.gitee.io/demo/garbled-chinese-in-openwrt-2.png" title="站点管理器" data-fancybox="gallery"&gt;&lt;img src="https://nnero.gitee.io/demo/garbled-chinese-in-openwrt-2.png" alt="站点管理器" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/garbled-chinese-in-openwrt-1.png" title="参数选择" data-fancybox="gallery"&gt;&lt;img src="https://demo.lusir.me/garbled-chinese-in-openwrt-1.png" alt="参数选择" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/garbled-chinese-in-openwrt-2.png" title="站点管理器" data-fancybox="gallery"&gt;&lt;img src="https://demo.lusir.me/garbled-chinese-in-openwrt-2.png" alt="站点管理器" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;再次打开站点目录，文件名中的中文已能正常识别。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Fri, 10 Jun 2016 21:32:00 +0800</pubDate><guid>tag:https://lusir.me,2016-06-10:repair-the-garbled-chinese-in-openwrt.html</guid><category>Openwrt</category></item><item><title>OpenWrt 设置 MAC 地址过滤</title><link>https://lusir.me/macfilter-of-openwrt.html</link><description>&lt;p&gt;两年前入手的 360 路由器稳定性不是太好，需要定期恢复固件。
 &lt;/p&gt;
 &lt;p&gt;恢复固件的过程比较简单，用 &lt;code&gt;WinSCP&lt;/code&gt; 将本地的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 拷贝至路由 &lt;code&gt;/tmp&lt;/code&gt; 目录下，然后在 &lt;code&gt;Putty&lt;/code&gt; 下敲击：&lt;code&gt;mtd write -r /tmp/customized_backup.bin firmware&lt;/code&gt; 并回车即可完成系统恢复。不过个人习惯给无线设置 MAC 过滤，仅允许列表内 MAC 联网。&lt;/p&gt;
@@ -568,96 +444,384 @@ browser.safebrowsing.dataProvider —— -1
 &lt;li&gt;Allow 表示白名单模式，即只允许列出的硬件地址连入网络；&lt;/li&gt;
 &lt;li&gt;Deny 表示黑名单模式，即禁止列出的硬件地址连入网络。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;目前我采取白名单模式，每连入一个新设备都要添加其硬件地址。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 09 Jun 2016 20:37:00 +0800</pubDate><guid>tag:https://lusir.me,2016-06-09:macfilter-of-openwrt.html</guid><category>Openwrt</category></item><item><title>滥用“Chmod 777 -R /”后的补救措施</title><link>https://lusir.me/rescue-linux-on-abusing-chmod.html</link><description>&lt;p&gt;很早就听人说过不要乱改 Linux 根目录下的文件，尤其不要使用 &lt;code&gt;rm -rf /*&lt;/code&gt;，不过为了在登录时少输入一次密码，我使上了 &lt;code&gt;chmod 777 -R /&lt;/code&gt;，本以为登录会更便捷，谁知连系统都无法登录进入了。
+&lt;p&gt;目前我采取白名单模式，每连入一个新设备都要添加其硬件地址。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 09 Jun 2016 20:37:00 +0800</pubDate><guid>tag:https://lusir.me,2016-06-09:macfilter-of-openwrt.html</guid><category>Openwrt</category></item><item><title>优化 AutoCAD 启动运行速度</title><link>https://lusir.me/autocad-acc.html</link><description>&lt;p&gt;最近几个版本的 AutoCAD 对于系统资源的要求越来越大了，还是老版本轻便一些。采用以下几个步骤将 AutoCAD 不必要的加载除掉。
 &lt;/p&gt;
-&lt;p&gt;解决办法如下：&lt;/p&gt;
-&lt;p&gt;1. 找到另外一台系统相同的正常机，执行以下内容：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;getfacl&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;facl&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;perm&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;02000&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;file200&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;perm&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;04000&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;file400&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;2. 将正常机中 /root 下生成的 facl.txt、file200.txt 及 file400.txt 三个文件拷贝到异常机的 /root 目录下，新建 changemod.sh 后复制到异常机 root 目录（复制文件可能需要 LiveCD），内容如下：&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;file400&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;
-&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
-&lt;span class="n"&gt;done&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;file200&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;
-&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
-&lt;span class="n"&gt;done&lt;/span&gt;
-&lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;var&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;3. 在异常机中分别键入以下两段（忘了是在 LiveCD 下还是 &lt;code&gt;恢复模式&lt;/code&gt; 中了）&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;
-&lt;span class="n"&gt;setfacl&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;restore&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;facl&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;
-&lt;span class="n"&gt;dos2unix&lt;/span&gt; &lt;span class="n"&gt;changemod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
-&lt;span class="n"&gt;chmod&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="n"&gt;changemod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;changemod&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;至此，重启正常开机。&lt;/p&gt;
-&lt;p&gt;文中方法来源于网络，测试可行，作备份……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 12 Jul 2015 20:09:00 +0800</pubDate><guid>tag:https://lusir.me,2015-07-12:rescue-linux-on-abusing-chmod.html</guid><category>Linux</category></item><item><title>寻章摘句 - 201503</title><link>https://lusir.me/some-essays-201503.html</link><description>&lt;p&gt;Onenote 里收藏了一些个人觉得有意思或没意思的句段，大多来自《One · 一个》，还有一句自己敲的，至于鸡汤，已忘记出处……
+&lt;h3 id="f1054629ae86e030a566d033d7f0cddb"&gt;步骤一&lt;/h3&gt;
+&lt;p&gt;安装 AutoCAD 产品后，顺便安装 AutoCAD 管理工具，亦即 &lt;code&gt;CMControl&lt;/code&gt;。安装完成后打开 CAD 管理员控制实用程序，选择要修改的产品，即 CAD 版本号，禁用所有通信。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/cad-opti.jpg" title="禁用 CAD 通信中心" data-fancybox="gallery"&gt;
+    &lt;img src="https://demo.lusir.me/cad-opti.jpg" alt="禁用 CAD 通信中心" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="7d1cce80eca81796dd816477c72e7b4b"&gt;步骤二&lt;/h3&gt;
+&lt;p&gt;运行 AutoCAD 后，打开进程管理器，会发现这样一个进程：WSCommCntr1.exe，它是 AutoCAD 的后台程序，会发送 AutoCAD 的版本信息和注册信息给 AutoDesk 公司，并自动收集相关信资料，包括图集、信息、更新等。&lt;/p&gt;
+&lt;p&gt;将 &lt;code&gt;C:\Program Files (x86)\Common Files\Autodesk Shared&lt;/code&gt; 目录下的 &lt;code&gt;WSCommCntr1.exe&lt;/code&gt; 与 AutoCAD 安装目录下的 &lt;code&gt;WSCommCntrAcCon.arx&lt;/code&gt; 重命名。&lt;/p&gt;
+&lt;h3 id="73e8816f34559f5622f8eb4e41d8259b"&gt;步骤三&lt;/h3&gt;
+&lt;p&gt;在 AutoCAD 命令行中输入 &lt;code&gt;VTENABLE&lt;/code&gt;，依照提示输入 &lt;code&gt;0&lt;/code&gt; 以启用平滑切换显示区域，加快启动速度，接着回车。&lt;/p&gt;
+&lt;h3 id="2eda685cfb7b0f9473eb4e03a9544214"&gt;步骤四（待验证）&lt;/h3&gt;
+&lt;p&gt;打开 IE 浏览器，将“Internet 选项”→“高级”选项卡下的“检查发行商的证书是否已吊销”项取消勾选。&lt;/p&gt;
+&lt;h3 id="5ca581389e16babfae591593e9a717cb"&gt;步骤五&lt;/h3&gt;
+&lt;p&gt;这一步是禁止 AutoCAD 联网，ESET Smart Security 及众多防火墙都能实现。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;近日 Autodesk 公司发布了 AutoCAD 2015，同时宣布向全球学生教师和教育机构提供全功能教育版，包括 AutoCAD、3DMax、Maya 等。不管出于什么目的，不管其影响如何，这种行为还是值得点个赞的！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 11 Dec 2014 21:30:00 +0800</pubDate><guid>tag:https://lusir.me,2014-12-11:autocad-acc.html</guid><category>AutoCAD</category></item><item><title>折腾 360 路由</title><link>https://lusir.me/try-openwrt.html</link><description>&lt;p&gt;入手 360 路由之后基本没怎么使用，前阵子逛 360 路由讨论区的时候发现多了个 Openwrt 版块，便学着折腾了一下，现在也算物尽其用了。
 &lt;/p&gt;
-&lt;h3 id="aa3f0f9135a0cdcf369d0b184768975e"&gt;情愫&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;从来都无法得知，人们是究竟为什么会爱上另一个人。我猜也许我们心上都有一个缺口，呼呼往灵魂里灌着寒风，我们急切需要一个正好形状的心来填上它，就算你是太阳一样完美正圆形，可是我心里的缺口，或许恰恰是个歪歪扭扭的锯齿形，你填不了。
+&lt;h3 id="300b34e58a0fc5ec5bb570dd6601f1c6"&gt;刷 Openwrt&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;路由器 lan 口与电脑相连，设置电脑 IPV4 为静态 IP：192.168.1.3，子网掩码：255.255.255.0，其余为空；&lt;/li&gt;
+&lt;li&gt;断开路由器电源，按住 reset 键，插上电源，保持按住 reset 键等待 10 秒左右，看到黄灯闪烁证明已进入 uboot；&lt;/li&gt;
+&lt;li&gt;电脑浏览器打开 &lt;code&gt;192.168.1.1&lt;/code&gt;，出现上传 rom 界面；&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;浏览&lt;/code&gt;，找到下载的新固件，上传，等待大概3分钟，完成后再次打开 &lt;code&gt;192.168.1.1&lt;/code&gt; 即可进入 openwrt 的 luci 登录界面；&lt;/li&gt;
+&lt;li&gt;电脑 IPV4 还原之前设置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="3d9befcfabeff7e2972165d22183a838"&gt;刷不死 UBoot&lt;/h3&gt;
+&lt;p&gt;360 路由重启一定次数后固件会恢复为 360 官方版本，因此需要 “不死” UBoot。刷入 OpenWrt 后，开启 Dropbear SSH 访问。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 WinSCP 将下载的 UBoot 文件传输到路由的 &lt;code&gt;/tmp&lt;/code&gt; 目录；&lt;/li&gt;
+&lt;li&gt;使用 Putty 进入 OpenWrt ，运行命令 &lt;code&gt;mtd write -r /tmp/filename.bin u-boot&lt;/code&gt;，（&lt;code&gt;filename.bin&lt;/code&gt; 为待刷入的不死 UBoot 文件名）；&lt;/li&gt;
+&lt;li&gt;进入不死 U-Boot 刷机界面，重新刷写 Openwrt 固件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="8c9b7d36a7d1bc1ee133bfe2e173c323"&gt;挂载 U 盘&lt;/h3&gt;
+&lt;p&gt;不打算在路由上折腾 Shadowsocks 客户端及去广告功能，没必要把 openwrt 转移到 U 盘上，所以就没必要给 U 盘分区而是单纯格式化成 ext4 格式，&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 linux 下的分区指令 fdisk 来进行操作，&lt;code&gt;fdisk /dev/sda&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;输入 p 指令查看当前磁盘分区情况；&lt;/li&gt;
+&lt;li&gt;输入 d 指令删除掉旧分区（如果有多个分区删除程序会让你输入删除哪一个，范围是 1 到 4，如果只有一个会默认删除掉），一直删除到没有分区为止；&lt;/li&gt;
+&lt;li&gt;输入 n 指令创建分区 → 输入 p 创建主"分区 1" → 输入开始位置直接回车，结束位置同样直接回车，表示使用全部容量；&lt;/li&gt;
+&lt;li&gt;创建完成后再次输入 p 指令查看当前磁盘分区情况；&lt;/li&gt;
+&lt;li&gt;输入 w 保存分区到磁盘上；&lt;/li&gt;
+&lt;li&gt;重启系统以更改分区表；&lt;/li&gt;
+&lt;li&gt;重启后使用 &lt;code&gt;fdisk -l&lt;/code&gt; 查看当前分区状态；&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;mkfs.ext4 -O ^has_journal /dev/sda1&lt;/code&gt; 命令格式化 U 盘分区；&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;blkid&lt;/code&gt; 命令读取 U 盘 UUID 并设置其自动挂载。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="d67f3f43de03f967069fae3e553e67d0"&gt;安装并配置 Aria2&lt;/h3&gt;
+&lt;p&gt;在 Luci 界面的 &lt;code&gt;系统&lt;/code&gt; → &lt;code&gt;软件包&lt;/code&gt; 里找寻并安装 aria2，随后更新配置文件，以我自己的情况为例，我的 aria2.conf 内容如下：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;enable-rpc=true
+rpc-listen-all=true
+rpc-allow-origin-all=true
+log-level=error
+disable-ipv6=true
+max-concurrent-downloads=1
+max-connection-per-server=10
+min-split-size=2M
+split=10
+max-overall-download-limit=0
+max-download-limit=0
+force-save=false
+save-session-interval=60
+file-allocation=none
+disk-cache=16M
+dir=/mnt/sda1
+log=/mnt/sda1/aria2.log
+input-file=/root/aria2.session
+save-session=/root/aria2.session
+auto-file-renaming=true
+auto-save-interval=30
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="codehilite"&gt;&lt;pre&gt;《好久不见》，算算应该有《十年》，《你现在还好吗》？早已过了《二十二》的年纪，既没有遇到下一位《天后》，也没体悟到《失恋无罪》，空觉《寂寞难耐》。好多个夜晚，我都想象着与妳见面时的情景，包括见面的契机，会是毕业 10 周年同学聚会？亦或是在萍与锐的婚礼当天？我不知道……
+&lt;p&gt;其中的 &lt;code&gt;aria2.session&lt;/code&gt;、&lt;code&gt;aria2.log&lt;/code&gt; 及 &lt;code&gt;aria2.conf&lt;/code&gt; 3 个文件应按照 &lt;code&gt;aria2.conf&lt;/code&gt; 中的配置置于相应地址。随后使用 Putty 进入路由，输入命令 &lt;code&gt;aria2c --conf-path=/mnt/sda1/aria2.conf -c -D&lt;/code&gt;，此时 aria2 便可开启，也可以使用 yaaw，具体请参考 &lt;a href="http://blog.binux.me/2012/06/aria2_yaaw/" title="aria2 + web 前端部署指南"&gt;“aria2 + web 前端部署指南”&lt;/a&gt;。在开机启动项中添加 &lt;code&gt;nice -n 20 aria2c --conf-path=/mnt/sda1/aria2.conf -c -D&lt;/code&gt; 便可使 aria2 开机启动，同时限制开启时的 cpu 使用率为 20%，不知道我的理解是否正确。&lt;/p&gt;
+&lt;h3 id="67ccb6ae961a467ce30943ab1cb1ac68"&gt;限制 Aria2 的 CPU 使用率&lt;/h3&gt;
+&lt;p&gt;Aria2 在不受限制的情况下 CPU 使用率肯定是会影响路由稳定的，所以设个限制。在 &lt;code&gt;CPU 占用率限制&lt;/code&gt; 中添加下图所示内容。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/360-openwrt-1.png" title="Aria2 限制 CPU" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/360-openwrt-1.png" alt="Aria2 限制 CPU" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="60cf9f743716f2cf1ed0ac7a3563ad52"&gt;读取 ext4 格式 U 盘&lt;/h3&gt;
+&lt;p&gt;前面设置 U 盘格式为 ext4，使用 Aria2 下载完成后一般开启 Samba 就能局域网访问，但访问速度不佳，所以考虑直接读取 U 盘，由于 Windows 系统不能直接读取 U 盘中的内容，所以需要借助第三方程序，经过反复测试，筛选出两个程序，在此记录并作推荐：&lt;code&gt;Ext2Fsd&lt;/code&gt; 与 &lt;code&gt;Paragon ExtFS for Windows&lt;/code&gt;，前者只能只读，后者可写 U 盘，两者均建议使用 &lt;code&gt;复制&lt;/code&gt; 命令以减少文件被损坏的情况发生。复制速度参见下图：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/360-openwrt-2.png" title="复制速度" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/360-openwrt-2.png" alt="复制速度" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="6aa4ba7e676ffeda11262cd5b7c18218"&gt;计划任务&lt;/h3&gt;
+&lt;p&gt;白天人不在家，离线下载完成后可以关闭路由，等人回来之后在打开路由。让路由在早上 9 点 50 自动关闭 wifi，下午 5 点 50 分自动重启。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;50 09 * * * wifi down
+50 17 * * * reboot
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="codehilite"&gt;&lt;pre&gt;这十年里究竟发生了多少事呢，其实我们每个人都感到一言难尽。难得匆匆见上一面，往往也没什么可说，只顾着沉浸在往昔的幻觉里，幻觉里又有挥之不去的惘惘威胁。我们彼此都幼稚，却彼此都知道互相慰藉。
+&lt;h3 id="27d1215718e548798395f11e464e65cb"&gt;备份/恢复固件&lt;/h3&gt;
+&lt;p&gt;设置太过麻烦，所以生成备份文件是比较稳妥的办法。如果只备份 &lt;code&gt;etc&lt;/code&gt; 目录则可直接使用 &lt;code&gt;系统&lt;/code&gt; 下的 &lt;code&gt;备份/升级&lt;/code&gt;。若要备份整个固件则需要使用几行命令：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在 Putty 下使用 &lt;code&gt;cat /proc/mtd&lt;/code&gt; 命令查看 firmware 分区对应的 mtd 设备。如下图，我的 firmware 分区为 mtd4。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/360-openwrt-3.jpg" title="查看分区" data-fancybox="gallery"&gt;
+        &lt;img class="aligncenter" src="https://demo.lusir.me/360-openwrt-3.jpg" alt="查看分区" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生成固件备份文件于 &lt;code&gt;/tmp&lt;/code&gt; 目录下：&lt;code&gt;dd if=/dev/mtd4 of=/tmp/customized_backup.bin&lt;/code&gt;，然后使用 WinSCP 将 &lt;code&gt;/tmp&lt;/code&gt; 目录下的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 文件拷贝至本地。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;反之，如要恢复系统，则需将本地的 &lt;code&gt;customized_backup.bin&lt;/code&gt; 拷贝至路由 &lt;code&gt;/tmp&lt;/code&gt; 目录下，然后使用命令：&lt;code&gt;mtd write -r /tmp/customized_backup.bin firmware&lt;/code&gt; 即可完成系统恢复（或直接进入 UBoot 界面进行固件升级）。恢复完成路由器会自行重启（若出现 aria2c 添加 yaaw 任务即刻失败现象，请直接利用该法恢复系统）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br&gt;
+路由现在是中继别人的信号。虽然有访问上级路由的权限，但还是没有折腾出外网访二级问路由这一功能，挺失落的，暂时折腾到此……&lt;/p&gt;
+&lt;h3 id="d54d3b94ffaf07589de3006395891685"&gt;Update 2014-11-24 12:15&lt;/h3&gt;
+&lt;p&gt;Adbyby 已有 openwrt 版本的程序，且可支持 360 路由器，&lt;a href="http://bbs.360safe.com/thread-4934688-1-1.html" title="360 路由安装广告屏蔽大师"&gt;论坛&lt;/a&gt; 上已有教程，且本人也已试用，效果还不错。不过我这边安装上 Adbyby 后路由经常无响应，可能是缓存不够（已暂停使用路由版 Adbyby）。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3 id="2a302fa545ce4445b25970650930debd"&gt;参考文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.right.com.cn/forum/thread-146084-1-1.html" title="360 安全路由器刷 openwrt 方法"&gt;360 安全路由器刷 openwrt 方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.right.com.cn/forum/thread-147319-1-1.html" title="360 路由 openwrt 固件"&gt;360 路由 openwrt 固件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.leiphone.com/news/201406/diy-a-smart-router-topic-increase-memory-3.html" title="跟 hoowa 学做智能路由（十）：扩充 RAM 和 FLASH"&gt;跟 hoowa 学做智能路由（十）：扩充 RAM 和 FLASH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://miantiao.me/play-openwrt-2.html" title="openwrt 折腾记（二）"&gt;openwrt 折腾记（二）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://aria2.github.io/manual/en/html/aria2c.html" title="aria2c 参数手册"&gt;aria2c 参数手册&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Mon, 20 Oct 2014 21:21:00 +0800</pubDate><guid>tag:https://lusir.me,2014-10-20:try-openwrt.html</guid><category>Openwrt</category></item><item><title>通过 PitStop 插件批量删除水印</title><link>https://lusir.me/delete-watermarks-with-pitstop.html</link><description>&lt;p&gt;Enfocus PitStop Pro 是 Enfocus 公司开发一款用于检查、编辑和修改 PDF 文件的 Acrobat 插件。&lt;/p&gt;
+&lt;p&gt;网上分享的国标文件大部分都带有水印，不能忍。传说 PitStop 很强大，其批量去水印的功能对付普通水印得心应手。
+&lt;/p&gt;
+&lt;h3 id="cb85935cd75e38735da0e8d8eeb8288a"&gt;演示&lt;/h3&gt;
+&lt;p&gt;使用 Adobe Acrobat 随意打开一个文件，如下图。可以看到该文件处于加密状态，且页面存在超链接。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/pitstop-1.jpg" title="待解密" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/pitstop-1.jpg" alt="待解密" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用 PDF Unlocker 解密该文档，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/pitstop-2.jpg" title="解密" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/pitstop-2.jpg" alt="解密" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用 Adobe Acrobat 打开已解密文档，在工具栏中点选 &lt;kbd&gt;选择对象工具&lt;/kbd&gt; 按钮。此时，超链接将显示边框，如图所示：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/pitstop-3.jpg" title="选超链" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/pitstop-3.jpg" alt="选超链" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/pitstop-4.jpg" title="删超链" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/pitstop-4.jpg" alt="删超链" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;右键于任一超链接边框内，点击 &lt;kbd&gt;全部选定&lt;/kbd&gt;，然后点击键盘 &lt;kbd&gt;Delete&lt;/kbd&gt; 按钮，超链消失。&lt;/p&gt;
+&lt;p&gt;接着要删除的是每页都会出现的页眉。安装 PitStop 后，Acorbat 工具栏上会出现一排 PitStop 相关的按钮。选中 &lt;kbd&gt;选择对象&lt;/kbd&gt; 按钮，框选页眉处不想要的文字（选中后文字会出现蓝色下划线）。&lt;/p&gt;
+&lt;p&gt;点选工具栏中的 &lt;kbd&gt;显示全局更改&lt;/kbd&gt; 按钮 → &lt;kbd&gt;删除内侧区域&lt;/kbd&gt; → &lt;kbd&gt;从选择定义区域边框&lt;/kbd&gt; → &lt;kbd&gt;处理&lt;/kbd&gt;，如此这般。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/pitstop-5.jpg" title="选水印" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/pitstop-5.jpg" alt="选水印" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/pitstop-6.jpg" title="选水印" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/pitstop-6.jpg" alt="选水印" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/pitstop-7.jpg" title="删水印" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/pitstop-7.jpg" alt="删水印" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以上即为我用到的功能，当然里面还有很多很多高级功能，以后慢慢探究。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;div id="player" class="aplayer"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+var ap = new APlayer({
+    element: document.getElementById('player'),
+    narrow: false,
+    autoplay: true,
+    showlrc: false,
+    mutex: true,
+    theme: '#615754',
+    mode: 'circulation',
+    preload: 'auto',
+    music: {title: 'Breathless',author: 'Shayne Ward',
+                url: 'https://demo.lusir.me/p3/breathless.mp3',
+                pic: 'https://p1.music.126.net/2uFjgnUKoQtB7ZATBkx29w==/2529976256581992.jpg',}
+    });
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 05 Oct 2014 11:54:00 +0800</pubDate><guid>tag:https://lusir.me,2014-10-05:delete-watermarks-with-pitstop.html</guid><category>PitStop</category><category>水印</category><category>Music</category></item><item><title>荷塘月色 - Q 版语文</title><link>https://lusir.me/fake-q-ban-yu-wen.html</link><description>&lt;p&gt;每个月都有那么几天，感觉颇不宁静。今晚在院子里坐着数蚊子，忽然想起日日走过的荷塘，在这满月的光里，荷塘里应该有 MM 在洗澡吧。月亮像“非典”病人的体温似的，不知什么时候已经升高了，墙外马路上收破烂的叫喊声，已经听不见了；老婆在屋里拍着孩子，跑着调地哼着“两只老虎”。好难听啊，我终于忍不住悄悄地披了衣服，带上门出去了。
+&lt;/p&gt;
+&lt;p&gt;&lt;a class="float-left" href="https://demo.lusir.me/dufu2.jpg" title="杜甫涂鸦" data-fancybox="gallery"&gt;&lt;img src="https://demo.lusir.me/dufu2.jpg" alt="杜甫涂鸦" /&gt;&lt;/a&gt;沿着荷塘，是一条曲折的小煤屑路，运气好的话还可以捡到几块煤炭和硬币。这条路白天少有人走，晚上更是鬼都不来。由于缺少压马路的恋人，所以路面显得凹凸不平。荷塘四面，长着许多树，可我就认识杨柳，其他的叫不上名字来，我想，比草大一点儿的植物就应该叫树吧。没有月光的晚上，这路上阴森森的，有些怕人。今晚却很好，虽然月光也还是淡淡的，但估计不会有女流氓出没。&lt;/p&gt;
+&lt;p&gt;路上只我一个人，这一片天地好像是我的；我也像是灵魂出窍，到了另一个世界里。我爱牛奶，也爱啤酒；爱同居，也爱独处。像今天晚上，一个人在这苍茫的月下，什么都可以想，什么都可以不想，思想出现冲突，开始不兼容的时候，我便觉得自己是个自由的人。平日里一定要做的事，一定要说的话，一定要憋的屁，现在都可以不理。就像是游荡在网络世界里，这就是独处的妙处。&lt;/p&gt;
+&lt;p&gt;弯弯勾勾的荷塘上面，放眼寻找 MM，可惜看到的都是叶子。&lt;/p&gt;
+&lt;p&gt;&lt;a class="float-right" href="https://demo.lusir.me/dufu3.jpg" title="杜甫涂鸦" data-fancybox="gallery"&gt;&lt;img src="https://demo.lusir.me/dufu3.jpg" alt="杜甫涂鸦" /&gt;&lt;/a&gt;叶子出水很高，像夏季少女的超短裙。叶子中间，有些白花，有开着的，有不开的，还有半开不开的；一阵阴风吹过，送来缕缕清香，比香蕉还香，比蚊香还香，仿佛帕瓦罗蒂在喜马拉雅山上唱歌似的。这时候，叶子与花像吃了摇头丸一般抖动了起来，像闪电似的，霎时整个荷塘的叶子和花都抖动了起来，其传染速度比禽流感还快啊。叶子底下是脉脉的流水，虽然被叶子遮住了，但是我仍能用人格保证它下面是流水，不是可乐或果汁。&lt;/p&gt;
+&lt;p&gt;月光如嘘嘘一般，哗哗地撒在这一片叶子和花上。叶子和花仿佛刚洗过牛奶浴，像婴儿的小屁屁，白里透红，与众不同。竟然是满月！不知道狼人和吸血鬼会不会出现，好在天上有一层淡淡的云，我认为这很好，遮住了月亮，狼人和吸血鬼就不会出现，我就是在这里睡觉也可以。月光是隔了树照过来的，因此荷叶上的黑影参差斑驳，并不均匀，但光与影却有着和谐的旋律，如周杰伦的歌一样，听不出歌词，但却有令人心动的旋律。&lt;/p&gt;
+&lt;p&gt;荷塘的四面，远远近近，高高低低竟然都是树，还好，大多是我认识的杨柳，而不是非洲杀人树。树缝里透着一两点路灯光，没精打采的，看得我直犯困。这时候最热闹的，要数远处烧烤摊的叫卖声了，真想去喝啤酒啊，可一摸口袋，我什么也没有。&lt;/p&gt;
+&lt;p&gt;突然想起二十元人民币有荷花图案，今晚这满塘荷花如果是人民币的话，我可就发了，只可惜它们只是荷花。这令我更加惦记发薪水的日子了。这样想着，猛一抬头，不觉已是自己的门前；轻轻地推门，什么声息也没有，老婆已睡熟好久了。竟然没给我留门？！看来我还真得去荷塘边上凑合一宿。明天跟老婆说我今晚去荷塘赏月了，她能信吗？&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://demo.lusir.me/guanhanqing.jpg" title="关汉卿涂鸦" data-fancybox="gallery"&gt;
+    &lt;img class="aligncenter" src="https://demo.lusir.me/guanhanqing.jpg" alt="关汉卿涂鸦" /&gt;
+&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;这是一篇测试文……，文章版权作者所有。&lt;/p&gt;
+&lt;p&gt;今天心情不好。我只有四句话想说。包括这句和前面的两句。我的话说完了……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sun, 09 Mar 2014 20:31:00 +0800</pubDate><guid>tag:https://lusir.me,2014-03-09:fake-q-ban-yu-wen.html</guid><category>Nonsense</category></item><item><title>整合 Google 自定义搜索到 Pelican</title><link>https://lusir.me/google-cse-for-pelican.html</link><description>&lt;p&gt;总感觉好像我搭建 Blog 的目的跟别人不太一样，小伙伴们都在正儿八经的写出一些有价值有意义的文章，我却在那折腾怎么实现这个功能，怎么实现那个功能。可问题是自己又不会整，只能到处搜寻答案然后慢慢试结果。好在人品不错，虽然浪费不少时间，但折腾出结果的满足感确实挺爽。本文记录一下将 Google 自定义搜索整合到 Pelican 的过程。
+&lt;/p&gt;
+&lt;p&gt;说是整合到 Pelican，其实只是通过 jinja2 的一些规则将 Google 自定义搜索代码插入到主题的“搜索页面.html”中。&lt;/p&gt;
+&lt;h3 id="be5bf34c6756f3e3f7e20057e2c5c10b"&gt;第一步：注册并获取 Google 自定义搜索代码&lt;/h3&gt;
+&lt;p&gt;先通过访问 https://www.google.com/cse/ 创建自定义搜索引擎。创建完毕后进入“外观”面板，选择“全宽”的布局模式。保存后进入“获取代码”,获得 Google 自定义搜索代码。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cx&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;012467883927724485227:eaoxbeaeyty&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;gcse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createElement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;text/javascript&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;async&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;src&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;protocol&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https:&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https:&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http:&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;//www.google.com/cse/cse.js?cx=&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;cx&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementsByTagName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+    &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parentNode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;insertBefore&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;})();&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;gcse&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;searchresults&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;only&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/gcse:searchresults-only&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="codehilite"&gt;&lt;pre&gt;我忽然觉得，我们的“激流勇进”船已经冲过了最危险的地域，直落平地，溅起一船水意。春天还没有来的时候，才会感觉比较凉。
+&lt;h3 id="3a2e8e53c47ef1f31c3c65ceed0d2411"&gt;第二步：创建搜索结果页&lt;/h3&gt;
+&lt;p&gt;为了让搜索结果在博客内部显示，我们需要在主题的 templates 中创建一个新的页面，用来显示搜索结果。新建一个文件，命名为 search.html。我是直接复制 page.html，重命名为 search.html 并相应修改文件中的 title 及 description，然后插入第一步中得到的 Google 自定义搜索代码到相应的位置。至此搜索结果页创建就完成了。&lt;/p&gt;
+&lt;h3 id="1db2035cd12c3dd8d8e34366e93b222c"&gt;第三步：修改当前主题的搜索提交表单&lt;/h3&gt;
+&lt;p&gt;这里算是最关键的一步啦，当用户点击你博客上任意页面的站内搜索按钮的时候，可以将用户引导到刚刚创建的搜索结果页上。我们需要在主题文件夹中找到搜索框所在的文件，每个主题都不同，一般是在 header.html 中，找到类似以下的代码：&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&amp;lt;form method=&amp;quot;get&amp;quot; action=&amp;quot;/search.html&amp;quot; &amp;gt;
+&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;s&amp;quot; class=&amp;quot;textfield&amp;quot; placeholder=&amp;quot;Press enter to search ...&amp;quot; /&amp;gt;
+&amp;lt;/form&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="codehilite"&gt;&lt;pre&gt;我这一生遇到过很多人，他们如同指间的烟火，忽明忽暗，最后只沦为一抹灰烬，而你不同，你如北斗，闪耀在我的整个人生。
+&lt;p&gt;需要注意的地方：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;method="get"&lt;/li&gt;
+&lt;li&gt;action="/search.html"    action 的地址为 search.html 在生成的站点中的相对地址，一般是在根目录下，即 /search.html。&lt;/li&gt;
+&lt;li&gt;文本框 name="s" 不管主题搜索框的 name 等于什么，都将引号内的字母改成 q，即 name="q"。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="5aec29c358fa0dff64fe292979a341d1"&gt;第四步：使用 javascript 让搜索结果页的 title 中显示搜索关键字（可选）&lt;/h3&gt;
+&lt;p&gt;由于静态页面不能从数据库获取输入的关键字，所以只能从搜索结果页的 URL 下手了，假设搜索结果页的 URL 为：https://lusir.me/search.html?q=solidworks。我们想得到参数 q 的值，则可以通过以下函数调用。&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;reg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;RegExp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;(^|&amp;amp;)&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;q&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;=([^&amp;amp;]*)(&amp;amp;|$)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;i&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;search&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;substr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;reg&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;r&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="nx"&gt;context&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;r&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;║&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;decodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;context&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;║&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;的搜索结果 - 擼sirの避風港&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="codehilite"&gt;&lt;pre&gt;在这个城市里，我坚持的相信一定会有那么一个人，想着同样的事情，怀着相似的频率，在某站寂寞的出口，安排好了与我相遇。
+&lt;p&gt;上面那段的具体意思我也不太清楚，大概就是使用正则式将 url 分为 3 部分，以 q 为分界点，我们需要的就是 q= 之后的那部分（即 context）。匹配成功之后利用 context 给 title 赋值，但是这样赋值之后的 title 不能正确显示中文字符，所以需要使用关键字 decodeURIComponent 来将 context 还原成中文字符。&lt;/p&gt;
+&lt;h3 id="effe4bed8cea1f7d427c950a4d195981"&gt;第五步：调整 CSS&lt;/h3&gt;
+&lt;p&gt;功能实现了之后就是美化了。按照自己的意愿调整CSS即可。&lt;/p&gt;
+&lt;p&gt;大功告成，此后就可以在主题原始的搜索框上使用 Google 自定义搜索了。&lt;/p&gt;
+&lt;p&gt;PS：参考文章如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.wpjam.com/article/google-cse-for-wordpress/" title="无缝整合 Google 自定义搜索框到 WordPress"&gt;无缝整合 Google 自定义搜索框到 WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.ncku.edu.tw/~rcenter/book/html/JavaScript.html" title="簡易JavaScript語法結構"&gt;簡易JavaScript語法結構&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://yige.org/p/374" title="JS获取url参数的函数_JavaScript"&gt;JS获取url参数的函数_JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.w3schools.com/jsref/jsref_encodeuricomponent.asp" title="JavaScript encodeURIComponent() Function"&gt;JavaScript encodeURIComponent() Function&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 04 Mar 2014 21:40:00 +0800</pubDate><guid>tag:https://lusir.me,2014-03-04:google-cse-for-pelican.html</guid><category>Pelican</category><category>CSE</category></item><item><title>Thunderbird + Markdown 写邮件</title><link>https://lusir.me/markdown-emails.html</link><description>&lt;p&gt;前几天记录了一下使用 Markdown 添加表格的方法（&lt;a href="https://lusir.me/markdown-add-tables.html" title="Markdown 添加表格"&gt;点我查看&lt;/a&gt;），耽搁好几天，今天记录一下使用 Thunderbird + Markdown 编辑邮件（通过 Thunderbird + Markdown Here 插件将 Markdown 文段转成格式清爽的邮件）的步骤。
+&lt;/p&gt;
+&lt;h3 id="90633085fd7eb1c9483c3ce43cbf7619"&gt;绿色版 Thunderbird&lt;/h3&gt;
+&lt;p&gt;安装绿色版 Thunderbird（绿色版便携）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载安装 Thunderbird 至相应位置。&lt;/li&gt;
+&lt;li&gt;新建文件夹用来存放配置文件（名称可以是中文）。&lt;/li&gt;
+&lt;li&gt;将 thunderbird.exe 发送到桌面快捷方式，并在快捷方式的“目标”中添加 &lt;code&gt;-p&lt;/code&gt; 参数，如下图：
+&lt;p&gt;&lt;a href="https://demo.lusir.me/thunderbird-config1.jpg" title="添加 -p 参数" data-fancybox="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;双击快捷方式新建配置文件指向第一步新建的文件夹，如下图，然后去掉快捷方式的 &lt;code&gt;-p&lt;/code&gt; 参数即可正常使用。
+&lt;p&gt;&lt;a href="https://demo.lusir.me/thunderbird-config2.jpg" title="新建用户配置" data-fancybox="gallery"&gt;看图点我&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="4f3d67d0b3a268ac8d99d670851c8b80"&gt;Markdown Here 插件&lt;/h3&gt;
+&lt;p&gt;Markdown Here 插件这一步就不详述了，直接在“附加组件管理器”中搜索 Markdown Here 扩展，然后安装即可。安装成功后，在使用 Markdown 编辑完邮件后，右键点击 &lt;code&gt;Markdown Toggle&lt;/code&gt; 即可在书写页面和预览之间进行切换，从而编辑出样式清爽的邮件。同时，还可以通过编辑 Markdown Here 扩展的 CSS 来自定义邮件样式、配色等方案以达到自己的需求。&lt;/p&gt;
+&lt;h3 id="5627d82f25e05d6225b4fb0f7f1d8c62"&gt;Thunderbird 扩展&lt;/h3&gt;
+&lt;p&gt;提到了 Thunderbird，顺便列一下我现在使用的扩展。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Contact Tabs。（通过 Thunderbird 主窗口快速访问联系人目录）&lt;/li&gt;
+&lt;li&gt;Markdown Here。（Write your email in Markdown, then make it pretty）&lt;/li&gt;
+&lt;li&gt;MinimizeToTray。（最小化窗口到系统托盘）&lt;/li&gt;
+&lt;li&gt;Quicktext。（添加快速文本）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Markdown 确实是比较方便，熟练运用可以提升不少效率，我还得努力……&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Thu, 27 Feb 2014 20:40:00 +0800</pubDate><guid>tag:https://lusir.me,2014-02-27:markdown-emails.html</guid><category>Markdown</category><category>Thunderbird</category></item><item><title>Markdown 添加表格</title><link>https://lusir.me/markdown-add-tables.html</link><description>&lt;p&gt;搭建了 Pelican 之后就在慢慢尝试学习使用 Markdown 记录一些东西（包括尝试使用 Markdown 编辑邮件）。本文记录一下使用 Markdown 添加表格的方法。
+&lt;/p&gt;
+&lt;h3 id="c45fb2cede0c7b1e80f58e6862285ab4"&gt;Update: 2014-12-08&lt;/h3&gt;
+&lt;p&gt;由于现主题 CSS 强制定义了表格内容居中显示，所以下文中&lt;code&gt;“对齐的表格”&lt;/code&gt;中的左对齐、右对齐都未能正确显示出来。&lt;/p&gt;
+&lt;h3 id="9ac4d85e35db087be217f6a8bc1a5d9d"&gt;简单的表格&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;你好 | Markdown | 表格 | 这是表头
+---- | -------- | ---- | --------
+abc  |  123   |  ABC  |  cool
+111  |  222   |  333  |  444
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="codehilite"&gt;&lt;pre&gt;独一无二是一种什么体验，就像你偶然发现一个人，和心里的那家伙很像，脾气、说话方式、爱看的电影，但你却不会因为这些而被他吸引。于是你明白，这世上，没有你喜欢的那一种人，只有你喜欢的那一个人。
+&lt;h3 id="7e8b2fa2745e37dfe2e609baf04e319f"&gt;效果&lt;/h3&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;你好&lt;/th&gt;
+&lt;th&gt;Markdown&lt;/th&gt;
+&lt;th&gt;表格&lt;/th&gt;
+&lt;th&gt;这是表头&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;abc&lt;/td&gt;
+&lt;td&gt;123&lt;/td&gt;
+&lt;td&gt;ABC&lt;/td&gt;
+&lt;td&gt;cool&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;111&lt;/td&gt;
+&lt;td&gt;222&lt;/td&gt;
+&lt;td&gt;333&lt;/td&gt;
+&lt;td&gt;444&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="b3d606cf1cfea15e42ec0b7784a414af"&gt;对齐的表格&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;|Tables     |Are             |Cool |
+| ----------- |:-------------:| -----:|
+| col 3 is    | right-aligned | $1600 |
+| col 2 is    | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3 id="348876e998b33a03b085bc528c2f365d"&gt;鸡汤&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;你不过是损失了一个不爱你的人，而他损失的是一个爱他的人，他的损失比你大，难过的人应该是他。
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="codehilite"&gt;&lt;pre&gt;不要在乎已经得到的东西，让自己变得慷慨和大方。只要你愿意，什么都可以送出去。它们一定能够回来，加倍偿还你的付出。
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="codehilite"&gt;&lt;pre&gt;意志力挑战就是两个自我之间的对抗。一个你想的是自己的长远利益（比如减肥），另一个你则想及时行乐（比如吃巧克力）。在面临诱惑的时候，你要让更理智的自己说话，战胜放纵自我的念头，但是，成功自控会在不经意间导致不好的后果，它会让你暂时感到满足，让更理智的自己闭嘴。当你取得进步的时候，你的大脑就停止了思维进程，而这个进程正是推动你追求长远目标的关键。然后，那个放纵自我的声音就会响起来，你就会转而关注那些还没有得到满足的目标。心理学家称之为“目标释放”。你曾努力克制的目标会变得更加强大，诱惑也会变得更加难以抵挡。
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="codehilite"&gt;&lt;pre&gt;哈兹立特有句话：“偏见是无知的孩子。”说得一点都不错，“人”、“扁”为偏，人一旦有了偏见，就会把“人”看“扁”、看“偏”了。大多数的人并不了解你，你也不完全了解这些人，既然如此，我们就不该轻易地去论断他人，当然也不必在意别人的论断。因为，每个人都可能扣错第一颗扣子，不是吗？
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="codehilite"&gt;&lt;pre&gt;封其心眼，断其诱惑，眼不见心不乱，其奈我何？
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id="ff78ec550506a7ba2fee2abfef7890e9"&gt;钓鱼诗&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;数凡绝丝入水中，金钩抛去永无踪，凡鱼不敢朝天子，万岁君主只钓龙。
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 03 Mar 2015 20:09:00 +0800</pubDate><guid>tag:https://lusir.me,2015-03-03:some-essays-201503.html</guid><category>Collection</category></item></channel></rss>
+&lt;h3 id="7e8b2fa2745e37dfe2e609baf04e319f_1"&gt;效果&lt;/h3&gt;
+&lt;table class="table table-bordered table-striped table-condensed table-hover"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tables&lt;/th&gt;
+&lt;th align="center"&gt;Are&lt;/th&gt;
+&lt;th align="right"&gt;Cool&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;col 3 is&lt;/td&gt;
+&lt;td align="center"&gt;right-aligned&lt;/td&gt;
+&lt;td align="right"&gt;$1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;col 2 is&lt;/td&gt;
+&lt;td align="center"&gt;centered&lt;/td&gt;
+&lt;td align="right"&gt;$12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zebra stripes&lt;/td&gt;
+&lt;td align="center"&gt;are neat&lt;/td&gt;
+&lt;td align="right"&gt;$1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="35808e79fa5f367a06c83a78b857519c"&gt;参考资料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" title="Markdown 语法"&gt;Markdown Cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Sat, 22 Feb 2014 19:20:00 +0800</pubDate><guid>tag:https://lusir.me,2014-02-22:markdown-add-tables.html</guid><category>Markdown</category></item><item><title>Win7 桌面如何只显示图片文件缩略图</title><link>https://lusir.me/just-display-win7-pic-thumbnail.html</link><description>&lt;p&gt;Win7 默认开启桌面缩略图功能时图片文件、pdf、ppt、视频文件的缩略图都会在桌面显示出来，以下三步可开启图片文件的桌面缩略图而不显示其余类型的缩略图。
+&lt;/p&gt;
+&lt;h3 id="2ddccf93aab2d7057bfc87a6a469b7db"&gt;阉割掉 pdf、ppt、视频文件的缩略图功能。&lt;/h3&gt;
+&lt;p&gt;具体操作：进注册表，分别找到需要修改的键值，将其 &lt;code&gt;shellex&lt;/code&gt; 键给删掉。注册表文件内容如下
+&lt;pre&gt;
+Windows Registry Editor Version 5.00
+[-HKEY_CLASSES_ROOT.avi\ShellEx]
+[-HKEY_CLASSES_ROOT.asf\ShellEx]
+[-HKEY_CLASSES_ROOT.wmv\ShellEx]
+[-HKEY_CLASSES_ROOT.rm\ShellEx]
+[-HKEY_CLASSES_ROOT.rmvb\ShellEx]
+[-HKEY_CLASSES_ROOT.mkv\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp\ShellEx]
+[-HKEY_CLASSES_ROOT.3g2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
+[-HKEY_CLASSES_ROOT.f4v\ShellEx]
+[-HKEY_CLASSES_ROOT.flv\ShellEx]
+[-HKEY_CLASSES_ROOT.m4v\ShellEx]
+[-HKEY_CLASSES_ROOT.mov\ShellEx]
+[-HKEY_CLASSES_ROOT.mp4\ShellEx]
+[-HKEY_CLASSES_ROOT.mp4v\ShellEx]
+[-HKEY_CLASSES_ROOT.mpg\ShellEx]
+[-HKEY_CLASSES_ROOT.mpeg\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp\ShellEx]
+[-HKEY_CLASSES_ROOT.3g2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gp2\ShellEx]
+[-HKEY_CLASSES_ROOT.3gpp\ShellEx]
+[-HKEY_CLASSES_ROOT.f4v\ShellEx]
+[-HKEY_CLASSES_ROOT.flv\ShellEx]
+[-HKEY_CLASSES_ROOT.pdf\ShellEx]
+[-HKEY_CLASSES_ROOT.pptx\ShellEx]
+[-HKEY_CLASSES_ROOT\AcroExch.Document.7\Shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.mpp\shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.msg\shellex]
+[-HKEY_CLASSES_ROOT\SystemFileAssociations.ppt\shellex]
+&lt;/pre&gt;&lt;/p&gt;
+&lt;h3 id="34d776cf9e3a1907877d8eb0a708f191"&gt;关掉缩略图的数据库&lt;/h3&gt;
+&lt;p&gt;进组策略：&lt;kbd&gt;Win&lt;/kbd&gt; + &lt;kbd&gt;R&lt;/kbd&gt; → gpedit.msc → 用户配置 → 管理模板 → Windows 组件 → Windows 资源管理器，双击右边的“关闭隐藏的 thumbs.db 文件中的缩略图片缓存” → 选择“已启用”。&lt;/p&gt;
+&lt;h3 id="d1d4bbf2a67893815f376083ba63d7b6"&gt;删除之前已经存档的缩略图&lt;/h3&gt;
+&lt;p&gt;即删除缩略图的数据库 thumbs.db 文件，它们都在系统盘的 &lt;code&gt;Users\（当前用户）\AppData\Local\Microsoft\Windows\Explorer&lt;/code&gt; 下，用 Diskgenius 或在另一系统下将其删除，之后重启。开启缩略图功能，这次显示缩略图的就只有图片文件了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nero Zheng</dc:creator><pubDate>Tue, 07 Feb 2012 13:40:00 +0800</pubDate><guid>tag:https://lusir.me,2012-02-07:just-display-win7-pic-thumbnail.html</guid><category>Win7</category></item></channel></rss>

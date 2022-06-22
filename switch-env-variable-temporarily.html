@@ -10,8 +10,6 @@
 <meta name="author" content="Nero Zheng" />
 <meta name="generator" content="Pelican" />
 <meta name="description" content="使用批处理临时切换环境变量 - 作者：Nero Zheng，首发于『擼sirの避風港』">
-<meta property="qc:admins" content="315026325312655" />
-<meta property="wb:webmaster" content="8e383b094667a02d" />
 <title>使用批处理临时切换环境变量 - 擼sirの避風港</title>
 <link href="https://lusir.me/atom.xml" type="application/atom+xml" rel="alternate" title="『擼sirの避風港』Atom Feed" />
 <link href="https://lusir.me/rss.xml" type="application/rss+xml" rel="alternate" title="『擼sirの避風港』Rss Feed" />
@@ -64,9 +62,8 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-folder-open"></i>分类<b class="caret"></b></a>
 <ul class="dropdown-menu">
-<li><a href="https://lusir.me/collection/index.html"><i class="fa fa-briefcase"></i>搜藏(4)</a></li>
-<li><a href="https://lusir.me/nonsense/index.html"><i class="fa fa-cogs"></i>扯(1)</a></li>
-<li><a href="https://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(83)</a></li>
+<li><a href="https://lusir.me/life/index.html"><i class="fa fa-coffee"></i>日常(1)</a></li>
+<li><a href="https://lusir.me/record/index.html"><i class="fa fa-book"></i>记录(17)</a></li>
 </ul>
 </li>
 <!--  self defined dropdown list --></ul>
@@ -95,8 +92,8 @@ _stylesheet.appendStyleSheet(responses[0], function() {});
 <p>话题要从我使用 <code>Pelican</code> 生成静态站 <code>html</code> 文件说起。使用 <code>Pelican</code> 大概是在 2014 年，那时 <code>Pelican</code> 还是基于 Python 2.x，虽然后期 <code>Pelican</code> 也更新到基于 Python 3.x，但由于个人太懒，所以截至目前还在使用旧版的 <code>Pelican</code>（一直未更新^.^）。
 </p>
 <p>但随着时间推移 Python 3.x 已成为主流，例如 You-Get。所以目前我有同时安装 Python 2.7 与 Python 3.5，使用前按需求先切换环境变量。如下图：</p>
-<p><a href="https://nnero.gitee.io/demo/switch-env-variable-temporarily-1.png" title="使用批处理临时切换环境变量" data-fancybox="gallery">
-    <img class="aligncenter" src="https://nnero.gitee.io/demo/switch-env-variable-temporarily-1.png" alt="使用批处理临时切换环境变量" />
+<p><a href="https://demo.lusir.me/switch-env-variable-temporarily-1.png" title="使用批处理临时切换环境变量" data-fancybox="gallery">
+    <img class="aligncenter" src="https://demo.lusir.me/switch-env-variable-temporarily-1.png" alt="使用批处理临时切换环境变量" />
 </a></p>
 <p>但是每次使用前都需要切换环境变量也算是比较麻烦了。上网查询知道可以使用批处理临时切换环境变量，正好我在 Windows 下使用 <code>Pelican</code> 也采用批处理，所以决定尝试一下。</p>
 <p>打开 cmder 测试，依次输入以下命令：</p>
@@ -108,8 +105,8 @@ set path=%my_path%
 
 
 <p>将得到以下结果。</p>
-<p><a href="https://nnero.gitee.io/demo/switch-env-variable-temporarily-2.png" title="使用批处理临时切换环境变量" data-fancybox="gallery">
-    <img class="aligncenter" src="https://nnero.gitee.io/demo/switch-env-variable-temporarily-2.png" alt="使用批处理临时切换环境变量" />
+<p><a href="https://demo.lusir.me/switch-env-variable-temporarily-2.png" title="使用批处理临时切换环境变量" data-fancybox="gallery">
+    <img class="aligncenter" src="https://demo.lusir.me/switch-env-variable-temporarily-2.png" alt="使用批处理临时切换环境变量" />
 </a></p>
 <p>第一条命令是显示当前系统变量下的 <code>path</code> 变量；</p>
 <p>第二条命令是将 Python 2.7 的工作路径添加到中间路径变量中；</p>
@@ -191,19 +188,12 @@ pause
 
 <div class="hidden">
 <ul>
-<li class="prev"><a href="https://lusir.me/disable-touchpad-when-moused.html">上一篇</a></li>
+<li class="prev"><a href="https://lusir.me/delete-firefox-seraching-history.html">上一篇</a></li>
 <li class="next"><a href="https://lusir.me/reinstall-os-for-mi6.html">下一篇</a></li>
 </ul>
 </div>
 
 <div class="hidden">
-<p>相关文章</p>
-<ul>
-<li><a href="https://lusir.me/backup-environment-variables.html">Windows 环境变量备份</a></li>
-<li><a href="https://lusir.me/disable-touchpad-when-moused.html">Win 及 Ubuntu 下插入鼠标禁用触摸板</a></li>
-<li><a href="https://lusir.me/shutdown-windows-in-cmd.html">Windows 下命令行关机</a></li>
-<li><a href="https://lusir.me/win-e-failure.html">修复 Win + E 出现 explorer.exe 未指定错误</a></li>
-</ul>
  
 </div></div>
 </div><div id="body-footer" class="col-md-6 col-md-offset-2"><div class="niu2-footer">
